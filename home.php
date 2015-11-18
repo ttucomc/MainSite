@@ -108,180 +108,173 @@
 
     <!-- KUHRTS EDITS START -->
 
-<?php echo "</div></div></div></div>" ?>
-<section id="videoHeader" class="hidden-mobile">
-<div id="videoHeaderButtons" class="animated slideInDown">
-	<a href="http://www.ttu.edu/admissions/" class="headerButton">Apply Now!</a><a href="http://www.visit.ttu.edu/" class="headerButton">Visit Us!</a>
-</div>
-<div id="videoMute">
-<p>Click for Sound</p>
-</div>
-<?php
-	if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT']))
-	{
-		echo '<img src="/comc/images/home/comc-building.jpg" alt="The College of Media &amp; Communication building" />';
-	}
-	else
-	{
-		echo '
-		<video width="" height="" autoplay="autoplay" loop="loop">
-			<source src="/comc/images/home/video/DylanGeorgeAmbassador.mp4" type="video/mp4" />
-			<source src="/comc/images/home/video/DylanGeorgeAmbassador.webm" type="video/webm" />
-			<source src="/comc/images/home/video/DylanGeorgeAmbassador.ogg" type="video/ogg" />
-			<object width="640" height="360" type="application/x-shockwave-flash" data="/comc/images/home/video/DylanGeorgeAmbassador.swf">
-				<param name="movie" value="/comc/images/home/video/DylanGeorgeAmbassador.swf" />
-				<param name="flashvars" value="controlbar=over&amp;image=__POSTER__.JPG&amp;file=/comc/images/home/video/DylanGeorgeAmbassador.mp4" />
-			</object>
-		</video>
-		';
-	}
-	?></section>
-<section id="mobileHeader" class="hidden-desktop">
-<div id="videoHeaderButtons" class="animated slideInDown">
-	<a href="http://www.ttu.edu/admissions/" class="headerButton">Apply Now!</a><a href="http://www.visit.ttu.edu/" class="headerButton">Visit Us!</a>
-</div>
-<div id="mobileGreeting" class="animated fadeInLeft">
-<p>"I picked PR because we call ourselves the Swiss Army Knife. I’m getting to dip my toe into a little bit of everything."<br />- Dylan George</p>
-</div>
-<div id="mobileHeaderImage" class="animated fadeInUp"><img src="/comc/images/home/dylan-noback.png" alt="Dylan Noback" /></div>
-</section>
-<div class="content-block">
-<div class="wrapper">
-<div class="columns-wrapper column-flex column-flexwrap">
-<div class="column-full column-centered column-padded-horizontal intro-section">
-<h1>College of Media &amp; Communication</h1>
-<h2>Communication is essential</h2>
-<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
-<div id="career-fair" class="wow fadeInUp">
-<h3>Career Fair</h3>
-<p><strong><time datetime="2015-11-12">Thursday, November 12th, 1:00 to 5:00 p.m.</time></strong><br /> Employers want to meet you! Show off your resume to companies from all over Texas.</p>
-<a class="button" href="/comc/programs/career/careerfair.php">Check It Out</a></div>
-</div>
-</div>
-</div>
-</div>
-<section id="home-students">
-<div class="wow slideInLeft intro-photo-half">
-<div id="intro-current"><a href="{{f:6982443}}"> <span class="home-students-text">Current Students</span> </a></div>
-</div>
-<div class="wow slideInRight intro-photo-half">
-<div id="intro-prospective"><a href="{{f:5675495}}"> <span class="home-students-text">Prospective Students</span> </a></div>
-</div>
-</section>
-<section id="home-advising">
-<div id="home-advising-badge">
-<h2><a href="{{d:1203806}}">Advising</a></h2>
-</div>
-<ul>
-<li>
-<div class="home-adv-card-top">
-<div><span>ADV</span></div>
-</div>
-<div class="home-adv-card-bottom">
-<h3><a href="{{d:1474367}}">Advertising</a></h3>
-<hr />
-<p>Debra Sanderson</p>
-</div>
-<div class="home-adv-contact"><a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H <a href="{{d:1474367}}"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a></div>
-</li>
-<li>
-<div class="home-adv-card-top">
-<div><span>COMS</span></div>
-</div>
-<div class="home-adv-card-bottom">
-<h3><a href="{{d:1474418}}">Communication Studies</a></h3>
-<hr />
-<p>Judy Poffenbarger</p>
-</div>
-<div class="home-adv-contact"><a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J <a href="{{d:1474418}}"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a></div>
-</li>
-<li>
-<div class="home-adv-card-top">
-<div><span>EMC</span></div>
-</div>
-<div class="home-adv-card-bottom">
-<h3><a href="{{d:1474419}}">Electronic Media</a></h3>
-<hr />
-<p>Donald Ellis</p>
-</div>
-<div class="home-adv-contact"><a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E <a href="{{d:1474419}}"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a></div>
-</li>
-<li>
-<div class="home-adv-card-top">
-<div><span>JOUR</span></div>
-</div>
-<div class="home-adv-card-bottom">
-<h3><a href="{{d:1474424}}">Journalism</a></h3>
-<hr />
-<p>Heath Tolleson</p>
-</div>
-<div class="home-adv-contact"><a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169 <a href="{{d:1474424}}"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a></div>
-</li>
-<li>
-<div class="home-adv-card-top">
-<div><span>MST</span></div>
-</div>
-<div class="home-adv-card-bottom">
-<h3><a href="{{d:1474425}}">Media Strategies</a></h3>
-<hr />
-<p>Rose Cruz</p>
-</div>
-<div class="home-adv-contact"><a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E <a href="{{d:1474425}}"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a></div>
-</li>
-<li>
-<div class="home-adv-card-top">
-<div><span>PR</span></div>
-</div>
-<div class="home-adv-card-bottom">
-<h3><a href="{{d:1474426}}">Public Relations</a></h3>
-<hr />
-<p>Kim Bergan</p>
-</div>
-<div class="home-adv-contact"><a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169 <a href="{{d:1474426}}"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a></div>
-</li>
-</ul>
-</section>
-<div class="home-spacer">
-<div class="spacer-words">My Adventure.</div>
-<div class="spacer-words">My Degree.</div>
-<div class="spacer-words spacer-twitter"><a class="icon-twitter" href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=%23MyCoMC&amp;src=typd">#MyCoMC</a></div>
-</div>
-<section id="home-publications">
-<h2>Newsletters</h2>
-<div id="home-publications-flex">
-<div class="home-publication wow fadeInUp"><a href="{{f:5658259}}"> <img src="{{f:8209281}}" alt="Todd Robberson" /></a>
-<h3><a href="{{f:5658259}}">Alumni Advantage</a></h3>
-<p class="hidden-mobile"><a href="{{f:5658259}}"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
-</div>
-<div class="home-publication wow fadeInUp"><a href="{{f:5658256}}"> <img src="/comc/about/publications/adviser/images/aug15/joshhutchinson.jpg" alt="Josh Hutchinson" /></a>
-<h3><a href="{{f:5658256}}">The Adviser</a></h3>
-<p class="hidden-mobile"><a href="{{f:5658256}}"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
-</div>
-<div class="home-publication wow fadeInUp"><a href="{{f:5658260}}"> <img src="{{f:8189498}}" alt="Christina Gutierrez" width="991" height="558" /></a>
-<h3><a href="{{f:5658260}}">Converging News</a></h3>
-<p class="hidden-mobile"><a href="{{f:5658260}}"><strong>Advertising Graduate Featured on ABC Family's 'Job or No Job'</strong><br /><br />A College of Media &amp; Communication graduate was featured on the Oct. 1 episode during the first season of the new ABC Family cable channel series “Job or No Job,” a reality TV show that follows young adults as they go through the process of seeking a job after college.<br /><br /><em>More...</em></a></p>
-</div>
-<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/images/home/mc.jpg" alt="President Nellis speaking to classroom" /></a>
-<h3><a href="{{f:5658261}}">The MC</a></h3>
-<p class="hidden-mobile"><a href="{{f:5658261}}"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
-</div>
-</div>
-</section>
-<div class="content-block" style="margin-bottom: -62px;">
-<div class="wrapper wrapper-padded-mobile">
-<div class="column-wrapper column-flex column-flexwrap">
-<div id="home-social" class="column-full column-centered"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a></div>
-</div>
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
-<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
-<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
-<script type="text/javascript" src="/comc/includes/js/home.js"></script>
+    <?php echo "</div></div></div></div>" ?>
+    <section id="videoHeader" class="hidden-mobile">
+    	<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.ttu.edu/admissions/">Apply Now!</a><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
+    	<div id="videoMute">
+    		<p>Click for Sound</p>
+    	</div>
+    	<?php
+    	if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT']))
+    	{
+    		echo '<img src="/comc/images/home/comc-building.jpg" alt="The College of Media &amp; Communication building" />';
+    	}
+    	else
+    	{
+    		echo '
+    		<video class="video-js" width="" height="" preload="auto" autoplay="autoplay" loop="loop" poster="/comc/images/home/transparent.png" data-setup="{}">
+    			<source src="/comc/images/home/video/DylanGeorgeAmbassador.mp4" type="video/mp4" />
+    			<source src="/comc/images/home/video/DylanGeorgeAmbassador.webm" type="video/webm" />
+    			<source src="/comc/images/home/video/DylanGeorgeAmbassador.ogg" type="video/ogg" />
+    			<p class="vjs-no-js">
+    				To view this video please enable JavaScript, and consider upgrading to a web browser that
+    				<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    			</p>
+    		</video>
+    		';
+    	}
+    	?></section>
+    	<section id="mobileHeader" class="hidden-desktop">
+    		<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.ttu.edu/admissions/">Apply Now!</a><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
+    		<div id="mobileGreeting" class="animated fadeInLeft">
+    			<p>"I picked PR because we call ourselves the Swiss Army Knife. I’m getting to dip my toe into a little bit of everything."<br />- Dylan George</p>
+    		</div>
+    		<div id="mobileHeaderImage" class="animated fadeInUp"><img src="/comc/images/home/dylan-noback.png" alt="Dylan Noback" /></div>
+    	</section>
+    	<div class="content-block">
+    		<div class="wrapper">
+    			<div class="columns-wrapper column-flex column-flexwrap">
+    				<div class="column-full column-centered column-padded-horizontal intro-section">
+    					<h1>College of Media &amp; Communication</h1>
+    					<h2>Communication is essential</h2>
+    					<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
+    					<a href="http://www.ttudallascareers.org/"><img style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 0;" src="/comc/images/home/CDC2015home.png" alt="CDC Dallas Logo" /></a></div>
+    				</div>
+    			</div>
+    		</div>
+    		<section id="home-students">
+    			<div class="wow slideInLeft intro-photo-half">
+    				<div id="intro-current"><a href="{{d:1126672}}"> <span class="home-students-text">Current Students</span> </a></div>
+    			</div>
+    			<div class="wow slideInRight intro-photo-half">
+    				<div id="intro-prospective"><a href="{{f:5675495}}"> <span class="home-students-text">Prospective Students</span> </a></div>
+    			</div>
+    		</section>
+    		<section id="home-advising">
+    			<div id="home-advising-badge">
+    				<h2><a href="{{d:1203806}}">Advising</a></h2>
+    			</div>
+    			<ul>
+    				<li>
+    					<div class="home-adv-card-top">
+    						<div><span>ADV</span></div>
+    					</div>
+    					<div class="home-adv-card-bottom">
+    						<h3><a href="{{d:1474367}}">Advertising</a></h3>
+    						<hr />
+    						<p>Debra Sanderson</p>
+    					</div>
+    					<div class="home-adv-contact"><a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H <a href="{{d:1474367}}"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a></div>
+    				</li>
+    				<li>
+    					<div class="home-adv-card-top">
+    						<div><span>COMS</span></div>
+    					</div>
+    					<div class="home-adv-card-bottom">
+    						<h3><a href="{{d:1474418}}">Communication Studies</a></h3>
+    						<hr />
+    						<p>Judy Poffenbarger</p>
+    					</div>
+    					<div class="home-adv-contact"><a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J <a href="{{d:1474418}}"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a></div>
+    				</li>
+    				<li>
+    					<div class="home-adv-card-top">
+    						<div><span>EMC</span></div>
+    					</div>
+    					<div class="home-adv-card-bottom">
+    						<h3><a href="{{d:1474419}}">Electronic Media</a></h3>
+    						<hr />
+    						<p>Donald Ellis</p>
+    					</div>
+    					<div class="home-adv-contact"><a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E <a href="{{d:1474419}}"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a></div>
+    				</li>
+    				<li>
+    					<div class="home-adv-card-top">
+    						<div><span>JOUR</span></div>
+    					</div>
+    					<div class="home-adv-card-bottom">
+    						<h3><a href="{{d:1474424}}">Journalism</a></h3>
+    						<hr />
+    						<p>Heath Tolleson</p>
+    					</div>
+    					<div class="home-adv-contact"><a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169 <a href="{{d:1474424}}"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a></div>
+    				</li>
+    				<li>
+    					<div class="home-adv-card-top">
+    						<div><span>MST</span></div>
+    					</div>
+    					<div class="home-adv-card-bottom">
+    						<h3><a href="{{d:1474425}}">Media Strategies</a></h3>
+    						<hr />
+    						<p>Rose Cruz</p>
+    					</div>
+    					<div class="home-adv-contact"><a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E <a href="{{d:1474425}}"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a></div>
+    				</li>
+    				<li>
+    					<div class="home-adv-card-top">
+    						<div><span>PR</span></div>
+    					</div>
+    					<div class="home-adv-card-bottom">
+    						<h3><a href="{{d:1474426}}">Public Relations</a></h3>
+    						<hr />
+    						<p>Kim Bergan</p>
+    					</div>
+    					<div class="home-adv-contact"><a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169 <a href="{{d:1474426}}"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a></div>
+    				</li>
+    			</ul>
+    		</section>
+    		<div class="home-spacer">
+    			<div class="spacer-words">My Adventure.</div>
+    			<div class="spacer-words">My Degree.</div>
+    			<div class="spacer-words spacer-twitter"><a class="icon-twitter" href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=%23MyCoMC&amp;src=typd">#MyCoMC</a></div>
+    		</div>
+    		<section id="home-publications">
+    			<h2>Newsletters</h2>
+    			<div id="home-publications-flex">
+    				<div class="home-publication wow fadeInUp"><a href="{{f:5658259}}"> <img src="{{f:8209281}}" alt="Todd Robberson" /></a>
+    					<h3><a href="{{f:5658259}}">Alumni Advantage</a></h3>
+    					<p class="hidden-mobile"><a href="{{f:5658259}}"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
+    				</div>
+    				<div class="home-publication wow fadeInUp"><a href="{{f:5658256}}"> <img src="/comc/about/publications/adviser/images/aug15/joshhutchinson.jpg" alt="Josh Hutchinson" /></a>
+    					<h3><a href="{{f:5658256}}">The Adviser</a></h3>
+    					<p class="hidden-mobile"><a href="{{f:5658256}}"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
+    				</div>
+    				<div class="home-publication wow fadeInUp"><a href="{{f:5658260}}"> <img src="{{f:8189498}}" alt="Christina Gutierrez" width="991" height="558" /></a>
+    					<h3><a href="{{f:5658260}}">Converging News</a></h3>
+    					<p class="hidden-mobile"><a href="{{f:5658260}}"><strong>Advertising Graduate Featured on ABC Family's 'Job or No Job'</strong><br /><br />A College of Media &amp; Communication graduate was featured on the Oct. 1 episode during the first season of the new ABC Family cable channel series “Job or No Job,” a reality TV show that follows young adults as they go through the process of seeking a job after college.<br /><br /><em>More...</em></a></p>
+    				</div>
+    				<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/images/home/mc.jpg" alt="President Nellis speaking to classroom" /></a>
+    					<h3><a href="{{f:5658261}}">The MC</a></h3>
+    					<p class="hidden-mobile"><a href="{{f:5658261}}"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
+    				</div>
+    			</div>
+    		</section>
+    		<div class="content-block" style="margin-bottom: -62px;">
+    			<div class="wrapper wrapper-padded-mobile">
+    				<div class="column-wrapper column-flex column-flexwrap">
+    					<div id="home-social" class="column-full column-centered"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a></div>
+    				</div>
+    			</div>
+    			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    			<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
+    			<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
+    			<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
+    			<script type="text/javascript" src="/comc/includes/js/home.js"></script>
+    			<script type="text/javascript" src="http://vjs.zencdn.net/5.0.2/video.js"></script>
 <script type="text/javascript">// <![CDATA[
-$(function() {
+	$(function() {
 	// WOW.js
 	new WOW().init();
 
@@ -314,7 +307,7 @@ $(function() {
 
 	
 });
-// ]]></script>
+	// ]]></script>
 </div>
 <?php echo '<div class="wrapper wrapper-padded-mobile"><div class="wrapper"><div class="content-block"><div class="column-full column-padded-horizontal column-padded-vertical-desktop">' ?>
 
@@ -435,49 +428,6 @@ $(function() {
     </footer>
     <!-- TTU WIDE RED AND FOOTER END -->
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/plugins/animation.gsap.js"></script>
-<script src="js/plugins/debug.addIndicators.js"></script>
-<script type="text/javascript">
-
-$(function() {
-	// WOW.js
-	new WOW().init();
-
-
-	// ScrollMagic
-	// init controller
-	var controller = new ScrollMagic.Controller();
-
-	// Animate Spacer
-	var spacerTweenEnter = TweenMax.staggerFromTo(".spacer-words", 1, {opacity:0, left:"-5%"}, {opacity:1, left:"0%"}, 0.5);
-
-	var sceneSpacerEnter = new ScrollMagic.Scene({
-		triggerElement: ".home-spacer",
-		offset: -300,
-		duration: 300
-	})
-	.setTween(spacerTweenEnter)
-	.addTo(controller);
-
-	var spacerTweenLeave = TweenMax.to(".spacer-words", 1, {opacity: 0, top: "-10%"});
-
-	var sceneSpacerLeave = new ScrollMagic.Scene({
-		triggerElement: ".home-spacer",
-		triggerHook: "onLeave",
-		duration: 200,
-		offset: -50
-	})
-	.setTween(spacerTweenLeave)
-	.addTo(controller);
-
-	
-});
-</script>
 </body>
 </html>
 
