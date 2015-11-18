@@ -4,8 +4,10 @@
 We here on the marketing team had an idea for our site. We were needing a way for our team to collaborate together on the various pages of our site and GitHub was our obvious choice. We started to make the repo private but then we thought, what if one of our students, or anyone for that matter, had a brilliant idea to add to the site? Lets let them and give them a way to show us!
 
 With that being said, we have this repo for two reasons:
+
 1. For our team to collaborate
 2. To collaborate with anyone else that cares
+
 So feel free to contribute in any way you want!
 
 ## This is not our whole site
