@@ -1,0 +1,715 @@
+/**********************************************************
+					HOME.CSS
+**********************************************************/
+
+@import "compass/css3";
+@import 'variables';
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/***** VIDEO HEADER *****/
+#videoHeader {
+	position: relative;
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
+	video,
+	.video-js {
+		position: relative;
+		left: 50%;
+		@include translateX(-50%);
+		background-color: transparent;
+		width: auto !important;
+		height: 100% !important;
+		min-height: 600px;
+	}
+	.video-js {
+		background: transparent image-url('comc-building.jpg') center center no-repeat;
+		background-size: cover;
+	}
+	.vjs-poster {
+		background-size: cover;
+	}
+	img {
+		position:relative;
+		width: 100%;
+		height: auto;
+	}
+	#videoHeaderButtons {
+		position: absolute;
+		top: 0;
+		right: 10%;
+		padding-top: .75em;
+		z-index: 1;
+		a {
+			position: relative;
+			background-color: $white;
+			font-size: 1.25em;
+			border: 1px solid $red;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			padding: .75em 1.5em;
+			margin-right: 1em;
+			@include transition(.3s);
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: $red;
+				height: 0px;
+				width: 100%;
+				@include transition(.3s);
+				z-index: -1;
+			}
+			&:hover {
+				color: $white;
+				background-color: transparent;
+				text-decoration: none;
+				&:before {
+					height: 100%;
+				}
+			}
+		}
+	}
+	#videoMute {
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		background: rgba(0,0,0,0.5);
+		z-index: 1;
+		@include translateX(-50%);
+		padding: .5em;
+		margin-bottom: .5em;
+		p {
+			color: white;
+			font-size: .75em;
+			margin: 0;
+		}
+	}
+	#videoDescription {
+		position: relative;
+		top: 50%;
+		@include translateY(-50%);
+		background-color: rgba($cream, 0.9);
+		color: $darkGray;
+		width: 20em;
+		z-index: 1;
+		p {
+			font-size: 1em;
+			text-align: center;
+			padding: 2em .5em;
+		}
+	}
+}
+
+/***** MOBILE HEADER *****/
+#mobileHeader {
+	position: relative;
+	background: #e5e5e5; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #e5e5e5 0%, #e8e4da 38%, #eae0c6 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#e5e5e5), color-stop(38%,#e8e4da), color-stop(100%,#eae0c6)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#eae0c6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	height: 400px;
+	overflow: hidden;
+	border-bottom: 1px solid $darkGray;
+	#videoHeaderButtons {
+		position: absolute;
+		top: 0;
+		right: 10%;
+		padding-top: .75em;
+		z-index: 1;
+		a {
+			position: relative;
+			background-color: $white;
+			border: 1px solid $red;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			padding: 1em 1.5em;
+			margin-right: 1em;
+			@include transition(.3s);
+			overflow: hidden;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: $red;
+				height: 0px;
+				width: 100%;
+				@include transition(.3s);
+				z-index: -1;
+			}
+			&:hover {
+				color: $white;
+				background-color: transparent;
+				text-decoration: none;
+				&:before {
+					height: 100%;
+				}
+			}
+		}
+	}
+	#mobileGreeting {
+		width: 60%;
+		margin: 3em 0 0 3em;
+		@media screen and (max-width: 550px) {
+			width: 80%;
+			margin: 3em 0 0 2em;
+		}
+		p {
+			font-size: 2em;
+			line-height: 1;
+			color: $lightBlack;
+			margin: 0;
+		}
+	}
+	#mobileHeaderImage {
+		position: absolute;
+		bottom: -10px;
+		right: -50px;
+		text-align: right;
+		img {
+			width: 80%;
+			@media screen and (max-width: 480px) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+/***** INTRO SECTION *****/
+.intro-section {
+	text-align: center;
+	padding: 5em 0;
+	z-index: 1;
+	h2 {
+		font-size: 3em;
+		margin: 1em 0 .2em;
+		@media screen and (max-width: 768px) {
+			font-size: 2.75em;
+		}
+	}
+	p {
+		font-size: 1.5em;
+		line-height: 1;
+		@media screen and (max-width: 768px) {
+			font-size: 1.25em;
+		}
+	}
+	#career-fair {
+		text-align: center;
+		width: 50%;
+		border: 1px solid $red;
+		padding: 1em 1.25em;
+		margin: 0 auto;
+		h3 {
+			font-size: 2em;
+		}
+		a {
+			margin: 0 auto;
+		}
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
+	}
+}
+
+/***** STUDENTS SECTION *****/
+#home-students {
+	background-color: $white;
+	text-align: center;
+	overflow: hidden;
+	z-index: 1;
+	.intro-photo-half {
+		display: inline-block;
+		margin-right: -4px;
+		padding: 0;
+		position: relative;
+		vertical-align: top;
+		height: 50vh;
+		width: 50%;
+		a {
+			position: relative;
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			&:after {
+				position: absolute;
+				@include transition(.4s);
+				content: '';
+				width: 0;
+				left: 50%;
+				bottom: 0;
+				background-color: rgba($cream, .8);
+				height: 120%;
+				left: -40%;
+				@include skewX(15deg);
+				z-index: 2;
+			}
+			&:hover {
+				&:after {
+					left: -40%;
+					width: 175%;
+				}
+				.home-students-text {
+					@include translate(-50%, -50%);
+					opacity: 2;
+				}
+			}
+		}
+	}
+	#intro-current {
+		position: relative;
+		background: image-url('current-students.jpg') center center no-repeat;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+	}
+	#intro-prospective {
+		position: relative;
+		background: image-url('prospective-students.jpg') center center no-repeat;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+	}
+	.home-students-text {
+		position: absolute;
+		opacity: 0;
+		top: 50%;
+	    left: 50%;
+	    @include translate(-50%, 0%);
+	    @include transition(.4s);
+		color: $darkRed;
+		font-size: 4em;
+		line-height: 1;
+		width: 100%;
+		z-index: 3;
+		@media screen and (max-width: 768px) {
+			font-size: 2em;
+			background-color: rgba($cream, .8);
+			opacity: 1;
+			top: initial;
+			bottom: 20%;
+			padding: .5em 0;
+		}
+	}
+}
+
+
+/***** HOME ADVISING SECTION *****/
+
+#home-advising {
+	position: relative;
+	#home-advising-badge {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		@include translate(-50%, -50%);
+	    background-color: $white;
+	    line-height: 1;
+	    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+	    @include transition(.125s);
+	    border-radius: 3px;
+	    z-index: 5;
+	    &:hover,
+	    &:active {
+    	    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+    	    h2 {
+    	    	font-size: 2.01em;
+    	    }
+	    }
+	    @media screen and (max-width: 1099px) {
+	    	@include translate(-50%, -80%);
+	    }
+	    h2 {
+	    	font-size: 2em;
+	    	padding: 0;
+	    	margin: 0;
+	    }
+	    a {
+    	    padding: .5em 1.25em;
+		    display: inline-block;
+		    color: $lightBlack;
+		    @include transition(.3s);
+		    &:hover,
+		    &:active {
+		    	color: $darkGray;
+		    	text-decoration: none;
+		    }
+		    @media screen and (max-width: 768px) {
+		    	padding: .25em 1em;
+		    }
+	    }
+	}
+	ul {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		@include display-flex;
+		-webkit-box-align: stretch;
+		-moz-box-align: stretch;
+	    -ms-flex-align: stretch;
+		@include align-items(stretch);
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@media screen and (max-width: 1099px) {
+			-webkit-box-lines: multiple;
+			-moz-box-lines: multiple;
+			-ms-flex-wrap: wrap;
+			@include flex-wrap(wrap);
+		}
+		li {
+			position: relative;
+			max-height: 400px;
+			width: 25%;
+			background-color: $white;
+			border-right: 1px solid $white;
+			overflow: hidden;
+			&:last-child {
+				border: none;
+			}
+			&:hover {
+				.home-adv-card-top {
+					div {
+						padding: 1em 0;
+						span {
+							font-size: 1.5em;
+						}
+					}
+				}
+				.home-adv-contact {
+					@include translateY(0);
+				}
+			}
+			@media screen and (max-width: 1600px) {
+				max-height: 350px;
+			}
+			@media screen and (max-width: 1099px) {
+				max-height: 400px;
+				width: 33.33%;
+				width: calc(100% / 3);
+			}
+			@media screen and (max-width: 768px) {
+				max-height: 350px
+			}
+			@media screen and (max-width: 575px) {
+				width: 50%;
+			}
+			@media screen and (max-width: 400px) {
+				max-height: 325px;
+			}
+			.home-adv-card-top {
+				position: relative;
+				background-color: $red;
+				@include transition(.5s);
+				&:after {
+					position: absolute;
+					content: '';
+					bottom: -.75em;
+					left: 50%;
+					background: inherit;
+					@include transform(translateX(-50%) rotate(45deg));
+					height: 2em;
+					width: 2em;
+					z-index: 2;
+				}
+				div {
+					line-height: 1;
+					padding: 3em 0;
+					@include transition(.5s);
+					span {
+						display: inline-block;
+						position: relative;
+						left: 50%;
+						@include translateX(-50%);
+						background-color: $red;
+						color: $white;
+						font-size: 3em;
+						padding: .125em .375em;
+						border: 1px solid $white;
+						@include transition(.5s);
+						z-index: 3;
+					}
+				}
+				@media screen and (max-width: 768px) {
+					div {
+						padding: 1em 0;
+						span {
+							font-size: 1.5em;
+						}
+					}
+				}
+			}
+			.home-adv-card-bottom {
+				text-align: center;
+				padding: 2em 0 0;
+				hr {
+					width: 66%;
+					border: 1px solid $red;
+				}
+				h3 {
+					a {
+						color: $black;
+						@include transition(.3s);
+						&:hover {
+							text-decoration: none;
+							color: $darkGray;
+						}
+					}
+				}
+				p {
+					margin: 0 0 .5em 0;
+				}
+			}
+			.home-adv-contact {
+				text-align: center;
+				@include translateY(65%);
+				@include transition(.5s all ease-in-out);
+				img {
+					width: 75%;
+					@include translateX(20%);
+				}
+				@media screen and (max-width: 768px) {
+					@include translateY(0);
+				}
+			}
+		}
+	}
+}
+
+.no-flexbox {
+	#home-advising {
+		ul {
+			display: table;
+			li {
+				display: table-cell;
+				width: calc(100% / 6);
+			}
+		}
+	}
+}
+
+
+/***** HOME SPACER SECTION *****/
+
+.home-spacer {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	@include display-flex;
+	-webkit-box-lines: single;
+	-moz-box-lines: single;
+	-ms-flex-wrap: nowrap;
+	@include flex-wrap(nowrap);
+	-webkit-box-align: center;
+	-moz-box-align: center;
+    -ms-flex-align: center;
+	@include align-items(center);
+	text-align: center;
+	line-height: 1;
+	background-color: $lightBlack;
+	div {
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		width: 25%;
+		-ms-flex: 1;
+		@include flex(1);
+		position: relative;
+	    padding: 2em 0;
+	    font-size: 3em;
+	    font-style: italic;
+	    color: $cream;
+	    opacity: 0;
+	    @media screen and (max-width: 768px) {
+	    	font-size: 2em;
+	    }
+	    @media screen and (max-width: 480px) {
+	    	font-size: 1.25em;
+	    }
+	    a {
+	    	color: #6CADDE;
+	    	text-decoration: none;
+	    	@include transition(.3s);
+	    	&:hover,
+	    	&:active {
+	    		font-size: 1.125em;
+	    	}
+	    }
+	}
+}
+
+.no-flexbox {
+	.home-spacer {
+		display: table;
+		div {
+			display: table-cell;
+		}
+	}
+}
+
+
+/***** HOME PUBLICATIONS SECTION *****/
+
+#home-publications {
+	
+	background-color: $lightGray;
+	padding: 6em 0 6em 1em;
+	@media screen and (max-width: 480px) {
+		padding: 3em 1em;
+	}
+	h2 {
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	#home-publications-flex {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		@include display-flex;
+		@media screen and (max-width: 768px) {
+			@include flex-wrap(wrap);
+		}
+	}
+	.home-publication {
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-ms-flex: 1;
+		@include flex(1);
+		width: 25%;
+		padding: 0 1em 0 0;
+		@include transition(.3s);
+		&:hover {
+			margin-top: -15px;
+		}
+		@media screen and (max-width: 768px) {
+			-webkit-box-flex: none;
+			-moz-box-flex: none;
+			-ms-flex: none;
+			@include flex(none);
+			width: 50%;
+			padding: 2em 1em 0 0;
+		}
+		&:nth-child(2) {
+			@include animation-delay(.1s);
+		}
+		&:nth-child(3) {
+			@include animation-delay(.2s);
+		}
+		&:last-child {
+			@include animation-delay(.3s);
+		}
+		h3 {
+			font-size: 1.75em;
+			-webkit-transition: .3s;
+			transition: .3s;
+			margin-top: .125em;
+			@media screen and (max-width: 768px) {
+				font-size: 1.45em;
+			}
+		}
+		a {
+			color: $black;
+			&:hover {
+				text-decoration: none;
+				h3 {
+					color: $gray;
+				}
+			}
+		}
+		img {
+			height: auto;
+			width: 100%;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.no-flexbox {
+	#home-publications {
+		#home-publications-flex {
+			display: table;
+		}
+		.home-publication {
+			display: table-cell;
+		}
+	}
+}
+
+
+/***** HOME SOCIAL SECTION *****/
+
+#home-social {
+	padding: 6em 0;
+	text-align: center;
+	h3 {
+		color: $darkGray;
+		font-size: 2em;
+	}
+	a {
+		font-size: 2em;
+		color: $darkGray;
+		margin: .5em 1em;
+		@include transition(.3s);
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+/***** BODY *****/
+.wrapper {
+	max-width: 80em;
+}
+
+.content-block {
+	background: #FFF;
+}
+
+
+/***** FOOTER *****/
+.wrapper-wide-red {
+	margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

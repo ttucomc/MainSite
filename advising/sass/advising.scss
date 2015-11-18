@@ -1,0 +1,448 @@
+/**********************************************************
+					Advising Template CSS
+**********************************************************/
+
+@import "compass/css3";
+@import 'variables';
+
+
+/* ====================
+Advising Main Page
+==================== */
+
+/***** TEAM SECTION *****/
+
+#advising-team {
+	padding: 4em 0;
+	h2 {
+		text-align: center;
+		font-size: 2.5em;
+		padding-bottom: 1em;
+	}
+}
+// Cards idea from the great folks over at Beard Design - 08/18/2015 - http://bearddesign.co/team/
+.team-card {
+	display: table;
+	min-height: 432px;
+	margin: 0 0 5em;
+	@media screen and (max-width: 768px) {
+		display: inline-block;
+		min-height: 300px;
+		min-width: 45%;
+		padding: 1em;
+		margin: 0;
+	}
+	@media screen and (max-width: 600px) {
+		min-width: 100%;
+		padding: 1em 0;
+	}
+	.team-card-row {
+		display: table-row;
+		position: relative;
+	}
+	.tm-card-col {
+		display: table-cell;
+		min-height: inherit;
+		min-width: 300px;
+		@media screen and (max-width: 768px) {
+			display: block;
+			min-width: inherit;
+		}
+	}
+	.tm-card-bio {
+		.side-container {
+			position: relative;
+			@include transform-style(preserve-3d);
+			@include perspective(800px);
+			min-height: inherit;
+			&:hover {
+				.tm-back {
+					@include rotateY(0deg);
+				}
+				.tm-front {
+					@include rotateY(180deg);
+				}
+				@media screen and (max-width: 768px) {
+					.tm-back {
+						@include rotateY(-180deg);
+					}
+					.tm-front {
+						@include rotateY(0deg);
+					}
+				}
+			}
+			@media screen and (max-width: 768px) {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			.tm-side {
+				display: table;
+				position: relative;
+				top: 0;
+				left: 0;
+				background-color: $lightBlack;
+				width: 100%;
+				height: 432px;
+				min-height: inherit;
+				@include backface-visibility(hidden);
+				@include transition(all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+				@media screen and (max-width: 768px) {
+					height: 300px;
+				}
+			}
+			.tm-back {
+				position: absolute;
+				text-align: center;
+				@include rotateY(-180deg);
+				.tm-back-img {
+					display: table-cell;
+					vertical-align: bottom;
+					background-image: image-url('fabric_of_squares_gray.png');
+					min-height: inherit;
+					img {
+						display: block;
+						height: auto;
+						width: 100%;
+						padding: 0;
+						margin: 0;
+						@media screen and (max-width: 768px) {
+							display: none;
+						}
+					}
+				}
+			}
+			.tm-front {
+				text-align: center;
+				.tm-front-letter {
+					position: absolute;
+					left: 50%;
+					top: 12.5%;
+					background-position: center center;
+					background-repeat: no-repeat;
+					@include translateX(-50%);
+					height: 225px;
+					width: 225px;
+					@media screen and (max-width: 768px) {
+						height: 125px;
+						width: 125px;
+					}
+				}
+				.tm-front-inner {
+					display: table-cell;
+					vertical-align: bottom;
+					font-size: 1.25em;
+					padding-bottom: 1.5em;
+					h3 {
+						margin: 0.7em 0 0.1em 0;
+					}
+				}
+			}
+		}
+	}
+	.tm-card-details {
+		position: relative;
+		border: 1px solid $lightBlack;
+		height: 100%;
+		@media screen and (max-width: 768px) {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			width: 100%;
+			min-height: 100%;
+			border: none;
+			z-index: 10;
+		}
+		.tm-card-content {
+			position: relative;
+			display: inline-block;
+			height: 100%;
+			&:before {
+				content: "";
+				display: table;
+			}
+			@media screen and (max-width: 768px) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: $lightGray;
+				height: 100%;
+			}
+			.close {
+			    position: absolute;
+			    top: 8px;
+			    cursor: pointer;
+			    right: 0;
+			    display: none;
+			    width: 30px;
+			    height: 30px;
+			    &:before,
+			    &:after {
+			    	content: "";
+				    width: 30px;
+				    height: 5px;
+				    background: $lightBlack;
+				    position: absolute;
+				    right: -10px;
+			    }
+			    &:before {
+			    	@include transform(rotate(45deg) translateY(15px));
+			    }
+			    &:after {
+			    	@include transform(rotate(-45deg) translateX(-15px));
+			    }
+			    @media screen and (max-width: 768px) {
+			    	display: block;
+			    }
+			}
+		}
+		.tm-details-top {
+			padding: .5em;
+			@media screen and (max-width: 768px) {
+				padding: 3em;
+			}
+			h3 {
+				@media screen and (min-width: 768px) {
+					display: none;
+				}
+			}
+		}
+		.tm-details-bottom {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			text-align: center;
+			color: $lightBlack;
+			width: 100%;
+			@media screen and (max-width: 768px) {
+				position: relative;
+			}
+			hr {
+				border: none;
+				border-top: 1px solid $lightBlack;
+				width: 90%;
+				margin-bottom: 1em;
+			}
+			ul {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				@include display-flex;
+				-webkit-box-align: stretch;
+				-moz-box-align: stretch;
+			    -ms-flex-align: stretch;
+				@include align-items(stretch);
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				.no-flexbox & {
+					display: inline-block;
+					zoom: 1;
+					width: 100%;
+				}
+				li {
+					text-indent: 0;
+					width: 25%;
+					border-right: 1px solid $lightBlack;
+					padding: 0;
+					margin: 0 0 1em;
+					.no-flexbox & {
+						position: relative;
+						display: inline-block;
+						zoom: 1;
+						float: left;
+						box-sizing: border-box;
+						width: 25%;
+					}
+					&:before {
+						content: '';
+						display: none;
+					}
+					&:last-child {
+						border: none;
+					}
+					a {
+						color: $lightBlack;
+						@include transition(.3s);
+						&:hover {
+							text-decoration: none;
+							color: $darkGray;
+						}
+					}
+					img {
+						text-align: center;
+						padding-bottom: 0.2em;
+						height: 75px;
+						width: 75px;
+					}
+				}
+			}
+		}
+	}
+}
+.team-card.hover {
+	.tm-card-bio {
+		.side-container {
+			.tm-front {
+				-moz-animation:peekaboo 3s ease-in-out 400ms;
+				-webkit-animation:peekaboo 3s ease-in-out 400ms;
+				animation:peekaboo 3s ease-in-out 400ms;
+			}
+		}
+	}
+}
+
+.tm-emc {
+	.tm-card-bio {
+		.side-container {
+			.tm-front {
+				color: #CC3131;
+				.tm-front-letter {
+					background-image: image-url('DisforDon.svg');
+				}
+				.tm-front-inner {
+					h3 {
+						color: #CC3131;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tm-director {
+	.tm-card-bio {
+		.side-container {
+			.tm-front {
+				color: #DC1678;
+				.tm-front-letter {
+					background-image: image-url('JisforJulia.svg');
+				}
+				.tm-front-inner {
+					h3 {
+						color: #DC1678;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tm-debra {
+	.tm-card-bio {
+		.side-container {
+			.tm-front {
+				color: #3365F0;
+				.tm-front-letter {
+					background-image: image-url('DisforDebra.svg');
+					background-repeat: no-repeat;
+				}
+				.tm-front-inner {
+					h3 {
+						color: #3365F0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tm-jpoff {
+	.tm-card-bio {
+		.side-container {
+			.tm-front {
+				color: #3B8686;
+				.tm-front-letter {
+					background-image: image-url('JisforJPoff.svg');
+				}
+				.tm-front-inner {
+					h3 {
+						color: #3B8686;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tm-rose {
+	.tm-card-bio {
+		.side-container {
+			.tm-front {
+				color: #4BB767;
+				.tm-front-letter {
+					background-image: image-url('RisforRose.svg');
+				}
+				.tm-front-inner {
+					h3 {
+						color: #4BB767;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tm-kim {
+	.tm-card-bio {
+		.side-container {
+			.tm-front {
+				color: #4BB767;
+				.tm-front-letter {
+					background-image: image-url('KisforKim.svg');
+				}
+				.tm-front-inner {
+					h3 {
+						color: #4BB767;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/* ====================
+ANIMATIONS
+==================== */
+@-moz-keyframes peekaboo{
+	0%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}
+	25%{-moz-transform:rotateY(-10deg);transform:rotateY(-10deg)}
+	50%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}
+	75%{-moz-transform:rotateY(10deg);transform:rotateY(10deg)}
+	100%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}
+}
+@-webkit-keyframes peekaboo{
+	0%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
+	25%{-webkit-transform:rotateY(-10deg);transform:rotateY(-10deg)}
+	50%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
+	75%{-webkit-transform:rotateY(10deg);transform:rotateY(10deg)}
+	100%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
+}
+@keyframes peekaboo{
+	0%{-moz-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
+	25%{-moz-transform:rotateY(-10deg);-ms-transform:rotateY(-10deg);-webkit-transform:rotateY(-10deg);transform:rotateY(-10deg)}
+	50%{-moz-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
+	75%{-moz-transform:rotateY(10deg);-ms-transform:rotateY(10deg);-webkit-transform:rotateY(10deg);transform:rotateY(10deg)}
+	100%{-moz-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,413 @@
+/**********************************************************
+					Majors Template CSS
+**********************************************************/
+/********** VARIABLES **********/
+/***** INFO SECTION *****/
+.major-info {
+  position: relative;
+  text-align: center;
+  height: 600px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .major-info {
+    height: 500px;
+  }
+}
+.major-info .major-info-text {
+  position: absolute;
+  display: table;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  height: 100%;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .major-info .major-info-text {
+    position: static;
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 3em 0;
+  }
+}
+.major-info .major-info-text div {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 3em;
+}
+@media screen and (max-width: 768px) {
+  .major-info .major-info-text div {
+    display: block;
+  }
+}
+.major-info .major-info-text h1 {
+  font-size: 3em;
+}
+@media screen and (max-width: 768px) {
+  .major-info .major-info-text h1 {
+    font-size: 2.5em;
+  }
+}
+.major-info .major-info-text p {
+  color: #000000;
+  font-size: 1.25em;
+  line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .major-info .major-info-text p {
+    font-size: 1em;
+  }
+}
+.major-info img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/***** BUTTON ROW SECTION *****/
+.major-button-row {
+  width: 100%;
+}
+.major-button-row ul {
+  display: table;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .major-button-row ul {
+    display: block;
+  }
+}
+.major-button-row ul li {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  border-right: 1px solid #CCCCCC;
+  background: #e5ddcc;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #e5ddcc 0%, #eae0c6 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e5ddcc), color-stop(100%, #eae0c6));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #e5ddcc 0%, #eae0c6 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #e5ddcc 0%, #eae0c6 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #e5ddcc 0%, #eae0c6 100%);
+  /* IE10+ */
+  background: linear-gradient(45deg, #e5ddcc 0%, #eae0c6 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5ddcc', endColorstr='#eae0c6',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  width: 25%;
+}
+.major-button-row ul li:after {
+  content: '';
+  position: absolute;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 0;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  height: 6px;
+  background-color: #900;
+}
+.major-button-row ul li:hover:after {
+  width: 100%;
+  left: 0;
+}
+.major-button-row ul li:nth-child(2) div {
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.major-button-row ul li:nth-child(3) div {
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.major-button-row ul li:last-child div {
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.major-button-row ul li:last-child {
+  border-right: none;
+}
+@media screen and (max-width: 768px) {
+  .major-button-row ul li {
+    display: list-item;
+    border-right: none;
+    border-bottom: 1px solid #CCCCCC;
+    width: 100%;
+  }
+  .major-button-row ul li:last-child {
+    border-bottom: none;
+  }
+}
+.major-button-row ul li a {
+  display: table;
+  height: 100%;
+  width: 100%;
+  padding: 2em 0;
+}
+.major-button-row ul li a:hover {
+  text-decoration: none;
+}
+.major-button-row ul li a:hover div {
+  -moz-transform: translateY(-5%);
+  -ms-transform: translateY(-5%);
+  -webkit-transform: translateY(-5%);
+  transform: translateY(-5%);
+}
+@media screen and (max-width: 768px) {
+  .major-button-row ul li a {
+    padding: 1em 0;
+  }
+}
+.major-button-row ul li a div {
+  display: table-cell;
+  vertical-align: middle;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.major-button-row ul li a img {
+  height: 75px;
+  width: 75px;
+}
+
+/***** MAJOR MAIN SECTION *****/
+.major-main {
+  position: relative;
+  background: url('//comc/programs/publicrelations/images/squared_metal.png');
+  text-align: center;
+  padding: 6em 0;
+  overflow: hidden;
+}
+.major-main .columns-wrapper {
+  position: relative;
+  height: 100%;
+}
+.major-main .columns-wrapper .column-one-half {
+  position: relative;
+  height: 100%;
+}
+.major-main .major-interactive-left {
+  text-align: left;
+  padding: 3em 3em;
+}
+@media screen and (max-width: 768px) {
+  .major-main .major-interactive-left {
+    padding: 3em .75em 1em;
+  }
+}
+.major-main .major-interactive-left h4 {
+  cursor: pointer;
+  font-size: 1.5em;
+  border-bottom: 1px solid;
+  padding-bottom: .25em;
+}
+.major-main .major-interactive-left ul {
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .major-main .major-interactive-left ul {
+    padding: 0;
+  }
+}
+.major-main .major-interactive-left ul li {
+  padding: .5em 0;
+  opacity: .5;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.major-main .major-interactive-left ul li .p-toggle {
+  display: none;
+}
+.major-main .major-interactive-left ul li:first-child {
+  opacity: 1;
+}
+.major-main .major-interactive-left ul li:first-child .p-toggle {
+  display: block;
+}
+.major-main .major-interactive-left .major-faqs {
+  padding: 0;
+}
+.major-main .major-interactive-left .major-faqs li {
+  cursor: pointer;
+  opacity: 1;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.major-main .major-interactive-left .major-faqs li span {
+  opacity: 0;
+  position: relative;
+  left: -30px;
+  color: #900;
+  margin-right: -1em;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.major-main .major-interactive-left .major-faqs li:first-child span {
+  left: 0;
+  opacity: 1;
+  margin-right: 1em;
+}
+.major-main .major-interactive-right {
+  position: relative;
+  padding: 3em 2em 0;
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+@media screen and (max-width: 768px) {
+  .major-main .major-interactive-right {
+    padding: 1.5em .75em 0;
+  }
+}
+.major-main .major-interactive-right .interactive-classes,
+.major-main .major-interactive-right .interactive-faq-a {
+  position: relative;
+  display: none;
+  height: 350px;
+  width: 100%;
+}
+.major-main .major-interactive-right .interactive-classes {
+  text-align: left;
+}
+.major-main .major-interactive-right .interactive-classes ul {
+  list-style: none;
+  font-size: 1.5em;
+  color: #003A66;
+  line-height: 1;
+  -moz-columns: 2;
+  -webkit-columns: 2;
+  columns: 2;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .major-main .major-interactive-right .interactive-classes ul {
+    font-size: 1.25em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .major-main .major-interactive-right .interactive-classes ul {
+    -moz-columns: 1;
+    -webkit-columns: 1;
+    columns: 1;
+  }
+}
+.major-main .major-interactive-right .interactive-classes ul li {
+  padding: .5em 0;
+}
+.major-main .major-interactive-right .interactive-classes ul li:before {
+  content: "- ";
+}
+.major-main .major-interactive-right .interactive-faq-a {
+  text-align: left;
+  z-index: 1;
+}
+.major-main .major-interactive-right .interactive-faq-a p {
+  display: none;
+  position: relative;
+  background-color: rgba(0, 58, 102, 0.8);
+  color: #FFF;
+  font-size: 1.25em;
+  line-height: 1;
+  padding: 2.5em 2em;
+  width: 66%;
+}
+.major-main .major-interactive-right .interactive-faq-a p:after {
+  content: 'Answer';
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  color: rgba(0, 58, 102, 0.8);
+  font-weight: 800;
+  font-size: 2em;
+}
+@media screen and (max-width: 768px) {
+  .major-main .major-interactive-right .interactive-faq-a p {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .major-main .major-interactive-right .interactive-faq-a p {
+    padding: 2.5em 2.5em 2.5em 1em;
+    width: 100%;
+  }
+}
+.major-main .major-interactive-right .interactive-faq-a p:first-child {
+  display: block;
+}
+.major-main .major-interactive-right .interactive-faq-a img {
+  position: absolute;
+  right: -50px;
+  bottom: -220px;
+  width: 80%;
+  z-index: -1;
+}
+@media screen and (max-width: 1200px) {
+  .major-main .major-interactive-right .interactive-faq-a img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .major-main .major-interactive-right .interactive-faq-a img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .major-main .major-interactive-right .interactive-faq-a img {
+    bottom: -175px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .major-main .major-interactive-right .interactive-faq-a img {
+    bottom: -120px;
+  }
+}
+
+/***** MAJOR SPACER SECTION *****/
+.major-spacer {
+  background-color: #333;
+  color: #EAE0C6;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1;
+  width: 100%;
+}
+.major-spacer p {
+  padding: 2em .5em;
+  margin: 0;
+}
+
+/***** MAJOR CONTACT SECTION *****/
+.major-contact {
+  background-color: #EAE0C6;
+  text-align: center;
+  padding: 6em 0;
+}
+
+/***** TECH BODY EDITS *****/
+.wrapper-wide-red {
+  margin-top: 0;
+}

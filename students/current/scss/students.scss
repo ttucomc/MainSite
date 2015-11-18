@@ -1,0 +1,473 @@
+// @import "settings";
+// @import "foundation";
+@import "variables";
+
+@import "compass/css3";
+
+
+/**********************************************************
+			STUDENTS LANDING (/comc/students)
+**********************************************************/
+
+.students-main {
+  height: 50vh;
+  text-align: center;
+  background-size: cover;
+  h2 {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 2.5em;
+    background-color: rgba(234, 224, 198, 0.8);
+    width: 100%;
+    padding: 1em 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+    &:hover {
+      top: 48.5%;
+    }
+  }
+  a {
+    padding: 1em 0;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#current-main {
+  background: url('/comc/images/home/current-students.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+#prospective-main {
+  background: url('/comc/images/home/prospective-students.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+
+
+/**********************************************************
+		CURRENT STUDENTS (/comc/students/current)
+**********************************************************/
+
+/*******************
+BODY
+*******************/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body,
+.page {
+	background-image: image-url('connect.png', false, false);
+}
+
+.wrapper-wide-red {
+	margin-top: 0;
+}
+
+
+
+/*******************
+HEADER
+*******************/
+
+// Default styles for header
+#header {
+	background: 
+		linear-gradient(
+	      rgba(51, 51, 51, 0.6),
+	      rgba(51, 51, 51, 0.6)
+	    ), 
+		image-url('studentswalking.jpg', false, false) center center no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+// If browser has background-clip support
+.backgroundclip #header {
+	background: 
+		linear-gradient(
+	      rgba(255, 255, 255, 0.6),
+	      rgba(255, 255, 255, 0.6)
+	    ), 
+		image-url('studentswalking.jpg', false, false) center center no-repeat;
+		background-size: cover;
+}
+// If browser doesn't allow gradients
+.no-cssgradients #header {
+	background-image: image-url('studentswalking.jpg', false, false);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+// If browser has background-clip support
+.backgroundclip h1 {
+	background:
+		linear-gradient(
+	      rgba(51, 51, 51, 0.6),
+	      rgba(51, 51, 51, 0.6)
+	    ), 
+		image-url('studentswalking.jpg', false, false) center center no-repeat;
+	background-size: cover;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// Default header styles
+h1 {
+	color: $white;
+	font-family: Impact, Helvetica, sans-serif;
+	font-size: 6em;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: .85;
+	padding: .25em 0;
+	margin: 0;
+	@media screen and (min-width: 30em) {
+		font-size: 7em;
+	}
+	@media screen and (min-width: 48em) {
+		font-size: 12em;
+	}
+	@media screen and (min-width: 1000px) {
+		font-size: 15em;
+	}
+}
+
+
+
+/*******************
+ADVISING SECTION
+*******************/
+
+#home-advising {
+	position: relative;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+	z-index: 1;
+	#home-advising-badge {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		@include translate(-50%, -50%);
+	    background-color: $white;
+	    line-height: 1;
+	    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+	    @include transition(.125s);
+	    border-radius: 3px;
+	    z-index: 5;
+	    &:hover,
+	    &:active {
+    	    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+    	    h2 {
+    	    	font-size: 2.01em;
+    	    }
+	    }
+	    @media screen and (max-width: 1099px) {
+	    	@include translate(-50%, -80%);
+	    }
+	    h2 {
+	    	font-size: 2em;
+	    	padding: 0;
+	    	margin: 0;
+	    }
+	    a {
+    	    padding: .5em 1.25em;
+		    display: inline-block;
+		    color: $lightBlack;
+		    @include transition(.3s);
+		    &:hover,
+		    &:active {
+		    	color: $darkGray;
+		    	text-decoration: none;
+		    }
+		    @media screen and (max-width: 768px) {
+		    	padding: .25em 1em;
+		    }
+	    }
+	}
+	ul {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		@include display-flex;
+		-webkit-box-align: stretch;
+		-moz-box-align: stretch;
+	    -ms-flex-align: stretch;
+		@include align-items(stretch);
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@media screen and (max-width: 1099px) {
+			-webkit-box-lines: multiple;
+			-moz-box-lines: multiple;
+			-ms-flex-wrap: wrap;
+			@include flex-wrap(wrap);
+		}
+		li {
+			position: relative;
+			max-height: 400px;
+			width: 25%;
+			background-color: $white;
+			border-right: 1px solid $white;
+			overflow: hidden;
+			&:last-child {
+				border: none;
+			}
+			&:hover {
+				.home-adv-card-top {
+					div {
+						padding: 1em 0;
+						span {
+							font-size: 1.5em;
+						}
+					}
+				}
+				.home-adv-contact {
+					@include translateY(0);
+				}
+			}
+			@media screen and (max-width: 1600px) {
+				max-height: 350px;
+			}
+			@media screen and (max-width: 1099px) {
+				max-height: 400px;
+				width: 33.33%;
+				width: calc(100% / 3);
+			}
+			@media screen and (max-width: 768px) {
+				max-height: 350px
+			}
+			@media screen and (max-width: 575px) {
+				width: 50%;
+			}
+			@media screen and (max-width: 400px) {
+				max-height: 325px;
+			}
+			.home-adv-card-top {
+				position: relative;
+				background-color: $red;
+				@include transition(.5s);
+				&:after {
+					position: absolute;
+					content: '';
+					bottom: -.75em;
+					left: 50%;
+					background: inherit;
+					@include transform(translateX(-50%) rotate(45deg));
+					height: 2em;
+					width: 2em;
+					z-index: 2;
+				}
+				div {
+					line-height: 1;
+					padding: 3em 0;
+					@include transition(.5s);
+					span {
+						display: inline-block;
+						position: relative;
+						left: 50%;
+						@include translateX(-50%);
+						background-color: $red;
+						color: $white;
+						font-size: 3em;
+						padding: .125em .375em;
+						border: 1px solid $white;
+						@include transition(.5s);
+						z-index: 3;
+					}
+				}
+				@media screen and (max-width: 768px) {
+					div {
+						padding: 1em 0;
+						span {
+							font-size: 1.5em;
+						}
+					}
+				}
+			}
+			.home-adv-card-bottom {
+				text-align: center;
+				padding: 2em 0 0;
+				hr {
+					width: 66%;
+					border: 1px solid $red;
+					margin: 1em auto;
+				}
+				h3 {
+					a {
+						color: $black;
+						@include transition(.3s);
+						&:hover {
+							text-decoration: none;
+							color: $darkGray;
+						}
+					}
+				}
+				p {
+					margin: 0 0 .5em 0;
+				}
+			}
+			.home-adv-contact {
+				text-align: center;
+				@include translateY(65%);
+				@include transition(.5s all ease-in-out);
+				img {
+					width: 75%;
+					@include translateX(20%);
+				}
+				@media screen and (max-width: 768px) {
+					@include translateY(0);
+				}
+			}
+		}
+	}
+}
+
+.no-flexbox {
+	#home-advising {
+		ul {
+			display: table;
+			li {
+				display: table-cell;
+				width: 16.6667%;
+			}
+		}
+	}
+}
+
+
+
+/*******************
+STUDENT SUCCESS
+*******************/
+
+#successRow {
+	text-align: center;
+	padding: 3em 0;
+	@media screen and (min-width: 30em) {
+		padding: 10em 0 5em;
+	}
+	.successCard {
+		display: inline-block;
+		position: relative;
+		background: $white;
+		color: $black;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+		width: 75%;
+		padding: 1em 2em;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: $red;
+			height: 0px;
+			width: 100%;
+			@include transition(.3s);
+			z-index: 1;
+		}
+		&:last-child {
+			margin-top: 2em;
+			@media screen and (min-width: 604px) {
+				margin-top: 0;
+			}
+		}
+		&:hover {
+			text-decoration: none;
+			&:after {
+				height: 6px;
+			}
+		}
+		.card-title {
+			font-size: 1.45em;
+		    margin: 0.7em 0 0.4em 0;
+		    font-family: "HelveticaNeueW01-47LtCn 692686","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+		    color: #000;
+		    line-height: 1.1125em;
+		}
+		img {
+			position: relative;
+			width: 125px;
+			padding: 0 0 10px 0;
+			margin: 0;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		h3 {
+			color: $red;
+			line-height: 1;
+		}
+	}
+}
+
+
+
+/*******************
+BOTTOM LINKS
+*******************/
+#bottom-links {
+	text-align: center;
+	padding: 0 0 3em;
+	z-index: 1;
+	@media screen and (min-width: 30em) {
+		padding: 0 0 10em;
+	}
+	.internshipText {
+	    text-align: center;
+	    font-size: 2em;
+	    color: $red;
+	    padding: .25em .5em;
+	    margin-top: 2em;
+	    border: 1px solid $red;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

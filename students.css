@@ -1,0 +1,45 @@
+/**********************************************************
+					Students CSS
+**********************************************************/
+
+
+/*****===== Current and Prospective Students Index =====*****/
+
+.students-main {
+	height: 50vh;
+	text-align: center;
+	background-size: cover;
+}
+
+.students-main h2 {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 2.5em;
+	background-color: rgba(234, 224, 198, 0.8);
+	width: 100%;
+	padding: 1em 0;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.students-main h2:hover {
+	top: 48.5%;
+}
+
+.students-main a {
+	padding: 1em 0;
+}
+.students-main a:hover {
+	text-decoration: none;
+}
+
+#current-main {
+	background: url('/comc/images/home/current-students.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+#prospective-main {
+	background: url('/comc/images/home/prospective-students.jpg') center center no-repeat;
+	background-size: cover;
+}
