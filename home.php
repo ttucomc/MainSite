@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<title>College of Media and Communication</title>
+	<title>College of Media &amp; Communication</title>
 
 	<link rel="stylesheet" type="text/css" href="css/ttu.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://www.depts.ttu.edu/comc/"/>
     <meta property="og:description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
     <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="College of Media &amp; Communication"/>
+    <meta property="og:site_name" content="College of Media & Communication"/>
     <meta property="og:image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg"/>
     <!-- OUR CUSTOM HEAD END -->
 </head>
