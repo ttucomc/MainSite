@@ -17,7 +17,16 @@
 	<script src="js/ttuglobal-onload.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<!-- <script type="text/javascript" src="js/home.js"></script> -->
+
+    <!-- OUR CUSTOM HEAD START -->
+    <meta property="og:title" content="College of Media &amp; Communication | TTU"/>
+    <link href="http://www.depts.ttu.edu/comc/" rel="canonical" />
+    <meta property="og:url" content="http://www.depts.ttu.edu/comc/"/>
+    <meta property="og:description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="College of Media &amp; Communication"/>
+    <meta property="og:image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg"/>
+    <!-- OUR CUSTOM HEAD END -->
 </head>
 <body>
 	<!-- HEADER AND NAV START -->
