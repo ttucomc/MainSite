@@ -249,12 +249,12 @@
     					<h3><a href="{{f:5658256}}">The Adviser</a></h3>
     					<p class="hidden-mobile"><a href="{{f:5658256}}"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
     				</div>
-    				<div class="home-publication wow fadeInUp"><a href="{{f:5658260}}"> <img src="{{f:8189498}}" alt="Christina Gutierrez" width="991" height="558" /></a>
+    				<div class="home-publication wow fadeInUp"><a href="{{f:5658260}}"> <img src="/comc/about/publications/MC/images/CoMC-Logo.svg" alt="CoMC Logo" width="991" height="558" /></a>
     					<h3><a href="{{f:5658260}}">Converging News</a></h3>
-    					<p class="hidden-mobile"><a href="{{f:5658260}}"><strong>Advertising Graduate Featured on ABC Family's 'Job or No Job'</strong><br /><br />A College of Media &amp; Communication graduate was featured on the Oct. 1 episode during the first season of the new ABC Family cable channel series “Job or No Job,” a reality TV show that follows young adults as they go through the process of seeking a job after college.<br /><br /><em>More...</em></a></p>
+    					<p class="hidden-mobile"><a href="{{f:5658260}}"><strong>College of Media &amp; Communication Sees Near-Record Enrollment Numbers</strong><br /><br />Enrollment numbers for Fall 2015 are soaring in the Texas Tech University College of Media &amp; Communication, with a total of 1,620 students, which both surpasses the previous year’s number and sets a near-record high.<br /><br /><em>More...</em></a></p>
     				</div>
-    				<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/images/home/mc.jpg" alt="President Nellis speaking to classroom" /></a>
-    					<h3><a href="{{f:5658261}}">The MC</a></h3>
+    				<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
+    					<h3><a href="{{f:5658261}}">The MC 2015</a></h3>
     					<p class="hidden-mobile"><a href="{{f:5658261}}"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
     				</div>
     			</div>
