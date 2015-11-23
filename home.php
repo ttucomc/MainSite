@@ -253,7 +253,7 @@
     					<h3><a href="{{f:5658260}}">Converging News</a></h3>
     					<p class="hidden-mobile"><a href="{{f:5658260}}"><strong>College of Media &amp; Communication Sees Near-Record Enrollment Numbers</strong><br /><br />Enrollment numbers for Fall 2015 are soaring in the Texas Tech University College of Media &amp; Communication, with a total of 1,620 students, which both surpasses the previous year’s number and sets a near-record high.<br /><br /><em>More...</em></a></p>
     				</div>
-    				<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
+    				<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" style="width:50%;" /></a>
     					<h3><a href="{{f:5658261}}">The MC 2015</a></h3>
     					<p class="hidden-mobile"><a href="{{f:5658261}}"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
     				</div>
