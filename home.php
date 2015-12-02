@@ -266,9 +266,9 @@
     					<h3><a href="{{f:5658259}}">Alumni Advantage</a></h3>
     					<p class="hidden-mobile"><a href="{{f:5658259}}"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
     				</div>
-    				<div class="home-publication wow fadeInUp"><a href="{{f:5658256}}"> <img src="/comc/about/publications/adviser/images/aug15/joshhutchinson.jpg" alt="Josh Hutchinson" /></a>
-    					<h3><a href="{{f:5658256}}">The Adviser</a></h3>
-    					<p class="hidden-mobile"><a href="{{f:5658256}}"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
+    				<div class="home-publication wow fadeInUp"><a href="{{d:1355435}}"> <img src="/comc/about/publications/adviser/images/aug15/joshhutchinson.jpg" alt="Josh Hutchinson" /></a>
+    					<h3><a href="{{d:1355435}}">The Adviser</a></h3>
+    					<p class="hidden-mobile"><a href="{{d:1355435}}"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
     				</div>
     				<div class="home-publication wow fadeInUp"><a href="{{f:5658260}}"> <img src="/comc/about/publications/MC/images/CoMC-Logo.svg" alt="CoMC Logo" width="991" height="558" /></a>
     					<h3><a href="{{f:5658260}}">Converging News</a></h3>
