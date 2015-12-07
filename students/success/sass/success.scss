@@ -5,5 +5,31 @@
 
 .student_success
 {
-	
+
+	> h1
+	{
+		text-align: center;
+		font-size: 2.8em;
+	}
+
+	> p
+	{
+		text-align: center;
+	}
+
+}
+
+.blue
+{
+	background-color: lightblue;
+}
+
+.green
+{
+	background-color: lightgreen;
+}
+
+.grey
+{
+	background-color: #999;
 }
