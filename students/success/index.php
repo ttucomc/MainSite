@@ -46,28 +46,117 @@
 		<div class="row">
 
 			<!-- Events -->
-			<div class="medium-3 columns green">
+			<div class="columns green">
 
-        <br><br><br><br><br><br><br><br>
+          <div class="row">
+
+              <div class="medium-6 columns">
+                  <div>
+
+                      <img src="../../images/mc.jpg">
+
+                  </div>
+
+              </div>
+
+              <div class="medium-6 columns">
+                  <div>
+                    Header text info
+                  </div>
+                  <br>
+                  <div>
+                    Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque. Malis tantas pericula vim no.
+                    <br>
+                    Ut eius quas percipitur pro, tamquam molestie pertinacia an duo. Te evertitur neglegentur pro, cu sed movet decore ponderum. Eam admodum praesent interpretaris no, agam harum accusam est ad.
+                  </div>
+
+              </div>
+
+          </div>
 
 			</div>
 
 			<!-- Intern -->
-			<div class="medium-3 columns grey">
-          <br><br><br><br><br><br><br><br>
+			<div class="columns grey">
+        <div class="row">
+            <div class="medium-6 columns">
+                <div>
+                  Header text info
+                </div>
+                <br>
+                <div>
+                  Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque. Malis tantas pericula vim no.
+                  <br>
+                  Ut eius quas percipitur pro, tamquam molestie pertinacia an duo. Te evertitur neglegentur pro, cu sed movet decore ponderum. Eam admodum praesent interpretaris no, agam harum accusam est ad.
+                </div>
+
+            </div>
+            <div class="medium-6 columns">
+                <div>
+
+                  <img src="../../images/mc.jpg">
+                </div>
+
+            </div>
+
+        </div>
 			</div>
 
 			<!-- Scholar -->
-			<div class="medium-3 columns blue">
+			<div class="columns blue">
 
-          <br><br><br><br><br><br><br><br>
+        <div class="row">
+
+            <div class="medium-6 columns">
+                <div>
+
+                  <img src="../../images/mc.jpg">
+                </div>
+
+            </div>
+
+            <div class="medium-6 columns">
+                <div>
+                  Header text info
+                </div>
+                <br>
+                <div>
+                  Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque. Malis tantas pericula vim no.
+                  <br>
+                  Ut eius quas percipitur pro, tamquam molestie pertinacia an duo. Te evertitur neglegentur pro, cu sed movet decore ponderum. Eam admodum praesent interpretaris no, agam harum accusam est ad.
+                </div>
+
+            </div>
+
+        </div>
 
 			</div>
 
 			<!-- Career -->
-			<div class="medium-3 columns green">
+			<div class="columns green">
 
-          <br><br><br><br><br><br><br><br>
+        <div class="row foundationFix">
+            <div class="medium-6 columns ">
+                <div>
+                  Header text info
+                </div>
+                <br>
+                <div>
+                  Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque. Malis tantas pericula vim no.
+                  <br>
+                  Ut eius quas percipitur pro, tamquam molestie pertinacia an duo. Te evertitur neglegentur pro, cu sed movet decore ponderum. Eam admodum praesent interpretaris no, agam harum accusam est ad.
+                </div>
+
+            </div>
+            <div class="medium-6 columns">
+                <div>
+
+                  <img src="../../images/mc.jpg">
+                </div>
+
+            </div>
+
+        </div>
 
 			</div>
 
@@ -76,13 +165,20 @@
 	</section>
 	<!-- End Student Success Section -->
 
+  <br><br>
+
 	<!-- Staff Section -->
 	<section>
 
 		<!-- Team Profiles -->
 
 
-		<div>
+		<div class="row">
+      <div class="medium-3 columns blue">Hello World</div>
+      <div class="medium-3 columns green">Hello World</div>
+      <div class="medium-3 columns grey">Hello World</div>
+      <div class="medium-3 columns blue">Hello World</div>
+
 
 		</div>
 
