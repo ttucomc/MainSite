@@ -1,5 +1,17 @@
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object,
+.mqa-display img,
+.mqa-display embed,
+.mqa-display object {
+  max-width: none !important; }
+
+
 .row {
-  max-width: 62.5rem;
+  max-width: 72rem;
   margin-left: auto;
   margin-right: auto; }
   .row::before, .row::after {
