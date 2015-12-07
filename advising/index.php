@@ -8,16 +8,23 @@
 	<title>Advising</title>
 
 	<link rel="stylesheet" type="text/css" href="../css/ttu.css">
-	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="../css/animate.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/advising.css">
 
 	<script src="../js/modernizr.js"></script>
 	<script src="../js/ttuglobal.js"></script>
 	<script src="../js/ttuglobal-onload.js"></script>
 	<script src="../js/jquery-ui.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- COMC CUSTOM PAGE HEAD START -->
+
+	<link type="text/css" rel="stylesheet" href="/_ttu-template/design/jquery-ui.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/comc/includes/css/advising.css">
+	
+	<script src="/_ttu-template/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/comc/includes/js/advising.js"></script>
+
+	<!-- COMC CUSTOM PAGE HEAD END -->
 
 	<style>
 		.wrapper {
@@ -174,296 +181,324 @@
     <!-- TTU BREADCRUMBS AND HEADER 1 END -->
 
 
+    <!-- TTU HEADER AND MENUS TEMPLATE END -->
 
 
 
 
+    <!-- MAIN EDITS START HERE-->
+			    <div class="columns-wrapper column-flex column-flexwrap">
+			    	<div class="column-one-half">
+			    		<p>The Advising Office at The College of Media &amp; Communication is dedicated to providing students with the answers necessary for completion of their degree plan. Prospective undergraduate students should contact the advising office for information on enrolling in the college. Current students should check with the advising office each semester for information on advising sessions and requirements for graduation.<br /><br /> Advising staff are available Monday - Friday from 8 a.m. - Noon and<br /> 1 p.m. - 5 p.m.</p>
+			    		<br />
+			    		<h2>Contact Advising:</h2>
+			    		<ul>
+			    			<li><strong>Phone:</strong>&nbsp;<a href="tel:8068345897">806-834-5897</a></li>
+			    			<li><strong>Office:</strong> COMC 169</li>
+			    		</ul>
+			    	</div>
+			    	<div class="column-one-half"><img style="float: right; margin-left: 10px;" src="/comc/advising/images/advising3.jpg" alt="Donald Ellis laughing with a student" width="330" /></div>
+			    </div>
+			    <p class="clearfix">&nbsp;</p>
+			    <h3>Advising Information</h3>
+			    <p>Advising checklists for each major may be reviewed through the following links:</p>
+			    <div class="jquery-ui-accordion"><!-- start of jQuery-UI Accordion -->
+			    	<h4>Advertising (ADV)</h4>
+			    	<div>
+			    		<ul>
+			    			<li><a class="pdf" href="{{f:6171219}}">2008</a></li>
+			    			<li><a class="pdf" href="{{f:6171220}}">2009</a></li>
+			    			<li><a class="pdf" href="{{f:6171221}}">2010</a></li>
+			    			<li><a class="pdf" href="{{f:6171222}}">2011</a></li>
+			    			<li><a class="pdf" href="{{f:6171223}}">2012</a></li>
+			    			<li><a class="pdf" href="{{f:6171224}}">2013</a></li>
+			    			<li><a class="pdf" href="{{f:6171225}}">2014</a></li>
+			    		</ul>
+			    	</div>
+			    	<h4>Electronic Media &amp; Communications (EMC)</h4>
+			    	<div>
+			    		<ul>
+			    			<li><a class="pdf" href="{{f:6233820}}">2011</a></li>
+			    			<li><a class="pdf" href="{{f:6233821}}">2012</a></li>
+			    			<li><a class="pdf" href="{{f:6233822}}">2013</a></li>
+			    			<li><a class="pdf" href="{{f:6233823}}">2014</a></li>
+			    			<li>Electronic Media Management &amp; Economics (EMME)
+			    				<ul>
+			    					<li><a class="pdf" href="{{f:6233817}}">2008</a></li>
+			    					<li><a class="pdf" href="{{f:6233818}}">2009</a></li>
+			    					<li><a class="pdf" href="{{f:6233819}}">2010</a></li>
+			    				</ul>
+			    			</li>
+			    			<li>Visual Communications (VCOM)
+			    				<ul>
+			    					<li><a class="pdf" href="{{f:6233814}}">2008</a></li>
+			    					<li><a class="pdf" href="{{f:6233815}}">2009</a></li>
+			    					<li><a class="pdf" href="{{f:6233816}}">2010</a></li>
+			    				</ul>
+			    			</li>
+			    		</ul>
+			    	</div>
+			    	<h4>Journalism (JOUR)</h4>
+			    	<div>
+			    		<ul>
+			    			<li><a class="pdf" href="{{f:6233762}}">2010</a></li>
+			    			<li><a class="pdf" href="{{f:6233763}}">2011</a></li>
+			    			<li><a class="pdf" href="{{f:6233764}}">2012</a></li>
+			    			<li><a class="pdf" href="{{f:6233765}}">2013</a></li>
+			    			<li><a class="pdf" href="{{f:6233766}}">2014</a></li>
+			    			<li>Broadast (BRDJ)
+			    				<ul>
+			    					<li><a class="pdf" href="{{f:6233760}}">2008</a></li>
+			    					<li><a class="pdf" href="{{f:6233761}}">2009</a></li>
+			    				</ul>
+			    			</li>
+			    			<li>News-Editorial (NEWS)
+			    				<ul>
+			    					<li><a class="pdf" href="{{f:6233758}}">2008</a></li>
+			    					<li><a class="pdf" href="{{f:6233759}}">2009</a></li>
+			    				</ul>
+			    			</li>
+			    			<li>Online (ONLJ)
+			    				<ul>
+			    					<li><a class="pdf" href="{{f:6233756}}">2008</a></li>
+			    					<li><a class="pdf" href="{{f:6233757}}">2009</a></li>
+			    				</ul>
+			    			</li>
+			    		</ul>
+			    	</div>
+			    	<h4>Media Strategies (MDST)</h4>
+			    	<div>
+			    		<ul>
+			    			<li><a class="pdf" href="{{f:6244726}}">2012</a></li>
+			    			<li><a class="pdf" href="{{f:6244727}}">2013</a></li>
+			    			<li><a class="pdf" href="{{f:6244728}}">2014</a></li>
+			    		</ul>
+			    	</div>
+			    	<h4>Public Relations (PR)</h4>
+			    	<div>
+			    		<ul>
+			    			<li><a class="pdf" href="{{f:6244729}}">2010</a></li>
+			    			<li><a class="pdf" href="{{f:6244730}}">2011</a></li>
+			    			<li><a class="pdf" href="{{f:6244731}}">2012</a></li>
+			    			<li><a class="pdf" href="{{f:6244732}}">2013</a></li>
+			    			<li><a class="pdf" href="{{f:6244733}}">2014</a></li>
+			    		</ul>
+			    	</div>
+			    	<h4>Minors for non-Media &amp; Communication students</h4>
+			    	<div>
+			    		<ul>
+			    			<li><a class="pdf" href="{{f:6244756}}">Minor - 2011</a></li>
+			    			<li><a class="pdf" href="{{f:6244755}}">Minor - 2012</a></li>
+			    			<li><a class="pdf" href="{{f:6244754}}">Declaring MCOM Minor - 2012</a></li>
+			    			<li><a class="pdf" href="{{f:6244753}}">Minor Requirement Form - 2012</a></li>
+			    		</ul>
+			    	</div>
+			    	<div>
+			    		<h4>Intent to Graduate</h4>
+			    		<ul>
+			    			<li><a class="pdf" href="{{f:6244752}}">Intent to Graduate</a></li>
+			    		</ul>
+			    	</div>
+			    </div>
 
-    <!-- KUHRTS EDITS START -->
-    			
+    <?php echo '</div></div></div></div></div>'; ?>
 
-	         </div>
-	    </div>
-	</div>
-    </div>
-	</div>
-
-	<div class="wrapper">
-		<div class="columns-wrapper column-flex column-flexwrap">
-			<div class="column-full column-padded-horizontal">
-				<section id="advising-team">
-	    			<h2>Meet our team!</h2>
-	    			<!-- Cards idea from the great folks over at Beard Design - 08/18/2015 - http://bearddesign.co/team/ -->
+    <div class="wrapper">
+    	<div class="columns-wrapper column-flex column-flexwrap">
+    		<div class="column-full column-padded-horizontal">
+    			<section id="advising-team">
+    				<h2>Meet our team!</h2>
+    				<!-- Cards idea from the great folks over at Beard Design - 08/18/2015 - http://bearddesign.co/team/ -->
     				<div class="team-card tm-director">
-    					<div class="team-card-row">
-	    					<div class="tm-card-col tm-card-bio column-one-third">
-	    						<div class="side-container">
-		    						<div class="tm-side tm-back">
-		    							<div class="tm-back-img">
-			    							<img src="/comc/advising/images/julia-edit.png" alt="Julia Heard Witt">
-			    						</div>
-		    						</div>
-		    						<div class="tm-side tm-front">
-		    							<div class="tm-front-letter"></div>
-		    							<div class="tm-front-inner">
-		    								<h3>Julia Heard Witt</h3>
-		    								<p>Director of Advsing</p>
-		    							</div>
-		    						</div>
-		    					</div>
-	    					</div>
-	    					<div class="tm-card-col tm-card-details column-two-thirds">
-	    						<div class="tm-card-content">
-		    						<div class="tm-details-top">
-										<h3>Julia Heard</h3>
-										<p>
-											Julia Heard Witt has a Bachelor of Science degree in Hotel and Restaurant Management from Auburn University and a Master of Education in Counseling and Human Development from Hardin-Simmons University.  She’s a Licensed Professional Counselor in the state of Texas and is also a National Certified Counselor.  Before taking the Director of Advising position at Texas Tech in April, Julia spent the previous ten years at South Plains College in the Guidance and Counseling Center as a Veteran and Academic Counselor.
-										</p>
-			    					</div>
-			    					<div class="tm-details-bottom">
-			    						<hr>
-			    						<ul>
-			    							<li>
-			    								<img src="/comc/advising/images/AdvisingIcons-Julia-14.svg" alt="Buster"><br>
-			    								Buster
-			    							</li>
-			    							<li>
-			    								<img src="/comc/advising/images/AdvisingIcons-Julia-16.svg" alt="Traveleing"><br>
-		    									Traveling
-			    							</li>
-			    							<li>
-			    								<img src="/comc/advising/images/AdvisingIcons-Julia-15.svg" alt="Hunting"><br>
-		    									Hunting
-				    						</li>
-			    							<li>
-			    								<img src="/comc/advising/images/AdvisingIcons-Julia-13.svg" alt="Pintrest"><br>
-		    									Pintrest
-				    						</li>
-			    						</ul>
-			    					</div>
-			    					<div class="close"></div>
-			    				</div>
-	    					</div>
-	    				</div>
+    					<div class="tm-card-col tm-card-bio column-one-third">
+    						<div class="side-container">
+    							<div class="tm-side tm-back">
+    								<div class="tm-back-img"><img src="/comc/advising/images/julia-edit.png" alt="Julia Heard Witt" /></div>
+    							</div>
+    							<div class="tm-side tm-front">
+    								<div class="tm-front-letter"></div>
+    								<div class="tm-front-inner">
+    									<h3>Julia Heard Witt</h3>
+    									<p>Director of Advsing</p>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="tm-card-col tm-card-details column-two-thirds">
+    						<div class="tm-card-content">
+    							<div class="tm-details-top">
+    								<h3>Julia Heard</h3>
+    								<p>Julia Heard Witt has a Bachelor of Science degree in Hotel and Restaurant Management from Auburn University and a Master of Education in Counseling and Human Development from Hardin-Simmons University. She’s a Licensed Professional Counselor in the state of Texas and is also a National Certified Counselor. Before taking the Director of Advising position at Texas Tech in April, Julia spent the previous ten years at South Plains College in the Guidance and Counseling Center as a Veteran and Academic Counselor.</p>
+    							</div>
+    							<div class="tm-details-bottom"><hr />
+    								<ul>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Julia-14.svg" alt="Buster" /><br /> Buster</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Julia-16.svg" alt="Traveleing" /><br /> Traveling</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Julia-15.svg" alt="Hunting" /><br /> Hunting</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Julia-13.svg" alt="Pintrest" /><br /> Pintrest</li>
+    								</ul>
+    							</div>
+    							<div class="close"></div>
+    						</div>
+    					</div>
     				</div>
-
     				<div class="team-card tm-debra">
     					<div class="tm-card-col tm-card-bio column-one-third">
     						<div class="side-container">
-	    						<div class="tm-side tm-back">
-	    							<div class="tm-back-img">
-		    							<img src="/comc/advising/images/debra-edit.png" alt="Debra Sanderson">
-		    						</div>
-	    						</div>
-	    						<div class="tm-side tm-front">
-	    							<div class="tm-front-letter"></div>
-	    							<div class="tm-front-inner">
-	    								<h3>Debra Sanderson</h3>
-	    								<p>Academic Adviser</p>
-	    							</div>
-	    						</div>
-	    					</div>
+    							<div class="tm-side tm-back">
+    								<div class="tm-back-img"><img src="/comc/advising/images/debra-edit.png" alt="Debra Sanderson" /></div>
+    							</div>
+    							<div class="tm-side tm-front">
+    								<div class="tm-front-letter"></div>
+    								<div class="tm-front-inner">
+    									<h3>Debra Sanderson</h3>
+    									<p>Academic Adviser</p>
+    								</div>
+    							</div>
+    						</div>
     					</div>
     					<div class="tm-card-col tm-card-details column-two-thirds">
     						<div class="tm-card-content">
-	    						<div class="tm-details-top">
-									<h3>Debra Sanderson</h3>
-									<p>
-										Proud Texas Tech alumna from the Public Relations program, experienced in assisting entertainment executives in the 5 years prior before moving back to Lubbock. Favorite celeb encounter would be Jane Lynch at Glee’s 100th episode party and Melissa Peterman of Reba and Baby Daddy fame. I also performed at the Nokia Theater with my church. I’m passionate about my alma mater, always strive to be a helpful and honest advisor and care deeply for my family, church and friends.
-									</p>
-		    					</div>
-		    					<div class="tm-details-bottom">
-		    						<hr>
-		    						<ul>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Debra-09.svg" alt="Tennis"><br>
-		    								Tennis
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Debra-10.svg" alt="Disney"><br>
-	    									Disney
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Debra-11.svg" alt="Concerts"><br>
-	    									Concerts
-			    						</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Debra-12.svg" alt="Dogs"><br>
-	    									Dogs
-			    						</li>
-		    						</ul>
-		    					</div>
-		    					<div class="close"></div>
-		    				</div>
+    							<div class="tm-details-top">
+    								<h3>Debra Sanderson</h3>
+    								<p>Proud Texas Tech alumna from the Public Relations program, experienced in assisting entertainment executives in the 5 years prior before moving back to Lubbock. Favorite celeb encounter would be Jane Lynch at Glee’s 100th episode party and Melissa Peterman of Reba and Baby Daddy fame. I also performed at the Nokia Theater with my church. I’m passionate about my alma mater, always strive to be a helpful and honest advisor and care deeply for my family, church and friends.</p>
+    							</div>
+    							<div class="tm-details-bottom"><hr />
+    								<ul>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Debra-09.svg" alt="Tennis" /><br /> Tennis</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Debra-10.svg" alt="Disney" /><br /> Disney</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Debra-11.svg" alt="Concerts" /><br /> Concerts</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Debra-12.svg" alt="Dogs" /><br /> Dogs</li>
+    								</ul>
+    							</div>
+    							<div class="close"></div>
+    						</div>
     					</div>
     				</div>
-
     				<div class="team-card tm-kim">
     					<div class="tm-card-col tm-card-bio column-one-third">
     						<div class="side-container">
-	    						<div class="tm-side tm-back">
-	    							<div class="tm-back-img">
-		    							<img src="/comc/advising/images/kbergan.png" alt="Kim Bergan">
-		    						</div>
-	    						</div>
-	    						<div class="tm-side tm-front">
-	    							<div class="tm-front-letter"></div>
-	    							<div class="tm-front-inner">
-	    								<h3>Kim Bergan</h3>
-	    								<p>Academic Adviser</p>
-	    							</div>
-	    						</div>
-	    					</div>
+    							<div class="tm-side tm-back">
+    								<div class="tm-back-img"><img src="/comc/advising/images/kbergan.png" alt="Kim Bergan" /></div>
+    							</div>
+    							<div class="tm-side tm-front">
+    								<div class="tm-front-letter"></div>
+    								<div class="tm-front-inner">
+    									<h3>Kim Bergan</h3>
+    									<p>Academic Adviser</p>
+    								</div>
+    							</div>
+    						</div>
     					</div>
     					<div class="tm-card-col tm-card-details column-two-thirds">
     						<div class="tm-card-content">
-	    						<div class="tm-details-top">
-									<h3>Kim Bergan</h3>
-									<p>
-										I was Born in North Dakota but got to Texas as fast as I could! Don’t mess with Texas! I graduated from Texas Tech in 2012 with a Bachelor of Arts in Psychology with a Math minor. Majority of my time since graduation, I have been in an advising position and loved it!
-									</p>
-		    					</div>
-		    					<div class="tm-details-bottom">
-		    						<hr>
-		    						<ul>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-kim-05.svg" alt="Red Hot Chili Peppers"><br>
-		    								Red Hot Chili Peppers
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-kim-06.svg" alt="Pizza"><br>
-	    									Pizza
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-kim-07.svg" alt="Arts and Crafts"><br>
-	    									Arts and Crafts
-			    						</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-kim-08.svg" alt="Instagram"><br>
-	    									Instagram
-			    						</li>
-		    						</ul>
-		    					</div>
-		    					<div class="close"></div>
-		    				</div>
+    							<div class="tm-details-top">
+    								<h3>Kim Bergan</h3>
+    								<p>I was Born in North Dakota but got to Texas as fast as I could! Don’t mess with Texas! I graduated from Texas Tech in 2012 with a Bachelor of Arts in Psychology with a Math minor. Majority of my time since graduation, I have been in an advising position and loved it!</p>
+    							</div>
+    							<div class="tm-details-bottom"><hr />
+    								<ul>
+    									<li><img src="/comc/advising/images/AdvisingIcons-kim-05.svg" alt="Red Hot Chili Peppers" /><br /> Red Hot Chili Peppers</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-kim-06.svg" alt="Pizza" /><br /> Pizza</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-kim-07.svg" alt="Arts and Crafts" /><br /> Arts and Crafts</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-kim-08.svg" alt="Instagram" /><br /> Instagram</li>
+    								</ul>
+    							</div>
+    							<div class="close"></div>
+    						</div>
     					</div>
     				</div>
-
     				<div class="team-card tm-emc">
     					<div class="tm-card-col tm-card-bio column-one-third">
     						<div class="side-container">
-	    						<div class="tm-side tm-back">
-	    							<div class="tm-back-img">
-		    							<img src="/comc/advising/images/don-edit.png" alt="Donald Ellis">
-		    						</div>
-	    						</div>
-	    						<div class="tm-side tm-front">
-	    							<div class="tm-front-letter"></div>
-	    							<div class="tm-front-inner">
-	    								<h3>Donald Ellis</h3>
-	    								<p>Academic Adviser</p>
-	    							</div>
-	    						</div>
-	    					</div>
+    							<div class="tm-side tm-back">
+    								<div class="tm-back-img"><img src="/comc/advising/images/don-edit.png" alt="Donald Ellis" /></div>
+    							</div>
+    							<div class="tm-side tm-front">
+    								<div class="tm-front-letter"></div>
+    								<div class="tm-front-inner">
+    									<h3>Donald Ellis</h3>
+    									<p>Academic Adviser</p>
+    								</div>
+    							</div>
+    						</div>
     					</div>
     					<div class="tm-card-col tm-card-details column-two-thirds">
     						<div class="tm-card-content">
-	    						<div class="tm-details-top">
-									<h3>Donald Ellis</h3>
-									<p>
-										The bachelor of arts degree in electronic media and communications is designed to train innovative, responsible storytellers in convergent media forms who can create, analyze, and compete in diverse U.S. and global media marketplaces. The EMC program offers professional courses in electronic media, visual communication, digital media production, photography, and writing to provide a broad and thorough liberal arts education. This is not simply a skills-oriented program. Instead, the program is devoted to preparing students for leadership positions in electronic media industries.
-									</p>
-		    					</div>
-		    					<div class="tm-details-bottom">
-		    						<hr>
-		    						<ul>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-don-01.svg" alt="Mastiff"><br>
-		    								Mastiffs
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-don-02.svg" alt="Golf"><br>
-	    									Golf
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-don-03.svg" alt="Breaking Bad"><br>
-	    									Breaking Bad
-			    						</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-don-04.svg" alt="Family"><br>
-	    									Family
-			    						</li>
-		    						</ul>
-		    					</div>
-		    					<div class="close"></div>
-		    				</div>
+    							<div class="tm-details-top">
+    								<h3>Donald Ellis</h3>
+    								<p>The bachelor of arts degree in electronic media and communications is designed to train innovative, responsible storytellers in convergent media forms who can create, analyze, and compete in diverse U.S. and global media marketplaces. The EMC program offers professional courses in electronic media, visual communication, digital media production, photography, and writing to provide a broad and thorough liberal arts education. This is not simply a skills-oriented program. Instead, the program is devoted to preparing students for leadership positions in electronic media industries.</p>
+    							</div>
+    							<div class="tm-details-bottom"><hr />
+    								<ul>
+    									<li><img src="/comc/advising/images/AdvisingIcons-don-01.svg" alt="Mastiff" /><br /> Mastiffs</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-don-02.svg" alt="Golf" /><br /> Golf</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-don-03.svg" alt="Breaking Bad" /><br /> Breaking Bad</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-don-04.svg" alt="Family" /><br /> Family</li>
+    								</ul>
+    							</div>
+    							<div class="close"></div>
+    						</div>
     					</div>
     				</div>
-
     				<div class="team-card tm-jpoff">
     					<div class="tm-card-col tm-card-bio column-one-third">
     						<div class="side-container">
-	    						<div class="tm-side tm-back">
-	    							<div class="tm-back-img">
-		    							<img src="/comc/advising/images/jpoff-edit.png" alt="Judy Poffenbarger">
-		    						</div>
-	    						</div>
-	    						<div class="tm-side tm-front">
-	    							<div class="tm-front-letter"></div>
-	    							<div class="tm-front-inner">
-	    								<h3>Judy Poffenbarger</h3>
-	    								<p>Academic Adviser</p>
-	    							</div>
-	    						</div>
-	    					</div>
+    							<div class="tm-side tm-back">
+    								<div class="tm-back-img"><img src="/comc/advising/images/jpoff-edit.png" alt="Judy Poffenbarger" /></div>
+    							</div>
+    							<div class="tm-side tm-front">
+    								<div class="tm-front-letter"></div>
+    								<div class="tm-front-inner">
+    									<h3>Judy Poffenbarger</h3>
+    									<p>Academic Adviser</p>
+    								</div>
+    							</div>
+    						</div>
     					</div>
     					<div class="tm-card-col tm-card-details column-two-thirds">
     						<div class="tm-card-content">
-	    						<div class="tm-details-top">
-									<h3>Judy Poffenbarger</h3>
-									<p>
-										I was born in Lubbock and grew up in a house just 5 blocks from campus: Texas Tech has been an important part of my life for a long time.  My B.A. in English is from Texas Tech, and my M.A. in English is from The University of Texas at Austin. After 20 years in public education (and miscellaneous other endeavors), I joined Texas Tech Advising in the Department of Communication Studies 8 years ago.  The work is rewarding, and I wake up every morning looking forward to getting to the office to continue the work I love.
-									</p>
-		    					</div>
-		    					<div class="tm-details-bottom">
-		    						<hr>
-		    						<ul>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Jpoff-17.svg" alt="Playing Music"><br>
-		    								Playing Music
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Jpoff-18.svg" alt="Fantasia"><br>
-	    									Fantasia
-		    							</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Jpoff-19.svg" alt="New Zealand"><br>
-	    									New Zealand
-			    						</li>
-		    							<li>
-		    								<img src="/comc/advising/images/AdvisingIcons-Jpoff-20.svg" alt="Dr. Who"><br>
-	    									Dr. Who
-			    						</li>
-		    						</ul>
-		    					</div>
-		    					<div class="close"></div>
-		    				</div>
+    							<div class="tm-details-top">
+    								<h3>Judy Poffenbarger</h3>
+    								<p>I was born in Lubbock and grew up in a house just 5 blocks from campus: Texas Tech has been an important part of my life for a long time. My B.A. in English is from Texas Tech, and my M.A. in English is from The University of Texas at Austin. After 20 years in public education (and miscellaneous other endeavors), I joined Texas Tech Advising in the Department of Communication Studies 8 years ago. The work is rewarding, and I wake up every morning looking forward to getting to the office to continue the work I love.</p>
+    							</div>
+    							<div class="tm-details-bottom"><hr />
+    								<ul>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Jpoff-17.svg" alt="Playing Music" /><br /> Playing Music</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Jpoff-18.svg" alt="Fantasia" /><br /> Fantasia</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Jpoff-19.svg" alt="New Zealand" /><br /> New Zealand</li>
+    									<li><img src="/comc/advising/images/AdvisingIcons-Jpoff-20.svg" alt="Dr. Who" /><br /> Dr. Who</li>
+    								</ul>
+    							</div>
+    							<div class="close"></div>
+    						</div>
     					</div>
     				</div>
-
-    				
     			</section>
-			</div>
-		</div>
-	</div>
+    		</div>
+    	</div>
+    </div>
+    <!-- end of jQuery-UI Accordion -->
+	<script type="text/javascript">// <![CDATA[
+		$( document ).ready(function() {
+			$( ".jquery-ui-accordion" ).accordion({
+				collapsible: true,
+				header: "h4",
+				heightStyle: "content",
+				active: false
+			});
+		});
+		// ]]>
+	</script>
+	<?php echo '<div><div><div><div><div>'; ?>
     
-    <!-- KUHRTS EDITS END -->
+    <!-- MAIN EDITS END HERE -->
 
 
 
 
 
-
+    <!-- TTU FOOTER TEMPLATE STARTS -->
 
 
     <!-- TTU WIDE RED AND FOOTER START -->

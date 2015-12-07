@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<title>College of Media and Communication</title>
+	<title>College of Media &amp; Communication</title>
 
 	<link rel="stylesheet" type="text/css" href="css/ttu.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -17,7 +17,28 @@
 	<script src="js/ttuglobal-onload.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<!-- <script type="text/javascript" src="js/home.js"></script> -->
+
+    <!-- OUR CUSTOM HEAD START -->
+    <meta itemprop="name" content="College of Media &amp; Communication | TTU">
+    <meta itemprop="description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
+    <meta itemprop="image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ttu_comc">
+    <meta name="twitter:title" content="College of Media &amp; Communication | TTU">
+    <meta name="twitter:description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
+    <meta name="twitter:creator" content="@ttu_comc">
+    <meta name="twitter:image:src" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
+
+
+    <meta property="og:title" content="College of Media &amp; Communication | TTU"/>
+    <link href="http://www.depts.ttu.edu/comc/" rel="canonical" />
+    <meta property="og:url" content="http://www.depts.ttu.edu/comc/"/>
+    <meta property="og:description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="College of Media & Communication"/>
+    <meta property="og:image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg"/>
+    <!-- OUR CUSTOM HEAD END -->
 </head>
 <body>
 	<!-- HEADER AND NAV START -->
@@ -249,12 +270,12 @@
     					<h3><a href="{{f:5658256}}">The Adviser</a></h3>
     					<p class="hidden-mobile"><a href="{{f:5658256}}"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
     				</div>
-    				<div class="home-publication wow fadeInUp"><a href="{{f:5658260}}"> <img src="{{f:8189498}}" alt="Christina Gutierrez" width="991" height="558" /></a>
+    				<div class="home-publication wow fadeInUp"><a href="{{f:5658260}}"> <img src="/comc/about/publications/MC/images/CoMC-Logo.svg" alt="CoMC Logo" width="991" height="558" /></a>
     					<h3><a href="{{f:5658260}}">Converging News</a></h3>
-    					<p class="hidden-mobile"><a href="{{f:5658260}}"><strong>Advertising Graduate Featured on ABC Family's 'Job or No Job'</strong><br /><br />A College of Media &amp; Communication graduate was featured on the Oct. 1 episode during the first season of the new ABC Family cable channel series “Job or No Job,” a reality TV show that follows young adults as they go through the process of seeking a job after college.<br /><br /><em>More...</em></a></p>
+    					<p class="hidden-mobile"><a href="{{f:5658260}}"><strong>College of Media &amp; Communication Sees Near-Record Enrollment Numbers</strong><br /><br />Enrollment numbers for Fall 2015 are soaring in the Texas Tech University College of Media &amp; Communication, with a total of 1,620 students, which both surpasses the previous year’s number and sets a near-record high.<br /><br /><em>More...</em></a></p>
     				</div>
-    				<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/images/home/mc.jpg" alt="President Nellis speaking to classroom" /></a>
-    					<h3><a href="{{f:5658261}}">The MC</a></h3>
+    				<div class="home-publication wow fadeInUp"><a href="{{d:1360801}}"> <img src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" style="width:50%;" /></a>
+    					<h3><a href="{{f:5658261}}">The MC 2015</a></h3>
     					<p class="hidden-mobile"><a href="{{f:5658261}}"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
     				</div>
     			</div>
