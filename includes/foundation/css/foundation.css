@@ -305,7 +305,6 @@
     float: left; }
 
 .column.small-centered, .small-centered.columns {
-  float: none;
   margin-left: auto;
   margin-right: auto; }
 
@@ -504,7 +503,6 @@
     .medium-up-8 > .column:last-child, .medium-up-8 > .columns:last-child {
       float: left; }
   .column.medium-centered, .medium-centered.columns {
-    float: none;
     margin-left: auto;
     margin-right: auto; }
   .medium-uncenter,
@@ -702,7 +700,6 @@
     .large-up-8 > .column:last-child, .large-up-8 > .columns:last-child {
       float: left; }
   .column.large-centered, .large-centered.columns {
-    float: none;
     margin-left: auto;
     margin-right: auto; }
   .large-uncenter,
