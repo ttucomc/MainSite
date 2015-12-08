@@ -923,6 +923,7 @@ box-sizing: inherit;
 .small-push-0,
 .small-pull-0 {
   position: static;
+  float: left !important;
   margin-left: 0;
   margin-right: 0; }
 
@@ -1121,6 +1122,7 @@ box-sizing: inherit;
   .medium-push-0,
   .medium-pull-0 {
     position: static;
+    float: left !important;
     margin-left: 0;
     margin-right: 0; } }
 
@@ -1319,6 +1321,7 @@ box-sizing: inherit;
   .large-push-0,
   .large-pull-0 {
     position: static;
+    float: left !important;
     margin-left: 0;
     margin-right: 0; } }
 
