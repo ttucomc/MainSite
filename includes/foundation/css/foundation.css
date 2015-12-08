@@ -598,10 +598,16 @@
   font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em"; }
 
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
+html {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+*, *:before, *:after {
+-webkit-box-sizing: inherit;
+-moz-box-sizing: inherit;
+box-sizing: inherit;
+}
 
 #map_canvas img,
 #map_canvas embed,
