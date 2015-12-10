@@ -43,9 +43,11 @@
 	<!-- Student Success Section -->
 	<section>
 
+        <!-- Making this a little too complicated again. This big row below can be taken out -->
 		<div class="row">
 
 			<!-- Events -->
+            <!-- You can also take out this div and just add the 'green' class to the row below. If I've confused you, come talk to me! -KC -->
 			<div class="columns green">
 
           <div class="row">
