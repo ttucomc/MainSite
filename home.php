@@ -162,8 +162,8 @@
     		</div>
     		<div id="mobileHeaderImage" class="animated fadeInUp"><img src="/comc/images/home/dylan-noback.png" alt="Dylan Noback" /></div>
     	</section>
-    	<section class="content-block intro-section">
-    		<div class="wrapper">
+    	<section class="content-block">
+    		<div class="wrapper" id="intro-section">
     			<div class="columns-wrapper column-flex column-flexwrap">
     				<div class="column-full column-centered column-padded-horizontal">
     					<h1>College of Media &amp; Communication</h1>
