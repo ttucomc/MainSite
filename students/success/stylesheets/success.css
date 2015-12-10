@@ -2,17 +2,30 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-.student_success > h1 {
+.studentSuccess > h1 {
   text-align: center;
-  font-size: 2.8em; }
-.student_success > p {
+  font-size: 2.8em;
+  color: #C00; }
+.studentSuccess > p {
+  text-align: center;
+  color: #666; }
+
+.centerImage {
   text-align: center; }
 
-.blue {
-  background-color: lightblue; }
+/* Just trying to stay DRY. Actually I was hoping to test conditional statements here but standard sass doesnt have them.. tear. */
+.studentSuccessImage {
+  padding: 2.5em 1em;
+  text-align: left; }
 
-.green {
-  background-color: lightgreen; }
+.studentSuccessTextContainer {
+  padding: 3.75em 1em;
+  text-align: left; }
 
-.grey {
-  background-color: #999; }
+.studentSuccessTextTitle {
+  font-size: 2.4em;
+  margin: 0.6em 0;
+  color: #666; }
+
+.studentSuccessText {
+  color: #808285; }

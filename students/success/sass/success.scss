@@ -3,33 +3,71 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-.student_success
+$ttuDarkGrey: #666;
+$ttuLightGrey: #808285;
+$ttuRed: #C00;
+$ttuBlack: #000;
+
+.studentSuccess
 {
 
 	> h1
 	{
 		text-align: center;
 		font-size: 2.8em;
+		color: $ttuRed;
 	}
 
 	> p
 	{
 		text-align: center;
+		color: $ttuDarkGrey;
 	}
 
 }
 
-.blue
+.centerImage
 {
-	background-color: lightblue;
+	text-align: center;
 }
 
-.green
+/* Just trying to stay DRY. Actually I was hoping to test conditional statements here but standard sass doesnt have them.. tear. */
+@mixin studentSuccessContainerPadding($paddingTB, $paddingLR, $bool)
 {
-	background-color: lightgreen;
+
+	@if $bool
+	{
+		@debug "$boolean is #{$bool}";
+		padding: $paddingTB * 1.5 $paddingLR;
+	}
+
+	@else
+	{
+		@debug "$boolean is #{$bool}";
+		padding: $paddingTB $paddingLR;
+	}
+
+	text-align: left;
 }
 
-.grey
+.studentSuccessImage
 {
-	background-color: #999;
+	@include studentSuccessContainerPadding(2.5em, 1em, false);
+}
+
+.studentSuccessTextContainer
+{
+	@include studentSuccessContainerPadding(2.5em, 1em, true);
+}
+
+.studentSuccessTextTitle
+{
+	font-size: 2.4em;
+	margin: 0.6em 0;
+	color: $ttuDarkGrey;
+}
+
+.studentSuccessText
+{
+	color: $ttuLightGrey;
 }
