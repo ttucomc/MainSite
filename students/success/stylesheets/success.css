@@ -2,13 +2,17 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-.studentSuccess > h1 {
+h1 {
   text-align: center;
-  font-size: 2.8em;
-  color: #C00; }
-.studentSuccess > p {
+  font-size: 4.5em;
+  color: #C00;
+  line-height: 1; }
+
+.studentSuccess p {
+  font-size: 2.5em;
   text-align: center;
-  color: #666; }
+  color: #666;
+  line-height: 1; }
 
 .centerImage {
   text-align: center; }
@@ -23,9 +27,12 @@
   text-align: left; }
 
 .studentSuccessTextTitle {
-  font-size: 2.4em;
+  font-size: 2.8em;
   margin: 0.6em 0;
-  color: #666; }
+  color: #666;
+  line-height: 1; }
 
 .studentSuccessText {
-  color: #808285; }
+  color: #808285;
+  font-size: 1.6em;
+  line-height: 1; }

@@ -130,6 +130,7 @@
 <!-- Student Success Page -->
 <?php echo "</div></div></div></div>" ?>
 
+  <br>
 	<!-- Student Success Page title and description -->
 	<seciton>
 
@@ -160,7 +161,6 @@
               <div class="centerImage">
                   <img class="studentSuccessImage" src="../../images/mc.jpg">
               </div>
-
           </div>
 
           <div class="large-6 columns">
@@ -179,7 +179,14 @@
 			<!-- Intern -->
 
       <div class="row">
-          <div class="large-6 columns">
+
+        <div class="small-push-12 large-6 large-push-6 columns">
+            <div class="centerImage">
+              <img class="studentSuccessImage" src="../../images/mc.jpg">
+            </div>
+        </div>
+
+          <div class="small-pull-12 large-6 large-pull-6 columns">
             <div class="studentSuccessTextContainer">
               <h3 class="studentSuccessTextTitle">Internships</h3>
 
@@ -190,12 +197,7 @@
               </div>
             </div>
           </div>
-          <div class="large-6 columns">
-              <div>
 
-                <img class="studentSuccessImage" src="../../images/mc.jpg">
-              </div>
-          </div>
       </div>
 
 
@@ -203,11 +205,12 @@
 
 
       <div class="row">
-
           <div class="large-6 columns">
-              <div>
+
+              <div class="centerImage">
                 <img class="studentSuccessImage" src="../../images/mc.jpg">
               </div>
+
           </div>
 
           <div class="large-6 columns">
@@ -225,10 +228,16 @@
 
 			<!-- Career -->
       <div class="row">
-          <div class="large-6 columns">
+
+          <div class="small-push-12 large-6 large-push-6 columns">
+              <div class="centerImage">
+                <img class="studentSuccessImage" src="../../images/mc.jpg">
+              </div>
+          </div>
+
+          <div class="small-pull-12 large-6 large-pull-6 columns">
             <div class="studentSuccessTextContainer">
               <h3 class="studentSuccessTextTitle">Career Center</h3>
-
               <div class="studentSuccessText">
                 Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque. Malis tantas pericula vim no.
                 <br>
@@ -236,11 +245,7 @@
               </div>
             </div>
           </div>
-          <div class="large-6 columns">
-              <div>
-                <img class="studentSuccessImage" src="../../images/mc.jpg">
-              </div>
-          </div>
+
       </div>
 
 	</section>
