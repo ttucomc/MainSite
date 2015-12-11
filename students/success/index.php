@@ -262,9 +262,17 @@
 		<div class="row">
       <div class="medium-3 columns">
         <div class="row">
-            <div class="small-">
-
+            <div class="small-4 columns">
+								<img src="../../images/mc.jpg"/>
             </div>
+
+						<div class="small-8 columns">
+							<div>Name Here</div>
+							<br>
+							<div>Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+
+						</div>
+
         </div>
       </div>
       <div class="medium-3 columns">Hello World</div>
