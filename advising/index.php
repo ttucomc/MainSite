@@ -200,7 +200,6 @@
 			    	<div class="column-one-half"><img style="float: right; margin-left: 10px;" src="/comc/advising/images/advising3.jpg" alt="Donald Ellis laughing with a student" width="330" /></div>
 			    </div>
 			    <p class="clearfix">&nbsp;</p>
-					<h3>COMMUNICATION IS ESSENTIAL</h3>
 
     <?php echo '</div></div></div></div></div>'; ?>
 
