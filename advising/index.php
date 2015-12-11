@@ -20,7 +20,7 @@
 	<link type="text/css" rel="stylesheet" href="/_ttu-template/design/jquery-ui.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/comc/includes/css/advising.css">
-	
+
 	<script src="/_ttu-template/js/jquery-ui.js"></script>
 	<script type="text/javascript" src="/comc/includes/js/advising.js"></script>
 
@@ -39,15 +39,15 @@
 	        <div class="nav-trigger-wrapper"><a class="nav-trigger" data-click-target=".nav-mobile" href="#">☰</a></div>
 	        <div class="wrapper"><a class="logo" href="http://www.ttu.edu/"><img src="http://cmsdev.ttu.edu/_ttu-template/design/images/logo.png" alt="Texas Tech University"></a>
 				<div class="nav-mobile">
-		               
-		            <nav class="nav-wrapper">        
+
+		            <nav class="nav-wrapper">
 		                <ul class="nav-utility nav-inline">
 							<li><a href="http://www.ttu.edu/site/">A-Z Index</a></li>
 							<li><a href="http://directory.texastech.edu/">Directory</a></li>
 							<li><a href="http://www.raiderlink.ttu.edu/">Raiderlink</a></li>
-						</ul>      
+						</ul>
 	                </nav>
-		               
+
 		            <form action="http://google.ttu.edu/search" method="post" class="inline-form search-form">
 						<fieldset>
 							<legend class="search-legend">Search</legend>
@@ -64,7 +64,7 @@
 							<input type="submit" name="searchsubmit" id="searchsubmit" class="search-submit">
 						</fieldset>
 					</form>
-		               
+
 		            <div class="nav-primary-moved"></div>
 	            </div>
 	        </div>
@@ -78,7 +78,7 @@
 						<li><a href="http://www.ttu.edu/campus-life/">Campus Life</a></li>
 						<li><a href="http://www.texastech.com/" target="_blank">Athletics</a></li>
 						<li><a href="http://www.ttu.edu/about/">About TTU</a></li>
-					</ul>   
+					</ul>
 	            </nav>
 	        </div>
 	        <nav class="nav-wrapper-lower clearfix">
@@ -100,11 +100,11 @@
 	<!-- TTU BREADCRUMBS AND HEADER 1 START -->
 	<div class="wrapper wrapper-padded-mobile">
          <div class="columns-wrapper column-flex">
-         
-          
+
+
          <!--Side Bar-->
          <div class="column-one-fourth column-padded-horizontal-left">
-            <nav class="nav-left-wrapper"><a class="nav-left-trigger icon-down" href="#"></a><!-- This file is IGNORED UNLESS the subsite or section's "sitemenu_level" directory variable 
+            <nav class="nav-left-wrapper"><a class="nav-left-trigger icon-down" href="#"></a><!-- This file is IGNORED UNLESS the subsite or section's "sitemenu_level" directory variable
      is set to the base path of this subsite or section. --> <!-- Edit or remove the header below -->
 				<ul><!-- The links below are examples only.  -->
 				<li><a href="/comc/">COMC Home</a>
@@ -155,7 +155,7 @@
 				</ul>
 				</li>
 				</ul>
-				               
+
                <div class="officeinfo hidden-mobile">
                   <div class="officeinfo-item"><h4>Contact Us</h4>
 					<p>College of Media &amp; Communication<br /> Box 43082<br /> Texas Tech University,<br /> Lubbock, TX 79409<br /> <a class="icon-phone" href="tel:8067426500">806.742.6500</a></p>
@@ -168,14 +168,14 @@
          <div class="wrapper">
             <div class="wrapper">
                <ul class="breadcrumbs">
-                  
+
                   <li class="breadcrumbs-item"><a href="http://www.ttu.edu/"></a></li>
-                  <li class="breadcrumbs-item"><a href="/comc">College of Media and Communications</a></li> 
-                  <li class="breadcrumbs-item"><a href="/comc/advising">Advising</a></li> 
+                  <li class="breadcrumbs-item"><a href="/comc">College of Media and Communications</a></li>
+                  <li class="breadcrumbs-item"><a href="/comc/advising">Advising</a></li>
                </ul>
             </div>
-            
-            
+
+
             <div class="content-block">
                <h1>COMC Advising</h1>
     <!-- TTU BREADCRUMBS AND HEADER 1 END -->
@@ -201,105 +201,6 @@
 			    </div>
 			    <p class="clearfix">&nbsp;</p>
 			    <h3>Advising Information</h3>
-			    <p>Advising checklists for each major may be reviewed through the following links:</p>
-			    <div class="jquery-ui-accordion"><!-- start of jQuery-UI Accordion -->
-			    	<h4>Advertising (ADV)</h4>
-			    	<div>
-			    		<ul>
-			    			<li><a class="pdf" href="{{f:6171219}}">2008</a></li>
-			    			<li><a class="pdf" href="{{f:6171220}}">2009</a></li>
-			    			<li><a class="pdf" href="{{f:6171221}}">2010</a></li>
-			    			<li><a class="pdf" href="{{f:6171222}}">2011</a></li>
-			    			<li><a class="pdf" href="{{f:6171223}}">2012</a></li>
-			    			<li><a class="pdf" href="{{f:6171224}}">2013</a></li>
-			    			<li><a class="pdf" href="{{f:6171225}}">2014</a></li>
-			    		</ul>
-			    	</div>
-			    	<h4>Electronic Media &amp; Communications (EMC)</h4>
-			    	<div>
-			    		<ul>
-			    			<li><a class="pdf" href="{{f:6233820}}">2011</a></li>
-			    			<li><a class="pdf" href="{{f:6233821}}">2012</a></li>
-			    			<li><a class="pdf" href="{{f:6233822}}">2013</a></li>
-			    			<li><a class="pdf" href="{{f:6233823}}">2014</a></li>
-			    			<li>Electronic Media Management &amp; Economics (EMME)
-			    				<ul>
-			    					<li><a class="pdf" href="{{f:6233817}}">2008</a></li>
-			    					<li><a class="pdf" href="{{f:6233818}}">2009</a></li>
-			    					<li><a class="pdf" href="{{f:6233819}}">2010</a></li>
-			    				</ul>
-			    			</li>
-			    			<li>Visual Communications (VCOM)
-			    				<ul>
-			    					<li><a class="pdf" href="{{f:6233814}}">2008</a></li>
-			    					<li><a class="pdf" href="{{f:6233815}}">2009</a></li>
-			    					<li><a class="pdf" href="{{f:6233816}}">2010</a></li>
-			    				</ul>
-			    			</li>
-			    		</ul>
-			    	</div>
-			    	<h4>Journalism (JOUR)</h4>
-			    	<div>
-			    		<ul>
-			    			<li><a class="pdf" href="{{f:6233762}}">2010</a></li>
-			    			<li><a class="pdf" href="{{f:6233763}}">2011</a></li>
-			    			<li><a class="pdf" href="{{f:6233764}}">2012</a></li>
-			    			<li><a class="pdf" href="{{f:6233765}}">2013</a></li>
-			    			<li><a class="pdf" href="{{f:6233766}}">2014</a></li>
-			    			<li>Broadast (BRDJ)
-			    				<ul>
-			    					<li><a class="pdf" href="{{f:6233760}}">2008</a></li>
-			    					<li><a class="pdf" href="{{f:6233761}}">2009</a></li>
-			    				</ul>
-			    			</li>
-			    			<li>News-Editorial (NEWS)
-			    				<ul>
-			    					<li><a class="pdf" href="{{f:6233758}}">2008</a></li>
-			    					<li><a class="pdf" href="{{f:6233759}}">2009</a></li>
-			    				</ul>
-			    			</li>
-			    			<li>Online (ONLJ)
-			    				<ul>
-			    					<li><a class="pdf" href="{{f:6233756}}">2008</a></li>
-			    					<li><a class="pdf" href="{{f:6233757}}">2009</a></li>
-			    				</ul>
-			    			</li>
-			    		</ul>
-			    	</div>
-			    	<h4>Media Strategies (MDST)</h4>
-			    	<div>
-			    		<ul>
-			    			<li><a class="pdf" href="{{f:6244726}}">2012</a></li>
-			    			<li><a class="pdf" href="{{f:6244727}}">2013</a></li>
-			    			<li><a class="pdf" href="{{f:6244728}}">2014</a></li>
-			    		</ul>
-			    	</div>
-			    	<h4>Public Relations (PR)</h4>
-			    	<div>
-			    		<ul>
-			    			<li><a class="pdf" href="{{f:6244729}}">2010</a></li>
-			    			<li><a class="pdf" href="{{f:6244730}}">2011</a></li>
-			    			<li><a class="pdf" href="{{f:6244731}}">2012</a></li>
-			    			<li><a class="pdf" href="{{f:6244732}}">2013</a></li>
-			    			<li><a class="pdf" href="{{f:6244733}}">2014</a></li>
-			    		</ul>
-			    	</div>
-			    	<h4>Minors for non-Media &amp; Communication students</h4>
-			    	<div>
-			    		<ul>
-			    			<li><a class="pdf" href="{{f:6244756}}">Minor - 2011</a></li>
-			    			<li><a class="pdf" href="{{f:6244755}}">Minor - 2012</a></li>
-			    			<li><a class="pdf" href="{{f:6244754}}">Declaring MCOM Minor - 2012</a></li>
-			    			<li><a class="pdf" href="{{f:6244753}}">Minor Requirement Form - 2012</a></li>
-			    		</ul>
-			    	</div>
-			    	<div>
-			    		<h4>Intent to Graduate</h4>
-			    		<ul>
-			    			<li><a class="pdf" href="{{f:6244752}}">Intent to Graduate</a></li>
-			    		</ul>
-			    	</div>
-			    </div>
 
     <?php echo '</div></div></div></div></div>'; ?>
 
@@ -491,7 +392,7 @@
 		// ]]>
 	</script>
 	<?php echo '<div><div><div><div><div>'; ?>
-    
+
     <!-- MAIN EDITS END HERE -->
 
 
@@ -506,21 +407,21 @@
 		<div class="wrapper">
 			<div class="columns-wrapper column-flex column-flexwrap">
 				<div class='column-one-third column-centered column-padded-vertical-desktop'>
-					<div class='fact fact-icon'>		
+					<div class='fact fact-icon'>
 						<a href='http://www.visit.ttu.edu/'><h3 class='fact-header fact-header-medium'><i class='icon-sign'></i></h3>
 							<p class='fact-excerpt'>Visit</p>
 						</a>
 					</div>
 				</div>
 				<div class='column-one-third column-centered column-padded-vertical-desktop'>
-					<div class='fact fact-icon'>		
+					<div class='fact fact-icon'>
 						<a href='http://www.ttu.edu/admissions/'><h3 class='fact-header fact-header-medium'><i class='icon-pencil'></i></h3>
 							<p class='fact-excerpt'>Apply</p>
 						</a>
 					</div>
 				</div>
 				<div class='column-one-third column-centered column-padded-vertical-desktop'>
-					<div class='fact fact-icon'>		
+					<div class='fact fact-icon'>
 						<a href='/comc/contact/index.php'><h3 class='fact-header fact-header-medium'><i class='icon-phone'></i></h3>
 							<p class='fact-excerpt'>Contact Us</p>
 						</a>
@@ -529,8 +430,8 @@
 			</div>
 		</div>
 	</div>
-      
-      
+
+
     <footer class="footer">
         <ul class="sociallinks footer-sociallinks">
 			<li>
@@ -557,7 +458,7 @@
 			<li>
 				<a href="http://www.ttu.edu/mobile/" 	name="TTUMobile"	onClick="track(buildLink('socialbar',this.name),'outbound',this.href);"><i class="icon-ttu"></i>TTU</a>
 			</li>
-		</ul>         
+		</ul>
 		<div class="wrapper">
             <div class="wrapper-footer column-flex">
                 <div class="column-one-half">
@@ -596,7 +497,7 @@
 						</ul>
 	                    <div class="copright">
 	                        <p>© 2015 <a href="http://www.ttu.edu/">Texas Tech University</a></p>
-	                        <p>Updated: 
+	                        <p>Updated:
 	                           <a href="http://a.cms.omniupdate.com/10?skin=ttu&amp;account=main&amp;site=comc&amp;action=de&amp;path=/index.pcf" target="_blank">Jul 20, 2015</a>
 	                           4:41 PM
 	                        </p>
@@ -624,43 +525,8 @@ $(document).ready(function() {
 	// init controller
 
 
-	
+
 });
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
