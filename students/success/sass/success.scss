@@ -55,12 +55,12 @@ h1
 
 .studentSuccessImage
 {
-	@include studentSuccessContainerPadding(2.5em, 1em, false);
+	@include studentSuccessContainerPadding(2.5em, 0em, false);
 }
 
 .studentSuccessTextContainer
 {
-	@include studentSuccessContainerPadding(2.5em, 1em, true);
+	@include studentSuccessContainerPadding(2.5em, 0em, true);
 }
 
 .studentSuccessTextTitle

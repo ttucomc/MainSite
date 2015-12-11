@@ -260,10 +260,16 @@
 
 
 		<div class="row">
-      <div class="medium-3 columns blue">Hello World</div>
-      <div class="medium-3 columns green">Hello World</div>
-      <div class="medium-3 columns grey">Hello World</div>
-      <div class="medium-3 columns blue">Hello World</div>
+      <div class="medium-3 columns">
+        <div class="row">
+            <div class="small-">
+
+            </div>
+        </div>
+      </div>
+      <div class="medium-3 columns">Hello World</div>
+      <div class="medium-3 columns">Hello World</div>
+      <div class="medium-3 columns">Hello World</div>
 
 
 		</div>
