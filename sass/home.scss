@@ -190,7 +190,7 @@
 
 
 /***** INTRO SECTION *****/
-.intro-section {
+#intro-section {
 	text-align: center;
 	padding: 5em 0;
 	z-index: 1;
@@ -208,22 +208,16 @@
 			font-size: 1.25em;
 		}
 	}
-	#career-fair {
-		text-align: center;
-		width: 50%;
-		border: 1px solid $red;
-		padding: 1em 1.25em;
-		margin: 0 auto;
-		h3 {
-			font-size: 2em;
-		}
-		a {
-			margin: 0 auto;
-		}
-		@media screen and (max-width: 768px) {
-			width: 100%;
-		}
-	}
+	#graduation {
+        font-size: .90em;
+        text-align: left;
+        h3 {
+            font-size: 2em;
+        }
+        h4 {
+            font-size: 1.5em;
+        }
+    }
 }
 
 /***** STUDENTS SECTION *****/
@@ -565,7 +559,7 @@
 /***** HOME PUBLICATIONS SECTION *****/
 
 #home-publications {
-	
+
 	background-color: $lightGray;
 	padding: 6em 0 6em 1em;
 	@media screen and (max-width: 480px) {
@@ -688,28 +682,3 @@
 .wrapper-wide-red {
 	margin-top: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
