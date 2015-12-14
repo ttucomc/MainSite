@@ -920,6 +920,7 @@ box-sizing: inherit;
   margin-right: auto; }
 
 .small-uncenter,
+.small-uncentered,
 .small-push-0,
 .small-pull-0 {
   position: static;
@@ -1119,6 +1120,7 @@ box-sizing: inherit;
     margin-left: auto;
     margin-right: auto; }
   .medium-uncenter,
+  .medium-uncentered,
   .medium-push-0,
   .medium-pull-0 {
     position: static;
@@ -1318,6 +1320,7 @@ box-sizing: inherit;
     margin-left: auto;
     margin-right: auto; }
   .large-uncenter,
+  .large-uncentered,
   .large-push-0,
   .large-pull-0 {
     position: static;
