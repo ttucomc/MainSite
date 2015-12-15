@@ -254,30 +254,50 @@
   <br><br>
 
 	<!-- Staff Section -->
-	<section>
+	<section id="ourTeam">
 
 		<!-- Team Profiles -->
 
-
 		<div class="row">
-      <div class="medium-3 columns">
+
+      <div class="medium-4 columns name1">
         <div class="row">
             <div class="small-4 columns">
 								<img src="../../images/mc.jpg"/>
             </div>
-
 						<div class="small-8 columns">
 							<div>Name Here</div>
 							<br>
 							<div>Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
-
 						</div>
-
         </div>
       </div>
-      <div class="medium-3 columns">Hello World</div>
-      <div class="medium-3 columns">Hello World</div>
-      <div class="medium-3 columns">Hello World</div>
+
+      <div class="medium-4 columns name2">
+				<div class="row">
+            <div class="small-4 columns">
+								<img src="../../images/mc.jpg"/>
+            </div>
+						<div class="small-8 columns">
+							<div>Name Here</div>
+							<br>
+							<div>Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+						</div>
+        </div>
+      </div>
+
+      <div class="medium-4 columns name3">
+				<div class="row">
+            <div class="small-4 columns">
+								<img src="../../images/mc.jpg"/>
+            </div>
+						<div class="small-8 columns">
+							<div>Name Here</div>
+							<br>
+							<div>Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+						</div>
+        </div>
+      </div>
 
 
 		</div>
@@ -397,6 +417,36 @@
       </div>
     </footer>
     <!-- TTU WIDE RED AND FOOTER END -->
+
+		<script src="../../js/scrollmagic/TweenMax.min.js"></script>
+		<script src="../../js/scrollmagic/ScrollMagic.min.js"></script>
+		<script src="../../js/scrollmagic/animation.gsap.min.js"></script>
+		<script src="../../js/scrollmagic/debug.addIndicators.min.js"></script>
+		<script>
+
+				$(function () { // wait for document ready
+					// init
+					var controller = new ScrollMagic.Controller();
+
+					// define movement of panels
+					var wipeAnimation = new TimelineMax()
+						.fromTo("div.medium-4.columns.name1", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+						.fromTo("div.medium-4.columns.name2", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+						.fromTo("div.medium-4.columns.name3", 1, {x: "100%"}, {y: "0%", ease: Linear.easeNone}); // in from right
+
+					// create scene to pin and link animation
+					new ScrollMagic.Scene({
+							triggerElement: "#ourTeam",
+							triggerHook: "onLeave",
+							duration: "300%"
+						})
+						.setPin("#ourTeam")
+						.setTween(wipeAnimation)
+						.addIndicators() // add indicators (requires plugin)
+						.addTo(controller);
+				});
+
+		</script>
 
   </body>
   </html>

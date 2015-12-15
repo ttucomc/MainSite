@@ -60,7 +60,7 @@ h1
 
 .studentSuccessTextContainer
 {
-	@include studentSuccessContainerPadding(2.5em, 0em, true);
+	@include studentSuccessContainerPadding(2.5em, 1em, true);
 }
 
 .studentSuccessTextTitle
@@ -76,4 +76,9 @@ h1
 	color: $ttuLightGrey;
 	font-size: 1.6em;
 	line-height: 1;
+}
+
+#ourTeam
+{
+	width: 100%;
 }

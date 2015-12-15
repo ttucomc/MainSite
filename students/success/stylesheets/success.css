@@ -23,7 +23,7 @@ h1 {
   text-align: left; }
 
 .studentSuccessTextContainer {
-  padding: 3.75em 0em;
+  padding: 3.75em 1em;
   text-align: left; }
 
 .studentSuccessTextTitle {
@@ -36,3 +36,6 @@ h1 {
   color: #808285;
   font-size: 1.6em;
   line-height: 1; }
+
+#ourTeam {
+  width: 100%; }
