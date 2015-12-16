@@ -260,8 +260,8 @@
 
 		<div class="row">
 
-      <div class="medium-4 columns name1">
-        <div class="row">
+      <div class="small-12 columns name1">
+        <div class="row blue">
             <div class="small-4 columns">
 								<img src="../../images/mc.jpg"/>
             </div>
@@ -273,8 +273,8 @@
         </div>
       </div>
 
-      <div class="medium-4 columns name2">
-				<div class="row">
+      <div class="small-12 columns name2">
+				<div class="row green">
             <div class="small-4 columns">
 								<img src="../../images/mc.jpg"/>
             </div>
@@ -286,8 +286,8 @@
         </div>
       </div>
 
-      <div class="medium-4 columns name3">
-				<div class="row">
+      <div class="small-12 columns name3">
+				<div class="row grey">
             <div class="small-4 columns">
 								<img src="../../images/mc.jpg"/>
             </div>
@@ -430,17 +430,19 @@
 
 					// define movement of panels
 					var wipeAnimation = new TimelineMax()
-						.fromTo("div.medium-4.columns.name1", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-						.fromTo("div.medium-4.columns.name2", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-						.fromTo("div.medium-4.columns.name3", 1, {x: "100%"}, {y: "0%", ease: Linear.easeNone}); // in from right
+						.fromTo("div.small-12.columns.name1", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+						.fromTo("div.small-12.columns.name2", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+						.fromTo("div.small-12.columns.name3", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone}); // in from right
+
 
 					// create scene to pin and link animation
 					new ScrollMagic.Scene({
 							triggerElement: "#ourTeam",
-							triggerHook: "onLeave",
-							duration: "300%"
+							// triggerHook: "onEnter",
+
+							duration: "500"
 						})
-						.setPin("#ourTeam")
+						.setPin("#ourTeam", {pushFollowers: true})
 						.setTween(wipeAnimation)
 						.addIndicators() // add indicators (requires plugin)
 						.addTo(controller);

@@ -17,7 +17,6 @@ h1 {
 .centerImage {
   text-align: center; }
 
-/* Just trying to stay DRY. Actually I was hoping to test conditional statements here but standard sass doesnt have them.. tear. */
 .studentSuccessImage {
   padding: 2.5em 0em;
   text-align: left; }
@@ -38,4 +37,28 @@ h1 {
   line-height: 1; }
 
 #ourTeam {
-  width: 100%; }
+  width: 100%;
+  max-height: 300px;
+  position: relative;
+  overflow: hidden; }
+
+.name1 {
+  position: relative; }
+
+.name2 {
+  position: absolute; }
+
+.name3 {
+  position: absolute; }
+
+.green {
+  background-color: lightgreen; }
+
+.blue {
+  background-color: lightblue; }
+
+.grey {
+  background-color: lightgrey; }
+
+.spacer {
+  min-height: 200px; }
