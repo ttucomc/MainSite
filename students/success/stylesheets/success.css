@@ -62,7 +62,7 @@ h1 {
       cursor: pointer; }
   #ourTeam .teamMemberText {
     width: 94%;
-    margin-top: 20%;
+    margin-top: 35vh;
     padding: 0 10%;
     display: inline-block; }
     #ourTeam .teamMemberText .teamMemberName {
