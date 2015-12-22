@@ -203,7 +203,6 @@
 
 			<!-- Scholar -->
 
-
       <div class="row">
           <div class="large-6 columns">
 
@@ -256,19 +255,228 @@
 	<!-- Staff Section -->
 	<div id="ourTeam">
 			<!-- Team Profiles -->
-			<section class="name blue">
-
-
-					<!-- <div>Name Here</div> -->
-					<br>
-					<!-- <div>Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div> -->
-
-
-					<!-- <img src="../../images/mc.jpg"/> -->
-
+			<section id="alessa" class="name blue">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Alessa Ross</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
 			</section>
-			<section class="name grey"></section>
-			<section class="name green"></section>
+
+
+			<div class="spacer"></div>
+			<section id="cameron" class="name grey">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Cameron Skoczlas</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
+
+
+			<div class="spacer"></div>
+			<section id="candace" class="name green">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Candace Trevino</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
+
+
+			<div class="spacer"></div>
+			<section id="clara" class="name blue">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Clara McKenney</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
+
+
+			<div class="spacer"></div>
+			<section id="emily" class="name grey">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Emily Balke</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
+
+
+			<div class="spacer"></div>
+			<section id="jacob" class="name green">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Jacob Copple</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
+
+
+			<div class="spacer"></div>
+			<section id="kuhrt" class="name blue">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Kuhrt Cowan</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
+
+
+			<div class="spacer"></div>
+			<section id="taryn" class="name green">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Taryn Meixner</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
+
+
+			<div class="spacer"></div>
+			<section id="todd" class="name blue">
+				<div class="row">
+						<div class="medium-6 columns">
+							<div class="arrow">
+								<div> < </div>
+							</div>
+							<div class="teamMemberText">
+								<div class="teamMemberName">Todd Chambers</div>
+								<br>
+								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
+							</div>
+						</div>
+						<div class="medium-6 columns">
+							<div class="teamMemberPhoto">
+									<img src="../../images/mc.jpg"/>
+							</div>
+							<div class="arrow">
+								<div> > </div>
+							</div>
+						</div>
+				</div>
+			</section>
 
 	</div>
 
@@ -404,8 +612,37 @@
 					// define movement of panels
 					var wipeAnimation = new TimelineMax()
 
-						.fromTo("section.name.grey", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-						.fromTo("section.name.green", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone}); // in from right
+						//Alessa to Cameron
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#cameron", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
+
+						//Cameron to Candace
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#candace", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})
+
+						//Candace to Clara
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#clara", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})
+
+						//Clara to Emily
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#emily", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})
+
+						//Emily to Jacob
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#jacob", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})
+
+						//Jacob to Kuhrt
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#kuhrt", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})
+
+						//Kuhrt to Taryn
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#taryn", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})
+
+						//Taryn to Todd
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section#todd", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone});
 
 
 					// create scene to pin and link animation
@@ -422,7 +659,6 @@
 				});
 
 		</script>
-
 
   </body>
   </html>

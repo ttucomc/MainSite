@@ -44,6 +44,39 @@ h1 {
     position: absolute;
     width: 100%;
     height: 100vh; }
+  #ourTeam .row {
+    max-width: 100%; }
+  #ourTeam .arrow {
+    width: 5%;
+    height: 100vh;
+    display: inline-block;
+    vertical-align: top;
+    position: relative; }
+    #ourTeam .arrow > div {
+      font-size: 8em;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      cursor: pointer; }
+  #ourTeam .teamMemberText {
+    width: 94%;
+    margin-top: 20%;
+    padding: 0 10%;
+    display: inline-block; }
+    #ourTeam .teamMemberText .teamMemberName {
+      font-size: 4em;
+      line-height: 1; }
+    #ourTeam .teamMemberText .teamMemberDescription {
+      font-size: 2em;
+      line-height: 1; }
+  #ourTeam .teamMemberPhoto {
+    text-align: center;
+    width: 94%;
+    display: inline-block; }
+    #ourTeam .teamMemberPhoto img {
+      height: 100vh; }
 
 .green {
   background-color: lightgreen; }
@@ -55,4 +88,4 @@ h1 {
   background-color: lightgrey; }
 
 .spacer {
-  min-height: 200px; }
+  width: 100%; }
