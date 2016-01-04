@@ -152,7 +152,7 @@
   <br>
 
 	<!-- Student Success Section -->
-	<section>
+	<section class="studentSuccessSection">
 
       <!-- Events -->
       <div class="row">
@@ -165,7 +165,7 @@
 
           <div class="large-6 columns">
             <div class="studentSuccessTextContainer">
-              <h3 class="studentSuccessTextTitle">Events</h3>
+              <h3 id="test" class="studentSuccessTextTitle">Events</h3>
 
               <div class="studentSuccessText">
                 Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque. Malis tantas pericula vim no.
@@ -250,16 +250,16 @@
 	</section>
 	<!-- End Student Success Section -->
 
-  <br><br>
 
 	<!-- Staff Section -->
 	<div id="ourTeam">
 			<!-- Team Profiles -->
-			<section id="alessa" class="name blue">
+			<section id="alessa" class="name alessa blue">
+
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Alessa Ross</div>
@@ -272,7 +272,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#2">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -280,11 +282,14 @@
 
 
 			<div class="spacer"></div>
+
 			<section id="cameron" class="name grey">
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#1">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Cameron Skoczlas</div>
@@ -297,7 +302,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#3">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -309,7 +316,9 @@
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#2">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Candace Trevino</div>
@@ -322,7 +331,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#4">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -334,7 +345,9 @@
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#3">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Clara McKenney</div>
@@ -347,7 +360,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#5">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -359,7 +374,9 @@
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#4">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Emily Balke</div>
@@ -372,7 +389,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#6">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -384,7 +403,9 @@
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#5">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Jacob Copple</div>
@@ -397,7 +418,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#7">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -409,7 +432,9 @@
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#6">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Kuhrt Cowan</div>
@@ -422,7 +447,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#8">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -434,7 +461,9 @@
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#7">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Taryn Meixner</div>
@@ -447,7 +476,9 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+								<a href="#9">
+									<div> > </div>
+								</a>
 							</div>
 						</div>
 				</div>
@@ -459,7 +490,9 @@
 				<div class="row">
 						<div class="medium-6 columns">
 							<div class="arrow">
-								<div> < </div>
+								<a href="#8">
+									<div> < </div>
+								</a>
 							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Todd Chambers</div>
@@ -472,7 +505,7 @@
 									<img src="../../images/mc.jpg"/>
 							</div>
 							<div class="arrow">
-								<div> > </div>
+
 							</div>
 						</div>
 				</div>
@@ -601,6 +634,7 @@
 		<script src="../../js/scrollmagic/ScrollMagic.min.js"></script>
 		<script src="../../js/scrollmagic/animation.gsap.min.js"></script>
 		<script src="../../js/scrollmagic/debug.addIndicators.min.js"></script>
+		<script src="../../js/scrollmagic/ScrollToPlugin.min.js"></script>
 
 		<script>
 
@@ -644,19 +678,62 @@
 						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
 						.fromTo("section#todd", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone});
 
-
 					// create scene to pin and link animation
-					new ScrollMagic.Scene({
+					var scene = new ScrollMagic.Scene({
 							triggerElement: "#ourTeam",
 							triggerHook: "onLeave",
-
 							duration: "300%"
 						})
 						.setPin("#ourTeam", {pushFollowers: true})
 						.setTween(wipeAnimation)
 						.addIndicators() // add indicators (requires plugin)
 						.addTo(controller);
+
+
+						// change behaviour of controller to animate scroll instead of jump
+						controller.scrollTo(function (newpos) {
+							TweenMax.to(window, 1, {scrollTo: {y: newpos}});
+						});
+
+						//  bind scroll to anchor links
+						$(document).on("click", "a[href^='#']", function (e) {
+							var id = $(this).attr("href");
+
+								//console.log("ID: " + id + " ID Length: " + id.length);
+
+							if (id.length > 0) {
+								e.preventDefault();
+
+								var targetSection = $(this).attr('href').substring(1);
+
+								if(targetSection == 9)
+								{
+									var targetPos = scene.scrollOffset() + scene.duration();
+									//console.log("Scene Duration: " + scene.duration());
+									//console.log("Target Result: " + targetPos);
+								}
+								else
+								{
+									var targetPos = scene.scrollOffset() + ((scene.duration() / 9) * (targetSection - 1)) + (50 * targetSection);
+
+									//console.log("Scene Duration: " + scene.duration() / 9 );
+									//console.log("Target Section: " + targetSection);
+									//console.log("Target Result: " + targetPos);
+								}
+
+
+
+								// trigger scroll
+								controller.scrollTo(targetPos);
+
+
+
+
+							}
+						});
 				});
+
+
 
 		</script>
 

@@ -12,29 +12,29 @@ h1 {
   font-size: 2.5em;
   text-align: center;
   color: #666;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 1em; }
 
 .centerImage {
   text-align: center; }
 
-.studentSuccessImage {
+.studentSuccessSection .row {
+  margin-bottom: 1.4em; }
+.studentSuccessSection .studentSuccessImage {
   padding: 2.5em 0em;
   text-align: left; }
-
-.studentSuccessTextContainer {
+.studentSuccessSection .studentSuccessTextContainer {
   padding: 3.75em 1em;
   text-align: left; }
-
-.studentSuccessTextTitle {
+.studentSuccessSection .studentSuccessTextTitle {
   font-size: 2.8em;
-  margin: 0.6em 0;
-  color: #666;
+  margin: 0.4em 0;
+  color: #C00;
   line-height: 1; }
-
-.studentSuccessText {
+.studentSuccessSection .studentSuccessText {
   color: #808285;
-  font-size: 1.6em;
-  line-height: 1; }
+  font-size: 1.3em;
+  line-height: 1.2; }
 
 #ourTeam {
   width: 100%;
@@ -52,7 +52,7 @@ h1 {
     display: inline-block;
     vertical-align: top;
     position: relative; }
-    #ourTeam .arrow > div {
+    #ourTeam .arrow div {
       font-size: 8em;
       position: absolute;
       top: 50%;
