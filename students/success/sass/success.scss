@@ -129,7 +129,7 @@ h1
 	}
 	.arrowLeft
 	{
-		left: 0;
+		left: 1.4em;
 	}
 
 	.teamMemberText
@@ -138,6 +138,7 @@ h1
 		margin-top: 35vh;
 		padding: 0 10%;
 		display: inline-block;
+		color: white;
 
 		.teamMemberName
 		{
@@ -171,7 +172,9 @@ h1
 }
 
 .blue{
-	background-color: lightblue;
+	background-image: url("../../../images/studentSucessBackgrounds/blueBackground.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .grey{

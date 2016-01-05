@@ -275,7 +275,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="2">
+					<a href="#2">
 						<div> > </div>
 					</a>
 				</div>
@@ -288,7 +288,7 @@
 			<section id="cameron" class="name grey">
 
 				<div class="arrowLeft">
-					<a href="1">
+					<a href="#1">
 						<div> < </div>
 					</a>
 				</div>
@@ -309,7 +309,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="3">
+					<a href="#3">
 						<div> > </div>
 					</a>
 				</div>
@@ -321,7 +321,7 @@
 			<section id="candace" class="name green">
 
 				<div class="arrowLeft">
-					<a href="2">
+					<a href="#2">
 						<div> < </div>
 					</a>
 				</div>
@@ -342,7 +342,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="4">
+					<a href="#4">
 						<div> > </div>
 					</a>
 				</div>
@@ -354,7 +354,7 @@
 			<section id="clara" class="name blue">
 
 				<div class="arrowLeft">
-					<a href="3">
+					<a href="#3">
 						<div> < </div>
 					</a>
 				</div>
@@ -375,7 +375,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="5">
+					<a href="#5">
 						<div> > </div>
 					</a>
 				</div>
@@ -387,7 +387,7 @@
 			<section id="emily" class="name grey">
 
 				<div class="arrowLeft">
-					<a href="4">
+					<a href="#4">
 						<div> < </div>
 					</a>
 				</div>
@@ -408,7 +408,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="6">
+					<a href="#6">
 						<div> > </div>
 					</a>
 				</div>
@@ -420,7 +420,7 @@
 			<section id="jacob" class="name green">
 
 				<div class="arrowLeft">
-					<a href="5">
+					<a href="#5">
 						<div> < </div>
 					</a>
 				</div>
@@ -441,7 +441,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="7">
+					<a href="#7">
 						<div> > </div>
 					</a>
 				</div>
@@ -453,7 +453,7 @@
 			<section id="kuhrt" class="name blue">
 
 				<div class="arrowLeft">
-					<a href="6">
+					<a href="#6">
 						<div> < </div>
 					</a>
 				</div>
@@ -474,7 +474,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="8">
+					<a href="#8">
 						<div> > </div>
 					</a>
 				</div>
@@ -486,7 +486,7 @@
 			<section id="taryn" class="name green">
 
 				<div class="arrowLeft">
-					<a href="7">
+					<a href="#7">
 						<div> < </div>
 					</a>
 				</div>
@@ -507,7 +507,7 @@
 				</div>
 
 				<div class="arrowRight">
-					<a href="9">
+					<a href="#9">
 						<div> > </div>
 					</a>
 				</div>
@@ -519,7 +519,7 @@
 			<section id="todd" class="name blue">
 
 				<div class="arrowLeft">
-					<a href="8">
+					<a href="#8">
 						<div> < </div>
 					</a>
 				</div>
@@ -676,7 +676,7 @@
 					var wipeAnimation = new TimelineMax()
 
 						//Alessa to Cameron
-						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone}) // Added 50px of scrolling to simulate a stop.
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
 						.fromTo("section#cameron", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
 
 						//Cameron to Candace
@@ -733,7 +733,7 @@
 							if (id.length > 0) {
 								e.preventDefault(); //Prevent the page from going to the link that is provided.
 
-								var targetSection = $(this).attr('href');
+								var targetSection = $(this).attr('href').substring(1);
 
 								/*
 
@@ -744,7 +744,7 @@
 								targetPosition is the final position of the screen.
 								scene.ScrollOffset is the position of the start of the whole scene.
 								scene.Duration is the full duration of the wipeAnimation. We divide the full duration by 9 to get the individual duration of each slide.
-								targetSection represents the slide number and is a variable hardcoded into the html link atribute with the type of "#". EX. href="4"
+								targetSection is a variable hardcoded into the html link atribute with the type of "#(number)". Eg href="#4"
 								targetSection is multipled by 50 because we have spacers inbeween each slide of the height 50.
 								As the user scrolls down those spacers do not move so the 50 must be incremeneted per slide they scroll past
 
@@ -752,14 +752,15 @@
 
 								if(targetSection == 9)
 								{
+
 									//When the user gets to the last slide, theres no need to use the algorthim, we just need to go to the last slide position.
 									var targetPos = scene.scrollOffset() + scene.duration();
-
 									//console.log("Scene Duration: " + scene.duration());
 									//console.log("Target Result: " + targetPos);
 								}
 								else
 								{
+
 									var targetPos = scene.scrollOffset() + ((scene.duration() / 9) * (targetSection - 1)) + (50 * targetSection);
 									//console.log("Scene Duration: " + scene.duration() / 9 );
 									//console.log("Target Section: " + targetSection);
@@ -771,6 +772,9 @@
 							}
 						});
 				});
+
+
+
 		</script>
 
   </body>

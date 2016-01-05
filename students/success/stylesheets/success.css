@@ -66,12 +66,13 @@ h1 {
   #ourTeam .arrowRight {
     right: 0; }
   #ourTeam .arrowLeft {
-    left: 0; }
+    left: 1.4em; }
   #ourTeam .teamMemberText {
     width: 94%;
     margin-top: 35vh;
     padding: 0 10%;
-    display: inline-block; }
+    display: inline-block;
+    color: white; }
     #ourTeam .teamMemberText .teamMemberName {
       font-size: 4em;
       line-height: 1; }
@@ -89,7 +90,9 @@ h1 {
   background-color: lightgreen; }
 
 .blue {
-  background-color: lightblue; }
+  background-image: url("../../../images/studentSucessBackgrounds/blueBackground.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .grey {
   background-color: lightgrey; }
