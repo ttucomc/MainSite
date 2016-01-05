@@ -85,7 +85,7 @@ h1
 		font-size: 1.3em;
 	  line-height: 1.2;
 	}
-	
+
 }
 
 #ourTeam
@@ -105,13 +105,15 @@ h1
 		max-width: 100%;
 	}
 
-	.arrow
+	.arrowRight,
+	.arrowLeft
 	{
 		width: 5%;
 		height: 100vh;
 		display: inline-block;
 		vertical-align: top;
-		position: relative;
+		position: absolute;
+		top: 0;
 
 		div
 		{
@@ -121,6 +123,13 @@ h1
 			transform: translateY(-50%);
 			cursor: pointer;
 		}
+	}
+	.arrowRight {
+		right: 0;
+	}
+	.arrowLeft
+	{
+		left: 0;
 	}
 
 	.teamMemberText
@@ -172,5 +181,4 @@ h1
 .spacer
 {
 	width: 100%;
-	// height: 20vh;
 }

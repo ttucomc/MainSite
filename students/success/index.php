@@ -271,26 +271,30 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#2">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="2">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 
 			<section id="cameron" class="name grey">
+
+				<div class="arrowLeft">
+					<a href="1">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#1">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Cameron Skoczlas</div>
 								<br>
@@ -301,25 +305,29 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#3">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="3">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 			<section id="candace" class="name green">
+
+				<div class="arrowLeft">
+					<a href="2">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#2">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Candace Trevino</div>
 								<br>
@@ -330,25 +338,29 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#4">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="4">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 			<section id="clara" class="name blue">
+
+				<div class="arrowLeft">
+					<a href="3">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#3">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Clara McKenney</div>
 								<br>
@@ -359,25 +371,29 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#5">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="5">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 			<section id="emily" class="name grey">
+
+				<div class="arrowLeft">
+					<a href="4">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#4">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Emily Balke</div>
 								<br>
@@ -388,25 +404,29 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#6">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="6">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 			<section id="jacob" class="name green">
+
+				<div class="arrowLeft">
+					<a href="5">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#5">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Jacob Copple</div>
 								<br>
@@ -417,25 +437,29 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#7">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="7">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 			<section id="kuhrt" class="name blue">
+
+				<div class="arrowLeft">
+					<a href="6">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#6">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Kuhrt Cowan</div>
 								<br>
@@ -446,25 +470,29 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#8">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="8">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 			<section id="taryn" class="name green">
+
+				<div class="arrowLeft">
+					<a href="7">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#7">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Taryn Meixner</div>
 								<br>
@@ -475,25 +503,29 @@
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
-							<div class="arrow">
-								<a href="#9">
-									<div> > </div>
-								</a>
-							</div>
 						</div>
 				</div>
+
+				<div class="arrowRight">
+					<a href="9">
+						<div> > </div>
+					</a>
+				</div>
+
 			</section>
 
 
 			<div class="spacer"></div>
 			<section id="todd" class="name blue">
+
+				<div class="arrowLeft">
+					<a href="8">
+						<div> < </div>
+					</a>
+				</div>
+
 				<div class="row">
 						<div class="medium-6 columns">
-							<div class="arrow">
-								<a href="#8">
-									<div> < </div>
-								</a>
-							</div>
 							<div class="teamMemberText">
 								<div class="teamMemberName">Todd Chambers</div>
 								<br>
@@ -503,9 +535,6 @@
 						<div class="medium-6 columns">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
-							</div>
-							<div class="arrow">
-
 							</div>
 						</div>
 				</div>
@@ -647,7 +676,7 @@
 					var wipeAnimation = new TimelineMax()
 
 						//Alessa to Cameron
-						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone})
+						.fromTo("section.spacer", 1, {x: "0"}, {x: "0", ease: Linear.easeNone}) // Added 50px of scrolling to simulate a stop.
 						.fromTo("section#cameron", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
 
 						//Cameron to Candace
@@ -702,39 +731,46 @@
 								//console.log("ID: " + id + " ID Length: " + id.length);
 
 							if (id.length > 0) {
-								e.preventDefault();
+								e.preventDefault(); //Prevent the page from going to the link that is provided.
 
-								var targetSection = $(this).attr('href').substring(1);
+								var targetSection = $(this).attr('href');
+
+								/*
+
+								Postion Algorthim
+								The regular scrollTo Function does not work automatically with the wipe animation.
+								A manual calulation is then reqirured to position the screen at the correct slide.
+
+								targetPosition is the final position of the screen.
+								scene.ScrollOffset is the position of the start of the whole scene.
+								scene.Duration is the full duration of the wipeAnimation. We divide the full duration by 9 to get the individual duration of each slide.
+								targetSection represents the slide number and is a variable hardcoded into the html link atribute with the type of "#". EX. href="4"
+								targetSection is multipled by 50 because we have spacers inbeween each slide of the height 50.
+								As the user scrolls down those spacers do not move so the 50 must be incremeneted per slide they scroll past
+
+								*/
 
 								if(targetSection == 9)
 								{
+									//When the user gets to the last slide, theres no need to use the algorthim, we just need to go to the last slide position.
 									var targetPos = scene.scrollOffset() + scene.duration();
+
 									//console.log("Scene Duration: " + scene.duration());
 									//console.log("Target Result: " + targetPos);
 								}
 								else
 								{
 									var targetPos = scene.scrollOffset() + ((scene.duration() / 9) * (targetSection - 1)) + (50 * targetSection);
-
 									//console.log("Scene Duration: " + scene.duration() / 9 );
 									//console.log("Target Section: " + targetSection);
 									//console.log("Target Result: " + targetPos);
 								}
 
-
-
 								// trigger scroll
 								controller.scrollTo(targetPos);
-
-
-
-
 							}
 						});
 				});
-
-
-
 		</script>
 
   </body>

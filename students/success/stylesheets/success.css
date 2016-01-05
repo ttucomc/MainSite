@@ -46,13 +46,16 @@ h1 {
     height: 100vh; }
   #ourTeam .row {
     max-width: 100%; }
-  #ourTeam .arrow {
+  #ourTeam .arrowRight,
+  #ourTeam .arrowLeft {
     width: 5%;
     height: 100vh;
     display: inline-block;
     vertical-align: top;
-    position: relative; }
-    #ourTeam .arrow div {
+    position: absolute;
+    top: 0; }
+    #ourTeam .arrowRight div,
+    #ourTeam .arrowLeft div {
       font-size: 8em;
       position: absolute;
       top: 50%;
@@ -60,6 +63,10 @@ h1 {
           -ms-transform: translateY(-50%);
               transform: translateY(-50%);
       cursor: pointer; }
+  #ourTeam .arrowRight {
+    right: 0; }
+  #ourTeam .arrowLeft {
+    left: 0; }
   #ourTeam .teamMemberText {
     width: 94%;
     margin-top: 35vh;
