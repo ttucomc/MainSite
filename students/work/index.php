@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<title>Student Work | Students | CoMC | TTU</title>
     <meta name="description" content="Our students here at CoMC are incredible! Here's just some of the cool things our students are producing!">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../../css/ttu.css">
     <link rel="stylesheet" type="text/css" href="css/studentwork.css">
@@ -16,6 +15,8 @@
 	<script src="../../js/ttuglobal.js"></script>
 	<script src="../../js/ttuglobal-onload.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="js/packery.min.js"></script>
 
     <meta itemprop="name" content="Student Work | Students | CoMC | TTU">
     <meta itemprop="description" content="Our students here at CoMC are incredible! Here's just some of the cool things our students are producing!">
@@ -132,6 +133,97 @@
             </div>
         </div>
     </div>
+    <section id="student-work">
+        <div class="filtering">
+            <div class="type-button-group">
+                <button class="show-all is-checked" data-filter="*">Show All</button>
+                <button class="photo" data-filter=".photo-bubble">Photos</button>
+                <button class="video" data-filter=".video-bubble">Videos</button>
+                <button class="graphic" data-filter=".graphic-bubble">Graphics</button>
+                <button class="writing" data-filter=".writing-bubble">Writings</button>
+            </div>
+        </div>
+        <div class="bubbles grid">
+            <div class="bubble photo-bubble" data-category="photo">
+
+            </div>
+            <div class="bubble video-bubble" data-category="video">
+
+            </div>
+            <div class="bubble graphic-bubble" data-category="graphic">
+
+            </div>
+            <div class="bubble writing-bubble" data-category="writing">
+
+            </div>
+            <div class="bubble writing-bubble" data-category="writing">
+
+            </div>
+            <div class="bubble graphic-bubble" data-category="graphic">
+
+            </div>
+            <div class="bubble video-bubble" data-category="video">
+
+            </div>
+            <div class="bubble photo-bubble" data-category="photo">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        $(document).ready(function() {
+
+            // Changing is-checked class for filter buttons
+            $('.type-button-group button').click(function() {
+                $('.type-button-group button').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
+
+            // init isotope
+            var $bubbles = $('.bubbles').isotope({
+                itemSelector: '.bubble',
+                masonry: {
+                    isFitWidth: true
+                }
+            });
+            $bubbles.isotope('shuffle');
+            // filtering items on button click
+            $('.type-button-group').on( 'click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                filterValue = filterValue;
+                $bubbles.isotope({ filter: filterValue });
+            });
+
+            // Randomizing works
+            // var ar = $('.bubbles').children();
+            // ar.sort(function(a,b){
+            //   // Get a random number between 0 and 10
+            //   var temp = parseInt( Math.random()*10 );
+            //   // Get 1 or 0, whether temp is odd or even
+            //   var isOddOrEven = temp%2;
+            //   // Get +1 or -1, whether temp greater or smaller than 5
+            //   var isPosOrNeg = temp>5 ? 1 : -1;
+            //   // Return -1, 0, or +1
+            //   return( isOddOrEven*isPosOrNeg );
+            // });
+            // $('.bubbles').html(ar);
+            // $('.bubbles').masonry({
+            //   animate: true
+            // });
+
+            // change size of item when clicked
+            $bubbles.on( 'click', '.bubble', function() {
+              $(this).toggleClass('huge');
+              // trigger layout after item size changes
+              $bubbles.isotope('layout');
+            });
+
+        });
+
+    </script>
 
 
 

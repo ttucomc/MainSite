@@ -1,0 +1,95 @@
+/* Colors */
+/* line 4, ../sass/studentwork.scss */
+#student-work {
+  /***** Filter Buttons *****/
+  /***** Work Bubbles *****/
+}
+/* line 6, ../sass/studentwork.scss */
+#student-work .filtering {
+  text-align: center;
+}
+/* line 9, ../sass/studentwork.scss */
+#student-work .filtering .type-button-group button {
+  background-color: #CCC;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  height: 100px;
+  width: 100px;
+}
+/* line 16, ../sass/studentwork.scss */
+#student-work .filtering .type-button-group button:focus {
+  outline: none;
+}
+/* line 19, ../sass/studentwork.scss */
+#student-work .filtering .type-button-group button.is-checked {
+  box-shadow: 0 1px 1.5px 0px rgba(0, 0, 0, 0.22), 0 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+/* line 23, ../sass/studentwork.scss */
+#student-work .filtering .type-button-group button.photo {
+  background-color: #4ECDC4;
+}
+/* line 26, ../sass/studentwork.scss */
+#student-work .filtering .type-button-group button.video {
+  background-color: #C44D98;
+  color: #FFF;
+}
+/* line 30, ../sass/studentwork.scss */
+#student-work .filtering .type-button-group button.graphic {
+  background-color: #C7F464;
+}
+/* line 33, ../sass/studentwork.scss */
+#student-work .filtering .type-button-group button.writing {
+  background-color: #FF6B6B;
+  color: #FFF;
+}
+/* line 42, ../sass/studentwork.scss */
+#student-work .bubbles {
+  text-align: center;
+  padding: 3em 0;
+  margin: 0 auto;
+}
+/* line 46, ../sass/studentwork.scss */
+#student-work .bubbles .bubble {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  border: 20px solid #556270;
+  height: 130px;
+  width: 130px;
+}
+@media screen and (min-width: 680px) {
+  /* line 46, ../sass/studentwork.scss */
+  #student-work .bubbles .bubble {
+    height: 250px;
+    width: 250px;
+  }
+}
+/* line 58, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.photo-bubble {
+  border-color: #4ECDC4;
+}
+/* line 61, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.video-bubble {
+  border-color: #C44D98;
+}
+/* line 64, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.graphic-bubble {
+  border-color: #C7F464;
+}
+/* line 67, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.writing-bubble {
+  border-color: #FF6B6B;
+}
+/* line 70, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.huge {
+  height: 260px;
+  width: 260px;
+}
+@media screen and (min-width: 680px) {
+  /* line 70, ../sass/studentwork.scss */
+  #student-work .bubbles .bubble.huge {
+    height: 500px;
+    width: 500px;
+  }
+}
