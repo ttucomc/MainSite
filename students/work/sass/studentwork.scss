@@ -25,7 +25,7 @@
                     background-color: $turquoise;
                 }
                 &.video {
-                    background-color: $purple;
+                    background-color: $orange;
                     color: $white;
                 }
                 &.graphic {
@@ -49,12 +49,12 @@
             display: inline-block;
             background: transparent;
             border-radius: 50%;
-            border: 20px solid $grey;
+            border: 14px solid $grey;
             height: 130px;
             width: 130px;
             @media screen and (min-width: 680px) {
-                height: 200px;
-                width: 200px;
+                height: 225px;
+                width: 225px;
             }
             &:after {
                 content: '';
@@ -66,9 +66,10 @@
                 height: 0;
                 width: 0;
                 @include transition(.3s);
-                z-index: -1;
+                z-index: 1;
             }
             &:hover {
+                cursor: pointer;
                 &:after {
                     content: '';
                     opacity: .5;
@@ -88,10 +89,10 @@
                 }
             }
             &.video-bubble {
-                border-color: $purple;
+                border-color: $orange;
                 &:after {
                     content: '';
-                    background-color: $purple;
+                    background-color: $orange;
                 }
             }
             &.graphic-bubble {
@@ -109,6 +110,7 @@
                 }
             }
             &.size-small {
+                border-width: 6px;
                 height: 90px;
                 width: 90px;
                 @media screen and (min-width: 680px) {
@@ -117,11 +119,12 @@
                 }
             }
             &.size-large {
+                border-width: 20px;
                 height: 260px;
                 width: 260px;
                 @media screen and (min-width: 680px) {
-                    height: 500px;
-                    width: 500px;
+                    height: 450px;
+                    width: 450px;
                 }
             }
 
@@ -132,6 +135,7 @@
                 @include translate(-50%, -50%);
                 @include transition(.3s);
                 opacity: 0;
+                z-index: 2;
                 p {
                     font-size: 1.5em;
                     padding: 0;

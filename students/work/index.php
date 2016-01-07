@@ -246,12 +246,6 @@
             //   animate: true
             // });
 
-            // change size of item when clicked
-            $bubbles.on( 'click', '.bubble', function() {
-              $(this).toggleClass('size-large');
-              // trigger layout after item size changes
-              $bubbles.isotope('layout');
-            });
 
         });
 
