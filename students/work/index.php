@@ -145,28 +145,60 @@
         </div>
         <div class="bubbles grid">
             <div class="bubble photo-bubble" data-category="photo">
-
+                <div class="info">
+                    <p>
+                        Photo
+                    </p>
+                </div>
             </div>
-            <div class="bubble video-bubble" data-category="video">
-
+            <div class="bubble video-bubble size-small" data-category="video">
+                <div class="info">
+                    <p>
+                        Video
+                    </p>
+                </div>
             </div>
             <div class="bubble graphic-bubble" data-category="graphic">
-
+                <div class="info">
+                    <p>
+                        Graphic
+                    </p>
+                </div>
+            </div>
+            <div class="bubble writing-bubble size-large" data-category="writing">
+                <div class="info">
+                    <p>
+                        Writing
+                    </p>
+                </div>
             </div>
             <div class="bubble writing-bubble" data-category="writing">
-
+                <div class="info">
+                    <p>
+                        Writing
+                    </p>
+                </div>
             </div>
-            <div class="bubble writing-bubble" data-category="writing">
-
-            </div>
-            <div class="bubble graphic-bubble" data-category="graphic">
-
+            <div class="bubble graphic-bubble size-large" data-category="graphic">
+                <div class="info">
+                    <p>
+                        Graphic
+                    </p>
+                </div>
             </div>
             <div class="bubble video-bubble" data-category="video">
-
+                <div class="info">
+                    <p>
+                        Video
+                    </p>
+                </div>
             </div>
-            <div class="bubble photo-bubble" data-category="photo">
-
+            <div class="bubble photo-bubble size-small" data-category="photo">
+                <div class="info">
+                    <p>
+                        Photo
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -216,7 +248,7 @@
 
             // change size of item when clicked
             $bubbles.on( 'click', '.bubble', function() {
-              $(this).toggleClass('huge');
+              $(this).toggleClass('size-large');
               // trigger layout after item size changes
               $bubbles.isotope('layout');
             });

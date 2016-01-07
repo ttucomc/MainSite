@@ -1,3 +1,4 @@
+@import 'compass/css3';
 @import 'variables';
 
 
@@ -46,33 +47,95 @@
         .bubble {
             position: relative;
             display: inline-block;
+            background: transparent;
             border-radius: 50%;
             border: 20px solid $grey;
             height: 130px;
             width: 130px;
             @media screen and (min-width: 680px) {
-                height: 250px;
-                width: 250px;
+                height: 200px;
+                width: 200px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%,-50%);
+                border-radius: 50%;
+                height: 0;
+                width: 0;
+                @include transition(.3s);
+                z-index: -1;
+            }
+            &:hover {
+                &:after {
+                    content: '';
+                    opacity: .5;
+                    height: 105%;
+                    width: 105%;
+                }
+                .info {
+                    opacity: 1;
+                }
             }
 
             &.photo-bubble {
                 border-color: $turquoise;
+                &:after {
+                    content: '';
+                    background-color: $turquoise;
+                }
             }
             &.video-bubble {
                 border-color: $purple;
+                &:after {
+                    content: '';
+                    background-color: $purple;
+                }
             }
             &.graphic-bubble {
                 border-color: $lime;
+                &:after {
+                    content: '';
+                    background-color: $lime;
+                }
             }
             &.writing-bubble {
                 border-color: $pink;
+                &:after {
+                    content: '';
+                    background-color: $pink;
+                }
             }
-            &.huge {
+            &.size-small {
+                height: 90px;
+                width: 90px;
+                @media screen and (min-width: 680px) {
+                    height: 125px;
+                    width: 125px;
+                }
+            }
+            &.size-large {
                 height: 260px;
                 width: 260px;
                 @media screen and (min-width: 680px) {
                     height: 500px;
                     width: 500px;
+                }
+            }
+
+            .info {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%, -50%);
+                @include transition(.3s);
+                opacity: 0;
+                p {
+                    font-size: 1.5em;
+                    padding: 0;
+                    margin: 0;
                 }
             }
         }

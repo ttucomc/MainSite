@@ -1,14 +1,14 @@
 /* Colors */
-/* line 4, ../sass/studentwork.scss */
+/* line 5, ../sass/studentwork.scss */
 #student-work {
   /***** Filter Buttons *****/
   /***** Work Bubbles *****/
 }
-/* line 6, ../sass/studentwork.scss */
+/* line 7, ../sass/studentwork.scss */
 #student-work .filtering {
   text-align: center;
 }
-/* line 9, ../sass/studentwork.scss */
+/* line 10, ../sass/studentwork.scss */
 #student-work .filtering .type-button-group button {
   background-color: #CCC;
   text-align: center;
@@ -17,79 +17,157 @@
   height: 100px;
   width: 100px;
 }
-/* line 16, ../sass/studentwork.scss */
+/* line 17, ../sass/studentwork.scss */
 #student-work .filtering .type-button-group button:focus {
   outline: none;
 }
-/* line 19, ../sass/studentwork.scss */
+/* line 20, ../sass/studentwork.scss */
 #student-work .filtering .type-button-group button.is-checked {
   box-shadow: 0 1px 1.5px 0px rgba(0, 0, 0, 0.22), 0 1px 1px 0 rgba(0, 0, 0, 0.4);
 }
-/* line 23, ../sass/studentwork.scss */
+/* line 24, ../sass/studentwork.scss */
 #student-work .filtering .type-button-group button.photo {
   background-color: #4ECDC4;
 }
-/* line 26, ../sass/studentwork.scss */
+/* line 27, ../sass/studentwork.scss */
 #student-work .filtering .type-button-group button.video {
   background-color: #C44D98;
   color: #FFF;
 }
-/* line 30, ../sass/studentwork.scss */
+/* line 31, ../sass/studentwork.scss */
 #student-work .filtering .type-button-group button.graphic {
   background-color: #C7F464;
 }
-/* line 33, ../sass/studentwork.scss */
+/* line 34, ../sass/studentwork.scss */
 #student-work .filtering .type-button-group button.writing {
   background-color: #FF6B6B;
   color: #FFF;
 }
-/* line 42, ../sass/studentwork.scss */
+/* line 43, ../sass/studentwork.scss */
 #student-work .bubbles {
   text-align: center;
   padding: 3em 0;
   margin: 0 auto;
 }
-/* line 46, ../sass/studentwork.scss */
+/* line 47, ../sass/studentwork.scss */
 #student-work .bubbles .bubble {
   position: relative;
   display: inline-block;
+  background: transparent;
   border-radius: 50%;
   border: 20px solid #556270;
   height: 130px;
   width: 130px;
 }
 @media screen and (min-width: 680px) {
-  /* line 46, ../sass/studentwork.scss */
+  /* line 47, ../sass/studentwork.scss */
   #student-work .bubbles .bubble {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
 }
-/* line 58, ../sass/studentwork.scss */
+/* line 59, ../sass/studentwork.scss */
+#student-work .bubbles .bubble:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 0;
+  width: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+/* line 72, ../sass/studentwork.scss */
+#student-work .bubbles .bubble:hover:after {
+  content: '';
+  opacity: .5;
+  height: 105%;
+  width: 105%;
+}
+/* line 78, ../sass/studentwork.scss */
+#student-work .bubbles .bubble:hover .info {
+  opacity: 1;
+}
+/* line 83, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.photo-bubble {
   border-color: #4ECDC4;
 }
-/* line 61, ../sass/studentwork.scss */
+/* line 85, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.photo-bubble:after {
+  content: '';
+  background-color: #4ECDC4;
+}
+/* line 90, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.video-bubble {
   border-color: #C44D98;
 }
-/* line 64, ../sass/studentwork.scss */
+/* line 92, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.video-bubble:after {
+  content: '';
+  background-color: #C44D98;
+}
+/* line 97, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.graphic-bubble {
   border-color: #C7F464;
 }
-/* line 67, ../sass/studentwork.scss */
+/* line 99, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.graphic-bubble:after {
+  content: '';
+  background-color: #C7F464;
+}
+/* line 104, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.writing-bubble {
   border-color: #FF6B6B;
 }
-/* line 70, ../sass/studentwork.scss */
-#student-work .bubbles .bubble.huge {
+/* line 106, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.writing-bubble:after {
+  content: '';
+  background-color: #FF6B6B;
+}
+/* line 111, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.size-small {
+  height: 90px;
+  width: 90px;
+}
+@media screen and (min-width: 680px) {
+  /* line 111, ../sass/studentwork.scss */
+  #student-work .bubbles .bubble.size-small {
+    height: 125px;
+    width: 125px;
+  }
+}
+/* line 119, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.size-large {
   height: 260px;
   width: 260px;
 }
 @media screen and (min-width: 680px) {
-  /* line 70, ../sass/studentwork.scss */
-  #student-work .bubbles .bubble.huge {
+  /* line 119, ../sass/studentwork.scss */
+  #student-work .bubbles .bubble.size-large {
     height: 500px;
     width: 500px;
   }
+}
+/* line 128, ../sass/studentwork.scss */
+#student-work .bubbles .bubble .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+/* line 135, ../sass/studentwork.scss */
+#student-work .bubbles .bubble .info p {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
 }
