@@ -35,7 +35,7 @@
   color: #FFF;
 }
 /* line 31, ../sass/studentwork.scss */
-#student-work .filtering .type-button-group button.graphic {
+#student-work .filtering .type-button-group button.design {
   background-color: #C7F464;
 }
 /* line 34, ../sass/studentwork.scss */
@@ -53,11 +53,14 @@
 #student-work .bubbles .bubble {
   position: relative;
   display: inline-block;
-  background: transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 50%;
   border: 14px solid #556270;
   height: 130px;
   width: 130px;
+  overflow: hidden;
 }
 @media screen and (min-width: 680px) {
   /* line 47, ../sass/studentwork.scss */
@@ -66,7 +69,7 @@
     width: 225px;
   }
 }
-/* line 59, ../sass/studentwork.scss */
+/* line 62, ../sass/studentwork.scss */
 #student-work .bubbles .bubble:after {
   content: '';
   position: absolute;
@@ -82,84 +85,84 @@
   transition: 0.3s;
   z-index: 1;
 }
-/* line 71, ../sass/studentwork.scss */
+/* line 74, ../sass/studentwork.scss */
 #student-work .bubbles .bubble:hover {
   cursor: pointer;
 }
-/* line 73, ../sass/studentwork.scss */
+/* line 76, ../sass/studentwork.scss */
 #student-work .bubbles .bubble:hover:after {
   content: '';
   opacity: .5;
   height: 105%;
   width: 105%;
 }
-/* line 79, ../sass/studentwork.scss */
+/* line 82, ../sass/studentwork.scss */
 #student-work .bubbles .bubble:hover .info {
   opacity: 1;
 }
-/* line 84, ../sass/studentwork.scss */
+/* line 87, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.photo-bubble {
   border-color: #4ECDC4;
 }
-/* line 86, ../sass/studentwork.scss */
+/* line 89, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.photo-bubble:after {
   content: '';
   background-color: #4ECDC4;
 }
-/* line 91, ../sass/studentwork.scss */
+/* line 94, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.video-bubble {
   border-color: #FFB54E;
 }
-/* line 93, ../sass/studentwork.scss */
+/* line 96, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.video-bubble:after {
   content: '';
   background-color: #FFB54E;
 }
-/* line 98, ../sass/studentwork.scss */
-#student-work .bubbles .bubble.graphic-bubble {
+/* line 101, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.design-bubble {
   border-color: #C7F464;
 }
-/* line 100, ../sass/studentwork.scss */
-#student-work .bubbles .bubble.graphic-bubble:after {
+/* line 103, ../sass/studentwork.scss */
+#student-work .bubbles .bubble.design-bubble:after {
   content: '';
   background-color: #C7F464;
 }
-/* line 105, ../sass/studentwork.scss */
+/* line 108, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.writing-bubble {
   border-color: #FF6B6B;
 }
-/* line 107, ../sass/studentwork.scss */
+/* line 110, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.writing-bubble:after {
   content: '';
   background-color: #FF6B6B;
 }
-/* line 112, ../sass/studentwork.scss */
+/* line 115, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.size-small {
   border-width: 6px;
   height: 90px;
   width: 90px;
 }
 @media screen and (min-width: 680px) {
-  /* line 112, ../sass/studentwork.scss */
+  /* line 115, ../sass/studentwork.scss */
   #student-work .bubbles .bubble.size-small {
     height: 125px;
     width: 125px;
   }
 }
-/* line 121, ../sass/studentwork.scss */
+/* line 124, ../sass/studentwork.scss */
 #student-work .bubbles .bubble.size-large {
   border-width: 20px;
   height: 260px;
   width: 260px;
 }
 @media screen and (min-width: 680px) {
-  /* line 121, ../sass/studentwork.scss */
+  /* line 124, ../sass/studentwork.scss */
   #student-work .bubbles .bubble.size-large {
     height: 450px;
     width: 450px;
   }
 }
-/* line 131, ../sass/studentwork.scss */
+/* line 134, ../sass/studentwork.scss */
 #student-work .bubbles .bubble .info {
   position: absolute;
   top: 50%;
@@ -169,12 +172,14 @@
   transform: translate(-50%, -50%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  font-weight: bold;
+  line-height: 1;
   opacity: 0;
   z-index: 2;
 }
-/* line 139, ../sass/studentwork.scss */
+/* line 144, ../sass/studentwork.scss */
 #student-work .bubbles .bubble .info p {
-  font-size: 1.5em;
+  font-size: 1.75em;
   padding: 0;
   margin: 0;
 }

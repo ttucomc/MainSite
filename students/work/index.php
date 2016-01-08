@@ -137,17 +137,17 @@
         <div class="filtering">
             <div class="type-button-group">
                 <button class="show-all is-checked" data-filter="*">Show All</button>
-                <button class="photo" data-filter=".photo-bubble">Photos</button>
-                <button class="video" data-filter=".video-bubble">Videos</button>
-                <button class="graphic" data-filter=".graphic-bubble">Graphics</button>
-                <button class="writing" data-filter=".writing-bubble">Writings</button>
+                <button class="photo" data-filter=".photo-bubble">Photo</button>
+                <button class="video" data-filter=".video-bubble">Video</button>
+                <button class="design" data-filter=".design-bubble">Design</button>
+                <button class="writing" data-filter=".writing-bubble">Writing</button>
             </div>
         </div>
         <div class="bubbles grid">
-            <div class="bubble photo-bubble" data-category="photo">
+            <div class="bubble photo-bubble" data-category="photo" style="background-image:url('img/chase-darnell-full.jpg')">
                 <div class="info">
                     <p>
-                        Photo
+                        Chase Darnell
                     </p>
                 </div>
             </div>
@@ -158,10 +158,10 @@
                     </p>
                 </div>
             </div>
-            <div class="bubble graphic-bubble" data-category="graphic">
+            <div class="bubble design-bubble" data-category="design">
                 <div class="info">
                     <p>
-                        Graphic
+                        Design
                     </p>
                 </div>
             </div>
@@ -179,14 +179,14 @@
                     </p>
                 </div>
             </div>
-            <div class="bubble graphic-bubble size-large" data-category="graphic">
+            <div class="bubble design-bubble size-large" data-category="design" style="background-image:url('img/sports-fans-full.jpg')">
                 <div class="info">
                     <p>
-                        Graphic
+                        Sports Fans
                     </p>
                 </div>
             </div>
-            <div class="bubble video-bubble" data-category="video">
+            <div class="bubble video-bubble" data-category="video" style="background-image:url('http://img.youtube.com/vi/nY5lwhDmUCs/maxresdefault.jpg')">
                 <div class="info">
                     <p>
                         Video

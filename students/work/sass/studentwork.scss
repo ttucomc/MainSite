@@ -28,7 +28,7 @@
                     background-color: $orange;
                     color: $white;
                 }
-                &.graphic {
+                &.design {
                     background-color: $lime;
                 }
                 &.writing {
@@ -47,11 +47,14 @@
         .bubble {
             position: relative;
             display: inline-block;
-            background: transparent;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-radius: 50%;
             border: 14px solid $grey;
             height: 130px;
             width: 130px;
+            overflow: hidden;
             @media screen and (min-width: 680px) {
                 height: 225px;
                 width: 225px;
@@ -95,7 +98,7 @@
                     background-color: $orange;
                 }
             }
-            &.graphic-bubble {
+            &.design-bubble {
                 border-color: $lime;
                 &:after {
                     content: '';
@@ -134,10 +137,12 @@
                 left: 50%;
                 @include translate(-50%, -50%);
                 @include transition(.3s);
+                font-weight: bold;
+                line-height: 1;
                 opacity: 0;
                 z-index: 2;
                 p {
-                    font-size: 1.5em;
+                    font-size: 1.75em;
                     padding: 0;
                     margin: 0;
                 }
