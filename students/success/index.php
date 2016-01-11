@@ -228,13 +228,13 @@
 			<!-- Career -->
       <div class="row">
 
-          <div class="large-6 columns">
+          <div class="small-push-12 large-6 large-push-6 columns">
               <div class="centerImage">
                 <img class="studentSuccessImage" src="../../images/mc.jpg">
               </div>
           </div>
 
-          <div class="large-6 columns">
+          <div class="small-pull-12 large-6 large-pull-6 columns">
             <div class="studentSuccessTextContainer">
               <h3 class="studentSuccessTextTitle">Career Center</h3>
               <div class="studentSuccessText">
@@ -282,7 +282,7 @@
 
 			<div class="spacer"></div>
 
-			<section id="cameron" class="person cameron grey">
+			<section id="cameron" class="person cameron green">
 
 				<div class="arrowLeft">
 					<a href="#1">
@@ -316,7 +316,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="candace" class="person candace green">
+			<section id="candace" class="person candace blue">
 
 				<div class="arrowLeft">
 					<a href="#2">
@@ -384,7 +384,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="emily" class="person emily grey">
+			<section id="emily" class="person emily green">
 
 				<div class="arrowLeft">
 					<a href="#4">
@@ -417,7 +417,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="jacob" class="person jacob green">
+			<section id="jacob" class="person jacob orange">
 
 				<div class="arrowLeft">
 					<a href="#5">
@@ -483,7 +483,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="taryn" class="person taryn green">
+			<section id="taryn" class="person taryn blue">
 
 				<div class="arrowLeft">
 					<a href="#7">
@@ -516,7 +516,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="todd" class="person todd blue">
+			<section id="todd" class="person todd green">
 
 				<div class="arrowLeft">
 					<a href="#8">
@@ -715,7 +715,7 @@
 						})
 						.setPin("#ourTeam", {pushFollowers: true})
 						.setTween(wipeAnimation)
-						.addIndicators() // add indicators (requires plugin)
+						//.addIndicators() // add indicators (requires plugin)
 						.addTo(controller);
 
 
