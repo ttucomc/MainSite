@@ -316,7 +316,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="candace" class="person candace blue">
+			<section id="candace" class="person candace purple">
 
 				<div class="arrowLeft">
 					<a href="#2">
@@ -384,7 +384,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="emily" class="person emily green">
+			<section id="emily" class="person emily blue">
 
 				<div class="arrowLeft">
 					<a href="#4">
@@ -450,7 +450,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="kuhrt" class="person kuhrt blue">
+			<section id="kuhrt" class="person kuhrt green">
 
 				<div class="arrowLeft">
 					<a href="#6">
@@ -516,7 +516,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="todd" class="person todd green">
+			<section id="todd" class="person todd orange">
 
 				<div class="arrowLeft">
 					<a href="#8">
