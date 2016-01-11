@@ -228,13 +228,13 @@
 			<!-- Career -->
       <div class="row">
 
-          <div class="small-push-12 large-6 large-push-6 columns">
+          <div class="large-6 columns">
               <div class="centerImage">
                 <img class="studentSuccessImage" src="../../images/mc.jpg">
               </div>
           </div>
 
-          <div class="small-pull-12 large-6 large-pull-6 columns">
+          <div class="large-6 columns">
             <div class="studentSuccessTextContainer">
               <h3 class="studentSuccessTextTitle">Career Center</h3>
               <div class="studentSuccessText">
@@ -254,23 +254,20 @@
 	<!-- Staff Section -->
 	<div id="ourTeam">
 			<!-- Team Profiles -->
-			<section id="alessa" class="name alessa blue">
+			<section id="alessa" class="person alessa blue">
 
 				<div class="row">
-						<div class="medium-6 columns">
-							<div class="arrow">
 
-							</div>
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Alessa Ross</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
-							<div class="teamMemberPhoto">
-									<img src="../../images/mc.jpg"/>
-							</div>
+
+						<div class="large-6 columns rightColumn">
+							<img src="../../images/studentSucess/team/aleesaross-nobg.png"/>
 						</div>
 				</div>
 
@@ -285,7 +282,7 @@
 
 			<div class="spacer"></div>
 
-			<section id="cameron" class="name grey">
+			<section id="cameron" class="person cameron grey">
 
 				<div class="arrowLeft">
 					<a href="#1">
@@ -294,18 +291,19 @@
 				</div>
 
 				<div class="row">
-						<div class="medium-6 columns">
-							<div class="teamMemberText">
-								<div class="teamMemberName">Cameron Skoczlas</div>
-								<br>
-								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
-							</div>
+					<div class="large-6 columns leftColumn">
+						<div class="teamMemberText">
+							<div class="teamMemberName">Cameron Skoczlas</div>
+							<br>
+							<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 						</div>
-						<div class="medium-6 columns">
-							<div class="teamMemberPhoto">
-									<img src="../../images/mc.jpg"/>
-							</div>
+					</div>
+
+					<div class="large-6 columns rightColumn">
+						<div class="teamMemberPhoto">
+								<img src="../../images/mc.jpg"/>
 						</div>
+					</div>
 				</div>
 
 				<div class="arrowRight">
@@ -318,7 +316,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="candace" class="name green">
+			<section id="candace" class="person candace green">
 
 				<div class="arrowLeft">
 					<a href="#2">
@@ -326,15 +324,17 @@
 					</a>
 				</div>
 
+
 				<div class="row">
-						<div class="medium-6 columns">
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Candace Trevino</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
+
+						<div class="large-6 columns rightColumn">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
@@ -351,7 +351,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="clara" class="name blue">
+			<section id="clara" class="person clara pink">
 
 				<div class="arrowLeft">
 					<a href="#3">
@@ -360,14 +360,14 @@
 				</div>
 
 				<div class="row">
-						<div class="medium-6 columns">
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Clara McKenney</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
+						<div class="large-6 columns rightColumn">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
@@ -384,7 +384,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="emily" class="name grey">
+			<section id="emily" class="person emily grey">
 
 				<div class="arrowLeft">
 					<a href="#4">
@@ -393,14 +393,14 @@
 				</div>
 
 				<div class="row">
-						<div class="medium-6 columns">
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Emily Balke</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
+						<div class="large-6 columns rightColumn">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
@@ -417,7 +417,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="jacob" class="name green">
+			<section id="jacob" class="person jacob green">
 
 				<div class="arrowLeft">
 					<a href="#5">
@@ -426,14 +426,14 @@
 				</div>
 
 				<div class="row">
-						<div class="medium-6 columns">
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Jacob Copple</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
+						<div class="large-6 columns rightColumn">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
@@ -450,7 +450,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="kuhrt" class="name blue">
+			<section id="kuhrt" class="person kuhrt blue">
 
 				<div class="arrowLeft">
 					<a href="#6">
@@ -459,14 +459,14 @@
 				</div>
 
 				<div class="row">
-						<div class="medium-6 columns">
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Kuhrt Cowan</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
+						<div class="large-6 columns rightColumn">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
@@ -483,7 +483,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="taryn" class="name green">
+			<section id="taryn" class="person taryn green">
 
 				<div class="arrowLeft">
 					<a href="#7">
@@ -492,14 +492,14 @@
 				</div>
 
 				<div class="row">
-						<div class="medium-6 columns">
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Taryn Meixner</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
+						<div class="large-6 columns rightColumn">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>
@@ -516,7 +516,7 @@
 
 
 			<div class="spacer"></div>
-			<section id="todd" class="name blue">
+			<section id="todd" class="person todd blue">
 
 				<div class="arrowLeft">
 					<a href="#8">
@@ -525,14 +525,14 @@
 				</div>
 
 				<div class="row">
-						<div class="medium-6 columns">
+						<div class="large-6 columns leftColumn">
 							<div class="teamMemberText">
 								<div class="teamMemberName">Todd Chambers</div>
 								<br>
 								<div class="teamMemberDescription">Lorem ipsum dolor sit amet, ut ullum omnes quo. At eum quodsi ornatus detraxit, no per etiam aliquid conclusionemque.</div>
 							</div>
 						</div>
-						<div class="medium-6 columns">
+						<div class="large-6 columns rightColumn">
 							<div class="teamMemberPhoto">
 									<img src="../../images/mc.jpg"/>
 							</div>

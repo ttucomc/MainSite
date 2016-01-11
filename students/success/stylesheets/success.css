@@ -40,12 +40,25 @@ h1 {
   width: 100%;
   height: 100vh;
   overflow: hidden; }
-  #ourTeam .name {
+  #ourTeam .person {
     position: absolute;
     width: 100%;
-    height: 100vh; }
+    height: 100vh;
+    display: table; }
   #ourTeam .row {
-    max-width: 100%; }
+    max-width: 100%;
+    display: block;
+    height: inherit; }
+  #ourTeam .columns {
+    		/*
+    		display: table-cell;
+        height: inherit;
+    		vertical-align: bottom;
+    		float: none;
+    		padding: 0;
+    		*/
+    text-align: center;
+    height: 50%; }
   #ourTeam .arrowRight,
   #ourTeam .arrowLeft {
     width: 5%;
@@ -53,7 +66,8 @@ h1 {
     display: inline-block;
     vertical-align: top;
     position: absolute;
-    top: 0; }
+    top: 0;
+    visibility: hidden; }
     #ourTeam .arrowRight div,
     #ourTeam .arrowLeft div {
       font-size: 8em;
@@ -64,35 +78,89 @@ h1 {
               transform: translateY(-50%);
       cursor: pointer; }
   #ourTeam .arrowRight {
-    right: 0; }
+    right: 1.5em; }
+    #ourTeam .arrowRight div {
+      right: 0; }
   #ourTeam .arrowLeft {
-    left: 1.4em; }
+    left: 1.5em; }
   #ourTeam .teamMemberText {
     width: 94%;
-    margin-top: 35vh;
-    padding: 0 10%;
+    margin-top: 10vh;
+    padding: 0 5%;
     display: inline-block;
     color: white; }
     #ourTeam .teamMemberText .teamMemberName {
-      font-size: 4em;
+      font-size: 3em;
       line-height: 1; }
     #ourTeam .teamMemberText .teamMemberDescription {
-      font-size: 2em;
+      font-size: 1.4em;
       line-height: 1; }
   #ourTeam .teamMemberPhoto {
     text-align: center;
     width: 94%;
     display: inline-block; }
-    #ourTeam .teamMemberPhoto img {
-      height: 100vh; }
+  #ourTeam img {
+    height: 100%;
+    width: 0 auto; }
+  @media screen and (min-width: 1023px) {
+    #ourTeam .row {
+      display: table-row; }
+    #ourTeam .columns {
+      float: left;
+      display: table-cell;
+      text-align: center; }
+    #ourTeam .leftColumn {
+      padding: 0 5%;
+      width: 100%;
+      height: inherit; }
+    #ourTeam .rightColumn {
+      vertical-align: bottom;
+      float: none; }
+    #ourTeam .teamMemberText {
+      width: 95%;
+      text-align: center;
+      vertical-align: middle;
+      margin-top: 30%; }
+      #ourTeam .teamMemberText .teamMemberName {
+        font-size: 4em;
+        line-height: 1; }
+      #ourTeam .teamMemberText .teamMemberDescription {
+        font-size: 2em;
+        line-height: 1; }
+    #ourTeam .arrowRight,
+    #ourTeam .arrowLeft {
+      visibility: visible; }
+    #ourTeam img {
+      height: 80%;
+      position: relative;
+      bottom: -1%; } }
 
 .green {
   background-color: lightgreen; }
 
+.pink {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fe9090+0,fcc9c9+80 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fc8383+0,fcc9c9+100 */
+  background: #fc8383;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #fc8383 0%, #fcc9c9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #fc8383 0%, #fcc9c9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc8383', endColorstr='#fcc9c9',GradientType=1 );
+  /* IE6-9 */ }
+
 .blue {
-  background-image: url("../../../images/studentSucessBackgrounds/blueBackground.svg");
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background: #59bde5;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #59bde5 35%, #d8efff 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #59bde5 35%, #d8efff 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59bde5', endColorstr='#d8efff',GradientType=1 );
+  /* IE6-9 */ }
 
 .grey {
   background-color: lightgrey; }

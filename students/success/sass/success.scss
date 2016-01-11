@@ -94,15 +94,31 @@ h1
 	height: 100vh;
 	overflow: hidden;
 
-	.name {
+	.person {
 		position: absolute;
 		width: 100%;
 		height: 100vh;
+		display: table;
 	}
 
 	.row
 	{
 		max-width: 100%;
+		display: block;
+		height: inherit;
+	}
+
+	.columns
+	{
+		/*
+		display: table-cell;
+    height: inherit;
+		vertical-align: bottom;
+		float: none;
+		padding: 0;
+		*/
+		text-align: center;
+		height: 50%;
 	}
 
 	.arrowRight,
@@ -114,6 +130,7 @@ h1
 		vertical-align: top;
 		position: absolute;
 		top: 0;
+		visibility: hidden;
 
 		div
 		{
@@ -125,30 +142,35 @@ h1
 		}
 	}
 	.arrowRight {
-		right: 0;
+		right: 1.5em;
+
+		div
+		{
+			right: 0;
+		}
 	}
 	.arrowLeft
 	{
-		left: 1.4em;
+		left: 1.5em;
 	}
 
 	.teamMemberText
 	{
 		width: 94%;
-		margin-top: 35vh;
-		padding: 0 10%;
+		margin-top: 10vh;
+		padding: 0 5%;
 		display: inline-block;
 		color: white;
 
 		.teamMemberName
 		{
-			font-size: 4em;
+			font-size: 3em;
 			line-height: 1;
 		}
 
 		.teamMemberDescription
 		{
-			font-size: 2em;
+			font-size: 1.4em;
 			line-height: 1;
 		}
 	}
@@ -158,23 +180,99 @@ h1
 		text-align: center;
 		width: 94%;
 		display: inline-block;
-
-		img {
-			height: 100vh;
-		}
 	}
 
+	img {
+			height: 100%;
+			width: 0 auto;
+	}
 
+	@media screen and (min-width: 1023px)
+	{
+
+		.row
+		{
+			display: table-row;
+		}
+
+		.columns
+		{
+			  float: left;
+				display: table-cell;
+				text-align: center;
+		}
+
+		.leftColumn
+		{
+	    padding: 0 5%;
+	    width: 100%;
+	    height: inherit;
+		}
+		.rightColumn
+		{
+			vertical-align: bottom;
+			float: none;
+		}
+
+		.teamMemberText
+		{
+			width: 95%;
+    	text-align: center;
+    	vertical-align: middle;
+    	margin-top: 30%;
+
+			.teamMemberName
+			{
+				font-size: 4em;
+				line-height: 1;
+			}
+
+			.teamMemberDescription
+			{
+				font-size: 2em;
+				line-height: 1;
+			}
+		}
+
+		.arrowRight,
+		.arrowLeft
+		{
+			visibility: visible;
+		}
+
+		img {
+				height: 80%;
+				position: relative;
+				bottom: -1%;
+		}
+
+	} //End Media query
 }
 
 .green{
 	background-color: lightgreen;
 }
 
+.pink
+{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fe9090+0,fcc9c9+80 */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fc8383+0,fcc9c9+100 */
+background: #fc8383; /* Old browsers */
+background: -moz-linear-gradient(left,  #fc8383 0%, #fcc9c9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #fc8383 0%,#fcc9c9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #fc8383 0%,#fcc9c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc8383', endColorstr='#fcc9c9',GradientType=1 ); /* IE6-9 */
+
+}
+
 .blue{
-	background-image: url("../../../images/studentSucessBackgrounds/blueBackground.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
+
+	background: #59bde5; /* Old browsers */
+	background: -moz-linear-gradient(left,  #59bde5 35%, #d8efff 99%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #59bde5 35%,#d8efff 99%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #59bde5 35%,#d8efff 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59bde5', endColorstr='#d8efff',GradientType=1 ); /* IE6-9 */
+
 }
 
 .grey{
