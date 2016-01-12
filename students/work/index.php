@@ -9,12 +9,14 @@
     <meta name="description" content="Our students here at CoMC are incredible! Here's just some of the cool things our students are producing!">
 
 	<link rel="stylesheet" type="text/css" href="../../css/ttu.css">
+	<link rel="stylesheet" type="text/css" href="../../includes/foundation/css/foundation.min.css">
     <link rel="stylesheet" type="text/css" href="css/studentwork.css">
 
 	<script src="../../js/modernizr.js"></script>
 	<script src="../../js/ttuglobal.js"></script>
 	<script src="../../js/ttuglobal-onload.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../../includes/foundation/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
     <script src="js/packery.min.js"></script>
 
@@ -161,14 +163,16 @@
 				while($row = mysqli_fetch_assoc($work)) {
 
 					// Declaring variables
+					$workIndex = $row['id'];
 					$title = $row['title'];
 					$author = $row['author'];
 					$type = $row['type'];
 					$dept = $row['jem'];
 					$image = $row['image'];
+					$videoLink = $row['videoLink'];
 					$size = '';
 
-					// Setting random size class
+					// Setting random size class for bubble
 					// Get random number
 					$randNum = mt_rand(0, 3);
 					// Give random number the class name
@@ -189,11 +193,31 @@
 			?>
 
 			<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-category="<?php echo $type; ?>" style="background-image:url('img/<?php echo $image; ?>')">
-                <div class="info">
-                    <p>
-                        <?php echo "<em>" . $title . "</em>" . "<br>- " . $author; ?>
-                    </p>
-                </div>
+				<?php if ($type == 'video'): ?>
+
+					<div class="info">
+	                    <p>
+	                        <?php echo "<em>" . $title . "</em>" . "<br>- " . $author; ?>
+	                    </p>
+	                </div>
+					<div class="reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal data-reset-on-close="true">
+					  <div class="flex-video widescreen vimeo">
+					    <iframe width="1280" height="720" src="<?php echo $videoLink; ?>" frameborder="0" allowfullscreen></iframe>
+					  </div>
+					  <button class="close-button" data-close aria-label="Close reveal" type="button">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+
+				<?php else: ?>
+
+					<div class="info">
+	                    <p>
+	                        <?php echo "<em>" . $title . "</em>" . "<br>- " . $author; ?>
+	                    </p>
+	                </div>
+
+				<?php endif; ?>
             </div>
 
 			<?php
