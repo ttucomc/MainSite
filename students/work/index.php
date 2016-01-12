@@ -136,7 +136,10 @@
 
 	<?php
 
-	require
+	require('../../info/mcdb.php');
+
+	//YouTube regex
+	//preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $link, $matches);
 
 	?>
     <section id="student-work">
@@ -150,6 +153,53 @@
             </div>
         </div>
         <div class="bubbles grid">
+			<?php
+
+				// Creating call to work table
+				$work = mysqli_query($conn, 'SELECT * FROM work');
+				// Starting loop for each row in table
+				while($row = mysqli_fetch_assoc($work)) {
+
+					// Declaring variables
+					$title = $row['title'];
+					$author = $row['author'];
+					$type = $row['type'];
+					$dept = $row['jem'];
+					$image = $row['image'];
+					$size = '';
+
+					// Setting random size class
+					// Get random number
+					$randNum = mt_rand(0, 3);
+					// Give random number the class name
+					switch ($randNum) {
+						case 0:
+							$size = 'size-small';
+							break;
+
+						case 1:
+							$size = 'size-large';
+							break;
+
+						default:
+							$size = '';
+							break;
+					}
+
+			?>
+
+			<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-category="<?php echo $type; ?>" style="background-image:url('img/<?php echo $image; ?>')">
+                <div class="info">
+                    <p>
+                        <?php echo "<em>" . $title . "</em>" . "<br>- " . $author; ?>
+                    </p>
+                </div>
+            </div>
+
+			<?php
+				// Ending loop for each row
+				}
+			?>
             <div class="bubble photo-bubble" data-category="photo" style="background-image:url('img/chase-darnell-full.jpg')">
                 <div class="info">
                     <p>
