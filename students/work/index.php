@@ -133,6 +133,12 @@
             </div>
         </div>
     </div>
+
+	<?php
+
+	require
+
+	?>
     <section id="student-work">
         <div class="filtering">
             <div class="type-button-group">
