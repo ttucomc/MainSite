@@ -301,7 +301,7 @@
 
 					<div class="large-6 columns rightColumn">
 						<div class="teamMemberPhoto">
-								<img src="../../images/mc.jpg"/>
+								<img src="../../images/studentSucess/team/JCopple2-_SS_nobg.png"/>
 						</div>
 					</div>
 				</div>
