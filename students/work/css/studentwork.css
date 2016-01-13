@@ -181,7 +181,7 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   font-weight: bold;
-  line-height: 1.25;
+  line-height: 1.125;
   opacity: 0;
   z-index: 2;
 }

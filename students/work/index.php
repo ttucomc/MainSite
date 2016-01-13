@@ -170,6 +170,7 @@
 					$videoLink = $row['videoLink'];
 					$size = '';
 
+					// Setting $image if video or writing
 					// Getting video poster from YouTube if type is video
 					if ($type == 'video') {
 						//YouTube regex to pull id from link
@@ -180,6 +181,9 @@
 
 						//Putting path to poster in image variable
 						$image = 'http://img.youtube.com/vi/' . $videoID . '/maxresdefault.jpg';
+					} elseif ($type == 'writing') {
+						// Giving type writing the default background
+						$image = "img/writing-bg.jpg";
 					}
 
 					// Setting random size class for bubble
@@ -207,7 +211,7 @@
 
 					<div class="info">
 	                    <p>
-	                        <?php echo "<em>" . $title . "</em>" . "<br>- " . $author; ?>
+	                        <?php echo $title; ?>
 	                    </p>
 	                </div>
 					<div class="reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal data-reset-on-close="true">
@@ -223,7 +227,7 @@
 
 					<div class="info">
 	                    <p>
-	                        <?php echo "<em>" . $title . "</em>" . "<br>- " . $author; ?>
+	                        <?php echo $title; ?>
 	                    </p>
 	                </div>
 					<div class="reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal>
@@ -261,14 +265,14 @@
                     </p>
                 </div>
             </div>
-            <div class="bubble writing-bubble size-large" data-category="writing">
+            <div class="bubble writing-bubble size-large" data-category="writing" style="background-image:url('img/writing-bg.jpg')">
                 <div class="info">
                     <p>
                         Writing
                     </p>
                 </div>
             </div>
-            <div class="bubble writing-bubble" data-category="writing">
+            <div class="bubble writing-bubble" data-category="writing" style="background-image:url('img/writing-bg.jpg')">
                 <div class="info">
                     <p>
                         Writing
