@@ -18,7 +18,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="../../includes/foundation/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-    <script src="js/packery.min.js"></script>
 
     <meta itemprop="name" content="Student Work | Students | CoMC | TTU">
     <meta itemprop="description" content="Our students here at CoMC are incredible! Here's just some of the cool things our students are producing!">
@@ -140,8 +139,7 @@
 
 	require('../../info/mcdb.php');
 
-	//YouTube regex
-	//preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $link, $matches);
+
 
 	?>
     <section id="student-work">
@@ -168,9 +166,21 @@
 					$author = $row['author'];
 					$type = $row['type'];
 					$dept = $row['jem'];
-					$image = $row['image'];
+					$image = 'img/' . $row['image'];
 					$videoLink = $row['videoLink'];
 					$size = '';
+
+					// Getting video poster from YouTube if type is video
+					if ($type == 'video') {
+						//YouTube regex to pull id from link
+						preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=embed/)[^&\n]+|(?<=v=)[^&\‌​n]+|(?<=youtu.be/)[^&\n]+#", $videoLink, $matches);
+
+						//Putting id into a variable
+						$videoID = $matches[0];
+
+						//Putting path to poster in image variable
+						$image = 'http://img.youtube.com/vi/' . $videoID . '/maxresdefault.jpg';
+					}
 
 					// Setting random size class for bubble
 					// Get random number
@@ -192,7 +202,7 @@
 
 			?>
 
-			<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-category="<?php echo $type; ?>" style="background-image:url('img/<?php echo $image; ?>')">
+			<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
 				<?php if ($type == 'video'): ?>
 
 					<div class="info">
@@ -204,9 +214,9 @@
 					  <div class="flex-video widescreen vimeo">
 					    <iframe width="1280" height="720" src="<?php echo $videoLink; ?>" frameborder="0" allowfullscreen></iframe>
 					  </div>
-					  <button class="close-button" data-close aria-label="Close reveal" type="button">
+					  <!-- <button class="close-button" data-close aria-label="Close reveal" type="button">
 					    <span aria-hidden="true">&times;</span>
-					  </button>
+					  </button> -->
 					</div>
 
 				<?php else: ?>
@@ -216,6 +226,12 @@
 	                        <?php echo "<em>" . $title . "</em>" . "<br>- " . $author; ?>
 	                    </p>
 	                </div>
+					<div class="reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal>
+					  <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+					  <!-- <button class="close-button" data-close aria-label="Close reveal" type="button">
+					    <span aria-hidden="true">&times;</span>
+					  </button> -->
+					</div>
 
 				<?php endif; ?>
             </div>
@@ -308,6 +324,9 @@
                 filterValue = filterValue;
                 $bubbles.isotope({ filter: filterValue });
             });
+
+			// Initializing foundation
+			$(document).foundation();
 
             // Randomizing works
             // var ar = $('.bubbles').children();
