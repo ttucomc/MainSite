@@ -169,9 +169,13 @@
         text-align: left;
         max-width: 1000px;
         margin: 0 auto;
+        padding: 2em 0;
         .author {
-            font-size: .875em;
+            font-size: .75em;
             font-style: italic;
+            @media screen and (min-width: 680px) {
+                font-size: .875em;
+            }
         }
     }
 }
@@ -181,5 +185,5 @@
 }
 .reveal[style],
 .reveal.full[style]{
-    height: 100% !important;
+    height: 100vh !important;
 }

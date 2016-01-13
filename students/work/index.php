@@ -280,62 +280,7 @@
 				// Ending loop for each row
 				}
 			?>
-            <div class="bubble photo-bubble" data-category="photo" style="background-image:url('img/chase-darnell-full.jpg')">
-                <div class="info">
-                    <p>
-                        Chase Darnell
-                    </p>
-                </div>
-            </div>
-            <div class="bubble video-bubble size-small" data-category="video">
-                <div class="info">
-                    <p>
-                        Video
-                    </p>
-                </div>
-            </div>
-            <div class="bubble design-bubble" data-category="design">
-                <div class="info">
-                    <p>
-                        Design
-                    </p>
-                </div>
-            </div>
-            <div class="bubble writing-bubble size-large" data-category="writing" style="background-image:url('img/writing-bg.jpg')">
-                <div class="info">
-                    <p>
-                        Writing
-                    </p>
-                </div>
-            </div>
-            <div class="bubble writing-bubble" data-category="writing" style="background-image:url('img/writing-bg.jpg')">
-                <div class="info">
-                    <p>
-                        Writing
-                    </p>
-                </div>
-            </div>
-            <div class="bubble design-bubble size-large" data-category="design" style="background-image:url('img/sports-fans-full.jpg')">
-                <div class="info">
-                    <p>
-                        Sports Fans
-                    </p>
-                </div>
-            </div>
-            <div class="bubble video-bubble" data-category="video" style="background-image:url('http://img.youtube.com/vi/nY5lwhDmUCs/maxresdefault.jpg')">
-                <div class="info">
-                    <p>
-                        Video
-                    </p>
-                </div>
-            </div>
-            <div class="bubble photo-bubble size-small" data-category="photo">
-                <div class="info">
-                    <p>
-                        Photo
-                    </p>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -365,28 +310,10 @@
                 $bubbles.isotope({ filter: filterValue });
             });
 
-			// Initializing foundation
-			$(document).foundation();
-
-            // Randomizing works
-            // var ar = $('.bubbles').children();
-            // ar.sort(function(a,b){
-            //   // Get a random number between 0 and 10
-            //   var temp = parseInt( Math.random()*10 );
-            //   // Get 1 or 0, whether temp is odd or even
-            //   var isOddOrEven = temp%2;
-            //   // Get +1 or -1, whether temp greater or smaller than 5
-            //   var isPosOrNeg = temp>5 ? 1 : -1;
-            //   // Return -1, 0, or +1
-            //   return( isOddOrEven*isPosOrNeg );
-            // });
-            // $('.bubbles').html(ar);
-            // $('.bubbles').masonry({
-            //   animate: true
-            // });
-
-
         });
+
+		// Initializing foundation
+		$(document).foundation();
 
     </script>
 

@@ -202,21 +202,28 @@
   text-align: left;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 2em 0;
 }
-/* line 172, ../sass/studentwork.scss */
+/* line 173, ../sass/studentwork.scss */
 #student-work .writing-article .author {
-  font-size: .875em;
+  font-size: .75em;
   font-style: italic;
 }
+@media screen and (min-width: 680px) {
+  /* line 173, ../sass/studentwork.scss */
+  #student-work .writing-article .author {
+    font-size: .875em;
+  }
+}
 
-/* line 178, ../sass/studentwork.scss */
+/* line 182, ../sass/studentwork.scss */
 .reveal {
   background: rgba(255, 255, 255, 0.95);
   border: none;
 }
 
-/* line 182, ../sass/studentwork.scss */
+/* line 186, ../sass/studentwork.scss */
 .reveal[style],
 .reveal.full[style] {
-  height: 100% !important;
+  height: 100vh !important;
 }
