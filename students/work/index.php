@@ -168,6 +168,7 @@
 					$dept = $row['jem'];
 					$image = 'img/' . $row['image'];
 					$videoLink = $row['videoLink'];
+					$writing = $row['writing'];
 					$size = '';
 
 					// Setting $image if video or writing
@@ -205,40 +206,75 @@
 					}
 
 			?>
-
-			<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
-				<?php if ($type == 'video'): ?>
-
-					<div class="info">
-	                    <p>
-	                        <?php echo $title; ?>
-	                    </p>
-	                </div>
-					<div class="reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal data-reset-on-close="true">
-					  <div class="flex-video widescreen vimeo">
-					    <iframe width="1280" height="720" src="<?php echo $videoLink; ?>" frameborder="0" allowfullscreen></iframe>
-					  </div>
-					  <!-- <button class="close-button" data-close aria-label="Close reveal" type="button">
-					    <span aria-hidden="true">&times;</span>
-					  </button> -->
-					</div>
-
-				<?php else: ?>
+			<?php if ($type == 'video'): ?>
+				<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
 
 					<div class="info">
 	                    <p>
 	                        <?php echo $title; ?>
 	                    </p>
 	                </div>
-					<div class="reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal>
-					  <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
-					  <!-- <button class="close-button" data-close aria-label="Close reveal" type="button">
-					    <span aria-hidden="true">&times;</span>
-					  </button> -->
-					</div>
+				</div>
+				<div class="full reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal data-reset-on-close="true">
+					<h3><?php echo $title; ?></h3>
+					<p>
+						By: <?php echo $author; ?>
+					</p>
+				  <div class="flex-video widescreen vimeo">
+					<iframe width="1280" height="720" src="<?php echo $videoLink; ?>" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				  <button class="close-button" data-close aria-label="Close reveal" type="button">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
 
-				<?php endif; ?>
-            </div>
+			<?php elseif ($type == 'writing'): ?>
+
+				<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
+
+					<div class="info">
+	                    <p>
+	                        <?php echo $title; ?>
+	                    </p>
+	                </div>
+				</div>
+
+				<div class="full reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal>
+					<article class="writing-article">
+						<h3><?php echo $title; ?></h3>
+						<p class="author">
+							By: <?php echo $author; ?>
+						</p>
+						<?php echo $writing; ?>
+					</article>
+				  <button class="close-button" data-close aria-label="Close reveal" type="button">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+
+			<?php else: ?>
+				<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
+
+					<div class="info">
+	                    <p>
+	                        <?php echo $title; ?>
+	                    </p>
+	                </div>
+				</div>
+
+				<div class="full reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal>
+					<h3><?php echo $title; ?></h3>
+					<p>
+						By: <?php echo $author; ?>
+					</p>
+				  <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+				  <button class="close-button" data-close aria-label="Close reveal" type="button">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+
+			<?php endif; ?>
+
 
 			<?php
 				// Ending loop for each row

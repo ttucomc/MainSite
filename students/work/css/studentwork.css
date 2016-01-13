@@ -191,15 +191,32 @@
   padding: 0;
   margin: 0;
 }
-/* line 161, ../sass/studentwork.scss */
-#student-work .bubbles .bubble .reveal {
-  position: fixed;
-  top: 0 !important;
-  left: 0;
-  outline: none;
-}
-/* line 166, ../sass/studentwork.scss */
-#student-work .bubbles .bubble .reveal button {
-  background: #FFF;
+/* line 163, ../sass/studentwork.scss */
+#student-work button {
+  background-color: transparent;
   border: none;
+}
+/* line 167, ../sass/studentwork.scss */
+#student-work .writing-article {
+  font-size: 1.25em;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* line 172, ../sass/studentwork.scss */
+#student-work .writing-article .author {
+  font-size: .875em;
+  font-style: italic;
+}
+
+/* line 178, ../sass/studentwork.scss */
+.reveal {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+}
+
+/* line 182, ../sass/studentwork.scss */
+.reveal[style],
+.reveal.full[style] {
+  height: 100% !important;
 }
