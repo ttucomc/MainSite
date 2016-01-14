@@ -137,7 +137,7 @@
 
 	<?php
 
-	require('../../info/mcdb.php');
+	require('/comc/utilities11/mcdb.php');
 
 
 
@@ -156,9 +156,9 @@
 			<?php
 
 				// Creating call to work table
-				$work = mysqli_query($conn, 'SELECT * FROM work');
+				$work = mssql_query($conn, 'SELECT * FROM student_work');
 				// Starting loop for each row in table
-				while($row = mysqli_fetch_assoc($work)) {
+				while($row = mssql_fetch_array($work)) {
 
 					// Declaring variables
 					$workIndex = $row['id'];
@@ -279,6 +279,8 @@
 			<?php
 				// Ending loop for each row
 				}
+
+				mssql_close($conn);
 			?>
 
         </div>
