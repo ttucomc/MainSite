@@ -130,14 +130,10 @@
         <!-- MAIN EDITS START -->
 
 
-                </div>
-            </div>
-        </div>
-    </div>
-
 	<?php
-
+	echo '</div></div></div></div>';
 	require('/comc/utilities11/mcdb.php');
+
 
 
 
@@ -156,12 +152,12 @@
 			<?php
 
 				// Creating call to work table
-				$work = mssql_query($conn, 'SELECT * FROM student_work');
+				$work = mssql_query('SELECT * FROM student_work', $conn);
 				// Starting loop for each row in table
 				while($row = mssql_fetch_array($work)) {
 
 					// Declaring variables
-					$workIndex = $row['id'];
+					$workIndex = $row['ID'];
 					$title = $row['title'];
 					$author = $row['author'];
 					$type = $row['type'];
@@ -204,42 +200,43 @@
 							$size = '';
 							break;
 					}
+					require('/comc/students/work/variables.php');
 
 			?>
 			<?php if ($type == 'video'): ?>
-				<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
+				<?php echo '<div class="bubble ' . $type . '-bubble ' . $size .'" data-open="student-work-' . $workIndex . '" data-category="' . $type . '" style="background-image:url(\'' . $image . '\')">'; ?>
 
 					<div class="info">
 	                    <p>
 	                        <?php echo $title; ?>
 	                    </p>
 	                </div>
-				</div>
-				<div class="full reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal data-reset-on-close="true">
+				<?php echo '</div>'; ?>
+				<?php echo '<div class="full reveal" id="student-work-' . $workIndex . '" data-reveal data-reset-on-close="true">'; ?>
 					<h3><?php echo $title; ?></h3>
 					<p>
 						By: <?php echo $author; ?>
 					</p>
 				  <div class="flex-video widescreen vimeo">
-					<iframe width="1280" height="720" src="<?php echo $videoLink; ?>" frameborder="0" allowfullscreen></iframe>
+					<?php echo '<iframe width="1280" height="720" src="' . $videoLink . '" frameborder="0" allowfullscreen></iframe>'; ?>
 				  </div>
 				  <button class="close-button" data-close aria-label="Close reveal" type="button">
 					<span aria-hidden="true">&times;</span>
 				  </button>
-				</div>
+				<?php echo '</div>'; ?>
 
 			<?php elseif ($type == 'writing'): ?>
 
-				<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
+				<?php echo '<div class="bubble ' . $type . '-bubble ' . $size .'" data-open="student-work-' . $workIndex . '" data-category="' . $type . '" style="background-image:url(\'' . $image . '\')">'; ?>
 
 					<div class="info">
 	                    <p>
 	                        <?php echo $title; ?>
 	                    </p>
 	                </div>
-				</div>
+				<?php echo '</div>'; ?>
 
-				<div class="full reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal>
+				<?php echo '<div class="full reveal" id="student-work-' . $workIndex . '" data-reveal data-reset-on-close="true">'; ?>
 					<article class="writing-article">
 						<h3><?php echo $title; ?></h3>
 						<p class="author">
@@ -250,28 +247,30 @@
 				  <button class="close-button" data-close aria-label="Close reveal" type="button">
 					<span aria-hidden="true">&times;</span>
 				  </button>
-				</div>
+				<?php echo '</div>'; ?>
 
 			<?php else: ?>
-				<div class="bubble <?php echo $type; ?>-bubble <?php echo $size; ?>" data-open="student-work-<?php echo $workIndex; ?>" data-category="<?php echo $type; ?>" style="background-image:url('<?php echo $image; ?>')">
+				<?php echo '<div class="bubble ' . $type . '-bubble ' . $size .'" data-open="student-work-' . $workIndex . '" data-category="' . $type . '" style="background-image:url(\'' . $image . '\')">'; ?>
 
 					<div class="info">
 	                    <p>
 	                        <?php echo $title; ?>
 	                    </p>
 	                </div>
-				</div>
+				<?php echo '</div>'; ?>
 
-				<div class="full reveal" id="student-work-<?php echo $workIndex; ?>" data-reveal>
+				<?php echo '<div class="full reveal" id="student-work-' . $workIndex . '" data-reveal data-reset-on-close="true">'; ?>
 					<h3><?php echo $title; ?></h3>
 					<p>
 						By: <?php echo $author; ?>
 					</p>
-				  <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+				  <?php
+				  echo $photoDesignImage;
+				  ?>
 				  <button class="close-button" data-close aria-label="Close reveal" type="button">
 					<span aria-hidden="true">&times;</span>
 				  </button>
-				</div>
+				<?php echo '</div>'; ?>
 
 			<?php endif; ?>
 
@@ -320,7 +319,7 @@
     </script>
 
 
-
+<?php echo "<div><div><div><div>"; ?>
 
         <!-- MAIN EDITS END -->
 
