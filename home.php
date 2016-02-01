@@ -166,26 +166,9 @@
     					<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
 					</div>
 				</div>
-				<div class="animated fadeInUp columns-wrapper column-flex column-flexwrap" id="graduation">
-					<div class="column-one-third">
-						<img src="/comc/images/home/GradDec2015-5.jpg" alt="Students walking out of tunnel after graduation" title="Students walking out of tunnel after graduation">
-					</div>
-					<div class="column-two-thirds column-padded-horizontal">
-						<h3>Congratulations to Our Fall 2015 Graduates</h3>
-						<p>
-							Join us at graduation and our graduation reception!
-						</p>
-						<h4>Graduation:</h4>
-						<p>
-							December 12, 2015 - <time datetime="13:30">1:30 PM</time> - <a href="https://www.google.com/maps/place/United+Supermarkets+Arena/@33.581334,-101.886563,15z/data=!4m2!3m1!1s0x0:0x79d3a1575a5eac27">United Supermarkets Arena</a>
-						</p>
-						<h4>Reception:</h4>
-						<p>
-							December 12, 2015 - <time datetime="15:30">3:30 PM</time> - <a href="https://www.google.com/maps/place/Texas+Tech+Student+Union/@33.581893,-101.87475,15z/data=!4m2!3m1!1s0x0:0x6ed69e123d3fd95">The Matador Room (In the SUB)</a>
-						</p>
-						<p>
-							<a href="/comc/banner-bearer/" class="external">Meet our banner bearer, Emily Gardner</a>
-						</p>
+				<div class="animated fadeInUp columns-wrapper column-flex column-flexwrap" id="appathon">
+					<div class="column-full">
+						<a href="http://ttuappathon.com" target="_blank"><img src="/comc/images/home/appathon2016.png" alt="Appathon TTU 2016" title="Appathon TTU 2016"></a>
 					</div>
 				</div>
 			</div>
