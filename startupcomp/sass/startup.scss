@@ -9,6 +9,10 @@ IMPORTS
 /*****************************
 MAIN BODY
 *****************************/
+body,
+.page {
+	background-image: image-url('gplaypattern.png');
+}
 
 .wrapper {
 	max-width: 1100px;
@@ -57,7 +61,7 @@ MAIN BODY
 		}
 	}
 	#pitch-ideas {
-		background-image: image-url('gplaypattern.png');
+		// background-image: image-url('gplaypattern.png');
 		text-align: center;
 		padding: 3em .375em;
 		h2 {
@@ -103,9 +107,17 @@ MAIN BODY
 				font-size: 4em;
 			}
 		}
+		a {
+			color: #FFF;
+			text-decoration: underline;
+			&:hover {
+				color: #FFF;
+			}
+		}
 	}
-	#who {
-		background-image: image-url('gplaypattern.png');
+	#who,
+	#when {
+		// background-image: image-url('gplaypattern.png');
 		// background-color: #E8E8E8;
 		font-size: 1.25em;
 		text-align: center;
@@ -116,7 +128,7 @@ MAIN BODY
 		}
 	}
 	#winner {
-		background-image: image-url('gplaypattern.png');
+		// background-image: image-url('gplaypattern.png');
 		font-size: 1.25em;
 		text-align: center;
 		padding: 0 .375em 3em;
@@ -151,6 +163,7 @@ MAIN BODY
 		}
 	}
 	#contact {
+		background-color: #FFF;
 		font-size: 1.25em;
 		text-align: center;
 		padding: 3em 0;
@@ -162,34 +175,3 @@ MAIN BODY
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
