@@ -166,13 +166,11 @@
     					<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
 					</div>
 				</div>
-				<div class="animated fadeInUp columns-wrapper column-flex column-flexwrap" id="appathon">
-					<div class="column-full">
-						<a href="http://ttuappathon.com" target="_blank"><img src="/comc/images/home/appathon2016.png" alt="Appathon TTU 2016" title="Appathon TTU 2016"></a>
-					</div>
-				</div>
 			</div>
 		</section>
+		<div id="lone-startup">
+			<a href="/comc/startup/" target="_blank"><img src="images/lone-startup-promo.png" alt="Lone Startup Student Competition" title="Lone Startup Student Competition"></a>
+		</div>
 		<section id="home-students">
 			<div class="wow slideInLeft intro-photo-half">
 				<div id="intro-current"><a href="{{d:1126672}}"> <span class="home-students-text">Current Students</span> </a></div>
