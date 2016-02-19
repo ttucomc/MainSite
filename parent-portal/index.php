@@ -7,7 +7,12 @@
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 	<title>Parent Portal | CoMC | TTU</title>
 
+  <!-- Custom Styles -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- Vendor Imports -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 
     <!-- Metadata we'll update later -->
     <!-- <meta itemprop="name" content="College of Media &amp; Communication | TTU">
@@ -34,6 +39,51 @@
 <body>
 
 
+  <div id=buttonMasterContainer>
+    <div id="buttonContainer">
+        <div id="button">
+        </div>
+    </div>
+  </div>
+
+
+  <div id="menuMasterContainer">
+    <div class="menuBoxContainer">
+      <div class="row">
+        <div class="small-6 columns">
+          <div class="menuBox">
+            <img src="">
+            <p>Landing</p>
+
+          </div>
+          <div class="menuBox">
+            <img src="">
+            <p>Why COMC?</p>
+          </div>
+        </div>
+        <div class="small-6 columns">
+          <div class="menuBox">
+            <img src="">
+            <p>Career</p>
+
+          </div>
+          <div class="menuBox">
+            <img src="">
+            <p>Apply</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('#buttonMasterContainer').click(function(){
+
+     $('#button').toggleClass('active');
+     $('#menuMasterContainer').toggle();
+
+    });
+  </script>
 
 </body>
 
