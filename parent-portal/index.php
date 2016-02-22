@@ -8,6 +8,7 @@
 	<title>Parent Portal | CoMC | TTU</title>
 
   <!-- Custom Styles -->
+  <link rel="stylesheet" type="text/css" href="css/foundation.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <!-- Vendor Imports -->
@@ -37,6 +38,8 @@
 
 </head>
 <body>
+
+  <h1>Parent Portal</h1>
 
 
   <div id=buttonMasterContainer>
