@@ -53,25 +53,35 @@
       <div class="menuBoxContainer">
         <div class="row">
           <div class="small-6 columns">
-            <div class="menuBox">
-              <img src="">
-              <p>Landing</p>
-
+            <div class="menuBox isSelected">
+              <img src="./img/comc-hand.svg">
+              <h6>Landing</h6>
+            </div>
+            <div class="optionsColumn">
+              <div class="optionRow">
+                <p>Home</p>
+              </div>
+              <div class="optionRow">
+                <p>Overview</p>
+              </div>
+              <div class="optionRow noBorderBottom">
+                <p>Testimonials</p>
+              </div>
             </div>
             <div class="menuBox">
-              <img src="">
-              <p>Why COMC?</p>
+              <img src="./img/comc-hand.svg">
+              <h6>Why COMC?</h6>
             </div>
           </div>
           <div class="small-6 columns">
             <div class="menuBox">
-              <img src="">
-              <p>Career</p>
+              <img src="./img/comc-hand.svg">
+              <h6>Career</h6>
 
             </div>
             <div class="menuBox">
-              <img src="">
-              <p>Apply</p>
+              <img src="./img/comc-hand.svg">
+              <h6>Apply</h6>
             </div>
           </div>
         </div>

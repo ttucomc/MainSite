@@ -590,11 +590,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
 }
 
-/* line 13, ../sass/_menu.scss */
+/* line 14, ../sass/_menu.scss */
 #buttonMasterContainer {
   position: relative;
+  display: inline-block;
   right: 1.6em;
   top: 1.2em;
   height: 1.8em;
@@ -603,13 +605,13 @@ header {
   z-index: 100;
 }
 
-/* line 23, ../sass/_menu.scss */
+/* line 25, ../sass/_menu.scss */
 #buttonContainer {
   height: 100%;
   width: 100%;
 }
 
-/* line 28, ../sass/_menu.scss */
+/* line 30, ../sass/_menu.scss */
 #button {
   position: relative;
   top: 50%;
@@ -626,7 +628,7 @@ header {
   border-bottom: 50px solid tranparent;
   border-radius: 2px;
 }
-/* line 41, ../sass/_menu.scss */
+/* line 43, ../sass/_menu.scss */
 #button::before, #button::after {
   content: '';
   background-color: #333;
@@ -638,21 +640,21 @@ header {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 53, ../sass/_menu.scss */
+/* line 55, ../sass/_menu.scss */
 #button::before {
   content: '';
   top: -10px;
 }
-/* line 57, ../sass/_menu.scss */
+/* line 59, ../sass/_menu.scss */
 #button::after {
   content: '';
   bottom: -10px;
 }
-/* line 61, ../sass/_menu.scss */
+/* line 63, ../sass/_menu.scss */
 #button:active {
   background: transparent;
 }
-/* line 64, ../sass/_menu.scss */
+/* line 66, ../sass/_menu.scss */
 #button:active:before {
   content: '';
   top: 50%;
@@ -663,7 +665,7 @@ header {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 71, ../sass/_menu.scss */
+/* line 73, ../sass/_menu.scss */
 #button:active:after {
   content: '';
   top: 50%;
@@ -674,13 +676,13 @@ header {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 80, ../sass/_menu.scss */
+/* line 82, ../sass/_menu.scss */
 #button.active {
   top: 50%;
   left: 50%;
   background: transparent;
 }
-/* line 85, ../sass/_menu.scss */
+/* line 87, ../sass/_menu.scss */
 #button.active::before {
   -webkit-transform: translate(-50%) rotate(45deg);
       -ms-transform: translate(-50%) rotate(45deg);
@@ -688,7 +690,7 @@ header {
   top: 50%;
   left: 50%;
 }
-/* line 90, ../sass/_menu.scss */
+/* line 92, ../sass/_menu.scss */
 #button.active::after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
@@ -703,7 +705,7 @@ header {
 /**********************
     Menu Container
 **********************/
-/* line 107, ../sass/_menu.scss */
+/* line 109, ../sass/_menu.scss */
 #menuMasterContainer {
   position: fixed;
   top: 0;
@@ -711,24 +713,70 @@ header {
   height: 100vh;
   width: 100%;
   display: none;
-  background-color: lightblue;
+  background-color: rgba(255, 255, 255, 0.98);
 }
-/* line 116, ../sass/_menu.scss */
+/* line 118, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer {
   position: relative;
   top: 12%;
   width: 90%;
   margin: 0 auto;
+  /*
+      If the menu is currently selected, mange bottom margin to 0.
+  */
 }
-/* line 123, ../sass/_menu.scss */
+/* line 125, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox {
   width: 95%;
   border: 2px solid lightgrey;
-  margin: 0 auto;
-}
-/* line 128, ../sass/_menu.scss */
-#menuMasterContainer .menuBoxContainer .menuBox p {
+  margin: 0 auto 2em;
   text-align: center;
+}
+/* line 131, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .menuBox img {
+  margin-top: 1.4em;
+  width: 30%;
+}
+/* line 136, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .menuBox h6 {
+  font-size: 2.8em;
+  margin: 0.5em 0;
+}
+/* line 141, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .menuBox:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+/* line 150, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .isSelected {
+  margin: 0 auto 0;
+}
+/* line 154, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .optionsColumn {
+  width: 95%;
+  border: 2px solid lightgrey;
+  border-top: none;
+  margin: 0 auto 2em;
+  text-align: center;
+}
+/* line 162, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .optionsColumn .optionRow {
+  padding: 1em 0;
+  border-bottom: 2px solid lightgrey;
+}
+/* line 167, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .optionsColumn .optionRow p {
+  margin: 0;
+  font-size: 1.8em;
+}
+/* line 172, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+/* line 178, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .optionsColumn .noBorderBottom {
+  border-bottom: none;
 }
 
 /**********************
