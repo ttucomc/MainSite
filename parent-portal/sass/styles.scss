@@ -134,7 +134,7 @@ hr {
   }
   img {
     width: 75%;
-    @include animation(scroll-bounce 15s cubic-bezier(.87,-.41,.19,1.44) infinite);
+    @include animation(scroll-bounce 15s ease-in-out 5s infinite);
   }
 }
 

@@ -651,8 +651,8 @@ hr:after {
 /* line 135, ../sass/styles.scss */
 .scrollDown img {
   width: 75%;
-  -webkit-animation: scroll-bounce 15s cubic-bezier(0.87, -0.41, 0.19, 1.44) infinite;
-  animation: scroll-bounce 15s cubic-bezier(0.87, -0.41, 0.19, 1.44) infinite;
+  -webkit-animation: scroll-bounce 15s ease-in-out 5s infinite;
+  animation: scroll-bounce 15s ease-in-out 5s infinite;
 }
 
 /************************
