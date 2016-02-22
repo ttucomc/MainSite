@@ -460,20 +460,72 @@ th {
   font-weight: bold;
   font-style: normal;
 }
+@-webkit-keyframes scroll-bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  2.5% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  5% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  7.5% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes scroll-bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  2.5% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  5% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  7.5% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 /****************************
         MAIN STYLES
 ****************************/
-/* line 16, ../sass/styles.scss */
+/* line 17, ../sass/styles.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 21, ../sass/styles.scss */
+/* line 22, ../sass/styles.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 27, ../sass/styles.scss */
+/* line 28, ../sass/styles.scss */
 body {
   color: #333;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -482,7 +534,7 @@ body {
   text-align: center;
 }
 
-/* line 35, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 h1,
 h2,
 h3,
@@ -494,14 +546,14 @@ h6 {
   text-transform: uppercase;
 }
 
-/* line 45, ../sass/styles.scss */
+/* line 46, ../sass/styles.scss */
 h1 {
   position: relative;
   display: inline-block;
   font-size: 2.25em;
   padding-bottom: .33em;
 }
-/* line 50, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 h1:before {
   content: '';
   position: absolute;
@@ -514,7 +566,7 @@ h1:before {
   height: 1px;
   width: 85%;
 }
-/* line 60, ../sass/styles.scss */
+/* line 61, ../sass/styles.scss */
 h1:after {
   content: '';
   position: absolute;
@@ -531,7 +583,7 @@ h1:after {
   z-index: 1;
 }
 
-/* line 75, ../sass/styles.scss */
+/* line 76, ../sass/styles.scss */
 hr {
   border: 0;
   background-color: #333;
@@ -540,7 +592,7 @@ hr {
   width: 75%;
   margin: 0.6em auto;
 }
-/* line 82, ../sass/styles.scss */
+/* line 83, ../sass/styles.scss */
 hr:after {
   content: '';
   display: inline-block;
@@ -553,32 +605,54 @@ hr:after {
   transform: translateY(-50%);
 }
 
-/* line 93, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 .dark-grey {
   background-color: #333;
   color: white;
 }
-/* line 97, ../sass/styles.scss */
+/* line 99, ../sass/styles.scss */
 .dark-grey h1:before, .dark-grey h1:after {
   background-color: white;
 }
-/* line 101, ../sass/styles.scss */
+/* line 103, ../sass/styles.scss */
 .dark-grey h1:after {
   outline-color: #333;
 }
 
-/* line 107, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 .red {
   background-color: #CC0000;
   color: white;
 }
-/* line 111, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 .red h1:before, .red h1:after {
   background-color: white;
 }
-/* line 115, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .red h1:after {
   outline-color: #CC0000;
+}
+
+/* line 125, ../sass/styles.scss */
+.scrollDown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-bottom: 1em;
+}
+/* line 131, ../sass/styles.scss */
+.scrollDown p {
+  font-size: 1.25em;
+  margin-bottom: .25em;
+}
+/* line 135, ../sass/styles.scss */
+.scrollDown img {
+  width: 75%;
+  -webkit-animation: scroll-bounce 15s cubic-bezier(0.87, -0.41, 0.19, 1.44) infinite;
+  animation: scroll-bounce 15s cubic-bezier(0.87, -0.41, 0.19, 1.44) infinite;
 }
 
 /************************
@@ -801,23 +875,23 @@ header {
   transform: translate(-50%, -50%);
 }
 /* line 15, ../sass/_landing.scss */
-#landing #title #comc-hand {
+#landing #title #comcHand {
   width: 10em;
   padding-bottom: 1em;
 }
 @media screen and (min-width: 768px) {
   /* line 15, ../sass/_landing.scss */
-  #landing #title #comc-hand {
+  #landing #title #comcHand {
     width: 15em;
   }
 }
 /* line 22, ../sass/_landing.scss */
-#landing #title #logo-words {
+#landing #title #logoWords {
   min-width: 400px;
 }
 @media screen and (min-width: 768px) {
   /* line 22, ../sass/_landing.scss */
-  #landing #title #logo-words {
+  #landing #title #logoWords {
     min-width: 550px;
   }
 }

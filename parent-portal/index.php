@@ -92,9 +92,15 @@
 
   <section id="landing">
     <div id="title">
-      <img id="comc-hand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" />
-      <img id="logo-words" src="img/comc-logo-words.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
+      <img id="comcHand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" />
+      <img id="logoWords" src="img/comc-logo-words.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
       <h1>Parents</h1>
+    </div>
+    <div class="scrollDown">
+      <p>
+        Scroll Down
+      </p>
+      <img src="img/scroll-down-arrow.svg" alt="Arrow Down" title="Click to scroll down or scroll down" />
     </div>
   </section>
 

@@ -1,0 +1,21 @@
+//Scroll bounce
+@include keyframes(scroll-bounce) {
+  0% {
+    transform: translateY(0);
+  }
+  2.5% {
+    transform: translateY(1em);
+  }
+  5% {
+    transform: translateY(0);
+  }
+  7.5% {
+    transform: translateY(1em);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

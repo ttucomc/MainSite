@@ -6,6 +6,7 @@
 @import "normalize";
 @import "variables";
 @import "fonts";
+@import "animations";
 
 
 
@@ -90,6 +91,7 @@ hr {
   }
 }
 
+// Dark Grey background scheme
 .dark-grey {
   background-color: $dark-grey;
   color: white;
@@ -104,6 +106,7 @@ hr {
   }
 }
 
+// Red background scheme
 .red {
   background-color: $red;
   color: white;
@@ -117,6 +120,24 @@ hr {
     }
   }
 }
+
+// Scroll arrow
+.scrollDown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  @include translateX(-50%);
+  margin-bottom: 1em;
+  p {
+    font-size: 1.25em;
+    margin-bottom: .25em;
+  }
+  img {
+    width: 75%;
+    @include animation(scroll-bounce 15s cubic-bezier(.87,-.41,.19,1.44) infinite);
+  }
+}
+
 
 @import "menu";
 @import "landing";
