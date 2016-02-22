@@ -80,7 +80,13 @@
 
   </header>
 
-  <h1>Parents</h1>
+  <section id="landing">
+    <div id="title">
+      <img id="comc-hand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" />
+      <img id="logo-words" src="img/comc-logo-words.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
+      <h1>Parents</h1>
+    </div>
+  </section>
 
 
 
