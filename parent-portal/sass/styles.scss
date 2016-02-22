@@ -2,6 +2,7 @@
           IMPORTS
 ****************************/
 
+@import "compass/css3";
 @import "normalize";
 @import "variables";
 @import "fonts";
@@ -28,6 +29,7 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  text-align: center;
 }
 
 h1,
@@ -37,10 +39,55 @@ h4,
 h5,
 h6 {
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  text-align: center;
   text-transform: uppercase;
 }
 h1 {
+  position: relative;
+  display: inline-block;
   font-size: 2.25em;
+  padding-bottom: .33em;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include translateX(-50%);
+    background-color: $dark-grey;
+    height: 1px;
+    width: 85%;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include translate(-50%, 50%);
+    display: inline-block;
+    background-color: $dark-grey;
+    outline: 5px solid white;
+    height: 14px;
+    width: 14px;
+    z-index: 1;
+  }
+}
+
+hr {
+  border: 0;
+  background-color: $dark-grey;
+  text-align: center;
+  height: 1px;
+  width: 75%;
+  margin: 0.6em auto;
+  &:after {
+    content: '';
+    display: inline-block;
+    background-color: $dark-grey;
+    outline: 8px solid white;
+    height: 18px;
+    width: 18px;
+    @include translateY(-50%);
+  }
 }
 
 @import "menu";

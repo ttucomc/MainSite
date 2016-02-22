@@ -453,25 +453,26 @@ th {
 /****************************
         MAIN STYLES
 ****************************/
-/* line 15, ../sass/styles.scss */
+/* line 16, ../sass/styles.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 20, ../sass/styles.scss */
+/* line 21, ../sass/styles.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 27, ../sass/styles.scss */
 body {
   color: #333;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  text-align: center;
 }
 
-/* line 33, ../sass/styles.scss */
+/* line 35, ../sass/styles.scss */
 h1,
 h2,
 h3,
@@ -479,12 +480,67 @@ h4,
 h5,
 h6 {
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  text-align: center;
   text-transform: uppercase;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 h1 {
+  position: relative;
+  display: inline-block;
   font-size: 2.25em;
+  padding-bottom: .33em;
+}
+/* line 50, ../sass/styles.scss */
+h1:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+  height: 1px;
+  width: 85%;
+}
+/* line 60, ../sass/styles.scss */
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  display: inline-block;
+  background-color: #333;
+  outline: 5px solid white;
+  height: 14px;
+  width: 14px;
+  z-index: 1;
+}
+
+/* line 75, ../sass/styles.scss */
+hr {
+  border: 0;
+  background-color: #333;
+  text-align: center;
+  height: 1px;
+  width: 75%;
+  margin: 0.6em auto;
+}
+/* line 82, ../sass/styles.scss */
+hr:after {
+  content: '';
+  display: inline-block;
+  background-color: #333;
+  outline: 8px solid white;
+  height: 18px;
+  width: 18px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 /************************
