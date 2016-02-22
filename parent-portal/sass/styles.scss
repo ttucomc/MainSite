@@ -39,5 +39,9 @@ h6 {
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
   text-transform: uppercase;
 }
+h1 {
+  font-size: 2.25em;
+}
 
 @import "menu";
+@import "landing";

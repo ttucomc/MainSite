@@ -482,10 +482,22 @@ h6 {
   text-transform: uppercase;
 }
 
+/* line 42, ../sass/styles.scss */
+h1 {
+  font-size: 2.25em;
+}
+
 /************************
   Start Main Menu Button
 *************************/
 /* line 6, ../sass/_menu.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* line 12, ../sass/_menu.scss */
 #buttonMasterContainer {
   position: relative;
   right: 1.6em;
@@ -496,13 +508,13 @@ h6 {
   z-index: 100;
 }
 
-/* line 16, ../sass/_menu.scss */
+/* line 22, ../sass/_menu.scss */
 #buttonContainer {
   height: 100%;
   width: 100%;
 }
 
-/* line 21, ../sass/_menu.scss */
+/* line 27, ../sass/_menu.scss */
 #button {
   position: relative;
   top: 50%;
@@ -519,7 +531,7 @@ h6 {
   border-bottom: 50px solid tranparent;
   border-radius: 2px;
 }
-/* line 34, ../sass/_menu.scss */
+/* line 40, ../sass/_menu.scss */
 #button::before, #button::after {
   content: '';
   background-color: #333;
@@ -531,21 +543,21 @@ h6 {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 46, ../sass/_menu.scss */
+/* line 52, ../sass/_menu.scss */
 #button::before {
   content: '';
   top: -10px;
 }
-/* line 50, ../sass/_menu.scss */
+/* line 56, ../sass/_menu.scss */
 #button::after {
   content: '';
   bottom: -10px;
 }
-/* line 54, ../sass/_menu.scss */
+/* line 60, ../sass/_menu.scss */
 #button:active {
   background: transparent;
 }
-/* line 57, ../sass/_menu.scss */
+/* line 63, ../sass/_menu.scss */
 #button:active:before {
   content: '';
   top: 50%;
@@ -556,7 +568,7 @@ h6 {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 64, ../sass/_menu.scss */
+/* line 70, ../sass/_menu.scss */
 #button:active:after {
   content: '';
   top: 50%;
@@ -567,13 +579,13 @@ h6 {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 73, ../sass/_menu.scss */
+/* line 79, ../sass/_menu.scss */
 #button.active {
   top: 50%;
   left: 50%;
   background: transparent;
 }
-/* line 78, ../sass/_menu.scss */
+/* line 84, ../sass/_menu.scss */
 #button.active::before {
   -webkit-transform: translate(-50%) rotate(45deg);
       -ms-transform: translate(-50%) rotate(45deg);
@@ -581,7 +593,7 @@ h6 {
   top: 50%;
   left: 50%;
 }
-/* line 83, ../sass/_menu.scss */
+/* line 89, ../sass/_menu.scss */
 #button.active::after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
@@ -596,7 +608,7 @@ h6 {
 /**********************
     Menu Container
 **********************/
-/* line 100, ../sass/_menu.scss */
+/* line 106, ../sass/_menu.scss */
 #menuMasterContainer {
   position: fixed;
   top: 0;
@@ -606,20 +618,20 @@ h6 {
   display: none;
   background-color: lightblue;
 }
-/* line 109, ../sass/_menu.scss */
+/* line 115, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer {
   position: relative;
   top: 12%;
   width: 90%;
   margin: 0 auto;
 }
-/* line 116, ../sass/_menu.scss */
+/* line 122, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox {
   width: 95%;
   border: 2px solid lightgrey;
   margin: 0 auto;
 }
-/* line 121, ../sass/_menu.scss */
+/* line 127, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox p {
   text-align: center;
 }
@@ -627,3 +639,6 @@ h6 {
 /**********************
   End Menu Container
 **********************/
+/****************************
+        LANDING PAGE
+****************************/

@@ -3,6 +3,12 @@
   Start Main Menu Button
 *************************/
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 #buttonMasterContainer{
   position: relative;
   right: 1.6em;
