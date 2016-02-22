@@ -2,7 +2,7 @@
           IMPORTS
 ****************************/
 
-@import "reset";
+@import "normalize";
 @import "variables";
 @import "fonts";
 
@@ -23,19 +23,21 @@ html {
   box-sizing: inherit;
   }
 
-  body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-weight: 300;
-      font-size: 16px;
-  }
+body {
+  color: $dark-grey;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-      font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
 
 @import "menu";

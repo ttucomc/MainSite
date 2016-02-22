@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <!-- Vendor Imports -->
+  <script src="js/modernizr.js"></script>
 
 
 
@@ -38,48 +39,57 @@
 
 </head>
 <body>
+  <header>
 
-  <h1>Parent Portal</h1>
-
-
-  <div id=buttonMasterContainer>
-    <div id="buttonContainer">
-        <div id="button">
-        </div>
+    <div id=buttonMasterContainer>
+      <div id="buttonContainer">
+          <div id="button">
+          </div>
+      </div>
     </div>
-  </div>
 
 
-  <div id="menuMasterContainer">
-    <div class="menuBoxContainer">
-      <div class="row">
-        <div class="small-6 columns">
-          <div class="menuBox">
-            <img src="">
-            <p>Landing</p>
+    <div id="menuMasterContainer">
+      <div class="menuBoxContainer">
+        <div class="row">
+          <div class="small-6 columns">
+            <div class="menuBox">
+              <img src="">
+              <p>Landing</p>
 
+            </div>
+            <div class="menuBox">
+              <img src="">
+              <p>Why COMC?</p>
+            </div>
           </div>
-          <div class="menuBox">
-            <img src="">
-            <p>Why COMC?</p>
-          </div>
-        </div>
-        <div class="small-6 columns">
-          <div class="menuBox">
-            <img src="">
-            <p>Career</p>
+          <div class="small-6 columns">
+            <div class="menuBox">
+              <img src="">
+              <p>Career</p>
 
-          </div>
-          <div class="menuBox">
-            <img src="">
-            <p>Apply</p>
+            </div>
+            <div class="menuBox">
+              <img src="">
+              <p>Apply</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+  </header>
+
+  <h1>Parents</h1>
+
+
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js/greensock/TweenMax.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="js/greensock/jquery.gsap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script>
     $('#buttonMasterContainer').click(function(){
 
