@@ -90,5 +90,33 @@ hr {
   }
 }
 
+.dark-grey {
+  background-color: $dark-grey;
+  color: white;
+  h1 {
+    &:before,
+    &:after {
+      background-color: white;
+    }
+    &:after {
+      outline-color: $dark-grey;
+    }
+  }
+}
+
+.red {
+  background-color: $red;
+  color: white;
+  h1 {
+    &:before,
+    &:after {
+      background-color: white;
+    }
+    &:after {
+      outline-color: $red;
+    }
+  }
+}
+
 @import "menu";
 @import "landing";

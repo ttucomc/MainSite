@@ -81,7 +81,6 @@
   </header>
 
   <h1>Parents</h1>
-  <hr />
 
 
 
