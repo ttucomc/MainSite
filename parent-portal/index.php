@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <!-- Vendor Imports -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 
 
     <!-- Metadata we'll update later -->
@@ -79,11 +79,12 @@
     </div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script>
     $('#buttonMasterContainer').click(function(){
 
      $('#button').toggleClass('active');
-     $('#menuMasterContainer').toggle();
+     $('#menuMasterContainer').fadeToggle('fast');
 
     });
   </script>

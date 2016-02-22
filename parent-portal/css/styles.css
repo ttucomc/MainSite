@@ -220,25 +220,28 @@ h6 {
 **********************/
 /* line 98, ../sass/_menu.scss */
 #menuMasterContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   display: none;
   background-color: lightblue;
 }
-/* line 105, ../sass/_menu.scss */
+/* line 107, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer {
   position: relative;
   top: 12%;
   width: 90%;
   margin: 0 auto;
 }
-/* line 112, ../sass/_menu.scss */
+/* line 114, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox {
   width: 95%;
   border: 2px solid lightgrey;
   margin: 0 auto;
 }
-/* line 117, ../sass/_menu.scss */
+/* line 119, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox p {
   text-align: center;
 }
