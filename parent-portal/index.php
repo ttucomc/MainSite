@@ -53,10 +53,14 @@
       <div class="menuBoxContainer">
         <div class="row">
           <div class="small-6 columns">
-            <div class="menuBox isSelected">
+
+            <!-- Landing Menu -->
+            <div class="menuBox" onclick="selectMenu(this);">
               <img src="./img/comc-hand.svg">
               <h6>Landing</h6>
             </div>
+
+            <!-- Landing Options -->
             <div class="optionsColumn">
               <div class="optionRow">
                 <p>Home</p>
@@ -64,29 +68,106 @@
               <div class="optionRow">
                 <p>Overview</p>
               </div>
-              <div class="optionRow noBorderBottom">
+              <div class="optionRow">
                 <p>Testimonials</p>
               </div>
             </div>
-            <div class="menuBox">
+
+            <!-- Why COMC Menu -->
+            <div class="menuBox" onclick="selectMenu(this);">
               <img src="./img/comc-hand.svg">
               <h6>Why COMC?</h6>
             </div>
+
+            <!-- Why COMC Options -->
+            <div class="optionsColumn">
+              <div class="optionRow">
+                <p>Home</p>
+              </div>
+              <div class="optionRow">
+                <p>Overview</p>
+              </div>
+              <div class="optionRow">
+                <p>Testimonials</p>
+              </div>
+            </div>
+
           </div>
+
+          <!-- Career Menu -->
           <div class="small-6 columns">
-            <div class="menuBox">
+            <div class="menuBox" onclick="selectMenu(this);">
               <img src="./img/comc-hand.svg">
               <h6>Career</h6>
-
             </div>
-            <div class="menuBox">
+
+            <!-- Career Options -->
+            <div class="optionsColumn">
+              <div class="optionRow">
+                <p>Home</p>
+              </div>
+              <div class="optionRow">
+                <p>Overview</p>
+              </div>
+              <div class="optionRow">
+                <p>Testimonials</p>
+              </div>
+            </div>
+
+            <!-- Apply Menu -->
+            <div class="menuBox" onclick="selectMenu(this);">
               <img src="./img/comc-hand.svg">
               <h6>Apply</h6>
             </div>
+
+            <!-- Apply Options -->
+            <div class="optionsColumn">
+              <div class="optionRow">
+                <p>Home</p>
+              </div>
+              <div class="optionRow">
+                <p>Overview</p>
+              </div>
+              <div class="optionRow">
+                <p>Testimonials</p>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+
+      function selectMenu(menu)
+      {
+        var selectedMenu = menu;
+
+        //Loop through all menuBox's and pass in each box as a argument
+        $('.menuBox').each(function(menuBox) {
+
+          //If the current Menu DOES NOT match our selected menu
+          if(this !== selectedMenu)
+          {
+            $(this).removeClass('isSelected');
+
+            //Relative to the current Menu, check if the optionsColumn is currently displaying the menu. If so, toggle it to none.
+            if( $(this).next(".optionsColumn").css('display') == 'block') {
+              $(this).next(".optionsColumn").fadeToggle();
+            }
+          }
+
+          else
+          {
+            $(this).addClass('isSelected');
+            $(this).next(".optionsColumn").fadeToggle();
+          }
+        });
+      }
+
+    </script>
 
   </header>
 

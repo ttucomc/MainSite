@@ -832,24 +832,25 @@ header {
   border-top: none;
   margin: 0 auto 2em;
   text-align: center;
+  display: none;
 }
-/* line 162, ../sass/_menu.scss */
+/* line 163, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow {
   padding: 1em 0;
   border-bottom: 2px solid lightgrey;
 }
-/* line 167, ../sass/_menu.scss */
+/* line 168, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow p {
   margin: 0;
   font-size: 1.8em;
 }
-/* line 172, ../sass/_menu.scss */
+/* line 173, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:hover {
   background-color: lightblue;
   cursor: pointer;
 }
 /* line 178, ../sass/_menu.scss */
-#menuMasterContainer .menuBoxContainer .optionsColumn .noBorderBottom {
+#menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:last-child {
   border-bottom: none;
 }
 
