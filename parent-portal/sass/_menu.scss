@@ -124,7 +124,7 @@ header {
 
     .menuBox {
       width: 95%;
-      border: 2px solid lightgrey;
+      border: 1px solid $dark-grey;
       margin: 0 auto 2em;
       text-align: center;
 
@@ -139,7 +139,7 @@ header {
       }
 
       &:hover {
-        background-color: lightblue;
+        background-color: $light-grey;
         cursor: pointer;
       }
     }
@@ -154,7 +154,7 @@ header {
     .optionsColumn
     {
       width: 95%;
-      border: 2px solid lightgrey;
+      border: 1px solid $dark-grey;
       border-top: none;
       margin: 0 auto 2em;
       text-align: center;
@@ -163,7 +163,7 @@ header {
       .optionRow
       {
         padding: 1em 0;
-        border-bottom: 2px solid lightgrey;
+        border-bottom: 1px solid $dark-grey;
 
         p {
           margin: 0;
@@ -171,7 +171,7 @@ header {
         }
 
         &:hover {
-          background-color: lightblue;
+          background-color: $light-grey;
           cursor: pointer;
         }
 

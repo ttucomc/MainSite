@@ -802,7 +802,7 @@ header {
 /* line 125, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox {
   width: 95%;
-  border: 2px solid lightgrey;
+  border: 1px solid #333;
   margin: 0 auto 2em;
   text-align: center;
 }
@@ -818,7 +818,7 @@ header {
 }
 /* line 141, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox:hover {
-  background-color: lightblue;
+  background-color: #F1F1F1;
   cursor: pointer;
 }
 /* line 150, ../sass/_menu.scss */
@@ -828,7 +828,7 @@ header {
 /* line 154, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn {
   width: 95%;
-  border: 2px solid lightgrey;
+  border: 1px solid #333;
   border-top: none;
   margin: 0 auto 2em;
   text-align: center;
@@ -837,7 +837,7 @@ header {
 /* line 163, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow {
   padding: 1em 0;
-  border-bottom: 2px solid lightgrey;
+  border-bottom: 1px solid #333;
 }
 /* line 168, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow p {
@@ -846,7 +846,7 @@ header {
 }
 /* line 173, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:hover {
-  background-color: lightblue;
+  background-color: #F1F1F1;
   cursor: pointer;
 }
 /* line 178, ../sass/_menu.scss */
