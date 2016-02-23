@@ -148,24 +148,43 @@
         //Loop through all menuBox's and pass in each box as a argument
         $('.menuBox').each(function(menuBox) {
 
-          //If the current Menu DOES NOT match our selected menu
-          if(this !== selectedMenu)
+          //Retain the reference to the current object for the callback function complete
+          var currentMenu = this;
+
+          //If the current Menu DOES NOT match our selected menu OR if the current Menu has the calss isSelected
+          if((this !== selectedMenu) || ($(this).hasClass("isSelected")))
           {
-            $(this).removeClass('isSelected');
+            //console.log('Menu #: ' + menuBox + " was not the selectedMenu or had class isSelected.");
 
             //Relative to the current Menu, check if the optionsColumn is currently displaying the menu. If so, toggle it to none.
             if( $(this).next(".optionsColumn").css('display') == 'block') {
-              $(this).next(".optionsColumn").animate({display:'none', height: "toggle"}, 500);
+
+              $(this).next(".optionsColumn").animate(
+                {
+                  display:'none',
+                  height: "toggle"
+                }, {
+                  duration: 500,
+                  //We need to call isSelected after the animation is complete to prevent a jumping action with margins
+                  complete: function() {
+                    //console.log("Removed class for Menu #: " + menuBox);
+                    $(currentMenu).removeClass('isSelected');
+                  }
+                }
+              );
+
             }
           }
 
           else
           {
+            $(this).next(".optionsColumn").animate({display:'block', height: "toggle"}, 500);
             $(this).addClass('isSelected');
-            $(this).next(".optionsColumn").animate({display:'none', height: "toggle"}, 500);
+            //console.log("Added class isSelected to Menu #: " + menuBox);
           }
         });
       }
+
 
     </script>
 
@@ -189,7 +208,6 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="js/greensock/TweenMax.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="js/greensock/jquery.gsap.min.js"></script>
