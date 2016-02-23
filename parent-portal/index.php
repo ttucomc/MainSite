@@ -155,14 +155,14 @@
 
             //Relative to the current Menu, check if the optionsColumn is currently displaying the menu. If so, toggle it to none.
             if( $(this).next(".optionsColumn").css('display') == 'block') {
-              $(this).next(".optionsColumn").fadeToggle();
+              $(this).next(".optionsColumn").animate({display:'none', height: "toggle"}, 500);
             }
           }
 
           else
           {
             $(this).addClass('isSelected');
-            $(this).next(".optionsColumn").fadeToggle();
+            $(this).next(".optionsColumn").animate({display:'none', height: "toggle"}, 500);
           }
         });
       }
@@ -189,6 +189,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="js/greensock/TweenMax.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="js/greensock/jquery.gsap.min.js"></script>
