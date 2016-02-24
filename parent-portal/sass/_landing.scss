@@ -7,11 +7,12 @@
   height: 100vh;
   width: 100%;
   // div containting logos and title
-  #title {
+  .title {
     position: absolute;
     top: 50%;
     left: 50%;
     @include translate(-50%, -50%);
+    padding: 0 .5em;
     #comcHand {
       width: 10em;
       padding-bottom: 1em;
@@ -42,6 +43,48 @@
         content: '';
         display: none;
       }
+    }
+  }
+}
+
+/****************************
+      OVERVIEW SECTION
+****************************/
+
+#overview {
+  .info {
+    padding: 4em 0.5em;
+  }
+
+  .square-menu {
+    position: relative;
+    height: 50vh;
+    text-align: center;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      @include translateX(-50%);
+      background-color: $dark-grey;
+      height: 100%;
+      width: 1px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include translateY(-50%);
+      background-color: $dark-grey;
+      height: 1px;
+      width: 100%;
+    }
+    .square {
+      height: 50%;
+      width: 50%;
+      padding: 0;
+      margin: 0;
     }
   }
 }

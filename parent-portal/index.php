@@ -191,7 +191,7 @@
   </header>
 
   <section id="landing">
-    <div id="title">
+    <div class="title">
       <img id="comcHand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" />
       <img id="logoWords" src="img/comc-logo-words.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
       <h1>Parents</h1>
@@ -202,6 +202,30 @@
       </p>
       <img src="img/scroll-down-arrow.svg" alt="Arrow Down" title="Click to scroll down or scroll down" />
     </div>
+  </section>
+  <section id="overview">
+    <div class="title red">
+      <h1>Overview</h1>
+    </div>
+    <section class="dark-grey info">
+      <p>
+        Well, then, i confess, it is my intention to commandeer one of these ships, pick up a crew in tortuga, raid, pillage, plunder and otherwise pilfer my weasely black guts out. me? i'm dishonest, and a dishonest man you can always trust to be dishonest. honestly. it's the honest ones you want to watch out for, because you can never predict when they're going to do something incredibly... stupid. me?
+      </p>
+    </section>
+    <section class="row square-menu">
+      <div class="column small-6 small-collapse square">
+
+      </div>
+      <div class="column small-6 small-collapse square">
+
+      </div>
+      <div class="column small-6 small-collapse square">
+
+      </div>
+      <div class="column small-6 small-collapse square">
+
+      </div>
+    </section>
   </section>
 
 

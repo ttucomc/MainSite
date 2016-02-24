@@ -867,56 +867,104 @@ header {
   width: 100%;
 }
 /* line 10, ../sass/_landing.scss */
-#landing #title {
+#landing .title {
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  padding: 0 .5em;
 }
-/* line 15, ../sass/_landing.scss */
-#landing #title #comcHand {
+/* line 16, ../sass/_landing.scss */
+#landing .title #comcHand {
   width: 10em;
   padding-bottom: 1em;
 }
 @media screen and (min-width: 768px) {
-  /* line 15, ../sass/_landing.scss */
-  #landing #title #comcHand {
+  /* line 16, ../sass/_landing.scss */
+  #landing .title #comcHand {
     width: 15em;
   }
 }
-/* line 22, ../sass/_landing.scss */
-#landing #title #logoWords {
+/* line 23, ../sass/_landing.scss */
+#landing .title #logoWords {
   min-width: 400px;
 }
 @media screen and (min-width: 768px) {
-  /* line 22, ../sass/_landing.scss */
-  #landing #title #logoWords {
+  /* line 23, ../sass/_landing.scss */
+  #landing .title #logoWords {
     min-width: 550px;
   }
 }
-/* line 28, ../sass/_landing.scss */
-#landing #title h1 {
+/* line 29, ../sass/_landing.scss */
+#landing .title h1 {
   color: #CC0000;
   font-size: 6.25em;
   padding: 0;
   margin: 0.1em 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 28, ../sass/_landing.scss */
-  #landing #title h1 {
+  /* line 29, ../sass/_landing.scss */
+  #landing .title h1 {
     font-size: 8.25em;
   }
 }
-/* line 36, ../sass/_landing.scss */
-#landing #title h1:before {
+/* line 37, ../sass/_landing.scss */
+#landing .title h1:before {
   content: '';
   top: 0;
   width: 40%;
 }
-/* line 41, ../sass/_landing.scss */
-#landing #title h1:after {
+/* line 42, ../sass/_landing.scss */
+#landing .title h1:after {
   content: '';
   display: none;
+}
+
+/****************************
+      OVERVIEW SECTION
+****************************/
+/* line 55, ../sass/_landing.scss */
+#overview .info {
+  padding: 4em 0.5em;
+}
+/* line 59, ../sass/_landing.scss */
+#overview .square-menu {
+  position: relative;
+  height: 50vh;
+  text-align: center;
+}
+/* line 63, ../sass/_landing.scss */
+#overview .square-menu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+  height: 100%;
+  width: 1px;
+}
+/* line 73, ../sass/_landing.scss */
+#overview .square-menu:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #333;
+  height: 1px;
+  width: 100%;
+}
+/* line 83, ../sass/_landing.scss */
+#overview .square-menu .square {
+  height: 50%;
+  width: 50%;
+  padding: 0;
+  margin: 0;
 }
