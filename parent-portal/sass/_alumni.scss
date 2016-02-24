@@ -1,0 +1,31 @@
+.alumniTitle {
+  font-size: 4em;
+  margin-bottom: 0.4em;
+}
+
+.personContainer
+{
+  width: 50%;
+  margin: 0 auto;
+
+  .personPicture {
+    width: 45%;
+    margin: 2em auto 1em;
+
+    img {
+      border-radius: 50%;
+      width: 60%;
+    }
+  }
+  .personName {
+    font-size: 2.5em;
+    font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  }
+  .personSubtitle {
+    font-size: 1.5em;
+  }
+  .personDegree {
+    font-size: 1.4em;
+  }
+  .quote {}
+}
