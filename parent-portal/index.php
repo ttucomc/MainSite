@@ -179,14 +179,19 @@
     </section>
   </section>
 
+  <?php
+    include('alumni.php');
+  ?>
 
 
-
+  <!-- Vendor JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="js/greensock/TweenMax.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="js/greensock/jquery.gsap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+  <!-- TTU JS -->
   <script src="js/menu.js"></script></script>
 
 </body>

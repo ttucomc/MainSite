@@ -968,3 +968,71 @@ header {
   padding: 0;
   margin: 0;
 }
+
+/****************************
+        ALUMNI PAGE
+****************************/
+/* line 5, ../sass/_alumni.scss */
+.alumniTitle {
+  font-size: 4em;
+  margin-bottom: 0.4em;
+}
+
+/* line 10, ../sass/_alumni.scss */
+.personContainer {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 15, ../sass/_alumni.scss */
+.personContainer .personPicture {
+  width: 45%;
+  margin: 2em auto 1em;
+}
+/* line 19, ../sass/_alumni.scss */
+.personContainer .personPicture img {
+  border-radius: 50%;
+  width: 60%;
+}
+/* line 24, ../sass/_alumni.scss */
+.personContainer .personName {
+  font-size: 2.5em;
+  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+}
+/* line 28, ../sass/_alumni.scss */
+.personContainer .personSubtitle {
+  font-size: 1.5em;
+}
+/* line 31, ../sass/_alumni.scss */
+.personContainer .personDegree {
+  font-size: 1.4em;
+}
+/* line 34, ../sass/_alumni.scss */
+.personContainer .quote {
+  margin: 2em 0;
+  font-size: 1.5em;
+  position: relative;
+}
+/* line 39, ../sass/_alumni.scss */
+.personContainer .quote:before {
+  content: "\"";
+  font-size: 3em;
+  color: red;
+  position: absolute;
+  top: -25%;
+  left: -2%;
+  font-family: 'bebas_neue';
+}
+/* line 49, ../sass/_alumni.scss */
+.personContainer .quote:after {
+  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  content: "\"";
+  font-size: 3em;
+  color: red;
+  position: absolute;
+  right: 2%;
+  bottom: -35%;
+}
+
+/****************************
+      END ALUMNI PAGE
+****************************/
