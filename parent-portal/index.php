@@ -41,13 +41,16 @@
 <body>
   <header>
 
+    <div id="TTULogo">
+      <img src="./img/TTU-logo.svg" />
+    </div>
+
     <div id=buttonMasterContainer>
       <div id="buttonContainer">
           <div id="button">
           </div>
       </div>
     </div>
-
 
     <div id="menuMasterContainer">
       <div class="menuBoxContainer">

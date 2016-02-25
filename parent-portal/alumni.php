@@ -12,7 +12,7 @@
 
 <section id="alumni">
 
-<h2 class="alumniTitle">Alumni</h2>
+<h2>Alumni</h2>
 <hr />
 
 <div class="personContainer">

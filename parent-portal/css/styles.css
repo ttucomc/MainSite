@@ -664,10 +664,26 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: 70px;
+  background-color: white;
   z-index: 1000;
 }
 
-/* line 14, ../sass/_menu.scss */
+/* line 16, ../sass/_menu.scss */
+#TTULogo {
+  display: inline-block;
+  position: relative;
+  left: 1.4em;
+  top: 0.8em;
+  float: left;
+  z-index: 100;
+}
+/* line 24, ../sass/_menu.scss */
+#TTULogo img {
+  height: 2.4em;
+}
+
+/* line 29, ../sass/_menu.scss */
 #buttonMasterContainer {
   position: relative;
   display: inline-block;
@@ -679,13 +695,13 @@ header {
   z-index: 100;
 }
 
-/* line 25, ../sass/_menu.scss */
+/* line 40, ../sass/_menu.scss */
 #buttonContainer {
   height: 100%;
   width: 100%;
 }
 
-/* line 30, ../sass/_menu.scss */
+/* line 45, ../sass/_menu.scss */
 #button {
   position: relative;
   top: 50%;
@@ -702,7 +718,7 @@ header {
   border-bottom: 50px solid tranparent;
   border-radius: 2px;
 }
-/* line 43, ../sass/_menu.scss */
+/* line 58, ../sass/_menu.scss */
 #button::before, #button::after {
   content: '';
   background-color: #333;
@@ -714,21 +730,21 @@ header {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 55, ../sass/_menu.scss */
+/* line 70, ../sass/_menu.scss */
 #button::before {
   content: '';
   top: -10px;
 }
-/* line 59, ../sass/_menu.scss */
+/* line 74, ../sass/_menu.scss */
 #button::after {
   content: '';
   bottom: -10px;
 }
-/* line 63, ../sass/_menu.scss */
+/* line 78, ../sass/_menu.scss */
 #button:active {
   background: transparent;
 }
-/* line 66, ../sass/_menu.scss */
+/* line 81, ../sass/_menu.scss */
 #button:active:before {
   content: '';
   top: 50%;
@@ -739,7 +755,7 @@ header {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 73, ../sass/_menu.scss */
+/* line 88, ../sass/_menu.scss */
 #button:active:after {
   content: '';
   top: 50%;
@@ -750,13 +766,13 @@ header {
   -webkit-transition: .3s;
   transition: .3s;
 }
-/* line 82, ../sass/_menu.scss */
+/* line 97, ../sass/_menu.scss */
 #button.active {
   top: 50%;
   left: 50%;
   background: transparent;
 }
-/* line 87, ../sass/_menu.scss */
+/* line 102, ../sass/_menu.scss */
 #button.active::before {
   -webkit-transform: translate(-50%) rotate(45deg);
       -ms-transform: translate(-50%) rotate(45deg);
@@ -764,7 +780,7 @@ header {
   top: 50%;
   left: 50%;
 }
-/* line 92, ../sass/_menu.scss */
+/* line 107, ../sass/_menu.scss */
 #button.active::after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
@@ -779,7 +795,7 @@ header {
 /**********************
     Menu Container
 **********************/
-/* line 109, ../sass/_menu.scss */
+/* line 124, ../sass/_menu.scss */
 #menuMasterContainer {
   position: fixed;
   top: 0;
@@ -789,7 +805,7 @@ header {
   display: none;
   background-color: rgba(255, 255, 255, 0.98);
 }
-/* line 118, ../sass/_menu.scss */
+/* line 133, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer {
   position: relative;
   top: 12%;
@@ -799,33 +815,33 @@ header {
       If the menu is currently selected, mange bottom margin to 0.
   */
 }
-/* line 125, ../sass/_menu.scss */
+/* line 140, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox {
   width: 95%;
   border: 1px solid #333;
   margin: 0 auto 2em;
   text-align: center;
 }
-/* line 131, ../sass/_menu.scss */
+/* line 146, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox img {
   margin-top: 1.4em;
   width: 30%;
 }
-/* line 136, ../sass/_menu.scss */
+/* line 151, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox h6 {
   font-size: 2.8em;
   margin: 0.5em 0;
 }
-/* line 141, ../sass/_menu.scss */
+/* line 156, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox:hover {
   background-color: #F1F1F1;
   cursor: pointer;
 }
-/* line 150, ../sass/_menu.scss */
+/* line 165, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .isSelected {
   margin: 0 auto 0;
 }
-/* line 154, ../sass/_menu.scss */
+/* line 169, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn {
   width: 95%;
   border: 1px solid #333;
@@ -834,22 +850,22 @@ header {
   text-align: center;
   display: none;
 }
-/* line 163, ../sass/_menu.scss */
+/* line 178, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow {
   padding: 1em 0;
   border-bottom: 1px solid #333;
 }
-/* line 168, ../sass/_menu.scss */
+/* line 183, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow p {
   margin: 0;
   font-size: 1.8em;
 }
-/* line 173, ../sass/_menu.scss */
+/* line 188, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:hover {
   background-color: #F1F1F1;
   cursor: pointer;
 }
-/* line 178, ../sass/_menu.scss */
+/* line 193, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:last-child {
   border-bottom: none;
 }
@@ -975,46 +991,40 @@ header {
         ALUMNI PAGE
 ****************************/
 /* line 5, ../sass/_alumni.scss */
-.alumniTitle {
-  font-size: 4em;
-  margin-bottom: 0.4em;
-}
-
-/* line 10, ../sass/_alumni.scss */
 .personContainer {
   width: 70%;
   margin: 0 auto;
 }
-/* line 15, ../sass/_alumni.scss */
+/* line 10, ../sass/_alumni.scss */
 .personContainer .personPicture {
   width: 45%;
   margin: 2em auto 1em;
 }
-/* line 19, ../sass/_alumni.scss */
+/* line 14, ../sass/_alumni.scss */
 .personContainer .personPicture img {
   border-radius: 50%;
   width: 60%;
 }
-/* line 24, ../sass/_alumni.scss */
+/* line 19, ../sass/_alumni.scss */
 .personContainer .personName {
   font-size: 2.5em;
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
 }
-/* line 28, ../sass/_alumni.scss */
+/* line 23, ../sass/_alumni.scss */
 .personContainer .personSubtitle {
   font-size: 1.5em;
 }
-/* line 31, ../sass/_alumni.scss */
+/* line 26, ../sass/_alumni.scss */
 .personContainer .personDegree {
   font-size: 1.4em;
 }
-/* line 34, ../sass/_alumni.scss */
+/* line 29, ../sass/_alumni.scss */
 .personContainer .quote {
   margin: 2em 0;
   font-size: 1.5em;
   position: relative;
 }
-/* line 40, ../sass/_alumni.scss */
+/* line 35, ../sass/_alumni.scss */
 .personContainer .quote p:before {
   content: url("../img/quote-open.svg");
   width: 2em;
@@ -1022,7 +1032,7 @@ header {
   position: relative;
   left: -10px;
 }
-/* line 48, ../sass/_alumni.scss */
+/* line 43, ../sass/_alumni.scss */
 .personContainer .quote p:after {
   content: url("../img/quote-close.svg");
   width: 2em;
