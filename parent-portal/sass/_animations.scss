@@ -19,3 +19,28 @@
     transform: translateY(0);
   }
 }
+
+//Icon bounce and shake
+@include keyframes(up-shake) {
+  10% {
+    transform: translateY(-25%);
+  }
+  13% {
+    transform: translateY(-25%) rotate(0.5deg);
+  }
+  16% {
+    transform: translateY(-25%) rotate(-5.5deg);
+  }
+  19% {
+    transform: translateY(-25%) rotate(1.5deg);
+  }
+  22% {
+    transform: translateY(-25%) rotate(-3deg);
+  }
+  25% {
+    transform: translateY(-25%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+}

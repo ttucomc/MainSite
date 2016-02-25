@@ -512,6 +512,66 @@ th {
             transform: translateY(0);
   }
 }
+@-webkit-keyframes up-shake {
+  10% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  13% {
+    -webkit-transform: translateY(-25%) rotate(0.5deg);
+            transform: translateY(-25%) rotate(0.5deg);
+  }
+  16% {
+    -webkit-transform: translateY(-25%) rotate(-5.5deg);
+            transform: translateY(-25%) rotate(-5.5deg);
+  }
+  19% {
+    -webkit-transform: translateY(-25%) rotate(1.5deg);
+            transform: translateY(-25%) rotate(1.5deg);
+  }
+  22% {
+    -webkit-transform: translateY(-25%) rotate(-3deg);
+            transform: translateY(-25%) rotate(-3deg);
+  }
+  25% {
+    -webkit-transform: translateY(-25%) rotate(0deg);
+            transform: translateY(-25%) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes up-shake {
+  10% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  13% {
+    -webkit-transform: translateY(-25%) rotate(0.5deg);
+            transform: translateY(-25%) rotate(0.5deg);
+  }
+  16% {
+    -webkit-transform: translateY(-25%) rotate(-5.5deg);
+            transform: translateY(-25%) rotate(-5.5deg);
+  }
+  19% {
+    -webkit-transform: translateY(-25%) rotate(1.5deg);
+            transform: translateY(-25%) rotate(1.5deg);
+  }
+  22% {
+    -webkit-transform: translateY(-25%) rotate(-3deg);
+            transform: translateY(-25%) rotate(-3deg);
+  }
+  25% {
+    -webkit-transform: translateY(-25%) rotate(0deg);
+            transform: translateY(-25%) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
 /****************************
         MAIN STYLES
 ****************************/
@@ -965,8 +1025,9 @@ header {
   background-color: #333;
   height: 100%;
   width: 1px;
+  z-index: 1;
 }
-/* line 75, ../sass/_landing.scss */
+/* line 76, ../sass/_landing.scss */
 #overview .square-menu:after {
   content: '';
   position: absolute;
@@ -978,13 +1039,54 @@ header {
   background-color: #333;
   height: 1px;
   width: 100%;
+  z-index: 1;
 }
-/* line 85, ../sass/_landing.scss */
+/* line 87, ../sass/_landing.scss */
 #overview .square-menu .square {
+  position: relative;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   height: 50%;
   width: 50%;
   padding: 0;
   margin: 0;
+}
+/* line 93, ../sass/_landing.scss */
+#overview .square-menu .square:hover {
+  background-color: #F1F1F1;
+}
+/* line 95, ../sass/_landing.scss */
+#overview .square-menu .square:hover figure {
+  -webkit-animation: 4s ease-in-out infinite up-shake;
+          animation: 4s ease-in-out infinite up-shake;
+}
+/* line 98, ../sass/_landing.scss */
+#overview .square-menu .square:hover p {
+  font-size: 20em;
+  -webkit-transition: 150s;
+  transition: 150s;
+}
+/* line 103, ../sass/_landing.scss */
+#overview .square-menu .square div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+/* line 109, ../sass/_landing.scss */
+#overview .square-menu .square div figure {
+  color: #CC0000;
+  margin: 0;
+}
+/* line 113, ../sass/_landing.scss */
+#overview .square-menu .square div p {
+  padding: 0 .5em;
 }
 
 /****************************

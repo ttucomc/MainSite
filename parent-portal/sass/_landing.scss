@@ -71,6 +71,7 @@
       background-color: $dark-grey;
       height: 100%;
       width: 1px;
+      z-index: 1;
     }
     &:after {
       content: '';
@@ -81,8 +82,38 @@
       background-color: $dark-grey;
       height: 1px;
       width: 100%;
+      z-index: 1;
     }
     .square {
+      position: relative;
+      color: $dark-grey;
+      font-weight: bold;
+      text-decoration: none;
+      @include transition(.3s);
+      &:hover {
+        background-color: $light-grey;
+        figure {
+          animation: 4s ease-in-out infinite up-shake;
+        }
+        p {
+          font-size: 20em;
+          @include transition(150s);
+        }
+      }
+      div {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include translateY(-50%);
+        width: 100%;
+        figure {
+          color: $red;
+          margin: 0;
+        }
+        p {
+          padding: 0 .5em;
+        }
+      }
       height: 50%;
       width: 50%;
       padding: 0;

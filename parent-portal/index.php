@@ -9,6 +9,7 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" type="text/css" href="css/foundation.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <!-- Vendor Imports -->
@@ -167,16 +168,44 @@
     </section>
     <section class="row square-menu">
       <a href="" class="column small-6 small-collapse square">
+        <div>
+          <figure class="fa fa-building fa-3x">
 
+          </figure>
+          <p>
+            What kind of career can my student have?
+          </p>
+        </div>
       </a>
       <a href="" class="column small-6 small-collapse square">
+        <div>
+          <figure class="fa fa-heart fa-3x">
 
+          </figure>
+          <p>
+            Why CoMC?
+          </p>
+        </div>
       </a>
       <a href="" class="column small-6 small-collapse square">
+        <div>
+          <figure class="fa fa-pencil fa-3x">
 
+          </figure>
+          <p>
+            How does my student apply?
+          </p>
+        </div>
       </a>
       <a href="" class="column small-6 small-collapse square">
+        <div>
+          <figure class="fa fa-money fa-3x">
 
+          </figure>
+          <p>
+            What is the cost?
+          </p>
+        </div>
       </a>
     </section>
   </section>
