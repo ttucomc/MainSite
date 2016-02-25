@@ -18,7 +18,7 @@
 <div class="personContainer">
 
   <div class="personPicture">
-    <img src="img/comc-hand.svg" />
+    <img src="http://lorempixel.com/400/400/people" />
   </div>
   <div class="personName">
     Jacob Copple

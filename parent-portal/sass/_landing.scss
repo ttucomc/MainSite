@@ -95,10 +95,6 @@
         figure {
           animation: 4s ease-in-out infinite up-shake;
         }
-        p {
-          font-size: 20em;
-          @include transition(150s);
-        }
       }
       div {
         position: absolute;
