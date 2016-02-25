@@ -927,15 +927,17 @@ header {
 ****************************/
 /* line 55, ../sass/_landing.scss */
 #overview .info {
+  font-size: 1.33em;
+  height: 50vh;
   padding: 4em 0.5em;
 }
-/* line 59, ../sass/_landing.scss */
+/* line 61, ../sass/_landing.scss */
 #overview .square-menu {
   position: relative;
   height: 50vh;
   text-align: center;
 }
-/* line 63, ../sass/_landing.scss */
+/* line 65, ../sass/_landing.scss */
 #overview .square-menu:before {
   content: '';
   position: absolute;
@@ -948,7 +950,7 @@ header {
   height: 100%;
   width: 1px;
 }
-/* line 73, ../sass/_landing.scss */
+/* line 75, ../sass/_landing.scss */
 #overview .square-menu:after {
   content: '';
   position: absolute;
@@ -961,7 +963,7 @@ header {
   height: 1px;
   width: 100%;
 }
-/* line 83, ../sass/_landing.scss */
+/* line 85, ../sass/_landing.scss */
 #overview .square-menu .square {
   height: 50%;
   width: 50%;
