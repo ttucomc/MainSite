@@ -1012,25 +1012,22 @@ header {
   font-size: 1.5em;
   position: relative;
 }
-/* line 39, ../sass/_alumni.scss */
-.personContainer .quote:before {
-  content: "\"";
-  font-size: 3em;
-  color: red;
-  position: absolute;
-  top: -25%;
-  left: -2%;
-  font-family: 'bebas_neue';
+/* line 40, ../sass/_alumni.scss */
+.personContainer .quote p:before {
+  content: url("../img/quote-open.svg");
+  width: 2em;
+  display: inline-block;
+  position: relative;
+  left: -10px;
 }
-/* line 49, ../sass/_alumni.scss */
-.personContainer .quote:after {
-  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
-  content: "\"";
-  font-size: 3em;
-  color: red;
-  position: absolute;
-  right: 2%;
-  bottom: -35%;
+/* line 48, ../sass/_alumni.scss */
+.personContainer .quote p:after {
+  content: url("../img/quote-close.svg");
+  width: 2em;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  right: -10px;
 }
 
 /****************************

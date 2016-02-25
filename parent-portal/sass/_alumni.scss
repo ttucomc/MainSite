@@ -36,24 +36,23 @@
     font-size: 1.5em;
     position: relative;
 
-    &:before {
-      content: "\"";
-      font-size: 3em;
-      color: red;
-      position: absolute;
-      top: -25%;
-      left: -2%;
-      font-family: 'bebas_neue';
-    }
+    p {
+      &:before {
+        content: url("../img/quote-open.svg");
+        width: 2em;
+        display: inline-block;
+        position: relative;
+        left: -10px;
+      }
 
-    &:after {
-      font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
-      content: "\"";
-      font-size: 3em;
-      color: red;
-      position: absolute;
-      right: 2%;
-      bottom: -35%;
+      &:after {
+        content: url("../img/quote-close.svg");
+        width: 2em;
+        display: inline-block;
+        position: relative;
+        bottom: 0;
+        right: -10px;
+      }
     }
   }
 }

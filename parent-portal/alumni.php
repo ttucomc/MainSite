@@ -30,7 +30,9 @@
     M. A. Texas Tech University
   </div>
   <div class="quote">
-    Lorem ipsum dolor sit amet, feugiat urna p vestibulum vitae purus in, in gravida libero ultricies.
+    <p>
+      Lorem ipsum dolor sit amet, feugiat urna p vestibulum vitae purus in, in gravida libero ultricies.
+    </p>
   </div>
 </div>
 
