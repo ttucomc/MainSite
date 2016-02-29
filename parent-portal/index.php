@@ -137,7 +137,6 @@
               </div>
             </div>
 
-
           </div>
         </div>
       </div>
@@ -212,6 +211,10 @@
 
   <?php
     include('alumni.php');
+  ?>
+
+  <?php
+    include('events.php');
   ?>
 
 
