@@ -1,0 +1,397 @@
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'champagne-limousines';
+  src: url("fonts/candl/champagne__limousines_bold-webfont.eot");
+  src: url("fonts/candl/champagne__limousines_bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/candl/champagne__limousines_bold-webfont.woff2") format("woff2"), url("fonts/candl/champagne__limousines_bold-webfont.woff") format("woff"), url("fonts/candl/champagne__limousines_bold-webfont.ttf") format("truetype"), url("fonts/candl/champagne__limousines_bold-webfont.svg#champagne__limousinesbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'champagne-limousines';
+  src: url("fonts/candl/champagne__limousines-webfont.eot");
+  src: url("fonts/candl/champagne__limousines-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/candl/champagne__limousines-webfont.woff2") format("woff2"), url("fonts/candl/champagne__limousines-webfont.woff") format("woff"), url("fonts/candl/champagne__limousines-webfont.ttf") format("truetype"), url("fonts/candl/champagne__limousines-webfont.svg#champagne__limousinesregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 6, ../sass/jemfest.scss */
+body {
+  position: relative;
+  background-color: #FFF;
+  background-image: url('/comcsite/jemfest/img/absurdity.png?1456768080');
+  font-family: 'champagne-limousines', Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, ../sass/jemfest.scss */
+h1,
+h2,
+h3,
+h4 {
+  color: #333;
+  font-weight: bold;
+}
+
+/* line 23, ../sass/jemfest.scss */
+h2 {
+  font-size: 4em;
+  margin: 1em 0 .5em;
+}
+@media screen and (min-width: 768px) {
+  /* line 23, ../sass/jemfest.scss */
+  h2 {
+    font-size: 5em;
+  }
+}
+
+/* line 31, ../sass/jemfest.scss */
+section {
+  position: relative;
+  padding: 5em 1em;
+}
+/* line 34, ../sass/jemfest.scss */
+section ul {
+  padding: 0 2em;
+}
+/* line 36, ../sass/jemfest.scss */
+section ul li {
+  font-size: 1.5em;
+  padding: .5em 0;
+}
+@media screen and (min-width: 768px) {
+  /* line 36, ../sass/jemfest.scss */
+  section ul li {
+    font-size: 2em;
+  }
+}
+/* line 44, ../sass/jemfest.scss */
+section .middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+/* line 53, ../sass/jemfest.scss */
+#title {
+  background: url('/comcsite/jemfest/img/film-bg.jpg?1456765849') center center no-repeat;
+  background-size: cover;
+  color: #FFF;
+  font-size: 1.75em;
+  line-height: 1.25;
+  height: 100vh;
+  padding: 0 1em;
+}
+/* line 61, ../sass/jemfest.scss */
+#title img {
+  width: 85%;
+  max-width: 650px;
+}
+/* line 65, ../sass/jemfest.scss */
+#title p {
+  color: #FFF;
+  padding: 1em .5em;
+}
+
+/* line 71, ../sass/jemfest.scss */
+#overview {
+  font-size: 1.5em;
+  line-height: 1.25;
+  height: 30vh;
+}
+@media screen and (min-width: 768px) {
+  /* line 71, ../sass/jemfest.scss */
+  #overview {
+    font-size: 2em;
+  }
+}
+/* line 78, ../sass/jemfest.scss */
+#overview p {
+  padding: 0 .5em;
+  margin-bottom: 1em;
+}
+
+/* line 84, ../sass/jemfest.scss */
+nav {
+  background: #4f4f51;
+}
+/* line 86, ../sass/jemfest.scss */
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  font-size: 1.25em;
+}
+@media screen and (min-width: 768px) {
+  /* line 86, ../sass/jemfest.scss */
+  nav ul {
+    font-size: 1.5em;
+  }
+}
+/* line 93, ../sass/jemfest.scss */
+nav ul li {
+  background: #4f4f51;
+  width: 50%;
+  padding: 2em 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (min-width: 768px) {
+  /* line 93, ../sass/jemfest.scss */
+  nav ul li {
+    width: 25%;
+  }
+}
+/* line 101, ../sass/jemfest.scss */
+nav ul li:hover {
+  background: #6ecde0;
+}
+/* line 104, ../sass/jemfest.scss */
+nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 2em 3em;
+}
+/* line 108, ../sass/jemfest.scss */
+nav ul li a:first-child {
+  padding-left: none;
+}
+/* line 111, ../sass/jemfest.scss */
+nav ul li a:last-child {
+  padding-right: none;
+}
+@media screen and (min-width: 1200px) {
+  /* line 104, ../sass/jemfest.scss */
+  nav ul li a {
+    padding: 2em 4em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  /* line 104, ../sass/jemfest.scss */
+  nav ul li a {
+    padding: 2em 5em;
+  }
+}
+
+/* line 125, ../sass/jemfest.scss */
+#circle-nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+  padding: .5em;
+  z-index: 1000;
+}
+@media screen and (min-width: 768px) {
+  /* line 125, ../sass/jemfest.scss */
+  #circle-nav {
+    padding: .5em 1em;
+  }
+}
+/* line 136, ../sass/jemfest.scss */
+#circle-nav a {
+  display: block;
+  border: 3px solid #4f4f51;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin: 1em 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 144, ../sass/jemfest.scss */
+#circle-nav a:first-child:hover {
+  background: #6ecde0;
+}
+/* line 147, ../sass/jemfest.scss */
+#circle-nav a:nth-child(2):hover {
+  background: #e3e418;
+}
+/* line 150, ../sass/jemfest.scss */
+#circle-nav a:nth-child(3):hover {
+  background: #BC7BFF;
+}
+/* line 153, ../sass/jemfest.scss */
+#circle-nav a:last-child:hover {
+  background: #65D689;
+}
+/* line 156, ../sass/jemfest.scss */
+#circle-nav a.is-selected {
+  background-color: #4f4f51;
+}
+
+/* line 162, ../sass/jemfest.scss */
+.section-img {
+  position: relative;
+  margin: 3em 0;
+  z-index: 1;
+}
+/* line 166, ../sass/jemfest.scss */
+.section-img::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #98dbe9;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  opacity: .5;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  /* line 166, ../sass/jemfest.scss */
+  .section-img::after {
+    height: 275px;
+    width: 275px;
+  }
+}
+/* line 183, ../sass/jemfest.scss */
+.section-img img {
+  width: 50%;
+  max-width: 250px;
+}
+
+/* line 189, ../sass/jemfest.scss */
+#video {
+  background-color: #6ecde0;
+  background-image: url('/comcsite/jemfest/img/absurdity.png?1456768080');
+  height: calc(100vh - 10em);
+}
+/* line 194, ../sass/jemfest.scss */
+#video .section-img::after {
+  content: '';
+  background-color: #98dbe9;
+}
+
+/* line 201, ../sass/jemfest.scss */
+#photo {
+  background-color: #e3e418;
+  background-image: url('/comcsite/jemfest/img/absurdity.png?1456768080');
+  height: calc(100vh - 10em);
+}
+/* line 206, ../sass/jemfest.scss */
+#photo .section-img:after {
+  content: '';
+  background-color: #b5b613;
+}
+
+/* line 213, ../sass/jemfest.scss */
+#multimedia {
+  background-color: #BC7BFF;
+  background-image: url('/comcsite/jemfest/img/absurdity.png?1456768080');
+  height: calc(100vh - 10em);
+}
+/* line 218, ../sass/jemfest.scss */
+#multimedia .section-img:after {
+  content: '';
+  background-color: #d6aeff;
+}
+
+/* line 225, ../sass/jemfest.scss */
+#audio {
+  background-color: #65D689;
+  background-image: url('/comcsite/jemfest/img/absurdity.png?1456768080');
+  height: calc(100vh - 10em);
+}
+/* line 230, ../sass/jemfest.scss */
+#audio .section-img:after {
+  content: '';
+  background-color: #3dcb6a;
+}
+
+/* line 237, ../sass/jemfest.scss */
+footer {
+  font-size: 2em;
+  padding: 5em 1em;
+}
+/* line 240, ../sass/jemfest.scss */
+footer img {
+  width: 35%;
+  max-width: 225px;
+  padding: 1em 0;
+}
+
+/* line 247, ../sass/jemfest.scss */
+.note {
+  font-size: .75em;
+  font-style: italic;
+}

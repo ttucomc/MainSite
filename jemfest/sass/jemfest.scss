@@ -1,0 +1,250 @@
+
+@import "compass/reset";
+@import "compass/css3";
+@import "fonts";
+@import "variables";
+body {
+  position: relative;
+  background-color: $white;
+  background-image: image-url("absurdity.png");
+  font-family: 'champagne-limousines', Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: $black;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 4em;
+  margin: 1em 0 .5em;
+  @media screen and (min-width: 768px) {
+    font-size: 5em;
+  }
+}
+
+section {
+  position: relative;
+  padding: 5em 1em;
+  ul {
+    padding: 0 2em;
+    li {
+      font-size: 1.5em;
+      padding: .5em 0;
+      @media screen and (min-width: 768px) {
+        font-size: 2em;
+      }
+    }
+  }
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+#title {
+  background: image-url('film-bg.jpg') center center no-repeat;
+  background-size: cover;
+  color: $white;
+  font-size: 1.75em;
+  line-height: 1.25;
+  height: 100vh;
+  padding: 0 1em;
+  img {
+    width: 85%;
+    max-width: 650px;
+  }
+  p {
+    color: $white;
+    padding: 1em .5em;
+  }
+}
+
+#overview {
+  font-size: 1.5em;
+  line-height: 1.25;
+  height: 30vh;
+  @media screen and (min-width: 768px) {
+    font-size: 2em;
+  }
+  p {
+    padding: 0 .5em;
+    margin-bottom: 1em;
+  }
+}
+
+nav {
+  background: $grey;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.25em;
+    @media screen and (min-width: 768px) {
+      font-size: 1.5em;
+    }
+    li {
+      background: $grey;
+      width: 50%;
+      padding: 2em 0;
+      @include transition(.3s);
+      @media screen and (min-width: 768px) {
+        width: 25%;
+      }
+      &:hover {
+        background: $blue;
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+        padding: 2em 3em;
+        &:first-child {
+          padding-left: none;
+        }
+        &:last-child {
+          padding-right: none;
+        }
+        @media screen and (min-width: 1200px) {
+          padding: 2em 4em;
+        }
+        @media screen and (min-width: 1500px) {
+          padding: 2em 5em;
+        }
+      }
+    }
+  }
+}
+
+#circle-nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  @include translateY(-50%);
+  display: none;
+  padding: .5em;
+  z-index: 1000;
+  @media screen and (min-width: 768px) {
+    padding: .5em 1em;
+  }
+  a {
+    display: block;
+    border: 3px solid $grey;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 1em 0;
+    @include transition(.3s);
+    &:first-child:hover {
+      background: $blue;
+    }
+    &:nth-child(2):hover {
+      background: $yellow;
+    }
+    &:nth-child(3):hover {
+      background: $purple;
+    }
+    &:last-child:hover {
+      background: $green;
+    }
+    &.is-selected {
+      background-color: $grey;
+    }
+  }
+}
+
+.section-img {
+  position: relative;
+  margin: 3em 0;
+  z-index: 1;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    background-color: lighten($blue, 10%);
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    opacity: .5;
+    z-index: -1;
+    @media screen and (min-width: 768px) {
+      height: 275px;
+      width: 275px;
+    }
+  }
+  img {
+    width: 50%;
+    max-width: 250px;
+  }
+}
+
+#video {
+  background-color: $blue;
+  background-image: image-url("absurdity.png");
+  height: calc(100vh - 10em);
+  .section-img {
+    &::after {
+      content: '';
+      background-color: lighten($blue, 10%);
+    }
+  }
+}
+
+#photo {
+  background-color: $yellow;
+  background-image: image-url("absurdity.png");
+  height: calc(100vh - 10em);
+  .section-img {
+    &:after {
+      content: '';
+      background-color: darken($yellow, 10%);
+    }
+  }
+}
+
+#multimedia {
+  background-color: $purple;
+  background-image: image-url("absurdity.png");
+  height: calc(100vh - 10em);
+  .section-img {
+    &:after {
+      content: '';
+      background-color: lighten($purple, 10%);
+    }
+  }
+}
+
+#audio {
+  background-color: $green;
+  background-image: image-url("absurdity.png");
+  height: calc(100vh - 10em);
+  .section-img {
+    &:after {
+      content: '';
+      background-color: darken($green, 10%);
+    }
+  }
+}
+
+footer {
+  font-size: 2em;
+  padding: 5em 1em;
+  img {
+    width: 35%;
+    max-width: 225px;
+    padding: 1em 0;
+  }
+}
+
+.note {
+  font-size: .75em;
+  font-style: italic;
+}
