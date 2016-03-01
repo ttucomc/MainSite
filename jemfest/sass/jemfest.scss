@@ -109,6 +109,25 @@ section {
   }
 }
 
+.down-arrow {
+  display: inline-block;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  @include translateX(-50%);
+  animation: arrow 2.8s 0.4s;
+  animation-delay: 3s;
+  &:after {
+    content: '';
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    @include rotate(45deg);
+  }
+}
+
 #overview {
   font-size: 1.5em;
   line-height: 1.25;
@@ -330,4 +349,16 @@ footer {
 .note {
   font-size: .75em;
   font-style: italic;
+}
+
+@keyframes arrow {
+  0% { bottom: 1em; }
+  12.5% { bottom: .2em; }
+  25% { bottom: .5em }
+  37.5% { bottom: .2em; }
+  50% { bottom: 1em; }
+  62.5% { bottom: .2em; }
+  75% { bottom: .5em }
+  87.5% { bottom: .2em; }
+  100% { bottom: 1em; }
 }

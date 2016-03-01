@@ -205,30 +205,57 @@ section .middle {
 }
 
 /* line 112, ../sass/jemfest.scss */
+.down-arrow {
+  display: inline-block;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: arrow 2.8s 0.4s;
+          animation: arrow 2.8s 0.4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+/* line 120, ../sass/jemfest.scss */
+.down-arrow:after {
+  content: '';
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  border: solid #FFF;
+  border-width: 0 3px 3px 0;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 131, ../sass/jemfest.scss */
 #overview {
   font-size: 1.5em;
   line-height: 1.25;
   height: 40vh;
 }
 @media screen and (min-width: 768px) {
-  /* line 112, ../sass/jemfest.scss */
+  /* line 131, ../sass/jemfest.scss */
   #overview {
     font-size: 2em;
     height: 30vh;
   }
 }
-/* line 120, ../sass/jemfest.scss */
+/* line 139, ../sass/jemfest.scss */
 #overview p {
   padding: 0 .5em;
   margin: 0 auto 1em;
   max-width: 1300px;
 }
 
-/* line 127, ../sass/jemfest.scss */
+/* line 146, ../sass/jemfest.scss */
 nav {
   background: #4f4f51;
 }
-/* line 129, ../sass/jemfest.scss */
+/* line 148, ../sass/jemfest.scss */
 nav ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -240,12 +267,12 @@ nav ul {
   font-size: 1.25em;
 }
 @media screen and (min-width: 768px) {
-  /* line 129, ../sass/jemfest.scss */
+  /* line 148, ../sass/jemfest.scss */
   nav ul {
     font-size: 1.5em;
   }
 }
-/* line 136, ../sass/jemfest.scss */
+/* line 155, ../sass/jemfest.scss */
 nav ul li {
   background: #4f4f51;
   width: 50%;
@@ -254,43 +281,43 @@ nav ul li {
   transition: 0.3s;
 }
 @media screen and (min-width: 768px) {
-  /* line 136, ../sass/jemfest.scss */
+  /* line 155, ../sass/jemfest.scss */
   nav ul li {
     width: 25%;
   }
 }
-/* line 144, ../sass/jemfest.scss */
+/* line 163, ../sass/jemfest.scss */
 nav ul li:hover {
   background: #6ecde0;
 }
-/* line 147, ../sass/jemfest.scss */
+/* line 166, ../sass/jemfest.scss */
 nav ul li a {
   color: #FFF;
   text-decoration: none;
   padding: 2em 3em;
 }
-/* line 151, ../sass/jemfest.scss */
+/* line 170, ../sass/jemfest.scss */
 nav ul li a:first-child {
   padding-left: none;
 }
-/* line 154, ../sass/jemfest.scss */
+/* line 173, ../sass/jemfest.scss */
 nav ul li a:last-child {
   padding-right: none;
 }
 @media screen and (min-width: 1200px) {
-  /* line 147, ../sass/jemfest.scss */
+  /* line 166, ../sass/jemfest.scss */
   nav ul li a {
     padding: 2em 4em;
   }
 }
 @media screen and (min-width: 1500px) {
-  /* line 147, ../sass/jemfest.scss */
+  /* line 166, ../sass/jemfest.scss */
   nav ul li a {
     padding: 2em 5em;
   }
 }
 
-/* line 168, ../sass/jemfest.scss */
+/* line 187, ../sass/jemfest.scss */
 #circle-nav {
   position: fixed;
   top: 50%;
@@ -303,12 +330,12 @@ nav ul li a:last-child {
   z-index: 1000;
 }
 @media screen and (min-width: 768px) {
-  /* line 168, ../sass/jemfest.scss */
+  /* line 187, ../sass/jemfest.scss */
   #circle-nav {
     padding: .5em 1em;
   }
 }
-/* line 179, ../sass/jemfest.scss */
+/* line 198, ../sass/jemfest.scss */
 #circle-nav a {
   position: relative;
   display: block;
@@ -320,27 +347,27 @@ nav ul li a:last-child {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 188, ../sass/jemfest.scss */
+/* line 207, ../sass/jemfest.scss */
 #circle-nav a:first-child:hover {
   background: #6ecde0;
 }
-/* line 191, ../sass/jemfest.scss */
+/* line 210, ../sass/jemfest.scss */
 #circle-nav a:nth-child(2):hover {
   background: #e3e418;
 }
-/* line 194, ../sass/jemfest.scss */
+/* line 213, ../sass/jemfest.scss */
 #circle-nav a:nth-child(3):hover {
   background: #BC7BFF;
 }
-/* line 197, ../sass/jemfest.scss */
+/* line 216, ../sass/jemfest.scss */
 #circle-nav a:last-child:hover {
   background: #65D689;
 }
-/* line 200, ../sass/jemfest.scss */
+/* line 219, ../sass/jemfest.scss */
 #circle-nav a.is-selected {
   background-color: #4f4f51;
 }
-/* line 203, ../sass/jemfest.scss */
+/* line 222, ../sass/jemfest.scss */
 #circle-nav a:before {
   content: '';
   position: absolute;
@@ -355,7 +382,7 @@ nav ul li a:last-child {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 215, ../sass/jemfest.scss */
+/* line 234, ../sass/jemfest.scss */
 #circle-nav a:hover:before {
   content: '';
   left: -250%;
@@ -363,37 +390,37 @@ nav ul li a:last-child {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 221, ../sass/jemfest.scss */
+/* line 240, ../sass/jemfest.scss */
 #circle-nav a:hover:nth-child(3):before {
   content: 'Multimedia';
   left: -430%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 227, ../sass/jemfest.scss */
+/* line 246, ../sass/jemfest.scss */
 #circle-nav a:first-child:before {
   content: 'Video';
 }
-/* line 230, ../sass/jemfest.scss */
+/* line 249, ../sass/jemfest.scss */
 #circle-nav a:nth-child(2):before {
   content: 'Photo';
 }
-/* line 233, ../sass/jemfest.scss */
+/* line 252, ../sass/jemfest.scss */
 #circle-nav a:nth-child(3):before {
   content: 'Multimedia';
 }
-/* line 236, ../sass/jemfest.scss */
+/* line 255, ../sass/jemfest.scss */
 #circle-nav a:last-child:before {
   content: 'Audio';
 }
 
-/* line 242, ../sass/jemfest.scss */
+/* line 261, ../sass/jemfest.scss */
 .section-img {
   position: relative;
   margin: 3em 0;
   z-index: 1;
 }
-/* line 246, ../sass/jemfest.scss */
+/* line 265, ../sass/jemfest.scss */
 .section-img::after {
   content: '';
   position: absolute;
@@ -410,86 +437,146 @@ nav ul li a:last-child {
   z-index: -1;
 }
 @media screen and (min-width: 768px) {
-  /* line 246, ../sass/jemfest.scss */
+  /* line 265, ../sass/jemfest.scss */
   .section-img::after {
     height: 275px;
     width: 275px;
   }
 }
-/* line 263, ../sass/jemfest.scss */
+/* line 282, ../sass/jemfest.scss */
 .section-img img {
   width: 50%;
   max-width: 250px;
 }
 
-/* line 269, ../sass/jemfest.scss */
+/* line 288, ../sass/jemfest.scss */
 #video {
   background-color: #6ecde0;
   background-image: url("../img/absurdity.png");
   height: calc(100vh - 10em);
 }
-/* line 274, ../sass/jemfest.scss */
+/* line 293, ../sass/jemfest.scss */
 #video .section-img::after {
   content: '';
   background-color: #98dbe9;
 }
 
-/* line 281, ../sass/jemfest.scss */
+/* line 300, ../sass/jemfest.scss */
 #photo {
   background-color: #e3e418;
   background-image: url("../img/absurdity.png");
   height: calc(100vh - 10em);
 }
-/* line 286, ../sass/jemfest.scss */
+/* line 305, ../sass/jemfest.scss */
 #photo .section-img:after {
   content: '';
   background-color: #b5b613;
 }
 
-/* line 293, ../sass/jemfest.scss */
+/* line 312, ../sass/jemfest.scss */
 #multimedia {
   background-color: #BC7BFF;
   background-image: url("../img/absurdity.png");
   height: calc(100vh - 10em);
 }
-/* line 298, ../sass/jemfest.scss */
+/* line 317, ../sass/jemfest.scss */
 #multimedia .section-img:after {
   content: '';
   background-color: #d6aeff;
 }
 
-/* line 305, ../sass/jemfest.scss */
+/* line 324, ../sass/jemfest.scss */
 #audio {
   background-color: #65D689;
   background-image: url("../img/absurdity.png");
   height: calc(100vh - 10em);
 }
-/* line 310, ../sass/jemfest.scss */
+/* line 329, ../sass/jemfest.scss */
 #audio .section-img:after {
   content: '';
   background-color: #3dcb6a;
 }
 
-/* line 317, ../sass/jemfest.scss */
+/* line 336, ../sass/jemfest.scss */
 footer {
   font-size: 1.5em;
   padding: 5em 1em;
 }
 @media screen and (min-width: 768px) {
-  /* line 317, ../sass/jemfest.scss */
+  /* line 336, ../sass/jemfest.scss */
   footer {
     font-size: 2em;
   }
 }
-/* line 323, ../sass/jemfest.scss */
+/* line 342, ../sass/jemfest.scss */
 footer img {
   width: 35%;
   max-width: 225px;
   padding: 1em 0;
 }
 
-/* line 330, ../sass/jemfest.scss */
+/* line 349, ../sass/jemfest.scss */
 .note {
   font-size: .75em;
   font-style: italic;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    bottom: 1em;
+  }
+  12.5% {
+    bottom: .2em;
+  }
+  25% {
+    bottom: 0.5em;
+  }
+  37.5% {
+    bottom: .2em;
+  }
+  50% {
+    bottom: 1em;
+  }
+  62.5% {
+    bottom: .2em;
+  }
+  75% {
+    bottom: 0.5em;
+  }
+  87.5% {
+    bottom: .2em;
+  }
+  100% {
+    bottom: 1em;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    bottom: 1em;
+  }
+  12.5% {
+    bottom: .2em;
+  }
+  25% {
+    bottom: 0.5em;
+  }
+  37.5% {
+    bottom: .2em;
+  }
+  50% {
+    bottom: 1em;
+  }
+  62.5% {
+    bottom: .2em;
+  }
+  75% {
+    bottom: 0.5em;
+  }
+  87.5% {
+    bottom: .2em;
+  }
+  100% {
+    bottom: 1em;
+  }
 }
