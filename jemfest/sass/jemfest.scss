@@ -71,9 +71,14 @@ h2 {
 
 section {
   position: relative;
+  font-weight: bold;
   padding: 5em 1em;
   ul {
+    text-align: left;
+    list-style: initial;
+    max-width: 800px;
     padding: 0 2em;
+    margin: 0 auto;
     li {
       font-size: 1.25em;
       padding: .5em 0;
@@ -96,16 +101,23 @@ section {
   background-size: cover;
   color: $white;
   font-size: 1.75em;
+  font-weight: normal;
   line-height: 1.25;
-  height: 100vh;
-  padding: 0 1em;
+  height: calc(100vh - 10em);
   img {
-    width: 85%;
+    width: 75%;
     max-width: 650px;
+    @media screen and (min-width: 768px) {
+      width: 55%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 40%;
+    }
   }
   p {
     color: $white;
     padding: 1em .5em;
+    margin-bottom: 3em;
   }
 }
 
@@ -204,56 +216,58 @@ nav {
     width: 20px;
     margin: 1em 0;
     @include transition(.3s);
-    &:first-child:hover {
-      background: $blue;
-    }
-    &:nth-child(2):hover {
-      background: $yellow;
-    }
-    &:nth-child(3):hover {
-      background: $purple;
-    }
-    &:last-child:hover {
-      background: $green;
-    }
     &.is-selected {
       background-color: $grey;
     }
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      @include translateY(-50%);
-      color: #4f4f51;
-      font-size: 1.25em;
-      opacity: 0;
-      @include transition(.3s);
-    }
-    &:hover {
+    @media screen and (min-width: 768px) {
+      &:first-child:hover {
+        background: $blue;
+      }
+      &:nth-child(2):hover {
+        background: $yellow;
+      }
+      &:nth-child(3):hover {
+        background: $purple;
+      }
+      &:last-child:hover {
+        background: $green;
+      }
       &:before {
         content: '';
-        left: -250%;
-        opacity: 1;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include translateY(-50%);
+        color: #4f4f51;
+        font-size: 1.25em;
+        opacity: 0;
         @include transition(.3s);
+      }
+      &:hover {
+        &:before {
+          content: '';
+          left: -250%;
+          opacity: 1;
+          @include transition(.3s);
+        }
+        &:nth-child(3):before {
+          content: 'Multimedia';
+          left: -430%;
+          @include transition(.3s);
+        }
+      }
+      &:first-child:before {
+        content: 'Video';
+      }
+      &:nth-child(2):before {
+        content: 'Photo';
       }
       &:nth-child(3):before {
         content: 'Multimedia';
-        left: -430%;
-        @include transition(.3s);
       }
-    }
-    &:first-child:before {
-      content: 'Video';
-    }
-    &:nth-child(2):before {
-      content: 'Photo';
-    }
-    &:nth-child(3):before {
-      content: 'Multimedia';
-    }
-    &:last-child:before {
-      content: 'Audio';
+      &:last-child:before {
+        content: 'Audio';
+      }
     }
   }
 }
@@ -349,6 +363,7 @@ footer {
 .note {
   font-size: .75em;
   font-style: italic;
+  font-weight: normal;
 }
 
 @keyframes arrow {
