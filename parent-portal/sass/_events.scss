@@ -4,14 +4,16 @@
   .eventContainer {
     .eventDate {
       .eventTitle {
-        font-size: 4em;
-        margin: 1em 0 0.5em;
+        font-size: 5em;
+        margin: 1em 0 0.2em;
         color: $red;
+        font-family: 'bebas_neue';
       }
       span {
         font-size: 4em;
         margin: 1em 0;
         vertical-align: middle;
+        font-family: 'bebas_neue';
       }
 
       .day {
@@ -20,7 +22,10 @@
     }
 
     .eventLocation {
-      font-size: 3.4em;
+      font-size: 3em;
+      font-family: 'bebas_neue';
+      color: $dark-blue;
+      margin-top: 0.6em;
     }
 
     p {

@@ -1143,25 +1143,30 @@ header {
 ****************************/
 /* line 6, ../sass/_events.scss */
 #events .eventContainer .eventDate .eventTitle {
-  font-size: 4em;
-  margin: 1em 0 0.5em;
+  font-size: 5em;
+  margin: 1em 0 0.2em;
   color: #CC0000;
+  font-family: 'bebas_neue';
 }
-/* line 11, ../sass/_events.scss */
+/* line 12, ../sass/_events.scss */
 #events .eventContainer .eventDate span {
   font-size: 4em;
   margin: 1em 0;
   vertical-align: middle;
+  font-family: 'bebas_neue';
 }
-/* line 17, ../sass/_events.scss */
+/* line 19, ../sass/_events.scss */
 #events .eventContainer .eventDate .day {
   font-size: 7em;
 }
-/* line 22, ../sass/_events.scss */
+/* line 24, ../sass/_events.scss */
 #events .eventContainer .eventLocation {
-  font-size: 3.4em;
+  font-size: 3.5em;
+  font-family: 'bebas_neue';
+  color: #003a66;
+  margin-top: 0.6em;
 }
-/* line 26, ../sass/_events.scss */
+/* line 31, ../sass/_events.scss */
 #events .eventContainer p {
   font-size: 2em;
   margin: 1.5em auto;
