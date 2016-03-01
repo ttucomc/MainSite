@@ -1,0 +1,32 @@
+
+#events{
+
+  .eventContainer {
+    .eventDate {
+      .eventTitle {
+        font-size: 4em;
+        margin: 1em 0 0.5em;
+        color: $red;
+      }
+      span {
+        font-size: 4em;
+        margin: 1em 0;
+        vertical-align: middle;
+      }
+
+      .day {
+        font-size: 7em;
+      }
+    }
+
+    .eventLocation {
+      font-size: 3.4em;
+    }
+
+    p {
+      font-size: 2em;
+      margin: 1.5em auto;
+      width: 60%;
+    }
+  }
+}
