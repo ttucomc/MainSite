@@ -4,31 +4,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<title>JEMFest</title>
-
-	<link rel="stylesheet" type="text/css" href="css/ttu.css">
+	<title>JEMFest | CoMC | TTU</title>
+  
 	<link rel="stylesheet" type="text/css" href="css/jemfest.css">
 
   <!-- OUR CUSTOM HEAD START -->
-  <!-- <meta itemprop="name" content="College of Media &amp; Communication | TTU">
-  <meta itemprop="description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
-  <meta itemprop="image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
+  <meta itemprop="name" content="JEMFest 2016 | CoMC | TTU">
+  <meta itemprop="description" content="From film and photography, to audio and web design, JEMFest is an annual showcase of Journalism and Electronic Media student work.">
+  <meta itemprop="image" content="http://www.depts.ttu.edu/comc/jemfest/img/jemfest-og.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ttu_comc">
-  <meta name="twitter:title" content="College of Media &amp; Communication | TTU">
-  <meta name="twitter:description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
+  <meta name="twitter:title" content="JEMFest 2016 | CoMC | TTU">
+  <meta name="twitter:description" content="From film and photography, to audio and web design, JEMFest is an annual showcase of Journalism and Electronic Media student work.">
   <meta name="twitter:creator" content="@ttu_comc">
-  <meta name="twitter:image:src" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
+  <meta name="twitter:image:src" content="http://www.depts.ttu.edu/comc/jemfest/img/jemfest-og.png">
 
 
-  <meta property="og:title" content="College of Media &amp; Communication | TTU"/>
-  <link href="http://www.depts.ttu.edu/comc/" rel="canonical" />
-  <meta property="og:url" content="http://www.depts.ttu.edu/comc/"/>
-  <meta property="og:description" content="Check out the College of Media &amp; Communication at Texas Tech University. Discover the power of being a great communicator.">
+  <meta property="og:title" content="JEMFest 2016 | CoMC | TTU"/>
+  <link href="http://www.depts.ttu.edu/comc/jemfest/" rel="canonical" />
+  <meta property="og:url" content="http://www.depts.ttu.edu/comc/jemfest/"/>
+  <meta property="og:description" content="From film and photography, to audio and web design, JEMFest is an annual showcase of Journalism and Electronic Media student work.">
   <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="College of Media & Communication"/>
-  <meta property="og:image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg"/> -->
+  <meta property="og:site_name" content="JEMFest 2016"/>
+  <meta property="og:image" content="http://www.depts.ttu.edu/comc/jemfest/img/jemfest-og.png"/>
   <!-- OUR CUSTOM HEAD END -->
 
 </head>
@@ -145,52 +144,6 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script>
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-
-    var navDistance = $('nav').offset().top,
-    $window = $(window);
-    var videoDistance = $('#video').offset().top;
-    var photoDistance = $('#photo').offset().top;
-    var multiDistance = $('#multimedia').offset().top;
-    var audioDistance = $('#audio').offset().top;
-    $window.scroll(function() {
-        if ( $window.scrollTop() >= navDistance ) {
-            $('#circle-nav').fadeIn('fast');
-        } else {
-          $('#circle-nav').fadeOut('fast');
-        }
-
-        if ( $window.scrollTop() >= videoDistance && $window.scrollTop() + 200 < photoDistance) {
-          $('#circle-nav a').removeClass('is-selected');
-          $('#circle-nav .first').addClass('is-selected');
-        }
-        if ( $window.scrollTop() + 200 >= photoDistance && $window.scrollTop() + 200 < multiDistance) {
-          $('#circle-nav a').removeClass('is-selected');
-          $('#circle-nav .second').addClass('is-selected');
-        }
-        if ( $window.scrollTop() + 200 >= multiDistance && $window.scrollTop() + 200 < audioDistance) {
-          $('#circle-nav a').removeClass('is-selected');
-          $('#circle-nav .third').addClass('is-selected');
-        }
-        if ( $window.scrollTop() + 200 >= audioDistance) {
-          $('#circle-nav a').removeClass('is-selected');
-          $('#circle-nav .fourth').addClass('is-selected');
-        }
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
