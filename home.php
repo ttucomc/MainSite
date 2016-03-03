@@ -126,7 +126,7 @@
 
     <?php echo "</div></div></div></div>" ?>
     <section id="videoHeader" class="hidden-mobile">
-    	<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.ttu.edu/admissions/">Apply Now!</a><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
+    	<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
     	<div id="videoMute">
     		<p>Click for Sound</p>
     	</div>
@@ -164,13 +164,14 @@
     					<h1>College of Media &amp; Communication</h1>
     					<h2>Communication is essential</h2>
     					<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
+							<h3>Apply Now!</h3>
+							<p>
+								<a href="http://www.ttu.edu/admissions/" class="button">Undergraduate</a>&nbsp;<a href="/comc/graduate/apply/" class="button">Graduate</a>
+							</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<div id="lone-startup">
-			<a href="/comc/startup/" target="_blank"><img src="images/lone-startup-promo.png" alt="Lone Startup Student Competition" title="Lone Startup Student Competition"></a>
-		</div>
 		<section id="home-students">
 			<div class="wow slideInLeft intro-photo-half">
 				<div id="intro-current"><a href="{{d:1126672}}"> <span class="home-students-text">Current Students</span> </a></div>
