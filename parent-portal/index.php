@@ -165,57 +165,85 @@
         </p>
       </div>
     </section>
-    <section class="row square-menu">
-      <a href="" class="column small-6 small-collapse square">
-        <div>
-          <figure class="fa fa-building fa-3x">
+    <section class="square-menu-container">
+      <div class="square-menu">
+        <a href="" class="column small-6 small-collapse square">
+          <div>
+            <figure class="fa fa-building fa-3x">
 
-          </figure>
-          <p>
-            What kind of career can my student have?
-          </p>
-        </div>
-      </a>
-      <a href="" class="column small-6 small-collapse square">
-        <div>
-          <figure class="fa fa-heart fa-3x">
+            </figure>
+            <p>
+              What kind of career can my student have?
+            </p>
+          </div>
+        </a>
+        <a href="" class="column small-6 small-collapse square">
+          <div>
+            <figure class="fa fa-heart fa-3x">
 
-          </figure>
-          <p>
-            Why CoMC?
-          </p>
-        </div>
-      </a>
-      <a href="" class="column small-6 small-collapse square">
-        <div>
-          <figure class="fa fa-pencil fa-3x">
+            </figure>
+            <p>
+              Why CoMC?
+            </p>
+          </div>
+        </a>
+        <a href="" class="column small-6 small-collapse square">
+          <div>
+            <figure class="fa fa-pencil fa-3x">
 
-          </figure>
-          <p>
-            How does my student apply?
-          </p>
-        </div>
-      </a>
-      <a href="" class="column small-6 small-collapse square">
-        <div>
-          <figure class="fa fa-money fa-3x">
+            </figure>
+            <p>
+              How does my student apply?
+            </p>
+          </div>
+        </a>
+        <a href="" class="column small-6 small-collapse square">
+          <div>
+            <figure class="fa fa-money fa-3x">
 
-          </figure>
-          <p>
-            What is the cost?
-          </p>
-        </div>
-      </a>
+            </figure>
+            <p>
+              What is the cost?
+            </p>
+          </div>
+        </a>
+      </div>
     </section>
   </section>
+  <section id="interested">
+    <div id="question" class="red">
+      <h2>
+        My student is interested in&nbsp;
+        <select>
+          <optgroup>
+            <option value="1">
+              Select a Major
+            </option>
+            <option value="Public Relations">
+              Public Relations
+            </option>
+            <option value="Journalism">
+              Journalism
+            </option>
+            <option value="Advertising">
+              Advertising
+            </option>
+            <option value="Communication Studies">
+              Communication Studies
+            </option>
+            <option value="EMC">
+              Electronic Media and Communications
+            </option>
+            <option value="Media Strategies">
+              Media Strategies
+            </option>
+          </optgroup>
+        </select>
+      </h2>
+    </div>
+  </section>
 
-  <?php
-    include('alumni.php');
-  ?>
 
-  <?php
-    include('events.php');
-  ?>
 
 
   <!-- Vendor JS -->

@@ -53,15 +53,25 @@
 
 #overview {
   .info {
+    background-image: url("../img/60-lines.png");
     font-size: 1.33em;
     height: 50vh;
     padding: 4em 0.5em;
   }
 
+  .square-menu-container {
+    background: url('../img/students-in-class.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
   .square-menu {
     position: relative;
+    background-color: #FFF;
     height: 50vh;
     text-align: center;
+    @media screen and (min-width: 1000px) {
+      width: 50%;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -114,6 +124,39 @@
       width: 50%;
       padding: 0;
       margin: 0;
+    }
+  }
+}
+
+
+/****************************
+  STUDENT INTERESTED SECTION
+****************************/
+
+#interested {
+  #question {
+    background-image: url("../img/60-lines.png");
+  }
+  h2 {
+    padding: 1em 0;
+    margin: 0;
+    select {
+      position: relative;
+      background-color: transparent;
+      font-style: italic;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      border-radius: 0;
+      appearance: none;
+      &:focus,
+      &:hover,
+      &:active {
+        outline: none;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+      }
     }
   }
 }

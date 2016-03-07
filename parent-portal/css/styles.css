@@ -613,7 +613,19 @@ h1 {
   font-size: 2.25em;
   padding-bottom: .33em;
 }
-/* line 51, ../sass/styles.scss */
+@media screen and (min-width: 768px) {
+  /* line 46, ../sass/styles.scss */
+  h1 {
+    font-size: 2.75em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 46, ../sass/styles.scss */
+  h1 {
+    font-size: 3.25em;
+  }
+}
+/* line 57, ../sass/styles.scss */
 h1:before {
   content: '';
   position: absolute;
@@ -626,7 +638,7 @@ h1:before {
   height: 1px;
   width: 85%;
 }
-/* line 61, ../sass/styles.scss */
+/* line 67, ../sass/styles.scss */
 h1:after {
   content: '';
   position: absolute;
@@ -643,7 +655,24 @@ h1:after {
   z-index: 1;
 }
 
-/* line 76, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
+h2 {
+  font-size: 2em;
+}
+@media screen and (min-width: 768px) {
+  /* line 81, ../sass/styles.scss */
+  h2 {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 81, ../sass/styles.scss */
+  h2 {
+    font-size: 3em;
+  }
+}
+
+/* line 91, ../sass/styles.scss */
 hr {
   border: 0;
   background-color: #333;
@@ -652,7 +681,7 @@ hr {
   width: 75%;
   margin: 0.6em auto;
 }
-/* line 83, ../sass/styles.scss */
+/* line 98, ../sass/styles.scss */
 hr:after {
   content: '';
   display: inline-block;
@@ -665,35 +694,35 @@ hr:after {
   transform: translateY(-50%);
 }
 
-/* line 95, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 .dark-grey {
   background-color: #333;
   color: white;
 }
-/* line 99, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 .dark-grey h1:before, .dark-grey h1:after {
   background-color: white;
 }
-/* line 103, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .dark-grey h1:after {
   outline-color: #333;
 }
 
-/* line 110, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .red {
   background-color: #CC0000;
   color: white;
 }
-/* line 114, ../sass/styles.scss */
+/* line 129, ../sass/styles.scss */
 .red h1:before, .red h1:after {
   background-color: white;
 }
-/* line 118, ../sass/styles.scss */
+/* line 133, ../sass/styles.scss */
 .red h1:after {
   outline-color: #CC0000;
 }
 
-/* line 125, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 .scrollDown {
   position: absolute;
   bottom: 0;
@@ -703,12 +732,12 @@ hr:after {
   transform: translateX(-50%);
   margin-bottom: 1em;
 }
-/* line 131, ../sass/styles.scss */
+/* line 146, ../sass/styles.scss */
 .scrollDown p {
   font-size: 1.25em;
   margin-bottom: .25em;
 }
-/* line 135, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 .scrollDown img {
   width: 75%;
   -webkit-animation: scroll-bounce 15s ease-in-out 5s infinite;
@@ -1003,17 +1032,30 @@ header {
 ****************************/
 /* line 55, ../sass/_landing.scss */
 #overview .info {
+  background-image: url("../img/60-lines.png");
   font-size: 1.33em;
   height: 50vh;
   padding: 4em 0.5em;
 }
-/* line 61, ../sass/_landing.scss */
+/* line 62, ../sass/_landing.scss */
+#overview .square-menu-container {
+  background: url("../img/students-in-class.jpg") center center no-repeat;
+  background-size: cover;
+}
+/* line 67, ../sass/_landing.scss */
 #overview .square-menu {
   position: relative;
+  background-color: #FFF;
   height: 50vh;
   text-align: center;
 }
-/* line 65, ../sass/_landing.scss */
+@media screen and (min-width: 1000px) {
+  /* line 67, ../sass/_landing.scss */
+  #overview .square-menu {
+    width: 50%;
+  }
+}
+/* line 75, ../sass/_landing.scss */
 #overview .square-menu:before {
   content: '';
   position: absolute;
@@ -1027,7 +1069,7 @@ header {
   width: 1px;
   z-index: 1;
 }
-/* line 76, ../sass/_landing.scss */
+/* line 86, ../sass/_landing.scss */
 #overview .square-menu:after {
   content: '';
   position: absolute;
@@ -1041,7 +1083,7 @@ header {
   width: 100%;
   z-index: 1;
 }
-/* line 87, ../sass/_landing.scss */
+/* line 97, ../sass/_landing.scss */
 #overview .square-menu .square {
   position: relative;
   color: #333;
@@ -1054,16 +1096,16 @@ header {
   padding: 0;
   margin: 0;
 }
-/* line 93, ../sass/_landing.scss */
+/* line 103, ../sass/_landing.scss */
 #overview .square-menu .square:hover {
   background-color: #F1F1F1;
 }
-/* line 95, ../sass/_landing.scss */
+/* line 105, ../sass/_landing.scss */
 #overview .square-menu .square:hover figure {
   -webkit-animation: 4s ease-in-out infinite up-shake;
           animation: 4s ease-in-out infinite up-shake;
 }
-/* line 99, ../sass/_landing.scss */
+/* line 109, ../sass/_landing.scss */
 #overview .square-menu .square div {
   position: absolute;
   top: 50%;
@@ -1073,14 +1115,47 @@ header {
   transform: translateY(-50%);
   width: 100%;
 }
-/* line 105, ../sass/_landing.scss */
+/* line 115, ../sass/_landing.scss */
 #overview .square-menu .square div figure {
   color: #CC0000;
   margin: 0;
 }
-/* line 109, ../sass/_landing.scss */
+/* line 119, ../sass/_landing.scss */
 #overview .square-menu .square div p {
   padding: 0 .5em;
+}
+
+/****************************
+  STUDENT INTERESTED SECTION
+****************************/
+/* line 137, ../sass/_landing.scss */
+#interested #question {
+  background-image: url("../img/60-lines.png");
+}
+/* line 140, ../sass/_landing.scss */
+#interested h2 {
+  padding: 1em 0;
+  margin: 0;
+}
+/* line 143, ../sass/_landing.scss */
+#interested h2 select {
+  position: relative;
+  background-color: transparent;
+  font-style: italic;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+/* line 152, ../sass/_landing.scss */
+#interested h2 select:focus, #interested h2 select:hover, #interested h2 select:active {
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 /****************************
@@ -1161,7 +1236,7 @@ header {
 }
 /* line 24, ../sass/_events.scss */
 #events .eventContainer .eventLocation {
-  font-size: 3.5em;
+  font-size: 3em;
   font-family: 'bebas_neue';
   color: #003a66;
   margin-top: 0.6em;
