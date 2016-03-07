@@ -282,7 +282,11 @@
 		<div class="content-block" style="margin-bottom: -62px;">
 			<div class="wrapper wrapper-padded-mobile">
 				<div class="column-wrapper column-flex column-flexwrap">
-					<div id="home-social" class="column-full column-centered"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a></div>
+					<div id="home-social" class="column-full column-centered"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
+						<p id="employment">
+							Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a href="/comc/about/employement/" class="button">Join Our Team</a>
+						</p>
+					</div>
 				</div>
 			</div>
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
