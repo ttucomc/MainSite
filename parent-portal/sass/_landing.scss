@@ -134,6 +134,10 @@
 ****************************/
 
 #interested {
+  background-image: url("../img/60-lines.png");
+  p {
+    font-size: 1.25em;
+  }
   #question {
     background-image: url("../img/60-lines.png");
   }
@@ -144,6 +148,7 @@
       position: relative;
       background-color: transparent;
       font-style: italic;
+      text-align-last: center;
       outline: none;
       border: none;
       border-bottom: 1px solid #fff;
@@ -157,6 +162,17 @@
         border-right: none;
         border-left: none;
       }
+    }
+  }
+  #description {
+    display: none;
+    padding: 4em .5em;
+    max-width: 960px;
+    p {
+      background-color: rgba(255,255,255,.5);
+      margin: 0;
+      padding: 1em .5em;
+      border-radius: 5px;
     }
   }
 }

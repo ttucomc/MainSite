@@ -216,30 +216,35 @@
         My student is interested in&nbsp;
         <select>
           <optgroup>
-            <option value="1">
-              Select a Major
+            <option value="select">
+              -- Select a Major --
             </option>
-            <option value="Public Relations">
-              Public Relations
-            </option>
-            <option value="Journalism">
-              Journalism
-            </option>
-            <option value="Advertising">
+            <option value="Adv">
               Advertising
             </option>
-            <option value="Communication Studies">
+            <option value="Coms">
               Communication Studies
             </option>
             <option value="EMC">
               Electronic Media and Communications
             </option>
-            <option value="Media Strategies">
+            <option value="Jour">
+              Journalism
+            </option>
+            <option value="MS">
               Media Strategies
+            </option>
+            <option value="PR">
+              Public Relations
             </option>
           </optgroup>
         </select>
       </h2>
+    </div>
+    <div id="description" class="row">
+      <p>
+        The Department of Advertising develops leaders with an understanding of the creative and business-related aspects of advertising in the current media landscape.<br><br>Students participate in a rigorous degree program that provides the background and training to become leaders in advertising communication. Advertising majors gain an understanding of the creative and business-related aspects of advertising, including copywriting, sales, production, creative strategy, design and layout, media planning, and research. We also host industry professionals who speak to students about internships and careers in advertising.
+      </p>
     </div>
   </section>
 
@@ -255,6 +260,7 @@
 
   <!-- TTU JS -->
   <script src="js/menu.js"></script></script>
+  <script src="js/main.js"></script></script>
 
 </body>
 

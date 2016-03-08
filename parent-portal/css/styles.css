@@ -1128,20 +1128,30 @@ header {
 /****************************
   STUDENT INTERESTED SECTION
 ****************************/
-/* line 137, ../sass/_landing.scss */
+/* line 136, ../sass/_landing.scss */
+#interested {
+  background-image: url("../img/60-lines.png");
+}
+/* line 138, ../sass/_landing.scss */
+#interested p {
+  font-size: 1.25em;
+}
+/* line 141, ../sass/_landing.scss */
 #interested #question {
   background-image: url("../img/60-lines.png");
 }
-/* line 140, ../sass/_landing.scss */
+/* line 144, ../sass/_landing.scss */
 #interested h2 {
   padding: 1em 0;
   margin: 0;
 }
-/* line 143, ../sass/_landing.scss */
+/* line 147, ../sass/_landing.scss */
 #interested h2 select {
   position: relative;
   background-color: transparent;
   font-style: italic;
+  -moz-text-align-last: center;
+       text-align-last: center;
   outline: none;
   border: none;
   border-bottom: 1px solid #fff;
@@ -1150,12 +1160,25 @@ header {
      -moz-appearance: none;
           appearance: none;
 }
-/* line 152, ../sass/_landing.scss */
+/* line 157, ../sass/_landing.scss */
 #interested h2 select:focus, #interested h2 select:hover, #interested h2 select:active {
   outline: none;
   border-top: none;
   border-right: none;
   border-left: none;
+}
+/* line 167, ../sass/_landing.scss */
+#interested #description {
+  display: none;
+  padding: 4em .5em;
+  max-width: 960px;
+}
+/* line 171, ../sass/_landing.scss */
+#interested #description p {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 1em .5em;
+  border-radius: 5px;
 }
 
 /****************************
