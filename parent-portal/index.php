@@ -243,7 +243,7 @@
     </div>
     <div id="description" class="row">
       <p>
-        The Department of Advertising develops leaders with an understanding of the creative and business-related aspects of advertising in the current media landscape.<br><br>Students participate in a rigorous degree program that provides the background and training to become leaders in advertising communication. Advertising majors gain an understanding of the creative and business-related aspects of advertising, including copywriting, sales, production, creative strategy, design and layout, media planning, and research. We also host industry professionals who speak to students about internships and careers in advertising.
+        The Department of Advertising develops leaders with an understanding of the creative and business-related aspects of advertising in the current media landscape.<br><br>Students participate in a rigorous degree program that provides the background and training to become leaders in advertising communication. Advertising majors gain an understanding of the creative and business-related aspects of advertising, including copywriting, sales, production, creative strategy, design and layout, media planning, and research. We also host industry professionals who speak to students about internships and careers in advertising.<br><br>More information in the TTU catalog:<br><a href="http://www.depts.ttu.edu/officialpublications/catalog/mc_adv.php" class="button" target="_blank">More Info...</a>
       </p>
     </div>
   </section>
@@ -261,6 +261,14 @@
   <!-- TTU JS -->
   <script src="js/menu.js"></script></script>
   <script src="js/main.js"></script></script>
+
+  <script>
+    $('.scrollDown').click(function() {
+      $('html,body').animate({
+        scrollTop: $('#overview').position().top - 70
+      }, 800);
+    });
+  </script>
 
 </body>
 

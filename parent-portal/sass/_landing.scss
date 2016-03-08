@@ -21,8 +21,10 @@
       }
     }
     #logoWords {
-      min-width: 400px;
       @media screen and (min-width: $screen-med) {
+        min-width: 400px;
+      }
+      @media screen and (min-width: $screen-lg) {
         min-width: 550px;
       }
     }
@@ -55,8 +57,7 @@
   .info {
     background-image: url("../img/60-lines.png");
     font-size: 1.33em;
-    height: 50vh;
-    padding: 4em 0.5em;
+    padding: 7em 0.5em;
   }
 
   .square-menu-container {
@@ -170,8 +171,9 @@
     max-width: 960px;
     p {
       background-color: rgba(255,255,255,.5);
+      box-shadow: $card-shadow;
       margin: 0;
-      padding: 1em .5em;
+      padding: 2em 1em;
       border-radius: 5px;
     }
   }
