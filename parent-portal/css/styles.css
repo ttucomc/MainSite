@@ -728,6 +728,7 @@ hr:after {
 /* line 140, ../sass/styles.scss */
 .scrollDown {
   position: absolute;
+  color: #FFF;
   bottom: 0;
   left: 50%;
   -ms-transform: translateX(-50%);
@@ -735,14 +736,13 @@ hr:after {
   transform: translateX(-50%);
   margin-bottom: 1em;
 }
-/* line 146, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 .scrollDown p {
   font-size: 1.25em;
   margin-bottom: .25em;
 }
-/* line 150, ../sass/styles.scss */
+/* line 151, ../sass/styles.scss */
 .scrollDown img {
-  width: 75%;
   -webkit-animation: scroll-bounce 15s ease-in-out 5s infinite;
   animation: scroll-bounce 15s ease-in-out 5s infinite;
 }
@@ -751,7 +751,7 @@ hr:after {
 .button {
   position: relative;
   display: block;
-  background-color: #CC0000;
+  background-color: #58767D;
   color: #FFF;
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
   font-size: 1.25em;
@@ -806,7 +806,7 @@ hr:after {
 }
 /* line 205, ../sass/styles.scss */
 .container #output {
-  opacity: 0.3;
+  opacity: 0.2;
   width: 100%;
   height: 100%;
   -webkit-transition: all 400ms ease-in-out;
@@ -823,7 +823,7 @@ header {
   left: 0;
   width: 100%;
   height: 70px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 1000;
 }
 
@@ -1037,6 +1037,7 @@ header {
 /* line 5, ../sass/_landing.scss */
 #landing {
   position: relative;
+  background-color: #58767D;
   height: 100vh;
   width: 100%;
 }
@@ -1075,7 +1076,7 @@ header {
 }
 /* line 32, ../sass/_landing.scss */
 #landing .title h1 {
-  color: #CC0000;
+  color: #FFF;
   font-size: 6.25em;
   padding: 0;
   margin: 0.1em 0;
@@ -1175,7 +1176,23 @@ header {
   -webkit-animation: 4s ease-in-out infinite up-shake;
           animation: 4s ease-in-out infinite up-shake;
 }
-/* line 111, ../sass/_landing.scss */
+/* line 112, ../sass/_landing.scss */
+#overview .square-menu .square:first-child:hover figure {
+  color: #2496B0;
+}
+/* line 117, ../sass/_landing.scss */
+#overview .square-menu .square:nth-child(2):hover figure {
+  color: #E6837F;
+}
+/* line 122, ../sass/_landing.scss */
+#overview .square-menu .square:nth-child(3):hover figure {
+  color: #B02459;
+}
+/* line 127, ../sass/_landing.scss */
+#overview .square-menu .square:last-child:hover figure {
+  color: #00A479;
+}
+/* line 131, ../sass/_landing.scss */
 #overview .square-menu .square div {
   position: absolute;
   top: 50%;
@@ -1185,12 +1202,12 @@ header {
   transform: translateY(-50%);
   width: 100%;
 }
-/* line 117, ../sass/_landing.scss */
+/* line 137, ../sass/_landing.scss */
 #overview .square-menu .square div figure {
-  color: #CC0000;
+  color: #58767D;
   margin: 0;
 }
-/* line 121, ../sass/_landing.scss */
+/* line 141, ../sass/_landing.scss */
 #overview .square-menu .square div p {
   padding: 0 .5em;
 }
@@ -1198,24 +1215,26 @@ header {
 /****************************
   STUDENT INTERESTED SECTION
 ****************************/
-/* line 138, ../sass/_landing.scss */
+/* line 158, ../sass/_landing.scss */
 #interested {
   background-image: url("../img/60-lines.png");
 }
-/* line 140, ../sass/_landing.scss */
+/* line 160, ../sass/_landing.scss */
 #interested p {
   font-size: 1.25em;
 }
-/* line 143, ../sass/_landing.scss */
+/* line 163, ../sass/_landing.scss */
 #interested #question {
   background-image: url("../img/60-lines.png");
+  background-color: #58767D;
 }
-/* line 146, ../sass/_landing.scss */
+/* line 167, ../sass/_landing.scss */
 #interested h2 {
+  color: #FFF;
   padding: 1em 0;
   margin: 0;
 }
-/* line 149, ../sass/_landing.scss */
+/* line 171, ../sass/_landing.scss */
 #interested h2 select {
   position: relative;
   background-color: transparent;
@@ -1230,20 +1249,20 @@ header {
      -moz-appearance: none;
           appearance: none;
 }
-/* line 159, ../sass/_landing.scss */
+/* line 181, ../sass/_landing.scss */
 #interested h2 select:focus, #interested h2 select:hover, #interested h2 select:active {
   outline: none;
   border-top: none;
   border-right: none;
   border-left: none;
 }
-/* line 169, ../sass/_landing.scss */
+/* line 191, ../sass/_landing.scss */
 #interested #description {
   display: none;
   padding: 4em .5em;
   max-width: 960px;
 }
-/* line 173, ../sass/_landing.scss */
+/* line 195, ../sass/_landing.scss */
 #interested #description p {
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);

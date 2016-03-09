@@ -1,12 +1,12 @@
 <?php include 'header.php'; ?>
-  <section id="landing">
+  <section id="landing" class="page1 active">
     <div id="container" class="container">
       <div id="output">
       </div>
     </div>
     <div class="title">
-      <img id="comcHand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" />
-      <img id="logoWords" src="img/comc-logo-words.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
+      <!-- <img id="comcHand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" /> -->
+      <img id="logoWords" src="img/CoMC-logo-white.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
       <h1>Parents</h1>
     </div>
     <div class="scrollDown">
@@ -70,7 +70,7 @@
     </section>
   </section>
   <section id="interested">
-    <div id="question" class="red">
+    <div id="question">
       <h2>
         My student is interested in&nbsp;
         <select>

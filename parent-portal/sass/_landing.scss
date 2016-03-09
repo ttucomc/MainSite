@@ -4,7 +4,7 @@
 
 #landing {
   position: relative;
-  // background-color: rgba($red,.2);
+  background-color: $slate;
   height: 100vh;
   width: 100%;
   // div containting logos and title
@@ -30,7 +30,7 @@
       }
     }
     h1 {
-      color: $red;
+      color: #FFF;
       font-size: 6.25em;
       padding: 0;
       margin: 0.1em 0;
@@ -108,6 +108,26 @@
           animation: 4s ease-in-out infinite up-shake;
         }
       }
+      &:first-child:hover {
+        figure {
+          color: $blue;
+        }
+      }
+      &:nth-child(2):hover {
+        figure {
+          color: $coral;
+        }
+      }
+      &:nth-child(3):hover {
+        figure {
+          color: $pink;
+        }
+      }
+      &:last-child:hover {
+        figure {
+          color: $green;
+        }
+      }
       div {
         position: absolute;
         top: 50%;
@@ -115,7 +135,7 @@
         @include translateY(-50%);
         width: 100%;
         figure {
-          color: $red;
+          color: $slate;
           margin: 0;
         }
         p {
@@ -142,8 +162,10 @@
   }
   #question {
     background-image: url("../img/60-lines.png");
+    background-color: $slate;
   }
   h2 {
+    color: #FFF;
     padding: 1em 0;
     margin: 0;
     select {

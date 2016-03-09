@@ -815,12 +815,6 @@ FSS.SVGRenderer.prototype.formatStyle = function(b) {
         c(w.offsetWidth, w.offsetHeight);
         h()
     });
-    w.addEventListener("click", function(b) {
-        FSS.Vector3.set(u, b.x, v.height - b.y);
-        FSS.Vector3.subtract(u, r);
-        n.autopilot = !n.autopilot;
-        (void 0).updateDisplay()
-    });
     w.addEventListener("mousemove", function(b) {
         FSS.Vector3.set(u, b.x, v.height - b.y);
         FSS.Vector3.subtract(u, r)
