@@ -798,6 +798,21 @@ hr:after {
   z-index: 3;
 }
 
+/* line 200, ../sass/styles.scss */
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+/* line 205, ../sass/styles.scss */
+.container #output {
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
 /************************
   Start Main Menu Button
 *************************/
@@ -1025,7 +1040,7 @@ header {
   height: 100vh;
   width: 100%;
 }
-/* line 10, ../sass/_landing.scss */
+/* line 11, ../sass/_landing.scss */
 #landing .title {
   position: absolute;
   top: 50%;
@@ -1035,30 +1050,30 @@ header {
   transform: translate(-50%, -50%);
   padding: 0 .5em;
 }
-/* line 16, ../sass/_landing.scss */
+/* line 17, ../sass/_landing.scss */
 #landing .title #comcHand {
   width: 10em;
   padding-bottom: 1em;
 }
 @media screen and (min-width: 768px) {
-  /* line 16, ../sass/_landing.scss */
+  /* line 17, ../sass/_landing.scss */
   #landing .title #comcHand {
     width: 15em;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 23, ../sass/_landing.scss */
+  /* line 24, ../sass/_landing.scss */
   #landing .title #logoWords {
     min-width: 400px;
   }
 }
 @media screen and (min-width: 1000px) {
-  /* line 23, ../sass/_landing.scss */
+  /* line 24, ../sass/_landing.scss */
   #landing .title #logoWords {
     min-width: 550px;
   }
 }
-/* line 31, ../sass/_landing.scss */
+/* line 32, ../sass/_landing.scss */
 #landing .title h1 {
   color: #CC0000;
   font-size: 6.25em;
@@ -1066,18 +1081,18 @@ header {
   margin: 0.1em 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 31, ../sass/_landing.scss */
+  /* line 32, ../sass/_landing.scss */
   #landing .title h1 {
     font-size: 8.25em;
   }
 }
-/* line 39, ../sass/_landing.scss */
+/* line 40, ../sass/_landing.scss */
 #landing .title h1:before {
   content: '';
   top: 0;
   width: 40%;
 }
-/* line 44, ../sass/_landing.scss */
+/* line 45, ../sass/_landing.scss */
 #landing .title h1:after {
   content: '';
   display: none;
@@ -1086,18 +1101,18 @@ header {
 /****************************
       OVERVIEW SECTION
 ****************************/
-/* line 57, ../sass/_landing.scss */
+/* line 58, ../sass/_landing.scss */
 #overview .info {
   background-image: url("../img/60-lines.png");
   font-size: 1.33em;
   padding: 7em 0.5em;
 }
-/* line 63, ../sass/_landing.scss */
+/* line 64, ../sass/_landing.scss */
 #overview .square-menu-container {
   background: url("../img/students-in-class.jpg") center center no-repeat;
   background-size: cover;
 }
-/* line 68, ../sass/_landing.scss */
+/* line 69, ../sass/_landing.scss */
 #overview .square-menu {
   position: relative;
   background-color: #FFF;
@@ -1105,12 +1120,12 @@ header {
   text-align: center;
 }
 @media screen and (min-width: 1000px) {
-  /* line 68, ../sass/_landing.scss */
+  /* line 69, ../sass/_landing.scss */
   #overview .square-menu {
     width: 50%;
   }
 }
-/* line 76, ../sass/_landing.scss */
+/* line 77, ../sass/_landing.scss */
 #overview .square-menu:before {
   content: '';
   position: absolute;
@@ -1124,7 +1139,7 @@ header {
   width: 1px;
   z-index: 1;
 }
-/* line 87, ../sass/_landing.scss */
+/* line 88, ../sass/_landing.scss */
 #overview .square-menu:after {
   content: '';
   position: absolute;
@@ -1138,7 +1153,7 @@ header {
   width: 100%;
   z-index: 1;
 }
-/* line 98, ../sass/_landing.scss */
+/* line 99, ../sass/_landing.scss */
 #overview .square-menu .square {
   position: relative;
   color: #333;
@@ -1151,16 +1166,16 @@ header {
   padding: 0;
   margin: 0;
 }
-/* line 104, ../sass/_landing.scss */
+/* line 105, ../sass/_landing.scss */
 #overview .square-menu .square:hover {
   background-color: #F1F1F1;
 }
-/* line 106, ../sass/_landing.scss */
+/* line 107, ../sass/_landing.scss */
 #overview .square-menu .square:hover figure {
   -webkit-animation: 4s ease-in-out infinite up-shake;
           animation: 4s ease-in-out infinite up-shake;
 }
-/* line 110, ../sass/_landing.scss */
+/* line 111, ../sass/_landing.scss */
 #overview .square-menu .square div {
   position: absolute;
   top: 50%;
@@ -1170,12 +1185,12 @@ header {
   transform: translateY(-50%);
   width: 100%;
 }
-/* line 116, ../sass/_landing.scss */
+/* line 117, ../sass/_landing.scss */
 #overview .square-menu .square div figure {
   color: #CC0000;
   margin: 0;
 }
-/* line 120, ../sass/_landing.scss */
+/* line 121, ../sass/_landing.scss */
 #overview .square-menu .square div p {
   padding: 0 .5em;
 }
@@ -1183,24 +1198,24 @@ header {
 /****************************
   STUDENT INTERESTED SECTION
 ****************************/
-/* line 137, ../sass/_landing.scss */
+/* line 138, ../sass/_landing.scss */
 #interested {
   background-image: url("../img/60-lines.png");
 }
-/* line 139, ../sass/_landing.scss */
+/* line 140, ../sass/_landing.scss */
 #interested p {
   font-size: 1.25em;
 }
-/* line 142, ../sass/_landing.scss */
+/* line 143, ../sass/_landing.scss */
 #interested #question {
   background-image: url("../img/60-lines.png");
 }
-/* line 145, ../sass/_landing.scss */
+/* line 146, ../sass/_landing.scss */
 #interested h2 {
   padding: 1em 0;
   margin: 0;
 }
-/* line 148, ../sass/_landing.scss */
+/* line 149, ../sass/_landing.scss */
 #interested h2 select {
   position: relative;
   background-color: transparent;
@@ -1215,20 +1230,20 @@ header {
      -moz-appearance: none;
           appearance: none;
 }
-/* line 158, ../sass/_landing.scss */
+/* line 159, ../sass/_landing.scss */
 #interested h2 select:focus, #interested h2 select:hover, #interested h2 select:active {
   outline: none;
   border-top: none;
   border-right: none;
   border-left: none;
 }
-/* line 168, ../sass/_landing.scss */
+/* line 169, ../sass/_landing.scss */
 #interested #description {
   display: none;
   padding: 4em .5em;
   max-width: 960px;
 }
-/* line 172, ../sass/_landing.scss */
+/* line 173, ../sass/_landing.scss */
 #interested #description p {
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);

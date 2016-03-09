@@ -1,6 +1,9 @@
 <?php include 'header.php'; ?>
-
   <section id="landing">
+    <div id="container" class="container">
+      <div id="output">
+      </div>
+    </div>
     <div class="title">
       <img id="comcHand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" />
       <img id="logoWords" src="img/comc-logo-words.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />

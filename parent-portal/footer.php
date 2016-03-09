@@ -5,8 +5,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
 <!-- TTU JS -->
-<script src="js/menu.js"></script></script>
-<script src="js/main.js"></script></script>
+<script src="js/triangles.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/main.js"></script>
 
 
 
