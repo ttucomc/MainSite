@@ -1,11 +1,15 @@
-<?php include 'inc/header.php'; ?>
+<?php
+
+  $pageTitle = "Parent Portal | CoMC | TTU";
+
+  include 'inc/header.php';
+?>
   <section id="landing" class="page1 active">
     <div id="container" class="container">
       <div id="output">
       </div>
     </div>
     <div class="title">
-      <!-- <img id="comcHand" src="img/comc-hand.svg" alt="My Adventure, My Degree, MyCoMC" title="My Adventure, My Degree, #MyCoMC" /> -->
       <img id="logoWords" src="img/CoMC-logo-white.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
       <h1>Parents</h1>
     </div>
@@ -99,6 +103,9 @@
           </optgroup>
         </select>
       </h2>
+      <p>
+        CoMC consists of four academic departments offering a total of six undergraduate and four graduate degrees. Undergraduates can earn a Bachelor of Arts degree in: advertising, communication studies, electronic media & communication, journalism, media strategies, and public relations.
+      </p>
     </div>
     <div id="description" class="row">
       <p>
@@ -106,6 +113,7 @@
       </p>
     </div>
   </section>
+
   <script>
     $('.scrollDown').click(function() {
       $('html,body').animate({
