@@ -1345,6 +1345,33 @@ header {
 }
 
 /****************************
+        WHY COMC PAGE
+****************************/
+/* line 6, ../sass/_whycomc.scss */
+#why-comc .top,
+#why-comc .button {
+  background-color: #E6837F;
+}
+
+/****************************
+        COST PAGE
+****************************/
+/* line 6, ../sass/_cost.scss */
+#cost .top,
+#cost .button {
+  background-color: #00A479;
+}
+
+/****************************
+        COST PAGE
+****************************/
+/* line 6, ../sass/_applying.scss */
+#applying .top,
+#applying .button {
+  background-color: #B02459;
+}
+
+/****************************
         ALUMNI PAGE
 ****************************/
 /* line 5, ../sass/_alumni.scss */

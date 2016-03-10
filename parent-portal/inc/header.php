@@ -63,13 +63,13 @@
             <!-- Landing Menu -->
             <div class="menuBox" onclick="selectMenu(this);">
               <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
-              <h6>Landing</h6>
+              <h6>Financial Aid</h6>
             </div>
 
             <!-- Landing Options -->
             <div class="optionsColumn">
               <div class="optionRow">
-                <p>Home</p>
+                <p><a href="<?php echo BASE_URL; ?>financial-aid/">Home</a></p>
               </div>
               <div class="optionRow">
                 <p>Overview</p>
@@ -88,7 +88,7 @@
             <!-- Why COMC Options -->
             <div class="optionsColumn">
               <div class="optionRow">
-                <p>Home</p>
+                <p><a href="<?php echo BASE_URL; ?>why-comc/">Home</a></p>
               </div>
               <div class="optionRow">
                 <p>Overview</p>
@@ -110,7 +110,7 @@
             <!-- Career Options -->
             <div class="optionsColumn">
               <div class="optionRow">
-                <p>Home</p>
+                <p><a href="<?php echo BASE_URL; ?>careers/">Home</a></p>
               </div>
               <div class="optionRow">
                 <p>Overview</p>
@@ -129,7 +129,7 @@
             <!-- Apply Options -->
             <div class="optionsColumn">
               <div class="optionRow">
-                <p>Home</p>
+                <p><a href="<?php echo BASE_URL; ?>applying/">Home</a></p>
               </div>
               <div class="optionRow">
                 <p>Overview</p>

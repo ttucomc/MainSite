@@ -30,7 +30,7 @@
     </section>
     <section class="square-menu-container">
       <div class="square-menu">
-        <a href="" class="column small-6 small-collapse square">
+        <a href="<?php echo BASE_URL; ?>careers/" class="column small-6 small-collapse square">
           <div>
             <figure class="fa fa-building fa-3x">
 
@@ -40,7 +40,7 @@
             </p>
           </div>
         </a>
-        <a href="" class="column small-6 small-collapse square">
+        <a href="<?php echo BASE_URL; ?>why-comc/" class="column small-6 small-collapse square">
           <div>
             <figure class="fa fa-heart fa-3x">
 
@@ -50,7 +50,7 @@
             </p>
           </div>
         </a>
-        <a href="" class="column small-6 small-collapse square">
+        <a href="<?php echo BASE_URL; ?>applying/" class="column small-6 small-collapse square">
           <div>
             <figure class="fa fa-pencil fa-3x">
 
@@ -60,7 +60,7 @@
             </p>
           </div>
         </a>
-        <a href="" class="column small-6 small-collapse square">
+        <a href="<?php echo BASE_URL; ?>financial-aid/" class="column small-6 small-collapse square">
           <div>
             <figure class="fa fa-money fa-3x">
 
@@ -80,7 +80,7 @@
         <select>
           <optgroup>
             <option value="select">
-              -- Select a Major --
+              -- Select an Area --
             </option>
             <option value="Adv">
               Advertising
