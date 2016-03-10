@@ -14,14 +14,8 @@
     left: 50%;
     @include translate(-50%, -50%);
     padding: 0 .5em;
-    #comcHand {
-      width: 10em;
-      padding-bottom: 1em;
-      @media screen and (min-width: $screen-med) {
-        width: 15em;
-      }
-    }
     #logoWords {
+      width: 100%;
       @media screen and (min-width: $screen-med) {
         min-width: 400px;
       }
@@ -137,6 +131,7 @@
         figure {
           color: $slate;
           margin: 0;
+          @include transition(.3s);
         }
         p {
           padding: 0 .5em;

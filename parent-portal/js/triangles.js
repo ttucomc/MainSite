@@ -688,7 +688,7 @@ FSS.SVGRenderer.prototype.formatStyle = function(b) {
     return b = "fill:" + b + ";" + ("stroke:" + b + ";")
 };
 
-/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || function() {
+/webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || function() {
     function b() {
         J.remove(x);
         v.clear();

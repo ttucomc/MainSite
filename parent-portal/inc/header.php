@@ -1,3 +1,4 @@
+<?php require_once("config.php"); ?>
 <html>
 <head>
 
@@ -8,12 +9,12 @@
 	<title>Parent Portal | CoMC | TTU</title>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" type="text/css" href="css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/foundation.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/styles.css">
 
   <!-- Vendor Imports -->
-  <script src="js/modernizr.js"></script>
+  <script src="<?php echo BASE_URL; ?>js/modernizr.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 
@@ -44,7 +45,7 @@
   <header>
 
     <div id="TTULogo">
-      <img src="./img/TTU-logo.svg" />
+      <img src="<?php echo BASE_URL; ?>img/TTU-logo.svg" />
     </div>
 
     <div id=buttonMasterContainer>
@@ -61,7 +62,7 @@
 
             <!-- Landing Menu -->
             <div class="menuBox" onclick="selectMenu(this);">
-              <img src="./img/comc-hand.svg">
+              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
               <h6>Landing</h6>
             </div>
 
@@ -80,7 +81,7 @@
 
             <!-- Why COMC Menu -->
             <div class="menuBox" onclick="selectMenu(this);">
-              <img src="./img/comc-hand.svg">
+              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
               <h6>Why COMC?</h6>
             </div>
 
@@ -102,7 +103,7 @@
           <!-- Career Menu -->
           <div class="small-6 columns">
             <div class="menuBox" onclick="selectMenu(this);">
-              <img src="./img/comc-hand.svg">
+              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
               <h6>Career</h6>
             </div>
 
@@ -121,7 +122,7 @@
 
             <!-- Apply Menu -->
             <div class="menuBox" onclick="selectMenu(this);">
-              <img src="./img/comc-hand.svg">
+              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
               <h6>Apply</h6>
             </div>
 

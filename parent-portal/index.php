@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'inc/header.php'; ?>
   <section id="landing" class="page1 active">
     <div id="container" class="container">
       <div id="output">
@@ -114,4 +114,4 @@
     });
   </script>
 
-<?php include 'footer.php'; ?>
+<?php include 'inc/footer.php'; ?>
