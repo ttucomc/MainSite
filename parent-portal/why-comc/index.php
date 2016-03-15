@@ -23,9 +23,9 @@
       </div>
     </section>
 
-    <section>
+    <?php include 'visit.php' ?>
 
-    </section>
+    <?php include 'events.php' ?>
 
   </div>
 

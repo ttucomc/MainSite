@@ -1345,6 +1345,64 @@ header {
 }
 
 /****************************
+        ALUMNI Section
+****************************/
+/* line 18, ../sass/_careers.scss */
+.personContainer {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 23, ../sass/_careers.scss */
+.personContainer .personPicture {
+  width: 45%;
+  margin: 2em auto 1em;
+}
+/* line 27, ../sass/_careers.scss */
+.personContainer .personPicture img {
+  border-radius: 50%;
+  width: 60%;
+}
+/* line 32, ../sass/_careers.scss */
+.personContainer .personName {
+  font-size: 2.5em;
+  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+}
+/* line 36, ../sass/_careers.scss */
+.personContainer .personSubtitle {
+  font-size: 1.5em;
+}
+/* line 39, ../sass/_careers.scss */
+.personContainer .personDegree {
+  font-size: 1.4em;
+}
+/* line 42, ../sass/_careers.scss */
+.personContainer .quote {
+  margin: 2em 0;
+  font-size: 1.5em;
+  position: relative;
+}
+/* line 48, ../sass/_careers.scss */
+.personContainer .quote p:before {
+  content: url("../img/quote-open.svg");
+  width: 2em;
+  display: inline-block;
+  position: relative;
+  left: -10px;
+}
+/* line 56, ../sass/_careers.scss */
+.personContainer .quote p:after {
+  content: url("../img/quote-close.svg");
+  width: 2em;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  right: -10px;
+}
+
+/****************************
+    END ALUMNI Section
+****************************/
+/****************************
         WHY COMC PAGE
 ****************************/
 /* line 6, ../sass/_whycomc.scss */
@@ -1353,6 +1411,128 @@ header {
   background-color: #E6837F;
 }
 
+/****************************
+      Visit Section
+****************************/
+/* line 17, ../sass/_whycomc.scss */
+#visit .masterImageContainer {
+  position: relative;
+}
+/* line 22, ../sass/_whycomc.scss */
+#visit .masterImageContainer .imageContainer img {
+  width: 100%;
+}
+/* line 27, ../sass/_whycomc.scss */
+#visit .masterImageContainer .marker {
+  position: absolute;
+  bottom: 30px;
+  left: 49%;
+  text-align: center;
+  z-index: 10;
+}
+/* line 35, ../sass/_whycomc.scss */
+#visit .masterImageContainer .transparent {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(30, 87, 153, 0) 0%, white 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, rgba(30, 87, 153, 0) 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 50, ../sass/_whycomc.scss */
+#visit .dailyTours h2 {
+  color: #CC0000;
+  font-size: 3.2em;
+}
+/* line 55, ../sass/_whycomc.scss */
+#visit .dailyTours hr:after {
+  background-color: #CC0000;
+}
+/* line 59, ../sass/_whycomc.scss */
+#visit .dailyTours p {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em;
+  padding: 2em 0;
+}
+/* line 68, ../sass/_whycomc.scss */
+#visit .visitLocal {
+  background-color: #2496B0;
+}
+/* line 72, ../sass/_whycomc.scss */
+#visit .visitLocal h2 {
+  color: white;
+  font-size: 3.2em;
+  padding: 1em 0 0;
+}
+/* line 78, ../sass/_whycomc.scss */
+#visit .visitLocal p {
+  color: white;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em;
+  padding: 0 0 2em;
+}
+/* line 90, ../sass/_whycomc.scss */
+#visit .virtualTour h2 {
+  color: #CC0000;
+  font-size: 3.2em;
+}
+/* line 95, ../sass/_whycomc.scss */
+#visit .virtualTour hr:after {
+  background-color: #CC0000;
+}
+
+/****************************
+     End Visit Section
+****************************/
+/****************************
+      Events Section
+****************************/
+/* line 116, ../sass/_whycomc.scss */
+#events .eventContainer .eventDate .eventTitle {
+  font-size: 5em;
+  margin: 1em 0 0.2em;
+  color: #CC0000;
+  font-family: 'bebas_neue';
+}
+/* line 122, ../sass/_whycomc.scss */
+#events .eventContainer .eventDate span {
+  font-size: 4em;
+  margin: 1em 0;
+  vertical-align: middle;
+  font-family: 'bebas_neue';
+}
+/* line 129, ../sass/_whycomc.scss */
+#events .eventContainer .eventDate .day {
+  font-size: 7em;
+}
+/* line 134, ../sass/_whycomc.scss */
+#events .eventContainer .eventLocation {
+  font-size: 3em;
+  font-family: 'bebas_neue';
+  color: #003a66;
+  margin-top: 0.6em;
+}
+/* line 141, ../sass/_whycomc.scss */
+#events .eventContainer p {
+  font-size: 2em;
+  margin: 1.5em auto;
+  width: 60%;
+}
+
+/****************************
+    End Events Section
+****************************/
 /****************************
         COST PAGE
 ****************************/
@@ -1369,94 +1549,4 @@ header {
 #applying .top,
 #applying .button {
   background-color: #B02459;
-}
-
-/****************************
-        ALUMNI PAGE
-****************************/
-/* line 5, ../sass/_alumni.scss */
-.personContainer {
-  width: 70%;
-  margin: 0 auto;
-}
-/* line 10, ../sass/_alumni.scss */
-.personContainer .personPicture {
-  width: 45%;
-  margin: 2em auto 1em;
-}
-/* line 14, ../sass/_alumni.scss */
-.personContainer .personPicture img {
-  border-radius: 50%;
-  width: 60%;
-}
-/* line 19, ../sass/_alumni.scss */
-.personContainer .personName {
-  font-size: 2.5em;
-  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
-}
-/* line 23, ../sass/_alumni.scss */
-.personContainer .personSubtitle {
-  font-size: 1.5em;
-}
-/* line 26, ../sass/_alumni.scss */
-.personContainer .personDegree {
-  font-size: 1.4em;
-}
-/* line 29, ../sass/_alumni.scss */
-.personContainer .quote {
-  margin: 2em 0;
-  font-size: 1.5em;
-  position: relative;
-}
-/* line 35, ../sass/_alumni.scss */
-.personContainer .quote p:before {
-  content: url("../img/quote-open.svg");
-  width: 2em;
-  display: inline-block;
-  position: relative;
-  left: -10px;
-}
-/* line 43, ../sass/_alumni.scss */
-.personContainer .quote p:after {
-  content: url("../img/quote-close.svg");
-  width: 2em;
-  display: inline-block;
-  position: relative;
-  bottom: 0;
-  right: -10px;
-}
-
-/****************************
-      END ALUMNI PAGE
-****************************/
-/* line 6, ../sass/_events.scss */
-#events .eventContainer .eventDate .eventTitle {
-  font-size: 5em;
-  margin: 1em 0 0.2em;
-  color: #CC0000;
-  font-family: 'bebas_neue';
-}
-/* line 12, ../sass/_events.scss */
-#events .eventContainer .eventDate span {
-  font-size: 4em;
-  margin: 1em 0;
-  vertical-align: middle;
-  font-family: 'bebas_neue';
-}
-/* line 19, ../sass/_events.scss */
-#events .eventContainer .eventDate .day {
-  font-size: 7em;
-}
-/* line 24, ../sass/_events.scss */
-#events .eventContainer .eventLocation {
-  font-size: 3em;
-  font-family: 'bebas_neue';
-  color: #003a66;
-  margin-top: 0.6em;
-}
-/* line 31, ../sass/_events.scss */
-#events .eventContainer p {
-  font-size: 2em;
-  margin: 1.5em auto;
-  width: 60%;
 }

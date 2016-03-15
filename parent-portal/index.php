@@ -127,8 +127,4 @@
     });
   </script>
 
-  <p>
-    hello world
-  </p>
-
 <?php include 'inc/footer.php'; ?>

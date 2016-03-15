@@ -8,3 +8,144 @@
     background-color: $coral;
   }
 }
+
+/****************************
+      Visit Section
+****************************/
+#visit
+{
+  .masterImageContainer {
+      position: relative;
+
+      .imageContainer
+      {
+        img {
+          width: 100%;
+        }
+      }
+
+    .marker {
+      position: absolute;
+      bottom: 30px;
+      left: 49%;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .transparent {
+      height: 300px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
+      background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    }
+  }
+
+  .dailyTours
+  {
+    h2 {
+      color: $red;
+      font-size: 3.2em;
+    }
+
+    hr:after {
+      background-color: $red;
+    }
+
+    p {
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 2em;
+      padding: 2em 0;
+    }
+  }
+
+  .visitLocal
+  {
+    background-color: $blue;
+
+    h2 {
+      color: white;
+      font-size: 3.2em;
+      padding: 1em 0 0;
+    }
+
+    p {
+      color: white;
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 2em;
+      padding: 0 0 2em;
+    }
+  }
+
+  .virtualTour
+  {
+    h2 {
+      color: $red;
+      font-size: 3.2em;
+    }
+
+    hr:after {
+      background-color: $red;
+    }
+  }
+
+}
+
+
+/****************************
+     End Visit Section
+****************************/
+
+
+/****************************
+      Events Section
+****************************/
+
+#events{
+
+  .eventContainer {
+    .eventDate {
+      .eventTitle {
+        font-size: 5em;
+        margin: 1em 0 0.2em;
+        color: $red;
+        font-family: 'bebas_neue';
+      }
+      span {
+        font-size: 4em;
+        margin: 1em 0;
+        vertical-align: middle;
+        font-family: 'bebas_neue';
+      }
+
+      .day {
+        font-size: 7em;
+      }
+    }
+
+    .eventLocation {
+      font-size: 3em;
+      font-family: 'bebas_neue';
+      color: $dark-blue;
+      margin-top: 0.6em;
+    }
+
+    p {
+      font-size: 2em;
+      margin: 1.5em auto;
+      width: 60%;
+    }
+  }
+}
+
+/****************************
+    End Events Section
+****************************/
