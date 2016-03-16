@@ -44,12 +44,4 @@ Thumbs.db
 /info/*
 #
 
-*.scssc
-
-parent-portal/css/styles.css
-
-parent-portal/css/styles.css
-
-parent-portal/css/styles.css
-
-parent-portal/css/styles.css
+*.scss
