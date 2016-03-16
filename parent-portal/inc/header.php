@@ -1,4 +1,3 @@
-@@ -1,147 +0,0 @@
 <?php require_once("config.php"); ?>
 <html>
 <head>
