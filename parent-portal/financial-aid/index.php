@@ -23,7 +23,7 @@
       </div>
     </section>
 
-    <section>
+    <section style="height:100vh; width:100%;">
 
     </section>
 

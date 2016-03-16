@@ -66,7 +66,7 @@
 
             </figure>
             <p>
-              What is the cost?
+              Is there help with the cost?
             </p>
           </div>
         </a>
