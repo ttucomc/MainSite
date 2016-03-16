@@ -24,7 +24,7 @@
     <section class="dark-grey info">
       <div class="row">
         <p>
-          Well, then, i confess, it is my intention to commandeer one of these ships, pick up a crew in tortuga, raid, pillage, plunder and otherwise pilfer my weasely black guts out. me? i'm dishonest, and a dishonest man you can always trust to be dishonest. honestly. it's the honest ones you want to watch out for, because you can never predict when they're going to do something incredibly... stupid. me?
+          The College of Media &amp; Communication recognizes the important role parents play in their students’ education. It is with parents in mind that we have created this information and resource section. From details about what to do in Lubbock to finding financial resources and support to learning about our engaging faculty, we have compiled a wealth of information for parents to peruse. We hope you find it helpful.
         </p>
       </div>
     </section>
