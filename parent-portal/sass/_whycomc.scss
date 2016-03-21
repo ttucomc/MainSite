@@ -7,6 +7,22 @@
   .button {
     background-color: $coral;
   }
+
+  h2 {
+    color: $coral;
+    font-size: 3.2em;
+  }
+
+  hr:after {
+    background-color: $coral;
+  }
+
+  p {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5em;
+  }
 }
 
 /****************************
@@ -19,55 +35,65 @@
 
       .imageContainer
       {
-        img {
-          width: 100%;
+        #ttu_1 {
+          background-image: url("../img/seal-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #ttu_2 {
+          background-image: url("../img/mem-circle-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #ttu_3 {
+          background-image: url("../img/cmc-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #ttu_4 {
+          background-image: url("../img/library-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
         }
       }
 
     .marker {
+      display: none;
       position: absolute;
       bottom: 30px;
-      left: 49%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
       z-index: 10;
+      font-size: 4em;
+      color: $red;
     }
 
     .transparent {
-      height: 300px;
       width: 100%;
       position: absolute;
       bottom: 0;
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
-      background: -moz-linear-gradient(top,  rgba(30,87,153,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom,  rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-    }
-  }
-
-  .dailyTours
-  {
-    h2 {
-      color: $red;
-      font-size: 3.2em;
-    }
-
-    hr:after {
-      background-color: $red;
-    }
-
-    p {
-      width: 75%;
-      text-align: center;
-      margin: 0 auto;
-      font-size: 2em;
-      padding: 2em 0;
     }
   }
 
   .visitLocal
   {
-    background-color: $blue;
+    background-color: $coral;
+    background-image: url("../img/60-lines.png");
 
     h2 {
       color: white;
@@ -80,25 +106,25 @@
       width: 75%;
       text-align: center;
       margin: 0 auto;
-      font-size: 2em;
+      font-size: 1.5em;
       padding: 0 0 2em;
     }
   }
 
   .virtualTour
   {
-    h2 {
-      color: $red;
-      font-size: 3.2em;
-    }
-
-    hr:after {
-      background-color: $red;
+    .tourContainer {
+      width: 50%;
+      margin: 0 auto;
     }
   }
 
+  @media (min-width: $screen-med) {
+    p {
+      font-size: 2em;
+    }
+  }
 }
-
 
 /****************************
      End Visit Section
@@ -134,7 +160,7 @@
     .eventLocation {
       font-size: 3em;
       font-family: 'bebas_neue';
-      color: $dark-blue;
+      color: $dark-blue≥;
       margin-top: 0.6em;
     }
 
