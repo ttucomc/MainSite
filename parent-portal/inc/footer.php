@@ -11,22 +11,21 @@
 
 <script type="text/javascript">
   // wrapping each h1 letter in spans
-  $(".title h1").children().andSelf().contents().each(function(){
-      var $this = $(this);
-      $this.replaceWith($this.text().replace(/(\w)/g, "<span>$&</span>"));
-  });
+  // $(".title h1").children().andSelf().contents().each(function(){
+  //     var $this = $(this);
+  //     $this.replaceWith($this.text().replace(/(\w)/g, "<span>$&</span>"));
+  // });
 
   // Kicking off ScrollMagic
   var controller = new ScrollMagic.Controller();
 
   // Calling growing h1
   new ScrollMagic.Scene({
-        triggerElement: '.title h1',
+        triggerElement: '.title',
         triggerHook: 'onLeave',
-        offset: -100
+        offset: -125
       })
-      .setTween(TweenMax.staggerTo(".title h1 span", 0.125, {scale: 10, opacity: 0 }, 0.125))
-      .addIndicators()
+      .setTween(TweenMax.to(".title h1", 0.5, {scale: 10, opacity: 0 }))
       .addTo(controller);
 
 </script>

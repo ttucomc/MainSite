@@ -623,9 +623,6 @@ h1 {
   display: inline-block;
   font-size: 2.25em;
   padding-bottom: .33em;
-  -o-white-space: nowrap;
-  -moz-white-space: nowrap;
-  white-space: nowrap;
 }
 @media screen and (min-width: 768px) {
   /* line 53, ../sass/styles.scss */
@@ -639,7 +636,7 @@ h1 {
     font-size: 3.25em;
   }
 }
-/* line 67, ../sass/styles.scss */
+/* line 64, ../sass/styles.scss */
 h1:before {
   content: '';
   position: absolute;
@@ -652,7 +649,7 @@ h1:before {
   height: 1px;
   width: 85%;
 }
-/* line 77, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 h1:after {
   content: '';
   position: absolute;
@@ -668,30 +665,25 @@ h1:after {
   width: 14px;
   z-index: 1;
 }
-/* line 90, ../sass/styles.scss */
-h1 span {
-  position: relative;
-  display: inline-block;
-}
 
-/* line 95, ../sass/styles.scss */
+/* line 88, ../sass/styles.scss */
 h2 {
   font-size: 2em;
 }
 @media screen and (min-width: 768px) {
-  /* line 95, ../sass/styles.scss */
+  /* line 88, ../sass/styles.scss */
   h2 {
     font-size: 2.5em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 95, ../sass/styles.scss */
+  /* line 88, ../sass/styles.scss */
   h2 {
     font-size: 3em;
   }
 }
 
-/* line 105, ../sass/styles.scss */
+/* line 98, ../sass/styles.scss */
 hr {
   border: 0;
   background-color: #333;
@@ -700,7 +692,7 @@ hr {
   width: 75%;
   margin: 0.6em auto;
 }
-/* line 112, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 hr:after {
   content: '';
   display: inline-block;
@@ -713,35 +705,35 @@ hr:after {
   transform: translateY(-50%);
 }
 
-/* line 124, ../sass/styles.scss */
+/* line 117, ../sass/styles.scss */
 .dark-grey {
   background-color: #333;
   color: white;
 }
-/* line 128, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 .dark-grey h1:before, .dark-grey h1:after {
   background-color: white;
 }
-/* line 132, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .dark-grey h1:after {
   outline-color: #333;
 }
 
-/* line 139, ../sass/styles.scss */
+/* line 132, ../sass/styles.scss */
 .red {
   background-color: #CC0000;
   color: white;
 }
-/* line 143, ../sass/styles.scss */
+/* line 136, ../sass/styles.scss */
 .red h1:before, .red h1:after {
   background-color: white;
 }
-/* line 147, ../sass/styles.scss */
+/* line 140, ../sass/styles.scss */
 .red h1:after {
   outline-color: #CC0000;
 }
 
-/* line 154, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 .scrollDown {
   position: absolute;
   color: #FFF;
@@ -752,12 +744,12 @@ hr:after {
   transform: translateX(-50%);
   margin-bottom: 1em;
 }
-/* line 161, ../sass/styles.scss */
+/* line 154, ../sass/styles.scss */
 .scrollDown p {
   font-size: 1.25em;
   margin-bottom: .25em;
 }
-/* line 165, ../sass/styles.scss */
+/* line 158, ../sass/styles.scss */
 .scrollDown img {
   -webkit-animation: scroll-bounce 15s ease-in-out 5s infinite;
   animation: scroll-bounce 15s ease-in-out 5s infinite;
@@ -765,7 +757,7 @@ hr:after {
   width: 75%;
 }
 
-/* line 173, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .button {
   position: relative;
   display: block;
@@ -781,13 +773,13 @@ hr:after {
   width: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 173, ../sass/styles.scss */
+  /* line 166, ../sass/styles.scss */
   .button {
     font-size: 1.5em;
     width: 33%;
   }
 }
-/* line 190, ../sass/styles.scss */
+/* line 183, ../sass/styles.scss */
 .button:after {
   background: #FFF;
   content: "";
@@ -804,25 +796,25 @@ hr:after {
   width: 50px;
   z-index: 1;
 }
-/* line 204, ../sass/styles.scss */
+/* line 197, ../sass/styles.scss */
 .button:hover:after {
   content: '';
   left: 120%;
   -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-/* line 211, ../sass/styles.scss */
+/* line 204, ../sass/styles.scss */
 .button span {
   z-index: 3;
 }
 
-/* line 216, ../sass/styles.scss */
+/* line 209, ../sass/styles.scss */
 .container {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-/* line 221, ../sass/styles.scss */
+/* line 214, ../sass/styles.scss */
 .container #output {
   opacity: 0.2;
   width: 100%;
@@ -834,13 +826,14 @@ hr:after {
 /****************************
         SUB PAGES
 ****************************/
-/* line 238, ../sass/styles.scss */
+/* line 231, ../sass/styles.scss */
 .top {
   position: relative;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
-/* line 242, ../sass/styles.scss */
+/* line 236, ../sass/styles.scss */
 .top .title {
   position: absolute;
   top: 50%;
@@ -851,7 +844,7 @@ hr:after {
   width: 100%;
   padding: 0 .5em;
 }
-/* line 249, ../sass/styles.scss */
+/* line 243, ../sass/styles.scss */
 .top .title h1 {
   color: #FFF;
   font-size: 5em;
@@ -859,24 +852,24 @@ hr:after {
   margin: .125em 0;
 }
 @media screen and (min-width: 414px) {
-  /* line 249, ../sass/styles.scss */
+  /* line 243, ../sass/styles.scss */
   .top .title h1 {
     font-size: 7em;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 249, ../sass/styles.scss */
+  /* line 243, ../sass/styles.scss */
   .top .title h1 {
     font-size: 10em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 249, ../sass/styles.scss */
+  /* line 243, ../sass/styles.scss */
   .top .title h1 {
     font-size: 12em;
   }
 }
-/* line 263, ../sass/styles.scss */
+/* line 257, ../sass/styles.scss */
 .top .title h1:before, .top .title h1:after {
   content: '';
   display: none;
