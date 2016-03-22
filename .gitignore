@@ -39,9 +39,12 @@ Thumbs.db
 # Random Files #
 ################
 /startupcomp/apply/*
-*database.php
-
 /info/*
+*database.php
+*cn.php
+*config.php
+
+
 #
 
 *.scssc
