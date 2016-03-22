@@ -42,6 +42,7 @@ Thumbs.db
 /info/*
 *database.php
 *cn.php
+*config.php
 
 
 #
