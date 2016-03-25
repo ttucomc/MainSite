@@ -222,7 +222,7 @@
     <?php echo '</form>'; ?> <?php }; ?>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" defer="defer" async=""></script>
-  <script type="text/javascript">// <![CDATA[
+  <script type="text/javascript">
   $(document).ready(function() {
 
         // Starting at guest 0, will append this number to the field names for db entries
@@ -257,6 +257,6 @@
 
 
       });
-  // ]]></script>
+</script>
 </body>
 </html>
