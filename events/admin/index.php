@@ -4,6 +4,7 @@
   <meta name="title" content="Control of All Events Ever" />
 
   <link rel="stylesheet" href="../rsvp/css/ttu.css" />
+  <link rel="stylesheet" href="css/screen.css" />
 
   <style>
     table caption {

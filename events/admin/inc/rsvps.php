@@ -32,36 +32,43 @@ echo "<p>Total people attending: " . $totalGuests . "</p>";
       <th>Food Accomodations</th>
     </tr>
   </thead>
-  <?php
+  <tbody>
+    <?php
 
-    foreach ($invitees as $key => $invitee) {
-      echo '<tr><td>' . date('d-m-Y', strtotime($invitee[date])) . '</td><td>' . $invitee[first_name] . '</td><td>' . $invitee[last_name] . '</td><td><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td>' . $invitee[info] . '</td></tr>';
+      foreach ($invitees as $key => $invitee) {
 
-      // Variable to determine if invitee has any guests
-      $hasGuests = false;
+        // Variable to determine if invitee has any guests
+        $hasGuests = false;
 
-      // Checking if any of the guests host_id match this invitee's ID
-      foreach ($guests as $key => $guest) {
-        // If it does, set the hasGuests variable to true
-        if ($guest[host_id] == $invitee[ID]) {
-          $hasGuests = true;
-        }
-      }
-
-      // If the invitee has guests, list the guests under their name
-      if ($hasGuests) {
-        // Loop through guests array looking at each host_id
+        // Checking if any of the guests host_id match this invitee's ID
         foreach ($guests as $key => $guest) {
-          // If that host id = the current invitee ID, list them
+          // If it does, set the hasGuests variable to true
           if ($guest[host_id] == $invitee[ID]) {
-            echo '<tr class="guest"><td>' . date('d-m-Y', strtotime($guest[date])) . '</td><td>' . $guest[first_name] . '</td><td>' . $guest[last_name] . '</td><td><a href="mailto:' . $guest[email] . '">' . $guest[email] . '</a></td><td>' . $guest[info] . '</td></tr>';
+            $hasGuests = true;
           }
         }
-      }
-    }
 
-  ?>
+        // If the invitee has guests, list the guests under their name
+        if ($hasGuests) {
+          echo "</tbody><tbody class='hasGuests'>";
+          echo '<tr><td>' . date('m-d-Y', strtotime($invitee[date])) . '</td><td>' . $invitee[first_name] . '</td><td>' . $invitee[last_name] . '</td><td><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td>' . $invitee[info] . '</td></tr>';
+          // echo "<tr class='guest'><td colspan='5'>Guests</td></tr>";
+          // Loop through guests array looking at each host_id
+          foreach ($guests as $key => $guest) {
+            // If that host id = the current invitee ID, list them
+            if ($guest[host_id] == $invitee[ID]) {
+              echo '<tr class="guest"><td>' . date('m-d-Y', strtotime($guest[date])) . '</td><td>' . $guest[first_name] . '</td><td>' . $guest[last_name] . '</td><td><a href="mailto:' . $guest[email] . '">' . $guest[email] . '</a></td><td>' . $guest[info] . '</td></tr>';
+            }
+          }
+          echo "</tbody><tbody>";
+        } else {
+          echo '<tr><td>' . date('m-d-Y', strtotime($invitee[date])) . '</td><td>' . $invitee[first_name] . '</td><td>' . $invitee[last_name] . '</td><td><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td>' . $invitee[info] . '</td></tr>';
+        }
+      }
+
+    ?>
+  </tbody>
 </table>
-<p>
+<p class="export-button">
   <button onclick="doit();">Download Table</button>
 </p>
