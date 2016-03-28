@@ -9,13 +9,33 @@ if (isset($_GET["id"])) {
   $guests = get_guests($event_id);
 }
 
+// Exiting if no event_id is selected
+if (empty($invitees)) {
+  echo "<p>This event no longer exists</p>";
+  exit();
+}
+
+$totalGuests = count($invitees) + count($guests);
+
+echo "<p>Total people attending: " . $totalGuests . "</p>";
+
+
 ?>
 
-<ol>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Food Accomodations</th>
+    </tr>
+  </thead>
   <?php
 
     foreach ($invitees as $key => $invitee) {
-      echo '<li>' . $invitee['first_name'] . ' ' . $invitee['last_name'];
+      echo '<tr><td>' . date('d-m-Y', strtotime($invitee[date])) . '</td><td>' . $invitee[first_name] . '</td><td>' . $invitee[last_name] . '</td><td><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td>' . $invitee[info] . '</td></tr>';
 
       // Variable to determine if invitee has any guests
       $hasGuests = false;
@@ -30,20 +50,15 @@ if (isset($_GET["id"])) {
 
       // If the invitee has guests, list the guests under their name
       if ($hasGuests) {
-        echo "<ol>";
         // Loop through guests array looking at each host_id
         foreach ($guests as $key => $guest) {
           // If that host id = the current invitee ID, list them
           if ($guest[host_id] == $invitee[ID]) {
-            echo "<li>" . $guest['first_name'] . " " . $guest['last_name'] . " - \"<em>" . $guest['info'] . "</em>\"</li>";
+            echo '<tr class="guest"><td>' . date('d-m-Y', strtotime($guest[date])) . '</td><td>' . $guest[first_name] . '</td><td>' . $guest[last_name] . '</td><td><a href="mailto:' . $guest[email] . '">' . $guest[email] . '</a></td><td>' . $guest[info] . '</td></tr>';
           }
         }
-
-        echo "</ol>";
       }
-
-      echo '</li>';
     }
 
   ?>
-</ol>
+</table>

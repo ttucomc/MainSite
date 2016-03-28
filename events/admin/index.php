@@ -12,10 +12,13 @@
     require_once('inc/config.php');
     require_once('inc/functions.php');
 
+    // Getting all events from db
     $events = get_all_events();
 
+    // Creating select element
     echo "<select onchange='showUser(this.value)'><option value=''>-- Select Event --</option>";
 
+    // Adding each event as an option
     foreach ($events as $key => $event) {
       echo "<option value='" . $event[ID] . "'>" . $event[name] . "</option>";
     }
@@ -25,9 +28,7 @@
     ?>
   </form>
   <div id="rsvps">
-    <p>
-      Select an event and I bet the RSVPs list here
-    </p>
+    <p>Select an event for RSVP awesomeness!</p>
   </div>
 
 
@@ -35,7 +36,7 @@
   <script>
     function showUser(str) {
         if (str == "") {
-            document.getElementById("rsvps").innerHTML = "";
+            document.getElementById("rsvps").innerHTML = "<p>Select an event for RSVP awesomeness!</p>";
             return;
         } else {
             if (window.XMLHttpRequest) {
