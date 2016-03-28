@@ -22,7 +22,7 @@ echo "<p>Total people attending: " . $totalGuests . "</p>";
 
 ?>
 
-<table>
+<table id="rsvp-list">
   <thead>
     <tr>
       <th>Date</th>
@@ -62,3 +62,6 @@ echo "<p>Total people attending: " . $totalGuests . "</p>";
 
   ?>
 </table>
+<p>
+  <button onclick="doit();">Download Table</button>
+</p>

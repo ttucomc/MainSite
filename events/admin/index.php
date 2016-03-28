@@ -4,6 +4,12 @@
   <meta name="title" content="Control of All Events Ever" />
 
   <link rel="stylesheet" href="../rsvp/css/ttu.css" />
+
+  <style>
+    table caption {
+      caption-side: bottom;
+    }
+  </style>
 </head>
 <body>
   <form>
@@ -32,8 +38,23 @@
   </div>
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/xlsx-core.js"></script>
+  <script src="js/filesaver.js"></script>
+  <script src="js/tableexport.js"></script>
+  <script>
+
+    function doit() {
+      $("table").tableExport({
+        bootstrap: false,
+        formats: ["xlsx", "csv", "txt"]
+      });
+    }
+
+  </script>
 
   <script>
+    // Show event information based on selected event
     function showUser(str) {
         if (str == "") {
             document.getElementById("rsvps").innerHTML = "<p>Select an event for RSVP awesomeness!</p>";
