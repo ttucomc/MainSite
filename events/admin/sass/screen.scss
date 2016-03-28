@@ -1,11 +1,18 @@
-body {
-  padding: 1em;
-}
-
 h2 {
   text-align: center;
 }
 
+form {
+  select {
+    font-size: 2em;
+    line-height: 1;
+    margin-bottom: 1em;
+  }
+}
+
+#rsvps {
+  padding-bottom: 5em;
+}
 
 #rsvp-list {
   tr {

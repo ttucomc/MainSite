@@ -27,7 +27,7 @@
 
     // Adding each event as an option
     foreach ($events as $key => $event) {
-      echo "<option value='" . $event[ID] . "'>" . $event[name] . "</option>";
+      echo "<option value='" . $event[ID] . "'>". $event[year] . " " . $event[name] . "</option>";
     }
     echo "</select>";
 
@@ -40,7 +40,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="js/xlsx-core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.core.min.js"></script>
   <script src="js/filesaver.js"></script>
   <script src="js/tableexport.js"></script>
   <script>
