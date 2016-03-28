@@ -6,48 +6,36 @@
   <link rel="stylesheet" href="../rsvp/css/ttu.css" />
 </head>
 <body>
-  <?php
-
-  require_once('inc/config.php');
-  require_once('inc/functions.php');
-
-  $invitees =  get_invitees(1);
-  $guests = get_guests(1);
-
-
-
-  ?>
-  <pre>
+  <form>
     <?php
 
-      $intersect = array_intersect_assoc($invitees, $guests);
-      print_r($intersect);
+    require_once('inc/config.php');
+    require_once('inc/functions.php');
+
+    $events = get_all_events();
+
+    echo "<select onchange='showUser(this.value)'><option value=''>-- Select Event --</option>";
+
+    foreach ($events as $key => $event) {
+      echo "<option value='" . $event[ID] . "'>" . $event[name] . "</option>";
+    }
+    echo "</select>";
+
 
     ?>
-  </pre>
-
-  <ol>
-    <?php
-
-      foreach ($invitees as $key => $invitee) {
-        echo '<li>' . $invitee['first_name'] . ' ' . $invitee['last_name'];
-
-        // foreach ($guests as $key => $guest) {
-        //
-        // }
-
-        echo '</li>';
-      }
-
-    ?>
-  </ol>
+  </form>
+  <div id="rsvps">
+    <p>
+      Select an event and I bet the RSVPs list here
+    </p>
+  </div>
 
 
 
-  <!-- <script>
+  <script>
     function showUser(str) {
         if (str == "") {
-            document.getElementById("txtHint").innerHTML = "";
+            document.getElementById("rsvps").innerHTML = "";
             return;
         } else {
             if (window.XMLHttpRequest) {
@@ -59,13 +47,13 @@
             }
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                    document.getElementById("rsvps").innerHTML = xmlhttp.responseText;
                 }
             };
-            xmlhttp.open("GET","getuser.php?q="+str,true);
+            xmlhttp.open("GET","inc/rsvps.php?id="+str,true);
             xmlhttp.send();
         }
     }
-  </script> -->
+  </script>
 </body>
 </html>

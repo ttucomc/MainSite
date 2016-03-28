@@ -1,5 +1,23 @@
 <?php
 
+function get_all_events() {
+  try {
+
+    require(ROOT_PATH . "inc/db.php");
+
+    $stmt = $db->prepare('SELECT * FROM events');
+    $stmt->execute();
+
+  } catch (Exception $e) {
+    echo "Could not retrieve data from database\r\n" . $e->getMessage();
+  }
+
+  $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  return $events;
+}
+
+
 function get_invitees($q) {
 
   require(ROOT_PATH . "inc/db.php");
