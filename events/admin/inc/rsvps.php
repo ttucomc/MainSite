@@ -7,23 +7,29 @@ if (isset($_GET["id"])) {
 	$event_id = intval($_GET["id"]);
   $invitees =  get_invitees($event_id);
   $guests = get_guests($event_id);
+} else {
+	echo "<p>No event selected, or this event doesn't exist.</p>";
+	exit();
 }
 
 // Exiting if no event_id is selected
 if (empty($invitees)) {
-  echo "<p>This event no longer exists</p>";
+  echo "<p>I guess no ones coming... :(</p>";
   exit();
 }
 
 $totalGuests = count($invitees) + count($guests);
-
-echo "<p>Total people attending: " . $totalGuests . "</p>";
 
 
 ?>
 
 <table id="rsvp-list">
   <thead>
+		<tr>
+			<td colspan="5">
+				Total people attending: <?php echo $totalGuests; ?>
+			</td>
+		</tr>
     <tr>
       <th>Date</th>
       <th>First Name</th>

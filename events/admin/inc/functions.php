@@ -9,7 +9,7 @@ function get_all_events() {
     $stmt->execute();
 
   } catch (Exception $e) {
-    echo "Could not retrieve data from database\r\n" . $e->getMessage();
+    echo "Could not retrieve data from database\r\n";
   }
 
   $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -29,7 +29,7 @@ function get_invitees($q) {
     $results->execute();
 
   } catch (Exception $e) {
-    echo "Data could not be retrieved from the database." . $e->getMessage();
+    echo "Data could not be retrieved from the database.";
     exit;
   }
 
@@ -50,7 +50,7 @@ function get_guests($q) {
     $results->execute();
 
   } catch (Exception $e) {
-    echo "Data could not be retrieved from the database." . $e->getMessage();
+    echo "Data could not be retrieved from the database.";
     exit;
   }
 
