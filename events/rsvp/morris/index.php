@@ -37,6 +37,7 @@
         $morris = 'Morris Lectureship 2016';
 
         // Invitee's Information
+        $attending = $_POST['attending'];
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];
         $email = $_POST['email'];
@@ -75,9 +76,10 @@
         try {
           // Info for invitee
           $stmt = $db->prepare("
-                                INSERT INTO people (first_name, last_name, email, event_id, info)
-                                VALUES (:first_name, :last_name, :email, :event_id, :info)
+                                INSERT INTO people (attending, first_name, last_name, email, event_id, info)
+                                VALUES (:attending, :first_name, :last_name, :email, :event_id, :info)
                               ");
+          $stmt->bindParam(':attending', $attending, PDO::PARAM_INT);
           $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
           $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
           $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -126,7 +128,11 @@
         // Message
         $message = '<html><body>';
         $message .= '<table width="100%" cellpadding="10">';
-        $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $morris . " RSVP For " . $firstName . " " . $lastName . "</h1></td></tr>";
+        if ($attending == 1) {
+          $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " is attending the " . $morris . "</h1></td></tr>";
+        } else {
+          $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " is not attending the " . $morris . "</h1></td></tr>";
+        }
         $message .= "<tr style='background: #EEEEEE;'><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
         $message .= "<tr><td><strong>Food Accommodations:</strong></td><td>" . $info . "</td></tr>";
         $message .= "<tr style='background: #EEEEEE;'><td><h2>Guests</h2></td><td><strong>Food Accommodations</strong></td></tr>";
@@ -158,7 +164,7 @@
         $conf_message = '<html><body>';
         $conf_message .= '<table width="100%" cellpadding="10">';
         $conf_message .= "<tr style='background: #CC0000; color: #FFFFFF'><td><h1 style='color:#FFFFFF; text-align:center;'>RSVP Confirmation For " . $morris . "</h1></td></tr>";
-        $conf_message .= "<tr style='text-align:center;'><td><p>We have received your RSVP for the " . $morris . ". If you have any questions or need to change anything on your RSVP, please email Taryn Meixner at <a href='mailto:taryn.meixner@ttu.edu'>taryn.meixner@ttu.edu</a>. We look forward to seeing you there! Thanks again!</p></td></tr>";
+        $conf_message .= "<tr style='text-align:center;'><td><p>We have received your RSVP for the " . $morris . ". If you have any questions or need to change anything on your RSVP, please email Taryn Meixner at <a href='mailto:taryn.meixner@ttu.edu'>taryn.meixner@ttu.edu</a>. Thanks again!</p></td></tr>";
         $conf_message .= "</table>";
         $conf_message .= "</body></html>";
 
@@ -199,6 +205,10 @@
       <div id="people">
         <fieldset>
           <legend> Your Information </legend>
+          <label for="attending">Will you be joining us?</label>
+          <input type="radio" name="attending" value="1" required="required" />- Yes<br />
+          <input type="radio" name="attending" value="0" />- No
+          <br /><br />
           <label for="firstName">Name:</label>
           <input id="firstName" type="text" placeholder="First Name" required="required" name="firstName" />
           <input id="lastName" type="text" placeholder="Last Name" required="required" name="lastName" />

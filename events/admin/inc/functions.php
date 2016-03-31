@@ -24,12 +24,12 @@ function get_invitees($q) {
 
   try {
 
-    $results = $db->prepare('SELECT ID, date, first_name, last_name, email, info FROM people WHERE event_id = ?');
+    $results = $db->prepare('SELECT ID, date, attending, first_name, last_name, email, info FROM people WHERE event_id = ? ORDER BY last_name');
     $results->bindParam(1,$q);
     $results->execute();
 
   } catch (Exception $e) {
-    echo "Data could not be retrieved from the database.";
+    echo "Data could not be retrieved from the database." . $e->getMessage();
     exit;
   }
 
