@@ -1516,8 +1516,13 @@ header {
   width: 50%;
   margin: 0 auto;
 }
+/* line 122, ../sass/_whycomc.scss */
+#visit .moreInfoTitle {
+  font-size: 2.8em;
+  margin-bottom: 0.4em;
+}
 @media (min-width: 768px) {
-  /* line 123, ../sass/_whycomc.scss */
+  /* line 128, ../sass/_whycomc.scss */
   #visit p {
     font-size: 2em;
   }
@@ -1529,40 +1534,144 @@ header {
 /****************************
       Events Section
 ****************************/
-/* line 142, ../sass/_whycomc.scss */
-#events .eventContainer .eventDate .eventTitle {
-  font-size: 5em;
+/* line 146, ../sass/_whycomc.scss */
+#events .eventDate .eventTitle {
+  font-size: 3em;
   margin: 1em 0 0.2em;
   color: #CC0000;
   font-family: 'bebas_neue';
 }
-/* line 148, ../sass/_whycomc.scss */
-#events .eventContainer .eventDate span {
-  font-size: 4em;
+/* line 152, ../sass/_whycomc.scss */
+#events .eventDate span {
+  font-size: 3em;
   margin: 1em 0;
   vertical-align: middle;
   font-family: 'bebas_neue';
 }
-/* line 155, ../sass/_whycomc.scss */
-#events .eventContainer .eventDate .day {
-  font-size: 7em;
+/* line 159, ../sass/_whycomc.scss */
+#events .eventDate .day {
+  font-size: 6em;
 }
-/* line 160, ../sass/_whycomc.scss */
-#events .eventContainer .eventLocation {
-  font-size: 3em;
+/* line 164, ../sass/_whycomc.scss */
+#events .eventLocation {
+  font-size: 2em;
   font-family: 'bebas_neue';
   color: #003a66;
   margin-top: 0.6em;
 }
-/* line 167, ../sass/_whycomc.scss */
-#events .eventContainer p {
-  font-size: 2em;
+/* line 171, ../sass/_whycomc.scss */
+#events p {
+  font-size: 1.4em;
   margin: 1.5em auto;
   width: 60%;
+}
+@media (min-width: 768px) {
+  /* line 179, ../sass/_whycomc.scss */
+  #events .eventTitle {
+    font-size: 5em;
+  }
+  /* line 183, ../sass/_whycomc.scss */
+  #events span {
+    font-size: 4em;
+  }
+  /* line 187, ../sass/_whycomc.scss */
+  #events .day {
+    font-size: 7em;
+  }
+  /* line 191, ../sass/_whycomc.scss */
+  #events .eventLocation {
+    font-size: 3em;
+  }
+  /* line 195, ../sass/_whycomc.scss */
+  #events p {
+    font-size: 2em;
+  }
 }
 
 /****************************
     End Events Section
+****************************/
+/****************************
+    Opportunites Section
+****************************/
+/* line 209, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+/* line 216, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems {
+  width: 100%;
+  margin: 5px 10px 15px;
+  background-color: #333;
+}
+/* line 221, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems h6 {
+  color: white;
+  font-size: 2em;
+  margin: 0.8em 0 0;
+}
+/* line 227, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems p {
+  color: white;
+  font-size: 1em;
+  margin: 0.4em;
+  padding-bottom: 25px;
+}
+/* line 234, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems .contactContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* line 238, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems .contactContainer .email, .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
+  color: white;
+  padding-bottom: 1em;
+}
+/* line 243, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems .contactContainer .email {
+  padding-left: 1em;
+}
+/* line 247, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems .contactContainer .twitter {
+  padding-right: 1em;
+}
+@media (min-width: 768px) {
+  /* line 254, ../sass/_whycomc.scss */
+  .studentOpportuntiesContainer .studentItems {
+    width: 45%;
+    margin: 5px;
+  }
+}
+@media (min-width: 1000px) {
+  /* line 262, ../sass/_whycomc.scss */
+  .studentOpportuntiesContainer .studentItems {
+    width: 30%;
+    margin: 5px;
+  }
+}
+
+/****************************
+  End Opportunites Section
 ****************************/
 /****************************
         COST PAGE

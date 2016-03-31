@@ -46,14 +46,14 @@
   <div class="virtualTour">
     <h2>Virtual Tour <hr /></h2>
       <p>Visit Texas Tech using our virtual tour</p>
-
+      <br />
       <div class="tourContainer">
         <a class="virtualtour_embed" title="Virtual Reality, Virtual Tour" href="http://www.youvisit.com" data-platform="v" data-link-type="image" data-inst="59975" data-image-width="100%" data-image-height="100">Virtual Tour</a>
       </div>
   </div>
 
   <div class="moreInfo">
-    <h2>More Information <hr /></h2>
+    <h3 class="moreInfoTitle">More Information</h3>
 
     <p>
       Find more information here, link here.
@@ -75,6 +75,5 @@ $(document).ready(function(){
     pauseOnHover: false,
   });
 });
-
 
 </script>

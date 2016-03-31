@@ -119,6 +119,11 @@
     }
   }
 
+  .moreInfoTitle {
+    font-size: 2.8em;
+    margin-bottom: 0.4em;
+  }
+
   @media (min-width: $screen-med) {
     p {
       font-size: 2em;
@@ -135,43 +140,135 @@
       Events Section
 ****************************/
 
-#events{
+#events {
 
-  .eventContainer {
-    .eventDate {
-      .eventTitle {
-        font-size: 5em;
-        margin: 1em 0 0.2em;
-        color: $red;
-        font-family: 'bebas_neue';
-      }
-      span {
-        font-size: 4em;
-        margin: 1em 0;
-        vertical-align: middle;
-        font-family: 'bebas_neue';
-      }
+  .eventDate {
+    .eventTitle {
+      font-size: 3em;
+      margin: 1em 0 0.2em;
+      color: $red;
+      font-family: 'bebas_neue';
+    }
+    span {
+      font-size: 3em;
+      margin: 1em 0;
+      vertical-align: middle;
+      font-family: 'bebas_neue';
+    }
 
-      .day {
-        font-size: 7em;
-      }
+    .day {
+      font-size: 6em;
+    }
+  }
+
+  .eventLocation {
+    font-size: 2em;
+    font-family: 'bebas_neue';
+    color: $dark-blue;
+    margin-top: 0.6em;
+  }
+
+  p {
+    font-size: 1.4em;
+    margin: 1.5em auto;
+    width: 60%;
+  }
+
+  @media (min-width: $screen-med) {
+
+    .eventTitle {
+      font-size: 5em;
+    }
+
+    span {
+      font-size: 4em;
+    }
+
+    .day {
+      font-size: 7em;
     }
 
     .eventLocation {
       font-size: 3em;
-      font-family: 'bebas_neue';
-      color: $dark-blue≥;
-      margin-top: 0.6em;
     }
 
     p {
       font-size: 2em;
-      margin: 1.5em auto;
-      width: 60%;
     }
   }
 }
 
 /****************************
     End Events Section
+****************************/
+
+/****************************
+    Opportunites Section
+****************************/
+
+.studentOpportuntiesContainer {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  .studentItems {
+    width: 100%;
+    margin: 5px 10px 15px;
+    background-color: $dark-grey;
+
+    h6 {
+      color: white;
+      font-size: 2em;
+      margin: 0.8em 0 0;
+    }
+
+    p {
+      color: white;
+      font-size: 1em;
+      margin: 0.4em;
+      padding-bottom: 25px;
+    }
+
+    .contactContainer {
+      display: flex;
+      justify-content: space-between;
+
+      .email, .twitter {
+        color: white;
+        padding-bottom: 1em;
+      }
+
+      .email {
+        padding-left: 1em;
+      }
+
+      .twitter {
+        padding-right: 1em;
+      }
+    }
+  }
+
+  @media (min-width: $screen-med) {
+    .studentItems {
+      width: 45%;
+      margin: 5px;
+    }
+
+  }
+
+  @media (min-width: $screen-lg) {
+    .studentItems {
+      width: 30%;
+      margin: 5px;
+    }
+
+  }
+
+}
+
+
+/****************************
+  End Opportunites Section
 ****************************/
