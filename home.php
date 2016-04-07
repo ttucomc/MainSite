@@ -8,6 +8,7 @@
 	<title>College of Media &amp; Communication</title>
 
 	<link rel="stylesheet" type="text/css" href="css/ttu.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
@@ -411,55 +412,12 @@
     <!-- CoMC EDITS START -->
 
 		<!-- ADD MAIN CONTENT BELOW THIS LINE -->
-		<div class="cycle-slideshow" data-cycle-timeout="6000" data-cycle-slides="&gt; a">
-			<div class="cycle-prev">&nbsp;</div>
-			<div class="cycle-next">&nbsp;</div>
-			<a href="/comc/about/index.php"> <img src="/comc/images/homeslider/WordsGraphic.jpg" alt="My Adventure. My Degree. My COMC." /> </a> <a href="/comc/students/prospective.php"> <img src="/comc/images/homeslider/MyAdventure2.jpg" alt="My Adventure" /> </a> <a href="/comc/programs/index.php"> <img src="/comc/images/homeslider/MyDegree.jpg" alt="My Degree" /> </a> <a href="/comc/students/current.php"> <img src="/comc/images/homeslider/MyCoMC.jpg" alt="My COMC" /> </a></div>
-			<section id="videoHeader" class="hidden-mobile">
-				<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
-				<div id="videoMute">
-					<p>Click for Sound</p>
-				</div>
-				<?php
-				if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT']))
-				{
-					echo '<img src="/comc/images/home/comc-building.jpg" alt="The College of Media &amp; Communication building" />';
-				}
-				else
-				{
-					echo '
-					<video class="video-js" width="" height="" preload="auto" autoplay="autoplay" loop="loop" poster="/comc/images/home/transparent.png" data-setup="{}">
-						<source src="/comc/images/home/video/DylanGeorgeAmbassador.mp4" type="video/mp4" />
-						<source src="/comc/images/home/video/DylanGeorgeAmbassador.webm" type="video/webm" />
-						<source src="/comc/images/home/video/DylanGeorgeAmbassador.ogg" type="video/ogg" />
-						<p class="vjs-no-js">
-						To view this video please enable JavaScript, and consider upgrading to a web browser that
-						<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-						</p>
-						</video>
-						';
-					}
-					?></section>
-					<section id="mobileHeader" class="hidden-desktop">
-						<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
-						<div id="mobileGreeting" class="animated fadeInLeft">
-							<p>"I picked PR because we call ourselves the Swiss Army Knife. I’m getting to dip my toe into a little bit of everything."<br />- Dylan George</p>
-						</div>
-						<div id="mobileHeaderImage" class="animated fadeInUp"><img src="/comc/images/home/dylan-noback.png" alt="Dylan Noback" /></div>
-					</section>
-					<section class="content-block">
-						<div id="intro-section" class="wrapper">
-							<div class="columns-wrapper column-flex column-flexwrap">
-								<div class="column-full column-centered column-padded-horizontal">
-									<h1>College of Media &amp; Communication</h1>
-									<h2>Communication is essential</h2>
-									<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
-									<h3>Apply Now!</h3>
-									<p><a class="button" href="http://www.ttu.edu/admissions/">Undergraduate</a>&nbsp;<a class="button" href="/comc/graduate/apply/">Graduate</a></p>
-								</div>
-							</div>
-						</div>
-					</section>
+						<section id="intro-section" class="row">
+							<h2>Communication is essential</h2>
+							<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
+							<h3>Apply Now!</h3>
+							<p><a class="button" href="http://www.ttu.edu/admissions/">Undergraduate</a>&nbsp;<a class="button" href="/comc/graduate/apply/">Graduate</a></p>
+						</section>
 					<section id="home-students">
 						<div class="wow slideInLeft intro-photo-half">
 							<div id="intro-current"><a href="/comc/students/current/"> <span class="home-students-text">Current Students</span> </a></div>
@@ -482,7 +440,11 @@
 									<hr />
 									<p>Debra Sanderson</p>
 								</div>
-								<div class="home-adv-contact"><a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H <a href="/comc/advising/advertising/"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a></div>
+								<div class="home-adv-contact">
+									<p>
+										<a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a>
+									</p>
+								</div>
 							</li>
 							<li>
 								<div class="home-adv-card-top">
@@ -493,7 +455,11 @@
 									<hr />
 									<p>Judy Poffenbarger</p>
 								</div>
-								<div class="home-adv-contact"><a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J <a href="/comc/advising/commstudies/"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a></div>
+								<div class="home-adv-contact">
+									<p>
+										<a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J<br /><a href="/comc/advising/commstudies/"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a>
+									</p>
+								</div>
 							</li>
 							<li>
 								<div class="home-adv-card-top">
@@ -504,7 +470,11 @@
 									<hr />
 									<p>Donald Ellis</p>
 								</div>
-								<div class="home-adv-contact"><a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E <a href="/comc/advising/electronicmedia/"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a></div>
+								<div class="home-adv-contact">
+									<p>
+										<a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/electronicmedia/"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a>
+									</p>
+								</div>
 							</li>
 							<li>
 								<div class="home-adv-card-top">
@@ -515,7 +485,11 @@
 									<hr />
 									<p>Heath Tolleson</p>
 								</div>
-								<div class="home-adv-contact"><a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169 <a href="/comc/advising/journalism/"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a></div>
+								<div class="home-adv-contact">
+									<p>
+										<a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/journalism/"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a>
+									</p>
+								</div>
 							</li>
 							<li>
 								<div class="home-adv-card-top">
@@ -526,7 +500,11 @@
 									<hr />
 									<p>Rose Cruz</p>
 								</div>
-								<div class="home-adv-contact"><a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E <a href="/comc/advising/mediastrategies/"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a></div>
+								<div class="home-adv-contact">
+									<p>
+										<a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/mediastrategies/"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a>
+									</p>
+								</div>
 							</li>
 							<li>
 								<div class="home-adv-card-top">
@@ -537,7 +515,11 @@
 									<hr />
 									<p>Kim Bergan</p>
 								</div>
-								<div class="home-adv-contact"><a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169 <a href="/comc/advising/publicrelations/"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a></div>
+								<div class="home-adv-contact">
+								<p>
+									<a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/publicrelations/"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a>
+								</p>
+								</div>
 							</li>
 						</ul>
 					</section>
@@ -557,9 +539,20 @@
 								<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
 								<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
 							</div>
-							<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/index.php"> <img src="/comc/about/publications/MC/images/CoMC-Logo.svg" alt="CoMC Logo" width="991" height="558" /></a>
+							<div class="home-publication wow fadeInUp">
+								<a href="/comc/about/publications/converging/">
+									<img src="/comc/about/publications/converging/2016/images/march/zachman1.jpg" title="Joyce Zachman speaking to Undergraduate Affairs" alt="Joyce Zachman speaking to Undergraduate Affairs" />
+								</a>
 								<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
-								<p class="hidden-mobile"><a href="/comc/about/publications/converging/index.php"><strong>College of Media &amp; Communication Sees Near-Record Enrollment Numbers</strong><br /><br />Enrollment numbers for Fall 2015 are soaring in the Texas Tech University College of Media &amp; Communication, with a total of 1,620 students, which both surpasses the previous year’s number and sets a near-record high.<br /><br /><em>More...</em></a></p>
+								<p class="hidden-mobile">
+									<a href="/comc/about/publications/converging/">
+										<strong>College of Media &amp; Communication to Launch Online "Parent Portal"</strong>
+										<br /><br />
+										The Texas Tech University College of Media &amp; Communication is launching a "parent portal" to give parents more insight into the CoMC experience for prospective students.
+										<br /><br />
+										<em>More...</em>
+									</a>
+								</p>
 							</div>
 							<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/mc/"> <img style="width: 50%;" src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
 								<h3><a href="/comc/about/publications/mc.php">The MC 2015</a></h3>
@@ -567,59 +560,56 @@
 							</div>
 						</div>
 					</section>
-					<div class="content-block" style="margin-bottom: -62px;">
-						<div class="wrapper wrapper-padded-mobile">
-							<div class="column-wrapper column-flex column-flexwrap">
-								<div id="home-social" class="column-full column-centered"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
-									<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
-								</div>
-							</div>
+					<section class="row">
+						<div id="home-social" class="">
+							<a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a>
+							<a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a>
+							<a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a>
+							<a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
+							<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
 						</div>
-						<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-						<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-						<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-						<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
-						<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
-						<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
-						<script type="text/javascript" src="/comc/includes/js/home.js"></script>
-						<script type="text/javascript" src="http://vjs.zencdn.net/5.0.2/video.js"></script>
-						<script type="text/javascript">
-							$(function() {
-								// WOW.js
-								new WOW().init();
+					</section>
+					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+					<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
+					<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
+					<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
+					<script type="text/javascript">
+						$(function() {
+							// WOW.js
+							new WOW().init();
 
 
-								// ScrollMagic
-								// init controller
-								var controller = new ScrollMagic.Controller();
+							// ScrollMagic
+							// init controller
+							var controller = new ScrollMagic.Controller();
 
-								// Animate Spacer
-								var spacerTweenEnter = TweenMax.staggerFromTo(".spacer-words", 1, {opacity:0, left:"-5%"}, {opacity:1, left:"0%"}, 0.5);
+							// Animate Spacer
+							var spacerTweenEnter = TweenMax.staggerFromTo(".spacer-words", 1, {opacity:0, left:"-5%"}, {opacity:1, left:"0%"}, 0.5);
 
-								var sceneSpacerEnter = new ScrollMagic.Scene({
-									triggerElement: ".home-spacer",
-									offset: -300,
-									duration: 300
-								})
-								.setTween(spacerTweenEnter)
-								.addTo(controller);
+							var sceneSpacerEnter = new ScrollMagic.Scene({
+								triggerElement: ".home-spacer",
+								offset: -300,
+								duration: 300
+							})
+							.setTween(spacerTweenEnter)
+							.addTo(controller);
 
-								var spacerTweenLeave = TweenMax.to(".spacer-words", 1, {opacity: 0, top: "-10%"});
+							var spacerTweenLeave = TweenMax.to(".spacer-words", 1, {opacity: 0, top: "-10%"});
 
-								var sceneSpacerLeave = new ScrollMagic.Scene({
-									triggerElement: ".home-spacer",
-									triggerHook: "onLeave",
-									duration: 200,
-									offset: -50
-								})
-								.setTween(spacerTweenLeave)
-								.addTo(controller);
+							var sceneSpacerLeave = new ScrollMagic.Scene({
+								triggerElement: ".home-spacer",
+								triggerHook: "onLeave",
+								duration: 200,
+								offset: -50
+							})
+							.setTween(spacerTweenLeave)
+							.addTo(controller);
 
 
-							});
-							</script>
-						</div>
-						<?php echo '<div class="wrapper wrapper-padded-mobile"><div class="wrapper"><div class="content-block"><div class="column-full column-padded-horizontal column-padded-vertical-desktop">' ?>
+						});
+						</script>
 
 							<!-- ADD MAIN CONTENT ABOVE THIS LINE -->
 
