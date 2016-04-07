@@ -24,7 +24,7 @@ Advising Main Page
 .team-card {
 	display: table;
 	min-height: 432px;
-	margin: 0 0 5em;
+	margin-bottom: 5em !important;
 	@media screen and (max-width: 768px) {
 		display: inline-block;
 		min-height: 300px;
@@ -41,11 +41,12 @@ Advising Main Page
 		position: relative;
 	}
 	.tm-card-col {
-		display: table-cell;
+		display: inherit;
 		min-height: inherit;
 		min-width: 300px;
 		@media screen and (max-width: 768px) {
 			display: block;
+			width: 100%;
 			min-width: inherit;
 		}
 	}
@@ -221,6 +222,8 @@ Advising Main Page
 				position: relative;
 			}
 			hr {
+				display: block !important;
+				left: 0;
 				border: none;
 				border-top: 1px solid $lightBlack;
 				width: 90%;
@@ -431,18 +434,3 @@ ANIMATIONS
 	75%{-moz-transform:rotateY(10deg);-ms-transform:rotateY(10deg);-webkit-transform:rotateY(10deg);transform:rotateY(10deg)}
 	100%{-moz-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
