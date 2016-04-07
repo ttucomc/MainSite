@@ -41,7 +41,7 @@ Advising Main Page
 		position: relative;
 	}
 	.tm-card-col {
-		display: inherit;
+		display: table-cell;
 		min-height: inherit;
 		min-width: 300px;
 		@media screen and (max-width: 768px) {
@@ -212,7 +212,7 @@ Advising Main Page
 			}
 		}
 		.tm-details-bottom {
-			position: absolute;
+			position: relative;
 			bottom: 0;
 			left: 0;
 			text-align: center;
