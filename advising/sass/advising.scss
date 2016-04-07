@@ -25,6 +25,7 @@ Advising Main Page
 	display: table;
 	min-height: 432px;
 	margin-bottom: 5em !important;
+	@include backface-visibility(hidden);
 	@media screen and (max-width: 768px) {
 		display: inline-block;
 		min-height: 300px;
@@ -51,11 +52,13 @@ Advising Main Page
 		}
 	}
 	.tm-card-bio {
+		@include backface-visibility(hidden);
 		.side-container {
 			position: relative;
 			@include transform-style(preserve-3d);
 			@include perspective(800px);
 			min-height: inherit;
+			@include backface-visibility(hidden);
 			&:hover {
 				.tm-back {
 					@include rotateY(0deg);
@@ -96,6 +99,7 @@ Advising Main Page
 				position: absolute;
 				text-align: center;
 				@include rotateY(-180deg);
+				@include backface-visibility(hidden);
 				.tm-back-img {
 					display: table-cell;
 					vertical-align: bottom;
