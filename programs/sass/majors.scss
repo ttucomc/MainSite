@@ -6,6 +6,34 @@
 @import 'variables';
 
 
+/***** TEMPLATE EDITS FOR PAGE *****/
+.l-main-pagecontent {
+  // Remove all padding
+  padding: 0;
+  & > .row {
+    // Make content area full width
+    max-width: none;
+    .row {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1170px;
+    }
+  }
+  h1 {
+    text-align: center;
+  }
+}
+.default-list li {
+	text-indent: 0;
+	margin: 0;
+	&:before {
+		content: '';
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
 /***** INFO SECTION *****/
 
 .major-info {
@@ -177,7 +205,7 @@
 	position: relative;
 	background: image-url('squared_metal.png');
 	text-align: center;
-	padding: 6em 0;
+	padding: 6em 0 0;
 	overflow: hidden;
 	.columns-wrapper {
 		position: relative;
@@ -301,7 +329,7 @@
 				font-size: 1.25em;
 				line-height: 1;
 				padding: 2.5em 2em;
-				width: 50%;
+				width: 100%;
 				&:after {
 					content: 'Answer';
 					    position: absolute;
@@ -311,35 +339,20 @@
 					    font-weight: 800;
 					    font-size: 2em;
 				}
-				@media screen and (max-width: 768px) {
-					width: 50%;
-				}
 				@media screen and (max-width: 480px) {
 					padding: 2.5em 2.5em 2.5em 1em;
-					width: 100%;
 				}
 				&:first-child {
 					display: block;
 				}
 			}
-			img {
-				position: absolute;
-				right: -50px;
-				bottom: -220px;
-				width: 80%;
-				z-index: -1;
-				@media screen and (max-width: 1200px) {
-					width: 100%;
-				}
-				@media screen and (max-width: 768px) {
-					width: 80%;
-				}
-				@media screen and (max-width: 650px) {
-					bottom: -175px;
-					width: 100%;
-				}
-				@media screen and (max-width: 400px) {
-					bottom: -120px;
+			.faq-image {
+				@media screen and (min-width: 768px) {
+					position: relative;
+					img {
+						position: relative;
+						bottom: -1em;
+					}
 				}
 			}
 		}
@@ -350,12 +363,12 @@
 /***** MAJOR SPACER SECTION *****/
 .major-spacer {
 	background-color: $lightBlack;
-	color: $cream;
 	font-size: 2em;
 	text-align: center;
 	line-height: 1;
 	width: 100%;
 	p {
+		color: $cream;
 		padding: 2em .5em;
 		margin: 0;
 	}
@@ -399,35 +412,3 @@
 .wrapper-wide-red {
 	margin-top: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
