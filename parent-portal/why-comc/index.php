@@ -42,9 +42,24 @@
                   <br />
                   <p><?php echo $value['description']; ?></p>
                   <div class="contactContainer">
-                    <div class="email"><?php echo $value['url']; ?></div>
-                    <?php if(!empty($value["twitter"])) { ?>
-                    <div class="twitter"><?php echo $value['twitter']; ?></div>
+
+                    <div class="email"><a href="http://<?php echo $value['url']; ?>" target="_blank">Visit Us</a></div>
+
+
+                    <?php if(!empty($value["twitter"])) {
+
+                      //We need to cut the '@' from the twitter handle to link it to twitter.
+
+                      $twitterLink = substr($value['twitter'], 1, strlen($value['twitter']));
+
+                      echo $twitterLink;
+
+                      ?>
+
+                      <div class="twitter">
+                        <a href="http://www.twitter.com/<?php echo $twitterLink; ?>/" target="_blank"><?php echo $value['twitter']; ?></a>
+                      </div>
+
                     <?php } ?>
                   </div>
                 </div>

@@ -1607,10 +1607,10 @@ header {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 /* line 216, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems {
@@ -1647,23 +1647,34 @@ header {
   color: white;
   padding-bottom: 1em;
 }
-/* line 243, ../sass/_whycomc.scss */
+/* line 242, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems .contactContainer .email a, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a {
+  color: white;
+  text-decoration: none;
+}
+/* line 246, ../sass/_whycomc.scss */
+.studentOpportuntiesContainer .studentItems .contactContainer .email a:hover, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a:hover {
+  color: #cccccc;
+  cursor: pointer;
+}
+/* line 253, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email {
   padding-left: 1em;
+  padding-right: 1em;
 }
-/* line 247, ../sass/_whycomc.scss */
+/* line 258, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   padding-right: 1em;
 }
 @media (min-width: 768px) {
-  /* line 254, ../sass/_whycomc.scss */
+  /* line 265, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 45%;
     margin: 5px;
   }
 }
 @media (min-width: 1000px) {
-  /* line 262, ../sass/_whycomc.scss */
+  /* line 273, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 30%;
     margin: 5px;

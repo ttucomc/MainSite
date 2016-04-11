@@ -211,7 +211,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
 
   .studentItems {
     width: 100%;
@@ -238,10 +238,21 @@
       .email, .twitter {
         color: white;
         padding-bottom: 1em;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            color: darken(white, 20);
+            cursor: pointer;
+          }
+        }
       }
 
       .email {
         padding-left: 1em;
+        padding-right: 1em;
       }
 
       .twitter {
