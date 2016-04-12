@@ -22,6 +22,15 @@
     text-align: center;
   }
 }
+h1 {
+  font-size: 2.85em;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 72px;
+  }
+}
 
 
 
@@ -30,9 +39,15 @@
 	text-align: center;
 	padding: 0 0 10em;
 	z-index: 1;
+  @media screen and (max-width: 768px) {
+    padding: 0 .25em 10em;
+  }
 	h2 {
 		font-size: 3em;
 		margin: 1em 0 .2em;
+    &+p {
+      margin-top: 1em;
+    }
 		@media screen and (max-width: 768px) {
 			font-size: 2.75em;
 		}
@@ -58,7 +73,7 @@
         }
     }
     .button {
-      width: 100%;
+      width: 80%;
       margin: 10px 0 .125em;
       word-wrap: normal;
       @media screen and (min-width: 768px) {
