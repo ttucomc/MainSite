@@ -2,6 +2,32 @@
 					Majors Template CSS
 **********************************************************/
 /********** VARIABLES **********/
+/***** TEMPLATE EDITS FOR PAGE *****/
+.l-main-pagecontent {
+  padding: 0;
+}
+.l-main-pagecontent > .row {
+  max-width: none;
+}
+.l-main-pagecontent > .row .row {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+.l-main-pagecontent h1 {
+  text-align: center;
+}
+
+.default-list li {
+  text-indent: 0;
+  margin: 0;
+}
+.default-list li:before {
+  content: '';
+  margin: 0;
+  padding: 0;
+}
+
 /***** INFO SECTION *****/
 .major-info {
   position: relative;
@@ -189,7 +215,7 @@
   position: relative;
   background: url('/../comc/images/majors/squared_metal.png');
   text-align: center;
-  padding: 6em 0;
+  padding: 6em 0 0;
   overflow: hidden;
 }
 .major-main .columns-wrapper {
@@ -328,7 +354,7 @@
   font-size: 1.25em;
   line-height: 1;
   padding: 2.5em 2em;
-  width: 50%;
+  width: 100%;
 }
 .major-main .major-interactive-right .interactive-faq-a p:after {
   content: 'Answer';
@@ -339,59 +365,34 @@
   font-weight: 800;
   font-size: 2em;
 }
-@media screen and (max-width: 768px) {
-  .major-main .major-interactive-right .interactive-faq-a p {
-    width: 50%;
-  }
-}
 @media screen and (max-width: 480px) {
   .major-main .major-interactive-right .interactive-faq-a p {
     padding: 2.5em 2.5em 2.5em 1em;
-    width: 100%;
   }
 }
 .major-main .major-interactive-right .interactive-faq-a p:first-child {
   display: block;
 }
-.major-main .major-interactive-right .interactive-faq-a img {
-  position: absolute;
-  right: -50px;
-  bottom: -220px;
-  width: 80%;
-  z-index: -1;
-}
-@media screen and (max-width: 1200px) {
-  .major-main .major-interactive-right .interactive-faq-a img {
-    width: 100%;
+@media screen and (min-width: 768px) {
+  .major-main .major-interactive-right .interactive-faq-a .faq-image {
+    position: relative;
   }
-}
-@media screen and (max-width: 768px) {
-  .major-main .major-interactive-right .interactive-faq-a img {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .major-main .major-interactive-right .interactive-faq-a img {
-    bottom: -175px;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .major-main .major-interactive-right .interactive-faq-a img {
-    bottom: -120px;
+  .major-main .major-interactive-right .interactive-faq-a .faq-image img {
+    position: relative;
+    bottom: -1em;
   }
 }
 
 /***** MAJOR SPACER SECTION *****/
 .major-spacer {
   background-color: #333;
-  color: #EAE0C6;
   font-size: 2em;
   text-align: center;
   line-height: 1;
   width: 100%;
 }
 .major-spacer p {
+  color: #EAE0C6;
   padding: 2em .5em;
   margin: 0;
 }
