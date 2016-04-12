@@ -535,9 +535,9 @@
 								<h3><a href="/comc/about/publications/advantage/index.php">Alumni Advantage</a></h3>
 								<p class="hidden-mobile"><a href="/comc/about/publications/advantage/index.php"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
 							</div>
-							<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img src="/comc/about/publications/adviser/images/aug15/joshhutchinson.jpg" alt="Josh Hutchinson" /></a>
+							<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img src="/comc/about/publications/adviser/2016/images/ToriYoung-1.jpg" alt="Tori Young" title="Tori Young" /></a>
 								<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
-								<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Get to know your ambassador: Joshua Hutchinson.</strong><br /><br />He's a senior public relations major from Houston, Texas.<br /><br /><em>More...</em></a></p>
+								<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Student Spotlight: Victoria (Tori) Young</strong><br /><br />Young has advice for incoming students. “Be excited, show interest early on, and always ask questions. Be confident, and go get involved,” Young said. “You get to your senior year before you know it and realize that you had a group of professors watching over you the whole time. You graduate from Texas Tech with a support team. Not only do I have personal friends and relationships that will help me get far in life, but I have my mentors looking over me wanting me to succeed.”<br /><br /><em>More...</em></a></p>
 							</div>
 							<div class="home-publication wow fadeInUp">
 								<a href="/comc/about/publications/converging/">
