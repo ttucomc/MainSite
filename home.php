@@ -412,208 +412,178 @@
     <!-- CoMC EDITS START -->
 
 		<!-- ADD MAIN CONTENT BELOW THIS LINE -->
-						<section id="intro-section" class="row">
-							<h2>Communication is essential</h2>
-							<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
-							<h3>Apply Now!</h3>
-							<p><a class="button" href="http://www.ttu.edu/admissions/">Undergraduate</a>&nbsp;<a class="button" href="/comc/graduate/apply/">Graduate</a></p>
-						</section>
-					<section id="home-students">
-						<div class="wow slideInLeft intro-photo-half">
-							<div id="intro-current"><a href="/comc/students/current/"> <span class="home-students-text">Current Students</span> </a></div>
-						</div>
-						<div class="wow slideInRight intro-photo-half">
-							<div id="intro-prospective"><a href="/comc/students/prospective.php"> <span class="home-students-text">Prospective Students</span> </a></div>
-						</div>
-					</section>
-					<section id="home-advising">
-						<div id="home-advising-badge">
-							<h2><a href="/comc/advising/">Advising</a></h2>
-						</div>
-						<ul>
-							<li>
-								<div class="home-adv-card-top">
-									<div><span>ADV</span></div>
-								</div>
-								<div class="home-adv-card-bottom">
-									<h3><a href="/comc/advising/advertising/">Advertising</a></h3>
-									<hr />
-									<p>Debra Sanderson</p>
-								</div>
-								<div class="home-adv-contact">
-									<p>
-										<a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="home-adv-card-top">
-									<div><span>COMS</span></div>
-								</div>
-								<div class="home-adv-card-bottom">
-									<h3><a href="/comc/advising/commstudies/">Communication Studies</a></h3>
-									<hr />
-									<p>Judy Poffenbarger</p>
-								</div>
-								<div class="home-adv-contact">
-									<p>
-										<a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J<br /><a href="/comc/advising/commstudies/"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="home-adv-card-top">
-									<div><span>EMC</span></div>
-								</div>
-								<div class="home-adv-card-bottom">
-									<h3><a href="/comc/advising/electronicmedia/">Electronic Media</a></h3>
-									<hr />
-									<p>Donald Ellis</p>
-								</div>
-								<div class="home-adv-contact">
-									<p>
-										<a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/electronicmedia/"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="home-adv-card-top">
-									<div><span>JOUR</span></div>
-								</div>
-								<div class="home-adv-card-bottom">
-									<h3><a href="/comc/advising/journalism/">Journalism</a></h3>
-									<hr />
-									<p>Heath Tolleson</p>
-								</div>
-								<div class="home-adv-contact">
-									<p>
-										<a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/journalism/"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="home-adv-card-top">
-									<div><span>MST</span></div>
-								</div>
-								<div class="home-adv-card-bottom">
-									<h3><a href="/comc/advising/mediastrategies/">Media Strategies</a></h3>
-									<hr />
-									<p>Rose Cruz</p>
-								</div>
-								<div class="home-adv-contact">
-									<p>
-										<a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/mediastrategies/"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="home-adv-card-top">
-									<div><span>PR</span></div>
-								</div>
-								<div class="home-adv-card-bottom">
-									<h3><a href="/comc/advising/publicrelations/">Public Relations</a></h3>
-									<hr />
-									<p>Kim Bergan</p>
-								</div>
-								<div class="home-adv-contact">
-								<p>
-									<a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/publicrelations/"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a>
-								</p>
-								</div>
-							</li>
-						</ul>
-					</section>
-					<div class="home-spacer">
-						<div class="spacer-words">My Adventure.</div>
-						<div class="spacer-words">My Degree.</div>
-						<div class="spacer-words spacer-twitter"><a class="icon-twitter" href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=%23MyCoMC&amp;src=typd">#MyCoMC</a></div>
+		<section id="intro-section" class="row">
+			<h2>Communication is essential</h2>
+			<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
+			<h3>Apply Now!</h3>
+			<p><a class="button" href="http://www.ttu.edu/admissions/">Undergraduate</a>&nbsp;<a class="button" href="/comc/graduate/apply/">Graduate</a></p>
+		</section>
+		<section id="home-students">
+			<div class="wow slideInLeft intro-photo-half">
+				<div id="intro-current"><a href="/comc/students/current/"> <span class="home-students-text">Current Students</span> </a></div>
+			</div>
+			<div class="wow slideInRight intro-photo-half">
+				<div id="intro-prospective"><a href="/comc/students/prospective.php"> <span class="home-students-text">Prospective Students</span> </a></div>
+			</div>
+		</section>
+		<section id="home-advising">
+			<div id="home-advising-badge">
+				<h2><a href="/comc/advising/">Advising</a></h2>
+			</div>
+			<ul>
+				<li>
+					<div class="home-adv-card-top">
+						<div><span>ADV</span></div>
 					</div>
-					<section id="home-publications">
-						<h2>Newsletters</h2>
-						<div id="home-publications-flex">
-							<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/advantage/index.php"> <img src="/comc/about/publications/advantage/images/trobberson.jpg" alt="Todd Robberson" /></a>
-								<h3><a href="/comc/about/publications/advantage/index.php">Alumni Advantage</a></h3>
-								<p class="hidden-mobile"><a href="/comc/about/publications/advantage/index.php"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
-							</div>
-							<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img src="/comc/about/publications/adviser/2016/images/ToriYoung-1.jpg" alt="Tori Young" title="Tori Young" /></a>
-								<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
-								<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Student Spotlight: Victoria (Tori) Young</strong><br /><br />Young has advice for incoming students. “Be excited, show interest early on, and always ask questions. Be confident, and go get involved,” Young said. “You get to your senior year before you know it and realize that you had a group of professors watching over you the whole time. You graduate from Texas Tech with a support team. Not only do I have personal friends and relationships that will help me get far in life, but I have my mentors looking over me wanting me to succeed.”<br /><br /><em>More...</em></a></p>
-							</div>
-							<div class="home-publication wow fadeInUp">
-								<a href="/comc/about/publications/converging/">
-									<img src="/comc/about/publications/converging/2016/images/march/zachman1.jpg" title="Joyce Zachman speaking to Undergraduate Affairs" alt="Joyce Zachman speaking to Undergraduate Affairs" />
-								</a>
-								<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
-								<p class="hidden-mobile">
-									<a href="/comc/about/publications/converging/">
-										<strong>College of Media &amp; Communication to Launch Online "Parent Portal"</strong>
-										<br /><br />
-										The Texas Tech University College of Media &amp; Communication is launching a "parent portal" to give parents more insight into the CoMC experience for prospective students.
-										<br /><br />
-										<em>More...</em>
-									</a>
-								</p>
-							</div>
-							<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/mc/"> <img style="width: 50%;" src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
-								<h3><a href="/comc/about/publications/mc.php">The MC 2015</a></h3>
-								<p class="hidden-mobile"><a href="/comc/about/publications/mc.php"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
-							</div>
-						</div>
-					</section>
-					<section class="row">
-						<div id="home-social" class="">
-							<a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a>
-							<a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a>
-							<a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a>
-							<a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
-							<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
-						</div>
-					</section>
-					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-					<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
-					<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
-					<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
-					<script type="text/javascript">
-						$(function() {
-							// WOW.js
-							new WOW().init();
+					<div class="home-adv-card-bottom">
+						<h3><a href="/comc/advising/advertising/">Advertising</a></h3>
+						<hr />
+						<p>Debra Sanderson</p>
+					</div>
+					<div class="home-adv-contact">
+						<p><a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a></p>
+					</div>
+				</li>
+				<li>
+					<div class="home-adv-card-top">
+						<div><span>COMS</span></div>
+					</div>
+					<div class="home-adv-card-bottom">
+						<h3><a href="/comc/advising/commstudies/">Communication Studies</a></h3>
+						<hr />
+						<p>Judy Poffenbarger</p>
+					</div>
+					<div class="home-adv-contact">
+						<p><a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J<br /><a href="/comc/advising/commstudies/"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a></p>
+					</div>
+				</li>
+				<li>
+					<div class="home-adv-card-top">
+						<div><span>EMC</span></div>
+					</div>
+					<div class="home-adv-card-bottom">
+						<h3><a href="/comc/advising/electronicmedia/">Electronic Media</a></h3>
+						<hr />
+						<p>Donald Ellis</p>
+					</div>
+					<div class="home-adv-contact">
+						<p><a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/electronicmedia/"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a></p>
+					</div>
+				</li>
+				<li>
+					<div class="home-adv-card-top">
+						<div><span>JOUR</span></div>
+					</div>
+					<div class="home-adv-card-bottom">
+						<h3><a href="/comc/advising/journalism/">Journalism</a></h3>
+						<hr />
+						<p>Heath Tolleson</p>
+					</div>
+					<div class="home-adv-contact">
+						<p><a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/journalism/"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a></p>
+					</div>
+				</li>
+				<li>
+					<div class="home-adv-card-top">
+						<div><span>MST</span></div>
+					</div>
+					<div class="home-adv-card-bottom">
+						<h3><a href="/comc/advising/mediastrategies/">Media Strategies</a></h3>
+						<hr />
+						<p>Rose Cruz</p>
+					</div>
+					<div class="home-adv-contact">
+						<p><a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/mediastrategies/"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a></p>
+					</div>
+				</li>
+				<li>
+					<div class="home-adv-card-top">
+						<div><span>PR</span></div>
+					</div>
+					<div class="home-adv-card-bottom">
+						<h3><a href="/comc/advising/publicrelations/">Public Relations</a></h3>
+						<hr />
+						<p>Kim Bergan</p>
+					</div>
+					<div class="home-adv-contact">
+						<p><a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/publicrelations/"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a></p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<div class="home-spacer">
+			<div class="spacer-words">My Adventure.</div>
+			<div class="spacer-words">My Degree.</div>
+			<div class="spacer-words spacer-twitter"><a class="icon-twitter" href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=%23MyCoMC&amp;src=typd">#MyCoMC</a></div>
+		</div>
+		<section id="home-publications">
+			<h2>Newsletters</h2>
+			<div id="home-publications-flex">
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/advantage/index.php"> <img src="/comc/about/publications/advantage/images/trobberson.jpg" alt="Todd Robberson" /></a>
+					<h3><a href="/comc/about/publications/advantage/index.php">Alumni Advantage</a></h3>
+					<p class="hidden-mobile"><a href="/comc/about/publications/advantage/index.php"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
+				</div>
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Tori Young" src="/comc/about/publications/adviser/2016/images/ToriYoung-1.jpg" alt="Tori Young" /></a>
+					<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
+					<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Student Spotlight: Victoria (Tori) Young</strong><br /><br />Young has advice for incoming students. “Be excited, show interest early on, and always ask questions. Be confident, and go get involved,” Young said. “You get to your senior year before you know it and realize that you had a group of professors watching over you the whole time. You graduate from Texas Tech with a support team. Not only do I have personal friends and relationships that will help me get far in life, but I have my mentors looking over me wanting me to succeed.”<br /><br /><em>More...</em></a></p>
+				</div>
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="The 2016 Appathon Contestants" src="/comc/about/publications/converging/2016/images/april/appathon1.jpg" alt="The 2016 Appathon Contestants" /> </a>
+					<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
+					<p class="hidden-mobile"><a href="/comc/about/publications/converging/"> <strong>By Request: Texas Tech Hosts Fourth Annual Appathon</strong> <br /><br /> Android and iPhone users will soon have the opportunity to download Penguin, a new and innovative app created by the winners of Texas Tech’s fourth annual Appathon. <br /><br /> <em>More...</em> </a></p>
+				</div>
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/mc/"> <img style="width: 50%;" src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
+					<h3><a href="/comc/about/publications/mc.php">The MC 2015</a></h3>
+					<p class="hidden-mobile"><a href="/comc/about/publications/mc.php"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
+				</div>
+			</div>
+		</section>
+		<section class="row">
+			<div id="home-social"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
+				<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
+			</div>
+		</section>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+		<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
+		<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
+		<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				// WOW.js
+				new WOW().init();
 
 
-							// ScrollMagic
-							// init controller
-							var controller = new ScrollMagic.Controller();
+				// ScrollMagic
+				// init controller
+				var controller = new ScrollMagic.Controller();
 
-							// Animate Spacer
-							var spacerTweenEnter = TweenMax.staggerFromTo(".spacer-words", 1, {opacity:0, left:"-5%"}, {opacity:1, left:"0%"}, 0.5);
+				// Animate Spacer
+				var spacerTweenEnter = TweenMax.staggerFromTo(".spacer-words", 1, {opacity:0, left:"-5%"}, {opacity:1, left:"0%"}, 0.5);
 
-							var sceneSpacerEnter = new ScrollMagic.Scene({
-								triggerElement: ".home-spacer",
-								offset: -300,
-								duration: 300
-							})
-							.setTween(spacerTweenEnter)
-							.addTo(controller);
+				var sceneSpacerEnter = new ScrollMagic.Scene({
+					triggerElement: ".home-spacer",
+					offset: -300,
+					duration: 300
+				})
+				.setTween(spacerTweenEnter)
+				.addTo(controller);
 
-							var spacerTweenLeave = TweenMax.to(".spacer-words", 1, {opacity: 0, top: "-10%"});
+				var spacerTweenLeave = TweenMax.to(".spacer-words", 1, {opacity: 0, top: "-10%"});
 
-							var sceneSpacerLeave = new ScrollMagic.Scene({
-								triggerElement: ".home-spacer",
-								triggerHook: "onLeave",
-								duration: 200,
-								offset: -50
-							})
-							.setTween(spacerTweenLeave)
-							.addTo(controller);
+				var sceneSpacerLeave = new ScrollMagic.Scene({
+					triggerElement: ".home-spacer",
+					triggerHook: "onLeave",
+					duration: 200,
+					offset: -50
+				})
+				.setTween(spacerTweenLeave)
+				.addTo(controller);
 
 
-						});
-						</script>
-
-							<!-- ADD MAIN CONTENT ABOVE THIS LINE -->
-
-    <!-- CoMC EDITS END -->
+			});
+			</script>
+			<!-- ADD MAIN CONTENT ABOVE THIS LINE -->
 
 
 
