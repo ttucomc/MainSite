@@ -45,6 +45,17 @@ Thumbs.db
 *config.php
 
 
+/events/admin/inc/*
+/events/rsvp/inc/*
+
+/info/*
 #
 
-*.scssc
+
+parent-portal/css/styles.css
+
+parent-portal/css/styles.css
+
+parent-portal/css/styles.css
+
+parent-portal/css/styles.css

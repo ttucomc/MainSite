@@ -7,4 +7,369 @@
   .button {
     background-color: $coral;
   }
+
+  h2 {
+    color: $coral;
+    font-size: 3.2em;
+  }
+
+  hr:after {
+    background-color: $coral;
+  }
+
+  p {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5em;
+  }
 }
+
+/****************************
+      Visit Section
+****************************/
+#visit
+{
+  .masterImageContainer {
+      position: relative;
+
+      .imageContainer
+      {
+        #ttu_1 {
+          background-image: url("../img/seal-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #ttu_2 {
+          background-image: url("../img/mem-circle-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #ttu_3 {
+          background-image: url("../img/cmc-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #ttu_4 {
+          background-image: url("../img/library-high.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
+    .marker {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      z-index: 10;
+      font-size: 4em;
+      color: $red;
+    }
+
+    .transparent {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    }
+  }
+
+  .visitLocal
+  {
+    background-color: $coral;
+    background-image: url("../img/60-lines.png");
+
+    h2 {
+      color: white;
+      font-size: 3.2em;
+      padding: 1em 0 0;
+    }
+
+    p {
+      color: white;
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.5em;
+      padding: 0 0 2em;
+    }
+  }
+
+  .virtualTour
+  {
+    .tourContainer {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .moreInfo {
+    margin: 3em auto 6em;
+
+    a {
+      text-decoration: none;
+
+      p {
+        color: $dark-blue;
+        transition: all 0.25s ease;
+
+        &:hover {
+          color: lighten($dark-blue, 20);
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+
+
+  @media (min-width: $screen-med) {
+    p {
+      font-size: 2em;
+    }
+  }
+}
+
+/****************************
+     End Visit Section
+****************************/
+
+
+/****************************
+      Events Section
+****************************/
+
+#events {
+
+  .eventDate {
+    .eventTitle {
+      font-size: 3em;
+      margin: 1em 0 0.2em;
+      color: $red;
+      font-family: 'bebas_neue';
+    }
+    span {
+      font-size: 3em;
+      margin: 1em 0;
+      vertical-align: middle;
+      font-family: 'bebas_neue';
+    }
+
+    .day {
+      font-size: 6em;
+    }
+  }
+
+  .eventLocation {
+    font-size: 2em;
+    font-family: 'bebas_neue';
+    color: $dark-blue;
+    margin-top: 0.6em;
+  }
+
+  p {
+    font-size: 1.4em;
+    margin: 1.5em auto;
+    width: 60%;
+  }
+
+  @media (min-width: $screen-med) {
+
+    .eventTitle {
+      font-size: 5em;
+    }
+
+    span {
+      font-size: 4em;
+    }
+
+    .day {
+      font-size: 7em;
+    }
+
+    .eventLocation {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 2em;
+    }
+  }
+}
+
+/****************************
+    End Events Section
+****************************/
+
+
+#lubbock {
+
+  .listContainer {
+
+    .listTitle {
+      font-size: 2.2em;
+      margin: 1em 0 0.5em;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        margin: 0.5em 0;
+        color: black;
+
+        a {
+          font-size: 1.5em;
+          color: $dark-blue;
+          text-decoration: none;
+          transition: all 0.25s ease;
+
+          &:hover {
+            color: lighten($dark-blue, 20);
+            cursor: pointer;
+          }
+        }
+
+        .subHead {
+          width: 100%;
+          font-size: 2em;
+          margin: 0.8em 0 0.5em;
+          padding: 0;
+        }
+
+        li {
+          margin: inherit;
+          font-size: 1.5em;
+        }
+
+      }
+    }
+  }
+
+  @media (min-width: $screen-med) {
+    .listContainer {
+      .listGroup {
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+
+
+/****************************
+    Opportunites Section
+****************************/
+.studentOpportuntiesTitle {
+
+  //font-size: 3em;
+  //margin: 1em 0 0.2em;
+  color: $coral;
+  font-family: 'bebas_neue';
+
+}
+
+.studentOpportuntiesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+
+  .studentItems {
+    position: relative;
+    width: 100%;
+    margin: 5px 10px 15px;
+    background-color: $light-grey;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.50s ease;
+
+    h4 {
+      color: black;
+      font-size: 2em;
+      margin: 0.8em 0 0;
+    }
+
+    p {
+      color: black;
+      font-size: 1em;
+      margin: 0.4em;
+      padding-bottom: 60px;
+    }
+
+    .contactContainer {
+      display: flex;
+      justify-content: space-between;
+
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      .email, .twitter {
+        color: black;
+        padding-bottom: 1em;
+
+        a {
+          color: black;
+          text-decoration: none;
+
+          &:hover {
+            color: lighten(black, 20);
+            cursor: pointer;
+          }
+        }
+      }
+
+      .email {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+
+      .twitter {
+        padding-right: 1em;
+      }
+    }
+  }
+
+  @media (min-width: $screen-med) {
+
+    .studentItems {
+      width: 45%;
+      margin: 10px;
+    }
+
+  }
+
+  @media (min-width: $screen-lg) {
+    .studentItems {
+      width: 30%;
+      margin: 15px;
+    }
+
+  }
+
+}
+
+
+/****************************
+  End Opportunites Section
+****************************/

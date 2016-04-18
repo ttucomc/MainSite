@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> mario-current
 <?php
 
   $pageTitle = "Parent Portal | CoMC | TTU";
@@ -5,10 +9,12 @@
   include 'inc/header.php';
 ?>
   <section id="landing" class="page1 active">
+
     <div id="container" class="container">
       <div id="output">
       </div>
     </div>
+
     <div class="title">
       <img id="logoWords" src="img/CoMC-logo-white.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
       <h1>Parents</h1>
@@ -20,6 +26,7 @@
       <img src="img/scroll-down-arrow.svg" alt="Arrow Down" title="Click to scroll down or scroll down" />
     </div>
   </section>
+
   <section id="overview">
     <section class="dark-grey info">
       <div class="row">
@@ -66,13 +73,16 @@
 
             </figure>
             <p>
+
               Is there help with the cost?
+
             </p>
           </div>
         </a>
       </div>
     </section>
   </section>
+
   <section id="interested">
     <div id="question">
       <h2>
@@ -113,5 +123,14 @@
       </p>
     </div>
   </section>
+
+
+  <script>
+    $('.scrollDown').click(function() {
+      $('html,body').animate({
+        scrollTop: $('#overview').position().top - 70
+      }, 800);
+    });
+  </script>
 
 <?php include 'inc/footer.php'; ?>

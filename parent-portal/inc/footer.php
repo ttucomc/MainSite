@@ -3,6 +3,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
 <script src="<?php echo BASE_URL; ?>js/scrollmagic/plugins/animation.gsap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="<?php echo BASE_URL; ?>js/slick.min.js"></script>
 
 <!-- MAIN JS -->
 <script src="<?php echo BASE_URL; ?>js/triangles.js"></script>
