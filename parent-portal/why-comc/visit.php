@@ -9,6 +9,21 @@
 */
 ?>
 <script src="http://cdn.youvisit.com/Assets/js/tour/embed/embed.min.js?v=2.16.03.17"></script>
+<script type="text/javascript" src="http://www.youvisit.com/tour/Embed/js2" defer=""></script>
+<script>
+
+  //Scrolling images JS
+  $(document).ready(function(){
+    $('.imageContainer').slick({
+      autoplay: true,
+      autoplaySpeed: 7500,
+      speed: 1350,
+      arrows: false,
+      pauseOnHover: false,
+    });
+  });
+
+</script>
 
 <section id="visit">
 
@@ -44,7 +59,7 @@
   </div>
 
   <div class="virtualTour">
-    <h2>Virtual Tour <hr /></h2>
+      <h2>Virtual Tour</h2>
       <p>Visit Texas Tech using our virtual tour</p>
       <br />
       <div class="tourContainer">
@@ -53,27 +68,7 @@
   </div>
 
   <div class="moreInfo">
-    <h3 class="moreInfoTitle">More Information</h3>
-
-    <p>
-      Find more information here, link here.
-    </p>
+    <a href='http://www.depts.ttu.edu/admissions/visit-events/'><p>More information</p></a>
   </div>
 
 </section>
-
-<script type="text/javascript" src="http://www.youvisit.com/tour/Embed/js2" defer=""></script>
-
-<script>
-
-$(document).ready(function(){
-  $('.imageContainer').slick({
-    autoplay: true,
-    autoplaySpeed: 7500,
-    speed: 1350,
-    arrows: false,
-    pauseOnHover: false,
-  });
-});
-
-</script>

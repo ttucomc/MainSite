@@ -10,21 +10,21 @@
 
 $events = array(
   array(
-    "title" => "TTU Appathon",
-    "description" => "The undulating common seemed now dark almost to blackness, except where its roadways lay grey and pale under the deep blue sky of the early night.",
-    "location" => "TTU Innovation Hub",
-    "month" => "Feb,",
-    "day" => " 20 ",
-    "year" => "16",
+    "title" => "Lone Startup Competition",
+    "description" => "Have an idea for a media startup? Enter the Student Startup Competition, and you could earn prize money granted by the College of Media & Communication to continue to develop your winning idea into a media business.",
+    "location" => "CoMC Room 359",
+    "month" => "April,",
+    "day" => " 28 ",
+    "year" => '16',
     ),
 
   array(
-    "title" => "TTU Appathon",
-    "description" => "The undulating common seemed now dark almost to blackness, except where its roadways lay grey and pale under the deep blue sky of the early night.",
-    "location" => "TTU Innovation Hub",
-    "month" => "Feb,",
-    "day" => " 20 ",
-    "year" => '16',
+    "title" => "JEMFest",
+    "description" => "From film and photography, to audio and web design, JEMFest is an annual showcase of Journalism and Electronic Media student work.",
+    "location" => "CoMC Third Floor Lounge",
+    "month" => "May,",
+    "day" => " 6 ",
+    "year" => "16",
     )
 );
 

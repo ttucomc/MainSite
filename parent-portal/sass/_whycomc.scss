@@ -119,10 +119,26 @@
     }
   }
 
-  .moreInfoTitle {
-    font-size: 2.8em;
-    margin-bottom: 0.4em;
+  .moreInfo {
+    margin: 3em auto 6em;
+
+    a {
+      text-decoration: none;
+
+      p {
+        color: $dark-blue;
+        transition: all 0.25s ease;
+
+        &:hover {
+          color: lighten($dark-blue, 20);
+          cursor: pointer;
+        }
+      }
+    }
+
   }
+
+
 
   @media (min-width: $screen-med) {
     p {
