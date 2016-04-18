@@ -7,24 +7,25 @@
   College of Mass Communications
 
 */
+
+$events = array(
+  array(
+    "title" => "TTU Appathon",
+    "description" => "The undulating common seemed now dark almost to blackness, except where its roadways lay grey and pale under the deep blue sky of the early night.",
+    "location" => "TTU Innovation Hub",
+    "month" => "Feb,",
+    "day" => " 20 ",
+    "year" => "16",
+    ),
+
+  array(
+    "title" => "TTU Appathon",
+    "description" => "The undulating common seemed now dark almost to blackness, except where its roadways lay grey and pale under the deep blue sky of the early night.",
+    "location" => "TTU Innovation Hub",
+    "month" => "Feb,",
+    "day" => " 20 ",
+    "year" => '16',
+    )
+);
+
 ?>
-
-
-<section id="events">
-
-  <h2>Events</h2>
-  <hr />
-
-  <div class="eventContainer">
-
-    <div class="eventDate">
-      <div class="eventTitle">TTU Appathon</div>
-      <br />
-      <span>Feb,</span><span class="day"> 20 </span><span>'16</span>
-    </div>
-
-    <div class="eventLocation">TTU Innovation Hub</div>
-    <p>The undulating common seemed now dark almost to blackness, except where its roadways lay grey and pale under the deep blue sky of the early night.</p>
-  </div>
-
-</section>
