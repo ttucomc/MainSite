@@ -46,7 +46,7 @@ h1 {
 		font-size: 3em;
 		margin: 1em 0 .2em;
     &+p {
-      margin-top: 1em;
+      margin-top: 0;
     }
 		@media screen and (max-width: 768px) {
 			font-size: 2.75em;
@@ -54,6 +54,9 @@ h1 {
 	}
   h3 {
     font-size: 1.75em;
+    &+p {
+      margin-top: .5em;
+    }
   }
 	p {
 		font-size: 1.5em;
@@ -347,6 +350,7 @@ h1 {
 				@include transition(.5s all ease-in-out);
 				img {
 					width: 75%;
+          max-width: 200px;
 					@include translateX(20%);
 				}
 				@media screen and (max-width: 768px) {
