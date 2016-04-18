@@ -41,6 +41,9 @@ Thumbs.db
 /startupcomp/apply/*
 *database.php
 
+/events/admin/inc/*
+/events/rsvp/inc/*
+
 /info/*
 #
 
