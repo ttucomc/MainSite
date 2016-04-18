@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> mario-current
 <?php
 
   $pageTitle = "Parent Portal | CoMC | TTU";
@@ -24,6 +20,17 @@
         Scroll Down
       </p>
       <img src="img/scroll-down-arrow.svg" alt="Arrow Down" title="Click to scroll down or scroll down" />
+    </div>
+  </section>
+
+  <section id="parent-video">
+    <div id="video-play">
+      <p>
+        <a href="" class="button">Hear from our parents!</a>
+      </p>
+    </div>
+    <div id="video">
+      <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/zj6zcLw2vDQ" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -128,8 +135,14 @@
   <script>
     $('.scrollDown').click(function() {
       $('html,body').animate({
-        scrollTop: $('#overview').position().top - 70
+        scrollTop: $('#parent-video').position().top - 70
       }, 800);
+    });
+
+    $("#video-play .button").click(function(e) {
+      e.preventDefault();
+      $('#video').css({'opacity': '1', 'pointer-events': 'auto'});
+      $("#player")[0].src += "?autoplay=1";
     });
   </script>
 

@@ -31,13 +31,6 @@
 
 </script>
 
-<script>
-  $('.scrollDown').click(function() {
-    $('html,body').animate({
-      scrollTop: $('#overview').position().top - 70
-    }, 800);
-  });
-</script>
 
 
 
