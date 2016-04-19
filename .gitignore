@@ -39,7 +39,11 @@ Thumbs.db
 # Random Files #
 ################
 /startupcomp/apply/*
+/info/*
 *database.php
+*cn.php
+*config.php
+
 
 /events/admin/inc/*
 /events/rsvp/inc/*
@@ -47,7 +51,6 @@ Thumbs.db
 /info/*
 #
 
-*.scssc
 
 parent-portal/css/styles.css
 

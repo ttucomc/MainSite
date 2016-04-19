@@ -95,6 +95,10 @@ h2 {
   }
 }
 
+p {
+  font-size: 1.33em;
+}
+
 hr {
   border: 0;
   background-color: $dark-grey;
@@ -232,6 +236,7 @@ hr {
   position: relative;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
   .title {
     position: absolute;
     top: 50%;

@@ -64,7 +64,6 @@
     $applyIcon = "./img/comc-hand.svg";
 
     ?>
-
     <div id="TTULogo">
       <img src="<?php echo BASE_URL; ?>img/TTU-logo.svg" />
     </div>
@@ -144,7 +143,7 @@
 
             <!-- Apply Menu -->
             <div class="menuBox" onclick="selectMenu(this);">
-
+              
               <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
 
               <h6>Apply</h6>

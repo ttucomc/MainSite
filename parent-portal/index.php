@@ -1,4 +1,3 @@
-
 <?php
 
   $pageTitle = "Parent Portal | CoMC | TTU";
@@ -24,11 +23,22 @@
     </div>
   </section>
 
+  <section id="parent-video">
+    <div id="video-play">
+      <p>
+        <a href="" class="button">Hear from our parents!</a>
+      </p>
+    </div>
+    <div id="video">
+      <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/zj6zcLw2vDQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
   <section id="overview">
     <section class="dark-grey info">
       <div class="row">
         <p>
-          Well, then, i confess, it is my intention to commandeer one of these ships, pick up a crew in tortuga, raid, pillage, plunder and otherwise pilfer my weasely black guts out. me? i'm dishonest, and a dishonest man you can always trust to be dishonest. honestly. it's the honest ones you want to watch out for, because you can never predict when they're going to do something incredibly... stupid. me?
+          The College of Media &amp; Communication recognizes the important role parents play in their students’ education. It is with parents in mind that we have created this information and resource section. From details about what to do in Lubbock to finding financial resources and support to learning about our engaging faculty, we have compiled a wealth of information for parents to peruse. We hope you find it helpful.
         </p>
       </div>
     </section>
@@ -70,7 +80,9 @@
 
             </figure>
             <p>
-              What is the cost?
+
+              Is there help with the cost?
+
             </p>
           </div>
         </a>
@@ -119,11 +131,18 @@
     </div>
   </section>
 
+
   <script>
     $('.scrollDown').click(function() {
       $('html,body').animate({
-        scrollTop: $('#overview').position().top - 70
+        scrollTop: $('#parent-video').position().top - 70
       }, 800);
+    });
+
+    $("#video-play .button").click(function(e) {
+      e.preventDefault();
+      $('#video').css({'opacity': '1', 'pointer-events': 'auto'});
+      $("#player")[0].src += "?autoplay=1";
     });
   </script>
 

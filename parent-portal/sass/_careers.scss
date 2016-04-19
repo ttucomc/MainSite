@@ -7,6 +7,56 @@
   .button {
     background-color: $blue;
   }
+
+  #overview {
+    padding: 5em 0.5em 3em;
+  }
+
+  #lists {
+    padding: 0 0 3em;
+    h2 {
+      color: $blue;
+      font-size: 4em;
+      margin: .5em 0;
+      @media screen and (min-width: $screen-med) {
+        font-size: 5em;
+        margin: .25em 0;
+      }
+    }
+    .row {
+      & > div {
+        padding-bottom: 2em;
+        vertical-align: top;
+        @media screen and (min-width: $screen-med) {
+          display: inline-block;
+          width: 49%;
+        }
+      }
+    }
+    ul {
+      font-size: 1.25em;
+      font-weight: bold;
+      list-style: none;
+      padding: 0;
+      @media screen and (min-width: $screen-lg) {
+        font-size: 1.5em;
+      }
+      li {
+        padding-bottom: .5em;
+      }
+    }
+    a {
+      @media screen and (min-width: $screen-med) {
+        font-size: 1.25em;
+      }
+      @media screen and (min-width: $screen-xl) {
+        font-size: 1.75em;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 

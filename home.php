@@ -126,7 +126,7 @@
 
     <?php echo "</div></div></div></div>" ?>
     <section id="videoHeader" class="hidden-mobile">
-    	<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.ttu.edu/admissions/">Apply Now!</a><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
+    	<div id="videoHeaderButtons" class="animated slideInDown"><a class="headerButton" href="http://www.visit.ttu.edu/">Visit Us!</a></div>
     	<div id="videoMute">
     		<p>Click for Sound</p>
     	</div>
@@ -164,11 +164,10 @@
     					<h1>College of Media &amp; Communication</h1>
     					<h2>Communication is essential</h2>
     					<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
-					</div>
-				</div>
-				<div class="animated fadeInUp columns-wrapper column-flex column-flexwrap" id="appathon">
-					<div class="column-full">
-						<a href="http://ttuappathon.com" target="_blank"><img src="/comc/images/home/appathon2016.png" alt="Appathon TTU 2016" title="Appathon TTU 2016"></a>
+							<h3>Apply Now!</h3>
+							<p>
+								<a href="http://www.ttu.edu/admissions/" class="button">Undergraduate</a>&nbsp;<a href="/comc/graduate/apply/" class="button">Graduate</a>
+							</p>
 					</div>
 				</div>
 			</div>
@@ -283,7 +282,11 @@
 		<div class="content-block" style="margin-bottom: -62px;">
 			<div class="wrapper wrapper-padded-mobile">
 				<div class="column-wrapper column-flex column-flexwrap">
-					<div id="home-social" class="column-full column-centered"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a></div>
+					<div id="home-social" class="column-full column-centered"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
+						<p id="employment">
+							Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a href="/comc/about/employement/" class="button">Join Our Team</a>
+						</p>
+					</div>
 				</div>
 			</div>
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

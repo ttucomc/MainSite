@@ -1,3 +1,6 @@
+/******************************************************
+LANDING PAGE
+******************************************************/
 // Showing major description on the landing page
 $('#question select').change(function() {
   // If the #description div is hidden, show it
@@ -45,5 +48,49 @@ $('#question select').change(function() {
       $('#description p').empty();
       $('#description p').append('Our award-winning public relations faculty prepares students to succeed in technical and managerial roles in public relations firms, as well as corporate and nonprofit organizations.<br><br>Coursework emphasizes relationship management and strategic campaign planning, the role of traditional and new media in public relations practice, principles of persuasive communication, globalization and diversity, the history of the field, and legal and ethical challenges that practitioners may face. We offer special topic courses related to media relations, crisis communication, social media, community relations, sports communication, government relations, international communication, and other practice areas.<br><br>More information in the TTU catalog:<br><a href="http://www.depts.ttu.edu/officialpublications/catalog/mc_pr.php" class="button" target="_blank">More Info...</a>')
     }).fadeToggle('fast');
+  }
+});
+
+/******************************************************
+CAREER PAGE
+******************************************************/
+// Variables for where the array needs to start
+var careerStart = 4;
+var employerStart = 4;
+
+// When the Careers "More..." button is clicked
+$('#career-list .load-more').click(function() {
+  // Looping through 5 times since we want 5 more items
+  for (var i = 0; i < 5; i++) {
+    // Setting the array to start at the next value
+    careerStart++;
+    // Keep adding to the list as long as there's still values
+    if (careerStart < careerList.length) {
+      // Appending the next list item as hidden for effect
+      $('#career-list ul').append("<li style='display:none;'>" + careerList[careerStart] + "</li>");
+      // Fading in the appended list item
+      $('#career-list ul li').last().slideToggle('slow');
+    } else {
+      // Fading out the more button when we've reached the end
+      $('#career-list a').fadeOut('slow');
+    }
+  }
+});
+// When the Employers "More.." button is clicked
+$('#employer-list .load-more').click(function() {
+  // Looping through 5 times since we want 5 more items
+  for (var i = 0; i < 5; i++) {
+    // Setting the array to start at the next value
+    employerStart++;
+    // Keep adding to the list as long as there's still values
+    if (employerStart < careerList.length) {
+      // Appending the next list item as hidden for effect
+      $('#employer-list ul').append("<li style='display:none;'>" + employerList[employerStart] + "</li>");
+      // Fading in the appended list item
+      $('#employer-list ul li').last().slideToggle('slow');
+    } else {
+      // Fading out the more button when we've reached the end
+      $('#employer-list a').fadeOut('slow');
+    }
   }
 });

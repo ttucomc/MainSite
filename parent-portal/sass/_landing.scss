@@ -34,6 +34,7 @@
       &:before {
         content: '';
         top: 0;
+        background-color: #FFF;
         width: 40%;
       }
       &:after {
@@ -45,13 +46,52 @@
 }
 
 /****************************
+      VIDEO SECTION
+****************************/
+#parent-video {
+  position: relative;
+  background: url("../img/parents-with-son.jpg") center center no-repeat;
+  background-size: cover;
+  height: 640px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+  }
+  #video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+  }
+  #video {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+  }
+  #player {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/****************************
       OVERVIEW SECTION
 ****************************/
-
 #overview {
   .info {
     background-image: url("../img/60-lines.png");
-    font-size: 1.33em;
     padding: 7em 0.5em;
   }
 
@@ -95,6 +135,10 @@
       color: $dark-grey;
       font-weight: bold;
       text-decoration: none;
+      height: 50%;
+      width: 50%;
+      padding: 0;
+      margin: 0;
       @include transition(.3s);
       &:hover {
         background-color: $light-grey;
@@ -134,13 +178,10 @@
           @include transition(.3s);
         }
         p {
+          font-size: 1em;
           padding: 0 .5em;
         }
       }
-      height: 50%;
-      width: 50%;
-      padding: 0;
-      margin: 0;
     }
   }
 }
