@@ -1465,45 +1465,120 @@ header {
 #careers #lists a:hover {
   cursor: pointer;
 }
+/* line 61, ../sass/_careers.scss */
+#careers #rankings {
+  background-color: #333;
+  color: #F1F1F1;
+  padding: 3em .25em;
+}
+/* line 65, ../sass/_careers.scss */
+#careers #rankings h2 {
+  font-size: 4em;
+  margin: .5em 0;
+}
+@media screen and (min-width: 768px) {
+  /* line 65, ../sass/_careers.scss */
+  #careers #rankings h2 {
+    font-size: 5em;
+    margin: .25em 0 1em;
+  }
+}
+/* line 73, ../sass/_careers.scss */
+#careers #rankings h3 {
+  color: #F1F1F1;
+  font-size: 3em;
+  margin: .5em 0;
+}
+/* line 78, ../sass/_careers.scss */
+#careers #rankings .row {
+  max-width: 100%;
+}
+/* line 81, ../sass/_careers.scss */
+#careers #rankings div {
+  padding-bottom: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  /* line 81, ../sass/_careers.scss */
+  #careers #rankings div {
+    padding-bottom: 0;
+  }
+}
+/* line 87, ../sass/_careers.scss */
+#careers #rankings i {
+  color: #2496B0;
+}
+/* line 90, ../sass/_careers.scss */
+#careers #rankings a {
+  position: relative;
+  color: #2496B0;
+  font-style: italic;
+  text-decoration: none;
+}
+/* line 95, ../sass/_careers.scss */
+#careers #rankings a:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #2496B0;
+  height: 1px;
+  width: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 107, ../sass/_careers.scss */
+#careers #rankings a:hover:after {
+  content: '';
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 114, ../sass/_careers.scss */
+#careers #rankings .cite {
+  font-size: 1.75em;
+}
 
 /****************************
         ALUMNI Section
 ****************************/
-/* line 68, ../sass/_careers.scss */
+/* line 126, ../sass/_careers.scss */
 .personContainer {
   width: 70%;
   margin: 0 auto;
 }
-/* line 73, ../sass/_careers.scss */
+/* line 131, ../sass/_careers.scss */
 .personContainer .personPicture {
   width: 45%;
   margin: 2em auto 1em;
 }
-/* line 77, ../sass/_careers.scss */
+/* line 135, ../sass/_careers.scss */
 .personContainer .personPicture img {
   border-radius: 50%;
   width: 60%;
 }
-/* line 82, ../sass/_careers.scss */
+/* line 140, ../sass/_careers.scss */
 .personContainer .personName {
   font-size: 2.5em;
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
 }
-/* line 86, ../sass/_careers.scss */
+/* line 144, ../sass/_careers.scss */
 .personContainer .personSubtitle {
   font-size: 1.5em;
 }
-/* line 89, ../sass/_careers.scss */
+/* line 147, ../sass/_careers.scss */
 .personContainer .personDegree {
   font-size: 1.4em;
 }
-/* line 92, ../sass/_careers.scss */
+/* line 150, ../sass/_careers.scss */
 .personContainer .quote {
   margin: 2em 0;
   font-size: 1.5em;
   position: relative;
 }
-/* line 98, ../sass/_careers.scss */
+/* line 156, ../sass/_careers.scss */
 .personContainer .quote p:before {
   content: url("../img/quote-open.svg");
   width: 2em;
@@ -1511,7 +1586,7 @@ header {
   position: relative;
   left: -10px;
 }
-/* line 106, ../sass/_careers.scss */
+/* line 164, ../sass/_careers.scss */
 .personContainer .quote p:after {
   content: url("../img/quote-close.svg");
   width: 2em;
