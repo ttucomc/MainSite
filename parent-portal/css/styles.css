@@ -1899,3 +1899,82 @@ header {
 #applying .button {
   background-color: #B02459;
 }
+/* line 11, ../sass/_applying.scss */
+#applying h3 {
+  font-size: 2.6em;
+}
+/* line 17, ../sass/_applying.scss */
+#applying #howToApply .applyBanner {
+  background-image: url("../img/60-lines.png");
+  background-color: #B02459;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+/* line 25, ../sass/_applying.scss */
+#applying #howToApply .applyBanner .button {
+  background-color: transparent;
+  line-height: 2.4;
+  margin: 0;
+  cursor: pointer;
+  width: 100%;
+}
+/* line 33, ../sass/_applying.scss */
+#applying #howToApply .applyBanner .button:first-child {
+  border-bottom: 2px solid white;
+}
+/* line 37, ../sass/_applying.scss */
+#applying #howToApply .applyBanner .button .freshman, #applying #howToApply .applyBanner .button .transfer {
+  display: block;
+  color: white;
+  font-size: 2em;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 48, ../sass/_applying.scss */
+  #applying #howToApply .applyBanner {
+    height: 200px;
+  }
+  /* line 51, ../sass/_applying.scss */
+  #applying #howToApply .applyBanner .button {
+    height: 100%;
+    width: 50%;
+    vertical-align: top;
+  }
+  /* line 56, ../sass/_applying.scss */
+  #applying #howToApply .applyBanner .button:first-child {
+    border-bottom: none;
+    border-right: 2px solid white;
+  }
+  /* line 61, ../sass/_applying.scss */
+  #applying #howToApply .applyBanner .button .freshman, #applying #howToApply .applyBanner .button .transfer {
+    font-size: 3em;
+  }
+}
+@media (min-width: 768px) {
+  /* line 78, ../sass/_applying.scss */
+  #applying #howToApply h3 {
+    font-size: 2.6em;
+  }
+}
+
+/* line 92, ../sass/_applying.scss */
+.button::after {
+  left: -100px;
+  height: 400px;
+  top: -150px;
+}
+
+@media (min-width: 768px) {
+  /* line 104, ../sass/_applying.scss */
+  .button::after {
+    left: -100px;
+    height: 400px;
+    top: -150px;
+  }
+}

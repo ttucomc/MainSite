@@ -7,4 +7,104 @@
   .button {
     background-color: $pink;
   }
+
+  h3 {
+    font-size: 2.6em;
+  }
+
+
+  #howToApply {
+    .applyBanner {
+        background-image: url("../img/60-lines.png");
+        background-color: $pink;
+        width: 100%;
+
+        display:flex;
+        flex-wrap: wrap;
+
+        .button {
+
+          background-color: transparent;
+          line-height: 2.4;
+          margin: 0;
+          cursor: pointer;
+          width: 100%;
+
+          &:first-child {
+            border-bottom: 2px solid white;
+          }
+
+          .freshman, .transfer {
+            display: block;
+            color: white;
+            font-size: 2em;
+            width: 100%;
+          }
+        }
+    }
+
+    @media(min-width: $screen-med) {
+
+      .applyBanner {
+        height: 200px;
+
+        .button {
+          height: 100%;
+          width: 50%;
+          vertical-align: top;
+
+          &:first-child {
+            border-bottom: none;
+            border-right: 2px solid white;
+          }
+
+          .freshman, .transfer {
+            font-size: 3em;
+          }
+        }
+      }
+    }
+
+    .freshmanContainer {
+
+    }
+
+    .transferContainer {
+
+    }
+
+    @media(min-width: $screen-med) {
+
+      h3 {
+        font-size: 2.6em;
+      }
+
+
+    }
+
+  }
+}
+
+
+// I needed this outside the ID in order for it to actually change the original ::after,
+// not create a new overwriting style.
+.button {
+  &::after {
+    left: -100px;
+    height: 400px;
+    top: -150px;
+  }
+}
+
+@media(min-width: $screen-med) {
+
+    // I needed this outside the ID in order for it to actually change the original ::after,
+    // not create a new overwriting style.
+    .button {
+      &::after {
+        left: -100px;
+        height: 400px;
+        top: -150px;
+      }
+    }
 }
