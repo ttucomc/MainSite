@@ -115,6 +115,12 @@
       font-size: 1.75em;
     }
   }
+
+  #alumni {
+    h2 {
+      font-size: 4em;
+    }
+  }
 }
 
 
@@ -148,6 +154,7 @@
     font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
   }
   .personSubtitle {
+    color: $blue;
     font-size: 1.5em;
   }
   .personDegree {

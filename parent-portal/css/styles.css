@@ -762,7 +762,16 @@ hr:after {
   width: 75%;
 }
 
-/* line 170, ../sass/styles.scss */
+/* line 169, ../sass/styles.scss */
+#home-button {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+  margin-left: 1em;
+  vertical-align: bottom;
+}
+
+/* line 178, ../sass/styles.scss */
 .button {
   position: relative;
   display: block;
@@ -778,13 +787,13 @@ hr:after {
   width: 50%;
 }
 @media screen and (min-width: 768px) {
-  /* line 170, ../sass/styles.scss */
+  /* line 178, ../sass/styles.scss */
   .button {
     font-size: 1.5em;
     width: 33%;
   }
 }
-/* line 187, ../sass/styles.scss */
+/* line 195, ../sass/styles.scss */
 .button:after {
   background: #FFF;
   content: "";
@@ -801,25 +810,25 @@ hr:after {
   width: 50px;
   z-index: 1;
 }
-/* line 201, ../sass/styles.scss */
+/* line 209, ../sass/styles.scss */
 .button:hover:after {
   content: '';
   left: 120%;
   -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-/* line 208, ../sass/styles.scss */
+/* line 216, ../sass/styles.scss */
 .button span {
   z-index: 3;
 }
 
-/* line 213, ../sass/styles.scss */
+/* line 221, ../sass/styles.scss */
 .container {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-/* line 218, ../sass/styles.scss */
+/* line 226, ../sass/styles.scss */
 .container #output {
   opacity: 0.2;
   width: 100%;
@@ -831,14 +840,14 @@ hr:after {
 /****************************
         SUB PAGES
 ****************************/
-/* line 235, ../sass/styles.scss */
+/* line 243, ../sass/styles.scss */
 .top {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
-/* line 240, ../sass/styles.scss */
+/* line 248, ../sass/styles.scss */
 .top .title {
   position: absolute;
   top: 50%;
@@ -849,7 +858,7 @@ hr:after {
   width: 100%;
   padding: 0 .5em;
 }
-/* line 247, ../sass/styles.scss */
+/* line 255, ../sass/styles.scss */
 .top .title h1 {
   color: #FFF;
   font-size: 5em;
@@ -857,24 +866,24 @@ hr:after {
   margin: .125em 0;
 }
 @media screen and (min-width: 414px) {
-  /* line 247, ../sass/styles.scss */
+  /* line 255, ../sass/styles.scss */
   .top .title h1 {
     font-size: 7em;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 247, ../sass/styles.scss */
+  /* line 255, ../sass/styles.scss */
   .top .title h1 {
     font-size: 10em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 247, ../sass/styles.scss */
+  /* line 255, ../sass/styles.scss */
   .top .title h1 {
     font-size: 12em;
   }
 }
-/* line 261, ../sass/styles.scss */
+/* line 269, ../sass/styles.scss */
 .top .title h1:before, .top .title h1:after {
   content: '';
   display: none;
@@ -1048,25 +1057,24 @@ header {
   text-align: center;
 }
 /* line 146, ../sass/_menu.scss */
-#menuMasterContainer .menuBoxContainer .menuBox img {
-  margin-top: 1.4em;
-  width: 30%;
+#menuMasterContainer .menuBoxContainer .menuBox figure {
+  margin: 1em 1em 0;
 }
-/* line 151, ../sass/_menu.scss */
+/* line 150, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox h6 {
   font-size: 2.8em;
   margin: 0.5em 0;
 }
-/* line 156, ../sass/_menu.scss */
+/* line 155, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox:hover {
   background-color: #F1F1F1;
   cursor: pointer;
 }
-/* line 165, ../sass/_menu.scss */
+/* line 164, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .isSelected {
   margin: 0 auto 0;
 }
-/* line 169, ../sass/_menu.scss */
+/* line 168, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn {
   width: 95%;
   border: 1px solid #333;
@@ -1075,22 +1083,27 @@ header {
   text-align: center;
   display: none;
 }
-/* line 178, ../sass/_menu.scss */
+/* line 177, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow {
   padding: 1em 0;
   border-bottom: 1px solid #333;
 }
-/* line 183, ../sass/_menu.scss */
+/* line 182, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow p {
   margin: 0;
   font-size: 1.8em;
 }
-/* line 188, ../sass/_menu.scss */
+/* line 185, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .optionsColumn .optionRow p a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 191, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:hover {
   background-color: #F1F1F1;
   cursor: pointer;
 }
-/* line 193, ../sass/_menu.scss */
+/* line 196, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:last-child {
   border-bottom: none;
 }
@@ -1540,50 +1553,55 @@ header {
 #careers #rankings .cite {
   font-size: 1.75em;
 }
+/* line 120, ../sass/_careers.scss */
+#careers #alumni h2 {
+  font-size: 4em;
+}
 
 /****************************
         ALUMNI Section
 ****************************/
-/* line 129, ../sass/_careers.scss */
+/* line 135, ../sass/_careers.scss */
 .personContainer .alumni-block {
   padding: 2em 1.5em;
   max-width: 100%;
 }
-/* line 132, ../sass/_careers.scss */
+/* line 138, ../sass/_careers.scss */
 .personContainer .alumni-block:nth-child(even) {
   background-color: #F1F1F1;
 }
-/* line 137, ../sass/_careers.scss */
+/* line 143, ../sass/_careers.scss */
 .personContainer .personPicture {
   width: 45%;
   margin: 2em auto 1em;
 }
-/* line 141, ../sass/_careers.scss */
+/* line 147, ../sass/_careers.scss */
 .personContainer .personPicture img {
   border-radius: 50%;
   width: 95%;
 }
-/* line 146, ../sass/_careers.scss */
+/* line 152, ../sass/_careers.scss */
 .personContainer .personName {
   font-size: 2.5em;
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
 }
-/* line 150, ../sass/_careers.scss */
+/* line 156, ../sass/_careers.scss */
 .personContainer .personSubtitle {
+  color: #2496B0;
   font-size: 1.5em;
 }
-/* line 153, ../sass/_careers.scss */
+/* line 160, ../sass/_careers.scss */
 .personContainer .personDegree {
   font-size: 1.4em;
 }
-/* line 156, ../sass/_careers.scss */
+/* line 163, ../sass/_careers.scss */
 .personContainer .quote {
   margin: 2em 0;
   font-size: 1.25em;
   position: relative;
   z-index: 2;
 }
-/* line 163, ../sass/_careers.scss */
+/* line 170, ../sass/_careers.scss */
 .personContainer .quote p:before {
   content: '\201C';
   display: inline-block;
@@ -1594,7 +1612,7 @@ header {
   font-size: 7em;
   z-index: -1;
 }
-/* line 174, ../sass/_careers.scss */
+/* line 181, ../sass/_careers.scss */
 .personContainer .quote p:after {
   content: '\201D';
   display: inline-block;
@@ -2041,7 +2059,7 @@ header {
   font-size: 1.6em;
 }
 /* line 66, ../sass/_applying.scss */
-#applying #howToApply .contactUs {
+#applying #howToApply #contactUs {
   width: 98%;
   margin: 0 auto;
   padding: 0.6em;
@@ -2080,7 +2098,7 @@ header {
     background-color: #F1F1F1;
   }
   /* line 107, ../sass/_applying.scss */
-  #applying #howToApply .contactUs {
+  #applying #howToApply #contactUs {
     width: 800px;
     font-size: 1.5em;
     margin-top: 3em;

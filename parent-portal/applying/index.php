@@ -25,7 +25,7 @@
 
     <section id="howToApply" class="row large-collapse" data-equalizer>
 
-      <h2>My student is<hr /></h2>
+      <h2>How to Apply</h2>
 
       <div class="large-6 columns" data-equalizer-watch>
 
@@ -100,7 +100,7 @@
       </div>
 
       <div class="small-12 columns">
-        <div class='contactUs'>
+        <div id='contactUs'>
           If you have any questions, give us a call: <a href='tel:806-742-1480'>806.742.1480</a>
           <br />
           <br />

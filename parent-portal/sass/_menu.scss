@@ -143,9 +143,8 @@ header {
       margin: 0 auto 2em;
       text-align: center;
 
-      img {
-        margin-top: 1.4em;
-        width: 30%;
+      figure {
+        margin: 1em 1em 0;
       }
 
       h6 {
@@ -183,6 +182,10 @@ header {
         p {
           margin: 0;
           font-size: 1.8em;
+          a {
+            color: $dark-grey;
+            text-decoration: none;
+          }
         }
 
         &:hover {
