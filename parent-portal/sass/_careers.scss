@@ -57,6 +57,64 @@
       }
     }
   }
+
+  #rankings {
+    background-color: $dark-grey;
+    color: $light-grey;
+    padding: 3em .25em;
+    h2 {
+      font-size: 4em;
+      margin: .5em 0;
+      @media screen and (min-width: $screen-med) {
+        font-size: 5em;
+        margin: .25em 0 1em;
+      }
+    }
+    h3 {
+      color: $light-grey;
+      font-size: 3em;
+      margin: .5em 0;
+    }
+    .row {
+      max-width: 100%;
+    }
+    div {
+      padding-bottom: 1.5em;
+      @media screen and (min-width: $screen-med) {
+        padding-bottom: 0;
+      }
+    }
+    i {
+      color: $blue;
+    }
+    a {
+      position: relative;
+      color: $blue;
+      font-style: italic;
+      text-decoration: none;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        @include translateX(-50%);
+        background-color: $blue;
+        height: 1px;
+        width: 0;
+        @include transition(.3s);
+      }
+      &:hover {
+        &:after {
+          content: '';
+          width: 100%;
+          @include transition(.3s);
+        }
+      }
+    }
+    .cite {
+      font-size: 1.75em;
+    }
+  }
 }
 
 

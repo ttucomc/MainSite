@@ -292,6 +292,41 @@
         </div>
       </div>
     </section>
+    <section id="rankings">
+      <h2>Communication Skills</h2>
+      <div class="row">
+        <div class="medium-4 columns">
+          <i class="fa fa-list fa-5x"></i>
+          <h3>Top Ten</h3>
+          <p>
+            Multiple communication skills listed in the top ten skills employers say they seek.
+          </p>
+          <p class="cite">
+            <a href="http://www.forbes.com/sites/susanadams/2014/11/12/the-10-skills-employers-most-want-in-2015-graduates/" target="_blank">- Forbes</a>
+          </p>
+        </div>
+        <div class="medium-4 columns">
+          <i class="fa fa-heart fa-5x"></i>
+          <h3>Most Desired</h3>
+          <p>
+            Every industry is wanting people with quality communication skills.
+          </p>
+          <p class="cite">
+            <a href="http://www.bloomberg.com/graphics/2015-job-skills-report/" target="_blank">- Bloomberg</a>
+          </p>
+        </div>
+        <div class="medium-4 columns">
+          <i class="fa fa-trophy fa-5x"></i>
+          <h3>#1 Skill</h3>
+          <p>
+            Americans rank this as the number one skill to get ahead in life.
+          </p>
+          <p class="cite">
+            <a href="https://www.entrepreneur.com/article/243128" target="_blank">- Entrepreneur</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
   </div>
   <script>
