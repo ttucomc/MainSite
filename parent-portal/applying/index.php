@@ -23,11 +23,11 @@
       </div>
     </section>
 
-    <section id="howToApply" class="row">
+    <section id="howToApply" class="row large-collapse" data-equalizer>
 
       <h2>My student is<hr /></h2>
 
-      <div class="large-6 columns">
+      <div class="large-6 columns" data-equalizer-watch>
 
         <div class="applyBanner">
             <div class="freshman">Incoming Freshman</div>
@@ -77,7 +77,7 @@
       </div>
 
 
-      <div class="large-6 columns">
+      <div class="large-6 columns " data-equalizer-watch>
 
         <div class="applyBanner">
             <div class="transfer">Transfer Student</div>
