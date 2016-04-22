@@ -125,8 +125,14 @@
 
 .personContainer
 {
-  width: 70%;
-  margin: 0 auto;
+
+  .alumni-block {
+    padding: 2em 1.5em;
+    max-width: 100%;
+    &:nth-child(even) {
+      background-color: $light-grey;
+    }
+  }
 
   .personPicture {
     width: 45%;
@@ -134,7 +140,7 @@
 
     img {
       border-radius: 50%;
-      width: 60%;
+      width: 95%;
     }
   }
   .personName {
@@ -149,25 +155,31 @@
   }
   .quote {
     margin: 2em 0;
-    font-size: 1.5em;
+    font-size: 1.25em;
     position: relative;
+    z-index: 2;
 
     p {
       &:before {
-        content: url("../img/quote-open.svg");
-        width: 2em;
+        content: '\201C';
         display: inline-block;
-        position: relative;
-        left: -10px;
+        position: absolute;
+        top: -.375em;
+        left: -.25em;
+        color: $blue;
+        font-size: 7em;
+        z-index: -1;
       }
 
       &:after {
-        content: url("../img/quote-close.svg");
-        width: 2em;
+        content: '\201D';
         display: inline-block;
-        position: relative;
-        bottom: 0;
-        right: -10px;
+        position: absolute;
+        bottom: -.75em;
+        right: -.125em;
+        color: $blue;
+        font-size: 7em;
+        z-index: -1;
       }
     }
   }

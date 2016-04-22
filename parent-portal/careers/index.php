@@ -327,6 +327,86 @@
         </div>
       </div>
     </section>
+    <section id="alumni">
+
+      <h2>Our Alumni</h2>
+
+      <div class="personContainer">
+        <div class="row alumni-block" data-equalizer>
+          <div class="columns medium-6" data-equalizer-watch>
+            <div class="personPicture">
+              <img src="../img/alumni/sara-krueger.jpg" alt="Sara Krueger" title="Sara Krueger" />
+            </div>
+            <div class="personName">
+              Sara Krueger
+            </div>
+            <div class="personSubtitle">
+              Communications Specialist
+            </div>
+            <div class="personDegree">
+              OCI Solar Power
+            </div>
+          </div>
+          <div class="columns medium-6" data-equalizer-watch>
+            <div class="quote">
+              <p>
+                I never had a class that was not driven by real-world applications or professional development. I really credit the college with preparing me for everything that has come my way.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row alumni-block" data-equalizer>
+          <div class="columns medium-6 medium-push-6" data-equalizer-watch>
+            <div class="personPicture">
+              <img src="../img/alumni/sydney-holmes.jpg" alt="Sara Krueger" title="Sara Krueger" />
+            </div>
+            <div class="personName">
+              Sydney Holmes
+            </div>
+            <div class="personSubtitle">
+              Corporate &amp; Agent PR Lead
+            </div>
+            <div class="personDegree">
+              Compass
+            </div>
+          </div>
+          <div class="columns medium-6 medium-pull-6" data-equalizer-watch>
+            <div class="quote">
+              <p>
+                I recommend that students become friends with their professors. I feel like I have people invested in my career and future since getting to know some of my former professors.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row alumni-block" data-equalizer>
+          <div class="columns medium-6" data-equalizer-watch>
+            <div class="personPicture">
+              <img src="../img/alumni/regan-howle.jpg" alt="Sara Krueger" title="Sara Krueger" />
+            </div>
+            <div class="personName">
+              Regan Howle
+            </div>
+            <div class="personSubtitle">
+              Branding Sales Executive
+            </div>
+            <div class="personDegree">
+              etc group, inc
+            </div>
+          </div>
+          <div class="columns medium-6" data-equalizer-watch>
+            <div class="quote">
+              <p>
+                You can be creative and have fun ideas. There are just so many different directions you can go...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
 
   </div>
   <script>

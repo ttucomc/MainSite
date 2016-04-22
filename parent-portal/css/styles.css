@@ -1544,56 +1544,66 @@ header {
 /****************************
         ALUMNI Section
 ****************************/
-/* line 126, ../sass/_careers.scss */
-.personContainer {
-  width: 70%;
-  margin: 0 auto;
+/* line 129, ../sass/_careers.scss */
+.personContainer .alumni-block {
+  padding: 2em 1.5em;
+  max-width: 100%;
 }
-/* line 131, ../sass/_careers.scss */
+/* line 132, ../sass/_careers.scss */
+.personContainer .alumni-block:nth-child(even) {
+  background-color: #F1F1F1;
+}
+/* line 137, ../sass/_careers.scss */
 .personContainer .personPicture {
   width: 45%;
   margin: 2em auto 1em;
 }
-/* line 135, ../sass/_careers.scss */
+/* line 141, ../sass/_careers.scss */
 .personContainer .personPicture img {
   border-radius: 50%;
-  width: 60%;
+  width: 95%;
 }
-/* line 140, ../sass/_careers.scss */
+/* line 146, ../sass/_careers.scss */
 .personContainer .personName {
   font-size: 2.5em;
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
 }
-/* line 144, ../sass/_careers.scss */
+/* line 150, ../sass/_careers.scss */
 .personContainer .personSubtitle {
   font-size: 1.5em;
 }
-/* line 147, ../sass/_careers.scss */
+/* line 153, ../sass/_careers.scss */
 .personContainer .personDegree {
   font-size: 1.4em;
 }
-/* line 150, ../sass/_careers.scss */
+/* line 156, ../sass/_careers.scss */
 .personContainer .quote {
   margin: 2em 0;
-  font-size: 1.5em;
+  font-size: 1.25em;
   position: relative;
+  z-index: 2;
 }
-/* line 156, ../sass/_careers.scss */
+/* line 163, ../sass/_careers.scss */
 .personContainer .quote p:before {
-  content: url("../img/quote-open.svg");
-  width: 2em;
+  content: '\201C';
   display: inline-block;
-  position: relative;
-  left: -10px;
+  position: absolute;
+  top: -.375em;
+  left: -.25em;
+  color: #2496B0;
+  font-size: 7em;
+  z-index: -1;
 }
-/* line 164, ../sass/_careers.scss */
+/* line 174, ../sass/_careers.scss */
 .personContainer .quote p:after {
-  content: url("../img/quote-close.svg");
-  width: 2em;
+  content: '\201D';
   display: inline-block;
-  position: relative;
-  bottom: 0;
-  right: -10px;
+  position: absolute;
+  bottom: -.75em;
+  right: -.125em;
+  color: #2496B0;
+  font-size: 7em;
+  z-index: -1;
 }
 
 /****************************

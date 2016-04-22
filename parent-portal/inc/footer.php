@@ -7,6 +7,7 @@
 
 <!-- MAIN JS -->
 <script src="<?php echo BASE_URL; ?>js/triangles.js"></script>
+<script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
 <script src="<?php echo BASE_URL; ?>js/menu.js"></script>
 <script src="<?php echo BASE_URL; ?>js/main.js"></script>
 
