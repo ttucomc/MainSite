@@ -1900,70 +1900,84 @@ header {
   background-color: #B02459;
 }
 /* line 11, ../sass/_applying.scss */
-#applying h3 {
-  font-size: 2.6em;
+#applying #howToApply {
+  margin-bottom: 7em;
 }
-/* line 17, ../sass/_applying.scss */
+/* line 15, ../sass/_applying.scss */
+#applying #howToApply a {
+  color: #003a66;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+/* line 20, ../sass/_applying.scss */
+#applying #howToApply a:hover {
+  color: #0074cc;
+  cursor: pointer;
+}
+/* line 26, ../sass/_applying.scss */
 #applying #howToApply .applyBanner {
   background-image: url("../img/60-lines.png");
   background-color: #B02459;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
 }
-/* line 25, ../sass/_applying.scss */
-#applying #howToApply .applyBanner .button {
-  background-color: transparent;
-  line-height: 2.4;
-  margin: 0;
-  cursor: pointer;
-  width: 100%;
-}
-/* line 33, ../sass/_applying.scss */
-#applying #howToApply .applyBanner .button:first-child {
-  border-bottom: 2px solid white;
+/* line 31, ../sass/_applying.scss */
+#applying #howToApply .freshman, #applying #howToApply .transfer {
+  font-size: 3em;
+  color: white;
+  padding: 0.2em;
 }
 /* line 37, ../sass/_applying.scss */
-#applying #howToApply .applyBanner .button .freshman, #applying #howToApply .applyBanner .button .transfer {
-  display: block;
-  color: white;
-  font-size: 2em;
-  width: 100%;
+#applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
+  margin: 0 2em;
+}
+/* line 40, ../sass/_applying.scss */
+#applying #howToApply .freshmanContainer ol, #applying #howToApply .transferContainer ol {
+  text-align: left;
+}
+/* line 43, ../sass/_applying.scss */
+#applying #howToApply .freshmanContainer ol li, #applying #howToApply .transferContainer ol li {
+  font-size: 1.4em;
+  padding: 1em 0;
+}
+/* line 50, ../sass/_applying.scss */
+#applying #howToApply .transferInfo {
+  margin-top: 2em;
+  font-size: 1.6em;
+}
+/* line 55, ../sass/_applying.scss */
+#applying #howToApply .contactUs {
+  font-size: 1.5em;
+  margin-top: 3em;
 }
 @media (min-width: 768px) {
-  /* line 48, ../sass/_applying.scss */
-  #applying #howToApply .applyBanner {
-    height: 200px;
-  }
-  /* line 51, ../sass/_applying.scss */
-  #applying #howToApply .applyBanner .button {
-    height: 100%;
-    width: 50%;
-    vertical-align: top;
-  }
-  /* line 56, ../sass/_applying.scss */
-  #applying #howToApply .applyBanner .button:first-child {
-    border-bottom: none;
-    border-right: 2px solid white;
-  }
-  /* line 61, ../sass/_applying.scss */
-  #applying #howToApply .applyBanner .button .freshman, #applying #howToApply .applyBanner .button .transfer {
+  /* line 62, ../sass/_applying.scss */
+  #applying #howToApply .freshman, #applying #howToApply .transfer {
     font-size: 3em;
+    color: white;
+    padding: 0.5em;
   }
-}
-@media (min-width: 768px) {
-  /* line 78, ../sass/_applying.scss */
-  #applying #howToApply h3 {
-    font-size: 2.6em;
+  /* line 68, ../sass/_applying.scss */
+  #applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* line 72, ../sass/_applying.scss */
+  #applying #howToApply .freshmanContainer ol, #applying #howToApply .transferContainer ol {
+    text-align: left;
+  }
+  /* line 75, ../sass/_applying.scss */
+  #applying #howToApply .freshmanContainer ol li, #applying #howToApply .transferContainer ol li {
+    font-size: 25px;
+    padding: 20px 0;
   }
 }
 
-/* line 92, ../sass/_applying.scss */
+/* line 87, ../sass/_applying.scss */
+.scrollDown li {
+  list-style-type: none;
+}
+
+/* line 95, ../sass/_applying.scss */
 .button::after {
   left: -100px;
   height: 400px;
@@ -1971,7 +1985,7 @@ header {
 }
 
 @media (min-width: 768px) {
-  /* line 104, ../sass/_applying.scss */
+  /* line 107, ../sass/_applying.scss */
   .button::after {
     left: -100px;
     height: 400px;

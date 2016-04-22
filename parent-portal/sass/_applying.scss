@@ -8,83 +8,86 @@
     background-color: $pink;
   }
 
-  h3 {
-    font-size: 2.6em;
-  }
-
-
   #howToApply {
+
+    margin-bottom: 7em;
+
+    a {
+      color: $dark-blue;
+      text-decoration: none;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: lighten($dark-blue, 20);
+        cursor: pointer;
+      }
+    }
+
     .applyBanner {
         background-image: url("../img/60-lines.png");
         background-color: $pink;
-        width: 100%;
+    }
 
-        display:flex;
-        flex-wrap: wrap;
+    .freshman, .transfer {
+      font-size: 3em;
+      color: white;
+      padding: 0.2em;
+    }
 
-        .button {
+    .freshmanContainer, .transferContainer {
+        margin: 0 2em;
 
-          background-color: transparent;
-          line-height: 2.4;
-          margin: 0;
-          cursor: pointer;
-          width: 100%;
+        ol {
+          text-align: left;
 
-          &:first-child {
-            border-bottom: 2px solid white;
-          }
-
-          .freshman, .transfer {
-            display: block;
-            color: white;
-            font-size: 2em;
-            width: 100%;
+          li {
+            font-size: 1.4em;
+            padding: 1em 0;
           }
         }
     }
 
+    .transferInfo {
+      margin-top: 2em;
+      font-size: 1.6em;
+    }
+
+    .contactUs {
+      font-size: 1.5em;
+      margin-top: 3em;
+    }
+
     @media(min-width: $screen-med) {
 
-      .applyBanner {
-        height: 200px;
+      .freshman, .transfer {
+        font-size: 3em;
+        color: white;
+        padding: 0.5em;
+      }
 
-        .button {
-          height: 100%;
-          width: 50%;
-          vertical-align: top;
+      .freshmanContainer, .transferContainer {
+        width: 90%;
+        margin: 0 auto;
 
-          &:first-child {
-            border-bottom: none;
-            border-right: 2px solid white;
-          }
+        ol {
+          text-align: left;
 
-          .freshman, .transfer {
-            font-size: 3em;
+          li {
+            font-size: 25px;
+            padding: 20px 0;
           }
         }
       }
     }
 
-    .freshmanContainer {
+  } //End #howToApply
+} //End #apply
 
-    }
-
-    .transferContainer {
-
-    }
-
-    @media(min-width: $screen-med) {
-
-      h3 {
-        font-size: 2.6em;
-      }
-
-
-    }
-
+.scrollDown {
+  li {
+    list-style-type: none;
   }
 }
-
 
 // I needed this outside the ID in order for it to actually change the original ::after,
 // not create a new overwriting style.
