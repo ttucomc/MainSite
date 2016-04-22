@@ -7,4 +7,145 @@
   .button {
     background-color: $pink;
   }
+
+  #howToApply {
+
+    margin-bottom: 7em;
+    max-width: 100%;
+
+    a {
+      color: $dark-blue;
+      text-decoration: none;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: lighten($dark-blue, 20);
+        cursor: pointer;
+      }
+    }
+
+    .applyBanner {
+        background-image: url("../img/60-lines.png");
+        background-color: $pink;
+    }
+
+    .freshman, .transfer {
+      font-size: 3.5em;
+      color: white;
+      padding: 0.75em;
+      /*
+      font-size: 3em;
+      color: white;
+      padding: 0.2em;
+      */
+    }
+
+    .freshmanContainer, .transferContainer {
+        margin: 0 2em;
+
+        ol {
+          text-align: left;
+
+          li {
+            font-size: 1.4em;
+            padding: 1em 0;
+
+            &:first-child {
+              padding-top: 0;
+              margin-top: 1.6em;
+            }
+          }
+        }
+    }
+
+    .transferInfo {
+      margin-top: 1.6em;
+      font-size: 1.6em;
+    }
+
+    .contactUs {
+      width: 98%;
+      margin: 0 auto;
+      padding: 0.6em;
+      font-size: 1.4em;
+
+      background-color: $light-grey;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    @media(min-width: $screen-med) {
+
+      .applyBanner {
+        border-right: 2px solid white;
+      }
+
+      .freshman, .transfer {
+        font-size: 3.5em;
+        color: white;
+        padding: 0.75em;
+      }
+
+      .freshmanContainer, .transferContainer {
+        padding: 1px 4em;
+        margin: 0 auto;
+
+        ol {
+          text-align: left;
+
+          li {
+            font-size: 1.6em;
+            padding: 20px 0;
+          }
+        }
+      }
+
+      .transferContainer {
+        height: 100%;
+        background-color: $light-grey;
+      }
+
+      .contactUs {
+        width: 800px;
+        font-size: 1.5em;
+        margin-top: 3em;
+        padding: 1.6em;
+      }
+    }
+
+    @media(min-width: $screen-xxl) {
+      .freshmanContainer, .transferContainer {
+        padding: 1px 8em;
+      }
+    }
+
+  } //End #howToApply
+} //End #apply
+
+.scrollDown {
+  li {
+    list-style-type: none;
+  }
+}
+
+// I needed this outside the ID in order for it to actually change the original ::after,
+// not create a new overwriting style.
+.button {
+  &::after {
+    left: -100px;
+    height: 400px;
+    top: -150px;
+  }
+}
+
+@media(min-width: $screen-med) {
+
+    // I needed this outside the ID in order for it to actually change the original ::after,
+    // not create a new overwriting style.
+    .button {
+      &::after {
+        left: -100px;
+        height: 400px;
+        top: -150px;
+      }
+    }
 }
