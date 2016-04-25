@@ -16,9 +16,9 @@
         <h1>Applying</h1>
       </div>
       <div class="scrollDown">
-        <li>
+        <p>
           Scroll Down
-        </li>
+        </p>
         <img src="<?php echo BASE_URL; ?>img/scroll-down-arrow.svg" alt="Arrow Down" title="Click to scroll down or scroll down" />
       </div>
     </section>
@@ -70,6 +70,9 @@
               </div>
               <br />
             </li>
+            <li>
+              If your student has been accepted to the university, select a major within CoMC and they are in the program! There is no additional admissions process for the college.
+            </li>
           </ol>
 
         </div>
@@ -93,15 +96,19 @@
             <li>Freshman admission requirements.</li>
             <li>Submit SAT or ACT scores.</li>
             <li>Provide a high school transcript with graduation date.</li>
+            <li>
+              If your student has been accepted to the university, select a major within CoMC and they are in the program! There is no additional admissions process for the college.
+            </li>
           </ol>
 
         </div>
 
       </div>
-
+    </section>
+    <section id="contact-container" class="row">
       <div class="small-12 columns">
         <div id='contactUs'>
-          If you have any questions, give us a call: <a href='tel:806-742-1480'>806.742.1480</a>
+          If you have any questions, give us a call: <a href='tel:8067421480'>806.742.1480</a>
           <br />
           <br />
           Or send us an email: <a href="mailto:admissions@ttu.edu">admissions@ttu.edu</a>
@@ -110,11 +117,7 @@
           <a href='http://www.depts.ttu.edu/officialpublications/catalog/_admit_requirements.php' rel='nowfollow'>More detailed information may be found here.</a>
         </div>
       </div>
-
-
     </section>
-
-
 
   </div>
 

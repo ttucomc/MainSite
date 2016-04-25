@@ -10,7 +10,7 @@
 
   #howToApply {
 
-    margin-bottom: 7em;
+
     max-width: 100%;
 
     a {
@@ -63,15 +63,6 @@
       font-size: 1.6em;
     }
 
-    #contactUs {
-      width: 98%;
-      margin: 0 auto;
-      padding: 0.6em;
-      font-size: 1.4em;
-
-      background-color: $light-grey;
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    }
 
     @media(min-width: $screen-med) {
 
@@ -103,13 +94,6 @@
         height: 100%;
         background-color: $light-grey;
       }
-
-      #contactUs {
-        width: 800px;
-        font-size: 1.5em;
-        margin-top: 3em;
-        padding: 1.6em;
-      }
     }
 
     @media(min-width: $screen-xxl) {
@@ -119,6 +103,21 @@
     }
 
   } //End #howToApply
+
+  #contact-container {
+    padding: 5em 0;
+    max-width: 100%;
+  }
+
+  #contactUs {
+    background-color: $light-grey;
+    font-size: 1.5em;
+    width: 800px;
+    margin: 0 auto;
+    padding: 1.6em;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
 } //End #apply
 
 .scrollDown {
