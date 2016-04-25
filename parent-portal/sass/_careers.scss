@@ -12,6 +12,31 @@
     padding: 5em 0.5em 3em;
   }
 
+  h2 {
+    font-size: 4em;
+    margin: .5em 0;
+    @media screen and (min-width: $screen-med) {
+      font-size: 5em;
+      margin: .25em 0 .5em;
+    }
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+    @include transition(.3s);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .button {
+    color: #FFF;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   #lists {
     padding: 0 0 3em;
     h2 {
@@ -62,14 +87,6 @@
     background-color: $dark-grey;
     color: $light-grey;
     padding: 3em .25em;
-    h2 {
-      font-size: 4em;
-      margin: .5em 0;
-      @media screen and (min-width: $screen-med) {
-        font-size: 5em;
-        margin: .25em 0 1em;
-      }
-    }
     h3 {
       color: $light-grey;
       font-size: 3em;
@@ -116,10 +133,12 @@
     }
   }
 
-  #alumni {
-    h2 {
-      font-size: 4em;
-    }
+  /****************************
+          INTERNSHIPS
+  ****************************/
+  #internships {
+    background: url('../img/60-lines.png');
+    padding: 3em 0;
   }
 }
 
@@ -128,6 +147,9 @@
 /****************************
         ALUMNI Section
 ****************************/
+#alumni {
+  padding-top: 3em;
+}
 
 .personContainer
 {
@@ -137,6 +159,9 @@
     max-width: 100%;
     &:nth-child(even) {
       background-color: $light-grey;
+    }
+    & > div {
+      position: relative;
     }
   }
 
@@ -161,9 +186,12 @@
     font-size: 1.4em;
   }
   .quote {
+    position: relative;
+    top: 50%;
+    left: 0;
+    @include translateY(-70%);
     margin: 2em 0;
     font-size: 1.25em;
-    position: relative;
     z-index: 2;
 
     p {

@@ -7,16 +7,11 @@
 
 <!-- MAIN JS -->
 <script src="<?php echo BASE_URL; ?>js/triangles.js"></script>
-<script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
 <script src="<?php echo BASE_URL; ?>js/menu.js"></script>
 <script src="<?php echo BASE_URL; ?>js/main.js"></script>
 
 <script type="text/javascript">
-  // wrapping each h1 letter in spans
-  // $(".title h1").children().andSelf().contents().each(function(){
-  //     var $this = $(this);
-  //     $this.replaceWith($this.text().replace(/(\w)/g, "<span>$&</span>"));
-  // });
+  $(document).foundation();
 
   // Kicking off ScrollMagic
   var controller = new ScrollMagic.Controller();
