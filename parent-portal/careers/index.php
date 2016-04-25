@@ -331,7 +331,7 @@
       <h2>Internships</h2>
       <div class="row">
         <p>
-          It is never too early to get started thinking about internships. Many companies require students to earn course credit for an internship, and the college does have some basic prerequisites students must complete to be eligible for course credit. To learn the ins and outs of securing an internship, encourage your student to set up an appointment with our college’s career counselor, <a href="mailto:cameron.skoczlas@ttu.edu">Cameron Skoczlas</a>. 
+          It is never too early to get started thinking about internships. Many companies require students to earn course credit for an internship, and the college does have some basic prerequisites students must complete to be eligible for course credit. To learn the ins and outs of securing an internship, encourage your student to set up an appointment with our college’s career counselor, <a href="mailto:cameron.skoczlas@ttu.edu">Cameron Skoczlas</a>.
         </p>
       </div>
     </section>
@@ -418,12 +418,18 @@
 
   </div>
   <script>
-  <?php
-    echo "
-            var careerList = " . json_encode($careerList) . ";
-            var employerList = " . json_encode($employerList) . ";
-         ";
-  ?>
+    <?php
+      echo "
+              var careerList = " . json_encode($careerList) . ";
+              var employerList = " . json_encode($employerList) . ";
+           ";
+    ?>
+
+    $('.scrollDown').click(function() {
+      $('html,body').animate({
+        scrollTop: $('#overview').position().top - 70
+      }, 800);
+    });
   </script>
 
 <?php include '../inc/footer.php'; ?>
