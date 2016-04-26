@@ -1033,68 +1033,117 @@ header {
 /* line 133, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer {
   position: relative;
-  top: 12%;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
   /*
       If the menu is currently selected, mange bottom margin to 0.
   */
 }
-/* line 140, ../sass/_menu.scss */
+/* line 139, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .fullWidth {
+  width: 100%;
+  max-width: 100%;
+}
+/* line 144, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .menuBox {
-  width: 95%;
+  position: relative;
   border: 1px solid #333;
-  margin: 0 auto 2em;
-  text-align: center;
-}
-/* line 146, ../sass/_menu.scss */
-#menuMasterContainer .menuBoxContainer .menuBox img {
-  margin-top: 1.4em;
-  width: 30%;
-}
-/* line 151, ../sass/_menu.scss */
-#menuMasterContainer .menuBoxContainer .menuBox h6 {
-  font-size: 2.8em;
-  margin: 0.5em 0;
-}
-/* line 156, ../sass/_menu.scss */
-#menuMasterContainer .menuBoxContainer .menuBox:hover {
-  background-color: #F1F1F1;
+  height: 25vh;
   cursor: pointer;
 }
-/* line 165, ../sass/_menu.scss */
+/* line 150, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .menuBox .title {
+  position: absolute;
+  font-size: 2.8em;
+  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/* line 169, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .financial-background {
+  background-image: url("http://lorempixel.com/400/410/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+/* line 169, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .why-background {
+  background-image: url("http://lorempixel.com/400/420/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+/* line 169, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .career-background {
+  background-image: url("http://lorempixel.com/400/430/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+/* line 169, ../sass/_menu.scss */
+#menuMasterContainer .menuBoxContainer .apply-background {
+  background-image: url("http://lorempixel.com/400/440/");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+/* line 180, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .isSelected {
   margin: 0 auto 0;
 }
-/* line 169, ../sass/_menu.scss */
+/* line 184, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn {
-  width: 95%;
+  width: 100%;
   border: 1px solid #333;
   border-top: none;
   margin: 0 auto 2em;
   text-align: center;
   display: none;
 }
-/* line 178, ../sass/_menu.scss */
+/* line 193, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow {
   padding: 1em 0;
   border-bottom: 1px solid #333;
 }
-/* line 183, ../sass/_menu.scss */
+/* line 198, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow p {
   margin: 0;
   font-size: 1.8em;
 }
-/* line 188, ../sass/_menu.scss */
+/* line 203, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:hover {
   background-color: #F1F1F1;
   cursor: pointer;
 }
-/* line 193, ../sass/_menu.scss */
+/* line 208, ../sass/_menu.scss */
 #menuMasterContainer .menuBoxContainer .optionsColumn .optionRow:last-child {
   border-bottom: none;
 }
 
+@media (min-width: 768px) {
+  /* line 218, ../sass/_menu.scss */
+  #menuMasterContainer {
+    height: 100vh;
+  }
+  /* line 221, ../sass/_menu.scss */
+  #menuMasterContainer .menuBoxContainer {
+    height: auto;
+  }
+  /* line 224, ../sass/_menu.scss */
+  #menuMasterContainer .menuBoxContainer .menuBox {
+    height: 50vh;
+  }
+}
 /**********************
   End Menu Container
 **********************/

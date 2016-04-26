@@ -77,93 +77,54 @@
 
     <div id="menuMasterContainer">
       <div class="menuBoxContainer">
-        <div class="row">
-          <div class="small-6 columns">
+
+        <!-- Start Top Row -->
+        <div class="row small-collapse fullWidth">
+          <div class="medium-6 columns">
 
             <!-- Landing Menu -->
-            <div class="menuBox" onclick="selectMenu(this);">
-              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
-              <h6>Financial Aid</h6>
-            </div>
+            <a href='#'>
+              <div class="menuBox financial-background">
+                <div class="title">Financial Aid</div>
+              </div>
+            </a>
+          </div>
 
-            <!-- Landing Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>financial-aid/">Home</a></p>
-              </div>
-              <div class="optionRow">
-                <p>Overview</p>
-              </div>
-              <div class="optionRow">
-                <p>Testimonials</p>
-              </div>
-            </div>
+          <div class="medium-6 columns">
 
             <!-- Why COMC Menu -->
-            <div class="menuBox" onclick="selectMenu(this);">
-              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
-              <h6>Why COMC?</h6>
-            </div>
-
-            <!-- Why COMC Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>why-comc/">Home</a></p>
+            <a href='#'>
+              <div class="menuBox why-background">
+                <div class="title">Why COMC?</div>
               </div>
-              <div class="optionRow">
-                <p>Overview</p>
-              </div>
-              <div class="optionRow">
-                <p>Testimonials</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Career Menu -->
-          <div class="small-6 columns">
-            <div class="menuBox" onclick="selectMenu(this);">
-              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
-
-              <h6>Career</h6>
-            </div>
-
-            <!-- Career Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>careers/">Home</a></p>
-              </div>
-              <div class="optionRow">
-                <p>Overview</p>
-              </div>
-              <div class="optionRow">
-                <p>Testimonials</p>
-              </div>
-            </div>
-
-            <!-- Apply Menu -->
-            <div class="menuBox" onclick="selectMenu(this);">
-              
-              <img src="<?php echo BASE_URL; ?>img/comc-hand.svg">
-
-              <h6>Apply</h6>
-            </div>
-
-            <!-- Apply Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>applying/">Home</a></p>
-              </div>
-              <div class="optionRow">
-                <p>Overview</p>
-              </div>
-              <div class="optionRow">
-                <p>Testimonials</p>
-              </div>
-            </div>
-
+            </a>
           </div>
         </div>
+        <!-- End Top Row -->
+
+        <!-- Start Bottom Row -->
+        <div class="row small-collapse fullWidth">
+
+          <!-- Career Menu -->
+          <div class="medium-6 columns">
+            <a href='#'>
+              <div class="menuBox career-background">
+                <div class="title">Career</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Apply Menu -->
+          <div class="medium-6 columns">
+            <a href='#'>
+              <div class="menuBox apply-background">
+                <div class="title">Apply</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Bottom Row -->
+
       </div>
     </div>
 
