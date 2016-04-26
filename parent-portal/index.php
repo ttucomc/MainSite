@@ -121,7 +121,7 @@
         </select>
       </h2>
       <p>
-        CoMC consists of four academic departments offering a total of six undergraduate and four graduate degrees. Undergraduates can earn a Bachelor of Arts degree in: advertising, communication studies, electronic media & communication, journalism, media strategies, and public relations.
+        CoMC consists of four academic departments offering a total of six undergraduate and four graduate degrees. Undergraduates can earn a Bachelor of Arts degree in: advertising, communication studies, electronic media and communications, journalism, media strategies, and public relations.
       </p>
     </div>
     <div id="description" class="row">

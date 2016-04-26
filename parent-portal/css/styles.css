@@ -837,17 +837,24 @@ hr:after {
   transition: all 400ms ease-in-out;
 }
 
+/* line 238, ../sass/styles.scss */
+footer {
+  background-color: #333;
+  color: #FFF;
+  padding: 2em 0;
+}
+
 /****************************
         SUB PAGES
 ****************************/
-/* line 243, ../sass/styles.scss */
+/* line 249, ../sass/styles.scss */
 .top {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
-/* line 248, ../sass/styles.scss */
+/* line 254, ../sass/styles.scss */
 .top .title {
   position: absolute;
   top: 50%;
@@ -858,7 +865,7 @@ hr:after {
   width: 100%;
   padding: 0 .5em;
 }
-/* line 255, ../sass/styles.scss */
+/* line 261, ../sass/styles.scss */
 .top .title h1 {
   color: #FFF;
   font-size: 5em;
@@ -866,24 +873,24 @@ hr:after {
   margin: .125em 0;
 }
 @media screen and (min-width: 414px) {
-  /* line 255, ../sass/styles.scss */
+  /* line 261, ../sass/styles.scss */
   .top .title h1 {
     font-size: 7em;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 255, ../sass/styles.scss */
+  /* line 261, ../sass/styles.scss */
   .top .title h1 {
     font-size: 10em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 255, ../sass/styles.scss */
+  /* line 261, ../sass/styles.scss */
   .top .title h1 {
     font-size: 12em;
   }
 }
-/* line 269, ../sass/styles.scss */
+/* line 275, ../sass/styles.scss */
 .top .title h1:before, .top .title h1:after {
   content: '';
   display: none;

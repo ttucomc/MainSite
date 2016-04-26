@@ -1,3 +1,11 @@
+<footer>
+  <div class="row">
+    <div class="medium-4 columns end">
+      <a href="http://comc.ttu.edu"><img src="<?php echo BASE_URL; ?>img/CoMC-horizontal-logo.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" /></a>
+    </div>
+  </div>
+</footer>
+
 <!-- Vendor JS -->
 <script src="<?php echo BASE_URL; ?>js/greensock/TweenMax.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
