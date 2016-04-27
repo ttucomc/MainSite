@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="title">
+    <div id="title">
       <img id="logoWords" src="img/CoMC-logo-white.svg" alt="College of Media &amp; Communication" title="College of Media &amp; Communication" />
       <h1>Parents</h1>
     </div>

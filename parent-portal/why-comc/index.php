@@ -13,7 +13,7 @@
         <div id="output">
         </div>
       </div>
-      <div class="title">
+      <div id="title">
         <h1>Why CoMC?</h1>
       </div>
       <div class="scrollDown">

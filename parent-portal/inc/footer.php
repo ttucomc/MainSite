@@ -26,11 +26,11 @@
 
   // Calling growing h1
   new ScrollMagic.Scene({
-        triggerElement: '#logoWords',
+        triggerElement: '#title',
         triggerHook: 'onLeave',
         offset: -125
       })
-      .setTween(TweenMax.to(".title h1", 0.5, {scale: 10, opacity: 0 }))
+      .setTween(TweenMax.to("#title h1", 0.5, {scale: 10, opacity: 0 }))
       .addTo(controller);
 
 </script>

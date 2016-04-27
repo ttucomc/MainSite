@@ -82,20 +82,22 @@
 
         <!-- Start Top Row -->
         <div class="row small-collapse fullWidth">
-          <div class="medium-6 columns">
 
-            <!-- Landing Menu -->
-            <a href='#'>
-              <div class="menuBox financial-background">
-                <div class="title">Financial Aid</div>
+          <!-- Career Menu -->
+          <div class="medium-6 columns">
+            <a href='<?php echo BASE_URL; ?>careers/'>
+              <div class="menuBox career-background">
+                <div class="title">Career</div>
               </div>
             </a>
           </div>
 
+
+
           <div class="medium-6 columns">
 
             <!-- Why COMC Menu -->
-            <a href='#'>
+            <a href='<?php echo BASE_URL; ?>why-comc/'>
               <div class="menuBox why-background">
                 <div class="title">Why COMC?</div>
               </div>
@@ -108,24 +110,28 @@
         <!-- Start Bottom Row -->
         <div class="row small-collapse fullWidth">
 
-          <!-- Career Menu -->
-          <div class="medium-6 columns">
-            <a href='#'>
-              <div class="menuBox career-background">
-                <div class="title">Career</div>
-              </div>
-            </a>
-          </div>
 
           <!-- Apply Menu -->
           <div class="medium-6 columns">
-            <a href='#'>
+            <a href='<?php echo BASE_URL; ?>applying/'>
               <div class="menuBox apply-background">
                 <div class="title">Apply</div>
               </div>
             </a>
           </div>
+
+          <div class="medium-6 columns">
+
+            <!-- Landing Menu -->
+            <a href='<?php echo BASE_URL; ?>financial-aid/'>
+              <div class="menuBox financial-background">
+                <div class="title">Financial Aid</div>
+              </div>
+            </a>
+          </div>
+
         </div>
+
         <!-- End Bottom Row -->
 
       </div>

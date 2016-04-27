@@ -12,7 +12,7 @@
         <div id="output">
         </div>
       </div>
-      <div class="title">
+      <div id="title">
         <h1>Financial Aid</h1>
       </div>
       <div class="scrollDown">
