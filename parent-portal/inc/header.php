@@ -79,106 +79,55 @@
 
     <div id="menuMasterContainer">
       <div class="menuBoxContainer">
-        <div class="row">
-          <div class="small-6 columns">
 
-            <div class="menuBox" onclick="selectMenu(this);">
-              <figure class="fa fa-building fa-3x"></figure>
-
-              <h6>Career</h6>
-            </div>
-
-            <!-- Career Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>careers/">Home</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>careers/#overview">Overview</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>careers/#rankings">Skills</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>careers/#alumni">Alumni</a></p>
-              </div>
-            </div>
-
-            <!-- Apply Menu -->
-            <div class="menuBox" onclick="selectMenu(this);">
-
-              <figure class="fa fa-pencil fa-3x">
-
-              </figure>
-
-              <h6>Apply</h6>
-            </div>
-
-            <!-- Apply Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>applying/">Home</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>applying/#howToApply">How?</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>applying/#contactUs">Contact Us</a></p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Career Menu -->
-          <div class="small-6 columns">
-            <!-- Why COMC Menu -->
-            <div class="menuBox" onclick="selectMenu(this);">
-              <figure class="fa fa-heart fa-3x">
-
-              </figure>
-              <h6>Why COMC?</h6>
-            </div>
-
-            <!-- Why COMC Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>why-comc/">Home</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>why-comc/#visit">Visit</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>why-comc/#events">Events</a></p>
-              </div>
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>why-comc/#lubbock">Lubbock</a></p>
-              </div>
-            </div>
+        <!-- Start Top Row -->
+        <div class="row small-collapse fullWidth">
+          <div class="medium-6 columns">
 
             <!-- Landing Menu -->
-            <div class="menuBox" onclick="selectMenu(this);">
-              <figure class="fa fa-money fa-3x">
-
-              </figure>
-              <h6>Financial Aid</h6>
-            </div>
-
-            <!-- Landing Options -->
-            <div class="optionsColumn">
-              <div class="optionRow">
-                <p><a href="<?php echo BASE_URL; ?>financial-aid/">Home</a></p>
+            <a href='#'>
+              <div class="menuBox financial-background">
+                <div class="title">Financial Aid</div>
               </div>
-              <div class="optionRow">
-                <p>Overview</p>
-              </div>
-              <div class="optionRow">
-                <p>Testimonials</p>
-              </div>
-            </div>
+            </a>
+          </div>
 
+          <div class="medium-6 columns">
 
+            <!-- Why COMC Menu -->
+            <a href='#'>
+              <div class="menuBox why-background">
+                <div class="title">Why COMC?</div>
+              </div>
+            </a>
           </div>
         </div>
+        <!-- End Top Row -->
+
+
+        <!-- Start Bottom Row -->
+        <div class="row small-collapse fullWidth">
+
+          <!-- Career Menu -->
+          <div class="medium-6 columns">
+            <a href='#'>
+              <div class="menuBox career-background">
+                <div class="title">Career</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Apply Menu -->
+          <div class="medium-6 columns">
+            <a href='#'>
+              <div class="menuBox apply-background">
+                <div class="title">Apply</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Bottom Row -->
+
       </div>
     </div>
 
