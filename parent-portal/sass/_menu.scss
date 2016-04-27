@@ -19,7 +19,6 @@ header {
   left: 1.4em;
   top: 0.8em;
   float: left;
-  z-index: 100;
 
   img {
     height: 2.4em;
@@ -143,9 +142,52 @@ header {
 
     .menuBox {
       position: relative;
-      border: 1px solid $dark-grey;
+      border: 1px solid #fff;
       height: 25vh;
       cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: grayscale(100%);
+      @include transition(all .3s ease);
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $dark-grey;
+        opacity: .3;
+        height: 100%;
+        width: 100%;
+        @include transition(all .3s ease);
+        z-index: 1;
+      }
+      &.financial-background {
+        background-image: url(../img/triangles-green.png);
+      }
+      &.why-background {
+        background-image: url(../img/triangles-coral.png);
+
+      }
+      &.career-background {
+        background-image: url(../img/triangles-blue.png);
+
+      }
+      &.apply-background {
+        background-image: url(../img/triangles-pink.png);
+        &:after {
+          content: '';
+          background-color: #FFF;
+          opacity: .2;
+        }
+      }
+      &:hover {
+        filter: grayscale(0);
+        &:after {
+          content: '';
+          opacity: 0;
+          @include transition(all .3s ease);
+        }
+      }
 
       .title {
         position: absolute;
@@ -154,23 +196,17 @@ header {
         text-transform: uppercase;
         margin: 0;
         color: white;
-
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include transition(all .3s ease);
+        z-index: 2;
       }
-    }
 
-    //TODO all this could be deleted and replaced with triangles.
-    $i: 400;
-    @each $page in financial, why, career, apply {
-      $i: 10+$i;
-      $pixel: $i;
-      .#{$page}-background {
-        background-image: url('http://lorempixel.com/400/' + $pixel + '/');
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: grayscale(100%);
+      &:hover {
+        .title {
+          font-size: 2.9em;
+        }
       }
     }
 

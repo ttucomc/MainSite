@@ -26,7 +26,7 @@
 
   // Calling growing h1
   new ScrollMagic.Scene({
-        triggerElement: '.title',
+        triggerElement: '#logoWords',
         triggerHook: 'onLeave',
         offset: -125
       })
