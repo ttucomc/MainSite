@@ -2147,24 +2147,28 @@ header {
 #applying #howToApply {
   max-width: 100%;
 }
-/* line 16, ../sass/_applying.scss */
+/* line 15, ../sass/_applying.scss */
+#applying #howToApply .grey-background {
+  background-color: #F1F1F1;
+}
+/* line 19, ../sass/_applying.scss */
 #applying #howToApply a {
   color: #003a66;
   text-decoration: none;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 21, ../sass/_applying.scss */
+/* line 24, ../sass/_applying.scss */
 #applying #howToApply a:hover {
   color: #0074cc;
   cursor: pointer;
 }
-/* line 27, ../sass/_applying.scss */
+/* line 30, ../sass/_applying.scss */
 #applying #howToApply .applyBanner {
   background-image: url("../img/60-lines.png");
   background-color: #B02459;
 }
-/* line 32, ../sass/_applying.scss */
+/* line 35, ../sass/_applying.scss */
 #applying #howToApply .freshman, #applying #howToApply .transfer {
   font-size: 3.5em;
   color: white;
@@ -2175,72 +2179,71 @@ header {
   padding: 0.2em;
   */
 }
-/* line 43, ../sass/_applying.scss */
+/* line 46, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
   margin: 0 2em;
 }
-/* line 46, ../sass/_applying.scss */
+/* line 49, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer ol, #applying #howToApply .transferContainer ol {
   text-align: left;
 }
-/* line 49, ../sass/_applying.scss */
+/* line 52, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer ol li, #applying #howToApply .transferContainer ol li {
   font-size: 1.4em;
   padding: 1em 0;
 }
-/* line 53, ../sass/_applying.scss */
+/* line 56, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer ol li:first-child, #applying #howToApply .transferContainer ol li:first-child {
   padding-top: 0;
   margin-top: 1.6em;
 }
-/* line 61, ../sass/_applying.scss */
+/* line 64, ../sass/_applying.scss */
 #applying #howToApply .transferInfo {
   margin-top: 1.6em;
   font-size: 1.6em;
 }
 @media (min-width: 768px) {
-  /* line 69, ../sass/_applying.scss */
+  /* line 72, ../sass/_applying.scss */
   #applying #howToApply .applyBanner {
     border-right: 2px solid white;
   }
-  /* line 73, ../sass/_applying.scss */
+  /* line 76, ../sass/_applying.scss */
   #applying #howToApply .freshman, #applying #howToApply .transfer {
     font-size: 3.5em;
     color: white;
     padding: 0.75em;
   }
-  /* line 79, ../sass/_applying.scss */
+  /* line 82, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
     padding: 1px 4em;
     margin: 0 auto;
   }
-  /* line 83, ../sass/_applying.scss */
+  /* line 86, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer ol, #applying #howToApply .transferContainer ol {
     text-align: left;
   }
-  /* line 86, ../sass/_applying.scss */
+  /* line 89, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer ol li, #applying #howToApply .transferContainer ol li {
     font-size: 1.6em;
     padding: 20px 0;
   }
-  /* line 93, ../sass/_applying.scss */
+  /* line 96, ../sass/_applying.scss */
   #applying #howToApply .transferContainer {
     height: 100%;
-    background-color: #F1F1F1;
   }
 }
 @media (min-width: 1600px) {
-  /* line 100, ../sass/_applying.scss */
+  /* line 102, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
     padding: 1px 8em;
   }
 }
-/* line 107, ../sass/_applying.scss */
+/* line 109, ../sass/_applying.scss */
 #applying #contact-container {
   padding: 5em 0;
   max-width: 100%;
 }
-/* line 112, ../sass/_applying.scss */
+/* line 114, ../sass/_applying.scss */
 #applying #contactUs {
   background-color: #F1F1F1;
   font-size: 1.5em;
@@ -2250,12 +2253,12 @@ header {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* line 124, ../sass/_applying.scss */
+/* line 126, ../sass/_applying.scss */
 .scrollDown li {
   list-style-type: none;
 }
 
-/* line 132, ../sass/_applying.scss */
+/* line 134, ../sass/_applying.scss */
 .button::after {
   left: -100px;
   height: 400px;
@@ -2263,7 +2266,7 @@ header {
 }
 
 @media (min-width: 768px) {
-  /* line 144, ../sass/_applying.scss */
+  /* line 146, ../sass/_applying.scss */
   .button::after {
     left: -100px;
     height: 400px;
