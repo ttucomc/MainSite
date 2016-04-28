@@ -1906,7 +1906,7 @@ header {
 }
 /* line 128, ../sass/_whycomc.scss */
 #visit .moreInfo {
-  margin: 3em auto 6em;
+  margin: 3em auto 4em;
 }
 /* line 131, ../sass/_whycomc.scss */
 #visit .moreInfo a {
@@ -1924,7 +1924,7 @@ header {
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  /* line 150, ../sass/_whycomc.scss */
+  /* line 149, ../sass/_whycomc.scss */
   #visit p {
     font-size: 2em;
   }
@@ -1934,63 +1934,126 @@ header {
      End Visit Section
 ****************************/
 /****************************
-      Events Section
+      Faculty Section
 ****************************/
 /* line 165, ../sass/_whycomc.scss */
-#events {
-  padding: 2em 0;
-  background-color: #F1F1F1;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+#faculty {
+  position: relative;
+  padding: 2em;
+  background-color: #E6837F;
+  color: white;
 }
 /* line 171, ../sass/_whycomc.scss */
+#faculty > h2 {
+  color: #333;
+  font-size: 5em;
+  margin-bottom: 0;
+}
+/* line 177, ../sass/_whycomc.scss */
+#faculty > .row {
+  padding: 2em 0;
+  max-width: 100%;
+}
+/* line 182, ../sass/_whycomc.scss */
+#faculty .faculty {
+  margin: 1em 0;
+}
+/* line 185, ../sass/_whycomc.scss */
+#faculty .faculty i {
+  color: #333;
+  font-size: 10em;
+}
+/* line 190, ../sass/_whycomc.scss */
+#faculty .faculty p {
+  padding-top: 2em;
+  color: #333;
+}
+/* line 196, ../sass/_whycomc.scss */
+#faculty .faculty:last-child i {
+  padding-top: 0.2em;
+}
+/* line 202, ../sass/_whycomc.scss */
+#faculty .button {
+  background-color: #333;
+  width: 100%;
+  font-size: 1.8em;
+}
+
+@media (min-width: 768px) {
+  /* line 214, ../sass/_whycomc.scss */
+  #faculty .faculty {
+    margin: 1em 1em;
+  }
+  /* line 217, ../sass/_whycomc.scss */
+  #faculty .faculty i {
+    font-size: 13em;
+  }
+  /* line 221, ../sass/_whycomc.scss */
+  #faculty .faculty p {
+    width: 100%;
+    padding-top: 2em;
+  }
+  /* line 227, ../sass/_whycomc.scss */
+  #faculty .button {
+    width: 33%;
+    font-size: 1.8em;
+  }
+}
+/****************************
+     End Faculty Section
+****************************/
+/****************************
+      Events Section
+****************************/
+/* line 247, ../sass/_whycomc.scss */
 #events .eventDate .eventTitle {
   font-size: 3em;
   margin: 1em 0 0.2em;
   color: #CC0000;
   font-family: 'bebas_neue';
 }
-/* line 177, ../sass/_whycomc.scss */
+/* line 253, ../sass/_whycomc.scss */
 #events .eventDate span {
   font-size: 3em;
   margin: 1em 0;
   vertical-align: middle;
   font-family: 'bebas_neue';
 }
-/* line 184, ../sass/_whycomc.scss */
+/* line 260, ../sass/_whycomc.scss */
 #events .eventDate .day {
   font-size: 6em;
 }
-/* line 189, ../sass/_whycomc.scss */
+/* line 265, ../sass/_whycomc.scss */
 #events .eventLocation {
   font-size: 2em;
   font-family: 'bebas_neue';
   color: #003a66;
   margin-top: 0.6em;
 }
-/* line 196, ../sass/_whycomc.scss */
+/* line 272, ../sass/_whycomc.scss */
 #events p {
   font-size: 1.4em;
   margin: 1.5em auto;
   width: 60%;
 }
 @media (min-width: 768px) {
-  /* line 204, ../sass/_whycomc.scss */
+  /* line 280, ../sass/_whycomc.scss */
   #events .eventTitle {
     font-size: 5em;
   }
-  /* line 208, ../sass/_whycomc.scss */
+  /* line 284, ../sass/_whycomc.scss */
   #events span {
     font-size: 4em;
   }
-  /* line 212, ../sass/_whycomc.scss */
+  /* line 288, ../sass/_whycomc.scss */
   #events .day {
     font-size: 7em;
   }
-  /* line 216, ../sass/_whycomc.scss */
+  /* line 292, ../sass/_whycomc.scss */
   #events .eventLocation {
     font-size: 3em;
   }
-  /* line 220, ../sass/_whycomc.scss */
+  /* line 296, ../sass/_whycomc.scss */
   #events p {
     font-size: 2em;
   }
@@ -1999,22 +2062,32 @@ header {
 /****************************
     End Events Section
 ****************************/
-/* line 235, ../sass/_whycomc.scss */
+/* line 307, ../sass/_whycomc.scss */
+#lubbock {
+  padding: 3em 0;
+  background-color: #F1F1F1;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 312, ../sass/_whycomc.scss */
+#lubbock hr:after {
+  outline: #F1F1F1;
+}
+/* line 318, ../sass/_whycomc.scss */
 #lubbock .listContainer .listTitle {
   font-size: 2.2em;
   margin: 1em 0 0.5em;
 }
-/* line 240, ../sass/_whycomc.scss */
+/* line 323, ../sass/_whycomc.scss */
 #lubbock .listContainer ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 244, ../sass/_whycomc.scss */
+/* line 327, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li {
   margin: 0.5em 0;
   color: black;
 }
-/* line 248, ../sass/_whycomc.scss */
+/* line 331, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li a {
   font-size: 1.5em;
   color: #003a66;
@@ -2022,25 +2095,25 @@ header {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 254, ../sass/_whycomc.scss */
+/* line 337, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li a:hover {
   color: #0074cc;
   cursor: pointer;
 }
-/* line 260, ../sass/_whycomc.scss */
+/* line 343, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li .subHead {
   width: 100%;
   font-size: 2em;
   margin: 0.8em 0 0.5em;
   padding: 0;
 }
-/* line 267, ../sass/_whycomc.scss */
+/* line 350, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li li {
   margin: inherit;
   font-size: 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 278, ../sass/_whycomc.scss */
+  /* line 361, ../sass/_whycomc.scss */
   #lubbock .listContainer .listGroup {
     display: inline-block;
     width: 33%;
@@ -2051,13 +2124,18 @@ header {
 /****************************
     Opportunites Section
 ****************************/
-/* line 292, ../sass/_whycomc.scss */
+/* line 377, ../sass/_whycomc.scss */
+#opportunities {
+  margin-top: 2em;
+}
+
+/* line 381, ../sass/_whycomc.scss */
 .studentOpportuntiesTitle {
   color: #E6837F;
   font-family: 'bebas_neue';
 }
 
-/* line 301, ../sass/_whycomc.scss */
+/* line 390, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2075,7 +2153,7 @@ header {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-/* line 307, ../sass/_whycomc.scss */
+/* line 396, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems {
   position: relative;
   width: 100%;
@@ -2085,20 +2163,20 @@ header {
   -webkit-transition: all 0.50s ease;
   transition: all 0.50s ease;
 }
-/* line 315, ../sass/_whycomc.scss */
+/* line 404, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems h4 {
   color: black;
   font-size: 2em;
   margin: 0.8em 0 0;
 }
-/* line 321, ../sass/_whycomc.scss */
+/* line 410, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems p {
   color: black;
   font-size: 1em;
   margin: 0.4em;
   padding-bottom: 60px;
 }
-/* line 328, ../sass/_whycomc.scss */
+/* line 417, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2112,39 +2190,39 @@ header {
   bottom: 0;
   width: 100%;
 }
-/* line 336, ../sass/_whycomc.scss */
+/* line 425, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email, .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   color: black;
   padding-bottom: 1em;
 }
-/* line 340, ../sass/_whycomc.scss */
+/* line 429, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a {
   color: black;
   text-decoration: none;
 }
-/* line 344, ../sass/_whycomc.scss */
+/* line 433, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a:hover, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a:hover {
   color: #333333;
   cursor: pointer;
 }
-/* line 351, ../sass/_whycomc.scss */
+/* line 440, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 356, ../sass/_whycomc.scss */
+/* line 445, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   padding-right: 1em;
 }
 @media (min-width: 768px) {
-  /* line 364, ../sass/_whycomc.scss */
+  /* line 453, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 45%;
     margin: 10px;
   }
 }
 @media (min-width: 1000px) {
-  /* line 372, ../sass/_whycomc.scss */
+  /* line 461, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 30%;
     margin: 15px;

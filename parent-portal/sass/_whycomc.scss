@@ -126,7 +126,7 @@
   }
 
   .moreInfo {
-    margin: 3em auto 6em;
+    margin: 3em auto 4em;
 
     a {
       text-decoration: none;
@@ -141,7 +141,6 @@
         }
       }
     }
-
   }
 
 
@@ -158,14 +157,91 @@
 ****************************/
 
 
+
+/****************************
+      Faculty Section
+****************************/
+
+#faculty {
+  position: relative;
+  padding: 2em;
+  background-color: $coral;
+  color: white;
+
+  > h2 {
+    color: $dark-grey;
+    font-size: 5em;
+    margin-bottom: 0;
+  }
+
+  > .row {
+    padding: 2em 0;
+    max-width: 100%;
+  }
+
+  .faculty {
+    margin: 1em 0;
+
+    i {
+      color: $dark-grey;
+      font-size: 10em;
+    }
+
+    p {
+      padding-top: 2em;
+      color: $dark-grey;
+    }
+
+    &:last-child {
+      i {
+        padding-top: 0.2em;
+      }
+    }
+  }
+
+  .button {
+    background-color: $dark-grey;
+    width: 100%;
+    font-size: 1.8em;
+  }
+
+}
+
+@media(min-width: $screen-med) {
+
+  #faculty {
+
+    .faculty {
+      margin: 1em 1em;
+
+      i {
+        font-size: 13em;
+      }
+
+      p {
+        width: 100%;
+        padding-top: 2em;
+      }
+    }
+
+    .button {
+      width: 33%;
+      font-size: 1.8em;
+    }
+
+  }
+}
+
+/****************************
+     End Faculty Section
+****************************/
+
+
 /****************************
       Events Section
 ****************************/
 
 #events {
-  padding: 2em 0;
-  background-color: $light-grey;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
   .eventDate {
     .eventTitle {
@@ -229,6 +305,13 @@
 
 
 #lubbock {
+  padding: 3em 0;
+  background-color: $light-grey;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+  hr:after {
+    outline: $light-grey;
+  }
 
   .listContainer {
 
@@ -285,10 +368,16 @@
 }
 
 
-
 /****************************
     Opportunites Section
 ****************************/
+
+//For some reason, when I add all the styles underneath to opportunites everything breaks.
+//TODO Add all styles to opportunites
+#opportunities {
+  margin-top: 2em;
+}
+
 .studentOpportuntiesTitle {
 
   //font-size: 3em;
@@ -375,7 +464,6 @@
     }
 
   }
-
 }
 
 
