@@ -27,6 +27,37 @@
 
 <section id="visit">
 
+  <div class="row">
+
+    <div class="large-6 columns">
+      <div class="dailyTours">
+        <h2 class="dailyTours">Daily Tours</h2>
+        <p>
+          We conduct campus tours Monday through Friday at 8:30 am and 1:00 pm and at 8:30 am on select Saturday mornings.
+          <br /><br />Plan to spend a whole day with us.
+          <br />Meet our students. Hear their stories. Find out why they love Texas Tech!
+        </p>
+      </div>
+    </div>
+
+    <div class="large-6 columns">
+      <div class="virtualTour">
+          <h2>Virtual Tour</h2>
+          <p>Can't make it to campus?<br />Check out Texas Tech virtually!</p>
+          <br />
+          <div class="tourContainer">
+            <a class="virtualtour_embed" title="Virtual Reality, Virtual Tour" href="http://www.youvisit.com" data-platform="v" data-link-type="image" data-inst="59975" data-image-width="100%" data-image-height="100">Virtual Tour</a>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="moreInfo">
+    <a href='http://www.depts.ttu.edu/admissions/visit-events/'><p>More information</p></a>
+  </div>
+
   <div class="masterImageContainer">
     <div class="imageContainer">
       <div id="ttu_1"></div>
@@ -34,41 +65,6 @@
       <div id="ttu_3"></div>
       <div id="ttu_4"></div>
     </div>
-
-    <i class="fa fa-map-marker marker"></i>
-    <div class="transparent">
-      <div class="dailyTours">
-        <h2 class="dailyTours">Daily Tours</h2>
-        <p>
-          Me? i'm dishonest, and a dishonest man you can always trust to be dishonest.
-          honestly. it's the honest ones you want to watch out for,
-          because you can never predict when they're going to do something incredibly... stupid.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="visitLocal">
-    <h2>Visit TTU Local Branch</h2>
-
-    <p>
-      Me? i'm dishonest, and a dishonest man you can always trust to be dishonest.
-      honestly. it's the honest ones you want to watch out for,
-      because you can never predict when they're going to do something incredibly... stupid.
-    </p>
-  </div>
-
-  <div class="virtualTour">
-      <h2>Virtual Tour</h2>
-      <p>Visit Texas Tech using our virtual tour</p>
-      <br />
-      <div class="tourContainer">
-        <a class="virtualtour_embed" title="Virtual Reality, Virtual Tour" href="http://www.youvisit.com" data-platform="v" data-link-type="image" data-inst="59975" data-image-width="100%" data-image-height="100">Virtual Tour</a>
-      </div>
-  </div>
-
-  <div class="moreInfo">
-    <a href='http://www.depts.ttu.edu/admissions/visit-events/'><p>More information</p></a>
   </div>
 
 </section>

@@ -29,15 +29,55 @@
     <!-- VISIT TTU SECTION -->
     <?php include 'visit.php' ?>
 
-    <!-- EVENTS SECTION -->
+    <!-- FACTULY SECTION -->
+    <section id='faculty'>
+
+      <h2>Faculty</h2>
+
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="faculty">
+
+            <i class="fa fa-university fa-5x"></i>
+            <p>
+              Our award-winning faculty bring real-world experiences into the classroom every day.
+              Each department within the College of Media &amp; Communication boasts faculty members with experience working in a variety of media organizations—from small non-profits to large media companies.
+              This background provides unique opportunities for your students to learn.
+              Our faculty are creative, innovative and approachable—willing to answer any questions you and your student have about academic and career opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div class="large-6 columns">
+
+          <div class="faculty">
+
+            <i class="fa fa-graduation-cap fa-5x"></i>
+            <p>
+              As a Tier 1 research institution, Texas Tech CoMC faculty bring their research into the classroom, allowing undergraduate students to learn about and even participate in media and communication-related academic study.
+              Recent topics our faculty are researching include: video games and their effects, social media and the environment, children’s television programming, sports media broadcasts and how they are produced, and dozens of others.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="https://www.depts.ttu.edu/comc/faculty/">
+        <div class="button">Visit our Faculty</div>
+      </a>
+
+    </section>
+
+    <!-- EVENTS SECTION
     <section id="events">
 
       <h2>Events</h2>
       <hr />
 
 
-
       <?php
+
+        /*
 
         include 'events.php';
 
@@ -59,15 +99,16 @@
           <?php
         }
 
+        */
 
       ?>
 
-    </section>
-
-    <br />
+    </section> -->
 
     <section id="lubbock">
       <h2>What is there to do in lubbock?</h2>
+      <hr />
+
       <br />
       <div class="listContainer">
 
@@ -121,7 +162,7 @@
 
     <!-- STUDENT OPPORTUNITIES SECTION -->
 
-    <section>
+    <section id="opportunities">
 
       <h2 class="studentOpportuntiesTitle">Student Opportunites</h2>
       <hr />

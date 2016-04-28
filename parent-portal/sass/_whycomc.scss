@@ -30,6 +30,11 @@
 ****************************/
 #visit
 {
+  > .row {
+    padding: 4em 0 2em;
+    max-width: 100%;
+  }
+
   .masterImageContainer {
       position: relative;
 
@@ -78,16 +83,17 @@
       color: $red;
     }
 
+    /*
     .transparent {
       width: 100%;
       position: absolute;
       bottom: 0;
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
-      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-    }
+      //background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+      //background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      //background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    //}
   }
 
   .visitLocal
@@ -120,7 +126,7 @@
   }
 
   .moreInfo {
-    margin: 3em auto 6em;
+    margin: 3em auto 4em;
 
     a {
       text-decoration: none;
@@ -135,7 +141,6 @@
         }
       }
     }
-
   }
 
 
@@ -149,6 +154,86 @@
 
 /****************************
      End Visit Section
+****************************/
+
+
+
+/****************************
+      Faculty Section
+****************************/
+
+#faculty {
+  position: relative;
+  padding: 2em;
+  background-color: $coral;
+  color: white;
+
+  > h2 {
+    color: $dark-grey;
+    font-size: 5em;
+    margin-bottom: 0;
+  }
+
+  > .row {
+    padding: 2em 0;
+    max-width: 100%;
+  }
+
+  .faculty {
+    margin: 1em 0;
+
+    i {
+      color: $dark-grey;
+      font-size: 10em;
+    }
+
+    p {
+      padding-top: 2em;
+      color: $dark-grey;
+    }
+
+    &:last-child {
+      i {
+        padding-top: 0.2em;
+      }
+    }
+  }
+
+  .button {
+    background-color: $dark-grey;
+    width: 100%;
+    font-size: 1.8em;
+  }
+
+}
+
+@media(min-width: $screen-med) {
+
+  #faculty {
+
+    .faculty {
+      margin: 1em 1em;
+
+      i {
+        font-size: 13em;
+      }
+
+      p {
+        width: 100%;
+        padding-top: 2em;
+      }
+    }
+
+    .button {
+      width: 33%;
+      font-size: 1.8em;
+    }
+
+  }
+}
+
+/****************************
+     End Faculty Section
 ****************************/
 
 
@@ -220,6 +305,13 @@
 
 
 #lubbock {
+  padding: 3em 0;
+  background-color: $light-grey;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+  hr:after {
+    outline: $light-grey;
+  }
 
   .listContainer {
 
@@ -276,10 +368,16 @@
 }
 
 
-
 /****************************
     Opportunites Section
 ****************************/
+
+//For some reason, when I add all the styles underneath to opportunites everything breaks.
+//TODO Add all styles to opportunites
+#opportunities {
+  margin-top: 2em;
+}
+
 .studentOpportuntiesTitle {
 
   //font-size: 3em;
@@ -366,7 +464,6 @@
     }
 
   }
-
 }
 
 

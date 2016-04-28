@@ -82,7 +82,7 @@
       </div>
 
 
-      <div class="large-6 columns " data-equalizer-watch>
+      <div class="large-6 columns grey-background" data-equalizer-watch>
 
         <div class="applyBanner">
             <div class="transfer">Transfer Student</div>

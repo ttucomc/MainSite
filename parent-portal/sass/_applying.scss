@@ -10,8 +10,11 @@
 
   #howToApply {
 
-
     max-width: 100%;
+
+    .grey-background {
+      background-color: $light-grey;
+    }
 
     a {
       color: $dark-blue;
@@ -92,7 +95,6 @@
 
       .transferContainer {
         height: 100%;
-        background-color: $light-grey;
       }
     }
 

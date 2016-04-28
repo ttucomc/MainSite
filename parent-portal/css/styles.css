@@ -1823,38 +1823,49 @@ header {
       Visit Section
 ****************************/
 /* line 33, ../sass/_whycomc.scss */
-#visit .masterImageContainer {
-  position: relative;
+#visit > .row {
+  padding: 4em 0 2em;
+  max-width: 100%;
 }
 /* line 38, ../sass/_whycomc.scss */
+#visit .masterImageContainer {
+  position: relative;
+  /*
+  .transparent {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
+}
+/* line 43, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_1 {
   background-image: url("../img/seal-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 45, ../sass/_whycomc.scss */
+/* line 50, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_2 {
   background-image: url("../img/mem-circle-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 52, ../sass/_whycomc.scss */
+/* line 57, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_3 {
   background-image: url("../img/cmc-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 59, ../sass/_whycomc.scss */
+/* line 64, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_4 {
   background-image: url("../img/library-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 67, ../sass/_whycomc.scss */
+/* line 72, ../sass/_whycomc.scss */
 #visit .masterImageContainer .marker {
   display: none;
   position: absolute;
@@ -1868,33 +1879,18 @@ header {
   font-size: 4em;
   color: #CC0000;
 }
-/* line 81, ../sass/_whycomc.scss */
-#visit .masterImageContainer .transparent {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, white 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, #ffffff 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, #ffffff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 93, ../sass/_whycomc.scss */
+/* line 99, ../sass/_whycomc.scss */
 #visit .visitLocal {
   background-color: #E6837F;
   background-image: url("../img/60-lines.png");
 }
-/* line 98, ../sass/_whycomc.scss */
+/* line 104, ../sass/_whycomc.scss */
 #visit .visitLocal h2 {
   color: white;
   font-size: 3.2em;
   padding: 1em 0 0;
 }
-/* line 104, ../sass/_whycomc.scss */
+/* line 110, ../sass/_whycomc.scss */
 #visit .visitLocal p {
   color: white;
   width: 75%;
@@ -1903,32 +1899,32 @@ header {
   font-size: 1.5em;
   padding: 0 0 2em;
 }
-/* line 116, ../sass/_whycomc.scss */
+/* line 122, ../sass/_whycomc.scss */
 #visit .virtualTour .tourContainer {
   width: 50%;
   margin: 0 auto;
 }
-/* line 122, ../sass/_whycomc.scss */
+/* line 128, ../sass/_whycomc.scss */
 #visit .moreInfo {
-  margin: 3em auto 6em;
+  margin: 3em auto 4em;
 }
-/* line 125, ../sass/_whycomc.scss */
+/* line 131, ../sass/_whycomc.scss */
 #visit .moreInfo a {
   text-decoration: none;
 }
-/* line 128, ../sass/_whycomc.scss */
+/* line 134, ../sass/_whycomc.scss */
 #visit .moreInfo a p {
   color: #003a66;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 132, ../sass/_whycomc.scss */
+/* line 138, ../sass/_whycomc.scss */
 #visit .moreInfo a p:hover {
   color: #0074cc;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  /* line 144, ../sass/_whycomc.scss */
+  /* line 149, ../sass/_whycomc.scss */
   #visit p {
     font-size: 2em;
   }
@@ -1938,57 +1934,126 @@ header {
      End Visit Section
 ****************************/
 /****************************
+      Faculty Section
+****************************/
+/* line 165, ../sass/_whycomc.scss */
+#faculty {
+  position: relative;
+  padding: 2em;
+  background-color: #E6837F;
+  color: white;
+}
+/* line 171, ../sass/_whycomc.scss */
+#faculty > h2 {
+  color: #333;
+  font-size: 5em;
+  margin-bottom: 0;
+}
+/* line 177, ../sass/_whycomc.scss */
+#faculty > .row {
+  padding: 2em 0;
+  max-width: 100%;
+}
+/* line 182, ../sass/_whycomc.scss */
+#faculty .faculty {
+  margin: 1em 0;
+}
+/* line 185, ../sass/_whycomc.scss */
+#faculty .faculty i {
+  color: #333;
+  font-size: 10em;
+}
+/* line 190, ../sass/_whycomc.scss */
+#faculty .faculty p {
+  padding-top: 2em;
+  color: #333;
+}
+/* line 196, ../sass/_whycomc.scss */
+#faculty .faculty:last-child i {
+  padding-top: 0.2em;
+}
+/* line 202, ../sass/_whycomc.scss */
+#faculty .button {
+  background-color: #333;
+  width: 100%;
+  font-size: 1.8em;
+}
+
+@media (min-width: 768px) {
+  /* line 214, ../sass/_whycomc.scss */
+  #faculty .faculty {
+    margin: 1em 1em;
+  }
+  /* line 217, ../sass/_whycomc.scss */
+  #faculty .faculty i {
+    font-size: 13em;
+  }
+  /* line 221, ../sass/_whycomc.scss */
+  #faculty .faculty p {
+    width: 100%;
+    padding-top: 2em;
+  }
+  /* line 227, ../sass/_whycomc.scss */
+  #faculty .button {
+    width: 33%;
+    font-size: 1.8em;
+  }
+}
+/****************************
+     End Faculty Section
+****************************/
+/****************************
       Events Section
 ****************************/
-/* line 162, ../sass/_whycomc.scss */
+/* line 247, ../sass/_whycomc.scss */
 #events .eventDate .eventTitle {
   font-size: 3em;
   margin: 1em 0 0.2em;
   color: #CC0000;
   font-family: 'bebas_neue';
 }
-/* line 168, ../sass/_whycomc.scss */
+/* line 253, ../sass/_whycomc.scss */
 #events .eventDate span {
   font-size: 3em;
   margin: 1em 0;
   vertical-align: middle;
   font-family: 'bebas_neue';
 }
-/* line 175, ../sass/_whycomc.scss */
+/* line 260, ../sass/_whycomc.scss */
 #events .eventDate .day {
   font-size: 6em;
 }
-/* line 180, ../sass/_whycomc.scss */
+/* line 265, ../sass/_whycomc.scss */
 #events .eventLocation {
   font-size: 2em;
   font-family: 'bebas_neue';
   color: #003a66;
   margin-top: 0.6em;
 }
-/* line 187, ../sass/_whycomc.scss */
+/* line 272, ../sass/_whycomc.scss */
 #events p {
   font-size: 1.4em;
   margin: 1.5em auto;
   width: 60%;
 }
 @media (min-width: 768px) {
-  /* line 195, ../sass/_whycomc.scss */
+  /* line 280, ../sass/_whycomc.scss */
   #events .eventTitle {
     font-size: 5em;
   }
-  /* line 199, ../sass/_whycomc.scss */
+  /* line 284, ../sass/_whycomc.scss */
   #events span {
     font-size: 4em;
   }
-  /* line 203, ../sass/_whycomc.scss */
+  /* line 288, ../sass/_whycomc.scss */
   #events .day {
     font-size: 7em;
   }
-  /* line 207, ../sass/_whycomc.scss */
+  /* line 292, ../sass/_whycomc.scss */
   #events .eventLocation {
     font-size: 3em;
   }
-  /* line 211, ../sass/_whycomc.scss */
+  /* line 296, ../sass/_whycomc.scss */
   #events p {
     font-size: 2em;
   }
@@ -1997,22 +2062,32 @@ header {
 /****************************
     End Events Section
 ****************************/
-/* line 226, ../sass/_whycomc.scss */
+/* line 307, ../sass/_whycomc.scss */
+#lubbock {
+  padding: 3em 0;
+  background-color: #F1F1F1;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 312, ../sass/_whycomc.scss */
+#lubbock hr:after {
+  outline: #F1F1F1;
+}
+/* line 318, ../sass/_whycomc.scss */
 #lubbock .listContainer .listTitle {
   font-size: 2.2em;
   margin: 1em 0 0.5em;
 }
-/* line 231, ../sass/_whycomc.scss */
+/* line 323, ../sass/_whycomc.scss */
 #lubbock .listContainer ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 235, ../sass/_whycomc.scss */
+/* line 327, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li {
   margin: 0.5em 0;
   color: black;
 }
-/* line 239, ../sass/_whycomc.scss */
+/* line 331, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li a {
   font-size: 1.5em;
   color: #003a66;
@@ -2020,25 +2095,25 @@ header {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 245, ../sass/_whycomc.scss */
+/* line 337, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li a:hover {
   color: #0074cc;
   cursor: pointer;
 }
-/* line 251, ../sass/_whycomc.scss */
+/* line 343, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li .subHead {
   width: 100%;
   font-size: 2em;
   margin: 0.8em 0 0.5em;
   padding: 0;
 }
-/* line 258, ../sass/_whycomc.scss */
+/* line 350, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li li {
   margin: inherit;
   font-size: 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 269, ../sass/_whycomc.scss */
+  /* line 361, ../sass/_whycomc.scss */
   #lubbock .listContainer .listGroup {
     display: inline-block;
     width: 33%;
@@ -2049,13 +2124,18 @@ header {
 /****************************
     Opportunites Section
 ****************************/
-/* line 283, ../sass/_whycomc.scss */
+/* line 377, ../sass/_whycomc.scss */
+#opportunities {
+  margin-top: 2em;
+}
+
+/* line 381, ../sass/_whycomc.scss */
 .studentOpportuntiesTitle {
   color: #E6837F;
   font-family: 'bebas_neue';
 }
 
-/* line 292, ../sass/_whycomc.scss */
+/* line 390, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2073,7 +2153,7 @@ header {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-/* line 298, ../sass/_whycomc.scss */
+/* line 396, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems {
   position: relative;
   width: 100%;
@@ -2083,20 +2163,20 @@ header {
   -webkit-transition: all 0.50s ease;
   transition: all 0.50s ease;
 }
-/* line 306, ../sass/_whycomc.scss */
+/* line 404, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems h4 {
   color: black;
   font-size: 2em;
   margin: 0.8em 0 0;
 }
-/* line 312, ../sass/_whycomc.scss */
+/* line 410, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems p {
   color: black;
   font-size: 1em;
   margin: 0.4em;
   padding-bottom: 60px;
 }
-/* line 319, ../sass/_whycomc.scss */
+/* line 417, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2110,39 +2190,39 @@ header {
   bottom: 0;
   width: 100%;
 }
-/* line 327, ../sass/_whycomc.scss */
+/* line 425, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email, .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   color: black;
   padding-bottom: 1em;
 }
-/* line 331, ../sass/_whycomc.scss */
+/* line 429, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a {
   color: black;
   text-decoration: none;
 }
-/* line 335, ../sass/_whycomc.scss */
+/* line 433, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a:hover, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a:hover {
   color: #333333;
   cursor: pointer;
 }
-/* line 342, ../sass/_whycomc.scss */
+/* line 440, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 347, ../sass/_whycomc.scss */
+/* line 445, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   padding-right: 1em;
 }
 @media (min-width: 768px) {
-  /* line 355, ../sass/_whycomc.scss */
+  /* line 453, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 45%;
     margin: 10px;
   }
 }
 @media (min-width: 1000px) {
-  /* line 363, ../sass/_whycomc.scss */
+  /* line 461, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 30%;
     margin: 15px;
@@ -2275,24 +2355,28 @@ header {
 #applying #howToApply {
   max-width: 100%;
 }
-/* line 16, ../sass/_applying.scss */
+/* line 15, ../sass/_applying.scss */
+#applying #howToApply .grey-background {
+  background-color: #F1F1F1;
+}
+/* line 19, ../sass/_applying.scss */
 #applying #howToApply a {
   color: #003a66;
   text-decoration: none;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 21, ../sass/_applying.scss */
+/* line 24, ../sass/_applying.scss */
 #applying #howToApply a:hover {
   color: #0074cc;
   cursor: pointer;
 }
-/* line 27, ../sass/_applying.scss */
+/* line 30, ../sass/_applying.scss */
 #applying #howToApply .applyBanner {
   background-image: url("../img/60-lines.png");
   background-color: #B02459;
 }
-/* line 32, ../sass/_applying.scss */
+/* line 35, ../sass/_applying.scss */
 #applying #howToApply .freshman, #applying #howToApply .transfer {
   font-size: 3.5em;
   color: white;
@@ -2303,72 +2387,71 @@ header {
   padding: 0.2em;
   */
 }
-/* line 43, ../sass/_applying.scss */
+/* line 46, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
   margin: 0 2em;
 }
-/* line 46, ../sass/_applying.scss */
+/* line 49, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer ol, #applying #howToApply .transferContainer ol {
   text-align: left;
 }
-/* line 49, ../sass/_applying.scss */
+/* line 52, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer ol li, #applying #howToApply .transferContainer ol li {
   font-size: 1.4em;
   padding: 1em 0;
 }
-/* line 53, ../sass/_applying.scss */
+/* line 56, ../sass/_applying.scss */
 #applying #howToApply .freshmanContainer ol li:first-child, #applying #howToApply .transferContainer ol li:first-child {
   padding-top: 0;
   margin-top: 1.6em;
 }
-/* line 61, ../sass/_applying.scss */
+/* line 64, ../sass/_applying.scss */
 #applying #howToApply .transferInfo {
   margin-top: 1.6em;
   font-size: 1.6em;
 }
 @media (min-width: 768px) {
-  /* line 69, ../sass/_applying.scss */
+  /* line 72, ../sass/_applying.scss */
   #applying #howToApply .applyBanner {
     border-right: 2px solid white;
   }
-  /* line 73, ../sass/_applying.scss */
+  /* line 76, ../sass/_applying.scss */
   #applying #howToApply .freshman, #applying #howToApply .transfer {
     font-size: 3.5em;
     color: white;
     padding: 0.75em;
   }
-  /* line 79, ../sass/_applying.scss */
+  /* line 82, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
     padding: 1px 4em;
     margin: 0 auto;
   }
-  /* line 83, ../sass/_applying.scss */
+  /* line 86, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer ol, #applying #howToApply .transferContainer ol {
     text-align: left;
   }
-  /* line 86, ../sass/_applying.scss */
+  /* line 89, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer ol li, #applying #howToApply .transferContainer ol li {
     font-size: 1.6em;
     padding: 20px 0;
   }
-  /* line 93, ../sass/_applying.scss */
+  /* line 96, ../sass/_applying.scss */
   #applying #howToApply .transferContainer {
     height: 100%;
-    background-color: #F1F1F1;
   }
 }
 @media (min-width: 1600px) {
-  /* line 100, ../sass/_applying.scss */
+  /* line 102, ../sass/_applying.scss */
   #applying #howToApply .freshmanContainer, #applying #howToApply .transferContainer {
     padding: 1px 8em;
   }
 }
-/* line 107, ../sass/_applying.scss */
+/* line 109, ../sass/_applying.scss */
 #applying #contact-container {
   padding: 5em 0;
   max-width: 100%;
 }
-/* line 112, ../sass/_applying.scss */
+/* line 114, ../sass/_applying.scss */
 #applying #contactUs {
   background-color: #F1F1F1;
   font-size: 1.5em;
@@ -2378,12 +2461,12 @@ header {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* line 124, ../sass/_applying.scss */
+/* line 126, ../sass/_applying.scss */
 .scrollDown li {
   list-style-type: none;
 }
 
-/* line 132, ../sass/_applying.scss */
+/* line 134, ../sass/_applying.scss */
 .button::after {
   left: -100px;
   height: 400px;
@@ -2391,7 +2474,7 @@ header {
 }
 
 @media (min-width: 768px) {
-  /* line 144, ../sass/_applying.scss */
+  /* line 146, ../sass/_applying.scss */
   .button::after {
     left: -100px;
     height: 400px;
