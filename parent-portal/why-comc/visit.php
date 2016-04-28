@@ -27,15 +27,6 @@
 
 <section id="visit">
 
-  <div class="masterImageContainer">
-    <div class="imageContainer">
-      <div id="ttu_1"></div>
-      <div id="ttu_2"></div>
-      <div id="ttu_3"></div>
-      <div id="ttu_4"></div>
-    </div>
-  </div>
-
   <div class="row">
 
     <div class="large-6 columns">
@@ -65,6 +56,15 @@
 
   <div class="moreInfo">
     <a href='http://www.depts.ttu.edu/admissions/visit-events/'><p>More information</p></a>
+  </div>
+
+  <div class="masterImageContainer">
+    <div class="imageContainer">
+      <div id="ttu_1"></div>
+      <div id="ttu_2"></div>
+      <div id="ttu_3"></div>
+      <div id="ttu_4"></div>
+    </div>
   </div>
 
 </section>
