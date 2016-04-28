@@ -34,7 +34,6 @@
       <hr />
 
 
-
       <?php
 
         include 'events.php';
@@ -66,6 +65,8 @@
 
     <section id="lubbock">
       <h2>What is there to do in lubbock?</h2>
+      <hr />
+
       <br />
       <div class="listContainer">
 

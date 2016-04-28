@@ -1797,38 +1797,49 @@ header {
       Visit Section
 ****************************/
 /* line 33, ../sass/_whycomc.scss */
-#visit .masterImageContainer {
-  position: relative;
+#visit > .row {
+  padding: 4em 0 2em;
+  max-width: 100%;
 }
 /* line 38, ../sass/_whycomc.scss */
+#visit .masterImageContainer {
+  position: relative;
+  /*
+  .transparent {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
+}
+/* line 43, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_1 {
   background-image: url("../img/seal-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 45, ../sass/_whycomc.scss */
+/* line 50, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_2 {
   background-image: url("../img/mem-circle-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 52, ../sass/_whycomc.scss */
+/* line 57, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_3 {
   background-image: url("../img/cmc-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 59, ../sass/_whycomc.scss */
+/* line 64, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_4 {
   background-image: url("../img/library-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 67, ../sass/_whycomc.scss */
+/* line 72, ../sass/_whycomc.scss */
 #visit .masterImageContainer .marker {
   display: none;
   position: absolute;
@@ -1842,33 +1853,18 @@ header {
   font-size: 4em;
   color: #CC0000;
 }
-/* line 81, ../sass/_whycomc.scss */
-#visit .masterImageContainer .transparent {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, white 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.85) 0%, #ffffff 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, #ffffff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 93, ../sass/_whycomc.scss */
+/* line 99, ../sass/_whycomc.scss */
 #visit .visitLocal {
   background-color: #E6837F;
   background-image: url("../img/60-lines.png");
 }
-/* line 98, ../sass/_whycomc.scss */
+/* line 104, ../sass/_whycomc.scss */
 #visit .visitLocal h2 {
   color: white;
   font-size: 3.2em;
   padding: 1em 0 0;
 }
-/* line 104, ../sass/_whycomc.scss */
+/* line 110, ../sass/_whycomc.scss */
 #visit .visitLocal p {
   color: white;
   width: 75%;
@@ -1877,32 +1873,32 @@ header {
   font-size: 1.5em;
   padding: 0 0 2em;
 }
-/* line 116, ../sass/_whycomc.scss */
+/* line 122, ../sass/_whycomc.scss */
 #visit .virtualTour .tourContainer {
   width: 50%;
   margin: 0 auto;
 }
-/* line 122, ../sass/_whycomc.scss */
+/* line 128, ../sass/_whycomc.scss */
 #visit .moreInfo {
   margin: 3em auto 6em;
 }
-/* line 125, ../sass/_whycomc.scss */
+/* line 131, ../sass/_whycomc.scss */
 #visit .moreInfo a {
   text-decoration: none;
 }
-/* line 128, ../sass/_whycomc.scss */
+/* line 134, ../sass/_whycomc.scss */
 #visit .moreInfo a p {
   color: #003a66;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 132, ../sass/_whycomc.scss */
+/* line 138, ../sass/_whycomc.scss */
 #visit .moreInfo a p:hover {
   color: #0074cc;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  /* line 144, ../sass/_whycomc.scss */
+  /* line 150, ../sass/_whycomc.scss */
   #visit p {
     font-size: 2em;
   }
@@ -1914,55 +1910,61 @@ header {
 /****************************
       Events Section
 ****************************/
-/* line 162, ../sass/_whycomc.scss */
+/* line 165, ../sass/_whycomc.scss */
+#events {
+  padding: 2em 0;
+  background-color: #F1F1F1;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 171, ../sass/_whycomc.scss */
 #events .eventDate .eventTitle {
   font-size: 3em;
   margin: 1em 0 0.2em;
   color: #CC0000;
   font-family: 'bebas_neue';
 }
-/* line 168, ../sass/_whycomc.scss */
+/* line 177, ../sass/_whycomc.scss */
 #events .eventDate span {
   font-size: 3em;
   margin: 1em 0;
   vertical-align: middle;
   font-family: 'bebas_neue';
 }
-/* line 175, ../sass/_whycomc.scss */
+/* line 184, ../sass/_whycomc.scss */
 #events .eventDate .day {
   font-size: 6em;
 }
-/* line 180, ../sass/_whycomc.scss */
+/* line 189, ../sass/_whycomc.scss */
 #events .eventLocation {
   font-size: 2em;
   font-family: 'bebas_neue';
   color: #003a66;
   margin-top: 0.6em;
 }
-/* line 187, ../sass/_whycomc.scss */
+/* line 196, ../sass/_whycomc.scss */
 #events p {
   font-size: 1.4em;
   margin: 1.5em auto;
   width: 60%;
 }
 @media (min-width: 768px) {
-  /* line 195, ../sass/_whycomc.scss */
+  /* line 204, ../sass/_whycomc.scss */
   #events .eventTitle {
     font-size: 5em;
   }
-  /* line 199, ../sass/_whycomc.scss */
+  /* line 208, ../sass/_whycomc.scss */
   #events span {
     font-size: 4em;
   }
-  /* line 203, ../sass/_whycomc.scss */
+  /* line 212, ../sass/_whycomc.scss */
   #events .day {
     font-size: 7em;
   }
-  /* line 207, ../sass/_whycomc.scss */
+  /* line 216, ../sass/_whycomc.scss */
   #events .eventLocation {
     font-size: 3em;
   }
-  /* line 211, ../sass/_whycomc.scss */
+  /* line 220, ../sass/_whycomc.scss */
   #events p {
     font-size: 2em;
   }
@@ -1971,22 +1973,22 @@ header {
 /****************************
     End Events Section
 ****************************/
-/* line 226, ../sass/_whycomc.scss */
+/* line 235, ../sass/_whycomc.scss */
 #lubbock .listContainer .listTitle {
   font-size: 2.2em;
   margin: 1em 0 0.5em;
 }
-/* line 231, ../sass/_whycomc.scss */
+/* line 240, ../sass/_whycomc.scss */
 #lubbock .listContainer ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 235, ../sass/_whycomc.scss */
+/* line 244, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li {
   margin: 0.5em 0;
   color: black;
 }
-/* line 239, ../sass/_whycomc.scss */
+/* line 248, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li a {
   font-size: 1.5em;
   color: #003a66;
@@ -1994,25 +1996,25 @@ header {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 245, ../sass/_whycomc.scss */
+/* line 254, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li a:hover {
   color: #0074cc;
   cursor: pointer;
 }
-/* line 251, ../sass/_whycomc.scss */
+/* line 260, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li .subHead {
   width: 100%;
   font-size: 2em;
   margin: 0.8em 0 0.5em;
   padding: 0;
 }
-/* line 258, ../sass/_whycomc.scss */
+/* line 267, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li li {
   margin: inherit;
   font-size: 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 269, ../sass/_whycomc.scss */
+  /* line 278, ../sass/_whycomc.scss */
   #lubbock .listContainer .listGroup {
     display: inline-block;
     width: 33%;
@@ -2023,13 +2025,13 @@ header {
 /****************************
     Opportunites Section
 ****************************/
-/* line 283, ../sass/_whycomc.scss */
+/* line 292, ../sass/_whycomc.scss */
 .studentOpportuntiesTitle {
   color: #E6837F;
   font-family: 'bebas_neue';
 }
 
-/* line 292, ../sass/_whycomc.scss */
+/* line 301, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2047,7 +2049,7 @@ header {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-/* line 298, ../sass/_whycomc.scss */
+/* line 307, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems {
   position: relative;
   width: 100%;
@@ -2057,20 +2059,20 @@ header {
   -webkit-transition: all 0.50s ease;
   transition: all 0.50s ease;
 }
-/* line 306, ../sass/_whycomc.scss */
+/* line 315, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems h4 {
   color: black;
   font-size: 2em;
   margin: 0.8em 0 0;
 }
-/* line 312, ../sass/_whycomc.scss */
+/* line 321, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems p {
   color: black;
   font-size: 1em;
   margin: 0.4em;
   padding-bottom: 60px;
 }
-/* line 319, ../sass/_whycomc.scss */
+/* line 328, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2084,39 +2086,39 @@ header {
   bottom: 0;
   width: 100%;
 }
-/* line 327, ../sass/_whycomc.scss */
+/* line 336, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email, .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   color: black;
   padding-bottom: 1em;
 }
-/* line 331, ../sass/_whycomc.scss */
+/* line 340, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a {
   color: black;
   text-decoration: none;
 }
-/* line 335, ../sass/_whycomc.scss */
+/* line 344, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a:hover, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a:hover {
   color: #333333;
   cursor: pointer;
 }
-/* line 342, ../sass/_whycomc.scss */
+/* line 351, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 347, ../sass/_whycomc.scss */
+/* line 356, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   padding-right: 1em;
 }
 @media (min-width: 768px) {
-  /* line 355, ../sass/_whycomc.scss */
+  /* line 364, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 45%;
     margin: 10px;
   }
 }
 @media (min-width: 1000px) {
-  /* line 363, ../sass/_whycomc.scss */
+  /* line 372, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 30%;
     margin: 15px;
