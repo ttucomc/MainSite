@@ -45,7 +45,7 @@
     &:before {
       content: '\f0d6';
       position: absolute;
-      top: 40%;
+      top: 60%;
       right: -18%;
       color: $dark-grey;
       font-family: FontAwesome;
@@ -66,14 +66,28 @@
     .button {
       background-color: darken($green, 5%);
     }
+    h2 {
+      color: $dark-grey;
+    }
     h3 {
-      margin: 1.5em 0 .5em;
+      margin: .25em 0;
     }
     .fees {
       color: $dark-grey;
       font-size: 4em;
       font-weight: bold;
-      margin: .5em;
+      margin: .25em 0;
+      & + p {
+        padding-bottom: 2em;
+      }
+    }
+
+    #calculator {
+      max-width: 770px;
+      margin: 0 auto;
+      .button {
+        width: 51%;
+      }
     }
   }
 

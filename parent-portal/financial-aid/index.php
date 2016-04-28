@@ -45,16 +45,20 @@
     <section id="cost-to-attend">
       <div class="row">
         <h2>Cost to Attend</h2>
-        <p>
-          The Office of Financial Aid &amp; Scholarships provides a calculator for you to see a detailed estimate of the cost for your student.
-          <br />
-          <a href="http://www.depts.ttu.edu/financialaid/netCostCalcHome.php" class="button" target="_blank">Net Cost Calculator</a>
-        </p>
         <h3>Undergraduate Tuition &amp; Fees for the 2016-17 Academic Year</h3>
         <p class="fees">
           $10,622
         </p>
-        <a href="http://www.depts.ttu.edu/financialaid/costToAttend.php" target="_blank" class="button">See Detailed Costs Here</a>
+        <p>
+          <a href="http://www.depts.ttu.edu/financialaid/costToAttend.php" target="_blank" class="button">See Detailed Costs Here</a>
+        </p>
+        <div id="calculator">
+          <p>
+            The Office of Financial Aid &amp; Scholarships provides a calculator for you to see a detailed estimate of the cost for your student.
+            <br />
+            <a href="http://www.depts.ttu.edu/financialaid/netCostCalcHome.php" class="button" target="_blank">Net Cost Calculator</a>
+          </p>
+        </div>
       </div>
     </section>
 
