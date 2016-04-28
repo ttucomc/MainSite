@@ -7,4 +7,74 @@
   .button {
     background-color: $green;
   }
+  .button {
+    color: #FFF;
+  }
+  a {
+    color: $green;
+  }
+  h3 {
+    font-size: 2em;
+    margin: 0 0 .5em;
+    @media screen and (min-width: $screen-lg) {
+      font-size: 3em;
+    }
+  }
+
+  #scholarships,
+  #cost-to-attend {
+    padding: 5em .25em;
+  }
+
+  #scholarships {
+    #deadline {
+      color: #00A479;
+      font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+      font-size: 9em;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  #cost-to-attend {
+    position: relative;
+    background: $green;
+    color: #FFF;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+      content: '\f0d6';
+      position: absolute;
+      top: 40%;
+      right: -18%;
+      color: $dark-grey;
+      font-family: FontAwesome;
+      font-size: 15em;
+      @include rotate(37deg);
+      z-index: -1;
+      @media screen and (min-width: $screen-med) {
+        content: '\f0d6';
+        right: -10%;
+        font-size: 20em;
+      }
+      @media screen and (min-width: $screen-xl) {
+        content: '\f0d6';
+        right: 0;
+        font-size: 25em;
+      }
+    }
+    .button {
+      background-color: darken($green, 5%);
+    }
+    h3 {
+      margin: 1.5em 0 .5em;
+    }
+    .fees {
+      color: $dark-grey;
+      font-size: 4em;
+      font-weight: bold;
+      margin: .5em;
+    }
+  }
+
 }

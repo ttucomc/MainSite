@@ -147,8 +147,10 @@ header {
       cursor: pointer;
       background-repeat: no-repeat;
       background-size: cover;
-      filter: grayscale(100%);
       @include transition(all .3s ease);
+      @media screen and (min-width: $screen-lg) {
+        filter: grayscale(100%);
+      }
       &:after {
         content: '';
         position: absolute;

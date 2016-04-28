@@ -23,10 +23,49 @@
       </div>
     </section>
 
-    <section style="height:100vh; width:100%;">
+    <section id="scholarships">
+      <h2>Scholarships</h2>
+      <div class="row">
+        <p>
+          Scholarships offered through CoMC can be found using the general <a href="https://www.applytexas.org/" target="_blank">Apply Texas</a> form. The college adheres to the same deadlines as general scholarships.
+        </p>
+        <p id="deadline">
+          FEB 16
+        </p>
+        <h3>Deadline for the 2016-17 School Year</h3>
+        <p>
+          Scholarship recipients are selected by a committee of faculty and staff from CoMC. -	Students will receive an acceptance form when they are offered a scholarship. This form must be completed and returned to the College of Media &amp; Communication scholarship coordinator.
+        </p>
+        <p>
+          <a href="http://www.depts.ttu.edu/scholarships/ScholarshipsFAQ.php" target="_blank" class="button">More Scholarship Information</a>
+        </p>
+      </div>
+    </section>
 
+    <section id="cost-to-attend">
+      <div class="row">
+        <h2>Cost to Attend</h2>
+        <p>
+          The Office of Financial Aid &amp; Scholarships provides a calculator for you to see a detailed estimate of the cost for your student.
+          <br />
+          <a href="http://www.depts.ttu.edu/financialaid/netCostCalcHome.php" class="button" target="_blank">Net Cost Calculator</a>
+        </p>
+        <h3>Undergraduate Tuition &amp; Fees for the 2016-17 Academic Year</h3>
+        <p class="fees">
+          $10,622
+        </p>
+        <a href="http://www.depts.ttu.edu/financialaid/costToAttend.php" target="_blank" class="button">See Detailed Costs Here</a>
+      </div>
     </section>
 
   </div>
+
+  <script>
+  $('.scrollDown').click(function() {
+    $('html,body').animate({
+      scrollTop: $('#scholarships').position().top - 70
+    }, 800);
+  });
+  </script>
 
 <?php include '../inc/footer.php'; ?>

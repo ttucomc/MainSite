@@ -209,8 +209,12 @@
   }
   h2 {
     color: #FFF;
+    font-size: 2em;
     padding: 0;
     margin: 0;
+    @media screen and (min-width: $screen-med) {
+      font-size: 3em;
+    }
     select {
       position: relative;
       background-color: transparent;
