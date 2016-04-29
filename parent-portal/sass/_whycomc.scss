@@ -8,20 +8,28 @@
     background-color: $coral;
   }
 
-  h2 {
+  section {
+    padding: 5em .25em;
+  }
+
+  .top,
+  #visit {
+    padding: 0;
+  }
+
+  a {
     color: $coral;
-    font-size: 3.2em;
+  }
+
+  .button {
+    color: #FFF;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   hr:after {
     background-color: $coral;
-  }
-
-  p {
-    width: 75%;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1.5em;
   }
 }
 
@@ -30,18 +38,59 @@
 ****************************/
 #visit
 {
+  height: 120%;
+  @media screen and (min-width: $screen-lg) {
+    height: initial;
+  }
   > .row {
     padding: 4em 0 2em;
     max-width: 100%;
   }
 
+  .dailyTours {
+    p {
+      @media screen and (min-width: $screen-med) {
+        padding: 0 3em;
+      }
+    }
+  }
+
   .masterImageContainer {
       position: relative;
 
+      .visit-cards {
+        position: absolute;
+        top: 50%;
+        @include translateY(-50%);
+        width: 100%;
+        z-index: 1;
+        .button {
+          width: 100%;
+        }
+        .visit-card:last-child {
+          margin-top: 3em;
+          @media screen and (min-width: $screen-lg) {
+            margin-top: 0;
+          }
+        }
+
+        .virtualTour,
+        .dailyTours {
+          background-color: rgba(#FFF, .9);
+          padding: 4em 3em;
+          box-shadow: $card-shadow;
+        }
+      }
+
+      .slick-slider {
+        z-index: -1;
+      }
+
       .imageContainer
       {
-        #ttu_1 {
-          background-image: url("../img/seal-high.jpg");
+        #ttu_1,
+        .slick-cloned {
+          background-image: url("../img/comc-building.jpg");
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -55,18 +104,12 @@
         }
 
         #ttu_3 {
-          background-image: url("../img/cmc-high.jpg");
+          background-image: url("../img/seal-high.jpg");
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
         }
 
-        #ttu_4 {
-          background-image: url("../img/library-high.jpg");
-          background-position: center center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
       }
 
     .marker {
@@ -96,58 +139,11 @@
     //}
   }
 
-  .visitLocal
-  {
-    background-color: $coral;
-    background-image: url("../img/60-lines.png");
-
-    h2 {
-      color: white;
-      font-size: 3.2em;
-      padding: 1em 0 0;
-    }
-
-    p {
-      color: white;
-      width: 75%;
-      text-align: center;
-      margin: 0 auto;
-      font-size: 1.5em;
-      padding: 0 0 2em;
-    }
-  }
-
   .virtualTour
   {
     .tourContainer {
       width: 50%;
       margin: 0 auto;
-    }
-  }
-
-  .moreInfo {
-    margin: 3em auto 4em;
-
-    a {
-      text-decoration: none;
-
-      p {
-        color: $dark-blue;
-        transition: all 0.25s ease;
-
-        &:hover {
-          color: lighten($dark-blue, 20);
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-
-
-  @media (min-width: $screen-med) {
-    p {
-      font-size: 2em;
     }
   }
 }
@@ -164,7 +160,6 @@
 
 #faculty {
   position: relative;
-  padding: 2em;
   background-color: $coral;
   color: white;
 
@@ -190,6 +185,9 @@
     p {
       padding-top: 2em;
       color: $dark-grey;
+      @media screen and (min-width: $screen-xxl) {
+        padding: 2em 3em 0;
+      }
     }
 
     &:last-child {
@@ -305,9 +303,7 @@
 
 
 #lubbock {
-  padding: 3em 0;
   background-color: $light-grey;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
   hr:after {
     outline: $light-grey;
@@ -330,14 +326,6 @@
 
         a {
           font-size: 1.5em;
-          color: $dark-blue;
-          text-decoration: none;
-          transition: all 0.25s ease;
-
-          &:hover {
-            color: lighten($dark-blue, 20);
-            cursor: pointer;
-          }
         }
 
         .subHead {
@@ -409,9 +397,10 @@
 
     p {
       color: black;
-      font-size: 1em;
-      margin: 0.4em;
+      font-size: 1.5em;
+      margin: 0.4em auto;
       padding-bottom: 60px;
+      width: 75%;
     }
 
     .contactContainer {

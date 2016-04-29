@@ -1557,43 +1557,48 @@ header {
   text-decoration: underline;
 }
 /* line 33, ../sass/_careers.scss */
+#careers section {
+  padding-right: .25em;
+  padding-left: .25em;
+}
+/* line 38, ../sass/_careers.scss */
 #careers .button {
   color: #FFF;
 }
-/* line 35, ../sass/_careers.scss */
+/* line 40, ../sass/_careers.scss */
 #careers .button:hover {
   text-decoration: none;
 }
-/* line 40, ../sass/_careers.scss */
+/* line 45, ../sass/_careers.scss */
 #careers #lists {
   padding: 0 0 3em;
 }
-/* line 42, ../sass/_careers.scss */
+/* line 47, ../sass/_careers.scss */
 #careers #lists h2 {
   color: #2496B0;
   font-size: 4em;
   margin: .5em 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 42, ../sass/_careers.scss */
+  /* line 47, ../sass/_careers.scss */
   #careers #lists h2 {
     font-size: 5em;
     margin: .25em 0;
   }
 }
-/* line 52, ../sass/_careers.scss */
+/* line 57, ../sass/_careers.scss */
 #careers #lists .row > div {
   padding-bottom: 2em;
   vertical-align: top;
 }
 @media screen and (min-width: 768px) {
-  /* line 52, ../sass/_careers.scss */
+  /* line 57, ../sass/_careers.scss */
   #careers #lists .row > div {
     display: inline-block;
     width: 49%;
   }
 }
-/* line 61, ../sass/_careers.scss */
+/* line 66, ../sass/_careers.scss */
 #careers #lists ul {
   font-size: 1.25em;
   font-weight: bold;
@@ -1601,79 +1606,79 @@ header {
   padding: 0;
 }
 @media screen and (min-width: 1000px) {
-  /* line 61, ../sass/_careers.scss */
+  /* line 66, ../sass/_careers.scss */
   #careers #lists ul {
     font-size: 1.5em;
   }
 }
-/* line 69, ../sass/_careers.scss */
+/* line 74, ../sass/_careers.scss */
 #careers #lists ul li {
   padding-bottom: .5em;
 }
 @media screen and (min-width: 768px) {
-  /* line 73, ../sass/_careers.scss */
+  /* line 78, ../sass/_careers.scss */
   #careers #lists a {
     font-size: 1.25em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 73, ../sass/_careers.scss */
+  /* line 78, ../sass/_careers.scss */
   #careers #lists a {
     font-size: 1.75em;
   }
 }
-/* line 80, ../sass/_careers.scss */
+/* line 85, ../sass/_careers.scss */
 #careers #lists a:hover {
   cursor: pointer;
 }
-/* line 86, ../sass/_careers.scss */
+/* line 91, ../sass/_careers.scss */
 #careers #rankings {
   background-color: #333;
   color: #F1F1F1;
   padding: 3em .25em;
 }
-/* line 90, ../sass/_careers.scss */
+/* line 95, ../sass/_careers.scss */
 #careers #rankings h3 {
   color: #F1F1F1;
   font-size: 3em;
   margin: .5em 0;
 }
-/* line 95, ../sass/_careers.scss */
+/* line 100, ../sass/_careers.scss */
 #careers #rankings .row {
   max-width: 100%;
 }
-/* line 97, ../sass/_careers.scss */
+/* line 102, ../sass/_careers.scss */
 #careers #rankings .row > div {
   padding-top: 1em;
 }
 @media screen and (min-width: 768px) {
-  /* line 97, ../sass/_careers.scss */
+  /* line 102, ../sass/_careers.scss */
   #careers #rankings .row > div {
     padding-top: 0;
   }
 }
-/* line 104, ../sass/_careers.scss */
+/* line 109, ../sass/_careers.scss */
 #careers #rankings div {
   padding-bottom: 1.5em;
 }
 @media screen and (min-width: 768px) {
-  /* line 104, ../sass/_careers.scss */
+  /* line 109, ../sass/_careers.scss */
   #careers #rankings div {
     padding-bottom: 0;
   }
 }
-/* line 110, ../sass/_careers.scss */
+/* line 115, ../sass/_careers.scss */
 #careers #rankings i {
   color: #2496B0;
 }
-/* line 113, ../sass/_careers.scss */
+/* line 118, ../sass/_careers.scss */
 #careers #rankings a {
   position: relative;
   color: #2496B0;
   font-style: italic;
   text-decoration: none;
 }
-/* line 118, ../sass/_careers.scss */
+/* line 123, ../sass/_careers.scss */
 #careers #rankings a:after {
   content: '';
   position: absolute;
@@ -1688,69 +1693,69 @@ header {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 130, ../sass/_careers.scss */
+/* line 135, ../sass/_careers.scss */
 #careers #rankings a:hover:after {
   content: '';
   width: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 137, ../sass/_careers.scss */
+/* line 142, ../sass/_careers.scss */
 #careers #rankings .cite {
   font-size: 1.75em;
 }
-/* line 145, ../sass/_careers.scss */
+/* line 150, ../sass/_careers.scss */
 #careers #internships {
   background: url("../img/60-lines.png");
-  padding: 3em 0;
+  padding: 3em .25em;
 }
 
 /****************************
         ALUMNI Section
 ****************************/
-/* line 156, ../sass/_careers.scss */
+/* line 161, ../sass/_careers.scss */
 #alumni {
   padding-top: 3em;
 }
 
-/* line 163, ../sass/_careers.scss */
+/* line 168, ../sass/_careers.scss */
 .personContainer .alumni-block {
   padding: 2em 1.5em;
   max-width: 100%;
 }
-/* line 166, ../sass/_careers.scss */
+/* line 171, ../sass/_careers.scss */
 .personContainer .alumni-block:nth-child(even) {
   background-color: #F1F1F1;
 }
-/* line 169, ../sass/_careers.scss */
+/* line 174, ../sass/_careers.scss */
 .personContainer .alumni-block > div {
   position: relative;
 }
-/* line 174, ../sass/_careers.scss */
+/* line 179, ../sass/_careers.scss */
 .personContainer .personPicture {
   width: 45%;
   margin: 2em auto 1em;
 }
-/* line 178, ../sass/_careers.scss */
+/* line 183, ../sass/_careers.scss */
 .personContainer .personPicture img {
   border-radius: 50%;
   width: 95%;
 }
-/* line 183, ../sass/_careers.scss */
+/* line 188, ../sass/_careers.scss */
 .personContainer .personName {
   font-size: 2.5em;
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
 }
-/* line 187, ../sass/_careers.scss */
+/* line 192, ../sass/_careers.scss */
 .personContainer .personSubtitle {
   color: #2496B0;
   font-size: 1.5em;
 }
-/* line 191, ../sass/_careers.scss */
+/* line 196, ../sass/_careers.scss */
 .personContainer .personDegree {
   font-size: 1.4em;
 }
-/* line 194, ../sass/_careers.scss */
+/* line 199, ../sass/_careers.scss */
 .personContainer .quote {
   position: relative;
   top: 50%;
@@ -1759,14 +1764,20 @@ header {
   -webkit-transform: translateY(-70%);
   transform: translateY(-70%);
   margin: 2em 0;
-  font-size: 1.25em;
+  font-size: 1em;
   z-index: 2;
 }
-/* line 203, ../sass/_careers.scss */
+@media screen and (min-width: 1000px) {
+  /* line 199, ../sass/_careers.scss */
+  .personContainer .quote {
+    font-size: 1.25em;
+  }
+}
+/* line 210, ../sass/_careers.scss */
 .personContainer .quote p {
   padding: 0 1em;
 }
-/* line 205, ../sass/_careers.scss */
+/* line 212, ../sass/_careers.scss */
 .personContainer .quote p:before {
   content: '\201C';
   display: inline-block;
@@ -1778,7 +1789,7 @@ header {
   opacity: .7;
   z-index: -1;
 }
-/* line 217, ../sass/_careers.scss */
+/* line 224, ../sass/_careers.scss */
 .personContainer .quote p:after {
   content: '\201D';
   display: inline-block;
@@ -1803,31 +1814,56 @@ header {
   background-color: #E6837F;
 }
 /* line 11, ../sass/_whycomc.scss */
-#why-comc h2 {
-  color: #E6837F;
-  font-size: 3.2em;
+#why-comc section {
+  padding: 5em .25em;
 }
-/* line 16, ../sass/_whycomc.scss */
-#why-comc hr:after {
-  background-color: #E6837F;
+/* line 15, ../sass/_whycomc.scss */
+#why-comc .top,
+#why-comc #visit {
+  padding: 0;
 }
 /* line 20, ../sass/_whycomc.scss */
-#why-comc p {
-  width: 75%;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 1.5em;
+#why-comc a {
+  color: #E6837F;
+}
+/* line 24, ../sass/_whycomc.scss */
+#why-comc .button {
+  color: #FFF;
+}
+/* line 26, ../sass/_whycomc.scss */
+#why-comc .button:hover {
+  text-decoration: none;
+}
+/* line 31, ../sass/_whycomc.scss */
+#why-comc hr:after {
+  background-color: #E6837F;
 }
 
 /****************************
       Visit Section
 ****************************/
-/* line 33, ../sass/_whycomc.scss */
+/* line 39, ../sass/_whycomc.scss */
+#visit {
+  height: 120%;
+}
+@media screen and (min-width: 1000px) {
+  /* line 39, ../sass/_whycomc.scss */
+  #visit {
+    height: initial;
+  }
+}
+/* line 45, ../sass/_whycomc.scss */
 #visit > .row {
   padding: 4em 0 2em;
   max-width: 100%;
 }
-/* line 38, ../sass/_whycomc.scss */
+@media screen and (min-width: 768px) {
+  /* line 51, ../sass/_whycomc.scss */
+  #visit .dailyTours p {
+    padding: 0 3em;
+  }
+}
+/* line 58, ../sass/_whycomc.scss */
 #visit .masterImageContainer {
   position: relative;
   /*
@@ -1837,35 +1873,64 @@ header {
     bottom: 0;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,ffffff+100&0+0,1+100 */
 }
-/* line 43, ../sass/_whycomc.scss */
-#visit .masterImageContainer .imageContainer #ttu_1 {
-  background-image: url("../img/seal-high.jpg");
+/* line 61, ../sass/_whycomc.scss */
+#visit .masterImageContainer .visit-cards {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+}
+/* line 67, ../sass/_whycomc.scss */
+#visit .masterImageContainer .visit-cards .button {
+  width: 100%;
+}
+/* line 70, ../sass/_whycomc.scss */
+#visit .masterImageContainer .visit-cards .visit-card:last-child {
+  margin-top: 3em;
+}
+@media screen and (min-width: 1000px) {
+  /* line 70, ../sass/_whycomc.scss */
+  #visit .masterImageContainer .visit-cards .visit-card:last-child {
+    margin-top: 0;
+  }
+}
+/* line 77, ../sass/_whycomc.scss */
+#visit .masterImageContainer .visit-cards .virtualTour,
+#visit .masterImageContainer .visit-cards .dailyTours {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4em 3em;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 85, ../sass/_whycomc.scss */
+#visit .masterImageContainer .slick-slider {
+  z-index: -1;
+}
+/* line 91, ../sass/_whycomc.scss */
+#visit .masterImageContainer .imageContainer #ttu_1,
+#visit .masterImageContainer .imageContainer .slick-cloned {
+  background-image: url("../img/comc-building.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 50, ../sass/_whycomc.scss */
+/* line 99, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_2 {
   background-image: url("../img/mem-circle-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 57, ../sass/_whycomc.scss */
+/* line 106, ../sass/_whycomc.scss */
 #visit .masterImageContainer .imageContainer #ttu_3 {
-  background-image: url("../img/cmc-high.jpg");
+  background-image: url("../img/seal-high.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 64, ../sass/_whycomc.scss */
-#visit .masterImageContainer .imageContainer #ttu_4 {
-  background-image: url("../img/library-high.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-/* line 72, ../sass/_whycomc.scss */
+/* line 115, ../sass/_whycomc.scss */
 #visit .masterImageContainer .marker {
   display: none;
   position: absolute;
@@ -1879,55 +1944,10 @@ header {
   font-size: 4em;
   color: #CC0000;
 }
-/* line 99, ../sass/_whycomc.scss */
-#visit .visitLocal {
-  background-color: #E6837F;
-  background-image: url("../img/60-lines.png");
-}
-/* line 104, ../sass/_whycomc.scss */
-#visit .visitLocal h2 {
-  color: white;
-  font-size: 3.2em;
-  padding: 1em 0 0;
-}
-/* line 110, ../sass/_whycomc.scss */
-#visit .visitLocal p {
-  color: white;
-  width: 75%;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 1.5em;
-  padding: 0 0 2em;
-}
-/* line 122, ../sass/_whycomc.scss */
+/* line 144, ../sass/_whycomc.scss */
 #visit .virtualTour .tourContainer {
   width: 50%;
   margin: 0 auto;
-}
-/* line 128, ../sass/_whycomc.scss */
-#visit .moreInfo {
-  margin: 3em auto 4em;
-}
-/* line 131, ../sass/_whycomc.scss */
-#visit .moreInfo a {
-  text-decoration: none;
-}
-/* line 134, ../sass/_whycomc.scss */
-#visit .moreInfo a p {
-  color: #003a66;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-/* line 138, ../sass/_whycomc.scss */
-#visit .moreInfo a p:hover {
-  color: #0074cc;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  /* line 149, ../sass/_whycomc.scss */
-  #visit p {
-    font-size: 2em;
-  }
 }
 
 /****************************
@@ -1936,43 +1956,48 @@ header {
 /****************************
       Faculty Section
 ****************************/
-/* line 165, ../sass/_whycomc.scss */
+/* line 161, ../sass/_whycomc.scss */
 #faculty {
   position: relative;
-  padding: 2em;
   background-color: #E6837F;
   color: white;
 }
-/* line 171, ../sass/_whycomc.scss */
+/* line 166, ../sass/_whycomc.scss */
 #faculty > h2 {
   color: #333;
   font-size: 5em;
   margin-bottom: 0;
 }
-/* line 177, ../sass/_whycomc.scss */
+/* line 172, ../sass/_whycomc.scss */
 #faculty > .row {
   padding: 2em 0;
   max-width: 100%;
 }
-/* line 182, ../sass/_whycomc.scss */
+/* line 177, ../sass/_whycomc.scss */
 #faculty .faculty {
   margin: 1em 0;
 }
-/* line 185, ../sass/_whycomc.scss */
+/* line 180, ../sass/_whycomc.scss */
 #faculty .faculty i {
   color: #333;
   font-size: 10em;
 }
-/* line 190, ../sass/_whycomc.scss */
+/* line 185, ../sass/_whycomc.scss */
 #faculty .faculty p {
   padding-top: 2em;
   color: #333;
 }
-/* line 196, ../sass/_whycomc.scss */
+@media screen and (min-width: 1600px) {
+  /* line 185, ../sass/_whycomc.scss */
+  #faculty .faculty p {
+    padding: 2em 3em 0;
+  }
+}
+/* line 194, ../sass/_whycomc.scss */
 #faculty .faculty:last-child i {
   padding-top: 0.2em;
 }
-/* line 202, ../sass/_whycomc.scss */
+/* line 200, ../sass/_whycomc.scss */
 #faculty .button {
   background-color: #333;
   width: 100%;
@@ -1980,20 +2005,20 @@ header {
 }
 
 @media (min-width: 768px) {
-  /* line 214, ../sass/_whycomc.scss */
+  /* line 212, ../sass/_whycomc.scss */
   #faculty .faculty {
     margin: 1em 1em;
   }
-  /* line 217, ../sass/_whycomc.scss */
+  /* line 215, ../sass/_whycomc.scss */
   #faculty .faculty i {
     font-size: 13em;
   }
-  /* line 221, ../sass/_whycomc.scss */
+  /* line 219, ../sass/_whycomc.scss */
   #faculty .faculty p {
     width: 100%;
     padding-top: 2em;
   }
-  /* line 227, ../sass/_whycomc.scss */
+  /* line 225, ../sass/_whycomc.scss */
   #faculty .button {
     width: 33%;
     font-size: 1.8em;
@@ -2005,55 +2030,55 @@ header {
 /****************************
       Events Section
 ****************************/
-/* line 247, ../sass/_whycomc.scss */
+/* line 245, ../sass/_whycomc.scss */
 #events .eventDate .eventTitle {
   font-size: 3em;
   margin: 1em 0 0.2em;
   color: #CC0000;
   font-family: 'bebas_neue';
 }
-/* line 253, ../sass/_whycomc.scss */
+/* line 251, ../sass/_whycomc.scss */
 #events .eventDate span {
   font-size: 3em;
   margin: 1em 0;
   vertical-align: middle;
   font-family: 'bebas_neue';
 }
-/* line 260, ../sass/_whycomc.scss */
+/* line 258, ../sass/_whycomc.scss */
 #events .eventDate .day {
   font-size: 6em;
 }
-/* line 265, ../sass/_whycomc.scss */
+/* line 263, ../sass/_whycomc.scss */
 #events .eventLocation {
   font-size: 2em;
   font-family: 'bebas_neue';
   color: #003a66;
   margin-top: 0.6em;
 }
-/* line 272, ../sass/_whycomc.scss */
+/* line 270, ../sass/_whycomc.scss */
 #events p {
   font-size: 1.4em;
   margin: 1.5em auto;
   width: 60%;
 }
 @media (min-width: 768px) {
-  /* line 280, ../sass/_whycomc.scss */
+  /* line 278, ../sass/_whycomc.scss */
   #events .eventTitle {
     font-size: 5em;
   }
-  /* line 284, ../sass/_whycomc.scss */
+  /* line 282, ../sass/_whycomc.scss */
   #events span {
     font-size: 4em;
   }
-  /* line 288, ../sass/_whycomc.scss */
+  /* line 286, ../sass/_whycomc.scss */
   #events .day {
     font-size: 7em;
   }
-  /* line 292, ../sass/_whycomc.scss */
+  /* line 290, ../sass/_whycomc.scss */
   #events .eventLocation {
     font-size: 3em;
   }
-  /* line 296, ../sass/_whycomc.scss */
+  /* line 294, ../sass/_whycomc.scss */
   #events p {
     font-size: 2em;
   }
@@ -2062,58 +2087,47 @@ header {
 /****************************
     End Events Section
 ****************************/
-/* line 307, ../sass/_whycomc.scss */
+/* line 305, ../sass/_whycomc.scss */
 #lubbock {
-  padding: 3em 0;
   background-color: #F1F1F1;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
-/* line 312, ../sass/_whycomc.scss */
+/* line 308, ../sass/_whycomc.scss */
 #lubbock hr:after {
   outline: #F1F1F1;
 }
-/* line 318, ../sass/_whycomc.scss */
+/* line 314, ../sass/_whycomc.scss */
 #lubbock .listContainer .listTitle {
   font-size: 2.2em;
   margin: 1em 0 0.5em;
 }
-/* line 323, ../sass/_whycomc.scss */
+/* line 319, ../sass/_whycomc.scss */
 #lubbock .listContainer ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 327, ../sass/_whycomc.scss */
+/* line 323, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li {
   margin: 0.5em 0;
   color: black;
 }
-/* line 331, ../sass/_whycomc.scss */
+/* line 327, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li a {
   font-size: 1.5em;
-  color: #003a66;
-  text-decoration: none;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
 }
-/* line 337, ../sass/_whycomc.scss */
-#lubbock .listContainer ul li a:hover {
-  color: #0074cc;
-  cursor: pointer;
-}
-/* line 343, ../sass/_whycomc.scss */
+/* line 331, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li .subHead {
   width: 100%;
   font-size: 2em;
   margin: 0.8em 0 0.5em;
   padding: 0;
 }
-/* line 350, ../sass/_whycomc.scss */
+/* line 338, ../sass/_whycomc.scss */
 #lubbock .listContainer ul li li {
   margin: inherit;
   font-size: 1.5em;
 }
 @media (min-width: 768px) {
-  /* line 361, ../sass/_whycomc.scss */
+  /* line 349, ../sass/_whycomc.scss */
   #lubbock .listContainer .listGroup {
     display: inline-block;
     width: 33%;
@@ -2124,18 +2138,18 @@ header {
 /****************************
     Opportunites Section
 ****************************/
-/* line 377, ../sass/_whycomc.scss */
+/* line 365, ../sass/_whycomc.scss */
 #opportunities {
   margin-top: 2em;
 }
 
-/* line 381, ../sass/_whycomc.scss */
+/* line 369, ../sass/_whycomc.scss */
 .studentOpportuntiesTitle {
   color: #E6837F;
   font-family: 'bebas_neue';
 }
 
-/* line 390, ../sass/_whycomc.scss */
+/* line 378, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2153,7 +2167,7 @@ header {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-/* line 396, ../sass/_whycomc.scss */
+/* line 384, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems {
   position: relative;
   width: 100%;
@@ -2163,20 +2177,21 @@ header {
   -webkit-transition: all 0.50s ease;
   transition: all 0.50s ease;
 }
-/* line 404, ../sass/_whycomc.scss */
+/* line 392, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems h4 {
   color: black;
   font-size: 2em;
   margin: 0.8em 0 0;
 }
-/* line 410, ../sass/_whycomc.scss */
+/* line 398, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems p {
   color: black;
-  font-size: 1em;
-  margin: 0.4em;
+  font-size: 1.5em;
+  margin: 0.4em auto;
   padding-bottom: 60px;
+  width: 75%;
 }
-/* line 417, ../sass/_whycomc.scss */
+/* line 406, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2190,39 +2205,39 @@ header {
   bottom: 0;
   width: 100%;
 }
-/* line 425, ../sass/_whycomc.scss */
+/* line 414, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email, .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   color: black;
   padding-bottom: 1em;
 }
-/* line 429, ../sass/_whycomc.scss */
+/* line 418, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a {
   color: black;
   text-decoration: none;
 }
-/* line 433, ../sass/_whycomc.scss */
+/* line 422, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email a:hover, .studentOpportuntiesContainer .studentItems .contactContainer .twitter a:hover {
   color: #333333;
   cursor: pointer;
 }
-/* line 440, ../sass/_whycomc.scss */
+/* line 429, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .email {
   padding-left: 1em;
   padding-right: 1em;
 }
-/* line 445, ../sass/_whycomc.scss */
+/* line 434, ../sass/_whycomc.scss */
 .studentOpportuntiesContainer .studentItems .contactContainer .twitter {
   padding-right: 1em;
 }
 @media (min-width: 768px) {
-  /* line 453, ../sass/_whycomc.scss */
+  /* line 442, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 45%;
     margin: 10px;
   }
 }
 @media (min-width: 1000px) {
-  /* line 461, ../sass/_whycomc.scss */
+  /* line 450, ../sass/_whycomc.scss */
   .studentOpportuntiesContainer .studentItems {
     width: 30%;
     margin: 15px;

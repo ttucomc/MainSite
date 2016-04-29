@@ -62,9 +62,7 @@
         </div>
       </div>
 
-      <a href="https://www.depts.ttu.edu/comc/faculty/">
-        <div class="button">Visit our Faculty</div>
-      </a>
+      <a href="https://www.depts.ttu.edu/comc/faculty/" class="button">Visit our Faculty</a>
 
     </section>
 
@@ -107,7 +105,6 @@
 
     <section id="lubbock">
       <h2>What is there to do in lubbock?</h2>
-      <hr />
 
       <br />
       <div class="listContainer">
@@ -165,7 +162,6 @@
     <section id="opportunities">
 
       <h2 class="studentOpportuntiesTitle">Student Opportunites</h2>
-      <hr />
       <br /><br /><br />
       <div class="studentOpportuntiesContainer">
 
@@ -218,5 +214,13 @@
     </section>
 
   </div>
+
+  <script>
+  $('.scrollDown').click(function() {
+    $('html,body').animate({
+      scrollTop: $('#visit').position().top - 70
+    }, 800);
+  });
+  </script>
 
 <?php include '../inc/footer.php'; ?>
