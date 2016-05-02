@@ -116,7 +116,7 @@
       color: $dark-grey;
     }
     p {
-      @media screen and (min-width: $screen-med) {
+      @media screen and (min-width: $screen-lg) {
         padding: 0 2em;
       }
     }

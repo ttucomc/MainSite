@@ -333,7 +333,8 @@
       <h2>Internships</h2>
       <div class="row">
         <p>
-          It is never too early to get started thinking about internships. Many companies require students to earn course credit for an internship, and the college does have some basic prerequisites students must complete to be eligible for course credit. To learn the ins and outs of securing an internship, encourage your student to set up an appointment with our college’s career counselor, <a href="mailto:cameron.skoczlas@ttu.edu">Cameron Skoczlas</a>.
+          It is never too early to get started thinking about internships. Many companies require students to earn course credit for an internship, and the college does have some basic prerequisites students must complete to be eligible for course credit. To learn the ins and outs of securing an internship, encourage your student to set up an appointment with our college’s career counselor, Cameron Skoczlas.<br />
+          <a href="mailto:cameron.skoczlas@ttu.edu" class="button">Email Cameron</a>
         </p>
       </div>
     </section>
