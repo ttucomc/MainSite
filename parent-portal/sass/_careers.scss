@@ -90,8 +90,8 @@
   }
 
   #rankings {
-    background-color: $dark-grey;
-    color: $light-grey;
+    background-color: $blue;
+    color: $dark-grey;
     padding: 3em .25em;
     h3 {
       color: $light-grey;
@@ -114,11 +114,16 @@
       }
     }
     i {
-      color: $blue;
+      color: $dark-grey;
+    }
+    p {
+      @media screen and (min-width: $screen-med) {
+        padding: 0 2em;
+      }
     }
     a {
       position: relative;
-      color: $blue;
+      color: $light-grey;
       font-style: italic;
       text-decoration: none;
       &:after {
@@ -127,7 +132,7 @@
         bottom: -5px;
         left: 50%;
         @include translateX(-50%);
-        background-color: $blue;
+        background-color: #FFF;
         height: 1px;
         width: 0;
         @include transition(.3s);
@@ -149,8 +154,44 @@
           INTERNSHIPS
   ****************************/
   #internships {
-    background: url('../img/60-lines.png');
+    position: relative;
+    background-color: $dark-grey;
+    color: $light-grey;
     padding: 3em .25em;
+    z-index: 1;
+    overflow: hidden;
+    &:before {
+      content: '\f0f7';
+      position: absolute;
+      bottom: -5%;
+      left: -20%;
+      color: $blue;
+      font-family: FontAwesome;
+      font-size: 15em;
+      // @include rotate(37deg);
+      z-index: -1;
+      @media screen and (min-width: $screen-med) {
+        content: '\f0f7';
+        left: -15%;
+        font-size: 20em;
+      }
+      @media screen and (min-width: $screen-lg) {
+        content: '\f0f7';
+        bottom: -10%;
+        left: -12%;
+      }
+      @media screen and (min-width: $screen-xl) {
+        content: '\f0f7';
+        left: 2%;
+      }
+    }
+    @media screen and (min-width: $screen-med) {
+      padding: 5em .25em;
+    }
+    p {
+      margin: 0 auto;
+      max-width: 770px;
+    }
   }
 }
 

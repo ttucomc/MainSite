@@ -65,3 +65,7 @@ parent-portal/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/Library/Ruby/
 parent-portal/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/_css3.scssc
 
 *.scssc
+
+*.css
+
+*.scssc
