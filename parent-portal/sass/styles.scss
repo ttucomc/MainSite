@@ -263,8 +263,11 @@ footer {
     padding: .5em 0;
     a {
       position: relative;
-      font-size: 1.5em;
+      font-size: 1.25em;
       cursor: pointer;
+      @media screen and (min-width: $screen-lg) {
+        font-size: 1.5em;
+      }
       &:after {
         content: '\f078';
         position: absolute;

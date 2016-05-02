@@ -871,10 +871,16 @@ footer #resources-btn {
 /* line 264, ../sass/styles.scss */
 footer #resources-btn a {
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.25em;
   cursor: pointer;
 }
-/* line 268, ../sass/styles.scss */
+@media screen and (min-width: 1000px) {
+  /* line 264, ../sass/styles.scss */
+  footer #resources-btn a {
+    font-size: 1.5em;
+  }
+}
+/* line 271, ../sass/styles.scss */
 footer #resources-btn a:after {
   content: '\f078';
   position: absolute;
@@ -888,7 +894,7 @@ footer #resources-btn a:after {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 279, ../sass/styles.scss */
+/* line 282, ../sass/styles.scss */
 footer #resources-btn a.show:after {
   content: '\f078';
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -897,11 +903,11 @@ footer #resources-btn a.show:after {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 288, ../sass/styles.scss */
+/* line 291, ../sass/styles.scss */
 footer #resources {
   display: none;
 }
-/* line 290, ../sass/styles.scss */
+/* line 293, ../sass/styles.scss */
 footer #resources ul {
   font-size: 1.33em;
   list-style: none;
@@ -911,14 +917,14 @@ footer #resources ul {
 /****************************
         SUB PAGES
 ****************************/
-/* line 303, ../sass/styles.scss */
+/* line 306, ../sass/styles.scss */
 .top {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
-/* line 308, ../sass/styles.scss */
+/* line 311, ../sass/styles.scss */
 .top #title {
   position: absolute;
   top: 50%;
@@ -929,7 +935,7 @@ footer #resources ul {
   width: 100%;
   padding: 0 .5em;
 }
-/* line 315, ../sass/styles.scss */
+/* line 318, ../sass/styles.scss */
 .top #title h1 {
   color: #FFF;
   font-size: 5em;
@@ -937,24 +943,24 @@ footer #resources ul {
   margin: .125em 0;
 }
 @media screen and (min-width: 414px) {
-  /* line 315, ../sass/styles.scss */
+  /* line 318, ../sass/styles.scss */
   .top #title h1 {
     font-size: 7em;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 315, ../sass/styles.scss */
+  /* line 318, ../sass/styles.scss */
   .top #title h1 {
     font-size: 10em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 315, ../sass/styles.scss */
+  /* line 318, ../sass/styles.scss */
   .top #title h1 {
     font-size: 12em;
   }
 }
-/* line 329, ../sass/styles.scss */
+/* line 332, ../sass/styles.scss */
 .top #title h1:before, .top #title h1:after {
   content: '';
   display: none;
