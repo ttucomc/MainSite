@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <a href="https://www.depts.ttu.edu/comc/faculty/" class="button">Visit our Faculty</a>
+      <a href="https://www.depts.ttu.edu/comc/faculty/" class="button">Meet our Faculty</a>
 
     </section>
 
@@ -114,7 +114,7 @@
           <ul>
             <li><a href="http://ffat.org/" rel="nofollow">First Friday Art Trail</a></li>
             <li><a href="https://www.facebook.com/thechoclatemousse/info/?tab=overview" rel="nofollow">Choc’late Mousse Pie Bar</a></li>
-            <li><a herf="https://www.mylubbock.us/departmental-websites/departments/parks-recreation/prairie-dog-town" rel="nofollow">Prairie Dog Town</a></li>
+            <li><a href="https://www.mylubbock.us/departmental-websites/departments/parks-recreation/prairie-dog-town" rel="nofollow">Prairie Dog Town</a></li>
           </ul>
         </div>
 
@@ -129,8 +129,9 @@
 
         <div class="listGroup">
           <div class="listTitle">Outdoor Pursuits</div>
-          <ul>
-            <li>
+          <div class="row">
+            <div class="large-6 columns">
+              <p class='subHead'>Lubbock</p>
               <ul>
                 <li>Golfing</li>
                 <li>Disc Golf</li>
@@ -140,16 +141,16 @@
                 <li>Lake Alan Henry</li>
                 <li>Randsom Canyon</li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div class="large-6 columns">
               <p class='subHead'>Nearby Lubbock</p>
               <ul>
                 <li>Palo Duro Canyon (1.5 hour drive)</li>
                 <li>Caprock Canyons (2 hour drive)</li>
                 <li>Buffalo Springs Lake (30 minute drive)</li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
       </div>
