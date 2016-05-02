@@ -851,24 +851,74 @@ hr:after {
   transition: all 400ms ease-in-out;
 }
 
-/* line 249, ../sass/styles.scss */
+/****************************
+           FOOTER
+****************************/
+/* line 254, ../sass/styles.scss */
 footer {
   background-color: #333;
   color: #FFF;
   padding: 2em 0;
 }
+/* line 258, ../sass/styles.scss */
+footer a {
+  color: #F1F1F1;
+}
+/* line 262, ../sass/styles.scss */
+footer #resources-btn {
+  padding: .5em 0;
+}
+/* line 264, ../sass/styles.scss */
+footer #resources-btn a {
+  position: relative;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+/* line 268, ../sass/styles.scss */
+footer #resources-btn a:after {
+  content: '\f078';
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: FontAwesome;
+  color: inherit;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 279, ../sass/styles.scss */
+footer #resources-btn a.show:after {
+  content: '\f078';
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 288, ../sass/styles.scss */
+footer #resources {
+  display: none;
+}
+/* line 290, ../sass/styles.scss */
+footer #resources ul {
+  font-size: 1.33em;
+  list-style: none;
+  text-align: left;
+}
 
 /****************************
         SUB PAGES
 ****************************/
-/* line 260, ../sass/styles.scss */
+/* line 303, ../sass/styles.scss */
 .top {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
-/* line 265, ../sass/styles.scss */
+/* line 308, ../sass/styles.scss */
 .top #title {
   position: absolute;
   top: 50%;
@@ -879,7 +929,7 @@ footer {
   width: 100%;
   padding: 0 .5em;
 }
-/* line 272, ../sass/styles.scss */
+/* line 315, ../sass/styles.scss */
 .top #title h1 {
   color: #FFF;
   font-size: 5em;
@@ -887,24 +937,24 @@ footer {
   margin: .125em 0;
 }
 @media screen and (min-width: 414px) {
-  /* line 272, ../sass/styles.scss */
+  /* line 315, ../sass/styles.scss */
   .top #title h1 {
     font-size: 7em;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 272, ../sass/styles.scss */
+  /* line 315, ../sass/styles.scss */
   .top #title h1 {
     font-size: 10em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 272, ../sass/styles.scss */
+  /* line 315, ../sass/styles.scss */
   .top #title h1 {
     font-size: 12em;
   }
 }
-/* line 286, ../sass/styles.scss */
+/* line 329, ../sass/styles.scss */
 .top #title h1:before, .top #title h1:after {
   content: '';
   display: none;
@@ -1529,76 +1579,76 @@ header {
 #careers .button {
   background-color: #2496B0;
 }
-/* line 11, ../sass/_careers.scss */
+/* line 12, ../sass/_careers.scss */
 #careers #overview {
   padding: 5em 0.5em 3em;
 }
-/* line 15, ../sass/_careers.scss */
+/* line 16, ../sass/_careers.scss */
 #careers h2 {
   font-size: 4em;
   margin: .5em 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 15, ../sass/_careers.scss */
+  /* line 16, ../sass/_careers.scss */
   #careers h2 {
     font-size: 5em;
     margin: .25em 0 .5em;
   }
 }
-/* line 24, ../sass/_careers.scss */
+/* line 25, ../sass/_careers.scss */
 #careers a {
   color: #2496B0;
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 28, ../sass/_careers.scss */
+/* line 29, ../sass/_careers.scss */
 #careers a:hover {
   text-decoration: underline;
 }
-/* line 33, ../sass/_careers.scss */
+/* line 34, ../sass/_careers.scss */
 #careers section {
   padding-right: .25em;
   padding-left: .25em;
 }
-/* line 38, ../sass/_careers.scss */
+/* line 39, ../sass/_careers.scss */
 #careers .button {
   color: #FFF;
 }
-/* line 40, ../sass/_careers.scss */
+/* line 41, ../sass/_careers.scss */
 #careers .button:hover {
   text-decoration: none;
 }
-/* line 45, ../sass/_careers.scss */
+/* line 46, ../sass/_careers.scss */
 #careers #lists {
   padding: 0 0 3em;
 }
-/* line 47, ../sass/_careers.scss */
+/* line 48, ../sass/_careers.scss */
 #careers #lists h2 {
   color: #2496B0;
   font-size: 4em;
   margin: .5em 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 47, ../sass/_careers.scss */
+  /* line 48, ../sass/_careers.scss */
   #careers #lists h2 {
     font-size: 5em;
     margin: .25em 0;
   }
 }
-/* line 57, ../sass/_careers.scss */
+/* line 58, ../sass/_careers.scss */
 #careers #lists .row > div {
   padding-bottom: 2em;
   vertical-align: top;
 }
 @media screen and (min-width: 768px) {
-  /* line 57, ../sass/_careers.scss */
+  /* line 58, ../sass/_careers.scss */
   #careers #lists .row > div {
     display: inline-block;
     width: 49%;
   }
 }
-/* line 66, ../sass/_careers.scss */
+/* line 67, ../sass/_careers.scss */
 #careers #lists ul {
   font-size: 1.25em;
   font-weight: bold;
@@ -1606,79 +1656,79 @@ header {
   padding: 0;
 }
 @media screen and (min-width: 1000px) {
-  /* line 66, ../sass/_careers.scss */
+  /* line 67, ../sass/_careers.scss */
   #careers #lists ul {
     font-size: 1.5em;
   }
 }
-/* line 74, ../sass/_careers.scss */
+/* line 75, ../sass/_careers.scss */
 #careers #lists ul li {
   padding-bottom: .5em;
 }
 @media screen and (min-width: 768px) {
-  /* line 78, ../sass/_careers.scss */
+  /* line 79, ../sass/_careers.scss */
   #careers #lists a {
     font-size: 1.25em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 78, ../sass/_careers.scss */
+  /* line 79, ../sass/_careers.scss */
   #careers #lists a {
     font-size: 1.75em;
   }
 }
-/* line 85, ../sass/_careers.scss */
+/* line 86, ../sass/_careers.scss */
 #careers #lists a:hover {
   cursor: pointer;
 }
-/* line 91, ../sass/_careers.scss */
+/* line 92, ../sass/_careers.scss */
 #careers #rankings {
   background-color: #333;
   color: #F1F1F1;
   padding: 3em .25em;
 }
-/* line 95, ../sass/_careers.scss */
+/* line 96, ../sass/_careers.scss */
 #careers #rankings h3 {
   color: #F1F1F1;
   font-size: 3em;
   margin: .5em 0;
 }
-/* line 100, ../sass/_careers.scss */
+/* line 101, ../sass/_careers.scss */
 #careers #rankings .row {
   max-width: 100%;
 }
-/* line 102, ../sass/_careers.scss */
+/* line 103, ../sass/_careers.scss */
 #careers #rankings .row > div {
   padding-top: 1em;
 }
 @media screen and (min-width: 768px) {
-  /* line 102, ../sass/_careers.scss */
+  /* line 103, ../sass/_careers.scss */
   #careers #rankings .row > div {
     padding-top: 0;
   }
 }
-/* line 109, ../sass/_careers.scss */
+/* line 110, ../sass/_careers.scss */
 #careers #rankings div {
   padding-bottom: 1.5em;
 }
 @media screen and (min-width: 768px) {
-  /* line 109, ../sass/_careers.scss */
+  /* line 110, ../sass/_careers.scss */
   #careers #rankings div {
     padding-bottom: 0;
   }
 }
-/* line 115, ../sass/_careers.scss */
+/* line 116, ../sass/_careers.scss */
 #careers #rankings i {
   color: #2496B0;
 }
-/* line 118, ../sass/_careers.scss */
+/* line 119, ../sass/_careers.scss */
 #careers #rankings a {
   position: relative;
   color: #2496B0;
   font-style: italic;
   text-decoration: none;
 }
-/* line 123, ../sass/_careers.scss */
+/* line 124, ../sass/_careers.scss */
 #careers #rankings a:after {
   content: '';
   position: absolute;
@@ -1693,18 +1743,18 @@ header {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 135, ../sass/_careers.scss */
+/* line 136, ../sass/_careers.scss */
 #careers #rankings a:hover:after {
   content: '';
   width: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 142, ../sass/_careers.scss */
+/* line 143, ../sass/_careers.scss */
 #careers #rankings .cite {
   font-size: 1.75em;
 }
-/* line 150, ../sass/_careers.scss */
+/* line 151, ../sass/_careers.scss */
 #careers #internships {
   background: url("../img/60-lines.png");
   padding: 3em .25em;
@@ -1713,49 +1763,49 @@ header {
 /****************************
         ALUMNI Section
 ****************************/
-/* line 161, ../sass/_careers.scss */
+/* line 162, ../sass/_careers.scss */
 #alumni {
   padding-top: 3em;
 }
 
-/* line 168, ../sass/_careers.scss */
+/* line 169, ../sass/_careers.scss */
 .personContainer .alumni-block {
   padding: 2em 1.5em;
   max-width: 100%;
 }
-/* line 171, ../sass/_careers.scss */
+/* line 172, ../sass/_careers.scss */
 .personContainer .alumni-block:nth-child(even) {
   background-color: #F1F1F1;
 }
-/* line 174, ../sass/_careers.scss */
+/* line 175, ../sass/_careers.scss */
 .personContainer .alumni-block > div {
   position: relative;
 }
-/* line 179, ../sass/_careers.scss */
+/* line 180, ../sass/_careers.scss */
 .personContainer .personPicture {
   width: 45%;
   margin: 2em auto 1em;
 }
-/* line 183, ../sass/_careers.scss */
+/* line 184, ../sass/_careers.scss */
 .personContainer .personPicture img {
   border-radius: 50%;
   width: 95%;
 }
-/* line 188, ../sass/_careers.scss */
+/* line 189, ../sass/_careers.scss */
 .personContainer .personName {
   font-size: 2.5em;
   font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
 }
-/* line 192, ../sass/_careers.scss */
+/* line 193, ../sass/_careers.scss */
 .personContainer .personSubtitle {
   color: #2496B0;
   font-size: 1.5em;
 }
-/* line 196, ../sass/_careers.scss */
+/* line 197, ../sass/_careers.scss */
 .personContainer .personDegree {
   font-size: 1.4em;
 }
-/* line 199, ../sass/_careers.scss */
+/* line 200, ../sass/_careers.scss */
 .personContainer .quote {
   position: relative;
   top: 50%;
@@ -1768,16 +1818,16 @@ header {
   z-index: 2;
 }
 @media screen and (min-width: 1000px) {
-  /* line 199, ../sass/_careers.scss */
+  /* line 200, ../sass/_careers.scss */
   .personContainer .quote {
     font-size: 1.25em;
   }
 }
-/* line 210, ../sass/_careers.scss */
+/* line 211, ../sass/_careers.scss */
 .personContainer .quote p {
   padding: 0 1em;
 }
-/* line 212, ../sass/_careers.scss */
+/* line 213, ../sass/_careers.scss */
 .personContainer .quote p:before {
   content: '\201C';
   display: inline-block;
@@ -1789,7 +1839,7 @@ header {
   opacity: .7;
   z-index: -1;
 }
-/* line 224, ../sass/_careers.scss */
+/* line 225, ../sass/_careers.scss */
 .personContainer .quote p:after {
   content: '\201D';
   display: inline-block;
