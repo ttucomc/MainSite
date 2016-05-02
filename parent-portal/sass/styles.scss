@@ -246,10 +246,56 @@ hr {
   }
 }
 
+
+/****************************
+           FOOTER
+****************************/
+
 footer {
   background-color: $dark-grey;
   color: #FFF;
   padding: 2em 0;
+  a {
+    color: $light-grey;
+  }
+
+  #resources-btn {
+    padding: .5em 0;
+    a {
+      position: relative;
+      font-size: 1.25em;
+      cursor: pointer;
+      @media screen and (min-width: $screen-lg) {
+        font-size: 1.5em;
+      }
+      &:after {
+        content: '\f078';
+        position: absolute;
+        top: 50%;
+        right: -20%;
+        @include translateY(-50%);
+        font-family: FontAwesome;
+        color: inherit;
+        @include transition(all .3s ease);
+      }
+      &.show {
+        &:after {
+          content: '\f078';
+          transform: translateY(-50%) rotate(180deg);
+          @include transition(all .3s ease);
+        }
+      }
+    }
+  }
+
+  #resources {
+    display: none;
+    ul {
+      font-size: 1.33em;
+      list-style: none;
+      text-align: left;
+    }
+  }
 }
 
 

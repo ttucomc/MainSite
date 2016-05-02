@@ -8,6 +8,7 @@
     background-color: $blue;
   }
 
+
   #overview {
     padding: 5em 0.5em 3em;
   }
@@ -28,6 +29,11 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  section {
+    padding-right: .25em;
+    padding-left: .25em;
   }
 
   .button {
@@ -144,7 +150,7 @@
   ****************************/
   #internships {
     background: url('../img/60-lines.png');
-    padding: 3em 0;
+    padding: 3em .25em;
   }
 }
 
@@ -197,9 +203,11 @@
     left: 0;
     @include translateY(-70%);
     margin: 2em 0;
-    font-size: 1.25em;
+    font-size: 1em;
     z-index: 2;
-
+    @media screen and (min-width: $screen-lg) {
+      font-size: 1.25em;
+    }
     p {
       padding: 0 1em;
       &:before {

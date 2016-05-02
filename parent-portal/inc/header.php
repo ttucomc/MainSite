@@ -15,33 +15,32 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/styles.css">
 
   <!-- Vendor Imports -->
-  <script src="<?php echo BASE_URL; ?>js/modernizr.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/slick.css">
 
 
 
-    <!-- Metadata we'll update later -->
-    <meta itemprop="name" content="<?php echo $pageTitle; ?>">
-    <meta itemprop="description" content="<?php echo $pageDescription; ?>">
-    <meta itemprop="image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
+  <!-- Metadata we'll update later -->
+  <meta itemprop="name" content="<?php echo $pageTitle; ?>">
+  <meta itemprop="description" content="<?php echo $pageDescription; ?>">
+  <meta itemprop="image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ttu_comc">
-    <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
-    <meta name="twitter:description" content="<?php echo $pageDescription; ?>">
-    <meta name="twitter:creator" content="@ttu_comc">
-    <meta name="twitter:image:src" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ttu_comc">
+  <meta name="twitter:title" content="<?php echo $pageTitle; ?>">
+  <meta name="twitter:description" content="<?php echo $pageDescription; ?>">
+  <meta name="twitter:creator" content="@ttu_comc">
+  <meta name="twitter:image:src" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
 
 
-    <meta property="og:title" content="<?php echo $pageTitle; ?>"/>
-    <link href="<?php echo $pageURL; ?>" rel="canonical" />
-    <meta property="og:url" content="<?php echo $pageURL; ?>"/>
-    <meta property="og:description" content="<?php echo $pageDescription; ?>">
-    <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="<?php echo $pageTitle; ?>"/>
-    <meta property="og:image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg"/>
+  <meta property="og:title" content="<?php echo $pageTitle; ?>"/>
+  <link href="<?php echo $pageURL; ?>" rel="canonical" />
+  <meta property="og:url" content="<?php echo $pageURL; ?>"/>
+  <meta property="og:description" content="<?php echo $pageDescription; ?>">
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="<?php echo $pageTitle; ?>"/>
+  <meta property="og:image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg"/>
 
 </head>
 <body>
@@ -67,7 +66,7 @@
 
     ?>
     <div id="TTULogo">
-      <a href="http://comc.ttu.edu"><img src="<?php echo BASE_URL; ?>img/TTU-logo.svg" /></a>
+      <a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>img/TTU-logo.svg" /></a>
       <a id="home-button" href="<?php echo BASE_URL; ?>">Home</a>
     </div>
 

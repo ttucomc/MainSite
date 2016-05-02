@@ -116,11 +116,19 @@
           Or send us an email: <a href="mailto:admissions@ttu.edu">admissions@ttu.edu</a>
           <br />
           <br />
-          <a href='http://www.depts.ttu.edu/officialpublications/catalog/_admit_requirements.php' rel='nowfollow'>More detailed information may be found here.</a>
+          <a href='http://www.depts.ttu.edu/officialpublications/catalog/_admit_requirements.php' rel='nowfollow' class="button">More detailed information may be found here</a>
         </div>
       </div>
     </section>
 
   </div>
+
+  <script>
+  $('.scrollDown').click(function() {
+    $('html,body').animate({
+      scrollTop: $('#howToApply').position().top - 70
+    }, 800);
+  });
+  </script>
 
 <?php include '../inc/footer.php'; ?>
