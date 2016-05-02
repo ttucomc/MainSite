@@ -8,23 +8,34 @@
     background-color: $pink;
   }
 
+  a {
+    color: $pink;
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    &:hover {
+      color: lighten($pink, 20);
+      cursor: pointer;
+    }
+  }
+
+  .button {
+    color: #FFF;
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  h2 {
+    margin: 1em 0;
+  }
+
   #howToApply {
 
     max-width: 100%;
 
     .grey-background {
       background-color: $light-grey;
-    }
-
-    a {
-      color: $dark-blue;
-      text-decoration: none;
-      transition: all 0.25s ease;
-
-      &:hover {
-        color: lighten($dark-blue, 20);
-        cursor: pointer;
-      }
     }
 
     .applyBanner {
@@ -107,14 +118,34 @@
   } //End #howToApply
 
   #contact-container {
+    position: relative;
+    background: url('../img/faculty1.jpg') center center no-repeat;
+    background-size: cover;
     padding: 5em 0;
     max-width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $dark-grey;
+      height: 100%;
+      width: 100%;
+      opacity: 0.6;
+      z-index: -1;
+    }
+
+    .button {
+      width: 100%;
+    }
   }
 
   #contactUs {
     background-color: $light-grey;
     font-size: 1.5em;
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 1.6em;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
