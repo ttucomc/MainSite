@@ -1,6 +1,8 @@
 <?php
 
   $pageTitle = "Parent Portal | CoMC | TTU";
+  $pageDescription = "The College of Media &amp; Communication recognizes the important role parents play in their students’ education.";
+  $pageURL = "http://www.depts.ttu.edu/comc/parents/";
 
   include 'inc/header.php';
 ?>

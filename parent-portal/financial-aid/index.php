@@ -1,6 +1,8 @@
 <?php
 
   $pageTitle = "Financial Aid | Parent Portal | CoMC | TTU";
+  $pageDescription = "See the cost of your student attending CoMC and see financial aid and scholarship options to help!";
+  $pageURL = "http://www.depts.ttu.edu/comc/parents/financial-aid/";
 
   include '../inc/header.php';
 ?>
