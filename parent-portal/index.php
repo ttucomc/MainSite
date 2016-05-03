@@ -28,7 +28,7 @@
   <section id="parent-video">
     <div id="video-play">
       <p>
-        <a href="" class="button">Hear from our parents!</a>
+        <a href="" class="button">Hear from our parents!<br /><i class="fa fa-youtube-play fa-2x"></i></a>
       </p>
     </div>
     <div id="video">

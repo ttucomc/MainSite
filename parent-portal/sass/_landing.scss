@@ -53,13 +53,16 @@
   background: url("../img/parents-with-son.jpg") center center no-repeat;
   background-size: cover;
   height: 640px;
+  @media screen and (min-width: $screen-lg) {
+    height: 800px;
+  }
   &:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     background: black;
-    opacity: 0.6;
+    opacity: 0.3;
     height: 100%;
     width: 100%;
   }

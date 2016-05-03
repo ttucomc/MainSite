@@ -190,6 +190,9 @@
     p {
       margin: 0 auto;
       max-width: 770px;
+      @media screen and (min-width: $screen-xxl) {
+        max-width: 100%;
+      }
     }
   }
 }
