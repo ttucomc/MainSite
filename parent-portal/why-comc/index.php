@@ -60,7 +60,7 @@
               Recent topics our faculty are researching include: video games and their effects, social media and the environment, children’s television programming, sports media broadcasts and how they are produced, and dozens of others.
             </p>
 
-            <i class="fa fa-graduation-cap fa-5x"></i>
+            <i class="fa fa-heart fa-5x"></i>
           </div>
         </div>
       </div>
