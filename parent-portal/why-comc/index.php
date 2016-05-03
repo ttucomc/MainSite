@@ -38,7 +38,8 @@
         <div class="large-6 columns">
           <div class="faculty">
 
-            <i class="fa fa-university fa-5x"></i>
+            <!-- <i class="fa fa-university fa-5x"></i> -->
+            <h3>Experience</h3>
             <p>
               Our award-winning faculty bring real-world experiences into the classroom every day.
               Each department within the College of Media &amp; Communication boasts faculty members with experience working in a variety of media organizations—from small non-profits to large media companies.
@@ -52,13 +53,15 @@
 
           <div class="faculty">
 
-            <i class="fa fa-graduation-cap fa-5x"></i>
+            <!-- <i class="fa fa-graduation-cap fa-5x"></i> -->
+            <h3>Reasearch</h3>
             <p>
               As a Tier 1 research institution, Texas Tech CoMC faculty bring their research into the classroom, allowing undergraduate students to learn about and even participate in media and communication-related academic study.
               Recent topics our faculty are researching include: video games and their effects, social media and the environment, children’s television programming, sports media broadcasts and how they are produced, and dozens of others.
             </p>
-          </div>
 
+            <i class="fa fa-graduation-cap fa-5x"></i>
+          </div>
         </div>
       </div>
 
