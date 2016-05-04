@@ -115,18 +115,18 @@
         <div class="listGroup">
           <div class="listTitle">Only in Lubbock</div>
           <ul>
-            <li><a href="http://ffat.org/" rel="nofollow">First Friday Art Trail</a></li>
-            <li><a href="https://www.facebook.com/thechoclatemousse/info/?tab=overview" rel="nofollow">Choc’late Mousse Pie Bar</a></li>
-            <li><a href="https://www.mylubbock.us/departmental-websites/departments/parks-recreation/prairie-dog-town" rel="nofollow">Prairie Dog Town</a></li>
+            <li><a href="http://ffat.org/" target="_blank" rel="nofollow">First Friday Art Trail</a></li>
+            <li><a href="https://www.facebook.com/thechoclatemousse/info/?tab=overview" target="_blank" rel="nofollow">Choc’late Mousse Pie Bar</a></li>
+            <li><a href="https://www.mylubbock.us/departmental-websites/departments/parks-recreation/prairie-dog-town" target="_blank" rel="nofollow">Prairie Dog Town</a></li>
           </ul>
         </div>
 
         <div class="listGroup">
           <div class="listTitle">Where to study</div>
           <ul>
-            <li><a href="http://www.jandbcoffeeco.com/" rel="nofollow">J&amp;B Coffee Co.</a></li>
-            <li><a href="http://yellowhousecoffee.com/" rel="nofollow">Yellow House Coffee</a></li>
-            <li><a href="http://www.gatsbyscoffeehouse.com/" rel="nofollow">Gatsby's Coffeehouse</a></li>
+            <li><a href="http://www.jandbcoffeeco.com/" target="_blank" rel="nofollow">J&amp;B Coffee Co.</a></li>
+            <li><a href="http://yellowhousecoffee.com/" target="_blank" rel="nofollow">Yellow House Coffee</a></li>
+            <li><a href="http://www.gatsbyscoffeehouse.com/" target="_blank" rel="nofollow">Gatsby's Coffeehouse</a></li>
           </ul>
         </div>
 
