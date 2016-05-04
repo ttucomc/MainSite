@@ -15,10 +15,9 @@
 
   h2 {
     font-size: 4em;
-    margin: .5em 0;
+    margin: 0 0 .5em;
     @media screen and (min-width: $screen-med) {
       font-size: 5em;
-      margin: .25em 0 .5em;
     }
   }
 
@@ -44,7 +43,7 @@
   }
 
   #lists {
-    padding: 0 0 3em;
+    padding: 0 0 5em;
     h2 {
       color: $blue;
       font-size: 4em;
@@ -92,7 +91,7 @@
   #rankings {
     background-color: $blue;
     color: $dark-grey;
-    padding: 3em .25em;
+    padding: 5em .25em;
     h3 {
       color: $light-grey;
       font-size: 3em;
@@ -117,7 +116,7 @@
       color: $dark-grey;
     }
     p {
-      @media screen and (min-width: $screen-med) {
+      @media screen and (min-width: $screen-lg) {
         padding: 0 2em;
       }
     }
@@ -157,7 +156,7 @@
     position: relative;
     background-color: $dark-grey;
     color: $light-grey;
-    padding: 3em .25em;
+    padding: 5em .25em;
     z-index: 1;
     overflow: hidden;
     &:before {
@@ -191,6 +190,9 @@
     p {
       margin: 0 auto;
       max-width: 770px;
+      @media screen and (min-width: $screen-xxl) {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -201,7 +203,7 @@
         ALUMNI Section
 ****************************/
 #alumni {
-  padding-top: 3em;
+  padding-top: 5em;
 }
 
 .personContainer
@@ -209,9 +211,12 @@
 
   .alumni-block {
     padding: 2em 1.5em;
-    max-width: 100%;
     &:nth-child(even) {
       background-color: $light-grey;
+      max-width: 100%;
+      .row {
+        margin: 0 auto;
+      }
     }
     & > div {
       position: relative;
