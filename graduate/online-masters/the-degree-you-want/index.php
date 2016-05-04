@@ -14,10 +14,104 @@
 
   <?php
 
-  // Overall if statement to determine if the form as been submitted or not
+  require_once('inc/config.php');
+  require_once('inc/database.php');
+
+  // Overall if statement to determine if the form has been submitted or not
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    /*---Variables-------------------------------------*/
+    // Title
+    $onlineMasters = 'Online Master\'s in Strategic Communication';
+
+    // Invitee's Information
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $campaign = $_POST['campaign'];
+
+
+    /*---Sending Info to DB-------------------------------------*/
+    try {
+
+      // Info for interested person
+      $stmt = $db->prepare("
+                            INSERT INTO ads (last_name, first_name, email, phone, campaign)
+                            VALUES (:first_name, :last_name, :email, :phone, :campaign)
+                          ");
+      // Binding Parameters
+      $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
+      $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
+      $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+      $stmt->bindParam(':phone', $phone, PDO::PARAM_INT);
+      $stmt->bindParam(':campaign', $campaign, PDO::PARAM_STR);
+      // Executing to DB
+      $stmt->execute();
+
+    } catch (Exception $e) {
+      echo "Couldn't add information into database.";
+      exit();
+    }
+
+
+    /*---Email to Online Graduate Staff-------------------------------------*/
+    $headers = "From: " . $firstName . " " . $lastName . " <" . $email . ">\r\n";
+    $headers .= "Reply-To: " . $email . "\r\n";
+    // $headers .= "CC: kuhrt.cowan@ttu.edu\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+    $to = "kuhrt.cowan@ttu.edu";
+
+    $subject = $onlineMasters . " Info Request";
+
+    // Message
+    $message = '<html><body>';
+    $message .= '<table width="100%" cellpadding="10">';
+    $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " would like more info!</h1></td></tr>";
+    $message .= "<tr style='background: #EEEEEE;'><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
+    $message .= "<tr><td><strong>Phone Number:</strong></td><td>" . $phone . "</td></tr>";
+    $message .= "<tr style='background: #EEEEEE;'><td><strong>Campaign Used:</strong></td><td>" . $campaign . "</td></tr>";
+    $message .= "</table>";
+    $message .= "</body></html>";
+
+    // Send Message
+    mail($to, $subject, $message, $headers);
+
+
+    /*---Email to Interested Person-------------------------------------*/
+    $conf_headers = "From: The College of Media & Communication <kristi.gilmore@ttu.edu>\r\n";
+    $conf_headers .= "Reply-To: kristi.gilmore@ttu.edu\r\n";
+    $conf_headers .= "MIME-Version: 1.0\r\n";
+    $conf_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+    $conf_to = $email;
+    $conf_subject = $onlineMasters;
+
+    // Message
+    $conf_message = '<html><body>';
+    $conf_message .= '<table width="100%" cellpadding="10">';
+    $conf_message .= "<tr style='background: #CC0000; color: #FFFFFF'><td><h1 style='color:#FFFFFF; text-align:center;'>Thanks, " . $firstName . ", for your intrest in our " . $onlineMasters . "!</h1></td></tr>";
+    $conf_message .= "<tr style='text-align:center;'><td><p>This is just a confirmation email and we will send you more information about our program soon. If you have any questions or would like to talk to someone, please contact Kristi Gilmore at <a href='mailto:kristi.gilmore@ttu.edu'>kristi.gilmore@ttu.edu</a>. Thanks again!</p></td></tr>";
+    $conf_message .= "</table>";
+    $conf_message .= "</body></html>";
+
+    // Send Message
+    mail($conf_to, $conf_subject, $conf_message, $conf_headers);
+
   ?>
+
+  <section id="top" class="container-fluid" style="background-image:url('http://lorempixel.com/1920/1920/people')">
+    <div class="row text-center">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h1>Thanks, <?php echo $firstName; ?>, for your interest in our program!</h1>
+        <p>
+          You will be hearing from us soon with the information you've requested. If you have any questions in the meantime or would like to speak with someone, contact Kristi Gilmore at <a href="mailto:kristi.gilmore@ttu.edu">kristi.gilmore@ttu.edu</a>. Thanks again!
+        </p>
+      </div>
+    </div>
+  </section>
 
 
   <?php
@@ -30,6 +124,7 @@
       	$campaign_id = intval($_GET["id"]);
       }
 
+      // Array that has all of the 10 campaigns they want to push summer 2016
       $campaigns = array(
         // Brand Recruitment
         array(
@@ -95,6 +190,7 @@
         )
       );
 
+      // Getting the right campaign from the id
       $campaign = $campaigns[$campaign_id];
 
       // Setting variables for content
@@ -136,7 +232,7 @@
               <label for="phone">Phone Number:</label>
               <input type="tel" id="phone" name="phone" class="form-control" required />
             </div>
-            <input type="hidden" name="campaign" value="<?php echo $campaign_id; ?>" />
+            <input type="hidden" name="campaign" value="<?php echo $subTitle; ?>" />
             <input type="submit" value="Submit" class="btn btn-primary btn-block" />
           </fieldset>
         </form>
