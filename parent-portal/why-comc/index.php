@@ -38,7 +38,8 @@
         <div class="large-6 columns">
           <div class="faculty">
 
-            <i class="fa fa-university fa-5x"></i>
+            <!-- <i class="fa fa-university fa-5x"></i> -->
+            <h3>Experience</h3>
             <p>
               Our award-winning faculty bring real-world experiences into the classroom every day.
               Each department within the College of Media &amp; Communication boasts faculty members with experience working in a variety of media organizations—from small non-profits to large media companies.
@@ -52,17 +53,19 @@
 
           <div class="faculty">
 
-            <i class="fa fa-graduation-cap fa-5x"></i>
+            <!-- <i class="fa fa-graduation-cap fa-5x"></i> -->
+            <h3>Reasearch</h3>
             <p>
               As a Tier 1 research institution, Texas Tech CoMC faculty bring their research into the classroom, allowing undergraduate students to learn about and even participate in media and communication-related academic study.
               Recent topics our faculty are researching include: video games and their effects, social media and the environment, children’s television programming, sports media broadcasts and how they are produced, and dozens of others.
             </p>
-          </div>
 
+            <i class="fa fa-heart fa-5x"></i>
+          </div>
         </div>
       </div>
 
-      <a href="https://www.depts.ttu.edu/comc/faculty/" class="button">Visit our Faculty</a>
+      <a href="https://www.depts.ttu.edu/comc/faculty/" class="button">Meet our Faculty</a>
 
     </section>
 
@@ -112,25 +115,26 @@
         <div class="listGroup">
           <div class="listTitle">Only in Lubbock</div>
           <ul>
-            <li><a href="http://ffat.org/" rel="nofollow">First Friday Art Trail</a></li>
-            <li><a href="https://www.facebook.com/thechoclatemousse/info/?tab=overview" rel="nofollow">Choc’late Mousse Pie Bar</a></li>
-            <li><a herf="https://www.mylubbock.us/departmental-websites/departments/parks-recreation/prairie-dog-town" rel="nofollow">Prairie Dog Town</a></li>
+            <li><a href="http://ffat.org/" target="_blank" rel="nofollow">First Friday Art Trail</a></li>
+            <li><a href="https://www.facebook.com/thechoclatemousse/info/?tab=overview" target="_blank" rel="nofollow">Choc’late Mousse Pie Bar</a></li>
+            <li><a href="https://www.mylubbock.us/departmental-websites/departments/parks-recreation/prairie-dog-town" target="_blank" rel="nofollow">Prairie Dog Town</a></li>
           </ul>
         </div>
 
         <div class="listGroup">
           <div class="listTitle">Where to study</div>
           <ul>
-            <li><a href="http://www.jandbcoffeeco.com/" rel="nofollow">J&amp;B Coffee Co.</a></li>
-            <li><a href="http://yellowhousecoffee.com/" rel="nofollow">Yellow House Coffee</a></li>
-            <li><a href="http://www.gatsbyscoffeehouse.com/" rel="nofollow">Gatsby's Coffeehouse</a></li>
+            <li><a href="http://www.jandbcoffeeco.com/" target="_blank" rel="nofollow">J&amp;B Coffee Co.</a></li>
+            <li><a href="http://yellowhousecoffee.com/" target="_blank" rel="nofollow">Yellow House Coffee</a></li>
+            <li><a href="http://www.gatsbyscoffeehouse.com/" target="_blank" rel="nofollow">Gatsby's Coffeehouse</a></li>
           </ul>
         </div>
 
         <div class="listGroup">
           <div class="listTitle">Outdoor Pursuits</div>
-          <ul>
-            <li>
+          <div class="row">
+            <div class="large-6 columns">
+              <p class='subHead'>Lubbock</p>
               <ul>
                 <li>Golfing</li>
                 <li>Disc Golf</li>
@@ -140,16 +144,16 @@
                 <li>Lake Alan Henry</li>
                 <li>Randsom Canyon</li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div class="large-6 columns">
               <p class='subHead'>Nearby Lubbock</p>
               <ul>
                 <li>Palo Duro Canyon (1.5 hour drive)</li>
                 <li>Caprock Canyons (2 hour drive)</li>
                 <li>Buffalo Springs Lake (30 minute drive)</li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
       </div>
