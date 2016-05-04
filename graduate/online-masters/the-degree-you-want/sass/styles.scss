@@ -2,7 +2,8 @@
 
 #top {
   position: relative;
-  background: url('http://lorempixel.com/1000/1000') top center no-repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
   background-size: cover;
   color: #FFF;
   padding: 10em 0;
