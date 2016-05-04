@@ -1,0 +1,250 @@
+/****************************
+        LANDING PAGE
+****************************/
+
+#landing {
+  position: relative;
+  background-color: $slate;
+  height: 100vh;
+  width: 100%;
+  // div containting logos and title
+  #title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    padding: 0 .5em;
+    #logoWords {
+      width: 100%;
+      @media screen and (min-width: $screen-med) {
+        min-width: 400px;
+      }
+      @media screen and (min-width: $screen-lg) {
+        min-width: 550px;
+      }
+    }
+    h1 {
+      color: #FFF;
+      font-size: 6.25em;
+      padding: 0;
+      margin: 0.1em 0;
+      @media screen and (min-width: $screen-med) {
+        font-size: 8.25em;
+      }
+      &:before {
+        content: '';
+        top: 0;
+        background-color: #FFF;
+        width: 40%;
+      }
+      &:after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+}
+
+/****************************
+      VIDEO SECTION
+****************************/
+#parent-video {
+  position: relative;
+  background: url("../img/parents-with-son.jpg") center center no-repeat;
+  background-size: cover;
+  height: 640px;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+  }
+  #video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+  }
+  #video {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+  }
+  #player {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/****************************
+      OVERVIEW SECTION
+****************************/
+#overview {
+  .info {
+    background-image: url("../img/60-lines.png");
+    padding: 7em 0.5em;
+  }
+
+  .square-menu-container {
+    background: url('../img/students-in-class.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  .square-menu {
+    position: relative;
+    background-color: #FFF;
+    height: 50vh;
+    text-align: center;
+    @media screen and (min-width: 1000px) {
+      width: 50%;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      @include translateX(-50%);
+      background-color: $dark-grey;
+      height: 100%;
+      width: 1px;
+      z-index: 1;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include translateY(-50%);
+      background-color: $dark-grey;
+      height: 1px;
+      width: 100%;
+      z-index: 1;
+    }
+    .square {
+      position: relative;
+      color: $dark-grey;
+      font-weight: bold;
+      text-decoration: none;
+      height: 50%;
+      width: 50%;
+      padding: 0;
+      margin: 0;
+      @include transition(.3s);
+      &:hover {
+        background-color: $light-grey;
+        figure {
+          animation: 4s ease-in-out infinite up-shake;
+        }
+      }
+      &:first-child:hover {
+        figure {
+          color: $blue;
+        }
+      }
+      &:nth-child(2):hover {
+        figure {
+          color: $coral;
+        }
+      }
+      &:nth-child(3):hover {
+        figure {
+          color: $pink;
+        }
+      }
+      &:last-child:hover {
+        figure {
+          color: $green;
+        }
+      }
+      div {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include translateY(-50%);
+        width: 100%;
+        figure {
+          color: $slate;
+          margin: 0;
+          @include transition(.3s);
+        }
+        p {
+          font-size: 1em;
+          padding: 0 .5em;
+        }
+      }
+    }
+  }
+}
+
+
+/****************************
+  STUDENT INTERESTED SECTION
+****************************/
+
+#interested {
+  background-image: url("../img/60-lines.png");
+  p {
+    font-size: 1.25em;
+  }
+  #question {
+    background-image: url("../img/60-lines.png");
+    background-color: $slate;
+    padding: 4em 0;
+    p {
+      color: white;
+      max-width: 1000px;
+      padding: .5em;
+      margin: 0 auto;
+    }
+  }
+  h2 {
+    color: #FFF;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    @media screen and (min-width: $screen-med) {
+      font-size: 3em;
+    }
+    select {
+      position: relative;
+      background-color: transparent;
+      font-style: italic;
+      text-align-last: center;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      border-radius: 0;
+      appearance: none;
+      &:focus,
+      &:hover,
+      &:active {
+        outline: none;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+      }
+    }
+  }
+  #description {
+    display: none;
+    padding: 4em .5em;
+    max-width: 960px;
+    p {
+      background-color: rgba(255,255,255,.5);
+      box-shadow: $card-shadow;
+      margin: 0;
+      padding: 2em 1em;
+      border-radius: 5px;
+    }
+  }
+}
