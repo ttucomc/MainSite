@@ -54,7 +54,7 @@
           <div class="faculty">
 
             <!-- <i class="fa fa-graduation-cap fa-5x"></i> -->
-            <h3>Reasearch</h3>
+            <h3>Research</h3>
             <p>
               As a Tier 1 research institution, Texas Tech CoMC faculty bring their research into the classroom, allowing undergraduate students to learn about and even participate in media and communication-related academic study.
               Recent topics our faculty are researching include: video games and their effects, social media and the environment, children’s television programming, sports media broadcasts and how they are produced, and dozens of others.
@@ -65,7 +65,7 @@
         </div>
       </div>
 
-      <a href="https://www.depts.ttu.edu/comc/faculty/" class="button">Meet our Faculty</a>
+      <a href="https://www.depts.ttu.edu/comc/faculty/" class="button">Meet our Faculty &amp; Staff</a>
 
     </section>
 
@@ -142,7 +142,7 @@
                 <li>Walking Trails</li>
                 <li>Lubbock Water Rampage</li>
                 <li>Lake Alan Henry</li>
-                <li>Randsom Canyon</li>
+                <li>Ransom Canyon</li>
               </ul>
             </div>
             <div class="large-6 columns">

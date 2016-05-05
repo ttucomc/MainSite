@@ -39,8 +39,10 @@
 #visit
 {
   height: 120%;
+  min-height: 1600px;
   @media screen and (min-width: $screen-lg) {
     height: initial;
+    min-height: initial;
   }
   > .row {
     padding: 4em 0 2em;

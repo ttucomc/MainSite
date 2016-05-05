@@ -221,11 +221,12 @@
     select {
       position: relative;
       background-color: transparent;
+      color: $dark-grey;
       font-style: italic;
       text-align-last: center;
       outline: none;
       border: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid $dark-grey;
       border-radius: 0;
       appearance: none;
       &:focus,
