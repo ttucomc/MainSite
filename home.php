@@ -419,11 +419,16 @@
 			<p><a class="button" href="http://www.ttu.edu/admissions/">Undergraduate</a>&nbsp;<a class="button" href="/comc/graduate/apply/">Graduate</a></p>
 		</section>
 		<section id="home-students">
-			<div class="wow slideInLeft intro-photo-half">
-				<div id="intro-current"><a href="/comc/students/current/"> <span class="home-students-text">Current Students</span> </a></div>
-			</div>
-			<div class="wow slideInRight intro-photo-half">
-				<div id="intro-prospective"><a href="/comc/students/prospective.php"> <span class="home-students-text">Prospective Students</span> </a></div>
+			<div class="row small-collapse">
+				<div class="wow slideInLeft intro-photo medium-4 columns">
+					<div id="intro-current"><a href="/comc/students/current/"> <span class="home-students-text">Current Students</span> </a></div>
+				</div>
+				<div class="wow slideInUp intro-photo medium-4 columns">
+					<div id="intro-prospective"><a href="/comc/students/prospective.php"> <span class="home-students-text">Prospective Students</span> </a></div>
+				</div>
+				<div class="wow slideInRight intro-photo medium-4 columns">
+					<div id="intro-parents"><a href="/comc/parents/"><span class="home-students-text">Parents</span></a></div>
+				</div>
 			</div>
 		</section>
 		<section id="home-advising">

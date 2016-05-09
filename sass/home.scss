@@ -93,14 +93,21 @@ h1 {
 	text-align: center;
 	overflow: hidden;
 	z-index: 1;
-	.intro-photo-half {
+  .row {
+    max-width: 100%;
+  }
+	.intro-photo {
 		display: inline-block;
-		margin-right: -4px;
 		padding: 0;
 		position: relative;
 		vertical-align: top;
-		height: 50vh;
-		width: 50%;
+		height: 30vh;
+    @media screen and (min-width: 768px) {
+      height: 40vh;
+    }
+    @media screen and (min-width: 1024px) {
+      height: 50vh;
+    }
 		a {
 			position: relative;
 			display: inline-block;
@@ -132,20 +139,25 @@ h1 {
 			}
 		}
 	}
-	#intro-current {
+	#intro-current,
+  #intro-prospective,
+  #intro-parents {
 		position: relative;
-		background: image-url('current-students.jpg') center center no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
 		background-size: cover;
 		height: 100%;
 		width: 100%;
 	}
+  #intro-current {
+    background-image: image-url('current-students.jpg');
+  }
 	#intro-prospective {
-		position: relative;
-		background: image-url('prospective-students.jpg') center center no-repeat;
-		background-size: cover;
-		height: 100%;
-		width: 100%;
+		background-image: image-url('prospective-students.jpg');
 	}
+  #intro-parents {
+    background-image: image-url('parents-and-dean.jpg');
+  }
 	.home-students-text {
 		position: absolute;
 		opacity: 0;
