@@ -418,6 +418,18 @@
 			<h3>Apply Now!</h3>
 			<p><a class="button" href="http://www.ttu.edu/admissions/">Undergraduate</a>&nbsp;<a class="button" href="/comc/graduate/apply/">Graduate</a></p>
 		</section>
+		<section id="banner-bearer" class="row">
+			<div class="medium-6 columns">
+				<img src="/comc/banner-bearer/images/MayBannerBearer-1.jpg" alt="Colby Ward" title="Colby Ward" />
+			</div>
+			<div class="medium-6 columns">
+				<h3>Meet our Spring 2016 Banner Bearer</h3>
+				<h4>Colby Ward</h4>
+				<p>
+					Colby Ward, an electronic media &amp; communication and English double major from Saint Jo, Texas, and the top graduate from the College of Media &amp; Communication in Spring 2016, will represent CoMC as the banner bearer during the May 21 commencement ceremony.<br /><a href="/comc/banner-bearer/" class="button">Read More...</a>
+				</p>
+			</div>
+		</section>
 		<section id="home-students">
 			<div class="row small-collapse">
 				<div class="wow slideInLeft intro-photo medium-4 columns">

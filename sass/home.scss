@@ -37,7 +37,7 @@ h1 {
 /***** INTRO SECTION *****/
 #intro-section {
 	text-align: center;
-	padding: 0 0 10em;
+	padding: 0 0 2em; // Change back to 0 0 10em when banner bearer story is removed
 	z-index: 1;
   @media screen and (max-width: 768px) {
     padding: 0 .25em 10em;
@@ -86,6 +86,16 @@ h1 {
       }
     }
 }
+
+
+/***** BANNER BEARER *****/
+#banner-bearer {
+  padding: 0 0 5em;
+  h3+h4 {
+    margin-top: 0.5em;
+  }
+}
+
 
 /***** STUDENTS SECTION *****/
 #home-students {
