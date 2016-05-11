@@ -130,62 +130,62 @@
         array(
           'Campaign' => 'Now Online',
           'Title' => 'The Strategic Communication Master\'s Degree',
-          'Text' => 'Earn your Masters of Strategic Communication degree from Texas Tech University! Accredited, convenient 100% online. Update your skills to be competitive in today\'s global and digitally focused environment. Learn more now! The Degree You Want.',
-          'Photo' => 'http://lorempixel.com/1920/1920/people'
+          'Text' => 'Earn your Masters of Strategic Communication degree from Texas Tech University! Accredited, convenient 100% online. Update your skills to be competitive in today\'s global and digitally focused environment. Learn more now! <em>The Degree You Want.</em>',
+          'Photo' => 'img/GraduateSocial-3.jpg'
         ),
         array(
           'Campaign' => 'For Professionals',
           'Title' => 'Texas Tech University Online Strategic Communication MA',
-          'Text' => 'Pursue the Master\'s in Strategic Communication from Texas Tech University 100% online. Contact the College of Media & Communication today to learn more about our Online MA designed for professionals. The Degree You Want.',
+          'Text' => 'Pursue the Master\'s in Strategic Communication from Texas Tech University 100% online. Contact the College of Media & Communication today to learn more about our Online MA designed for professionals. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/animals'
         ),
         array(
           'Campaign' => 'Advance Your Career',
           'Title' => 'The Online Strategic Communication MA',
-          'Text' => 'Earn your MA in Strategic Communication from Texas Tech University to advance your skills, career and earning power. Complete in as few as 18 months. Learn more now. The Degree You Want.',
+          'Text' => 'Earn your MA in Strategic Communication from Texas Tech University to advance your skills, career and earning power. Complete in as few as 18 months. Learn more now. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/abstract'
         ),
         array(
           'Campaign' => 'Completion in as Few as 18 Months',
           'Title' => 'Texas Tech University MA 100% Online',
-          'Text' => 'Rolling enrollment starts any term. Thirty hour program is accelerated, accredited and online. Contact us today for more information. The Degree You Want.',
+          'Text' => 'Rolling enrollment starts any term. Thirty hour program is accelerated, accredited and online. Contact us today for more information. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/business'
         ),
         array(
           'Campaign' => '100% Online From Texas Tech University',
           'Title' => 'The MA Degree For Professionals',
-          'Text' => 'The Online MA Program is accredited, rigorous and taught by full-time faculty. Take your next career step with a focus on global and digital strategic communication. Visit our website to learn more. The Degree You Want.',
+          'Text' => 'The Online MA Program is accredited, rigorous and taught by full-time faculty. Take your next career step with a focus on global and digital strategic communication. Visit our website to learn more. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/cats'
         ),
         // Enrollment Deadlines
         array(
           'Campaign' => 'Application deadlines approaching.',
           'Title' => 'Texas Tech University Online Graduate MA Program Deadline',
-          'Text' => 'Earn an MA in Strategic Communication through our Online Courses! Admission is limited - apply now. The Degree You Want.',
+          'Text' => 'Earn an MA in Strategic Communication through our Online Courses! Admission is limited - apply now. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/city'
         ),
         array(
           'Campaign' => 'No GRE required based on applicant qualifications.',
           'Title' => 'Master\'s in Strategic Communication Online from Texas Tech University Applications Due',
-          'Text' => 'Deadlines approaching and class size is limited. Start your application today. The Degree You Want.',
+          'Text' => 'Deadlines approaching and class size is limited. Start your application today. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/food'
         ),
         array(
           'Campaign' => 'Accredited, Accelerated & Online From Texas Tech University.',
           'Title' => 'Application Deadlines For The Online MA Approaching',
-          'Text' => 'No GRE required based on applicant qualifications. Apply now for next term admission. The Degree You Want.',
+          'Text' => 'No GRE required based on applicant qualifications. Apply now for next term admission. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/nightlife'
         ),
         array(
           'Campaign' => 'Apply Today',
           'Title' => 'MA Strategic Communications Texas Tech University',
-          'Text' => 'Thirty hour program completes in as few as 18 months. 100% Online taught by full time faculty. Act now to meet enrollment deadlines. Admission is limited. The Degree You Want.',
+          'Text' => 'Thirty hour program completes in as few as 18 months. 100% Online taught by full time faculty. Act now to meet enrollment deadlines. Admission is limited. <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/fashion'
         ),
         array(
           'Campaign' => 'Deadlines Coming Soon',
           'Title' => 'Study Strategic Communication Online at Texas Tech University',
-          'Text' => 'Further your career by earning an MA degree focusing on global and digital strategic communication. Program deadlines approaching - apply today! The Degree You Want.',
+          'Text' => 'Further your career by earning an MA degree focusing on global and digital strategic communication. Program deadlines approaching - apply today! <em>The Degree You Want.</em>',
           'Photo' => 'http://lorempixel.com/1920/1920/sports'
         )
       );
@@ -202,8 +202,8 @@
   ?>
 
   <section id="top" class="container-fluid" style="background-image:url('<?php echo $photo; ?>')">
-    <div class="row text-center">
-      <div class="col-sm-8 col-sm-offset-2">
+    <div class="row text-left">
+      <div class="col-sm-5 col-sm-offset-6">
         <h1><?php echo $title; ?></h1>
         <h2><?php echo $subTitle; ?></h2>
         <p>
@@ -211,6 +211,8 @@
         </p>
       </div>
     </div>
+  </section>
+  <section id="the-form">
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3">
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
