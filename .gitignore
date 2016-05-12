@@ -75,3 +75,5 @@ parent-portal/.sass-cache/75fcaf1b4852ceb732871195e41567cc2a7d8997/Library/Ruby/
 *.css
 
 parent-portal/css/styles.css
+
+*.scssc
