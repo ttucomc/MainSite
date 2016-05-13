@@ -559,6 +559,22 @@
 				<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
 			</div>
 		</section>
+		<section id="testimonials" class="row">
+			<div class="medium-6 columns" id="quote">
+				<blockquote>
+					<p>Being a part of the CoMC is great because it means being around people that are always ready and willing to help you succeed.&rdquo;</p>
+				</blockquote>
+				<img src="images/MCLC/SIG-alexa-rosas.png" alt="Alexa Rosas' Signature" />
+				<cite>
+					Alexa Rosas<br />
+					San Antonio, Texas<br />
+					Public Relations
+				</cite>
+			</div>
+			<div class="medium-6 columns" id="photo">
+				<img src="images/MCLC/MCLC-alexa-rosas.png" alt="Alexa Rosas" title="Alexa Rosas" />
+			</div>
+		</section>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
