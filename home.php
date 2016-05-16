@@ -410,6 +410,64 @@
 
 
     <!-- CoMC EDITS START -->
+		<?php
+
+		$testimonials = array(
+			array(
+				'name' => 'Alexa Rosas',
+				'hometown' => 'San Antonio, Texas',
+				'major' => 'Public Relations',
+				'quote' => 'Being a part of the CoMC is great because it means being around people that are always ready and willing to help you succeed.',
+				'photo' => 'alexa-rosas'
+			),
+			array(
+				'name' => 'Amber Smith',
+				'hometown' => 'Keller, Texas',
+				'major' => 'Public Relations',
+				'quote' => 'Living in a Learning Community is convenient and helpful, to have friends next door that can help with studying because you\'re in the same classes more than likely.',
+				'photo' => 'amber-smith'
+			),
+			array(
+				'name' => 'Lea Fulton',
+				'hometown' => 'Nottingham, England',
+				'major' => 'Electronic Media and Communications',
+				'quote' => 'I love having the opportunity to be creative in my classes and I also love meeting like-minded people that I can collaborate musically with outside of class.',
+				'photo' => 'lea-fulton'
+			),
+			array(
+				'name' => 'Mary Katherine Hart',
+				'hometown' => 'Houston, Texas',
+				'major' => 'Communication Studies',
+				'quote' => 'Being a part of CoMC here at Texas Tech is amazing because of the immediate community it gives you.',
+				'photo' => 'mary-hart'
+			),
+			array(
+				'name' => 'Ryan Ortegon',
+				'hometown' => 'El Paso, Texas',
+				'major' => 'Electronic Media and Communications',
+				'quote' => 'Living in the CoMC Learning Community allows students to network and share ideas with their peers in the same major.',
+				'photo' => 'ryan-ortegon'
+			),
+			array(
+				'name' => 'Socorra Austin',
+				'hometown' => 'Albuquerque, New Mexico',
+				'major' => 'Electronic Media and Communications',
+				'quote' => 'The College of Media &amp; Communication does a very good job at offering opportunities and support to help fulfill your dreams.',
+				'photo' => 'socorra-austin'
+			),
+			array(
+				'name' => 'Tim Hays',
+				'hometown' => 'Keizer, Oregon',
+				'major' => 'Journalism',
+				'quote' => 'The College of Media &amp; Communication provides me with so many opportunities and helps me achieve the goals that I have.',
+				'photo' => 'tim-hays'
+			)
+		);
+		shuffle($testimonials);
+		$testimonials_js = json_encode($testimonials);
+		$testimonial = $testimonials[0];
+
+		?>
 
 		<!-- ADD MAIN CONTENT BELOW THIS LINE -->
 		<section id="intro-section" class="row">
@@ -540,13 +598,13 @@
 					<h3><a href="/comc/about/publications/advantage/index.php">Alumni Advantage</a></h3>
 					<p class="hidden-mobile"><a href="/comc/about/publications/advantage/index.php"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
 				</div>
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Tori Young" src="/comc/about/publications/adviser/2016/images/ToriYoung-1.jpg" alt="Tori Young" /></a>
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Dana Jennings" src="/comc/about/publications/adviser/2016/images/may/dana-jennings.jpg" alt="Dana Jennings" /></a>
 					<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Student Spotlight: Victoria (Tori) Young</strong><br /><br />Young has advice for incoming students. “Be excited, show interest early on, and always ask questions. Be confident, and go get involved,” Young said. “You get to your senior year before you know it and realize that you had a group of professors watching over you the whole time. You graduate from Texas Tech with a support team. Not only do I have personal friends and relationships that will help me get far in life, but I have my mentors looking over me wanting me to succeed.”<br /><br /><em>More...</em></a></p>
+					<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Student Spotlight: Dana Jennings</strong><br /><br />Dana Jennings is finishing up her senior year at Texas Tech University. Originally a biology major, Jennings has found a home in the College of Media &amp; Communication where she is studying public relations.<br /><br /><em>More...</em></a></p>
 				</div>
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="The 2016 Appathon Contestants" src="/comc/about/publications/converging/2016/images/april/appathon1.jpg" alt="The 2016 Appathon Contestants" /> </a>
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="Media &amp; Communication Learning Community" src="/comc/about/publications/converging/2016/images/may/mclc.jpg" alt="Media &amp; Communication Learning Community" /> </a>
 					<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/converging/"> <strong>By Request: Texas Tech Hosts Fourth Annual Appathon</strong> <br /><br /> Android and iPhone users will soon have the opportunity to download Penguin, a new and innovative app created by the winners of Texas Tech’s fourth annual Appathon. <br /><br /> <em>More...</em> </a></p>
+					<p class="hidden-mobile"><a href="/comc/about/publications/converging/"> <strong>MCLC Wins Learning Community of the Year Award from University Student Housing</strong> <br /><br />The Media &amp; Communication Learning Community, which is made up of students who are majoring in the College of Media &amp; Communication and living on campus, received the award for Learning Community of the Year from University Student Housing for 2015-16.<br /><br /> <em>More...</em> </a></p>
 				</div>
 				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/mc/"> <img style="width: 50%;" src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
 					<h3><a href="/comc/about/publications/mc.php">The MC 2015</a></h3>
@@ -562,17 +620,17 @@
 		<section id="testimonials" class="row">
 			<div class="medium-6 columns" id="quote">
 				<blockquote>
-					<p>Being a part of the CoMC is great because it means being around people that are always ready and willing to help you succeed.&rdquo;</p>
+					<p><?php echo $testimonial['quote']; ?></p>
 				</blockquote>
-				<img src="images/MCLC/SIG-alexa-rosas.png" alt="Alexa Rosas' Signature" />
+				<img src="images/MCLC/SIG-<?php echo $testimonial['photo']; ?>.png" alt="<?php echo $testimonial['name']; ?> Signature" />
 				<cite>
-					Alexa Rosas<br />
-					San Antonio, Texas<br />
-					Public Relations
+					<?php echo $testimonial['name']; ?><br />
+					<?php echo $testimonial['hometown']; ?><br />
+					<?php echo $testimonial['major']; ?>
 				</cite>
 			</div>
 			<div class="medium-6 columns" id="photo">
-				<img src="images/MCLC/MCLC-alexa-rosas.png" alt="Alexa Rosas" title="Alexa Rosas" />
+				<img src="images/MCLC/MCLC-<?php echo $testimonial['photo']; ?>.png" alt="<?php echo $testimonial['name']; ?>" title="<?php echo $testimonial['name']; ?>" />
 			</div>
 		</section>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -615,6 +673,72 @@
 
 
 			});
+
+			// Testimonials slider
+			var testimonials = <?php echo $testimonials_js;  ?>;
+			testimonial_i = 0;
+			window.setInterval(function() {
+
+				// Getting next person
+				if (testimonial_i == 6) {
+					testimonial_i = 0
+				} else {
+					testimonial_i++;
+				}
+				testimonial = testimonials[testimonial_i];
+
+				// FADING PERSON OUT
+				// Getting current image width for percentage bug
+				img_width = $('#photo img').width();
+				// Scaling image up
+				img_width_scale = img_width*1.075;
+
+				// Animating image to grow and fade out
+				$('#photo img').animate({
+					width: img_width_scale,
+					opacity: 0
+				}, 1200, function() {
+					// Replacing picture
+					$('#photo img').attr({
+						src: 'images/MCLC/MCLC-' + testimonial['photo'] + '.png',
+						alt: testimonial['name'] + ' Signature',
+						title: testimonial['name'] + ' Signature'
+					});
+				});
+
+				// Animating quote to shrink and fade out
+				$('#quote').animate({
+					'font-size': '.96em',
+					opacity: 0
+				}, 1200, function() {
+
+					// Changing quote
+					$('#quote blockquote').replaceWith('<blockquote>' + testimonial['quote'] + '</blockquote>');
+					// Changing signature
+					$('#quote img').attr({
+						src: 'images/MCLC/SIG-' + testimonial['photo'] + '.png',
+						alt: testimonial['name'] + ' Signature',
+						title: testimonial['name'] + ' Signature'
+					});
+					// Changing cite
+					$('#quote cite').replaceWith('<cite>' + testimonial['name'] + '<br />'+ testimonial['hometown'] + '<br />' + testimonial['major'] + '</cite>');
+
+				});
+
+
+				// FADING PERSON IN
+				$('#photo img').animate({
+					width: img_width,
+					opacity: 1
+				}, 1200);
+
+				// Animating quote to shrink and fade out
+				$('#quote').animate({
+					'font-size': '1.125em',
+					opacity: 1
+				}, 1200);
+
+			}, 12000);
 			</script>
 			<!-- ADD MAIN CONTENT ABOVE THIS LINE -->
 
