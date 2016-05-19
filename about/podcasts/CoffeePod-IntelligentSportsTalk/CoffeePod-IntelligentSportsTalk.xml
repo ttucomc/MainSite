@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>The Coffee Pod, Intelligent Sports Talk</title>
+    <link>http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/</link>
+    <language>en-us</language>
+    <copyright>2016 College of Media &amp; Communication</copyright>
+    <!-- <itunes:subtitle>A show about everything</itunes:subtitle> -->
+    <itunes:author>College of Media &amp; Communication TTU Graduate Program</itunes:author>
+    <itunes:summary>The Texas Tech College of Media &amp; Communication graduate program sports media track has launched a new podcast series, The Coffee Pod, intelligent sports talk. Each podcast presents an in-depth conversation with sports industry experts on a wide array of topics. Our goal is to provide listeners with an opportunity to develop a deeper understanding of those topics than typical sports talk radio shows might allow.</itunes:summary>
+    <description>The Texas Tech College of Media &amp; Communication graduate program sports media track has launched a new podcast series, The Coffee Pod, intelligent sports talk. Each podcast presents an in-depth conversation with sports industry experts on a wide array of topics. Our goal is to provide listeners with an opportunity to develop a deeper understanding of those topics than typical sports talk radio shows might allow. </description>
+    <itunes:owner>
+      <itunes:name>College of Media &amp; Communication TTU Graduate Program</itunes:name>
+      <itunes:email>comc@ttu.edu</itunes:email>
+    </itunes:owner>
+    <itunes:image href="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/intelligent-sports-talk/CP-intelligent.jpg" />
+    <itunes:category text="Sports &amp; Recreation" />
+    <itunes:explicit>no</itunes:explicit>
+    <item>
+      <title>Dr. Brian Shannon</title>
+      <itunes:author>College of Media &amp; Communication TTU Graduate Program</itunes:author>
+      <itunes:summary>Dr. Brian Shannon, Texas Tech Athletics Faculty Athletics Representative, FAR, joined graduate student, Harper Anderson, on April 15, 2016 for the first episode of the Coffee Pod to discuss Dr. Shannon's journey to the position he currently holds, athletics governance and the collegiate athletics landscape, including the hot-topic, pay for play of student-athletes.</itunes:summary>
+      <itunes:image href="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/intelligent-sports-talk/CP-intelligent.jpg" />
+      <enclosure url="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/intelligent-sports-talk/episodes/Ep1-CoffeePod.mp3" length="88541375" type="audio/mpeg" />
+      <guid>http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/stories-in-sports/episodes/Ep1-CP-StoriesinSports.mp3</guid>
+      <pubDate>Thu, 30 Jun 2016 8:00:00 CST</pubDate>
+      <itunes:duration>45:54</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:keywords>Brian Shannon, sports, comc, TTU, college sports, athletics, pay for play, student-athlete</itunes:keywords>
+    </item>
+  </channel>
+</rss>

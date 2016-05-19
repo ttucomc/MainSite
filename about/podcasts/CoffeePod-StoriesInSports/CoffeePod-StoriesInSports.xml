@@ -7,26 +7,26 @@
     <copyright>2016 College of Media &amp; Communication</copyright>
     <!-- <itunes:subtitle>A show about everything</itunes:subtitle> -->
     <itunes:author>College of Media &amp; Communication TTU Graduate Program</itunes:author>
-    <itunes:summary>All About Everything is a show about everything. Each week we dive into any subject known to man and talk about it as much as we can. Look for our podcast in the Podcasts app or in the iTunes Store</itunes:summary>
-    <description>All About Everything is a show about everything. Each week we dive into any subject known to man and talk about it as much as we can. Look for our podcast in the Podcasts app or in the iTunes Store</description>
+    <itunes:summary>The Coffee Pod, Stories in Sports series provides listeners with opportunities to hear from various regional personalities as they share their journeys within the sports realm.</itunes:summary>
+    <description>The Coffee Pod, Stories in Sports series provides listeners with opportunities to hear from various regional personalities as they share their journeys within the sports realm.</description>
     <itunes:owner>
       <itunes:name>College of Media &amp; Communication TTU Graduate Program</itunes:name>
       <itunes:email>comc@ttu.edu</itunes:email>
     </itunes:owner>
-    <itunes:image href="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/stories-in-sports/coffeepod-stories.jpg" />
+    <itunes:image href="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/stories-in-sports/coffeepod-stories-lg.jpg" />
     <itunes:category text="Sports &amp; Recreation" />
     <itunes:explicit>no</itunes:explicit>
-    <!-- <item>
+    <item>
       <title>Marsha Sharp</title>
       <itunes:author>College of Media &amp; Communication TTU Graduate Program</itunes:author>
       <itunes:summary>Associate Athletics Director and Head Coach Emerita, Marsha Sharp, stepped into the podcast booth with Harper Anderson (Texas Tech CoMC Ph.D. student) on May 10, 2016, and talked about leadership, the Fearless Champions program, and her personal journey in women’s basketball and in west Texas. This is our first episode of the Coffee Pod, Stories in Sports series.</itunes:summary>
-      <itunes:image href="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/stories-in-sports/coffeepod-stories.jpg" />
+      <itunes:image href="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/stories-in-sports/coffeepod-stories-lg.jpg" />
       <enclosure url="http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/stories-in-sports/episodes/Ep1-CP-StoriesinSports.mp3" length="75615040" type="audio/mpeg" />
       <guid>http://www.depts.ttu.edu/comc/graduate/podcasts/coffee-pod/stories-in-sports/episodes/Ep1-CP-StoriesinSports.mp3</guid>
-      <pubDate>Wed, 01 Jun 2016 8:00:00 CST</pubDate>
+      <pubDate>Thu, 30 Jun 2016 8:00:00 CST</pubDate>
       <itunes:duration>52:17</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:keywords>Marsha Sharp, sports, comc, leadership, journey, basketball, coffee, TTU, women, women's basketball, college basketball</itunes:keywords>
-    </item> -->
+    </item>
   </channel>
 </rss>
