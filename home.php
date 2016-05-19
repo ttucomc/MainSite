@@ -18,6 +18,7 @@
 	<script src="js/ttuglobal-onload.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/home.js"></script>
 
     <!-- OUR CUSTOM HEAD START -->
     <meta itemprop="name" content="College of Media &amp; Communication | TTU">
@@ -561,6 +562,7 @@
 			</div>
 		</section>
 		<?php require('testimonials.php'); ?>
+		<!-- "In 2633, the evil Red Falcon Organization have set a base on the Galuga archipelago near New Zealand in a plot to conquer the world. Two commandos, Pfc. Bill Rizer and Pfc. Lance Bean of the Contra unit (an elite group of soldiers specializing in guerrilla warfare), are sent to the island to destroy the enemy forces and uncover the true nature of the alien entity controlling them..." -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
