@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 // Removing template generated H1 and wrapper containing so video is flush
-    $('h1').first().parent().remove();
+    $('h1').first().remove();
     // Removing template generated breadcrumbs
     $('.breadcrumbs').remove();
 });
