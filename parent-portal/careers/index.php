@@ -333,7 +333,8 @@
       <h2>Internships</h2>
       <div class="row">
         <p>
-          It is never too early to get started thinking about internships. Many companies require students to earn course credit for an internship, and the college does have some basic prerequisites students must complete to be eligible for course credit. To learn the ins and outs of securing an internship, encourage your student to set up an appointment with our college’s career counselor, <a href="mailto:cameron.skoczlas@ttu.edu">Cameron Skoczlas</a>.
+          It is never too early to get started thinking about internships. Many companies require students to earn course credit for an internship, and the college does have some basic prerequisites students must complete to be eligible for course credit. To learn the ins and outs of securing an internship, encourage your student to set up an appointment with our college’s career counselor, Cameron Skoczlas.<br />
+          <a href="mailto:cameron.skoczlas@ttu.edu" class="button">Email Cameron</a>
         </p>
       </div>
     </section>
@@ -366,26 +367,30 @@
           </div>
         </div>
 
-        <div class="row alumni-block" data-equalizer>
-          <div class="columns medium-6 medium-push-6" data-equalizer-watch>
-            <div class="personPicture">
-              <img src="../img/alumni/sydney-holmes.jpg" alt="Sara Krueger" title="Sara Krueger" />
-            </div>
-            <div class="personName">
-              Sydney Holmes
-            </div>
-            <div class="personSubtitle">
-              Corporate &amp; Agent PR Lead
-            </div>
-            <div class="personDegree">
-              Compass
-            </div>
-          </div>
-          <div class="columns medium-6 medium-pull-6" data-equalizer-watch>
-            <div class="quote">
-              <p>
-                I recommend that students become friends with their professors. I feel like I have people invested in my career and future since getting to know some of my former professors.
-              </p>
+        <div class="row alumni-block">
+          <div class="small-12 columns">
+            <div class="row" data-equalizer>
+              <div class="columns medium-6 medium-push-6" data-equalizer-watch>
+                <div class="personPicture">
+                  <img src="../img/alumni/sydney-holmes.jpg" alt="Sara Krueger" title="Sara Krueger" />
+                </div>
+                <div class="personName">
+                  Sydney Holmes
+                </div>
+                <div class="personSubtitle">
+                  Corporate &amp; Agent PR Lead
+                </div>
+                <div class="personDegree">
+                  Compass
+                </div>
+              </div>
+              <div class="columns medium-6 medium-pull-6" data-equalizer-watch>
+                <div class="quote">
+                  <p>
+                    I recommend that students become friends with their professors. I feel like I have people invested in my career and future since getting to know some of my former professors.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

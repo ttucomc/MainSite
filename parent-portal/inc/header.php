@@ -21,7 +21,6 @@
 
 
 
-  <!-- Metadata we'll update later -->
   <meta itemprop="name" content="<?php echo $pageTitle; ?>">
   <meta itemprop="description" content="<?php echo $pageDescription; ?>">
   <meta itemprop="image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg">
@@ -41,6 +40,31 @@
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="<?php echo $pageTitle; ?>"/>
   <meta property="og:image" content="http://www.depts.ttu.edu/comc/images/home/og-image.jpg"/>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   var track = function(refurl,type,url) {
+      ga('ttuTracker.send', 'event', type, 'click', refurl, {'hitCallback':
+     function () { document.location = url; }
+      });
+   }
+   function buildLink(path,name) {
+     var page = location.href.replace("http://","#").replace("https://","#");
+     return "/"+path+"/"+name+"/"+page;
+   }
+  </script>
+  <script type='text/javascript'>
+    ga('create','UA-6015770-1' , 'ttu.edu',{'name': 'ttuTracker'});
+    ga('ttuTracker.send', 'pageview');
+  </script>
+  <script type='text/javascript'>
+    ga('create','UA-6015770-9' , 'ttu.edu',{'name': 'secondaryTracker'});
+    ga('secondaryTracker.send', 'pageview');
+  </script>
 
 </head>
 <body>

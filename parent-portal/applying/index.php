@@ -116,7 +116,7 @@
           Or send us an email: <a href="mailto:admissions@ttu.edu">admissions@ttu.edu</a>
           <br />
           <br />
-          <a href='http://www.depts.ttu.edu/officialpublications/catalog/_admit_requirements.php' rel='nowfollow' class="button">More detailed information may be found here</a>
+          <a href='http://catalog.ttu.edu/content.php?catoid=2&navoid=156' target='_blank' class="button">More detailed information may be found here</a>
         </div>
       </div>
     </section>

@@ -53,13 +53,16 @@
   background: url("../img/parents-with-son.jpg") center center no-repeat;
   background-size: cover;
   height: 640px;
+  @media screen and (min-width: $screen-lg) {
+    height: 800px;
+  }
   &:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     background: black;
-    opacity: 0.6;
+    opacity: 0.3;
     height: 100%;
     width: 100%;
   }
@@ -218,11 +221,12 @@
     select {
       position: relative;
       background-color: transparent;
+      color: $dark-grey;
       font-style: italic;
       text-align-last: center;
       outline: none;
       border: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid $dark-grey;
       border-radius: 0;
       appearance: none;
       &:focus,
