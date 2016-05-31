@@ -1,0 +1,287 @@
+/****************************
+        CAREERS PAGE
+****************************/
+
+#careers {
+  .top,
+  .button {
+    background-color: $blue;
+  }
+
+
+  #overview {
+    padding: 5em 0.5em 3em;
+  }
+
+  h2 {
+    font-size: 4em;
+    margin: 0 0 .5em;
+    @media screen and (min-width: $screen-med) {
+      font-size: 5em;
+    }
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+    @include transition(.3s);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  section {
+    padding-right: .25em;
+    padding-left: .25em;
+  }
+
+  .button {
+    color: #FFF;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  #lists {
+    padding: 0 0 5em;
+    h2 {
+      color: $blue;
+      font-size: 4em;
+      margin: .5em 0;
+      @media screen and (min-width: $screen-med) {
+        font-size: 5em;
+        margin: .25em 0;
+      }
+    }
+    .row {
+      & > div {
+        padding-bottom: 2em;
+        vertical-align: top;
+        @media screen and (min-width: $screen-med) {
+          display: inline-block;
+          width: 49%;
+        }
+      }
+    }
+    ul {
+      font-size: 1.25em;
+      font-weight: bold;
+      list-style: none;
+      padding: 0;
+      @media screen and (min-width: $screen-lg) {
+        font-size: 1.5em;
+      }
+      li {
+        padding-bottom: .5em;
+      }
+    }
+    a {
+      @media screen and (min-width: $screen-med) {
+        font-size: 1.25em;
+      }
+      @media screen and (min-width: $screen-xl) {
+        font-size: 1.75em;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  #rankings {
+    background-color: $blue;
+    color: $dark-grey;
+    padding: 5em .25em;
+    h3 {
+      color: $light-grey;
+      font-size: 3em;
+      margin: .5em 0;
+    }
+    .row {
+      max-width: 100%;
+      & > div {
+        padding-top: 1em;
+        @media screen and (min-width: $screen-med) {
+          padding-top: 0;
+        }
+      }
+    }
+    div {
+      padding-bottom: 1.5em;
+      @media screen and (min-width: $screen-med) {
+        padding-bottom: 0;
+      }
+    }
+    i {
+      color: $dark-grey;
+    }
+    p {
+      @media screen and (min-width: $screen-lg) {
+        padding: 0 2em;
+      }
+    }
+    a {
+      position: relative;
+      color: $light-grey;
+      font-style: italic;
+      text-decoration: none;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        @include translateX(-50%);
+        background-color: #FFF;
+        height: 1px;
+        width: 0;
+        @include transition(.3s);
+      }
+      &:hover {
+        &:after {
+          content: '';
+          width: 100%;
+          @include transition(.3s);
+        }
+      }
+    }
+    .cite {
+      font-size: 1.75em;
+    }
+  }
+
+  /****************************
+          INTERNSHIPS
+  ****************************/
+  #internships {
+    position: relative;
+    background-color: $dark-grey;
+    color: $light-grey;
+    padding: 5em .25em;
+    z-index: 1;
+    overflow: hidden;
+    &:before {
+      content: '\f0f7';
+      position: absolute;
+      bottom: -5%;
+      left: -20%;
+      color: $blue;
+      font-family: FontAwesome;
+      font-size: 15em;
+      // @include rotate(37deg);
+      z-index: -1;
+      @media screen and (min-width: $screen-med) {
+        content: '\f0f7';
+        left: -15%;
+        font-size: 20em;
+      }
+      @media screen and (min-width: $screen-lg) {
+        content: '\f0f7';
+        bottom: -10%;
+        left: -12%;
+      }
+      @media screen and (min-width: $screen-xl) {
+        content: '\f0f7';
+        left: 2%;
+      }
+    }
+    @media screen and (min-width: $screen-med) {
+      padding: 5em .25em;
+    }
+    p {
+      margin: 0 auto;
+      max-width: 770px;
+      @media screen and (min-width: $screen-xxl) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+
+/****************************
+        ALUMNI Section
+****************************/
+#alumni {
+  padding-top: 5em;
+}
+
+.personContainer
+{
+
+  .alumni-block {
+    padding: 2em 1.5em;
+    &:nth-child(even) {
+      background-color: $light-grey;
+      max-width: 100%;
+      .row {
+        margin: 0 auto;
+      }
+    }
+    & > div {
+      position: relative;
+    }
+  }
+
+  .personPicture {
+    width: 45%;
+    margin: 2em auto 1em;
+
+    img {
+      border-radius: 50%;
+      width: 95%;
+    }
+  }
+  .personName {
+    font-size: 2.5em;
+    font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  }
+  .personSubtitle {
+    color: $blue;
+    font-size: 1.5em;
+  }
+  .personDegree {
+    font-size: 1.4em;
+  }
+  .quote {
+    position: relative;
+    top: 50%;
+    left: 0;
+    @include translateY(-70%);
+    margin: 2em 0;
+    font-size: 1em;
+    z-index: 2;
+    @media screen and (min-width: $screen-lg) {
+      font-size: 1.25em;
+    }
+    p {
+      padding: 0 1em;
+      &:before {
+        content: '\201C';
+        display: inline-block;
+        position: absolute;
+        top: -.375em;
+        left: -.25em;
+        color: $blue;
+        font-size: 7em;
+        opacity: .7;
+        z-index: -1;
+      }
+
+      &:after {
+        content: '\201D';
+        display: inline-block;
+        position: absolute;
+        bottom: -.75em;
+        right: -.125em;
+        color: $blue;
+        font-size: 7em;
+        opacity: .7;
+        z-index: -1;
+      }
+    }
+  }
+}
+/****************************
+    END ALUMNI Section
+****************************/

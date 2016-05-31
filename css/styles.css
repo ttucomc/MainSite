@@ -1,0 +1,197 @@
+/*
+This is the global styles.css in /comc/includes/ that we have control of.
+
+
+
+/********** BODY **********/
+
+p,
+.default-list li {
+	max-width: none;
+}
+
+main figure {
+
+   -webkit-box-shadow: none;
+
+   box-shadow: none;
+
+   border: none;
+   width: 33%;
+
+}
+
+
+
+
+/********** NAVIGATION **********/
+@media only screen and (min-width: 1240px) {
+	.cd-primary-nav .cd-secondary-nav>li>a:hover {
+		text-decoration: underline;
+	}
+	.hide-with-menu {
+		display: none;
+	}
+}
+
+
+
+
+
+/* Forms */
+
+form.ldpforms legend {
+
+	font-size: 1.5em;
+
+}
+
+
+
+form.ldpforms input#submit,
+
+form.ldpforms input.submit,
+
+form.ldpforms input#clear {
+
+    border: 1px solid #CC0000;
+
+    background-color: #FFF;
+
+    padding: .75em 1em;
+
+    color: #CC0000;
+
+    font-size: 1.125em;
+
+    margin-right: 1em;
+
+}
+
+form.ldpforms input#submit:hover,
+
+form.ldpforms input.submit:hover,
+
+form.ldpforms input#clear:hover {
+
+    box-shadow: 0 3px 5px #CCC;
+
+}
+
+form.ldpforms input#submit:active,
+
+form.ldpforms input.submit:active,
+
+form.ldpforms input#clear:active {
+
+	color: #000;
+
+	border: 1px solid #000;
+
+}
+
+
+
+form.ldpforms fieldset {
+
+    margin-bottom: 2em !important;
+
+}
+
+.form-loader {
+
+	display: inline-block;
+
+    position: relative;
+
+    clear: both;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    margin: 20px auto 0;
+
+    width: 22px;
+
+    height: 22px;
+
+}
+
+.form-loader:before, .form-loader:after  {
+
+	content:'';
+
+	border: 1px #CC0000 solid;
+
+	border-radius: 50%;
+
+	width: 100%;
+
+	height: 100%;
+
+	position: absolute;
+
+	left:0px;
+
+}
+
+.form-loader:before {
+
+    -webkit-transform: scale(1,1);
+
+	transform: scale(1,1);
+
+	opacity: 1;
+
+	-webkit-animation: loaderWaveBe 0.6s infinite linear;
+
+	animation: loaderWaveBe 0.6s infinite linear;
+
+}
+
+.form-loader:after {
+
+    -webkit-transform: scale(0,0);
+
+	transform: scale(0,0);
+
+	opacity: 0;
+
+	-webkit-animation: loaderWaveAf 0.6s infinite linear;
+
+	animation: loaderWaveAf 0.6s infinite linear;
+
+}
+
+@-webkit-keyframes loaderWaveAf {
+
+	from { -webkit-transform: scale(0.5,0.5); opacity: 0; }
+
+	to { -webkit-transform: scale(1,1); opacity: 1; }
+
+}
+
+@keyframes loaderWaveAf {
+
+	from { transform: scale(0.5,0.5); opacity: 0; }
+
+	to { transform: scale(1,1); opacity: 1; }
+
+}
+
+@-webkit-keyframes loaderWaveBe {
+
+	from { -webkit-transform: scale(1,1); opacity: 1; }
+
+	to { -webkit-transform: scale(1.5,1.5); opacity: 0; }
+
+}
+
+@keyframes loaderWaveBe {
+
+	from { -webkit-transform: scale(1,1); opacity: 1; }
+
+	to { -webkit-transform: scale(1.5,1.5); opacity: 0; }
+
+}

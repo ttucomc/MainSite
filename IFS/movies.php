@@ -22,6 +22,9 @@
                     Time and Location: <?php if(!is_null($movie['show_time'])) { echo $show_time; } else { echo 'TBD'; } ?> - <?php if(!is_null($movie['show_location'])) { echo $movie['show_location']; } else { echo 'TBD'; } ?> (<a href="<?php echo $movie['show_directions']; ?>" target="_blank">directions</a>)<br>
                     More info: <a href="<?php echo $movie['info']; ?>" class="external"><?php echo $movie['info']; ?></a><br>
                     <a href="<?php echo $movie['trailer']; ?>" class="button" target="_blank">View Trailer</a>
+                    <?php if (!is_null($movie['tickets'])) { ?>
+                        <a href="<?php echo $movie['tickets']; ?>" class="button" target="_blank">Get Tickets Here</a>
+                    <?php } ?>
                 </p>
             </div>
         </div>

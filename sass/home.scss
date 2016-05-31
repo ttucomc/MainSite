@@ -5,204 +5,58 @@
 @import "compass/css3";
 @import 'variables';
 
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+/***** TEMPLATE EDITS FOR PAGE *****/
+.l-main-pagecontent {
+  // Remove all padding
+  padding: 0;
+  & > .row {
+    // Make content area full width
+    max-width: none;
+    .row {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1170px;
+    }
+  }
+  h1 {
+    text-align: center;
+  }
+}
+h1 {
+  font-size: 2.85em;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 72px;
+  }
 }
 
-/***** VIDEO HEADER *****/
-#videoHeader {
-	position: relative;
-	height: 600px;
-	width: 100%;
-	overflow: hidden;
-	video,
-	.video-js {
-		position: relative;
-		left: 50%;
-		@include translateX(-50%);
-		background-color: transparent;
-		width: auto !important;
-		height: 100% !important;
-		min-height: 600px;
-	}
-	.video-js {
-		background: transparent image-url('comc-building.jpg') center center no-repeat;
-		background-size: cover;
-	}
-	.vjs-poster {
-		background-size: cover;
-	}
-	img {
-		position:relative;
-		width: 100%;
-		height: auto;
-	}
-	#videoHeaderButtons {
-		position: absolute;
-		top: 0;
-		right: 10%;
-		padding-top: .75em;
-		z-index: 1;
-		a {
-			position: relative;
-			background-color: $white;
-			font-size: 1.25em;
-			border: 1px solid $red;
-			border-bottom-right-radius: 5px;
-			border-bottom-left-radius: 5px;
-			padding: .75em 1.5em;
-			margin-right: 1em;
-			@include transition(.3s);
-			overflow: hidden;
-			&:before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				background-color: $red;
-				height: 0px;
-				width: 100%;
-				@include transition(.3s);
-				z-index: -1;
-			}
-			&:hover {
-				color: $white;
-				background-color: transparent;
-				text-decoration: none;
-				&:before {
-					height: 100%;
-				}
-			}
-		}
-	}
-	#videoMute {
-		display: inline-block;
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		background: rgba(0,0,0,0.5);
-		z-index: 1;
-		@include translateX(-50%);
-		padding: .5em;
-		margin-bottom: .5em;
-		p {
-			color: white;
-			font-size: .75em;
-			margin: 0;
-		}
-	}
-	#videoDescription {
-		position: relative;
-		top: 50%;
-		@include translateY(-50%);
-		background-color: rgba($cream, 0.9);
-		color: $darkGray;
-		width: 20em;
-		z-index: 1;
-		p {
-			font-size: 1em;
-			text-align: center;
-			padding: 2em .5em;
-		}
-	}
-}
-
-/***** MOBILE HEADER *****/
-#mobileHeader {
-	position: relative;
-	background: #e5e5e5; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover, #e5e5e5 0%, #e8e4da 38%, #eae0c6 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#e5e5e5), color-stop(38%,#e8e4da), color-stop(100%,#eae0c6)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center, #e5e5e5 0%,#e8e4da 38%,#eae0c6 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#eae0c6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	height: 400px;
-	overflow: hidden;
-	border-bottom: 1px solid $darkGray;
-	#videoHeaderButtons {
-		position: absolute;
-		top: 0;
-		right: 10%;
-		padding-top: .75em;
-		z-index: 1;
-		a {
-			position: relative;
-			background-color: $white;
-			border: 1px solid $red;
-			border-bottom-right-radius: 5px;
-			border-bottom-left-radius: 5px;
-			padding: 1em 1.5em;
-			margin-right: 1em;
-			@include transition(.3s);
-			overflow: hidden;
-			&:before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				background-color: $red;
-				height: 0px;
-				width: 100%;
-				@include transition(.3s);
-				z-index: -1;
-			}
-			&:hover {
-				color: $white;
-				background-color: transparent;
-				text-decoration: none;
-				&:before {
-					height: 100%;
-				}
-			}
-		}
-	}
-	#mobileGreeting {
-		width: 60%;
-		margin: 3em 0 0 3em;
-		@media screen and (max-width: 550px) {
-			width: 80%;
-			margin: 3em 0 0 2em;
-		}
-		p {
-			font-size: 2em;
-			line-height: 1;
-			color: $lightBlack;
-			margin: 0;
-		}
-	}
-	#mobileHeaderImage {
-		position: absolute;
-		bottom: -10px;
-		right: -50px;
-		text-align: right;
-		img {
-			width: 80%;
-			@media screen and (max-width: 480px) {
-				width: 100%;
-			}
-		}
-	}
-}
 
 
 /***** INTRO SECTION *****/
 #intro-section {
 	text-align: center;
-	padding: 5em 0;
+	padding: 0 0 10em;
 	z-index: 1;
+  @media screen and (max-width: 768px) {
+    padding: 0 .25em 10em;
+  }
 	h2 {
 		font-size: 3em;
 		margin: 1em 0 .2em;
+    &+p {
+      margin-top: 0;
+    }
 		@media screen and (max-width: 768px) {
 			font-size: 2.75em;
 		}
 	}
   h3 {
     font-size: 1.75em;
+    &+p {
+      margin-top: .5em;
+    }
   }
 	p {
 		font-size: 1.5em;
@@ -222,15 +76,26 @@
         }
     }
     .button {
-      width: 100%;
+      width: 80%;
       margin: 10px 0 .125em;
       word-wrap: normal;
       @media screen and (min-width: 768px) {
         display: inline-block;
         width: 48%;
+        padding: .5em 0;
       }
     }
 }
+
+
+/***** BANNER BEARER *****/
+#banner-bearer {
+  padding: 0 0 5em;
+  h3+h4 {
+    margin-top: 0.5em;
+  }
+}
+
 
 /***** STUDENTS SECTION *****/
 #home-students {
@@ -238,14 +103,21 @@
 	text-align: center;
 	overflow: hidden;
 	z-index: 1;
-	.intro-photo-half {
+  .row {
+    max-width: 100%;
+  }
+	.intro-photo {
 		display: inline-block;
-		margin-right: -4px;
 		padding: 0;
 		position: relative;
 		vertical-align: top;
-		height: 50vh;
-		width: 50%;
+		height: 30vh;
+    @media screen and (min-width: 768px) {
+      height: 40vh;
+    }
+    @media screen and (min-width: 1024px) {
+      height: 50vh;
+    }
 		a {
 			position: relative;
 			display: inline-block;
@@ -277,20 +149,25 @@
 			}
 		}
 	}
-	#intro-current {
+	#intro-current,
+  #intro-prospective,
+  #intro-parents {
 		position: relative;
-		background: image-url('current-students.jpg') center center no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
 		background-size: cover;
 		height: 100%;
 		width: 100%;
 	}
+  #intro-current {
+    background-image: image-url('current-students.jpg');
+  }
 	#intro-prospective {
-		position: relative;
-		background: image-url('prospective-students.jpg') center center no-repeat;
-		background-size: cover;
-		height: 100%;
-		width: 100%;
+		background-image: image-url('prospective-students.jpg');
 	}
+  #intro-parents {
+    background-image: image-url('parents-and-dean.jpg');
+  }
 	.home-students-text {
 		position: absolute;
 		opacity: 0;
@@ -319,6 +196,7 @@
 
 #home-advising {
 	position: relative;
+  font-size: .75em;
 	#home-advising-badge {
 		position: absolute;
 		top: 0;
@@ -333,9 +211,6 @@
 	    &:hover,
 	    &:active {
     	    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-    	    h2 {
-    	    	font-size: 2.01em;
-    	    }
 	    }
 	    @media screen and (max-width: 1099px) {
 	    	@include translate(-50%, -80%);
@@ -385,6 +260,14 @@
 			background-color: $white;
 			border-right: 1px solid $white;
 			overflow: hidden;
+      padding: 0;
+      margin: 0;
+      text-indent: 0;
+      &:before {
+        content: '';
+        position: inherit;
+        margin: 0;
+      }
 			&:last-child {
 				border: none;
 			}
@@ -464,10 +347,12 @@
 				text-align: center;
 				padding: 2em 0 0;
 				hr {
+          position: initial;
 					width: 66%;
 					border: 1px solid $red;
 				}
 				h3 {
+          font-size: 1.5em;
 					a {
 						color: $black;
 						@include transition(.3s);
@@ -483,10 +368,11 @@
 			}
 			.home-adv-contact {
 				text-align: center;
-				@include translateY(65%);
+				@include translateY(70%);
 				@include transition(.5s all ease-in-out);
 				img {
 					width: 75%;
+          max-width: 200px;
 					@include translateX(20%);
 				}
 				@media screen and (max-width: 768px) {
@@ -662,8 +548,11 @@
 /***** HOME SOCIAL SECTION *****/
 
 #home-social {
-	padding: 6em 0;
+	padding: 6em 0 3em;
 	text-align: center;
+  @media screen and (min-width: 768px) {
+    padding: 6em 0 0;
+  }
 	h3 {
 		color: $darkGray;
 		font-size: 2em;
@@ -689,6 +578,91 @@
 }
 
 
+/***** TESTIMONIALS SECTION *****/
+#testimonials {
+  #photo {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @media screen and (min-width: 642px) {
+      height: 400px;
+    }
+    @media screen and (min-width: 1024px) {
+      height: 600px;
+    }
+    img {
+      // animation: 1.5s ease forwards zoom-out;
+      width: 90%;
+      @media screen and (min-width: 642px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  #quote {
+    text-align: center;
+    padding: 1em;
+    z-index: 1;
+    transform: scale(1);
+    // animation: 1.5s ease forwards scale-in;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      padding: 1em 1em 0 2em;
+    }
+    @media screen and (min-width: 1024px) {
+      padding: 9em 1em 0 2em;
+      blockquote {
+        font-size: 1.25em;
+      }
+    }
+    blockquote{
+      position: relative;
+      min-height: 90px;
+      &:before {
+        content: '\201C';
+        position: absolute;
+        top: -90%;
+        left: -10%;
+        color: $lightGray;
+        font-size: 10em;
+        z-index: -1;
+        @media screen and (min-width: 1440px) {
+          content: '\201C';
+          top: -108%;
+          left: -13%;
+        }
+      }
+      &:after {
+        content: '\201D';
+        position: absolute;
+        bottom: -130%;
+        right: -10%;
+        color: $lightGray;
+        font-size: 10em;
+        line-height: 1;
+        z-index: -1;
+        @media screen and (min-width: 768px) {
+          content: '\201D';
+          bottom: -105%;
+        }
+        @media screen and (min-width: 1024px) {
+          content: '\201D';
+          bottom: -130%;
+        }
+      }
+    }
+    img {
+      max-width: 200px;
+    }
+    cite {
+      display: block;
+      font-size: .95em;
+    }
+  }
+}
+
+
 /***** BODY *****/
 .wrapper {
 	max-width: 80em;
@@ -702,4 +676,121 @@
 /***** FOOTER *****/
 .wrapper-wide-red {
 	margin-top: 0;
+}
+
+
+/***** It's a party Debra *****/
+#disco {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include translateX(-50%);
+    height: 54px;
+    width: 10px;
+    background-color: #333;
+    opacity: 0.7;
+  }
+}
+
+@-webkit-keyframes rotateDiscoBall {
+    0% {-webkit-transform: rotateX(90deg) rotateZ(0deg) rotate(0deg); }
+    100% {-webkit-transform: rotateX(90deg) rotateZ(360deg) rotate(0deg); }
+}
+
+@keyframes rotateDiscoBall {
+    0% {transform: rotateX(90deg) rotateZ(0deg) rotate(0deg); }
+    100% {transform: rotateX(90deg) rotateZ(360deg) rotate(0deg); }
+}
+
+@-webkit-keyframes rotateDiscoBallMiddle {
+    0% {-webkit-transform: rotateX(90deg) rotateY(0deg) rotate(0deg); }
+    100% {-webkit-transform: rotateX(90deg) rotateY(-360deg) rotate(0deg); }
+}
+
+@keyframes rotateDiscoBallMiddle {
+    0% {transform: rotateX(90deg) rotateY(0deg) rotate(0deg); }
+    100% {transform: rotateX(90deg) rotateY(-360deg) rotate(0deg); }
+}
+
+@-webkit-keyframes reflect {
+    0% {-webkit-filter: brightness(60%);}
+    50% {-webkit-filter: brightness(120%);}
+    100% {-webkit-filter: brightness(90%);}
+}
+
+@keyframes reflect {
+    0% {opacity: 1;}
+    50% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#discoBall {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 250px;
+  left: 50%;
+  margin-left: -50px;
+  -webkit-animation: rotateDiscoBall 18s linear infinite;
+  animation: rotateDiscoBall 18s linear infinite;
+  z-index: 2;
+}
+
+#discoBallLight {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: purple;
+  opacity: 0.8;
+  -webkit-filter: blur(20px);
+}
+
+.square {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transform: rotateX(90deg) rotateY(0deg) translateZ(0px);
+}
+
+#discoBallMiddle {
+  height: 100%;
+  border-radius: 100%;
+  background-color: #111;
+  position: absolute;
+  background: -webkit-linear-gradient(top, #111, #333);
+  background: -moz-linear-gradient(top, #111, #333);
+  background: linear-gradient(top, #111, #333);
+  -webkit-animation: rotateDiscoBallMiddle 18s linear infinite;
+  animation: rotateDiscoBallMiddle 18s linear infinite;
+}
+
+
+
+/***** ANIMATIONS *****/
+@keyframes zoom-out {
+  from { width: 100%; }
+  to { width: 98%; }
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
 }

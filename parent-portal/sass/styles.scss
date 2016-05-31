@@ -1,0 +1,348 @@
+/****************************
+          IMPORTS
+****************************/
+
+@import "compass/css3";
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "animations";
+
+
+
+
+/****************************
+        MAIN STYLES
+****************************/
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+body {
+  color: $dark-grey;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+html,body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 2.25em;
+  padding-bottom: .33em;
+  @media screen and (min-width: 768px) {
+    font-size: 2.75em;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 3.25em;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include translateX(-50%);
+    background-color: $dark-grey;
+    height: 1px;
+    width: 85%;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include translate(-50%, 50%);
+    display: inline-block;
+    background-color: $dark-grey;
+    outline: 5px solid white;
+    height: 14px;
+    width: 14px;
+    z-index: 1;
+  }
+}
+h2 {
+  font-size: 4em;
+  margin: .5em 0;
+  @media screen and (min-width: $screen-med) {
+    font-size: 5em;
+    margin: .25em 0 .5em;
+  }
+}
+
+p {
+  font-size: 1.33em;
+}
+
+a {
+  position: relative;
+  color: $slate;
+  text-decoration: none;
+  @include transition(.3s);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border: 0;
+  background-color: $dark-grey;
+  text-align: center;
+  height: 1px;
+  width: 75%;
+  margin: 0.6em auto;
+  &:after {
+    content: '';
+    display: inline-block;
+    background-color: $dark-grey;
+    outline: 8px solid white;
+    height: 18px;
+    width: 18px;
+    @include translateY(-50%);
+  }
+}
+
+// Dark Grey background scheme
+.dark-grey {
+  background-color: $dark-grey;
+  color: white;
+  h1 {
+    &:before,
+    &:after {
+      background-color: white;
+    }
+    &:after {
+      outline-color: $dark-grey;
+    }
+  }
+}
+
+// Red background scheme
+.red {
+  background-color: $red;
+  color: white;
+  h1 {
+    &:before,
+    &:after {
+      background-color: white;
+    }
+    &:after {
+      outline-color: $red;
+    }
+  }
+}
+
+// Scroll arrow
+.scrollDown {
+  position: absolute;
+  color: #FFF;
+  bottom: 0;
+  left: 50%;
+  @include translateX(-50%);
+  margin-bottom: 1em;
+  p {
+    font-size: 1.25em;
+    margin-bottom: .25em;
+  }
+  img {
+    @include animation(scroll-bounce 15s ease-in-out 5s infinite);
+    max-width: 105px;
+    width: 75%;
+  }
+}
+
+#home-button {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+  margin-left: 1em;
+  vertical-align: bottom;
+}
+
+// Button styles
+.button {
+  position: relative;
+  display: block;
+  background-color: $slate;
+  color: #FFF;
+  font-family: 'bebas_neue', Impact, Helvetica, sans-serif;
+  font-size: 1.25em;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  padding: .5em 1em;
+  margin: .5em auto;
+  width: 50%;
+  @media screen and (min-width: 768px) {
+    font-size: 1.5em;
+    width: 33%;
+  }
+  &:after {
+    background: #FFF;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: 1;
+  }
+  &:hover {
+    text-decoration: none;
+    box-shadow: $card-shadow;
+    &:after {
+      content: '';
+      left: 120%;
+      -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+  span {
+    z-index: 3;
+  }
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  // z-index: -1;
+  #output {
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+  }
+}
+
+
+/****************************
+           FOOTER
+****************************/
+
+footer {
+  background-color: $dark-grey;
+  color: #FFF;
+  padding: 2em 0;
+  a {
+    color: $light-grey;
+  }
+
+  #resources-btn {
+    padding: .5em 0;
+    a {
+      position: relative;
+      font-size: 1.25em;
+      cursor: pointer;
+      @media screen and (min-width: $screen-lg) {
+        font-size: 1.5em;
+      }
+      &:after {
+        content: '\f078';
+        position: absolute;
+        top: 50%;
+        right: -20%;
+        @include translateY(-50%);
+        font-family: FontAwesome;
+        color: inherit;
+        @include transition(all .3s ease);
+      }
+      &.show {
+        &:after {
+          content: '\f078';
+          transform: translateY(-50%) rotate(180deg);
+          @include transition(all .3s ease);
+        }
+      }
+    }
+  }
+
+  #resources {
+    display: none;
+    ul {
+      font-size: 1.33em;
+      list-style: none;
+      text-align: left;
+    }
+  }
+}
+
+
+/****************************
+        SUB PAGES
+****************************/
+
+.top {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  #title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    width: 100%;
+    padding: 0 .5em;
+    h1 {
+      color: #FFF;
+      font-size: 5em;
+      padding: 0;
+      margin: .125em 0;
+      @media screen and (min-width: $screen-sm) {
+        font-size: 7em;
+      }
+      @media screen and (min-width: $screen-med) {
+        font-size: 10em;
+      }
+      @media screen and (min-width: $screen-xl) {
+        font-size: 12em;
+      }
+      &:before,
+      &:after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+}
+
+
+@import "menu";
+@import "landing";
+@import "careers";
+@import "whycomc";
+@import "cost";
+@import "applying";

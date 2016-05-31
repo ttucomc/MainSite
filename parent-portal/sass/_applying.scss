@@ -1,0 +1,183 @@
+/****************************
+        COST PAGE
+****************************/
+
+#applying {
+  .top,
+  .button {
+    background-color: $pink;
+  }
+
+  a {
+    color: $pink;
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    &:hover {
+      color: lighten($pink, 20);
+      cursor: pointer;
+    }
+  }
+
+  .button {
+    color: #FFF;
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  h2 {
+    margin: 1em 0;
+  }
+
+  #howToApply {
+
+    max-width: 100%;
+
+    .grey-background {
+      background-color: $light-grey;
+    }
+
+    .applyBanner {
+        background-image: url("../img/60-lines.png");
+        background-color: $pink;
+    }
+
+    .freshman, .transfer {
+      font-size: 3.5em;
+      color: white;
+      padding: 0.75em;
+      /*
+      font-size: 3em;
+      color: white;
+      padding: 0.2em;
+      */
+    }
+
+    .freshmanContainer, .transferContainer {
+        margin: 0 2em;
+
+        ol {
+          text-align: left;
+
+          li {
+            font-size: 1.4em;
+            padding: 1em 0;
+
+            &:first-child {
+              padding-top: 0;
+              margin-top: 1.6em;
+            }
+          }
+        }
+    }
+
+    .transferInfo {
+      margin-top: 1.6em;
+      font-size: 1.6em;
+    }
+
+
+    @media(min-width: $screen-med) {
+
+      .applyBanner {
+        border-right: 2px solid white;
+      }
+
+      .freshman, .transfer {
+        font-size: 3.5em;
+        color: white;
+        padding: 0.75em;
+      }
+
+      .freshmanContainer, .transferContainer {
+        padding: 1px 4em;
+        margin: 0 auto;
+
+        ol {
+          text-align: left;
+
+          li {
+            font-size: 1.6em;
+            padding: 20px 0;
+          }
+        }
+      }
+
+      .transferContainer {
+        height: 100%;
+      }
+    }
+
+    @media(min-width: $screen-xxl) {
+      .freshmanContainer, .transferContainer {
+        padding: 1px 8em;
+      }
+    }
+
+  } //End #howToApply
+
+  #contact-container {
+    position: relative;
+    background: url('../img/faculty1.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 5em 0;
+    max-width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $dark-grey;
+      height: 100%;
+      width: 100%;
+      opacity: 0.6;
+      z-index: -1;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  #contactUs {
+    background-color: $light-grey;
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.6em;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+} //End #apply
+
+.scrollDown {
+  li {
+    list-style-type: none;
+  }
+}
+
+// I needed this outside the ID in order for it to actually change the original ::after,
+// not create a new overwriting style.
+.button {
+  &::after {
+    left: -100px;
+    height: 400px;
+    top: -150px;
+  }
+}
+
+@media(min-width: $screen-med) {
+
+    // I needed this outside the ID in order for it to actually change the original ::after,
+    // not create a new overwriting style.
+    .button {
+      &::after {
+        left: -100px;
+        height: 400px;
+        top: -150px;
+      }
+    }
+}

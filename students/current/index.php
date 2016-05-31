@@ -16,7 +16,7 @@
 
   <section id="home-advising">
     <div id="home-advising-badge">
-      <h2><a href="{{d:1203806}}">Advising</a></h2>
+      <h2><a href="/comc/advising/">Advising</a></h2>
     </div>
     <ul>
       <li>
@@ -24,73 +24,97 @@
           <div><span>ADV</span></div>
         </div>
         <div class="home-adv-card-bottom">
-          <h3><a href="{{d:1474367}}">Advertising</a></h3>
+          <h3><a href="/comc/advising/advertising/">Advertising</a></h3>
           <hr />
           <p>Debra Sanderson</p>
         </div>
-        <div class="home-adv-contact"><a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H <a href="{{d:1474367}}"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a></div>
+        <div class="home-adv-contact">
+          <p>
+            <a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a>
+          </p>
+        </div>
       </li>
       <li>
         <div class="home-adv-card-top">
           <div><span>COMS</span></div>
         </div>
         <div class="home-adv-card-bottom">
-          <h3><a href="{{d:1474418}}">Communication Studies</a></h3>
+          <h3><a href="/comc/advising/commstudies/">Communication Studies</a></h3>
           <hr />
           <p>Judy Poffenbarger</p>
         </div>
-        <div class="home-adv-contact"><a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J <a href="{{d:1474418}}"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a></div>
+        <div class="home-adv-contact">
+          <p>
+            <a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J<br /><a href="/comc/advising/commstudies/"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a>
+          </p>
+        </div>
       </li>
       <li>
         <div class="home-adv-card-top">
           <div><span>EMC</span></div>
         </div>
         <div class="home-adv-card-bottom">
-          <h3><a href="{{d:1474419}}">Electronic Media</a></h3>
+          <h3><a href="/comc/advising/electronicmedia/">Electronic Media</a></h3>
           <hr />
           <p>Donald Ellis</p>
         </div>
-        <div class="home-adv-contact"><a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E <a href="{{d:1474419}}"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a></div>
+        <div class="home-adv-contact">
+          <p>
+            <a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/electronicmedia/"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a>
+          </p>
+        </div>
       </li>
       <li>
         <div class="home-adv-card-top">
           <div><span>JOUR</span></div>
         </div>
         <div class="home-adv-card-bottom">
-          <h3><a href="{{d:1474424}}">Journalism</a></h3>
+          <h3><a href="/comc/advising/journalism/">Journalism</a></h3>
           <hr />
           <p>Heath Tolleson</p>
         </div>
-        <div class="home-adv-contact"><a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169 <a href="{{d:1474424}}"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a></div>
+        <div class="home-adv-contact">
+          <p>
+            <a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/journalism/"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a>
+          </p>
+        </div>
       </li>
       <li>
         <div class="home-adv-card-top">
           <div><span>MST</span></div>
         </div>
         <div class="home-adv-card-bottom">
-          <h3><a href="{{d:1474425}}">Media Strategies</a></h3>
+          <h3><a href="/comc/advising/mediastrategies/">Media Strategies</a></h3>
           <hr />
           <p>Rose Cruz</p>
         </div>
-        <div class="home-adv-contact"><a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E <a href="{{d:1474425}}"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a></div>
+        <div class="home-adv-contact">
+          <p>
+            <a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/mediastrategies/"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a>
+          </p>
+        </div>
       </li>
       <li>
         <div class="home-adv-card-top">
           <div><span>PR</span></div>
         </div>
         <div class="home-adv-card-bottom">
-          <h3><a href="{{d:1474426}}">Public Relations</a></h3>
+          <h3><a href="/comc/advising/publicrelations/">Public Relations</a></h3>
           <hr />
           <p>Kim Bergan</p>
         </div>
-        <div class="home-adv-contact"><a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169 <a href="{{d:1474426}}"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a></div>
+        <div class="home-adv-contact">
+        <p>
+          <a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/publicrelations/"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a>
+        </p>
+        </div>
       </li>
     </ul>
   </section>
 
 
-  
-    
+
+
   <section id="successRow">
     <div class="row">
       <div class="medium-6 columns">
@@ -126,7 +150,7 @@
       <h3>More Links</h3>
     </div>
   </div>
-    <div class="row"> 
+    <div class="row">
       <div class="medium-4 small-centered medium-uncentered columns">
         <a href="#" class="button">Internships</a>
       </div>
@@ -151,7 +175,7 @@
         if ('backgroundClip' in div.style)
           return true;
 
-        'Webkit Moz O ms Khtml'.replace(/([A-Za-z]*)/g,function(val) { 
+        'Webkit Moz O ms Khtml'.replace(/([A-Za-z]*)/g,function(val) {
           if (val+'BackgroundClip' in div.style) return true;
         });
 
