@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Gets all the events in the db
+ * @return array
+ */
 function get_all_events() {
   try {
 
@@ -17,7 +21,11 @@ function get_all_events() {
   return $events;
 }
 
-
+/**
+ * Gets all the invitee's information for a specific event
+ * @param  int $q event ID
+ * @return array
+ */
 function get_invitees($q) {
 
   require(ROOT_PATH . "inc/db.php");
@@ -40,6 +48,11 @@ function get_invitees($q) {
 
 }
 
+/**
+ * Gets all the guests information for a specific event
+ * @param  int $q event ID
+ * @return array
+ */
 function get_guests($q) {
   require (ROOT_PATH . 'inc/db.php');
 
@@ -63,6 +76,12 @@ function total_rsvps($q) {
   return $totalRSVPs = count($q);
 }
 
+/**
+ * Determines the amount of people attending an event
+ * @param  array $invitees full list of people invited
+ * @param  array $guests   full list of guests
+ * @return int
+ */
 function total_attending($invitees, $guests) {
 
   $totalAttending = 0;
@@ -82,8 +101,8 @@ function total_attending($invitees, $guests) {
 
 /**
  * This function determines if an invitee has guests, then puts them into an array for that invitee.
- * @param array $invitee current invitee
- * @param array $guests  full list of guests
+ * @param  array $invitee current invitee
+ * @param  array $guests  full list of guests
  * @return array
  */
 function invitees_guests($invitee, $guests) {

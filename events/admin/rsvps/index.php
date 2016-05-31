@@ -15,6 +15,8 @@ $events = get_all_events();
   <link rel="stylesheet" href="../../rsvp/css/ttu.css" />
   <link rel="stylesheet" href="../css/screen.css" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
   <style>
     table caption {
       caption-side: bottom;
@@ -41,9 +43,16 @@ $events = get_all_events();
 
   // IF id is set in the url, use it
   if (isset($_GET["id"])) {
-  	$event_id = intval($_GET["id"]);
-    include ('../inc/rsvps.php');
-  } else {
+    include ('../inc/rsvps.php'); ?>
+
+    <script>
+      $(document).ready(function() {
+        sortIt();
+      });
+    </script>
+  <?php
+
+    } else {
 
   ?>
   <div id="rsvps">
@@ -52,7 +61,6 @@ $events = get_all_events();
   <?php } ?>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.core.min.js"></script>
   <script src="../js/filesaver.js"></script>
   <script src="../js/tableexport.js"></script>
