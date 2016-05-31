@@ -37,10 +37,10 @@ h1 {
 /***** INTRO SECTION *****/
 #intro-section {
 	text-align: center;
-	padding: 0 0 2em; // Change back to 0 0 10em when banner bearer story is removed
+	padding: 0 0 10em;
 	z-index: 1;
   @media screen and (max-width: 768px) {
-    padding: 0 .25em 2em; // Change back to 0 .25em 10em when banner bearer story is removed
+    padding: 0 .25em 10em;
   }
 	h2 {
 		font-size: 3em;

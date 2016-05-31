@@ -115,6 +115,9 @@
         <div class="listGroup">
           <div class="listTitle">Only in Lubbock</div>
           <ul>
+            <li>
+              <a href="http://www.visitlubbock.org" target="_blank">Visit Lubbock</a>
+            </li>
             <li><a href="http://ffat.org/" target="_blank" rel="nofollow">First Friday Art Trail</a></li>
             <li><a href="https://www.facebook.com/thechoclatemousse/info/?tab=overview" target="_blank" rel="nofollow">Choc’late Mousse Pie Bar</a></li>
             <li><a href="https://www.mylubbock.us/departmental-websites/departments/parks-recreation/prairie-dog-town" target="_blank" rel="nofollow">Prairie Dog Town</a></li>
