@@ -29,7 +29,7 @@ function get_invitees($q) {
     $results->execute();
 
   } catch (Exception $e) {
-    echo "Data could not be retrieved from the database." . $e->getMessage();
+    echo "Data could not be retrieved from the database.";
     exit;
   }
 
@@ -59,4 +59,41 @@ function get_guests($q) {
   return $guests;
 }
 
-?>
+function total_rsvps($q) {
+  return $totalRSVPs = count($q);
+}
+
+function total_attending($invitees, $guests) {
+
+  $totalAttending = 0;
+
+  foreach ($invitees as $invitee) {
+    if ($invitee[attending] == 1) {
+      $totalAttending += 1;
+    }
+  }
+
+  foreach ($guests as $guest) {
+    $totalAttending += 1;
+  }
+
+  return $totalAttending;
+}
+
+/**
+ * This function determines if an invitee has guests, then puts them into an array for that invitee.
+ * @param array $invitee current invitee
+ * @param array $guests  full list of guests
+ * @return array
+ */
+function invitees_guests($invitee, $guests) {
+  $inviteesGuests = array();
+
+  foreach ($guests as $guest) {
+    if ($guest[host_id] == $invitee[ID]) {
+      $inviteesGuests[] = $guest;
+    }
+  }
+
+  return $inviteesGuests;
+}

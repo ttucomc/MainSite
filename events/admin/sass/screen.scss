@@ -1,3 +1,6 @@
+@import 'compass/css3';
+@import 'mixins';
+
 h2 {
   text-align: center;
 }
@@ -32,6 +35,35 @@ form {
       background-color: #f1f2f2;
       font-size: 1.125em;
       text-align: left;
+      &.header {
+        cursor: pointer;
+      }
+      &.headerSortDown,
+      &.headerSortUp {
+        position: relative;
+        background-color: darken(#f1f2f2, 5%);
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          @include translateY(-50%);
+          margin-right: 10px;
+          @include transition(all .3 ease);
+        }
+      }
+      &.headerSortDown {
+        &:after {
+          content: '';
+          @include triangle(bottom);
+        }
+      }
+      &.headerSortUp {
+        &:after {
+          content: '';
+          @include triangle(top);
+        }
+      }
     }
     td {
 
