@@ -13,8 +13,11 @@ $events = get_all_events();
   <meta name="title" content="RSVPs of All Events Ever" />
 
   <link rel="stylesheet" href="../../rsvp/css/ttu.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.red-indigo.min.css" />
   <link rel="stylesheet" href="../css/screen.css" />
 
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
   <style>

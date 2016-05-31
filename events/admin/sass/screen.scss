@@ -19,16 +19,12 @@ form {
 
 #rsvp-list {
   tr {
-    &:nth-child(even) {
-      // background-color: initial;
-    }
     &:hover {
       td {
-        background-color: #b2b2b2;
+        background-color: darken(#f1f2f2, 5%);
       }
     }
     th, td {
-      // border-bottom: 8px solid #D8D8D8;
       padding: 1.5em .5em;
     }
     th {

@@ -27,7 +27,7 @@ if (empty($invitees)) {
 	Total People Attending (<em>Includes Guests</em>): <?php echo total_attending($invitees, $guests); ?>
 </p>
 
-<table id="rsvp-list" class="tablesorter">
+<table id="rsvp-list" class="tablesorter mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   <thead>
     <tr>
       <th>Date</th>
@@ -55,13 +55,13 @@ if (empty($invitees)) {
 
         // If the invitee is coming and has guests, list the invitee and their guests under their name. Else just list the invitee.
         if ($hasGuests) {
-          echo '<tr><td>' . date('m-d-Y', strtotime($invitee[date])) . '</td><td>Yes</td><td>' . $invitee[first_name] . '</td><td>' . $invitee[last_name] . '</td><td><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td>' . $invitee[info] . '</td></tr>';
+          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">Yes</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td></tr>';
           // List all of this person's guests
           foreach ($inviteesGuests as $guest) {
-            echo '<tr class="guest"><td>' . date('m-d-Y', strtotime($guest[date])) . '</td><td>Guest with ' . $invitee[first_name] . ' ' . $invitee[last_name] . '</td><td>' . $guest[first_name] . '</td><td>' . $guest[last_name] . '</td><td><a href="mailto:' . $guest[email] . '">' . $guest[email] . '</a></td><td>' . $guest[info] . '</td></tr>';
+            echo '<tr class="guest"><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($guest[date])) . '</td><td class="mdl-data-table__cell--non-numeric">Guest with ' . $invitee[first_name] . ' ' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $guest[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $guest[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $guest[email] . '">' . $guest[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $guest[info] . '</td></tr>';
           }
         } else {
-          echo '<tr><td>' . date('m-d-Y', strtotime($invitee[date])) . '</td><td>' . ($invitee[attending] == 1 ? 'Yes' : 'No') . '</td><td>' . $invitee[first_name] . '</td><td>' . $invitee[last_name] . '</td><td><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td>' . $invitee[info] . '</td></tr>';
+          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">' . ($invitee[attending] == 1 ? 'Yes' : 'No') . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td></tr>';
         }
       }
 
