@@ -116,3 +116,46 @@ function invitees_guests($invitee, $guests) {
 
   return $inviteesGuests;
 }
+
+
+
+
+/**
+ * Adds an event into the database.
+ * @param  str $name     Name of the event
+ * @param  str $location Location of the event
+ * @param  str $address  Address of the event
+ * @param  str $date     Date of the event
+ * @param  str $time     Time of the event
+ * @return TODO
+ */
+function add_event($name, $location, $address, $date, $time) {
+  require(ROOT_PATH . "inc/db.php");
+
+  $date = date('Y-m-d', $date);
+  $time = date('H:i:s', $time);
+  $datetime = $date . ' ' . $time;
+  echo $datetime;
+
+  echo "starting try/catch";
+  try {
+
+    echo "starting prepare";
+    $stmt = $db->prepare('INSERT INTO events (`name`, `datetime`, `location`, `address`) VALUES (:name, :datetime, :location, :address)');
+    echo "binding name";
+    $stmt = $db->bindParam(':name', $name, PDO::PARAM_STR);
+    echo "binding datetime";
+    $stmt = $db->bindParam(':datetime', $datetime, PDO::PARAM_STR);
+    echo "binding location";
+    $stmt = $db->bindParam(':location', $location, PDO::PARAM_STR);
+    echo "biding address";
+    $stmt = $db->bindParam(':address', $address, PDO::PARAM_STR);
+    echo "executing";
+    $stmt = $db->execute();
+
+  } catch (Exception $e) {
+    echo "Could not add data to the database.\r\n" . $e->getMessage();
+    exit();
+  }
+
+}

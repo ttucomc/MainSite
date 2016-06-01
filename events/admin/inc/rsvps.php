@@ -69,5 +69,5 @@ if (empty($invitees)) {
   </tbody>
 </table>
 <p class="export-button">
-  <button onclick="doit();">Download Table</button>
+  <button onclick="doit();" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Download Table</button>
 </p>

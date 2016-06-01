@@ -1,16 +1,128 @@
 @import 'compass/css3';
 @import 'mixins';
 
+body {
+  padding: 1em;
+}
+
+h1,
 h2 {
   text-align: center;
 }
 
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 form {
   select {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1;
     margin-bottom: 1em;
   }
+  .form-buttons {
+    text-align: center;
+    .form-button {
+      display: inline-block;
+      margin: 0 .5em;
+    }
+  }
+}
+
+#admin-nav {
+  text-align: center;
+  padding: 0 0 1em;
+  a {
+    margin: 0 .5em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.event-card {
+  width: 95%;
+  margin: .5em auto;
+  @media screen and (min-width: 768px) {
+    width: 75%;
+  }
+  .mdl-card__title {
+    background: rgb(244,67,54);
+    color: #FFF;
+    min-height: 150px;
+  }
+  .mdl-card__menu {
+    color: #FFF;
+  }
+}
+
+#add-event {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(#000, 0.26);
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    padding: 1em;
+    z-index: 1;
+  }
+}
+
+
+
+
+
+
+#select-event {
+  text-align: center;
+}
+
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 1em;
+  color: rgba(#000, 0.5);
+  border: none;
+  border-bottom: 1px solid rgba(#000, 0.12);
+}
+
+/* Remove focus */
+select:focus {
+  outline: none}
+
+/* Hide label */
+.mdl-selectfield label {display: none;}
+/* Use custom arrow */
+.mdl-selectfield select {appearance: none}
+.mdl-selectfield {
+  font-family: inherit;
+  position: relative;
+  max-width: 300px;
+    &:after {
+        position: absolute;
+        top: 0.75em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid rgba(#000, 0.12);
+        pointer-events: none;
+    }
 }
 
 #rsvps {
@@ -82,6 +194,7 @@ form {
 
 .export-button {
   text-align: center;
+  margin: 1em auto;
 }
 
 .button-default {

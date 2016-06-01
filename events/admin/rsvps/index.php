@@ -27,15 +27,15 @@ $events = get_all_events();
   </style>
 </head>
 <body>
-  <form>
+  <form id="select-event">
     <?php
 
     // Creating select element
-    echo "<select onchange='showUser(this.value)'><option value=''>-- Select Event --</option>";
+    echo "<select class='mdl-selectfield' onchange='showUser(this.value)'><option value=''>-- Select Event --</option>";
 
     // Adding each event as an option
     foreach ($events as $key => $event) {
-      echo "<option value='" . $event[ID] . "'>". $event[year] . " " . $event[name] . "</option>";
+      echo "<option value='" . $event[ID] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event[name] . "</option>";
     }
     echo "</select>";
 
