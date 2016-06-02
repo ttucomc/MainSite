@@ -122,12 +122,12 @@ function invitees_guests($invitee, $guests) {
 
 /**
  * Adds an event into the database.
- * @param  str $name     Name of the event
- * @param  str $location Location of the event
- * @param  str $address  Address of the event
- * @param  str $date     Date of the event
- * @param  str $time     Time of the event
- * @return TODO
+ * @param  str  $name       Name of the event
+ * @param  str  $location   Location of the event
+ * @param  str  $address    Address of the event
+ * @param  str  $date       Date of the event
+ * @param  str  $time       Time of the event
+ * @return bool $eventAdded Whether the event failed or not
  */
 function add_event($name, $location, $address, $date, $time) {
   require(ROOT_PATH . "inc/db.php");
@@ -148,10 +148,14 @@ function add_event($name, $location, $address, $date, $time) {
     $stmt->bindParam(':address', $address, PDO::PARAM_STR);
     $stmt->execute();
 
+    $eventAdded = true;
+
   } catch (Exception $e) {
     echo "Could not add data to the database.";
-    exit();
+    $eventAdded = false;
   }
+
+  return $eventAdded;
 
 }
 
@@ -215,18 +219,23 @@ function delete_event($event) {
 
     $stmt = $db->prepare('
                           DELETE FROM events
-                          WHERE ID=:event
+                          WHERE ID=:event;
+                          DELETE FROM people
+                          WHERE event_id=:people;
+                          DELETE FROM guests
+                          WHERE event_id=:guests;
                         ');
     $stmt->bindParam(':event', $event, PDO::PARAM_INT);
+    $stmt->bindParam(':people', $event, PDO::PARAM_INT);
+    $stmt->bindParam(':guests', $event, PDO::PARAM_INT);
     $stmt->execute();
 
     $deleted = true;
 
   } catch (Exception $e) {
-    echo "Could not delete the event from the database. " . $e->getMessage();
+    echo "Could not delete the event from the database. ";
     $deleted = false;
   }
-
 
   return $deleted;
 }
