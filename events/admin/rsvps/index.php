@@ -103,7 +103,7 @@ $events = get_all_events();
                     sortIt();
                 }
             };
-            xmlhttp.open("GET","../inc/rsvps.php?id="+str,true);
+            xmlhttp.open("GET","<?php echo BASE_URL; ?>/inc/rsvps.php?id="+str,true);
             xmlhttp.send();
         }
     }

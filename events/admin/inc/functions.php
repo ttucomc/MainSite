@@ -132,30 +132,101 @@ function invitees_guests($invitee, $guests) {
 function add_event($name, $location, $address, $date, $time) {
   require(ROOT_PATH . "inc/db.php");
 
-  $date = date('Y-m-d', $date);
-  $time = date('H:i:s', $time);
+  $date = date('Y-m-d', strtotime($date));
+  $time = date('H:i:s', strtotime($time));
   $datetime = $date . ' ' . $time;
-  echo $datetime;
 
-  echo "starting try/catch";
   try {
 
-    echo "starting prepare";
-    $stmt = $db->prepare('INSERT INTO events (`name`, `datetime`, `location`, `address`) VALUES (:name, :datetime, :location, :address)');
-    echo "binding name";
-    $stmt = $db->bindParam(':name', $name, PDO::PARAM_STR);
-    echo "binding datetime";
-    $stmt = $db->bindParam(':datetime', $datetime, PDO::PARAM_STR);
-    echo "binding location";
-    $stmt = $db->bindParam(':location', $location, PDO::PARAM_STR);
-    echo "biding address";
-    $stmt = $db->bindParam(':address', $address, PDO::PARAM_STR);
-    echo "executing";
-    $stmt = $db->execute();
+    $stmt = $db->prepare('
+                          INSERT INTO events (name, datetime, location, address)
+                          VALUES (:name, :datetime, :location, :address)
+                        ');
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
+    $stmt->bindParam(':location', $location, PDO::PARAM_STR);
+    $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+    $stmt->execute();
 
   } catch (Exception $e) {
-    echo "Could not add data to the database.\r\n" . $e->getMessage();
+    echo "Could not add data to the database.";
     exit();
   }
 
+}
+
+/**
+ * Toggles listing status
+ * @param  int  $event   The event ID
+ * @return bool $toggled If the update succeeded or failed
+ */
+function toggle_event_listing($event) {
+  require(ROOT_PATH . "inc/db.php");
+
+  try {
+
+    $stmt = $db->prepare('
+                          SELECT listed FROM events
+                          WHERE ID=:event
+                        ');
+    $stmt->bindParam(':event', $event, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $listedArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Pulling the actual value out of the array
+    $listed = (int)$listedArray[0]['listed'];
+
+    if ($listed == 0) {
+      $listed = 1;
+    } else {
+      $listed = 0;
+    }
+
+    $stmt = $db->prepare('
+                          UPDATE events
+                          SET listed=:listed
+                          WHERE ID=:event
+                        ');
+    $stmt->bindParam(':listed', $listed, PDO::PARAM_INT);
+    $stmt->bindParam(':event', $event, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $toggled = false;
+
+  } catch (Exception $e) {
+    echo "Couldn't toggle listing status ";
+
+    $toggled = false;
+  }
+
+  return $toggled;
+
+}
+
+/**
+ * Deletes event from database
+ * @param  int  $event   The event ID
+ * @return bool $deleted If the delete succeeded or failed
+ */
+function delete_event($event) {
+  require(ROOT_PATH . "inc/db.php");
+
+  try {
+
+    $stmt = $db->prepare('
+                          DELETE FROM events
+                          WHERE ID=:event
+                        ');
+    $stmt->bindParam(':event', $event, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $deleted = true;
+
+  } catch (Exception $e) {
+    echo "Could not delete the event from the database. " . $e->getMessage();
+    $deleted = false;
+  }
+
+
+  return $deleted;
 }
