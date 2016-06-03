@@ -45,8 +45,8 @@ $events = get_all_events();
 <body>
   <h1>CoMC Events</h1>
   <nav id="admin-nav">
-      <a href="rsvps/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">See RSVPs</a>
-      <a id="add-event-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Add Event</a>
+      <a href="rsvps/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">See RSVPs</a>
+      <a id="add-event-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Add Event</a>
   </nav>
 
   <?php foreach($events as $event): ?>
@@ -59,9 +59,10 @@ $events = get_all_events();
           $invitees =  get_invitees($event['ID']);
           $guests = get_guests($event['ID']);
         ?>
-          <h4>Details</h4>
+          <h4>Details<?php if($event['listed'] == 0) { echo ' &mdash; <em>Inactive</em>'; } ?></h4>
           <p>
-            <strong>Location:</strong> <?php echo $event['location']; ?> (<a href="http://maps.google.com/?q=<?php echo $event['address']; ?>" target="_blank">Directions</a>)<br />
+            <strong>Location:</strong> <?php echo $event['location']; ?><br />
+            <strong>Address:</strong> <?php echo $event['address'] ?> (<a href="http://maps.google.com/?q=<?php echo $event['address']; ?>" target="_blank">Directions</a>)<br />
             <strong>Time:</strong> <?php echo date('D, M d, Y - h:i A', strtotime($event['datetime'])); ?>
           </p>
           <p>
@@ -133,8 +134,8 @@ $events = get_all_events();
     </form>
   </div>
 
-  <div class="mdl-spinner mdl-js-spinner" id="loader"></div>
 
+  <div class="mdl-spinner mdl-js-spinner" id="loader"></div>
   <div id="action-message" class="mdl-js-snackbar mdl-snackbar">
     <div class="mdl-snackbar__text"></div>
     <button class="mdl-snackbar__action" type="button"></button>
@@ -155,6 +156,8 @@ $events = get_all_events();
       event.preventDefault();
       $('#add-event').fadeToggle('fast');
     });
+
+
 
     // Toggle the event listing when add or remove from listing is clicked
     $('li.toggle-listing').click(function(e) {
@@ -188,30 +191,55 @@ $events = get_all_events();
       return false;
     });
 
-    //Delete an event when button is clicked
+
+
+    // Delete an event when button is clicked
     $('li.delete-event').click(function(e) {
       e.preventDefault();
 
-      var eventID = $(this).data('event-id');
-      var currentButton = $(this);
+      // Adding confirmation panel
+      $('body').append('<div class="mdl-card mdl-shadow--6dp" id="confirm-delete"><h3>Are you sure?</h3><p>This will delete this event and all rsvps from the database</p><div class="mdl-card__actions mdl-card--border"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary confirm-delete-btn"><i class="material-icons">delete</i></button><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent clear-delete-btn"><i class="material-icons">clear</i></button></div></div>');
+      $('#confirm-delete').fadeToggle('fast');
 
-      show_loader();
-
-      $.ajax({
-        type: 'GET',
-        data: {'eventDeleted': eventID},
-        success: function() {
-          var messageSuccess = document.querySelector('#action-message');
-          var data = {message: 'This event has been deleted!'};
-
-          messageSuccess.MaterialSnackbar.showSnackbar(data);
-        }
-      }).done(function() {
-        hide_loader();
-        currentButton.closest('.event-card').fadeToggle('slow');
+      // Closing confirmation panel if cancel is clicked
+      $('.clear-delete-btn').click(function() {
+        $('#confirm-delete').fadeToggle('fast', function() {
+          $('#confirm-delete').remove();
+        });
       });
 
-      return false;
+      // Getting the correct event id
+      var eventID = $(this).data('event-id');
+      // Assigning this to a variable to use later
+      var currentButton = $(this);
+
+      $('.confirm-delete-btn').click(function() {
+
+        show_loader();
+        // Removing confirmation panel
+        $('#confirm-delete').fadeToggle('fast', function() {
+          $('#confirm-delete').remove();
+        });
+
+        // Starting AJAX request
+        $.ajax({
+          type: 'GET',
+          data: {'eventDeleted': eventID},
+          success: function() {
+            var messageSuccess = document.querySelector('#action-message');
+            var data = {message: 'This event has been deleted!'};
+
+            messageSuccess.MaterialSnackbar.showSnackbar(data);
+          }
+        }).done(function() {
+          hide_loader();
+          currentButton.closest('.event-card').fadeToggle('slow');
+        });
+
+        return false;
+
+      });
+
     });
 
     function show_loader() {
