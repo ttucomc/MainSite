@@ -32,6 +32,15 @@ form {
     }
   }
 }
+#edit-event-form {
+  margin-bottom: 2em;
+  .form-buttons {
+    text-align: left;
+    .form-button {
+      margin: .5em;
+    }
+  }
+}
 
 #loader {
   position: fixed;
