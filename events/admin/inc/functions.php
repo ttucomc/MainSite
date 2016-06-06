@@ -127,7 +127,7 @@ function invitees_guests($invitee, $guests) {
  * @param  str  $address    Address of the event
  * @param  str  $date       Date of the event
  * @param  str  $time       Time of the event
- * @return bool $eventAdded Whether the event failed or not
+ * @return bool $eventAdded Whether adding the event failed or not
  */
 function add_event($name, $location, $address, $date, $time) {
   require(ROOT_PATH . "inc/db.php");
@@ -156,6 +156,48 @@ function add_event($name, $location, $address, $date, $time) {
   }
 
   return $eventAdded;
+
+}
+
+/**
+ * Edits the information of an event in the database.
+ * @param  int  $eventID     ID of the event
+ * @param  str  $name        Name of the event
+ * @param  str  $location    Location of the event
+ * @param  str  $address     Address of the event
+ * @param  str  $date        Date of the event
+ * @param  str  $time        Time of the event
+ * @return bool $eventEdited Whether the event edit failed or not
+ */
+function edit_event($eventID, $name, $location, $address, $date, $time) {
+  require(ROOT_PATH . "inc/db.php");
+
+  $date = date('Y-m-d', strtotime($date));
+  $time = date('H:i:s', strtotime($time));
+  $datetime = $date . ' ' . $time;
+
+  try {
+
+    $stmt = $db->prepare('
+                          UPDATE events
+                          SET name=:name, datetime=:datetime, location=:location, address=:address
+                          WHERE ID=:eventID;
+                        ');
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
+    $stmt->bindParam(':location', $location, PDO::PARAM_STR);
+    $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+    $stmt->bindParam(':eventID', $eventID, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $eventEdited = true;
+
+  } catch (Exception $e) {
+    echo 'Couldn\'t edit the event in the database. ' . $e->getMessage();
+    $eventEdited = false;
+  }
+
+  return $eventEdited;
 
 }
 
