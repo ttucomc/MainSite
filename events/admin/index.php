@@ -195,25 +195,19 @@ $events = get_all_events();
 
       var eventCard = $(this).closest('.event-card');
       var eventID = $(this).data('event-id');
-      console.log(eventID);
       var eventName = document.getElementById('edit-event-name').value;
-      console.log(eventName);
       var eventLocation = document.getElementById('edit-event-location').value;
-      console.log(eventLocation);
       var eventAddress = document.getElementById('edit-event-address').value;
-      console.log(eventAddress);
       var eventDate = document.getElementById('edit-event-date').value;
-      console.log(eventDate);
       var eventTime = document.getElementById('edit-event-time').value;
-      console.log(eventTime);
       var date = new Date();
       var year = date.getFullYear(eventDate);
-      console.log(year);
 
       show_loader();
 
       $.ajax({
         type: 'POST',
+        url: 'inc/events.php',
         data: {
                 'eventUpdated': eventID,
                 'eventName': eventName,
@@ -320,6 +314,7 @@ $events = get_all_events();
         // Starting AJAX request
         $.ajax({
           type: 'GET',
+          url: 'inc/events.php',
           data: {'eventDeleted': eventID},
           success: function() {
             var messageSuccess = document.querySelector('#action-message');

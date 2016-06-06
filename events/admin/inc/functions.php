@@ -193,7 +193,7 @@ function edit_event($eventID, $name, $location, $address, $date, $time) {
     $eventEdited = true;
 
   } catch (Exception $e) {
-    echo 'Couldn\'t edit the event in the database. ' . $e->getMessage();
+    echo 'Couldn\'t edit the event in the database.';
     $eventEdited = false;
   }
 

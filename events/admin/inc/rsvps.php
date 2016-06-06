@@ -9,14 +9,12 @@ if (isset($_GET["id"])) {
   $guests = get_guests($event_id);
 } else {
 	echo "<p>No event selected, or this event doesn't exist.</p>";
-	exit();
 }
 
 // Showing a message if there are no RSVPs
 if (empty($invitees)) {
-  echo "<p>I guess no ones coming... :(</p>";
-  exit();
-}
+	echo "<div id='rsvps'><p>I guess no ones coming... :(</p></div>";
+} else {
 
 
 ?>
@@ -73,3 +71,4 @@ if (empty($invitees)) {
 	  <button onclick="doit();" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Download Table</button>
 	</p>
 </div>
+<?php } ?>
