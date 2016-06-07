@@ -2,7 +2,6 @@
 @import 'mixins';
 
 body {
-  padding: 1em;
   background-color: #ffffff;
   background-image: image-url("back-pattern.png");
 }
@@ -62,6 +61,13 @@ form {
   }
 }
 
+header {
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+}
+
 .event-card {
   width: 95%;
   margin: .5em auto 2em;
@@ -69,7 +75,7 @@ form {
     width: 75%;
   }
   .mdl-card__title {
-    background: rgb(244,67,54);
+    background: rgb(33,150,243);
     color: #FFF;
     min-height: 150px;
   }
@@ -159,10 +165,12 @@ select:focus {
 }
 
 #rsvps {
+  text-align: center;
   padding-bottom: 5em;
 }
 
 #rsvp-list {
+  margin: 0 auto;
   tr {
     &:hover {
       td {

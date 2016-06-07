@@ -3,6 +3,11 @@
 require_once('inc/config.php');
 require_once('inc/functions.php');
 
+// If there was an event added, submit the SQL to the database
+if(isset($_POST['form-name']) && $_POST['form-name'] == 'add-event') {
+    add_event($_POST['add-event-name'], $_POST['add-event-location'], $_POST['add-event-address'], $_POST['add-event-date'], $_POST['add-event-time']);
+}
+
 // Getting all events from db
 $events = get_all_events();
 
@@ -13,9 +18,8 @@ $events = get_all_events();
 
   <meta name="title" content="Control of All Events Ever" />
 
-  <link rel="stylesheet" href="../rsvp/css/ttu.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.red-indigo.min.css" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-red.min.css" />
   <link rel="stylesheet" href="css/screen.css" />
 
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
@@ -28,7 +32,29 @@ $events = get_all_events();
   </style>
 </head>
 <body>
-  <h1>CoMC Events</h1>
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title"><a href="/comc/">College of Media &amp; Communication</a></span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="/comc/events/">Events Page</a>
+        <a class="mdl-navigation__link" href="/comc/events/admin/">Events Admin</a>
+        <a class="mdl-navigation__link" href="/comc/events/admin/rsvps/">RSVPs</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">College of Media &amp; Communication</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/comc/events/">Events Page</a>
+      <a class="mdl-navigation__link" href="/comc/events/admin/">Events Admin</a>
+      <a class="mdl-navigation__link" href="/comc/events/admin/rsvps/">RSVPs</a>
+    </nav>
+  </div>
+  <h1>Events</h1>
   <nav id="admin-nav">
       <a href="rsvps/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">See RSVPs</a>
       <a id="add-event-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Add Event</a>
@@ -288,7 +314,7 @@ $events = get_all_events();
       e.preventDefault();
 
       // Adding confirmation panel
-      $('body').append('<div class="mdl-card mdl-shadow--6dp" id="confirm-delete"><h3>Are you sure?</h3><p>This will delete this event and all rsvps from the database</p><div class="mdl-card__actions mdl-card--border"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary confirm-delete-btn"><i class="material-icons">delete</i></button><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent clear-delete-btn"><i class="material-icons">clear</i></button></div></div>');
+      $('body').append('<div class="mdl-card mdl-shadow--6dp" id="confirm-delete"><h3>Are you sure?</h3><p>This will delete this event and all rsvps from the database</p><div class="mdl-card__actions mdl-card--border"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent confirm-delete-btn"><i class="material-icons">delete</i></button><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary clear-delete-btn"><i class="material-icons">clear</i></button></div></div>');
       $('#confirm-delete').fadeToggle('fast');
 
       // Closing confirmation panel if cancel is clicked

@@ -18,7 +18,6 @@ if (empty($invitees)) {
 
 
 ?>
-<div id="rsvps">
 	<p>
 		Total RSVPs: <?php echo total_rsvps($invitees); ?>
 	</p>
@@ -70,5 +69,4 @@ if (empty($invitees)) {
 	<p class="export-button">
 	  <button onclick="doit();" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Download Table</button>
 	</p>
-</div>
 <?php } ?>
