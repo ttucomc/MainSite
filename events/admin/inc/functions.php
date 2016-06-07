@@ -22,6 +22,32 @@ function get_all_events() {
 }
 
 /**
+ * Gets the details for a specific event
+ * @param  int   $event   ID of the event
+ * @return array $details All information of the event
+ */
+function get_one_event($event) {
+  try {
+
+    require(ROOT_PATH . "inc/db.php");
+
+    $stmt = $db->prepare('
+                          SELECT * FROM events
+                          WHERE ID=:event;
+                        ');
+    $stmt->bindParam(':event', $event, PDO::PARAM_STR);
+    $stmt->execute();
+
+  } catch (Exception $e) {
+    echo "Could not retrieve data from the database.";
+  }
+
+  $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  return $details;
+}
+
+/**
  * Gets all the invitee's information for a specific event
  * @param  int $q event ID
  * @return array
