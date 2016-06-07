@@ -127,9 +127,10 @@ function invitees_guests($invitee, $guests) {
  * @param  str  $address    Address of the event
  * @param  str  $date       Date of the event
  * @param  str  $time       Time of the event
+ * @param  str  $password    Password to be used in RSVPs
  * @return bool $eventAdded Whether adding the event failed or not
  */
-function add_event($name, $location, $address, $date, $time) {
+function add_event($name, $location, $address, $date, $time, $password) {
   require(ROOT_PATH . "inc/db.php");
 
   $date = date('Y-m-d', strtotime($date));
@@ -139,13 +140,14 @@ function add_event($name, $location, $address, $date, $time) {
   try {
 
     $stmt = $db->prepare('
-                          INSERT INTO events (name, datetime, location, address)
-                          VALUES (:name, :datetime, :location, :address)
+                          INSERT INTO events (name, datetime, location, address, password)
+                          VALUES (:name, :datetime, :location, :address, :password)
                         ');
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
     $stmt->bindParam(':location', $location, PDO::PARAM_STR);
     $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+    $stmt->bindParam(':password', $password, PDO::PARAM_STR);
     $stmt->execute();
 
     $eventAdded = true;
@@ -167,9 +169,10 @@ function add_event($name, $location, $address, $date, $time) {
  * @param  str  $address     Address of the event
  * @param  str  $date        Date of the event
  * @param  str  $time        Time of the event
+ * @param  str  $password    Password to be used in RSVPs
  * @return bool $eventEdited Whether the event edit failed or not
  */
-function edit_event($eventID, $name, $location, $address, $date, $time) {
+function edit_event($eventID, $name, $location, $address, $date, $time, $password) {
   require(ROOT_PATH . "inc/db.php");
 
   $date = date('Y-m-d', strtotime($date));
@@ -180,7 +183,7 @@ function edit_event($eventID, $name, $location, $address, $date, $time) {
 
     $stmt = $db->prepare('
                           UPDATE events
-                          SET name=:name, datetime=:datetime, location=:location, address=:address
+                          SET name=:name, datetime=:datetime, location=:location, address=:address, password=:password
                           WHERE ID=:eventID;
                         ');
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
@@ -188,6 +191,7 @@ function edit_event($eventID, $name, $location, $address, $date, $time) {
     $stmt->bindParam(':location', $location, PDO::PARAM_STR);
     $stmt->bindParam(':address', $address, PDO::PARAM_STR);
     $stmt->bindParam(':eventID', $eventID, PDO::PARAM_INT);
+    $stmt->bindParam(':password', $password, PDO::PARAM_STR);
     $stmt->execute();
 
     $eventEdited = true;

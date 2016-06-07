@@ -9,11 +9,15 @@ $events = get_all_events();
 ?>
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 
-  <meta name="title" content="RSVPs of All Events Ever" />
+  <title>RSVPs of All Events Ever</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-red.min.css" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-amber.min.css" />
   <link rel="stylesheet" href="../css/screen.css" />
 
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
