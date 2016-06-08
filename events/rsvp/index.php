@@ -212,8 +212,6 @@
         } else {
 
     ?>
-
-      <h2><?php echo date('Y', strtotime($thisEvent['datetime'])) . ' ' . $thisEvent['name']; ?></h2>
       <form id="select-event">
         <?php
 
@@ -222,13 +220,17 @@
 
         // Adding each event as an option
         foreach ($events as $event) {
-          echo "<option value='" . $event['ID'] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event['name'] . "</option>";
+          if ($event['listed'] == 1) {
+            echo "<option value='" . $event['ID'] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event['name'] . "</option>";
+          }
         }
         echo "</select>";
 
 
         ?>
       </form>
+
+      <h2><?php echo date('Y', strtotime($thisEvent['datetime'])) . ' ' . $thisEvent['name']; ?></h2>
 
       <?php echo '<form class="ldpforms" method="post" action="' . $_SERVER['PHP_SELF'] . '?id=' . $thisEvent['ID'] . '">'; ?>
         <div id="people">
@@ -254,7 +256,7 @@
         <br /><br />
         <label for="password">Password (<em>This is in your invitation</em>)</label>
         <input id="password" type="text" required="required" name="password" />
-        <input id="event-id" type="hidden" name="event-id" value="<?php echo $thisEvent['ID']; ?>" />
+        <?php echo '<input id="event-id" type="hidden" name="event-id" value="' . $thisEvent['ID'] . '" />'; ?>
         <br /><br />
         <div class="g-recaptcha" data-sitekey="6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY"></div>
         <input class="button" type="submit" value="submit" />
@@ -320,11 +322,13 @@
       <?php
 
       // Creating select element
-      echo "<select class='mdl-selectfield' onchange='showRSVP(this.value)'><option value=''>-- Select Event --</option>";
+      echo "<select class='mdl-selectfield' onchange='showRSVP(this.value)'><option value=''>-- Change Event --</option>";
 
       // Adding each event as an option
       foreach ($events as $event) {
-        echo "<option value='" . $event['ID'] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event['name'] . "</option>";
+        if ($event['listed'] == 1) {
+          echo "<option value='" . $event['ID'] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event['name'] . "</option>";
+        }
       }
       echo "</select>";
 
