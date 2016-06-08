@@ -31,10 +31,10 @@ $events = get_all_events();
         <h2><?php echo date('Y', strtotime($event['datetime'])) . ' ' . $event['name']; ?></h2>
         <p>
           Date: <?php echo date('d/m/Y', strtotime($event['datetime'])) . ' &mdash; ' . date('h:iA', strtotime($event['datetime'])); ?><br />
-          Location: <?php echo $event['location']; ?> (<a class="external" target="_blank"; href="http://maps.google.com/?q=<?php echo $event['address']; ?>">Directions</a>)
+          <?php echo 'Location: ' . $event['location'] . ' (<a class="external" target="_blank" href="http://maps.google.com/?q=' . $event['address'] . '">Directions</a>)'; ?>
         </p>
         <p>
-          <a class="button" href="/comcsite/events/rsvp/?id=<?php echo $event['ID']; ?>">RSVP</a>
+          <?php echo '<a class="button" href="/comc/events/rsvp/?id=' . $event['ID'] . '">RSVP</a>'; ?>
         </p>
       </article>
 

@@ -2,7 +2,7 @@ require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "/comcsite/events/admin/"
+http_path = "/comc/events/admin/"
 css_dir = "css"
 sass_dir = "sass"
 images_dir = "img"

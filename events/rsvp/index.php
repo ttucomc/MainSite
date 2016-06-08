@@ -35,41 +35,31 @@
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Captcha code
-        // $gRecaptchaResponse = $_POST['g-recaptcha-response'];
-        // require('/comc/includes/autoload.php');
-        // $siteKey = '6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY';
-        // $secret = '6Lc8LAsTAAAAAOHTC42UTYGN3JroKYT57uXiO8tO';
-        // $recaptcha = new \ReCaptcha\ReCaptcha($secret, new \ReCaptcha\RequestMethod\SocketPost());
-        // $resp = $recaptcha->verify($gRecaptchaResponse, $remoteIp);
+        $gRecaptchaResponse = $_POST['g-recaptcha-response'];
+        require('/comc/includes/autoload.php');
+        $siteKey = '6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY';
+        $secret = '6Lc8LAsTAAAAAOHTC42UTYGN3JroKYT57uXiO8tO';
+        $recaptcha = new \ReCaptcha\ReCaptcha($secret, new \ReCaptcha\RequestMethod\SocketPost());
+        $resp = $recaptcha->verify($gRecaptchaResponse, $remoteIp);
 
         $password = strtolower($thisEvent['password']);
         $passwordEntered = strtolower($_POST['password']);
 
         // If captcha is successful
-        // if ($resp->isSuccess() && $passwordEntered == $password) {
-        if ($passwordEntered == $password) {
+        if ($resp->isSuccess() && $passwordEntered == $password) {
 
           /*---Variables-------------------------------------*/
           // Title
-          echo "Starting vars<br />";
-          echo "Setting event name<br />";
           $eventTitle = $thisEvent['name'];
 
           // Invitee's Information
-          echo "Setting yes or no<br />";
           $attending = $_POST['attending'];
-          echo "Setting first name<br />";
           $firstName = $_POST['firstName'];
-          echo "Setting last name<br />";
           $lastName = $_POST['lastName'];
-          echo "Setting email<br />";
           $email = $_POST['email'];
-          echo "Setting info<br />";
           $info = $_POST['info'];
-          echo "Setting ID<br />";
           $eventID = $thisEvent['ID'];
 
-          echo "Setting Guests<br />";
           // Getting how many guests
           $guestCount = (int)$_POST['guestCount'];
           // Bool for if there's guests or not
@@ -79,7 +69,6 @@
           // 2-dimensional array that will hold the guests
           $guests = array();
 
-          echo "If there are guests<br />";
           // If there are guests
           if ($guestCount > 0) {
             // Setting this to true
@@ -98,16 +87,13 @@
 
           }
 
-          echo "<br /><strong>Starting Try/Catch</strong><br />";
           /*---Sending Info to DB-------------------------------------*/
           try {
             // Info for invitee
-            echo "Starting prepare<br />";
             $stmt = $db->prepare("
                                   INSERT INTO people (attending, first_name, last_name, email, event_id, info)
                                   VALUES (:attending, :first_name, :last_name, :email, :event_id, :info)
                                 ");
-            echo "Binding params<br />";
             $stmt->bindParam(':attending', $attending, PDO::PARAM_INT);
             $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
             $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
@@ -116,7 +102,6 @@
             $stmt->bindParam(':info', $info, PDO::PARAM_STR);
             $stmt->execute();
 
-            echo "If areThereGuests is true<br />";
             if ($areThereGuests) {
               // Getting hostID from the person that was just added
               $hostID = $db->lastInsertId();
@@ -143,7 +128,6 @@
 
 
 
-          echo "<br /><strong>Starting email to event coordinator</strong><br />";
           /*---Email to Event Coordinator-------------------------------------*/
           $headers = "From: " . $firstName . " " . $lastName . " <rsvp.mcom@ttu.edu>\r\n";
           $headers .= "Reply-To: " . $email . "\r\n";
@@ -179,7 +163,6 @@
           mail($to, $subject, $message, $headers);
 
 
-          echo "<br /><strong>Starting email to invitee</strong><br />";
           /*---Email to Applicant-------------------------------------*/
           $conf_headers = "From: The College of Media & Communication <rsvp.mcom@ttu.edu>\r\n";
           $conf_headers .= "Reply-To: rsvp.mcom@ttu.edu\r\n";
@@ -213,16 +196,16 @@
 
           } else {
             echo "<h1>Bummer! Something went wrong.</h1>";
-            // $errors = $resp->getErrorCodes();
-            // if (in_array("missing-input-response", $errors)) {
-            //   echo "<p>Please complete and verify the captcha at the bottom of the form to get your message to send.<br><br><a href=\"sponsor.php\">Go Back</a></p>";
-            // } else {
-            //   echo "<p>I'm so sorry, the problem is on our side. Please try again! If you get this message again, please copy the error codes below and email it to our <a href=\"mailto:kuhrt.cowan@ttu.edu\">webmaster</a> along with your message and we will get it taken care of. Sorry for the inconvenience!</p><strong>Errors:</strong><br><ul>";
-            //   foreach ($errors as $error) {
-            //     echo "<li>" . $error . "</li>";
-            //   }
-            //   echo "</ul>";
-            // }
+            $errors = $resp->getErrorCodes();
+            if (in_array("missing-input-response", $errors)) {
+              echo "<p>Please complete and verify the captcha at the bottom of the form to get your message to send.<br><br><a href=\"sponsor.php\">Go Back</a></p>";
+            } else {
+              echo "<p>I'm so sorry, the problem is on our side. Please try again! If you get this message again, please copy the error codes below and email it to our <a href=\"mailto:kuhrt.cowan@ttu.edu\">webmaster</a> along with your message and we will get it taken care of. Sorry for the inconvenience!</p><strong>Errors:</strong><br><ul>";
+              foreach ($errors as $error) {
+                echo "<li>" . $error . "</li>";
+              }
+              echo "</ul>";
+            }
             exit();
           }
 
@@ -230,7 +213,7 @@
 
     ?>
 
-      <h2><?php echo date('Y', strtotime($thisEvent['datetime'])) . ' ' . $thisEvent['name'] . ' RSVP'; ?></h2>
+      <h2><?php echo date('Y', strtotime($thisEvent['datetime'])) . ' ' . $thisEvent['name']; ?></h2>
       <form id="select-event">
         <?php
 
@@ -247,7 +230,7 @@
         ?>
       </form>
 
-      <form class="ldpforms" method="post" action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $thisEvent['ID']; ?>">
+      <?php echo '<form class="ldpforms" method="post" action="' . $_SERVER['PHP_SELF'] . '?id=' . $thisEvent['ID'] . '">'; ?>
         <div id="people">
           <fieldset>
             <legend> Your Information </legend>
@@ -273,11 +256,12 @@
         <input id="password" type="text" required="required" name="password" />
         <input id="event-id" type="hidden" name="event-id" value="<?php echo $thisEvent['ID']; ?>" />
         <br /><br />
-        <!-- <div class="g-recaptcha" data-sitekey="6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY"></div> -->
+        <div class="g-recaptcha" data-sitekey="6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY"></div>
         <input class="button" type="submit" value="submit" />
         <div class="form-loader"></div>
-      </form>
+      <?php echo '</form>'; ?>
 
+      <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" defer="defer" async=""></script>
       <script type="text/javascript">
       $(document).ready(function() {
 
