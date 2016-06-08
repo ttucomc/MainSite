@@ -264,8 +264,6 @@
           $('#guestCount').val(guestTotal);
         });
 
-
-
       });
 </script>
 </body>

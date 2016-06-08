@@ -35,14 +35,14 @@ function get_one_event($event) {
                           SELECT * FROM events
                           WHERE ID=:event;
                         ');
-    $stmt->bindParam(':event', $event, PDO::PARAM_STR);
+    $stmt->bindParam(':event', $event, PDO::PARAM_INT);
     $stmt->execute();
+
+    $details = $stmt->fetch(PDO::FETCH_ASSOC);
 
   } catch (Exception $e) {
     echo "Could not retrieve data from the database.";
   }
-
-  $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   return $details;
 }
