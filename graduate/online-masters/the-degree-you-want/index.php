@@ -131,7 +131,7 @@
           'Campaign' => 'Now Online',
           'Title' => 'The Strategic Communication Master\'s Degree',
           'Text' => 'Earn your Masters of Strategic Communication degree from Texas Tech University! Accredited, convenient 100% online. Update your skills to be competitive in today\'s global and digitally focused environment. Learn more now! <em>The Degree You Want.</em>',
-          'Photo' => 'img/GraduateSocial-3.jpg'
+          'Photo' => 'img/GraduateSocial-4.jpg'
         ),
         array(
           'Campaign' => 'For Professionals',

@@ -1,6 +1,6 @@
 <?php
 
-  $pageTitle = "Careers | Parent Portal | CoMC | TTU";
+  $pageTitle = "Careers | Parents | CoMC | TTU";
   $pageDescription = "Find out what a communication degree from the College of Media & Communication can do for your students career!";
   $pageURL = "http://www.depts.ttu.edu/comc/parents/careers/";
 
