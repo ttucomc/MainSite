@@ -1,6 +1,6 @@
 <?php
 
-  $pageTitle = "Why CoMC? | Parent Portal | CoMC | TTU";
+  $pageTitle = "Why CoMC? | Parents | CoMC | TTU";
   $pageDescription = "We know there's a million choices on which school your student can pick. See why the College of Media & Communication is the best choice!";
   $pageURL = "http://www.depts.ttu.edu/comc/parents/why-comc/";
 

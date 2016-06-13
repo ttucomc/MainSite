@@ -1,6 +1,6 @@
 <?php
 
-  $pageTitle = "Applying | Parent Portal | CoMC | TTU";
+  $pageTitle = "Applying | Parents | CoMC | TTU";
   $pageDescription = "Learn the steps it takes to apply and get your student into the College of Media & Communication here.";
   $pageURL = "http://www.depts.ttu.edu/comc/parents/applying/";
 
