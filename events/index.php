@@ -22,6 +22,9 @@ $events = get_all_events();
 </head>
 <body>
   <h1>College Events</h1>
+  <p>
+    For questions or more information on any of our events, please email <a href="mailto:taryn.meixner@ttu.edu" class="mail">Taryn Meixner</a>.
+  </p>
 
   <?php foreach ($events as $event): ?>
 
@@ -30,11 +33,15 @@ $events = get_all_events();
       <article>
         <h2><?php echo date('Y', strtotime($event['datetime'])) . ' ' . $event['name']; ?></h2>
         <p>
-          Date: <?php echo date('D, M jS, Y', strtotime($event['datetime'])) . ' &mdash; ' . date('h:iA', strtotime($event['datetime'])); ?><br />
+          Date: <?php echo date('l, M. j, Y', strtotime($event['datetime'])) . ' &mdash; ' . date('h:i a', strtotime($event['datetime'])); ?><br />
           <?php echo 'Location: ' . $event['location'] . ' (<a class="external" target="_blank" href="http://maps.google.com/?q=' . $event['address'] . '">Directions</a>)'; ?>
         </p>
         <p>
-          <?php echo '<a class="button" href="/comc/events/rsvp/?id=' . $event['ID'] . '">RSVP</a>'; ?>
+          <?php
+            if ($event['rsvps'] == 1) {
+              echo '<a class="button" href="/comc/events/rsvp/?id=' . $event['ID'] . '">RSVP</a>';
+            }
+          ?>
         </p>
       </article>
 
