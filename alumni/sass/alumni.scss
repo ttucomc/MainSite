@@ -3,15 +3,40 @@
 
 #alumni-titles {
   text-align: center;
+  margin-bottom: 5em;
+  @media screen and (min-width: 1024px) {
+    text-align: left;
+  }
+  #controls {
+    p {
+      margin: 0;
+      padding: 0;
+      a {
+        color: $white;
+        background: $lightGray;
+        font-size: 2.5em;
+        padding: .125em .5em .125em .75em;
+        margin-right: .25em;
+        text-decoration: none;
+        @include transition(.3s);
+        &:hover {
+          cursor: pointer;
+          background: $darkGray;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 #career-cube {
   display: inline-block;
-  margin: 5em auto;
+  margin: 2em auto 1em;
   width: $size * 4;
   height: $height;
   perspective: 600px;
   @media screen and (min-width: 768px) {
+    margin: 2em 2em 1em;
     width: $size * 6;
   }
   @media screen and (min-width: 1024px) {
