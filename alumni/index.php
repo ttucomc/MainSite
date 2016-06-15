@@ -48,9 +48,9 @@
         <div id="career-cube">
           <div class="cube">
             <div class="cube-face cube-face-front"><p>Digital Community Promotions Producer - <em>KCBD-TV-Lubbock, Texas</em></p></div>
-            <div class="cube-face cube-face-top"><p></p></div>
-            <div class="cube-face cube-face-back"><p></p></div>
-            <div class="cube-face cube-face-bottom"><p></p></div>
+            <div class="cube-face cube-face-top"><p>&nbsp;</p></div>
+            <div class="cube-face cube-face-back"><p>&nbsp;</p></div>
+            <div class="cube-face cube-face-bottom"><p>&nbsp;</p></div>
             <div class="cube-face cube-face-left"></div>
             <div class="cube-face cube-face-right"></div>
           </div>
@@ -90,7 +90,7 @@
       <p><a class="external" href="/comc/programs/journalism/newsarchiveemc.php">News Archive</a></p>
     </div>
   </section>
-  <script src="js/alumni.js"></script>
+  <script src="/comc/includes/js/alumni.js"></script>
   <!-- ADD MAIN CONTENT ABOVE THIS LINE -->
 
 
