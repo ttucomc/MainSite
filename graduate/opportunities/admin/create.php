@@ -38,7 +38,7 @@ switch ($_POST['jobtype']) {
 
 
 //Set Opporunity
-$opporunity = array(
+$opportunity = array(
 
   'jobType' => $jobType,
   'isPaid' => $isPaid,
@@ -71,10 +71,11 @@ $contact = array(
 
 
 
-//$newOpporunity = createNewOpportunity($db, $opportunity, $company, $contact);
+$newOpporunity = opportunity::createNewOpportunity($db, $opportunity, $company, $contact);
 
+echo var_dump($newOpporunity);
 
-echo var_dump($_POST);
+//echo var_dump($opporunity) . "       " . var_dump($company) . "       " . var_dump($contact);
 
 
 ?>

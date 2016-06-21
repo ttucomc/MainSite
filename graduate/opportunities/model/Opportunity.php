@@ -58,22 +58,36 @@ class Opportunity {
 
   */
 
-  private $id;
+  public $id;
   private $db;
 
   //Organization of Job Types, see comments above.
   public $jobType = 0;
   public $isPaid = 0;
 
-  //Opportunity Information
+  //------- Opprotunity -------
   public $jobName = "";
-  public $jobPostion = "";
+  public $jobPosition = "";
   public $description = "";
   public $startDate;
   public $endDate;
-  public $company = 0;
+
+
+  //------- Company -------
+  public $companyName;
+  public $city;
+  public $state;
+
+  //------- Contact -------
+  public $firstName;
+  public $lastName;
+  public $phone;
+  public $email;
 
   /*
+
+    This function statically creates a new opporunity, adds it to the database and returns the newly created object.
+
     @param db PDO DB Connection
     @param opportunity array
     @param company array
@@ -106,7 +120,7 @@ class Opportunity {
         $createOpportunity->bindParam(':end', $opportunity['end']);
 
         //Company
-        $createOpportunity->bindParam('companyName', $company['companyName'], PDO::PARAM_STR);
+        $createOpportunity->bindParam(':companyName', $company['companyName'], PDO::PARAM_STR);
         $createOpportunity->bindParam(':city', $company['city'], PDO::PARAM_STR);
         $createOpportunity->bindParam(':state', $company['state'], PDO::PARAM_STR);
 
@@ -129,9 +143,47 @@ class Opportunity {
       $instance->id = $db->lastInsertId();
       $instance->db = $db;
 
+      //Opporunity
+      $instance->jobType = $opportunity['jobType'];
+      $instance->isPaid = $opportunity['isPaid'];
+      $instance->jobName = $opportunity['jobName'];
+      $instance->jobPosition = $opportunity['jobPosition'];
+      $instance->description = $opportunity['description'];
+      $instance->startDate = $opportunity['start'];
+      $instance->endDate = $opportunity['end'];
+
+      //Company
+      $instance->companyName = $company['companyName'];
+      $instance->city = $company['city'];
+      $instance->state = $company['state'];
+
+      //Contact
+      $instance->firstName = $contact['firstName'];
+      $instance->lastName = $contact['lastName'];
+      $instance->phone = $contact['phone'];
+      $instance->email = $contact['email'];
 
       return $instance;
   }
+
+  /*
+
+    Searches and returns all active opportunities.
+    Because this is not specified to one instance, it is static.
+
+    @param db PDO DB Connection
+    @return array Opportunities
+
+  */
+
+  public static function getActiveOpportunities(PDO $db) {
+
+    
+
+
+  }
+
+
 
   public static function getOpportunity(PDO $db, $id) {
 
