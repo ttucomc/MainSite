@@ -1,0 +1,220 @@
+/****************************
+    OPPORTUNITY STYLES
+****************************/
+
+#head {
+
+  .title {
+    width: 100%;
+    color: white;
+    background-color: $primary-color;
+    font-size: 2em;
+    margin: 0;
+    padding: 0.8em;
+  }
+
+  .admin {
+
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    background-color: $secondary-color;
+    transition: all 0.5s;
+
+    h2 {
+      color: white;
+      font-size: 1.8em;
+      padding: 1em;
+    }
+
+    @media (min-width: $medium) {
+
+      width: 30%;
+
+      h2 {
+        font-size: 1.8em;
+        padding: 0.8em;
+      }
+    }
+
+    @media (min-width: $xxl) {
+
+      width: 30%;
+
+      h2 {
+        font-size: 2.4em;
+        padding: 0.8em;
+      }
+    }
+  }
+}
+
+
+#opportunities {
+
+  .cardContainer {
+    padding: 1em 2em;
+
+    .card {
+      .header {
+
+        width: 100%;
+        background-color: $primary-color;
+        //background-color: $secondary-color;
+        color: white;
+        margin: 0;
+        padding: 0.5em;
+
+        h3 {
+          font-size: 2.4em;
+          padding: 0.5em;
+          margin: 0;
+          color: white;
+        }
+      }
+
+      .body {
+        text-align: left;
+        padding: 0.5em 0 0;
+
+        h4 {
+          font-size: 2em;
+          padding: 0 20px;
+        }
+
+        .desc {
+          font-size: 1.4em;
+          color: $secondary-text;
+          padding: 5px 20px;
+        }
+
+        .footer {
+          width: 100%;
+          //background-color: $secondary-color;
+          background-color: $primary-color;
+          color: white;
+          margin-top: 20px;
+          padding-bottom: 20px;
+
+          h4 {
+            padding: 20px;
+            margin: 0;
+          }
+          div {
+            padding: 5px 20px;
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/********************
+    ADMIN STYLES
+*********************/
+
+#admin-header {
+
+  .title {
+    width: 100%;
+    color: white;
+    background-color: $primary-color;
+    font-size: 2em;
+    margin: 0;
+    padding: 0.8em;
+  }
+
+}
+
+
+#admin-edit {
+
+  .tighten {
+    width: 50%;
+    margin: 2em auto;
+  }
+
+  .create {
+    font-size: 20px;
+  }
+
+  .mdl-card {
+    margin: 0 auto;
+  }
+
+  .card-title {
+    margin-top: 0;
+    text-align: left;
+    padding: 0 16px 0;
+  }
+
+  .card-text {
+    text-align: left;
+    padding: 0 16px 0;
+  }
+
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.5);
+  z-index: 100;
+
+  .background {
+    position: absolute;
+    height: 80vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+
+    background-color: white;
+    width: 100%;
+
+    @media(min-width: $medium) {
+      width: 40%;
+    }
+  }
+
+  .select_job {
+    padding: 10px 0;
+
+    label {
+      padding-right: 15px;
+    }
+  }
+
+  #submit {
+    font-size: 1.3em;
+  }
+
+  #close {
+    font-size: 1.6em;
+    color: $secondary-color;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px 0;
+  }
+
+  .date {
+    display: inline-block;
+    width: 30%;
+    padding: 1em 0;
+
+    label {
+      font-size: 1.3em;
+    }
+
+    input {
+      margin-top: 12px;
+    }
+  }
+}
