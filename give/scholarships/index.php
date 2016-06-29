@@ -50,26 +50,33 @@
     <!-- CoMC edits start here -->
 
     <?php
-    	define("DB_HOST","kadett.ttu.edu");
-    	define("DB_NAME","Masscomm");
-    	define("DB_PORT","3306");
-    	define("DB_USER","Masscomm_web");
-    	define("DB_PASS","G3K5Swgn");
 
-        try {
-        	$db = new PDO( "sqlsrv:server=" . DB_HOST . "; Database=" . DB_NAME . "", DB_USER, DB_PASS);
-        	$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        } catch (Exception $e) {
-        	echo "Could not connect to the database." . $e->getMessage();
-        	exit;
-        }
+    	require_once('/comc/includes/ttu-db-config.php');
+      require_once('/comc/includes/ttu-db.php');
+
+      try {
+
+        $results = $db->prepare('SELECT * FROM dbo.scholarship');
+        $results->execute();
+
+      } catch (Exception $e) {
+        echo "Data could not be retrieved from the database." . $e->getMessage();
+        exit;
+      }
+
+      $scholarships = $results->fetchAll(PDO::FETCH_ASSOC);
+
+      foreach ($scholarships as $scholarship) {
+        echo $scholarship['name'] . "<br />";
+      }
+
     ?>
 
     <h3>Search Tips</h3>
     <p class="style2">For any &quot;search,&quot; the search engine takes whatever you enter into the search box and locates exact matches. If you enter the word &quot;minority&quot; it will NOT find cases of &quot;minorities.&quot; If you wanted to find both, you would enter &quot;minorit&quot; as your search term.</p>
 
     <h3>Find scholarships  by major</h3>
-        <form action="list_scholarships.php" method="post" name="by_major" id="by_major">
+        <?php echo '<form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="by_major" id="by_major">'; ?>
           <select name="major" id="major">
             <option value="Please">- Please Select -</option>
             <option value="Advertising">Advertising</option>
@@ -88,7 +95,7 @@
             <option value="Both">Both Internal and External</option>
           </select>
           <input type="submit" name="Submit" value="Find" />
-        </form>
+        <?php echo '</form>'; ?>
 
       <h3>Search a scholarship by name</h3>
       <p>Enter the name of the scholarship or of its sponsor in the field below.
