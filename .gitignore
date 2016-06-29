@@ -43,6 +43,8 @@ Thumbs.db
 *database.php
 *cn.php
 *config.php
+*ttu-db-config.php
+*ttu-db.php
 
 
 /events/admin/inc/*
