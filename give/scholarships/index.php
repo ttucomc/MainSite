@@ -49,62 +49,167 @@
 
     <!-- CoMC edits start here -->
 
-    <?php
+		<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'):
+
+      if ($_POST[major] == "Please") {
+  			exit("<h2>Please select a major</h2>");
+      }
+
+    	$approved = array("Advertising","Electronic Media and Communications","Journalism","CoMC","Public Relations","Graduate","Photocommunications");
+    	if (!in_array($_POST[major], $approved)) { die ("<h3>Your major is not approved.</h3>"); }
+
+    	$typeapproved = array("Internal","External","Both");
+    	if (!in_array($_POST[type], $typeapproved)) { die ("<h3>Your scholarship type is not approved.</h3>"); }
+
 
     	require_once('/comc/includes/ttu-db-config.php');
       require_once('/comc/includes/ttu-db.php');
 
-      try {
+      ?>
+			<h2><?php if($_POST[type] == 'Both'): echo 'All'; else: echo "$_POST[type]"; endif; ?> Scholarships Available to <?php echo "$_POST[major]"; ?> Students</h2>
 
-        $results = $db->prepare('SELECT * FROM dbo.scholarship');
-        $results->execute();
+			<?php
 
-      } catch (Exception $e) {
-        echo "Data could not be retrieved from the database." . $e->getMessage();
-        exit;
+			$type = '%'.$_POST[type].'%';
+			$major = '%'.$_POST[major].'%';
+
+      if ($_POST[type] == "Both") {
+
+        try {
+          $results = $db->prepare("SELECT * FROM dbo.scholarship WHERE (major1 like ? OR major2 like ? OR major1 like '%CoMC%' OR major2 like '%CoMC%') ORDER BY name");
+					$results->bindParam(1, $major, PDO::PARAM_STR);
+					$results->bindParam(2, $major, PDO::PARAM_STR);
+          $results->execute();
+        } catch (Exception $e) {
+          echo "Scholarships could not be retrieved from the database.";
+        }
+        $scholarships = $results->fetchAll(PDO::FETCH_ASSOC);
+
+      } elseif ($_POST[major]!="Graduate") {
+
+        try {
+          $results = $db->prepare("SELECT * FROM scholarship WHERE type like ? AND (major1 like ? OR major2 like ? OR major1 like '%CoMC%' OR major2 like '%CoMC%') ORDER BY name");
+					$results->bindParam(1, $type, PDO::PARAM_STR);
+					$results->bindParam(2, $major, PDO::PARAM_STR);
+					$results->bindParam(3, $major, PDO::PARAM_STR);
+          $results->execute();
+        } catch (Exception $e) {
+          echo "Scholarships could not be retrieved from the database.";
+        }
+        $scholarships = $results->fetchAll(PDO::FETCH_ASSOC);
+
+      } else {
+
+        try {
+          $results = $db->prepare("SELECT * FROM dbo.scholarship WHERE type like ? AND major1 like '%Graduate%' OR major2 like '%Graduate%' ORDER BY name");
+					$results->bindParam(1, $type, PDO::PARAM_STR);
+          $results->execute();
+        } catch (Exception $e) {
+          echo "Scholarships could not be retrieved from the database.";
+        }
+        $scholarships = $results->fetchAll(PDO::FETCH_ASSOC);
+
       }
 
-      $scholarships = $results->fetchAll(PDO::FETCH_ASSOC);
+      ?>
+			<?php foreach($scholarships as $scholarship): ?>
+				<?php
+          $current_dead = new DateTime($scholarship['last_dead']);
+          $current_dead = $current_dead->format('m/d/Y');
+        ?>
+				<?php if ($scholarship['type'] != "Internal"): ?>
+					<article>
+						<table>
+							<thead>
+								<tr><th><?php echo $scholarship['name']; ?> (<em><?php echo $scholarship['type']; ?></em>)</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Provided by <?php echo $scholarship['grantor']; ?></td>
+								</tr>
+								<tr>
+									<td>Awarded to <?php echo $scholarship['major1']; if($scholarship['major2']!="" && $scholarship['major2']!=" "): echo ' and ' . $scholarship['major2'] . ' students.'; else: echo ' students.'; endif;?></td>
+								</tr>
+								<tr>
+									<td><strong>Amount:</strong> $<?php echo sprintf("%0.0f",$scholarship['amount']); ?> awarded in <?php echo $scholarship['number'] . ' ' . $scholarship['type']; if($scholarship['number'] > 1): echo ' scholarships'; else: echo ' scholarship'; endif; echo ' ' . $scholarship['frequency'] . '.'; ?></td>
+								</tr>
+								<tr>
+									<td><strong>General Deadline:</strong>&nbsp;<?php echo $scholarship['gen_dead']; ?>&nbsp;&nbsp;<strong>Current Deadline:</strong>&nbsp;<?php echo $current_dead; ?></td>
+								</tr>
+								<tr>
+									<td><strong>Scholarship Description:</strong><br /><?php echo $scholarship['description']; ?></td>
+								</tr>
+								<tr>
+									<td><strong>Special Requirements:</strong><br /><?php echo $scholarship['special']; ?></td>
+								</tr>
+								<tr>
+									<td><strong>Application Process:</strong><br /> <?php if($scholarship['sort1'] != ""): ?> <?php echo $scholarship['process'] . '<br />Online: <a href="' . $scholarship['sort1'] . '" target="_blank">' . $scholarship['sort1'] . '</a>'; ?> <?php else: ?> <?php echo $scholarship['process']; ?> <?php endif; ?></td>
+								</tr>
+							</tbody>
+						</table>
+					</article>
 
-      foreach ($scholarships as $scholarship) {
-        echo $scholarship['name'] . "<br />";
-      }
+					<?php elseif($scholarship['type'] == "Internal"): ?>
 
-    ?>
+					<article>
+						<table>
+							<thead>
+								<tr><th><?php echo $scholarship['name']; ?> (<em><?php echo $scholarship['type']; ?></em>)</th></tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Provided by <?php echo $scholarship['grantor']; ?></td>
+								</tr>
+								<tr>
+									<td>Awarded to <?php echo $scholarship['major1']; if($scholarship['major2']!="" && $scholarship['major2']!=" "): echo ' and ' . $scholarship['major2'] . ' students.'; else: echo ' students.'; endif;?></td>
+								</tr>
+								<tr>
+									<td><strong>General Deadline:</strong>&nbsp;<?php echo $scholarship['gen_dead']; ?>&nbsp;&nbsp;<strong>Current Deadline:</strong>&nbsp;<?php echo $current_dead; ?></td>
+								</tr>
+								<tr>
+									<td><strong>Scholarship Description:</strong><br /><?php echo $scholarship['description']; ?></td>
+								</tr>
+								<tr>
+									<td><strong>Special Requirements:</strong><br /><?php echo $scholarship['special']; ?></td>
+								</tr>
+							</tbody>
+						</table>
+					</article>
 
-    <h3>Search Tips</h3>
-    <p class="style2">For any &quot;search,&quot; the search engine takes whatever you enter into the search box and locates exact matches. If you enter the word &quot;minority&quot; it will NOT find cases of &quot;minorities.&quot; If you wanted to find both, you would enter &quot;minorit&quot; as your search term.</p>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
+		<p>For any "search," the search engine takes whatever you enter into the search box and locates exact matches. If you enter the word "minority" it will NOT find cases of "minorities." If you wanted to find both, you would enter "minorit" as your search term.</p>
+		<h2>Find scholarships by major</h2>
+		<?php echo '<form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="by_major" id="by_major">'; ?>
+			<select id="major" name="major">
+				<option value="Please">- Please Select -</option>
+				<option value="CoMC">Any CoMC Major</option>
+				<option value="Advertising">Advertising</option>
+				<option value="Electronic Media and Communications">Electronic Media and Communications</option>
+				<option value="Journalism">Journalism</option>
+				<option value="Public Relations">Public Relations</option>
+				<option value="Graduate">Graduate</option>
+			</select>
+			<br />
+			<select id="type" name="type">
+				<option value="Please">- Please Select -</option>
+				<option value="External">External Scholarships</option>
+				<option value="Internal">Internal Scholarships</option>
+				<option value="Both">Both Internal and External</option>
+			</select>
+			<input type="submit" value="Find" name="Submit" />
+		<?php echo '</form>'; ?>
 
-    <h3>Find scholarships  by major</h3>
-        <?php echo '<form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="by_major" id="by_major">'; ?>
-          <select name="major" id="major">
-            <option value="Please">- Please Select -</option>
-            <option value="Advertising">Advertising</option>
-            <option value="Electronic Media &amp; Comm">Electronic Media &amp; Comm</option>
-            <option value="Journalism">Journalism</option>
-            <option value="Mass Communications">Mass Communications</option>
-            <option value="Photocommunications">Photocommunications</option>
-            <option value="Public Relations">Public Relations</option>
-            <option value="Graduate">Graduate</option>
-          </select>
-          <br />
-          <select name="type" id="type">
-            <option value="Please">- Please Select -</option>
-            <option value="External">External Scholarships</option>
-            <option value="Internal">Internal Scholarships</option>
-            <option value="Both">Both Internal and External</option>
-          </select>
-          <input type="submit" name="Submit" value="Find" />
-        <?php echo '</form>'; ?>
-
-      <h3>Search a scholarship by name</h3>
-      <p>Enter the name of the scholarship or of its sponsor in the field below.
-        Hint: Try using just one name (such as the last name).</p>
-      <form action="get_ssname.php" method="post" name="find_name" id="find_name">
-        <input name="s_name" type="text" id="s_name" size="25" maxlength="30" />
-        &nbsp;&nbsp;
-        <input name="launch_name" type="submit" id="launch_name" value="Search" />
-      </form>
+    <h3>Search a scholarship by name</h3>
+    <p>Enter the name of the scholarship or of its sponsor in the field below.
+      Hint: Try using just one name (such as the last name).</p>
+    <form action="get_ssname.php" method="post" name="find_name" id="find_name">
+      <input name="s_name" type="text" id="s_name" size="25" maxlength="30" />
+      &nbsp;&nbsp;
+      <input name="launch_name" type="submit" id="launch_name" value="Search" />
+    </form>
 
       <!-- CoMC edits end here -->
 
