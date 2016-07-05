@@ -41,14 +41,12 @@ Thumbs.db
 /startupcomp/apply/*
 /info/*
 *database.php
+*db.php
 *cn.php
 *config.php
 *ttu-db-config.php
 *ttu-db.php
-
-
-/events/admin/inc/*
-/events/rsvp/inc/*
+*gradjob.php
 
 /info/*
 #
