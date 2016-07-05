@@ -9,7 +9,7 @@ function get_all_events() {
 
     require(ROOT_PATH . "inc/db.php");
 
-    $stmt = $db->prepare('SELECT * FROM events');
+    $stmt = $db->prepare('SELECT * FROM events ORDER BY datetime');
     $stmt->execute();
 
   } catch (Exception $e) {
