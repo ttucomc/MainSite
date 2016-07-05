@@ -220,7 +220,7 @@
 
         // Adding each event as an option
         foreach ($events as $event) {
-          if ($event['listed'] == 1) {
+          if ($event['listed'] == 1 && $event['rsvps'] == 1) {
             echo "<option value='" . $event['ID'] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event['name'] . "</option>";
           }
         }
@@ -326,7 +326,7 @@
 
       // Adding each event as an option
       foreach ($events as $event) {
-        if ($event['listed'] == 1) {
+        if ($event['listed'] == 1 && $event['rsvps'] == 1) {
           echo "<option value='" . $event['ID'] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event['name'] . "</option>";
         }
       }
