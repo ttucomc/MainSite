@@ -9,7 +9,7 @@
   <title>Alumni | CoMC | TTU</title>
 
   <link rel="stylesheet" type="text/css" href="/comcsite/css/ttu.css" />
-  <link rel="stylesheet" type="text/css" href="css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="css/alumni.css" />
 
   <script src="/comcsite/js/modernizr.js"></script>
 	<script src="/comcsite/js/ttuglobal.js"></script>
@@ -44,19 +44,22 @@
     <div class="small-12 column">
       <h2>Check out what some of our alumni are doing!</h2>
 
-      <!-- CONTROLS -->
-      <input type="radio" checked id="radio-front" name="select-face"/>
-      <input type="radio" id="radio-top" name="select-face"/>
-      <input type="radio" id="radio-back" name="select-face"/>
-      <input type="radio" id="radio-bottom" name="select-face"/>
-      <div id="career-cube">
-        <div class="cube">
-          <div class="cube-face cube-face-front"><p>Front</p></div>
-          <div class="cube-face cube-face-top"><p>Top</p></div>
-          <div class="cube-face cube-face-back"><p>Back</p></div>
-          <div class="cube-face cube-face-bottom"><p>Bottom</p></div>
-          <div class="cube-face cube-face-left"></div>
-          <div class="cube-face cube-face-right"></div>
+      <div id="alumni-titles">
+        <div id="career-cube">
+          <div class="cube">
+            <div class="cube-face cube-face-front"><p>Digital Community Promotions Producer - <em>KCBD-TV-Lubbock, Texas</em></p></div>
+            <div class="cube-face cube-face-top"><p>&nbsp;</p></div>
+            <div class="cube-face cube-face-back"><p>&nbsp;</p></div>
+            <div class="cube-face cube-face-bottom"><p>&nbsp;</p></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+          </div>
+        </div>
+        <div id="controls">
+          <p>
+            <a href="#" class="back icon-left">&nbsp;</a>
+            <a href="#" class="forward icon-right">&nbsp;</a>
+          </p>
         </div>
       </div>
 
@@ -87,6 +90,7 @@
       <p><a class="external" href="/comc/programs/journalism/newsarchiveemc.php">News Archive</a></p>
     </div>
   </section>
+  <script src="/comc/includes/js/alumni.js"></script>
   <!-- ADD MAIN CONTENT ABOVE THIS LINE -->
 
 
