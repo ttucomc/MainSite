@@ -74,7 +74,6 @@
 
 			<?php if(isset($_POST["Submit"])): // If they selected a major?>
 
-				<h2><?php if($_POST[type] == 'Both'): echo 'All'; else: echo "$_POST[type]"; endif; ?> Scholarships Available to <?php echo "$_POST[major]"; ?> Students</h2>
 				<?php echo '<form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="by_major" id="by_major">'; ?>
 					<select id="major" name="major">
 						<option value="Please">- Please Select -</option>
@@ -89,13 +88,15 @@
 					<input type="hidden" name="type" value="Both" />
 					<input type="submit" value="Find" name="Submit" />
 				<?php echo '</form>'; ?>
-				<br />
+				<h3>Search by name instead.</h3>
 				<p><small>For any "search," the search engine takes whatever you enter into the search box and locates exact matches. If you enter the word "minority" it will NOT find cases of "minorities." If you wanted to find both, you would enter "minorit" as your search term.</small></p>
 		    <?php echo '<form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="find_name" id="find_name">'; ?>
 		      <input name="s_name" type="text" id="s_name" size="25" maxlength="30" />
 		      &nbsp;&nbsp;
 		      <input name="Search" type="submit" id="launch_name" value="Search" />
 		    <?php echo '</form>'; ?>
+
+				<h2><?php if($_POST[type] == 'Both'): echo 'All'; else: echo "$_POST[type]"; endif; ?> Scholarships Available to <?php echo "$_POST[major]"; ?> Students</h2>
 
 				<?php
 
@@ -222,7 +223,6 @@
 					}
 				?>
 
-				<h2>Scholarships containing &quot;<?php echo htmlspecialchars("$_POST[s_name]"); ?>&quot; </h2>
 				<p><small>For any "search," the search engine takes whatever you enter into the search box and locates exact matches. If you enter the word "minority" it will NOT find cases of "minorities." If you wanted to find both, you would enter "minorit" as your search term.</small></p>
 		    <?php echo '<form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="find_name" id="find_name">'; ?>
 		      <?php echo '<input name="s_name" type="text" id="s_name" size="25" maxlength="30" value="'. htmlspecialchars($_POST[s_name]) . '" />'; ?>
@@ -246,6 +246,8 @@
 					<input type="hidden" name="type" value="Both" />
 					<input type="submit" value="Find" name="Submit" />
 				<?php echo '</form>'; ?>
+
+				<h2>Scholarships containing &quot;<?php echo htmlspecialchars("$_POST[s_name]"); ?>&quot; </h2>
 
 				<?php
 
