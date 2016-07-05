@@ -2,7 +2,7 @@
 
 require_once('inc/config.php');
 require_once('inc/functions.php');
-require_once('/comc/events/admin/include.php');
+// require_once('/comc/events/admin/include.php');
 
 // Getting all events from db
 $events = get_all_events();
@@ -66,24 +66,37 @@ $events = get_all_events();
           $invitees =  get_invitees($event['ID']);
           $guests = get_guests($event['ID']);
         ?>
-          <h4>Details<?php if($event['listed'] == 0) { echo ' &mdash; <em>Inactive</em>'; } ?></h4>
-          <p id="details-<?php echo $event['ID']; ?>">
-            <strong>Location:</strong> <span class="event-location"><?php echo $event['location']; ?></span><br />
-            <strong>Address:</strong> <span class="event-address"><?php echo $event['address'] ?></span> (<a class="event-directions" href="http://maps.google.com/?q=<?php echo $event['address']; ?>" target="_blank">Directions</a>)<br />
-            <strong>Time:</strong> <span class="event-date"><?php echo date('m/j/Y', strtotime($event['datetime'])); ?></span> - <span class="event-time"><?php echo date('h:i A', strtotime($event['datetime'])); ?></span><br />
-            <strong>RSVP Password:</strong> <span class="event-password"><?php echo $event['password']; ?></span>
-          </p>
+          <h3>Details<?php if($event['listed'] == 0) { echo ' &mdash; <em>Inactive</em>'; } ?></h3>
+          <div id="details-<?php echo $event['ID']; ?>">
+            <p>
+              <strong>Location:</strong> <span class="event-location"><?php echo $event['location']; ?></span><br />
+              <strong>Address:</strong> <span class="event-address"><?php echo $event['address'] ?></span> (<a class="event-directions" href="http://maps.google.com/?q=<?php echo $event['address']; ?>" target="_blank">Directions</a>)<br />
+              <strong>Time:</strong> <span class="event-date"><?php echo date('m/j/Y', strtotime($event['datetime'])); ?></span> - <span class="event-time"><?php echo date('h:i A', strtotime($event['datetime'])); ?></span>
+            </p>
 
-          <p>
-            Total RSVPs: <?php echo total_rsvps($invitees); ?><br />
-            Total People Attending: <?php echo total_attending($invitees, $guests); ?>
-          </p>
+            <h4>RSVPs</h4>
+            <form>
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="rsvp-switch-<?php echo $event['ID']; ?>">
+                <input type="checkbox" id="rsvp-switch-<?php echo $event['ID']; ?>" class="mdl-switch__input event-rsvp-switch" value="yes" <?php if($event['rsvps'] == 1): ?>checked<?php endif; ?> data-event-id="<?php echo $event['ID']; ?>">
+                <span class="mdl-switch__label">Toggle off/on</span>
+              </label>
+            </form>
+            <?php if($event['rsvps'] == 1): ?>
+              <p id="rsvp-details-<?php echo $event['ID']; ?>">
+                <strong>RSVP Password:</strong> <span class="event-password"><?php echo $event['password']; ?></span><br />
+                <strong>Total RSVPs:</strong> <?php echo total_rsvps($invitees); ?><br />
+                <strong>Total People Attending:</strong> <?php echo total_attending($invitees, $guests); ?>
+              </p>
+            <?php endif; ?>
+          </div>
       </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo BASE_URL . 'rsvps/?id=' . $event['ID']; ?>">
-          See Who's Coming
-        </a>
-      </div>
+      <?php if($event['rsvps'] == 1): ?>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo BASE_URL . 'rsvps/?id=' . $event['ID']; ?>">
+            See Who's Coming
+          </a>
+        </div>
+      <?php endif; ?>
       <div class="mdl-card__menu">
         <button id="event-card-menu-<?php echo $event['ID']; ?>" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">more_vert</i>
@@ -127,6 +140,10 @@ $events = get_all_events();
         <input class="mdl-textfield__input" type="text" id="add-event-time" name="add-event-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$">
         <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span>
       </div>
+      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="add-rsvp-switch">
+        <input type="checkbox" id="add-rsvp-switch" name="add-rsvp-switch" class="mdl-switch__input" value="yes" checked>
+        <span class="mdl-switch__label">RSVPs off/on</span>
+      </label>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <label class="mdl-textfield__label" for="add-event-password">RSVP Password</label>
         <input class="mdl-textfield__input" type="text" id="add-event-password" name="add-event-password">
@@ -267,6 +284,53 @@ $events = get_all_events();
 
       return false;
 
+    });
+
+
+
+    // Toggle RSVPs
+    $('.event-rsvp-switch').change(function() {
+      var eventID = $(this).data('event-id');
+      var eventCard = $(this).closest('.event-card');
+
+      if (this.checked) {
+        var rsvps = 1;
+      } else {
+        var rsvps = 0;
+      }
+
+      show_loader();
+
+      $.ajax({
+        type: 'GET',
+        url: 'inc/events.php',
+        dataType: 'json',
+        data: {'rsvpsToggled': eventID},
+        success: function(data) {
+          // Show success message
+          var messageSuccess = document.querySelector('#action-message');
+          var messageData = {message: 'This event\'s RSVPs has been toggled!'};
+          messageSuccess.MaterialSnackbar.showSnackbar(messageData);
+
+          // Update the card to show the status is toggled
+          if (!rsvps) {
+            $('#rsvp-details-' + eventID).remove();
+            $(eventCard).find('.mdl-card__actions').remove();
+          } else {
+            // Adding rsvp information
+            $('#details-' + eventID).append('<p id="rsvp-details-' + eventID + '"><strong>RSVP Password:</strong> <span class="event-password">' + data['password'] + '</span><br /><strong>Total RSVPs:</strong> 0<br /><strong>Total People Attending:</strong> 0</p>');
+
+            // Adding bottom link to view rsvps
+            $(eventCard).find('.mdl-card__supporting-text').after('<div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo BASE_URL; ?>rsvps/?id=' + eventID + '">See Who\'s Coming</a></div>');
+
+          }
+
+        }
+      }).done(function() {
+        hide_loader();
+      });
+
+      return false;
     });
 
 

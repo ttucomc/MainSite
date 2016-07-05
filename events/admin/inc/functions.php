@@ -156,30 +156,37 @@ function invitees_guests($invitee, $guests) {
  * @param  str  $password    Password to be used in RSVPs
  * @return bool $eventAdded Whether adding the event failed or not
  */
-function add_event($name, $location, $address, $date, $time, $password) {
+function add_event($name, $location, $address, $date, $time, $password, $rsvps) {
   require(ROOT_PATH . "inc/db.php");
 
   $date = date('Y-m-d', strtotime($date));
   $time = date('H:i:s', strtotime($time));
   $datetime = $date . ' ' . $time;
 
+  if($rsvps != 'yes') {
+    $rsvps = 0;
+  } else {
+    $rsvps = 1;
+  }
+
   try {
 
     $stmt = $db->prepare('
-                          INSERT INTO events (name, datetime, location, address, password)
-                          VALUES (:name, :datetime, :location, :address, :password)
+                          INSERT INTO events (name, datetime, location, address, password, rsvps)
+                          VALUES (:name, :datetime, :location, :address, :password, :rsvps)
                         ');
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
     $stmt->bindParam(':location', $location, PDO::PARAM_STR);
     $stmt->bindParam(':address', $address, PDO::PARAM_STR);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+    $stmt->bindParam(':rsvps', $rsvps, PDO::PARAM_INT);
     $stmt->execute();
 
     $eventAdded = true;
 
   } catch (Exception $e) {
-    echo "Could not add data to the database.";
+    echo "Could not add data to the database." . $e->getMessage();
     $eventAdded = false;
   }
 
@@ -228,6 +235,53 @@ function edit_event($eventID, $name, $location, $address, $date, $time, $passwor
   }
 
   return $eventEdited;
+
+}
+
+/**
+ * Toggles RSVPs on or off
+ * @param  int  $event   The event ID
+ * @return bool $toggled If the update succeeded or failed
+ */
+function toggle_event_rsvp($event){
+  require(ROOT_PATH . "inc/db.php");
+
+  try {
+
+    $stmt = $db->prepare('
+                          SELECT * FROM events
+                          WHERE ID=:event
+                         ');
+    $stmt->bindParam(':event', $event, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $events = $stmt->fetch(PDO::FETCH_ASSOC);
+    $eventRsvps = (int)$events['rsvps'];
+
+    if($eventRsvps == 0) {
+      $eventRsvps = 1;
+    } else {
+      $eventRsvps = 0;
+    }
+
+    $stmt = $db->prepare('
+                          UPDATE events
+                          SET rsvps=:rsvps
+                          WHERE ID=:event
+                        ');
+    $stmt->bindParam(':rsvps', $eventRsvps, PDO::PARAM_INT);
+    $stmt->bindParam(':event', $event, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $toggled = true;
+
+  } catch (Exception $e) {
+    echo "Couldn't toggle RSVPs on or off";
+    $toggled = false;
+  }
+
+  echo json_encode($events);
+  return $toggled;
 
 }
 
