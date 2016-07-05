@@ -82,6 +82,9 @@ header {
   .mdl-card__menu {
     color: #FFF;
   }
+  &.inactive {
+    opacity: 0.8;
+  }
 }
 
 #add-event {
