@@ -52,6 +52,10 @@
 
 #opportunities {
 
+  .mdl-button--icon {
+    float: right; //Force dots to be on the right
+  }
+
   .cardContainer {
     padding: 1em 2em;
 

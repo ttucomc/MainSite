@@ -9,6 +9,17 @@ College Of Media and Communications
 */
 
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+//Connect to DB
+require("../db.php");
+require("../model/Opportunity.php");
+
+
+$opportunities = Opportunity::getActiveOpportunities($db);
+
 
 ?>
 
@@ -70,45 +81,6 @@ College Of Media and Communications
 
   </div>
   <!-- End Tighten -->
-  <div class="row ">
-
-    <div class="large-4 columns">
-      <div class="mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">Web Developer</h2>
-        </div>
-
-        <h4 class="card-title">Description</h4>
-        <div class="card-text">Web Development Internship</div>
-        <div class='card-text'>06/20/2016</div>
-        <br />
-        <div class="mdl-card__actions mdl-card--border"></div>
-        <h4 class="card-title">Company</h4>
-        <div class="card-text">College of Media and Commnication</div>
-        <br />
-        <div class="mdl-card__actions mdl-card--border"></div>
-        <h4 class="card-title">Contact</h4>
-        <div class="card-text">Kuhrt Cowan</div>
-        <div class="card-text">806.789.5172</div>
-        <div class="card-text">kuhrt.cowan@ttu.edu</div>
-        <br />
-
-        <div class="mdl-card__menu">
-          <!-- Left aligned menu below button -->
-          <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
-            <i class="material-icons">more_vert</i>
-          </button>
-
-          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-              for="demo-menu-lower-right">
-            <li id="" class="mdl-menu__item">Edit Opportunity</li>
-            <li id="" class="mdl-menu__item">Delete Opportunity</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
 </div>
 
@@ -203,6 +175,95 @@ College Of Media and Communications
 </div>
 
 
+<section id="opportunities">
+  <div class="row">
+
+
+  <?php
+
+  $count = 0;
+
+  foreach ($opportunities as $key => $value) {
+
+    if($count % 3 == 0) {
+      echo '</div><div class="row">';
+    }
+
+    $count++;
+
+    ?>
+
+    <div id="card_<?php echo $value["id"] ?>" class='cardContainer large-4 columns'>
+      <div class="card mdl-shadow--4dp">
+        <div class="header">
+          <!-- Right aligned menu below button -->
+          <button id="demo-menu-lower-right-<?php echo $count ?>"
+                  class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">more_vert</i>
+          </button>
+
+          <ul class="mdl-menu mdl-menu--bottom-right-<?php echo $count ?> mdl-js-menu mdl-js-ripple-effect"
+              for="demo-menu-lower-right-<?php echo $count ?>">
+            <li class="mdl-menu__item" onclick="editOpportunity(<?php echo $value["id"] ?>)">Edit Opportunity</li>
+            <li class="mdl-menu__item" onclick="deleteOpportunity(<?php echo $value["id"] ?>)">Delete Opportunity</li>
+          </ul>
+
+          <h3><?php echo $value["jobName"] ?></h3>
+        </div>
+        <div class="body">
+
+          <h4>Description</h4>
+          <div class='desc'><?php echo $value["jobPosition"] ?></div>
+          <div class='desc'><?php echo $value["description"] ?></div>
+
+
+          <?php if(isset($value["startDate"]) && !empty($value["startDate"])) { ?>
+            <div class='desc'>Start: <?php
+
+              $date = new DateTime($value["startDate"]);
+              echo $date->format('m/d/Y'); //Month/Day/Year
+
+            ?></div>
+          <?php } ?>
+
+          <?php if(isset($value["endDate"]) && !empty($value["endDate"])) { ?>
+            <div class='desc'>End: <?php
+
+              $date = new DateTime($value["endDate"]);
+              echo $date->format('m/d/Y'); //Month/Day/Year
+
+            ?></div>
+          <?php } ?>
+
+          <h4>Company</h4>
+          <div class='desc'><?php echo $value["companyName"] ?></div>
+          <div class='desc'><?php echo $value["city"] . ", " . $value["state"] ?></div>
+
+          <div class="footer">
+            <h4>Contact</h4>
+            <div><?php echo $value["firstName"] . " " . $value["lastName"] ?></div>
+            <div><?php echo $value["phone"] ?></div>
+            <div><?php echo $value["email"] ?></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <?php } ?>
+  </div>
+
+
+</section>
+
+
+
+
+<div id="snackbar_deleted" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
+</div>
+
 
 <script>
 
@@ -223,8 +284,49 @@ College Of Media and Communications
 
     .done(function( data ) {
         console.log( data );
+        $("#overlay").toggle();
     });
   });
+
+  function editOpportunity(id) {
+
+
+
+  }
+
+  function deleteOpportunity(id) {
+
+    var snackbarContainer = document.querySelector('#snackbar_deleted');
+
+    $.post("delete.php", { id: id })
+
+    .done(function( data ) {
+        console.log( data );
+
+        if(data == "true") {
+          //console.log('it worked');
+
+          $('#card_' + id).fadeToggle();
+
+          var data = {
+            message: 'Opportunity has been deleted.',
+            timeout: 2000
+          };
+          snackbarContainer.MaterialSnackbar.showSnackbar(data);
+
+        } else {
+          //console.log('broken');
+
+          var data = {
+            message: 'Something went wrong, try refreshing the browser.',
+            timeout: 2000
+          };
+          snackbarContainer.MaterialSnackbar.showSnackbar(data);
+
+        }
+    });
+
+  }
 
 
 </script>

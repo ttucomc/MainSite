@@ -11,8 +11,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 //Connect to DB
-require("model/db.php");
-require("model/Company.php");
+require("db.php");
+require("model/Opportunity.php");
 
 
 //Get the user type
@@ -28,9 +28,7 @@ require("model/Company.php");
 
 
 //If user, display all jobs with information about each.
-
-
-
+$opportunities = Opportunity::getActiveOpportunities($db);
 
 ?>
 
@@ -69,112 +67,70 @@ require("model/Company.php");
 </section>
 
 <section id="opportunities">
-
   <div class="row">
 
+
+  <?php
+
+  $count = 0;
+
+  foreach ($opportunities as $key => $value) {
+
+    if($count % 3 == 0) {
+      echo '</div><div class="row">';
+    }
+
+    $count++;
+
+    ?>
+
     <div class='cardContainer large-4 columns'>
       <div class="card mdl-shadow--4dp">
         <div class="header">
-          <h3>Web Developer</h3>
+          <h3><?php echo $value["jobName"] ?></h3>
         </div>
         <div class="body">
 
           <h4>Description</h4>
-          <div class='desc'>Web Development Internship</div>
-          <div class='desc'>06/20/2016</div>
+          <div class='desc'><?php echo $value["jobPosition"] ?></div>
+          <div class='desc'><?php echo $value["description"] ?></div>
+
+
+          <?php if(isset($value["startDate"]) && !empty($value["startDate"])) { ?>
+            <div class='desc'>Start: <?php
+
+              $date = new DateTime($value["startDate"]);
+              echo $date->format('m/d/Y'); //Month/Day/Year
+
+            ?></div>
+          <?php } ?>
+
+          <?php if(isset($value["endDate"]) && !empty($value["endDate"])) { ?>
+            <div class='desc'>End: <?php
+
+              $date = new DateTime($value["endDate"]);
+              echo $date->format('m/d/Y'); //Month/Day/Year
+
+            ?></div>
+          <?php } ?>
 
           <h4>Company</h4>
-          <div class='desc'>Texas Tech University</div>
-          <div class='desc'>College of Media and Commnication</div>
+          <div class='desc'><?php echo $value["companyName"] ?></div>
+          <div class='desc'><?php echo $value["city"] . ", " . $value["state"] ?></div>
 
           <div class="footer">
             <h4>Contact</h4>
-            <div>Kuhrt Cowan</div>
-            <div>806.789.5172</div>
-            <div>kuhrt.cowan@ttu.edu</div>
+            <div><?php echo $value["firstName"] . " " . $value["lastName"] ?></div>
+            <div><?php echo $value["phone"] ?></div>
+            <div><?php echo $value["email"] ?></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class='cardContainer large-4 columns'>
-      <div class="card mdl-shadow--4dp">
-        <div class="header">
-          <h3>Web Developer</h3>
-        </div>
-        <div class="body">
 
-          <h4>Description</h4>
-          <div class='desc'>Web Development Internship</div>
-
-          <h4>Company</h4>
-          <div class='desc'>Texas Tech University</div>
-          <div class='desc'>College of Media and Commnication</div>
-
-          <div class="footer">
-            <h4>Contact</h4>
-            <div>Kuhrt Cowan</div>
-            <div>806.789.5172</div>
-            <div>kuhrt.cowan@ttu.edu</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class='cardContainer large-4 columns'>
-      <div class="card mdl-shadow--4dp">
-        <div class="header">
-          <h3>Web Developer</h3>
-        </div>
-        <div class="body">
-
-          <h4>Description</h4>
-          <div class='desc'>Web Development Internship</div>
-
-          <h4>Company</h4>
-          <div class='desc'>Texas Tech University</div>
-          <div class='desc'>College of Media and Commnication</div>
-
-          <div class="footer">
-            <h4>Contact</h4>
-            <div>Kuhrt Cowan</div>
-            <div>806.789.5172</div>
-            <div>kuhrt.cowan@ttu.edu</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <?php } ?>
   </div>
-
-  <div class="row">
-    <div class='cardContainer large-4 columns'>
-      <div class="card mdl-shadow--4dp">
-        <div class="header">
-          <h3>Web Developer</h3>
-        </div>
-        <div class="body">
-
-          <h4>Description</h4>
-          <div class='desc'>Web Development Internship</div>
-
-          <h4>Company</h4>
-          <div class='desc'>Texas Tech University</div>
-          <div class='desc'>College of Media and Commnication</div>
-
-          <div class="footer">
-            <h4>Contact</h4>
-            <div>Kuhrt Cowan</div>
-            <div>806.789.5172</div>
-            <div>kuhrt.cowan@ttu.edu</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
 
 
 </section>

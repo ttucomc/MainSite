@@ -8,6 +8,10 @@ College Of Media and Communications
 
 */
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 class Opportunity {
 
   /*
@@ -104,11 +108,10 @@ class Opportunity {
         $createOpportunity = $db->prepare('INSERT INTO jobs_all
           (isActive, jobType, isPaid, jobName, jobPosition, description, startDate, endDate,
           companyName, city, state,
-          firstName, lastName, phone, email)
-
+          firstName, lastName, phone, email, dateCreated)
           VALUES (1, :jobType, :isPaid, :jobName, :jobPosition, :description, :start, :end,
           :companyName, :city, :state,
-          :firstName, :lastName, :phone, :email, now())');
+          :firstName, :lastName, :phone, :email, now());');
 
         //Opporunity
         $createOpportunity->bindParam(':jobType', $opportunity['jobType'], PDO::PARAM_INT);
@@ -166,20 +169,43 @@ class Opportunity {
       return $instance;
   }
 
+  public static function deleteOpportunity(PDO $db, $id) {
+
+    try {
+
+      $dropOpportunities = $db->prepare('DELETE FROM jobs_all WHERE id = ?');
+      $dropOpportunities->bindParam(1, $id, PDO::PARAM_INT);
+      return $dropOpportunities->execute();
+
+    } catch(Exception $e) {
+      echo $e->getMesage();
+      die();
+    }
+  }
+
   /*
 
     Searches and returns all active opportunities.
     Because this is not specified to one instance, it is static.
 
     @param db PDO DB Connection
-    @return array Opportunities
+    @return PDO Execute
 
   */
 
   public static function getActiveOpportunities(PDO $db) {
 
-    
+    try {
 
+      $getOpportunities = $db->prepare('SELECT * FROM jobs_all WHERE isActive = 1');
+      $getOpportunities->execute();
+
+      return $getOpportunities->fetchAll();
+
+    } catch(Exception $e) {
+      echo $e->getMesage();
+      die();
+    }
 
   }
 

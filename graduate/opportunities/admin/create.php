@@ -69,11 +69,7 @@ $contact = array(
 
 );
 
-
-
-$newOpporunity = opportunity::createNewOpportunity($db, $opportunity, $company, $contact);
-
-echo var_dump($newOpporunity);
+$newOpporunity = Opportunity::createNewOpportunity($db, $opportunity, $company, $contact);
 
 //echo var_dump($opporunity) . "       " . var_dump($company) . "       " . var_dump($contact);
 
