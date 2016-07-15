@@ -542,9 +542,9 @@
 					<h3><a href="/comc/about/publications/advantage/index.php">Alumni Advantage</a></h3>
 					<p class="hidden-mobile"><a href="/comc/about/publications/advantage/index.php"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
 				</div>
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Dana Jennings" src="/comc/about/publications/adviser/2016/images/may/dana-jennings.jpg" alt="Dana Jennings" /></a>
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Robin Duffee" src="/comc/about/images/ambassadors/rduffee.jpg" alt="Robin Duffee" /></a>
 					<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Student Spotlight: Dana Jennings</strong><br /><br />Dana Jennings is finishing up her senior year at Texas Tech University. Originally a biology major, Jennings has found a home in the College of Media &amp; Communication where she is studying public relations.<br /><br /><em>More...</em></a></p>
+					<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Get to Know Your Ambassador: Robin Duffee</strong><br /><br />I became an ambassador when one of my favorite professors told me about the opportunity and encouraged me to apply. I was definitely nervous, but I was so passionate about my major and I wanted to do anything I could to help spread the word about all the wonderful programs CoMC has to offer!<br /><br /><em>More...</em></a></p>
 				</div>
 				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="Media &amp; Communication Learning Community" src="/comc/about/publications/converging/2016/images/may/mclc.jpg" alt="Media &amp; Communication Learning Community" /> </a>
 					<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
@@ -557,7 +557,7 @@
 			</div>
 		</section>
 		<section class="row">
-			<div id="home-social"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/TTU_MCOM">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
+			<div id="home-social"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/ttu_comc">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
 				<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
 			</div>
 		</section>

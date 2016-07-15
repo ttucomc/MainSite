@@ -14,8 +14,8 @@
 
   <?php
 
-  require_once('inc/config.php');
-  require_once('inc/database.php');
+  require_once('/comc/includes/ttu-db-config.php');
+  require_once('/comc/includes/ttu-db.php');
 
   // Overall if statement to determine if the form has been submitted or not
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -36,12 +36,12 @@
 
       // Info for interested person
       $stmt = $db->prepare("
-                            INSERT INTO ads (last_name, first_name, email, campaign)
+                            INSERT INTO ads (first_name, last_name, email, campaign)
                             VALUES (:first_name, :last_name, :email, :campaign)
                           ");
       // Binding Parameters
-      $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
       $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
+      $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
       $stmt->bindParam(':email', $email, PDO::PARAM_STR);
       $stmt->bindParam(':campaign', $campaign, PDO::PARAM_STR);
       // Executing to DB
@@ -205,5 +205,15 @@
   </section>
 
   <?php } // Ends overall else statement ?>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-38232832-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
 </html>
