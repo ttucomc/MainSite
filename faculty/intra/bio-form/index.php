@@ -19,13 +19,13 @@
 
   if ($_SERVER["REQUEST_METHOD"] == "POST"):
 
-    require '../../includes/phpmailer/PHPMailerAutoload.php';
+    require '../../../includes/phpmailer/PHPMailerAutoload.php';
 
     /*---Variables-------------------------------------*/
     $college = 'College of Media & Communication';
     $subject = 'Faculty/Staff Bio Form';
 
-    if(isset($_POST["f_form"])) {
+    if(isset($_POST["f_name"])) {
       // If the faculty form is submitted
       $name = $_POST['f_name'];
       $email = $_POST['f_email'];
@@ -40,7 +40,7 @@
       $courses = $_POST['f_courses'];
       $publications = $_POST['f_publications'];
       $awards = $_POST['f_awards'];
-    } elseif (isset($_POST["s_form"])) {
+    } elseif (isset($_POST["s_name"])) {
       // If the staff form is submitted
       $name = $_POST['s_name'];
       $email = $_POST['s_email'];
@@ -58,22 +58,22 @@
     }
 
     /* a boundary string */
-    $randomVal = md5(time());
-    $mimeBoundary = "==Multipart_Boundary_x{$randomVal}x";
+    // $randomVal = md5(time());
+    // $mimeBoundary = "==Multipart_Boundary_x{$randomVal}x";
 
     /*---Email to Webmaster-------------------------------------*/
-    $headers = "From: " . $name . " <" . $email . ">\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: multipart/mixed;\r\n";
-    $headers .= " boundary=\"{$mimeBoundary}\"";
+    // $headers = "From: " . $name . " <" . $email . ">\r\n";
+    // $headers .= "Reply-To: " . $email . "\r\n";
+    // $headers .= "MIME-Version: 1.0\r\n";
+    // $headers .= "Content-Type: multipart/mixed;\r\n";
+    // $headers .= " boundary=\"{$mimeBoundary}\"";
 
     $to = "kuhrt.cowan@ttu.edu";
 
     // Message
     $msg = '<html><body>';
     $msg .= '<table width="100%" cellpadding="10">';
-    $msg .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . (isset($_POST["f_form"]) ? "Faculty" : "Staff")  . " Bio Form</h1></td></tr>";
+    $msg .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . (isset($_POST["f_name"]) ? "Faculty" : "Staff")  . " Bio Form</h1></td></tr>";
     $msg .= "<tr style='background: #EEEEEE;'><td colspan='2'><h2>Name: " . $name . "</h2></td></tr>";
     $msg .= "<tr><td><strong>Title:</strong></td><td>" . $title . "</td></tr>";
     $msg .= "<tr style='background: #EEEEEE;'><td><strong>Department:</strong></td><td>" . $dept . "</td></tr>";
@@ -81,10 +81,10 @@
     $msg .= "<tr style='background: #EEEEEE;'><td><strong>Hours:</strong></td><td>" . $hours . "</td></tr>";
     $msg .= "<tr><td><strong>Degrees:</strong></td><td>" . $degree1 . ($degree2 != "" ? "<br />$degree2" : "") . ($degree3 != "" ? "<br />$degree3" : "") . "</td></tr>";
     $msg .= "<tr style='background: #EEEEEE;'><td><strong>Bio:</strong></td><td>" . $bio . "</td></tr>";
-    if(isset($_POST["f_form"])) {
+    if(isset($_POST["f_name"])) {
       $msg .= "<tr><td><strong>Courses:</strong></td><td>" . $courses . "</td></tr>";
       $msg .= "<tr style='background: #EEEEEE;'><td><strong>Publications:</strong></td><td>" . $publications . "</td></tr>";
-    } elseif (isset($_POST["s_form"])) {
+    } elseif (isset($_POST["s_name"])) {
       $msg .= "<tr><td><strong>Duties:</strong></td><td>" . $duties . "</td></tr>";
       $msg .= "<tr style='background: #EEEEEE;'><td><strong>Training:</strong></td><td>" . $training . "</td></tr>";
     }
@@ -92,44 +92,55 @@
     $msg .= "</table>";
     $msg .= "</body></html>";
 
-
+    echo "Creating new PHPMailer<br />";
     $mail = new PHPMailer;
 
-    $mail->SMTPDebug = 3;
+    echo "Creating SMTPDebug<br />";
+    $mail->SMTPDebug = 2;
 
+    echo "Setting SMTP<br />";
     $mail->isSMTP();
-    $mail->Host = 'https://smtp.ttu.edu';
+    echo "Setting host <br />";
+    $mail->Host = gethostbyname('smtp.gmail.com');
+    echo "Setting SMTPAuth<br />";
     $mail->SMTPAuth = true;
-    $mail->Username = 'kuhrt.cowan@ttu.edu';
-    $mail->Password = 'L1nd$3y12c';
+    echo "Setting username<br />";
+    $mail->Username = 'ttumcom@gmail.com';
+    echo "Setting password<br />";
+    $mail->Password = 'echoecho';
+    echo "Setting SMTPSecure<br />";
     $mail->SMTPSecure = 'tls';
-    $mail->Port = 25;
+    echo "Setting port<br />";
+    $mail->Port = 587;
 
+    echo "Setting from<br />";
     $mail->setFrom($email, $name);
+    echo "Setting to address<br />";
     $mail->addAddress('kuhrt.cowan@ttu.edu', 'Kuhrt Cowan');
+    echo "Adding reply to<br />";
     $mail->addReplyTo($email, $name);
 
+    echo "Setting HTML msg<br />";
     $mail->isHTML(true);                                  // Set email format to HTML
 
+    echo "Setting subject<br />";
     $mail->Subject = $subject;
+    echo "Setting body<br />";
     $mail->Body    = $msg;
 
-    if(isset($_POST["f_form"])) {
-      $uploadfile = tempnam(sys_get_temp_dir(), sha1($_FILES['f_cv']['name'][$ct]));
-      $filename = $_FILES['f_cv']['name'][$ct];
-      if (move_uploaded_file($_FILES['f_cv']['tmp_name'][$ct], $uploadfile)) {
-        $mail->addAttachment($uploadfile, $filename);
-      } else {
-        $msg .= 'Failed to move file to ' . $uploadfile;
-      }
-    }
+    // if (isset($_FILES['f_cv'])) {
+    //     $mail->AddAttachment($_FILES['f_cv']['tmp_name'],
+    //                          $_FILES['f_cv']['name']);
+    // }
 
+    echo "Sending mail<br />";
     if(!$mail->send()) {
         echo 'Message could not be sent.';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
         echo 'Message has been sent';
     }
+    echo "Mail Sent!<br />";
 
 
 
@@ -142,20 +153,20 @@
     // $msg . "\n\n";
     //
     // if(isset($_POST["f_form"])) {
-    //   /* GET File Variables */
+      /* GET File Variables */
     //   $tmpName = $_FILES['f_cv']['tmp_name'];
     //   $fileType = $_FILES['f_cv']['type'];
     //   $fileName = $_FILES['f_cv']['name'];
     //
-    //   /* Reading file ('rb' = read binary)  */
+      /* Reading file ('rb' = read binary)  */
     //   $file = fopen($tmpName,'rb');
     //   $data = fread($file,filesize($tmpName));
     //   fclose($file);
     //
-    //   /* Encoding file data */
+      /* Encoding file data */
     //   $data = chunk_split(base64_encode($data));
     //
-    //   /* Adding attchment-file to message*/
+      /* Adding attchment-file to message*/
     //   $msg .= "--{$mimeBoundary}\n" .
     //   "Content-Type: {$fileType};\n" .
     //   " name=\"{$fileName}\"\n" .
@@ -320,13 +331,24 @@
         }
       });
 
-      $('form :submit').click(function() {
-        // Fading form
-        $('form').fadeTo('fast', 0.4);
-        // Showing loader next to button
-        $('.form-loader').fadeTo('fast', 1);
-        // Changing text in button
-        $('form :submit').attr('value', 'Loading...');
+      // When the submit button is clicked
+      $('form :submit').click(function () {
+        // Making sure all require fields are filled
+        var isValid = true;
+        $('input[required="required"]').each(function() {
+          if ( $(this).val() === '' )
+          isValid = false;
+        });
+
+        // If required fields are filled
+        if (isValid) {
+          // Fading form
+          $('form').fadeTo('fast', 0.4);
+          // Showing loader next to button
+          $('.form-loader').fadeTo('fast', 1);
+          // Changing text in button
+          $('form :submit').attr('value', 'Loading...');
+        }
       });
 
     </script>
