@@ -20,9 +20,7 @@ require("../model/Opportunity.php");
 
 $opportunities = Opportunity::getActiveOpportunities($db);
 
-
 ?>
-
 
 <html>
 <head>
@@ -55,26 +53,8 @@ $opportunities = Opportunity::getActiveOpportunities($db);
   <!-- Start Tighten -->
   <div class="row tighten">
 
-    <div class="large-4 columns">
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sort-text">
-          <label class="mdl-textfield__label" for="sort-text">Sort by Opportunity Title</label>
-        </div>
-      </form>
-    </div>
-
-    <div class="large-4 columns">
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" id="sort-text">
-          <label class="mdl-textfield__label" for="sort-text">Sort by Date</label>
-        </div>
-      </form>
-    </div>
-
-    <div class="large-4 columns">
-      <button id="create" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Create Opportunity</button>
+    <div class="large-4 large-offset-4 columns">
+      <button id="create" class="create mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Create Opportunity</button>
     </div>
 
     <div class="clearfix"/></div>
@@ -178,7 +158,6 @@ $opportunities = Opportunity::getActiveOpportunities($db);
 <section id="opportunities">
   <div class="row">
 
-
   <?php
 
   $count = 0;
@@ -194,6 +173,11 @@ $opportunities = Opportunity::getActiveOpportunities($db);
     ?>
 
     <div id="card_<?php echo $value["id"] ?>" class='cardContainer large-4 columns'>
+
+      <div id="json_<?php echo $value["id"] ?>" style="display: none">
+        <?php echo json_encode($value); ?>
+      </div>
+
       <div class="card mdl-shadow--4dp">
         <div class="header">
           <!-- Right aligned menu below button -->
@@ -210,7 +194,7 @@ $opportunities = Opportunity::getActiveOpportunities($db);
 
           <h3><?php echo $value["jobName"] ?></h3>
         </div>
-        <div class="body">
+        <div id="body_<?php echo $value["id"] ?>" class="body">
 
           <h4>Description</h4>
           <div class='desc'><?php echo $value["jobPosition"] ?></div>
@@ -246,6 +230,90 @@ $opportunities = Opportunity::getActiveOpportunities($db);
             <div><?php echo $value["email"] ?></div>
           </div>
         </div>
+
+        <div id="edit_<?php echo $value["id"] ?>" style="display:none;">
+          <form id="edit_opportunity">
+            <!-- Job -->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="job_name" name="job_name">
+              <label class="mdl-textfield__label" for="job_name">Job Name</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="job_position" name="job_position">
+              <label class="mdl-textfield__label" for="job_position">Job Position</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="job_description" name="job_description">
+              <label class="mdl-textfield__label" for="job_description">Job Description</label>
+            </div>
+            <br />
+            <div class="select_job">
+              <label for="jobtype">Job Type: </label>
+              <select id="jobtype" name="jobtype">
+                <option value="full">Full Time</option>
+                <option value="part">Part Time</option>
+                <option value="paid">Paid Internship</option>
+                <option value="unpaid">Unpaid Internship</option>
+              </select>
+            </div>
+            <br />
+            <div class="date">
+              <label for="start_date">Start Date</label>
+              <br />
+              <input id="start_date" type="date" name="start_date"/>
+            </div>
+            <div class="date">
+              <label for="end_date">End Date</label>
+              <br />
+              <input id="end_date" type="date" name="end_date"/>
+            </div>
+
+            <!-- Company -->
+            <br />
+            <h4 class="card-title">Company</h4>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="company_name" name="company_name">
+              <label class="mdl-textfield__label" for="company_name">Company Name</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="company_city" name="company_city">
+              <label class="mdl-textfield__label" for="company_city">City</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="company_state" name="company_state">
+              <label class="mdl-textfield__label" for="company_state">State</label>
+            </div>
+
+            <!-- Contact -->
+            <h4 class="card-title">Contact</h4>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="contact_first_name" name="contact_first_name">
+              <label class="mdl-textfield__label" for="contact_first_name">First Name</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="contact_last_name" name="contact_last_name">
+              <label class="mdl-textfield__label" for="contact_last_name">Last Name</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="company_phone" name="company_phone">
+              <label class="mdl-textfield__label" for="company_phone">Contact Phone Number</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="company_email" name="company_email">
+              <label class="mdl-textfield__label" for="company_email">Contact Email</label>
+            </div>
+
+            <br />
+            <button id="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -269,11 +337,11 @@ $opportunities = Opportunity::getActiveOpportunities($db);
 
 
   $( "#create" ).click(function() {
-    $( "#overlay" ).toggle();
+    $( "#overlay" ).fadeToggle();
   });
 
   $( "#close" ).click(function() {
-    $( "#overlay" ).toggle();
+    $( "#overlay" ).fadeToggle('fast');
   });
 
   $( "#create_opportunity" ).submit(function(event) {
@@ -288,7 +356,12 @@ $opportunities = Opportunity::getActiveOpportunities($db);
     });
   });
 
+  //If the user is editing an opportunity
   function editOpportunity(id) {
+
+
+    $("#body_" + id).fadeToggle();
+    $("#edit_" + id).fadeToggle();
 
 
 
@@ -301,7 +374,7 @@ $opportunities = Opportunity::getActiveOpportunities($db);
     $.post("delete.php", { id: id })
 
     .done(function( data ) {
-        console.log( data );
+        //console.log( data );
 
         if(data == "true") {
           //console.log('it worked');
