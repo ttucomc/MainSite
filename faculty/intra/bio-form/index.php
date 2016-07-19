@@ -19,54 +19,57 @@
 
   if ($_SERVER["REQUEST_METHOD"] == "POST"):
 
-    require '../../../includes/phpmailer/PHPMailerAutoload.php';
-
     /*---Variables-------------------------------------*/
     $college = 'College of Media & Communication';
     $subject = 'Faculty/Staff Bio Form';
 
     if(isset($_POST["f_name"])) {
       // If the faculty form is submitted
-      $name = $_POST['f_name'];
-      $email = $_POST['f_email'];
-      $title = $_POST['f_title'];
-      $dept = $_POST['f_dept'];
-      $room = $_POST['f_room'];
-      $hours = $_POST['f_hours'];
-      $degree1 = $_POST['f_degree1'];
-      $degree2 = $_POST['f_degree2'];
-      $degree3 = $_POST['f_degree3'];
-      $bio = $_POST['f_bio'];
-      $courses = $_POST['f_courses'];
-      $publications = $_POST['f_publications'];
-      $awards = $_POST['f_awards'];
+      $name = strip_tags(trim($_POST['f_name']));
+      $email = filter_var($_POST['f_email'], FILTER_SANITIZE_EMAIL);
+      if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        echo("$email is not a valid email address");
+        die();
+      }
+      $title = strip_tags(trim($_POST['f_title']));
+      $dept = strip_tags(trim($_POST['f_dept']));
+      $room = strip_tags(trim($_POST['f_room']));
+      $hours = strip_tags(trim($_POST['f_hours']));
+      $degree1 = strip_tags(trim($_POST['f_degree1']));
+      $degree2 = strip_tags(trim($_POST['f_degree2']));
+      $degree3 = strip_tags(trim($_POST['f_degree3']));
+      $social = strip_tags(trim($_POST['f_social']));
+      $bio = htmlentities(trim($_POST['f_bio']));
+      $courses = htmlentities(trim($_POST['f_courses']));
+      $publications = htmlentities(trim($_POST['f_publications']));
+      $awards = htmlentities(trim($_POST['f_awards']));
     } elseif (isset($_POST["s_name"])) {
       // If the staff form is submitted
-      $name = $_POST['s_name'];
-      $email = $_POST['s_email'];
-      $title = $_POST['s_title'];
-      $dept = $_POST['s_dept'];
-      $room = $_POST['s_room'];
-      $hours = $_POST['s_hours'];
-      $degree1 = $_POST['s_degree1'];
-      $degree2 = $_POST['s_degree2'];
-      $degree3 = $_POST['s_degree3'];
-      $bio = $_POST['s_bio'];
-      $duties = $_POST['s_duties'];
-      $training = $_POST['s_training'];
-      $awards = $_POST['s_awards'];
+      $name = strip_tags(trim($_POST['s_name']));
+      $email = filter_var($_POST['s_email'], FILTER_SANITIZE_EMAIL);
+      if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        echo("$email is not a valid email address");
+        die();
+      }
+      $title = strip_tags(trim($_POST['s_title']));
+      $dept = strip_tags(trim($_POST['s_dept']));
+      $room = strip_tags(trim($_POST['s_room']));
+      $hours = strip_tags(trim($_POST['s_hours']));
+      $degree1 = strip_tags(trim($_POST['s_degree1']));
+      $degree2 = strip_tags(trim($_POST['s_degree2']));
+      $degree3 = strip_tags(trim($_POST['s_degree3']));
+      $social = strip_tags(trim($_POST['s_social']));
+      $bio = htmlentities(trim($_POST['s_bio']));
+      $duties = htmlentities(trim($_POST['s_duties']));
+      $training = htmlentities(trim($_POST['s_training']));
+      $awards = htmlentities(trim($_POST['s_awards']));
     }
 
-    /* a boundary string */
-    // $randomVal = md5(time());
-    // $mimeBoundary = "==Multipart_Boundary_x{$randomVal}x";
-
     /*---Email to Webmaster-------------------------------------*/
-    // $headers = "From: " . $name . " <" . $email . ">\r\n";
-    // $headers .= "Reply-To: " . $email . "\r\n";
-    // $headers .= "MIME-Version: 1.0\r\n";
-    // $headers .= "Content-Type: multipart/mixed;\r\n";
-    // $headers .= " boundary=\"{$mimeBoundary}\"";
+    $headers = "From: " . $name . " <" . $email . ">\r\n";
+    $headers .= "Reply-To: " . $email . "\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     $to = "kuhrt.cowan@ttu.edu";
 
@@ -89,95 +92,12 @@
       $msg .= "<tr style='background: #EEEEEE;'><td><strong>Training:</strong></td><td>" . $training . "</td></tr>";
     }
     $msg .= "<tr><td><strong>Awards:</strong></td><td>" . $awards . "</td></tr>";
+    $msg .= "<tr style='background: #EEEEEE;'><td><strong>Social Media:</strong></td><td>" . $social . "</td></tr>";
     $msg .= "</table>";
     $msg .= "</body></html>";
 
-    echo "Creating new PHPMailer<br />";
-    $mail = new PHPMailer;
-
-    echo "Creating SMTPDebug<br />";
-    $mail->SMTPDebug = 2;
-
-    echo "Setting SMTP<br />";
-    $mail->isSMTP();
-    echo "Setting host <br />";
-    $mail->Host = gethostbyname('smtp.gmail.com');
-    echo "Setting SMTPAuth<br />";
-    $mail->SMTPAuth = true;
-    echo "Setting username<br />";
-    $mail->Username = 'ttumcom@gmail.com';
-    echo "Setting password<br />";
-    $mail->Password = 'echoecho';
-    echo "Setting SMTPSecure<br />";
-    $mail->SMTPSecure = 'tls';
-    echo "Setting port<br />";
-    $mail->Port = 587;
-
-    echo "Setting from<br />";
-    $mail->setFrom($email, $name);
-    echo "Setting to address<br />";
-    $mail->addAddress('kuhrt.cowan@ttu.edu', 'Kuhrt Cowan');
-    echo "Adding reply to<br />";
-    $mail->addReplyTo($email, $name);
-
-    echo "Setting HTML msg<br />";
-    $mail->isHTML(true);                                  // Set email format to HTML
-
-    echo "Setting subject<br />";
-    $mail->Subject = $subject;
-    echo "Setting body<br />";
-    $mail->Body    = $msg;
-
-    // if (isset($_FILES['f_cv'])) {
-    //     $mail->AddAttachment($_FILES['f_cv']['tmp_name'],
-    //                          $_FILES['f_cv']['name']);
-    // }
-
-    echo "Sending mail<br />";
-    if(!$mail->send()) {
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
-    } else {
-        echo 'Message has been sent';
-    }
-    echo "Mail Sent!<br />";
-
-
-
-    // Attachment
-    /* Multipart Boundary above message */
-    // $msg = "This is a multi-part message in MIME format.\n\n" .
-    // "--{$mimeBoundary}\n" .
-    // "Content-Type: text/html; charset=ISO-8859-1\r\n" .
-    // "Content-Transfer-Encoding: 7bit\n\n" .
-    // $msg . "\n\n";
-    //
-    // if(isset($_POST["f_form"])) {
-      /* GET File Variables */
-    //   $tmpName = $_FILES['f_cv']['tmp_name'];
-    //   $fileType = $_FILES['f_cv']['type'];
-    //   $fileName = $_FILES['f_cv']['name'];
-    //
-      /* Reading file ('rb' = read binary)  */
-    //   $file = fopen($tmpName,'rb');
-    //   $data = fread($file,filesize($tmpName));
-    //   fclose($file);
-    //
-      /* Encoding file data */
-    //   $data = chunk_split(base64_encode($data));
-    //
-      /* Adding attchment-file to message*/
-    //   $msg .= "--{$mimeBoundary}\n" .
-    //   "Content-Type: {$fileType};\n" .
-    //   " name=\"{$fileName}\"\n" .
-    //   "Content-Transfer-Encoding: base64\n\n" .
-    //   "Content-Disposition: attachment; filename=\"{$fileName}\"\r\n" .
-    //   $data . "\n\n" .
-    //   "--{$mimeBoundary}--\n";
-    // }
-
     // Send Message
-    // mail($to, $subject, $msg, $headers);
+    mail($to, $subject, $msg, $headers);
 
   ?>
 
@@ -241,6 +161,9 @@
           <label for="f_degree3">Degree and Institution: (<em>optional</em>)</label>
           <input type="text" id="f_degree3" name="f_degree3" />
 
+          <label for="f_social">Social Media: (<em>optional</em>)</label>
+          <textarea name="f_social" id="f_social"></textarea>
+
           <label for="f_bio">Short Bio/Experience:</label>
           <textarea name="f_bio" id="f_bio"></textarea>
 
@@ -253,8 +176,10 @@
           <label for="f_awards">Awards/Honors:</label>
           <textarea name="f_awards" id="f_awards"></textarea>
 
-          <label for="f_cv">Full CV:</label>
-          <input type="file" name="f_cv" id="f_cv" />
+          <p>
+            When you have a full CV ready to add to your page, please email it to <a href="mailto:kuhrt.cowan@ttu.edu" class="mail">Kuhrt Cowan</a>.
+          </p>
+
           <br />
           <input type="submit" name="f_form" value="Submit" class="button">
           <div class="form-loader"></div>
@@ -293,6 +218,9 @@
 
           <label for="s_degree3">Degree and Institution: (<em>optional</em>)</label>
           <input type="text" id="s_degree3" name="s_degree3" />
+
+          <label for="s_social">Social Media: (<em>optional</em>)</label>
+          <textarea name="s_social" id="s_social"></textarea>
 
           <label for="s_bio">Short Bio/Experience: (<em>optional</em>)</label>
           <textarea name="s_bio" id="s_bio"></textarea>
@@ -333,6 +261,8 @@
 
       // When the submit button is clicked
       $('form :submit').click(function () {
+
+        var form = $(this).closest('form');
         // Making sure all require fields are filled
         var isValid = true;
         $('input[required="required"]').each(function() {
@@ -343,11 +273,11 @@
         // If required fields are filled
         if (isValid) {
           // Fading form
-          $('form').fadeTo('fast', 0.4);
+          form.fadeTo('fast', 0.4);
           // Showing loader next to button
-          $('.form-loader').fadeTo('fast', 1);
+          form.find('.form-loader').fadeTo('fast', 1);
           // Changing text in button
-          $('form :submit').attr('value', 'Loading...');
+          $(this).attr('value', 'Loading...');
         }
       });
 
