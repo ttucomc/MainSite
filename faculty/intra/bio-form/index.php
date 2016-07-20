@@ -103,7 +103,7 @@
 
   <h2>Thank You</h2>
   <p>
-    We have recieved your form! If you have any questions or need anything else, please contact <a href="mailto:kuhrt.cowan@ttu.edu" class="mail">Kuhrt Cowan</a>.
+    We have received your form! If you have any questions or need anything else, please contact <a href="mailto:kuhrt.cowan@ttu.edu" class="mail">Kuhrt Cowan</a>.
   </p>
 
   <?php else: ?>
