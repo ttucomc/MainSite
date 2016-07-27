@@ -42,7 +42,7 @@ $opportunities = Opportunity::getActiveOpportunities($db);
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="/comcsite/css/ttu.css">
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-red.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="./css/styles.css" />
