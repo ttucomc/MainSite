@@ -60,6 +60,11 @@
           $info = $_POST['info'];
           $eventID = $thisEvent['ID'];
 
+          // Getting class excuse if the event is the Scholarship luncheon
+          if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
+            $classExcuse = htmlspecialchars($_POST['classExcuse']);
+          }
+
           // Getting how many guests
           $guestCount = (int)$_POST['guestCount'];
           // Bool for if there's guests or not
@@ -90,16 +95,26 @@
           /*---Sending Info to DB-------------------------------------*/
           try {
             // Info for invitee
-            $stmt = $db->prepare("
-                                  INSERT INTO people (attending, first_name, last_name, email, event_id, info)
-                                  VALUES (:attending, :first_name, :last_name, :email, :event_id, :info)
-                                ");
+            if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
+              $stmt = $db->prepare("
+                                    INSERT INTO people (attending, first_name, last_name, email, event_id, info, sort1)
+                                    VALUES (:attending, :first_name, :last_name, :email, :event_id, :info, :excuse)
+                                  ");
+            } else {
+              $stmt = $db->prepare("
+                                    INSERT INTO people (attending, first_name, last_name, email, event_id, info)
+                                    VALUES (:attending, :first_name, :last_name, :email, :event_id, :info)
+                                  ");
+            }
             $stmt->bindParam(':attending', $attending, PDO::PARAM_INT);
             $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
             $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->bindParam(':event_id', $eventID, PDO::PARAM_INT);
             $stmt->bindParam(':info', $info, PDO::PARAM_STR);
+            if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
+              $stmt->bindParam(':excuse', $classExcuse, PDO::PARAM_STR);
+            }
             $stmt->execute();
 
             if ($areThereGuests) {
@@ -134,7 +149,8 @@
           $headers .= "MIME-Version: 1.0\r\n";
           $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-          $to = "rsvp.mcom@ttu.edu";
+          $to = "kuhrt.cowan@ttu.edu";
+          // $to = "rsvp.mcom@ttu.edu";
 
           $subject = $eventTitle . " RSVP";
 
@@ -148,6 +164,9 @@
           }
           $message .= "<tr style='background: #EEEEEE;'><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
           $message .= "<tr><td><strong>Food Accommodations:</strong></td><td>" . $info . "</td></tr>";
+          if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
+            $message .= "<tr><td><strong>Class Excuses:</strong></td><td>" . $classExcuse . "</td></tr>";
+          }
           $message .= "<tr style='background: #EEEEEE;'><td><h2>Guests</h2></td><td><strong>Food Accommodations</strong></td></tr>";
           if ($areThereGuests) {
             foreach ($guests as $key => $guest) {
@@ -230,7 +249,13 @@
         ?>
       </form>
 
-      <h2><?php echo date('Y', strtotime($thisEvent['datetime'])) . ' ' . $thisEvent['name']; ?></h2>
+      <h2 class="event-name"><?php echo date('Y', strtotime($thisEvent['datetime'])) . ' ' . $thisEvent['name']; ?></h2>
+
+      <?php if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon'): ?>
+        <p>
+          Students are only allowed to bring two guests for free. Any more than two will cost $20.00 per guest.
+        </p>
+      <?php endif; ?>
 
       <?php echo '<form class="ldpforms" method="post" action="' . $_SERVER['PHP_SELF'] . '?id=' . $thisEvent['ID'] . '">'; ?>
         <div id="people">
@@ -250,6 +275,17 @@
             <label for="foodAccommodations">Food Accommodations:</label>
             <textarea id="foodAccommodations" name="info"></textarea>
           </fieldset>
+          <?php if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon'): ?>
+            <fieldset>
+              <legend>
+                Class Excuse
+              </legend>
+              <p>
+                For students that need a class excuse to attend the event. Please give us the <em>name of your professor</em>, <em>the class</em>, and <em>time of the class</em>. Please list each class you need an excuse for on seperate lines.
+              </p>
+              <textarea id="classExcuse" name="classExcuse" placeholder="Name of professor, class name and time of the class."></textarea>
+            </fieldset>
+          <?php endif; ?>
         </div>
         <button class="button addButton">Add Guest</button>
         <input id="guestCount" type="hidden" readonly="readonly" value="0" name="guestCount" />
@@ -271,6 +307,8 @@
         var guestNumber = 0;
         // This will keep track of how many guests there are
         var guestTotal = 0;
+        // Name of the event
+        var eventName = $('h2.event-name').text().substring(5);
 
         // add guest on addButton click
         $('.addButton').click(function(e){
@@ -280,6 +318,10 @@
           guestNumber++;
           // Increment guest total
           guestTotal++;
+          // Alerting for more than 2 guests if scholarship luncheon
+          if (guestTotal > 2 && eventName.toLowerCase() == "scholarship luncheon") {
+            alert("Students are only allowed to bring two guests for free. Any more than two will cost $20.00 per guest.");
+          }
           // Add total to form field
           $('#guestCount').val(guestTotal);
           // Add form fields for the guest
