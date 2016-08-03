@@ -2,7 +2,7 @@
 
 require_once('inc/config.php');
 require_once('inc/functions.php');
-require_once('/comc/events/admin/include.php');
+// require_once('/comc/events/admin/include.php');
 
 // Getting all events from db
 $events = get_all_events();
@@ -69,6 +69,9 @@ $events = get_all_events();
           <h3>Details<?php if($event['listed'] == 0) { echo ' &mdash; <em>Inactive</em>'; } ?></h3>
           <div id="details-<?php echo $event['ID']; ?>">
             <p>
+              <span class="event-description"><?php if (!empty($event['description'])){ echo $event['description']; } ?></span>
+            </p>
+            <p>
               <strong>Location:</strong> <span class="event-location"><?php echo $event['location']; ?></span><br />
               <strong>Address:</strong> <span class="event-address"><?php echo $event['address'] ?></span> (<a class="event-directions" href="http://maps.google.com/?q=<?php echo $event['address']; ?>" target="_blank">Directions</a>)<br />
               <strong>Time:</strong> <span class="event-date"><?php echo date('m/j/Y', strtotime($event['datetime'])); ?></span> - <span class="event-time"><?php echo date('h:i A', strtotime($event['datetime'])); ?></span>
@@ -123,6 +126,10 @@ $events = get_all_events();
         <input class="mdl-textfield__input" type="text" id="add-event-name" name="add-event-name">
       </div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <textarea class="mdl-textfield__input" type="text" rows="3" id="add-event-description" name="add-event-description" ></textarea>
+        <label class="mdl-textfield__label" for="add-event-description">Description</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <label class="mdl-textfield__label" for="add-event-location">Location</label>
         <input class="mdl-textfield__input" type="text" id="add-event-location" name="add-event-location">
       </div>
@@ -171,7 +178,7 @@ $events = get_all_events();
     <button class="mdl-snackbar__action" type="button"></button>
   </div>
 
-  <script src="<?php echo BASE_URL; ?>js/main.min.js"></script>
+  <script src="<?php echo BASE_URL; ?>js/main.js"></script>
 
 </body>
 </html>

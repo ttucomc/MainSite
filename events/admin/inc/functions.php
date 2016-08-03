@@ -148,15 +148,16 @@ function invitees_guests($invitee, $guests) {
 
 /**
  * Adds an event into the database.
- * @param  str  $name       Name of the event
- * @param  str  $location   Location of the event
- * @param  str  $address    Address of the event
- * @param  str  $date       Date of the event
- * @param  str  $time       Time of the event
+ * @param  str  $name        Name of the event
+ * @param  str  $description Description of the event
+ * @param  str  $location    Location of the event
+ * @param  str  $address     Address of the event
+ * @param  str  $date        Date of the event
+ * @param  str  $time        Time of the event
  * @param  str  $password    Password to be used in RSVPs
- * @return bool $eventAdded Whether adding the event failed or not
+ * @return bool $eventAdded  Whether adding the event failed or not
  */
-function add_event($name, $location, $address, $date, $time, $password, $rsvps) {
+function add_event($name, $description, $location, $address, $date, $time, $password, $rsvps) {
   require(ROOT_PATH . "inc/db.php");
 
   $date = date('Y-m-d', strtotime($date));
@@ -172,13 +173,14 @@ function add_event($name, $location, $address, $date, $time, $password, $rsvps) 
   try {
 
     $stmt = $db->prepare('
-                          INSERT INTO events (name, datetime, location, address, password, rsvps)
-                          VALUES (:name, :datetime, :location, :address, :password, :rsvps)
+                          INSERT INTO events (name, datetime, location, address, description, password, rsvps)
+                          VALUES (:name, :datetime, :location, :address, :description, :password, :rsvps)
                         ');
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
     $stmt->bindParam(':location', $location, PDO::PARAM_STR);
     $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+    $stmt->bindParam(':description', htmlspecialchars($description), PDO::PARAM_STR);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
     $stmt->bindParam(':rsvps', $rsvps, PDO::PARAM_INT);
     $stmt->execute();
@@ -186,7 +188,7 @@ function add_event($name, $location, $address, $date, $time, $password, $rsvps) 
     $eventAdded = true;
 
   } catch (Exception $e) {
-    echo "Could not add data to the database." . $e->getMessage();
+    echo "Could not add data to the database.";
     $eventAdded = false;
   }
 
@@ -198,6 +200,7 @@ function add_event($name, $location, $address, $date, $time, $password, $rsvps) 
  * Edits the information of an event in the database.
  * @param  int  $eventID     ID of the event
  * @param  str  $name        Name of the event
+ * @param  str  $description Description of the event
  * @param  str  $location    Location of the event
  * @param  str  $address     Address of the event
  * @param  str  $date        Date of the event
@@ -205,7 +208,7 @@ function add_event($name, $location, $address, $date, $time, $password, $rsvps) 
  * @param  str  $password    Password to be used in RSVPs
  * @return bool $eventEdited Whether the event edit failed or not
  */
-function edit_event($eventID, $name, $location, $address, $date, $time, $password) {
+function edit_event($eventID, $name, $description, $location, $address, $date, $time, $password) {
   require(ROOT_PATH . "inc/db.php");
 
   $date = date('Y-m-d', strtotime($date));
@@ -216,13 +219,14 @@ function edit_event($eventID, $name, $location, $address, $date, $time, $passwor
 
     $stmt = $db->prepare('
                           UPDATE events
-                          SET name=:name, datetime=:datetime, location=:location, address=:address, password=:password
+                          SET name=:name, datetime=:datetime, location=:location, address=:address, description=:description, password=:password
                           WHERE ID=:eventID;
                         ');
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
     $stmt->bindParam(':location', $location, PDO::PARAM_STR);
     $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+    $stmt->bindParam(':description', htmlspecialchars($description), PDO::PARAM_STR);
     $stmt->bindParam(':eventID', $eventID, PDO::PARAM_INT);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
     $stmt->execute();
