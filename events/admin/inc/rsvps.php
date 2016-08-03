@@ -7,6 +7,16 @@ if (isset($_GET["id"])) {
 	$event_id = intval($_GET["id"]);
   $invitees =  get_invitees($event_id);
   $guests = get_guests($event_id);
+
+	$thisEvent = get_one_event($event_id);
+
+	// Testing if it's the scholarship luncheon
+	if (strtolower(trim($thisEvent['name'])) == "scholarship luncheon") {
+		$luncheon = true;
+	} else {
+		$luncheon = false;
+	}
+
 } else {
 	echo "<p>No event selected, or this event doesn't exist.</p>";
 }
@@ -35,12 +45,13 @@ if (empty($invitees)) {
 	      <th>Last Name</th>
 	      <th>Email</th>
 	      <th>Food Accomodations</th>
+				<?php if ($luncheon) { echo "<th>Class Excuses</th>"; } ?>
 	    </tr>
 	  </thead>
 	  <tbody>
 	    <?php
 
-	      foreach ($invitees as $key => $invitee) {
+	      foreach ($invitees as $invitee) {
 
 	        // Getting this invitee's guests
 					$inviteesGuests = invitees_guests($invitee, $guests);
@@ -51,16 +62,23 @@ if (empty($invitees)) {
 						$hasGuests = false;
 					}
 
+					// Getting Excuses
+					if (empty($invitee['sort1'])) {
+						$excuses = "None";
+					} else {
+						$excuses = nl2br($invitee['sort1']);
+					}
+
 
 	        // If the invitee is coming and has guests, list the invitee and their guests under their name. Else just list the invitee.
 	        if ($hasGuests) {
-	          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">Yes</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td></tr>';
+	          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">Yes</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td>' . (($luncheon)?"<td>$excuses</td>":"") . '</tr>';
 	          // List all of this person's guests
 	          foreach ($inviteesGuests as $guest) {
 	            echo '<tr class="guest"><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($guest[date])) . '</td><td class="mdl-data-table__cell--non-numeric">Guest with ' . $invitee[first_name] . ' ' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $guest[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $guest[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $guest[email] . '">' . $guest[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $guest[info] . '</td></tr>';
 	          }
 	        } else {
-	          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">' . ($invitee[attending] == 1 ? 'Yes' : 'No') . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td></tr>';
+	          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">' . ($invitee[attending] == 1 ? 'Yes' : 'No') . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td>' . (($luncheon)?"<td>$excuses</td>":"") . '</tr>';
 	        }
 	      }
 

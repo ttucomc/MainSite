@@ -2,7 +2,7 @@
 
 require_once('inc/config.php');
 require_once('inc/functions.php');
-// require_once('/comc/events/admin/include.php');
+require_once('/comc/events/admin/include.php');
 
 // Getting all events from db
 $events = get_all_events();
@@ -178,7 +178,7 @@ $events = get_all_events();
     <button class="mdl-snackbar__action" type="button"></button>
   </div>
 
-  <script src="<?php echo BASE_URL; ?>js/main.js"></script>
+  <script src="<?php echo BASE_URL; ?>js/main.min.js"></script>
 
 </body>
 </html>

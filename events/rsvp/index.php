@@ -149,8 +149,7 @@
           $headers .= "MIME-Version: 1.0\r\n";
           $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-          $to = "kuhrt.cowan@ttu.edu";
-          // $to = "rsvp.mcom@ttu.edu";
+          $to = "rsvp.mcom@ttu.edu";
 
           $subject = $eventTitle . " RSVP";
 
@@ -165,7 +164,7 @@
           $message .= "<tr style='background: #EEEEEE;'><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
           $message .= "<tr><td><strong>Food Accommodations:</strong></td><td>" . $info . "</td></tr>";
           if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
-            $message .= "<tr><td><strong>Class Excuses:</strong></td><td>" . $classExcuse . "</td></tr>";
+            $message .= "<tr><td><strong>Class Excuses:</strong></td><td>" . nl2br($classExcuse) . "</td></tr>";
           }
           $message .= "<tr style='background: #EEEEEE;'><td><h2>Guests</h2></td><td><strong>Food Accommodations</strong></td></tr>";
           if ($areThereGuests) {

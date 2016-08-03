@@ -58,7 +58,7 @@ function get_invitees($q) {
 
   try {
 
-    $results = $db->prepare('SELECT ID, date, attending, first_name, last_name, email, info FROM people WHERE event_id = ? ORDER BY last_name');
+    $results = $db->prepare('SELECT ID, date, attending, first_name, last_name, email, info, sort1 FROM people WHERE event_id = ? ORDER BY last_name');
     $results->bindParam(1,$q);
     $results->execute();
 
