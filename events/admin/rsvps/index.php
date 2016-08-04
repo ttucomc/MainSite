@@ -62,9 +62,7 @@ $events = get_all_events();
 
     // Adding each event as an option
     foreach ($events as $key => $event) {
-      if ($event[rsvps] == 1) {
-        echo "<option value='" . $event[ID] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event[name] . "</option>";
-      }
+      echo "<option value='" . $event[ID] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event[name] . "</option>";
     }
     echo "</select>";
 
