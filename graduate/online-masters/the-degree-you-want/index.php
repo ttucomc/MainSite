@@ -14,8 +14,8 @@
 
   <?php
 
-  require_once('inc/config.php');
-  require_once('inc/database.php');
+  require_once('/comc/includes/ttu-db-config.php');
+  require_once('/comc/includes/ttu-db.php');
 
   // Overall if statement to determine if the form has been submitted or not
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -28,7 +28,6 @@
     $firstName = $_POST['first_name'];
     $lastName = $_POST['last_name'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
     $campaign = $_POST['campaign'];
 
 
@@ -37,14 +36,13 @@
 
       // Info for interested person
       $stmt = $db->prepare("
-                            INSERT INTO ads (last_name, first_name, email, phone, campaign)
-                            VALUES (:first_name, :last_name, :email, :phone, :campaign)
+                            INSERT INTO ads (first_name, last_name, email, campaign)
+                            VALUES (:first_name, :last_name, :email, :campaign)
                           ");
       // Binding Parameters
-      $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
       $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
+      $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
       $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-      $stmt->bindParam(':phone', $phone, PDO::PARAM_INT);
       $stmt->bindParam(':campaign', $campaign, PDO::PARAM_STR);
       // Executing to DB
       $stmt->execute();
@@ -71,8 +69,7 @@
     $message .= '<table width="100%" cellpadding="10">';
     $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " would like more info!</h1></td></tr>";
     $message .= "<tr style='background: #EEEEEE;'><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
-    $message .= "<tr><td><strong>Phone Number:</strong></td><td>" . $phone . "</td></tr>";
-    $message .= "<tr style='background: #EEEEEE;'><td><strong>Campaign Used:</strong></td><td>" . $campaign . "</td></tr>";
+    $message .= "<tr><td><strong>Campaign Used:</strong></td><td>" . $campaign . "</td></tr>";
     $message .= "</table>";
     $message .= "</body></html>";
 
@@ -102,7 +99,7 @@
 
   ?>
 
-  <section id="top" class="container-fluid" style="background-image:url('http://lorempixel.com/1920/1920/people')">
+  <section id="top" class="container-fluid" style="background-image:url('img/GraduateSocial-4.jpg')">
     <div class="row text-center">
       <div class="col-sm-8 col-sm-offset-2">
         <h1>Thanks, <?php echo $firstName; ?>, for your interest in our program!</h1>
@@ -130,63 +127,32 @@
         array(
           'Campaign' => 'Now Online',
           'Title' => 'The Strategic Communication Master\'s Degree',
-          'Text' => 'Earn your Masters of Strategic Communication degree from Texas Tech University! Accredited, convenient 100% online. Update your skills to be competitive in today\'s global and digitally focused environment. Learn more now! <em>The Degree You Want.</em>',
-          'Photo' => 'img/GraduateSocial-4.jpg'
+          'Text' => 'Earn Your Master of Strategic Communication Degree from Texas Tech University! Comprehensive, convenient 100% online. Update yours skills to be competitive in today\'s global and digitally focused environment. Learn more now! <em>The Degree You Want.</em>',
+          'Photo' => 'img/GraduateSocial-1.jpg'
         ),
         array(
           'Campaign' => 'For Professionals',
           'Title' => 'Texas Tech University Online Strategic Communication MA',
-          'Text' => 'Pursue the Master\'s in Strategic Communication from Texas Tech University 100% online. Contact the College of Media & Communication today to learn more about our Online MA designed for professionals. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/animals'
+          'Text' => 'Pursue the Master of Strategic Communication from Texas Tech University 100% online. Contact the College of Media & Communication today to learn more about our Online M.A. designed for professionals. <em>The Degree You Want.</em>',
+          'Photo' => 'img/GraduateSocial-2.jpg'
         ),
         array(
           'Campaign' => 'Advance Your Career',
           'Title' => 'The Online Strategic Communication MA',
-          'Text' => 'Earn your MA in Strategic Communication from Texas Tech University to advance your skills, career and earning power. Complete in as few as 18 months. Learn more now. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/abstract'
+          'Text' => 'Earn your M.A. in Strategic Communication from Texas Tech University to advance your skills, career and earning power. Complete in as few as 18 months. Learn more now. <em>The Degree You Want.</em>',
+          'Photo' => 'img/GraduateSocial-3.jpg'
         ),
         array(
           'Campaign' => 'Completion in as Few as 18 Months',
           'Title' => 'Texas Tech University MA 100% Online',
-          'Text' => 'Rolling enrollment starts any term. Thirty hour program is accelerated, accredited and online. Contact us today for more information. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/business'
+          'Text' => 'Rolling enrollment starts any term. Thirty hour program is comprehensive, accelerated and online. Contact us today for more information. <em>The Degree You Want.</em>',
+          'Photo' => 'img/GraduateSocial-4.jpg'
         ),
         array(
           'Campaign' => '100% Online From Texas Tech University',
           'Title' => 'The MA Degree For Professionals',
-          'Text' => 'The Online MA Program is accredited, rigorous and taught by full-time faculty. Take your next career step with a focus on global and digital strategic communication. Visit our website to learn more. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/cats'
-        ),
-        // Enrollment Deadlines
-        array(
-          'Campaign' => 'Application deadlines approaching.',
-          'Title' => 'Texas Tech University Online Graduate MA Program Deadline',
-          'Text' => 'Earn an MA in Strategic Communication through our Online Courses! Admission is limited - apply now. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/city'
-        ),
-        array(
-          'Campaign' => 'No GRE required based on applicant qualifications.',
-          'Title' => 'Master\'s in Strategic Communication Online from Texas Tech University Applications Due',
-          'Text' => 'Deadlines approaching and class size is limited. Start your application today. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/food'
-        ),
-        array(
-          'Campaign' => 'Accredited, Accelerated & Online From Texas Tech University.',
-          'Title' => 'Application Deadlines For The Online MA Approaching',
-          'Text' => 'No GRE required based on applicant qualifications. Apply now for next term admission. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/nightlife'
-        ),
-        array(
-          'Campaign' => 'Apply Today',
-          'Title' => 'MA Strategic Communications Texas Tech University',
-          'Text' => 'Thirty hour program completes in as few as 18 months. 100% Online taught by full time faculty. Act now to meet enrollment deadlines. Admission is limited. <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/fashion'
-        ),
-        array(
-          'Campaign' => 'Deadlines Coming Soon',
-          'Title' => 'Study Strategic Communication Online at Texas Tech University',
-          'Text' => 'Further your career by earning an MA degree focusing on global and digital strategic communication. Program deadlines approaching - apply today! <em>The Degree You Want.</em>',
-          'Photo' => 'http://lorempixel.com/1920/1920/sports'
+          'Text' => 'The Online M.A. Program is comprehensive, rigorous and taught by full-time faculty. Take yournext career step with a focus on global and digital strategic communication. Visit our website to learn more. <em>The Degree You Want.</em>',
+          'Photo' => 'img/GraduateSocial-5.jpg'
         )
       );
 
@@ -203,7 +169,7 @@
 
   <section id="top" class="container-fluid" style="background-image:url('<?php echo $photo; ?>')">
     <div class="row text-left">
-      <div class="col-sm-5 col-sm-offset-6">
+      <div class="col-sm-5 <?php if($campaign_id == 0) { echo 'col-sm-offset-6'; } else { echo 'col-sm-offset-2'; } ?>">
         <h1><?php echo $title; ?></h1>
         <h2><?php echo $subTitle; ?></h2>
         <p>
@@ -230,10 +196,6 @@
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" class="form-control" required />
             </div>
-            <div class="form-group">
-              <label for="phone">Phone Number:</label>
-              <input type="tel" id="phone" name="phone" class="form-control" required />
-            </div>
             <input type="hidden" name="campaign" value="<?php echo $subTitle; ?>" />
             <input type="submit" value="Submit" class="btn btn-primary btn-block" />
           </fieldset>
@@ -243,5 +205,15 @@
   </section>
 
   <?php } // Ends overall else statement ?>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-38232832-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
 </html>
