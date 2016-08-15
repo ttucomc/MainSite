@@ -50,19 +50,19 @@
 
           /*---Variables-------------------------------------*/
           // Title
-          $eventTitle = $thisEvent['name'];
+          $eventTitle = htmlspecialchars(trim($thisEvent['name']));
 
           // Invitee's Information
           $attending = $_POST['attending'];
-          $firstName = $_POST['firstName'];
-          $lastName = $_POST['lastName'];
-          $email = $_POST['email'];
-          $info = $_POST['info'];
+          $firstName = trim($_POST['firstName']);
+          $lastName = trim($_POST['lastName']);
+          $email = trim($_POST['email']);
+          $info = htmlspecialchars(trim($_POST['info']));
           $eventID = $thisEvent['ID'];
 
           // Getting class excuse if the event is the Scholarship luncheon
-          if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
-            $classExcuse = htmlspecialchars($_POST['classExcuse']);
+          if (strtolower($thisEvent['name']) == 'scholarship luncheon') {
+            $classExcuse = htmlspecialchars(trim($_POST['classExcuse']));
           }
 
           // Getting how many guests
@@ -81,10 +81,10 @@
 
             // Create array item for each guest
             foreach ($guestNumbers as $key => $number) {
-              $gFirstName = $_POST['firstName_g' . $number];
-              $gLastName = $_POST['lastName_g' . $number];
-              $gEmail = $_POST['email_g' . $number];
-              $gInfo = $_POST['info_g' . $number];
+              $gFirstName = trim($_POST['firstName_g' . $number]);
+              $gLastName = trim($_POST['lastName_g' . $number]);
+              $gEmail = trim($_POST['email_g' . $number]);
+              $gInfo = trim($_POST['info_g' . $number]);
 
               // Push guest into $guests array
               array_push($guests, array($gFirstName, $gLastName, $gEmail, $gInfo));
@@ -95,7 +95,7 @@
           /*---Sending Info to DB-------------------------------------*/
           try {
             // Info for invitee
-            if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
+            if (strtolower($thisEvent['name']) == 'scholarship luncheon') {
               $stmt = $db->prepare("
                                     INSERT INTO people (attending, first_name, last_name, email, event_id, info, sort1)
                                     VALUES (:attending, :first_name, :last_name, :email, :event_id, :info, :excuse)
@@ -112,7 +112,7 @@
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->bindParam(':event_id', $eventID, PDO::PARAM_INT);
             $stmt->bindParam(':info', $info, PDO::PARAM_STR);
-            if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
+            if (strtolower($thisEvent['name']) == 'scholarship luncheon') {
               $stmt->bindParam(':excuse', $classExcuse, PDO::PARAM_STR);
             }
             $stmt->execute();
@@ -194,7 +194,7 @@
           $conf_message = '<html><body>';
           $conf_message .= '<table width="100%" cellpadding="10">';
           $conf_message .= "<tr style='background: #CC0000; color: #FFFFFF'><td><h1 style='color:#FFFFFF; text-align:center;'>RSVP Confirmation For " . $eventTitle . "</h1></td></tr>";
-          $conf_message .= "<tr style='text-align:center;'><td><p>We have received your RSVP for the " . $eventTitle . ". If you have any questions or need to change anything on your RSVP, please email Taryn Meixner at <a href='mailto:taryn.meixner@ttu.edu'>taryn.meixner@ttu.edu</a>. Thanks again!</p></td></tr>";
+          $conf_message .= "<tr style='text-align:center;'><td><p>We have received your " . (($attending == 1)?"yes":"no") . " RSVP for the " . $eventTitle . ". If you have any questions or need to change anything on your RSVP, please email Taryn Meixner at <a href='mailto:taryn.meixner@ttu.edu'>taryn.meixner@ttu.edu</a>. Thanks again!</p></td></tr>";
           $conf_message .= "</table>";
           $conf_message .= "</body></html>";
 
