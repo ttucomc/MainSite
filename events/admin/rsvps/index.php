@@ -2,7 +2,7 @@
 
 require_once('../inc/config.php');
 require_once('../inc/functions.php');
-require_once('/comc/events/admin/rsvps/include.php');
+// require_once('/comc/events/admin/rsvps/include.php');
 
 // Getting all events from db
 $events = get_all_events();

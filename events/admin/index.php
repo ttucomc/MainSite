@@ -88,7 +88,8 @@ $events = get_all_events();
               <p id="rsvp-details-<?php echo $event['ID']; ?>">
                 <strong>RSVP Password:</strong> <span class="event-password"><?php echo $event['password']; ?></span><br />
                 <strong>Total RSVPs:</strong> <?php echo total_rsvps($invitees); ?><br />
-                <strong>Total People Attending:</strong> <?php echo total_attending($invitees, $guests); ?>
+                <strong>Total People Attending:</strong> <?php echo total_attending($invitees, $guests); ?><br />
+                <strong>RSVP Deadline:</strong> <span class="event-rsvp-deadline"><?php echo date('m/j/Y', strtotime($event['rsvp_date'])); ?></span>
               </p>
             <?php endif; ?>
           </div>
@@ -154,6 +155,11 @@ $events = get_all_events();
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <label class="mdl-textfield__label" for="add-event-password">RSVP Password</label>
         <input class="mdl-textfield__input" type="text" id="add-event-password" name="add-event-password">
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <label class="mdl-textfield__label" for="add-event-rsvp-deadline">RSVP Deadline <em>(Will be match event date if left empty)</em></label>
+        <input class="mdl-textfield__input" type="text" id="add-event-rsvp-deadline" name="add-event-rsvp-deadline" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY">
+        <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span>
       </div>
       <input type="hidden" name="form-name" value="add-event" />
       <div class="form-buttons">

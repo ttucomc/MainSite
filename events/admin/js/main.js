@@ -26,15 +26,19 @@ $('li.edit-event').click(function() {
   var currentDate = eventCard.find('span.event-date').text();
   var currentPassword = eventCard.find('span.event-password').text();
   var currentTime = eventCard.find('span.event-time').text();
+  var currentDeadline = eventCard.find('span.event-rsvp-deadline').text();
   if (currentTime.startsWith('0')) {
     currentTime = currentTime.substring(1);
+  }
+  if (currentDeadline.startsWith('0')) {
+    currentDeadline = currentDeadline.substring(1);
   }
 
   // Fading out current details
   eventCard.find('#details-' + eventID).fadeOut('fast', function() {
 
     // Adding event edit form
-    eventCard.find('.mdl-card__supporting-text').append('<form method="POST" id="edit-event-form"> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-name">Event Name</label> <input class="mdl-textfield__input" type="text" id="edit-event-name" name="edit-event-name" value="' + currentName + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><textarea class="mdl-textfield__input" type="text" rows="3" id="edit-event-description" name="edit-event-description" >' + currentDescription + '</textarea><label class="mdl-textfield__label" for="edit-event-description">Description</label></div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-location">Location</label> <input class="mdl-textfield__input" type="text" id="edit-event-location" name="edit-event-location" value="' + currentLocation + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-address">Address</label> <input class="mdl-textfield__input" type="text" id="edit-event-address" name="edit-event-address" value="' + currentAddress + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-date">Date</label> <input class="mdl-textfield__input" type="text" id="edit-event-date" name="edit-event-date" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="' + currentDate + '"> <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-time">Time</label> <input class="mdl-textfield__input" type="text" id="edit-event-time" name="edit-event-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="' + currentTime + '"> <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><label class="mdl-textfield__label" for="edit-event-password">RSVP Password</label><input class="mdl-textfield__input" type="text" id="edit-event-password" name="edit-event-password" value="' + currentPassword + '"></div> <input type="hidden" name="form-name" value="edit-event" /> <div class="form-buttons"> <div class="form-button"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="edit-event-do" type="submit" form="edit-event-form" data-event-id="' + eventID +'"> <i class="material-icons">add</i> </button> </div> <div class="form-button"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect edit-close-btn" data-event-id="' + eventID + '"><i class="material-icons">close</i> </button> </div> </div> </form>').fadeIn();
+    eventCard.find('.mdl-card__supporting-text').append('<form method="POST" id="edit-event-form"> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-name">Event Name</label> <input class="mdl-textfield__input" type="text" id="edit-event-name" name="edit-event-name" value="' + currentName + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><textarea class="mdl-textfield__input" type="text" rows="3" id="edit-event-description" name="edit-event-description" >' + currentDescription + '</textarea><label class="mdl-textfield__label" for="edit-event-description">Description</label></div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-location">Location</label> <input class="mdl-textfield__input" type="text" id="edit-event-location" name="edit-event-location" value="' + currentLocation + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-address">Address</label> <input class="mdl-textfield__input" type="text" id="edit-event-address" name="edit-event-address" value="' + currentAddress + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-date">Date</label> <input class="mdl-textfield__input" type="text" id="edit-event-date" name="edit-event-date" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="' + currentDate + '"> <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-time">Time</label> <input class="mdl-textfield__input" type="text" id="edit-event-time" name="edit-event-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="' + currentTime + '"> <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><label class="mdl-textfield__label" for="edit-event-password">RSVP Password</label><input class="mdl-textfield__input" type="text" id="edit-event-password" name="edit-event-password" value="' + currentPassword + '"></div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-rsvp-deadline">RSVP Deadline <em>(Will be match event date if left empty)</em></label> <input class="mdl-textfield__input" type="text" id="edit-event-rsvp-deadline" name="edit-event-rsvp-deadline" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="' + currentDeadline + '"> <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span> </div> <input type="hidden" name="form-name" value="edit-event" /> <div class="form-buttons"> <div class="form-button"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="edit-event-do" type="submit" form="edit-event-form" data-event-id="' + eventID +'"> <i class="material-icons">add</i> </button> </div> <div class="form-button"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect edit-close-btn" data-event-id="' + eventID + '"><i class="material-icons">close</i> </button> </div> </div> </form>').fadeIn();
 
     // Registering form
     componentHandler.upgradeDom();
@@ -67,6 +71,7 @@ $('body').on('click', '#edit-event-do', function(e) {
   var date = new Date();
   var year = date.getFullYear(eventDate);
   var eventPassword = document.getElementById('edit-event-password').value;
+  var eventDeadline = document.getElementById('edit-event-rsvp-deadline').value;
 
   show_loader();
 
@@ -81,7 +86,8 @@ $('body').on('click', '#edit-event-do', function(e) {
             'eventAddress': eventAddress,
             'eventDate': eventDate,
             'eventTime': eventTime,
-            'eventPassword': eventPassword
+            'eventPassword': eventPassword,
+            'eventDeadline': eventDeadline
           },
     success: function() {
 
@@ -94,6 +100,10 @@ $('body').on('click', '#edit-event-do', function(e) {
       eventCard.find('.event-date').html(eventDate);
       eventCard.find('.event-time').html(eventTime);
       eventCard.find('.event-password').html(eventPassword);
+      if (eventDeadline == '') {
+        eventDeadline = eventDate;
+      }
+      eventCard.find('.event-rsvp-deadline').html(eventDeadline);
 
       // Setting toaster message
       var messageSuccess = document.querySelector('#action-message');

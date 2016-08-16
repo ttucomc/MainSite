@@ -155,34 +155,46 @@ function invitees_guests($invitee, $guests) {
  * @param  str  $date        Date of the event
  * @param  str  $time        Time of the event
  * @param  str  $password    Password to be used in RSVPs
+ * @param  str  $rsvps       Yes or no RSVP
+ * @param  str  $deadline    Deadline to RSVP
  * @return bool $eventAdded  Whether adding the event failed or not
  */
-function add_event($name, $description, $location, $address, $date, $time, $password, $rsvps) {
+function add_event($name, $description, $location, $address, $date, $time, $password, $rsvps, $deadline) {
   require(ROOT_PATH . "inc/db.php");
 
+  // Setting date to proper format
   $date = date('Y-m-d', strtotime($date));
   $time = date('H:i:s', strtotime($time));
   $datetime = $date . ' ' . $time;
 
+  // Checking to see if they RSVP'd yes or no
   if($rsvps != 'yes') {
     $rsvps = 0;
   } else {
     $rsvps = 1;
   }
 
+  // Checking if RSVP deadline was set. If not, set it equal to datetime of events
+  if (!empty($deadline)) {
+    $deadline = date('Y-m-d', strtotime($deadline)) . " 23:59:59";
+  } else {
+    $deadline = $datetime;
+  }
+
   try {
 
     $stmt = $db->prepare('
-                          INSERT INTO events (name, datetime, location, address, description, password, rsvps)
-                          VALUES (:name, :datetime, :location, :address, :description, :password, :rsvps)
+                          INSERT INTO events (name, datetime, location, address, description, password, rsvps, rsvp_date)
+                          VALUES (:name, :datetime, :location, :address, :description, :password, :rsvps, :deadline)
                         ');
-    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':name', trim($name), PDO::PARAM_STR);
     $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
-    $stmt->bindParam(':location', $location, PDO::PARAM_STR);
-    $stmt->bindParam(':address', $address, PDO::PARAM_STR);
-    $stmt->bindParam(':description', htmlspecialchars($description), PDO::PARAM_STR);
-    $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+    $stmt->bindParam(':location', trim($location), PDO::PARAM_STR);
+    $stmt->bindParam(':address', trim($address), PDO::PARAM_STR);
+    $stmt->bindParam(':description', htmlspecialchars(trim($description)), PDO::PARAM_STR);
+    $stmt->bindParam(':password', trim($password), PDO::PARAM_STR);
     $stmt->bindParam(':rsvps', $rsvps, PDO::PARAM_INT);
+    $stmt->bindParam(':deadline', $deadline, PDO::PARAM_STR);
     $stmt->execute();
 
     $eventAdded = true;
@@ -206,29 +218,37 @@ function add_event($name, $description, $location, $address, $date, $time, $pass
  * @param  str  $date        Date of the event
  * @param  str  $time        Time of the event
  * @param  str  $password    Password to be used in RSVPs
+ * @param  str  $deadline    Deadline to RSVP
  * @return bool $eventEdited Whether the event edit failed or not
  */
-function edit_event($eventID, $name, $description, $location, $address, $date, $time, $password) {
+function edit_event($eventID, $name, $description, $location, $address, $date, $time, $password, $deadline) {
   require(ROOT_PATH . "inc/db.php");
 
   $date = date('Y-m-d', strtotime($date));
   $time = date('H:i:s', strtotime($time));
   $datetime = $date . ' ' . $time;
 
+  if(!empty($deadline)) {
+    $deadline = date('Y-m-d', strtotime($deadline)) . ' 23:59:59';
+  } else {
+    $deadline = $datetime;
+  }
+
   try {
 
     $stmt = $db->prepare('
                           UPDATE events
-                          SET name=:name, datetime=:datetime, location=:location, address=:address, description=:description, password=:password
+                          SET name=:name, datetime=:datetime, location=:location, address=:address, description=:description, password=:password, rsvp_date=:deadline
                           WHERE ID=:eventID;
                         ');
-    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':name', trim($name), PDO::PARAM_STR);
     $stmt->bindParam(':datetime', $datetime, PDO::PARAM_STR);
-    $stmt->bindParam(':location', $location, PDO::PARAM_STR);
-    $stmt->bindParam(':address', $address, PDO::PARAM_STR);
-    $stmt->bindParam(':description', htmlspecialchars($description), PDO::PARAM_STR);
+    $stmt->bindParam(':location', trim($location), PDO::PARAM_STR);
+    $stmt->bindParam(':address', trim($address), PDO::PARAM_STR);
+    $stmt->bindParam(':description', htmlspecialchars(trim($description)), PDO::PARAM_STR);
     $stmt->bindParam(':eventID', $eventID, PDO::PARAM_INT);
-    $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+    $stmt->bindParam(':password', trim($password), PDO::PARAM_STR);
+    $stmt->bindParam(':deadline', $deadline, PDO::PARAM_STR);
     $stmt->execute();
 
     $eventEdited = true;
