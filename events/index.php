@@ -39,7 +39,7 @@ $events = get_all_events();
         </p>
         <p>
           <?php
-            if ($event['rsvps'] == 1) {
+            if ($event['rsvps'] == 1 && strtotime($event['rsvp_date']) >= time()) {
               echo '<a class="button" href="/comc/events/rsvp/?id=' . $event['ID'] . '">RSVP</a>';
             }
           ?>
