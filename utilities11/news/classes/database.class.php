@@ -20,10 +20,10 @@ class Database
    */
   public function __construct() {
     try {
-      $db = new PDO( "sqlsrv:server=" . DB_HOST . "; Database=" . DB_NAME . "", DB_USER, DB_PASS);
-      $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+      $this->db = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME .";port=" . DB_PORT,DB_USER,DB_PASS);
+      $this->db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     } catch (Exception $e) {
-      echo "Could not connect to the database." . $e->getMessage();
+      echo "Could not connect to the database.";
       exit;
     }
   }
@@ -31,9 +31,9 @@ class Database
   /**
    * Prepares a SQL query to be sent
    */
-  public function query($query) {
-    $this->stmt = $this->db->prepare($query);
-  }
+   public function query($query){
+     $this->stmt = $this->db->prepare($query);
+   }
 
   /**
    * Binds values to the parameters in the SQL statement
@@ -43,25 +43,22 @@ class Database
    * @var object               $type  Constant to be used for the type of value
    */
   public function bind($param, $value, $type = null) {
-
     if (is_null($type)) {
-      switch (true) {
-        case is_int($value):
-          $type = PDO::PARAM_INT;
-          break;
-        case is_bool($value):
-          $type = PDO::PARAM_BOOL;
-          break;
-        case is_null($value):
-          $type = PDO::PARAM_NULL;
-          break;
-        default:
-          $type = PDO::PARAM_STR;
-          break;
-      }
+        switch (true) {
+            case is_int($value):
+                $type = PDO::PARAM_INT;
+                break;
+            case is_bool($value):
+                $type = PDO::PARAM_BOOL;
+                break;
+            case is_null($value):
+                $type = PDO::PARAM_NULL;
+                break;
+            default:
+                $type = PDO::PARAM_STR;
+        }
     }
     $this->stmt->bindValue($param, $value, $type);
-
   }
 
   /**
@@ -69,14 +66,14 @@ class Database
    *
    * @return object $stmt Excuted statement
    */
-  public function execute() {
-    return $this->stmt->execute();
-  }
+   public function execute(){
+     return $this->stmt->execute();
+   }
 
   /**
    * Gets all of the rows from the SQL statement
    *
-   * @return array A multidimensional array of all the informtion that matches
+   * @return array A multidimensional array of all the information that matches
    */
   public function getAll() {
     $this->execute();
@@ -91,6 +88,20 @@ class Database
   public function getOne() {
     $this->execute();
     return $this->stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
+  /**
+   * Returns the number of rows effected by the query
+   */
+  public function rowCount(){
+    return $this->stmt->rowCount();
+  }
+
+  /**
+   * Returns the ID of the last row effected by the query
+   */
+  public function lastInsertId(){
+    return $this->dbh->lastInsertId();
   }
 
   /**

@@ -1,12 +1,16 @@
 <?php
-require_once('../../includes/ttu-db-config.php');
+require_once('inc/ttu-db-config.php');
 // Importing classes
 // spl_autoload_register(function ($class) {
 //     include 'classes/' . $class . '.class.php';
 // });
 include('classes/database.class.php');
 
-$conn = new Database();
+$database = new Database();
+$database->query('SELECT * FROM stories');
+$rows = $database->getAll();
+
+echo "Worked!";
 
 // $feedsize = 6;  // max number of stories to display, change this to whatever you need.
 //
