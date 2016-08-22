@@ -1,0 +1,106 @@
+/**********************************************************
+					                BODY
+**********************************************************/
+
+.l-main-pagecontent {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+
+  section {
+    padding: 3em .25em;
+  }
+
+  small {
+    font-size: .75em;
+  }
+
+  & > .row {
+    max-width: 100%;
+    & > h1 {
+      height: 150px;
+      background: image-url("thinktank-logo-green.svg") center center no-repeat;
+      text-indent: -9999px;
+      margin-bottom: 1em;
+      @media screen and (min-width: 768px) {
+        height: 225px;
+      }
+      @media screen and (min-width: 1024px) {
+        height: 250px;
+      }
+    }
+    & > .columns {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.row {
+  .row {
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+}
+
+h2 {
+  color: #9ABB3C;
+}
+
+
+/**********************************************************
+					            ABOUT SECTION
+**********************************************************/
+
+#about {
+  position: relative;
+  background-color: #9ABB3C;
+  z-index: 1;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    background: image-url("water.svg");
+    height: 75px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  h2,
+  h3 {
+    color: #FFF;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    i.fa {
+      display: block;
+      margin-bottom: .125em;
+    }
+  }
+
+  #points {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+
+/**********************************************************
+					          SCHEDULE SECTION
+**********************************************************/
+
+#schedule {
+  padding-bottom: 1.5em;
+}
+
+
+/**********************************************************
+					            EVENTS SECTION
+**********************************************************/
+
+#events {
+  background-color: #EEE;
+}
