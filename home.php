@@ -538,17 +538,13 @@
 		<section id="home-publications">
 			<h2>Newsletters</h2>
 			<div id="home-publications-flex">
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/advantage/index.php"> <img src="/comc/about/publications/advantage/images/trobberson.jpg" alt="Todd Robberson" /></a>
-					<h3><a href="/comc/about/publications/advantage/index.php">Alumni Advantage</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/advantage/index.php"><strong>Your Personal Radar</strong><br /><br />You have a personal radar and probably didn’t even know it. The hardest part is detecting its signals, then learning how to trust the message your radar sends out.<br /><br /><em>More...</em></a></p>
-				</div>
 				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Robin Duffee" src="/comc/about/images/ambassadors/rduffee.jpg" alt="Robin Duffee" /></a>
 					<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
 					<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Get to Know Your Ambassador: Robin Duffee</strong><br /><br />I became an ambassador when one of my favorite professors told me about the opportunity and encouraged me to apply. I was definitely nervous, but I was so passionate about my major and I wanted to do anything I could to help spread the word about all the wonderful programs CoMC has to offer!<br /><br /><em>More...</em></a></p>
 				</div>
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="Media &amp; Communication Learning Community" src="/comc/about/publications/converging/2016/images/may/mclc.jpg" alt="Media &amp; Communication Learning Community" /> </a>
+				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="Alixandra Haley" src="/comc/about/publications/converging/2016/images/august/Alixandra-Haley-1.jpg" alt="Alixandra Haley" /> </a>
 					<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/converging/"> <strong>MCLC Wins Learning Community of the Year Award from University Student Housing</strong> <br /><br />The Media &amp; Communication Learning Community, which is made up of students who are majoring in the College of Media &amp; Communication and living on campus, received the award for Learning Community of the Year from University Student Housing for 2015-16.<br /><br /> <em>More...</em> </a></p>
+					<p class="hidden-mobile"><a href="/comc/about/publications/converging/"> <strong>Media Strategies Major Interns with High Noon Entertainment</strong> <br /><br />Senior media strategies major Alixandra Haley spent the summer working as a production intern at High Noon Entertainment, and she said the first step towards finding the internship was taking the time to research.<br /><br /> <em>More...</em> </a></p>
 				</div>
 				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/mc/"> <img style="width: 50%;" src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
 					<h3><a href="/comc/about/publications/mc.php">The MC 2015</a></h3>

@@ -473,6 +473,9 @@ h1 {
 		display: -moz-box;
 		display: -ms-flexbox;
 		@include display-flex;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
 		@media screen and (max-width: 768px) {
 			@include flex-wrap(wrap);
 		}

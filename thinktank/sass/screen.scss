@@ -2,6 +2,11 @@
 					                BODY
 **********************************************************/
 
+main.cd-main-content  {
+  background: image-url('thinktank.jpg') center top no-repeat;
+  background-size: contain;
+}
+
 .l-main-pagecontent {
   text-align: center;
   padding-left: 0;
@@ -20,14 +25,16 @@
     max-width: 100%;
     & > h1 {
       height: 150px;
-      background: image-url("thinktank-logo-green.svg") center center no-repeat;
+      background: image-url("thinktank-logo-white.svg") center center no-repeat;
       text-indent: -9999px;
-      margin-bottom: 1em;
+      margin: 1em 0;
       @media screen and (min-width: 768px) {
         height: 225px;
+        margin: 2em 0;
       }
       @media screen and (min-width: 1024px) {
         height: 250px;
+        margin: 3em 0 4em;
       }
     }
     & > .columns {
@@ -46,6 +53,10 @@
 
 h2 {
   color: #9ABB3C;
+}
+
+::selection {
+  background: darken(#9ABB3C, 10%);
 }
 
 
@@ -93,6 +104,7 @@ h2 {
 **********************************************************/
 
 #schedule {
+  background-color: #FFF;
   padding-bottom: 1.5em;
 }
 
@@ -103,4 +115,24 @@ h2 {
 
 #events {
   background-color: #EEE;
+}
+
+/* Responsive iFrame */
+
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
