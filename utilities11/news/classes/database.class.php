@@ -20,7 +20,7 @@ class Database
    */
   public function __construct() {
     try {
-      $this->db = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME .";port=" . DB_PORT,DB_USER,DB_PASS);
+      $this->db = new PDO( "sqlsrv:server=" . DB_HOST . "; Database=" . DB_NAME . "", DB_USER, DB_PASS);
       $this->db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     } catch (Exception $e) {
       echo "Could not connect to the database.";
