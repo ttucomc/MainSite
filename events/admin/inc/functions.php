@@ -115,11 +115,10 @@ function total_attending($invitees, $guests) {
   foreach ($invitees as $invitee) {
     if ($invitee[attending] == 1) {
       $totalAttending += 1;
-    }
-  }
 
-  foreach ($guests as $guest) {
-    $totalAttending += 1;
+      $inviteesGuests = invitees_guests($invitee, $guests);
+      $totalAttending = $totalAttending + count($inviteesGuests);
+    }
   }
 
   return $totalAttending;

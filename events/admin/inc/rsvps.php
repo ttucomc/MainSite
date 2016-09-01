@@ -71,7 +71,7 @@ if (empty($invitees)) {
 
 
 	        // If the invitee is coming and has guests, list the invitee and their guests under their name. Else just list the invitee.
-	        if ($hasGuests) {
+	        if ($hasGuests && $invitee[attending] == 1) {
 	          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">Yes</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td>' . (($luncheon)?"<td>$excuses</td>":"") . '</tr>';
 	          // List all of this person's guests
 	          foreach ($inviteesGuests as $guest) {
