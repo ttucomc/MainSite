@@ -86,13 +86,13 @@
     $msg .= "<tr style='background: #EEEEEE;'><td><strong>Bio:</strong></td><td>" . $bio . "</td></tr>";
     if(isset($_POST["f_name"])) {
       $msg .= "<tr><td><strong>Courses:</strong></td><td>" . $courses . "</td></tr>";
-      $msg .= "<tr style='background: #EEEEEE;'><td><strong>Publications:</strong></td><td>" . $publications . "</td></tr>";
+      $msg .= "<tr style='background: #EEEEEE;'><td><strong>Publications:</strong></td><td>" . nl2br($publications) . "</td></tr>";
     } elseif (isset($_POST["s_name"])) {
       $msg .= "<tr><td><strong>Duties:</strong></td><td>" . $duties . "</td></tr>";
-      $msg .= "<tr style='background: #EEEEEE;'><td><strong>Training:</strong></td><td>" . $training . "</td></tr>";
+      $msg .= "<tr style='background: #EEEEEE;'><td><strong>Training:</strong></td><td>" . nl2br($training) . "</td></tr>";
     }
     $msg .= "<tr><td><strong>Awards:</strong></td><td>" . $awards . "</td></tr>";
-    $msg .= "<tr style='background: #EEEEEE;'><td><strong>Social Media:</strong></td><td>" . $social . "</td></tr>";
+    $msg .= "<tr style='background: #EEEEEE;'><td><strong>Social Media:</strong></td><td>" . nl2br($social) . "</td></tr>";
     $msg .= "</table>";
     $msg .= "</body></html>";
 

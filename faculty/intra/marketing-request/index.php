@@ -2,6 +2,7 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://api.trello.com/1/client.js?key=800f66b96d0d0e3d0f41da10eb18a075"></script>
 
   <style>
 
@@ -391,7 +392,61 @@
   <?php endif; ?>
 
   <script>
+
+  $('#project-request').submit(function() {
+
+    var myList = '57c871be4123a9eda22d55bc';
+    var creationSuccess = function(data) {
+      console.log('Card created successfully. Data returned:' + JSON.stringify(data));
+    };
+    var jobType = $('#job_type').val();
+    var userName = $('#p_contact_name').val();
+    var userDept = $('#p_department').val();
+    var userEmail = $('#p_email').val();
+    var userPhone = $('#p_phone').val();
+
+    if (jobType == "Course Flier") {
+      var courseTitle = $('#course_title').val();
+      var courseNumber = $('#course_number').val();
+      var courseSection = $('#course_section').val();
+      var courseTime = $('#course_daytime').val();
+      var professor = $('#course_professor').val();
+
+      var projectDesc = "Details:\r\n--------\r\n" + $('#p_details').val() + "\r\n\r\nFlier Info:\r\n-----------\r\n**Course Title:** " + courseTitle + "\r\n**Course Number:** " + courseNumber + "\r\n**Course Section:** " + courseSection + "\r\n**Course Day/Time:** " + courseTime + "\r\n**Professor:** " + professor + "\r\n\r\nRequester:\r\n----------\r\n**Name:** " + userName + "\r\n**Department:** " + userDept + "\r\n**Email:** " + userEmail + "\r\n**Phone:** " + userPhone;
+    } else {
+      var projectDesc = "Details:\r\n--------\r\n" + $('#p_details').val() + "\r\n\r\nRequester:\r\n----------\r\n**Name:** " + userName + "\r\n**Department:** " + userDept + "\r\n**Email:** " + userEmail + "\r\n**Phone:** " + userPhone;
+    }
+
+    var newCard = {
+      name: jobType,
+      desc: projectDesc,
+      // Place this card at the top of our list
+      idList: myList,
+      pos: 'top'
+    };
+    Trello.post('/cards/', newCard, creationSuccess);
+  });
+
   $(document).ready(function() {
+
+    // ***** TRELLO ***** //
+
+    // Success/Failure
+    var authenticationSuccess = function() { console.log('Successful authentication'); };
+    var authenticationFailure = function() { console.log('Failed authentication'); };
+
+    // Authenticate session
+    Trello.authorize({
+      type: 'popup',
+      name: 'Marketing Project Requests',
+      scope: {
+        read: 'true',
+        write: 'true' },
+      expiration: 'never',
+      success: authenticationSuccess,
+      error: authenticationFailure
+    });
+
     $("#type-selection").change(function() {
       var value = $("#type-selection option:selected").val();
 
