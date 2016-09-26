@@ -27,20 +27,16 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-              <a class="mdl-navigation__link" href="">Link</a>
-              <a class="mdl-navigation__link" href="">Link</a>
-              <a class="mdl-navigation__link" href="">Link</a>
-              <a class="mdl-navigation__link" href="">Link</a>
+              <a class="mdl-navigation__link" href="">Login</a>
+              <a class="mdl-navigation__link" href="">Profile</a>
             </nav>
           </div>
         </header>
-        <div class="mdl-layout__drawer">
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
           <span class="mdl-layout-title"><small>TTU COMC Faculty CMS</small></span>
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Login</a>
+            <a class="mdl-navigation__link" href="">Profile</a>
           </nav>
         </div>
 

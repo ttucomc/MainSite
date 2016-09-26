@@ -15,9 +15,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'first-name'          => $faker->firstName,
+        'last-name'           => $faker->lastName,
+        'email'               => $faker->unique()->safeEmail,
+        'phone-number'        => $faker->e164PhoneNumber,
+        'office-number'       => $faker->buildingNumber,
+        'office-hours'        => $faker->dayOfWeek . ' ' . $faker->time($format = 'H:i'),
+        'research'            => $faker->paragraph($nbSentences = 5, $variableNbSentences = true),
+        'password'            => $password ?: $password = bcrypt('secret'),
+        'remember_token'      => str_random(10),
     ];
 });
