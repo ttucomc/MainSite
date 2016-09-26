@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA","file":"app.css","sourceRoot":"/source/","sourcesContent":[]}
+{"version":3,"sources":["components/_main-content.scss"],"names":[],"mappings":"AAAA;EAEE,iBAAiB;EAEjB,qBAAc;EAAd,cAAc;EACd,yBAAwB;EAAxB,wBAAwB,EAEzB","file":"app.css","sourcesContent":[".mdl-layout__content {\n\n  padding-top: 2em;\n\n  display: flex;\n  justify-content: center;\n\n}\n"],"sourceRoot":"/source/"}
