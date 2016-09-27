@@ -9,8 +9,6 @@
         <title>COMC TTU Faculty CMS</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="css/material-design.css">
-        <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
@@ -27,16 +25,34 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-              <a class="mdl-navigation__link" href="">Login</a>
-              <a class="mdl-navigation__link" href="">Profile</a>
+              @if (Auth::check())
+                <a class="mdl-navigation__link"
+                  href="{{ url('/') }}">
+                  Logout
+                </a>
+              @else
+                <a class="mdl-navigation__link"
+                  href="{{ url('/') }}">
+                  Login
+                </a>
+              @endif
             </nav>
           </div>
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
           <span class="mdl-layout-title"><small>TTU COMC Faculty CMS</small></span>
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Login</a>
-            <a class="mdl-navigation__link" href="">Profile</a>
+            @if (Auth::check())
+              <a class="mdl-navigation__link"
+                href="{{ url('/') }}">
+                Logout
+              </a>
+            @else
+              <a class="mdl-navigation__link"
+                href="{{ url('/') }}">
+                Login
+              </a>
+            @endif
           </nav>
         </div>
 
@@ -53,6 +69,8 @@
         </footer>
 
       </div>
+
+      <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
     </body>
 

@@ -14,9 +14,14 @@ require('laravel-elixir-vue');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js')
-       .browserSync({
-         proxy: 'ttucomcfacultycms.app:8000'
-       });
+    mix.sass([
+      'material-design.scss',
+      'app.scss'
+    ]);
+
+    mix.webpack('app.js')
+
+    mix.browserSync({
+      proxy: 'ttucomcfacultycms.app:8000'
+    });
 });

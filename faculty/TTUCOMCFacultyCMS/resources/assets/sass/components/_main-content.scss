@@ -1,8 +1,15 @@
 .mdl-layout__content {
 
-  padding-top: 2em;
+  .page-content {
 
-  display: flex;
-  justify-content: center;
+    padding-top: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+  }
 
 }

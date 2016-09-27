@@ -5,12 +5,7 @@
 // Variables
 //@import "variables";
 
-// Material Design Lite
-//@import "/node_modules/material-design-lite/material.min.css";
-//@import "node_modules/material-design-lite/material.min.js";
-
-// Bootstrap
-//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 @import 'components/header';
-@import 'components/main-content'
+@import 'components/main-content';
+@import 'components/media-queries';
+@import 'components/mdl-card';
