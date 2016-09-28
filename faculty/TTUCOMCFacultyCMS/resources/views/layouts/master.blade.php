@@ -27,13 +27,8 @@
             <nav class="mdl-navigation mdl-layout--large-screen-only">
               @if (Auth::check())
                 <a class="mdl-navigation__link"
-                  href="{{ url('/') }}">
+                  href="{{ url('/logout') }}">
                   Logout
-                </a>
-              @else
-                <a class="mdl-navigation__link"
-                  href="{{ url('/') }}">
-                  Login
                 </a>
               @endif
             </nav>
@@ -44,13 +39,8 @@
           <nav class="mdl-navigation">
             @if (Auth::check())
               <a class="mdl-navigation__link"
-                href="{{ url('/') }}">
+                href="{{ url('/logout') }}">
                 Logout
-              </a>
-            @else
-              <a class="mdl-navigation__link"
-                href="{{ url('/') }}">
-                Login
               </a>
             @endif
           </nav>
@@ -70,7 +60,7 @@
 
       </div>
 
-      <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+      <script type="text/javascript" src="{{ asset('js/all.js') }}"></script>
 
     </body>
 

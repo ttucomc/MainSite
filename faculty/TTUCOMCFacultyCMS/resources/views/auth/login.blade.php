@@ -14,23 +14,33 @@
       <div class="mdl-card__supporting-text">
 
 
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" id="username" />
-          <label class="mdl-textfield__label" for="username">Username</label>
+        <div class="mdl-textfield mdl-js-textfield{{ $errors->has('email') ? ' has-error' : '' }}">
+          <input class="mdl-textfield__input" type="email" id="email" name="email" value="{{ old('email') }}" required autofocus />
+          <label class="mdl-textfield__label" for="email">Email</label>
+          @if ($errors->has('email'))
+              <span class="help-block" style="font-size: 10px; color: red;">
+                  <strong>{{ $errors->first('email') }}</strong>
+              </span>
+          @endif
         </div>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="password" id="userpass" />
-          <label class="mdl-textfield__label" for="userpass">Password</label>
+        <div class="mdl-textfield mdl-js-textfield{{ $errors->has('password') ? ' has-error' : '' }}">
+          <input class="mdl-textfield__input" type="password" id="password" name="password" required />
+          <label class="mdl-textfield__label" for="password">Password</label>
+          @if ($errors->has('password'))
+              <span class="help-block" style="font-size: 10px; color: red;">
+                  <strong>{{ $errors->first('password') }}</strong>
+              </span>
+          @endif
         </div>
 
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Log in
+          <span style="color: black;">Log in</span>
         </button>
       </div>
     </div>
-    
+
   </form>
 
 @endsection

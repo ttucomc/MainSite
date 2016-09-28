@@ -19,7 +19,10 @@ elixir(mix => {
       'app.scss'
     ]);
 
-    mix.webpack('app.js')
+    mix.webpack([
+      'material-design.js',
+      'app.js'
+    ]);
 
     mix.browserSync({
       proxy: 'ttucomcfacultycms.app:8000'

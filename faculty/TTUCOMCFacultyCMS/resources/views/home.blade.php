@@ -1,17 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  <h5>You are logged in!</h5>
+
+  {{-- This is where the logged in faculty memeber will see all their related content
+        for their page. Here, they can edit their content and submit a request to
+          have their changes reviewed. Kuhrt and Justin will then be notified of the
+            changes and can approve or deny the request. I am thinking this can be done
+              via email with a link to view all changes. --}}
+
 @endsection
