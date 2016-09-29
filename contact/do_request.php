@@ -32,7 +32,7 @@ if ($resp->isSuccess()) {
 } elseif ($_POST[info_type] == "4-year degree plans") {
 	$to = "todd.chambers@ttu.edu, emily.balke@ttu.edu, r.reddick@ttu.edu, clara.mckenneye@ttu.edu, kuhrt.cowan@ttu.edu";
 } elseif ($_POST[info_type] == "Internships") {
-	$to = "cameron.skoczlas@ttu.edu, r.reddick@ttu.edu, clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu";
+	$to = "aleesa.ross@ttu.edu, r.reddick@ttu.edu, clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu";
 } elseif ($_POST[info_type] == "Research") {
 	$to = "coy.callison@ttu.edu, glenn.cummins@ttu.edu, r.reddick@ttu.edu, clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu";
 } elseif ($_POST[info_type] == "Alumni relations") {
@@ -44,7 +44,7 @@ if ($resp->isSuccess()) {
 } elseif ($_POST[info_type] == "Employment") {
 	$to = "kimberly.wagner@ttu.edu, r.reddick@ttu.edu, clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu";
 } elseif ($_POST[info_type] == "Giving") {
-	$to = "shannon.smith@ttu.edu, r.reddick@ttu.edu, clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu";
+	$to = "colleen.sisneros@ttu.edu, r.reddick@ttu.edu, clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu";
 } else {
 	$to = "kimberly.wagner@ttu.edu, clara.mckenney@ttu.edu, r.reddick@ttu.edu, kuhrt.cowan@ttu.edu";
 }
