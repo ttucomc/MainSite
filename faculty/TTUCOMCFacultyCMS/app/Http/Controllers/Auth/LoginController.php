@@ -39,9 +39,9 @@ class LoginController extends Controller
     }
 
     /**
-     * Logout current user session
+     * Logout current user session.
      *
-     * @return redirect
+     * @return \Illuminate\Http\Response
      */
     public function logout()
     {

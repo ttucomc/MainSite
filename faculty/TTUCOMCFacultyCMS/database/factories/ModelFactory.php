@@ -15,15 +15,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'first-name'          => $faker->firstName,
-        'last-name'           => $faker->lastName,
+        'first_name'          => $faker->firstName,
+        'last_name'           => $faker->lastName,
         'email'               => $faker->unique()->safeEmail,
-        'phone-number'        => $faker->e164PhoneNumber,
-        'image-path'          => $faker->word . '.jpg',
+        'phone_number'        => $faker->e164PhoneNumber,
+        'image_path'          => $faker->word . '.jpg',
         'department'          => 'Journalism',
         'title'               => $faker->jobTitle,
-        'office-number'       => $faker->buildingNumber,
-        'office-hours'        => $faker->dayOfWeek . ' ' . $faker->time($format = 'H:i'),
+        'office_number'       => $faker->buildingNumber,
+        'office_hours'        => $faker->dayOfWeek . ' ' . $faker->time($format = 'H:i'),
         'research'            => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
         'password'            => $password ?: $password = bcrypt('secret'),
         'remember_token'      => str_random(10),
