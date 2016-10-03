@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index');
 
 Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::post('/emailAdmin', 'EmailController@sendEmailToAdmin');
