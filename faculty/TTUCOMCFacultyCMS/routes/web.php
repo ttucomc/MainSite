@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index');
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::post('/emailAdmin', 'EmailController@sendEmailToAdmin');
+
+Route::get('/admin-approve-changes/{id}', 'AdminController@approveChanges');

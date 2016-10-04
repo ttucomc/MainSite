@@ -55,7 +55,7 @@
 
     </div>
 
-    <a href="#">Click here</a> verify and make changes in DB.
+    <a href="http://localhost:3000/admin-approve-changes/{{ $user->id }}">Click here</a> to approve user changes.
 
     <a href="#">Deny</a> changes and reply with a comment.
 

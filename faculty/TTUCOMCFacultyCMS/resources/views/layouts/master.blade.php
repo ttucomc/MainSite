@@ -27,6 +27,10 @@
             <nav class="mdl-navigation mdl-layout--large-screen-only">
               @if (Auth::check())
                 <a class="mdl-navigation__link"
+                  href="{{ url('/home') }}">
+                  Home
+                </a>
+                <a class="mdl-navigation__link"
                   href="{{ url('/logout') }}">
                   Logout
                 </a>
@@ -38,6 +42,10 @@
           <span class="mdl-layout-title"><small>TTU COMC Faculty CMS</small></span>
           <nav class="mdl-navigation">
             @if (Auth::check())
+              <a class="mdl-navigation__link"
+                href="{{ url('/home') }}">
+                Home
+              </a>
               <a class="mdl-navigation__link"
                 href="{{ url('/logout') }}">
                 Logout

@@ -24,13 +24,21 @@ class FacultyChangedProfile extends Mailable
     public $request;
 
     /**
+     * The user instance
+     * 
+     * @var User
+     */
+    public $user;
+
+    /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request, User $user)
     {
         $this->request = $request;
+        $this->user = $user;
     }
 
     /**
@@ -40,17 +48,16 @@ class FacultyChangedProfile extends Mailable
      */
     public function build()
     {
-        $user = User::where('id', '=', Auth::id())->get()->first();
-
         return $this->view('email')
                     ->with([
-                        'first_name'      => $user->first_name,
-                        'last_name'       => $user->last_name,
-                        'departmentDB'    => $user->department,
-                        'phone_numberDB'  => $user->phone_number,
-                        'office_numberDB' => $user->office_number,
-                        'office_hoursDB'  => $user->office_hours,
-                        'researchDB'      => $user->research
+                        'id'              => $this->user->id,
+                        'first_name'      => $this->user->first_name,
+                        'last_name'       => $this->user->last_name,
+                        'departmentDB'    => $this->user->department,
+                        'phone_numberDB'  => $this->user->phone_number,
+                        'office_numberDB' => $this->user->office_number,
+                        'office_hoursDB'  => $this->user->office_hours,
+                        'researchDB'      => $this->user->research
                     ]);
     }
 }

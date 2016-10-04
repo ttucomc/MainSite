@@ -23,9 +23,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $user = User::where('id', '=', Auth::id())->get()->first();
+        if($user->made_changes) {
+            return view('/waiting-for-approval');
+        }
 
         return view('/home', compact('user'));
     }

@@ -21,14 +21,15 @@ class EmailController extends Controller
     public function sendEmailToAdmin(Request $request)
     {
         $user = User::where('id', '=', Auth::id())->get()->first();
+        $user->made_changes = 1;
+        $user->save();
 
-        $department = $request->department;
+        // Send email
+        Mail::to('kuhrt.cowan@ttu.edu')->send(new FacultyChangedProfile($request, $user));
 
-        // send email
-        Mail::to('kuhrt.cowan@ttu.edu')->send(new FacultyChangedProfile($request));
+        // Use a session variable to persist the form data
+        session(['user-' . $user->id . '-form-data' => $request->all()]);
 
-        // Need to figure out how to update database after the admin has verified changes.
-
-        return response($department);
+        return view('/user-changes-confirmation');
     }
 }
