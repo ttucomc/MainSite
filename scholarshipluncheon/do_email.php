@@ -6,13 +6,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Scholarship Luncheon 2015 Photos</title>
+        <title>Scholarship Luncheon 2016 Photos | CoMC | TTU</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <link rel="stylesheet" type="text/css" media="screen" title="Custom Settings" href="assets/css/custom.css" >
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="https://use.fontawesome.com/4dbdfa5a6f.js"></script>
         <script src="assets/js/libs/modernizr.custom.23122.js"></script>
 
         <style type="text/css">
@@ -35,7 +35,7 @@
                 <a href="http://www.depts.ttu.edu/comc/"><img src="images/CoMCDoubleT.svg" id="logo" alt="CoMC Double T and Signature"></a>
             </div>
             <div class="meta-right">
-                
+
             </div>
         </header>
         <section id="instructions">
@@ -43,7 +43,7 @@
             <?php
                 // Captcha code
                 $gRecaptchaResponse = $_POST['g-recaptcha-response'];
-                require('autoload.php');
+                require('/comc/includes/autoload.php');
                 $siteKey = '6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY';
                 $secret = '6Lc8LAsTAAAAAOHTC42UTYGN3JroKYT57uXiO8tO';
                 $recaptcha = new \ReCaptcha\ReCaptcha($secret, new \ReCaptcha\RequestMethod\SocketPost());
@@ -55,17 +55,17 @@
                     $user_email = stripslashes($_POST[user_email]);
                     $user_message = stripslashes($_POST[user_message]);
                     $comc = stripslashes('College of Media & Communication');
-                    
+
                     /*---Email to Marketing Dept.-------------------------------------*/
-                    
-                    $headers = "From: " . $user_email . "\r\n";
+
+                    $headers = "From: " . $user_name . " <" . $user_email . ">\r\n";
                     $headers .= "Reply-To: ". $user_email . "\r\n";
                     $headers .= "MIME-Version: 1.0\r\n";
                     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-                    
-                    $to = " kuhrt.cowan@ttu.edu, jacob.copple@ttu.edu";
+
+                    $to = " kuhrt.cowan@ttu.edu, hannah.woodfin@ttu.edu";
                     $subject = "Scholarship Luncheon Photos";
-                    
+
                     $message = '<html><body>';
                     $message .= '<table width="100%" cellpadding="10">';
                     $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td><strong>Sender's Name:</strong> </td><td>".$user_name."</td></tr>";
@@ -73,19 +73,19 @@
                     $message .= "<tr style='background: #EEEEEE;'><td><strong>Pictures Requested:</strong> </td><td>" . $user_message . "</td></tr>";
                     $message .= "</table>";
                     $message .= "</body></html>";
-                    
+
                     mail ($to, $subject, $message, $headers);
-                    
+
                     /*---Email to Applicant-------------------------------------*/
-                    
-                    $conf_headers = "From: MassComm_Web@ttu.edu\r\n";
+
+                    $conf_headers = "From: College of Media & Communication <comc@ttu.edu>\r\n";
                     $conf_headers .= "Reply-To: kuhrt.cowan@ttu.edu\r\n";
                     $conf_headers .= "MIME-Version: 1.0\r\n";
                     $conf_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-                    
+
                     $conf_to = " ". $user_email . "\r\n";
                     $conf_subject = "Scholarship Luncheon Photos";
-                    
+
                     $conf_message = '<html><body>';
                     $conf_message .= '<div width="100%" style="background: #CC0000; padding:15px;">';
                     $conf_message .= "<h3 style='text-align:center; color: #FFFFFF; font-size: 32;'>Thank you for your submission " . $user_name . "!</h3>";
@@ -95,11 +95,11 @@
                     $conf_message .= "<p align=center>If you have any questions please email <a href='mailto:kuhrt.cowan@ttu.edu'>Kuhrt Cowan</a>.";
                     $conf_message .= '</div>';
                     $conf_message .= '</body></html>';
-                    
+
                     mail ($conf_to, $conf_subject, $conf_message, $conf_headers);
 
 
-                    
+
                     echo "<h1>Thank You, " . $user_name . "</h1>";
                     echo "<h3>We will get your download link to you shortly.</h3>";
                     echo "<p>If you have any questions or would like to check the status, please contact <a href='mailto:kuhrt.cowan@ttu.edu'>Kuhrt Cowan</a>.</p>";
@@ -117,11 +117,11 @@
                     }
                     exit();
                 }
-                
+
             ?>
-            
+
         </section>
-               
+
         <footer>
             <div>
                 <a href="http://www.facebook.com/TTUMCOM"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -129,7 +129,7 @@
                 <a href="https://www.youtube.com/user/TTUMCOM/featured"><i class="fa fa-youtube-square fa-2x"></i></a>
             </div>
         </footer>
-        
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="assets/js/libs/jquery.velocity.min.js"></script>
