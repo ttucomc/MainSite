@@ -31,6 +31,10 @@
                   Home
                 </a>
                 <a class="mdl-navigation__link"
+                  href="{{ url('/admin-create-faculty') }}">
+                  Create Faculty Member
+                </a>
+                <a class="mdl-navigation__link"
                   href="{{ url('/logout') }}">
                   Logout
                 </a>
@@ -45,6 +49,10 @@
               <a class="mdl-navigation__link"
                 href="{{ url('/home') }}">
                 Home
+              </a>
+              <a class="mdl-navigation__link"
+                href="{{ url('/admin-create-faculty') }}">
+                Create Faculty Member
               </a>
               <a class="mdl-navigation__link"
                 href="{{ url('/logout') }}">

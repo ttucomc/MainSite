@@ -8,7 +8,7 @@
             changes and can approve or deny the request. I am thinking this can be done
               via email with a link to view all changes. --}}
 
-  <section class="user-edit-form">
+  <div class="user-edit-form">
 
     <div class="demo-grid-1 mdl-grid">
       <div class="mdl-cell mdl-cell--12-col">
@@ -26,43 +26,54 @@
 
         <form role="form" method="POST" action="{{ url('emailAdmin') }}">
           {{ csrf_field() }}
+          <div class="flex-form-fields">
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="email">Email</label>
-            <input class="mdl-textfield__input" type="email" id="email" name="email" value="{{ $user->email }}" />
-          </div>
+            <section class="top-form-fields">
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="phone_number">Phone Number</label>
-            <input class="mdl-textfield__input" type="text" id="phone_number" name="phone_number" value="{{ $user->phone_number }}" />
-          </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="email">Email</label>
+                <input class="mdl-textfield__input" type="email" id="email" name="email" value="{{ $user->email }}" />
+              </div>
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="office_number">Office Number</label>
-            <input class="mdl-textfield__input" type="text" id="office_number" name="office_number" value="{{ $user->office_number }}" />
-          </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="phone_number">Phone Number</label>
+                <input class="mdl-textfield__input" type="text" id="phone_number" name="phone_number" value="{{ $user->phone_number }}" />
+              </div>
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="office_hours">Office Hours</label>
-            <input class="mdl-textfield__input" type="text" id="office_hours" name="office_hours" value="{{ $user->office_hours }}" />
-          </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="office_number">Office Number</label>
+                <input class="mdl-textfield__input" type="text" id="office_number" name="office_number" value="{{ $user->office_number }}" />
+              </div>
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="department">Department</label>
-            <input class="mdl-textfield__input" type="text" id="department" name="department" value="{{ $user->department }}" />
-          </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="office_hours">Office Hours</label>
+                <input class="mdl-textfield__input" type="text" id="office_hours" name="office_hours" value="{{ $user->office_hours }}" />
+              </div>
 
-          <br>
+            </section>
 
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <label class="mdl-textfield__label" for="research">Research</label>
-            <textarea
-              class="mdl-textfield__input"
-              rows="8"
-              id="research"
-              name="research"
-              >{{ nl2br($user->research) }}
-            </textarea>
+            <section class="bottom-form-fields">
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="department">Department</label>
+                <input class="mdl-textfield__input" type="text" id="department" name="department" value="{{ $user->department }}" />
+              </div>
+
+              <br>
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="research">Research</label>
+                <textarea
+                  class="mdl-textfield__input"
+                  rows="8"
+                  id="research"
+                  name="research"
+                  >{{ $user->research }}
+                </textarea>
+              </div>
+
+            </section>
+
           </div>
 
           <br>
@@ -74,6 +85,6 @@
       </div>
     </div>
 
-  </section>
+  </div>
 
 @endsection

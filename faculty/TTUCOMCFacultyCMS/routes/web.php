@@ -23,4 +23,10 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::post('/emailAdmin', 'EmailController@sendEmailToAdmin');
 
+Route::post('/create-faculty', 'AdminController@createFaculty');
+
 Route::get('/admin-approve-changes/{id}', 'AdminController@approveChanges');
+
+Route::get('/admin-create-faculty', function() {
+  return view('admin-create-faculty');
+});

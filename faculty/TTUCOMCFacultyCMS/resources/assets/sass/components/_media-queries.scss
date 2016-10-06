@@ -11,8 +11,17 @@
 
 }
 
-@media screen and (min-width: 418px) {
+@media screen and (min-width: 800px) {
 
-  
+  .flex-form-fields {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .top-form-fields {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2em;
+  }
 
 }
