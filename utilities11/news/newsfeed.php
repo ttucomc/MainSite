@@ -55,7 +55,7 @@ if (isset($_REQUEST["cat"])) {
       $picture = $story->getPicture();
   ?>
     <?php if ($story_i <= $feedsize): ?>
-      <article>
+      <article class="clearfix">
         <?php if (!empty($title)): ?>
           <h4><?php echo $title; ?></h4>
         <?php endif; ?>
