@@ -68,6 +68,53 @@
 
       // Send Message
       mail($to, $subject, $msg, $headers);
+
+
+      /*---Email to Trello-------------------------------------*/
+      if ($jobType != "Story Ideas") {
+
+        // Headers
+        $trello_headers = "From: Project Request <comc@ttu.edu>\r\n";
+        $trello_headers .= "Reply-To: comc@ttu.edu\r\n";
+        $trello_headers .= "MIME-Version: 1.0\r\n";
+    		$trello_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+        // Adding members to card based on job request, this goes in email's subject line
+        if ($jobType == "Web") {
+          $trello_members = "@kuhrtcowan";
+        } elseif ($jobType == "Photo/Video Opportunity") {
+          $trello_members = "@claram @hannahwoodfin";
+        } else {
+          $trello_members = "@claram";
+        }
+
+        // To and subject
+        $trello_to = "comcprojectrequests+wpcsyrouxyf8fbmu97he@boards.trello.com";
+        $trello_subject = $jobType . " Request " . $trello_members;
+
+        // Message (This is in Markdown syntax)
+        $trello_msg = '<html><body>';
+        $trello_msg .= "#" . $name . "<br>";
+        $trello_msg .= "##". $dept . "<br>";
+        $trello_msg .= "###" . $email . " | " . $phone . "<br><br>";
+        $trello_msg .= "---<br /><br />";
+        if ($jobType == "Course Flier") {
+          $trello_msg .= "##Course Flier Info<br><br>";
+          $trello_msg .= "- Course Title: " . $courseTitle . "<br>";
+          $trello_msg .= "- Course Title: " . $courseNumber . " - " . $courseSection . "<br>";
+          $trello_msg .= "- Course Day & Time: " . $courseTime . "<br>";
+          $trello_msg .= "- Course Professor: " . $professor . "<br><br>";
+        }
+        $trello_msg .= "###_Due Date: " . $deadline . "_<br><br>";
+        $trello_msg .= nl2br($details);
+        $trello_msg .= '</body></html>';
+
+        // Send Message
+        mail($trello_to, $trello_subject, $trello_msg, $trello_headers);
+
+      }
+
+
     } elseif (isset($_POST["e_form"])) {
 
       /*---Variables-------------------------------------*/
@@ -393,59 +440,8 @@
 
   <script>
 
-  $('#project-request').submit(function() {
-
-    var myList = '57c871be4123a9eda22d55bc';
-    var creationSuccess = function(data) {
-      console.log('Card created successfully. Data returned:' + JSON.stringify(data));
-    };
-    var jobType = $('#job_type').val();
-    var userName = $('#p_contact_name').val();
-    var userDept = $('#p_department').val();
-    var userEmail = $('#p_email').val();
-    var userPhone = $('#p_phone').val();
-
-    if (jobType == "Course Flier") {
-      var courseTitle = $('#course_title').val();
-      var courseNumber = $('#course_number').val();
-      var courseSection = $('#course_section').val();
-      var courseTime = $('#course_daytime').val();
-      var professor = $('#course_professor').val();
-
-      var projectDesc = "Details:\r\n--------\r\n" + $('#p_details').val() + "\r\n\r\nFlier Info:\r\n-----------\r\n**Course Title:** " + courseTitle + "\r\n**Course Number:** " + courseNumber + "\r\n**Course Section:** " + courseSection + "\r\n**Course Day/Time:** " + courseTime + "\r\n**Professor:** " + professor + "\r\n\r\nRequester:\r\n----------\r\n**Name:** " + userName + "\r\n**Department:** " + userDept + "\r\n**Email:** " + userEmail + "\r\n**Phone:** " + userPhone;
-    } else {
-      var projectDesc = "Details:\r\n--------\r\n" + $('#p_details').val() + "\r\n\r\nRequester:\r\n----------\r\n**Name:** " + userName + "\r\n**Department:** " + userDept + "\r\n**Email:** " + userEmail + "\r\n**Phone:** " + userPhone;
-    }
-
-    var newCard = {
-      name: jobType,
-      desc: projectDesc,
-      // Place this card at the top of our list
-      idList: myList,
-      pos: 'top'
-    };
-    Trello.post('/cards/', newCard, creationSuccess);
-  });
-
   $(document).ready(function() {
 
-    // ***** TRELLO ***** //
-
-    // Success/Failure
-    var authenticationSuccess = function() { console.log('Successful authentication'); };
-    var authenticationFailure = function() { console.log('Failed authentication'); };
-
-    // Authenticate session
-    Trello.authorize({
-      type: 'popup',
-      name: 'Marketing Project Requests',
-      scope: {
-        read: 'true',
-        write: 'true' },
-      expiration: 'never',
-      success: authenticationSuccess,
-      error: authenticationFailure
-    });
 
     $("#type-selection").change(function() {
       var value = $("#type-selection option:selected").val();
