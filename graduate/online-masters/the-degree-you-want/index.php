@@ -127,31 +127,31 @@
         array(
           'Campaign' => 'Now Online',
           'Title' => 'The Strategic Communication Master\'s Degree',
-          'Text' => 'Earn Your Master of Strategic Communication Degree from Texas Tech University! Comprehensive, convenient 100% online. Update yours skills to be competitive in today\'s global and digitally focused environment. Learn more now! <em>The Degree You Want.</em>',
+          'Text' => 'Earn Your Master of Strategic Communication & Innovation Degree from Texas Tech University! Comprehensive, convenient, 100% online. Update your skills to be competitive in today’s global and digitally focused environment. Learn more now!',
           'Photo' => 'img/GraduateSocial-1.jpg'
         ),
         array(
           'Campaign' => 'For Professionals',
           'Title' => 'Texas Tech University Online Strategic Communication MA',
-          'Text' => 'Pursue the Master of Strategic Communication from Texas Tech University 100% online. Contact the College of Media & Communication today to learn more about our Online M.A. designed for professionals. <em>The Degree You Want.</em>',
+          'Text' => 'Pursue the Master of Strategic Communication & Innovation from Texas Tech University 100% online. Contact the College of Media & Communication today to learn more about our Online M.A. designed for professionals. The Degree You Want.',
           'Photo' => 'img/GraduateSocial-2.jpg'
         ),
         array(
           'Campaign' => 'Advance Your Career',
           'Title' => 'The Online Strategic Communication MA',
-          'Text' => 'Earn your M.A. in Strategic Communication from Texas Tech University to advance your skills, career and earning power. Complete in as few as 18 months. Learn more now. <em>The Degree You Want.</em>',
+          'Text' => 'Earn your M.A. in Strategic Communication & Innovation from Texas Tech University to advance your skills, career and earning power. Complete in as few as 18 months. Learn more now. The Degree You Want.',
           'Photo' => 'img/GraduateSocial-3.jpg'
         ),
         array(
           'Campaign' => 'Completion in as Few as 18 Months',
           'Title' => 'Texas Tech University MA 100% Online',
-          'Text' => 'Rolling enrollment starts any term. Thirty hour program is comprehensive, accelerated and online. Contact us today for more information. <em>The Degree You Want.</em>',
+          'Text' => 'Rolling enrollment starts any term. Thirty hour program is comprehensive, accelerated and online. Contact us today for more information. The Degree You Want.',
           'Photo' => 'img/GraduateSocial-4.jpg'
         ),
         array(
           'Campaign' => '100% Online From Texas Tech University',
           'Title' => 'The MA Degree For Professionals',
-          'Text' => 'The Online M.A. Program is comprehensive, rigorous and taught by full-time faculty. Take yournext career step with a focus on global and digital strategic communication. Visit our website to learn more. <em>The Degree You Want.</em>',
+          'Text' => 'The Online Master’s Program in Strategic Communication & Innovation is comprehensive, rigorous and taught by full-time faculty. Take your next career step with a focus on global and digital strategic communication. Visit our website to learn more. The Degree You Want.',
           'Photo' => 'img/GraduateSocial-5.jpg'
         )
       );
