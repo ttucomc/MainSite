@@ -89,7 +89,12 @@ $events = get_all_events();
                 <strong>RSVP Password:</strong> <span class="event-password"><?php echo $event['password']; ?></span><br />
                 <strong>Total RSVPs:</strong> <?php echo total_rsvps($invitees); ?><br />
                 <strong>Total People Attending:</strong> <?php echo total_attending($invitees, $guests); ?><br />
-                <strong>RSVP Deadline:</strong> <span class="event-rsvp-deadline"><?php echo date('m/j/Y', strtotime($event['rsvp_date'])); ?></span>
+                <strong>RSVP Deadline:</strong> <span class="event-rsvp-deadline"><?php echo date('m/j/Y', strtotime($event['rsvp_date'])); ?></span><br />
+                <?php if($event['allow_guests'] == 1): ?>
+                  <strong>Allows guests?</strong> <span class="event-allow-guests">Yes</span>
+                <?php else: ?>
+                  <strong>Allows guests?</strong> <span class="event-allow-guests">No</span>
+                <?php endif; ?>
               </p>
             <?php endif; ?>
           </div>
@@ -161,6 +166,10 @@ $events = get_all_events();
         <input class="mdl-textfield__input" type="text" id="add-event-rsvp-deadline" name="add-event-rsvp-deadline" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY">
         <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span>
       </div>
+      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="add-guests-switch">
+        <input type="checkbox" id="add-guests-switch" name="add-guests-switch" class="mdl-switch__input" value="yes" checked>
+        <span class="mdl-switch__label">Allow Guests? no/yes</span>
+      </label>
       <input type="hidden" name="form-name" value="add-event" />
       <div class="form-buttons">
         <div class="form-button">

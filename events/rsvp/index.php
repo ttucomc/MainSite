@@ -286,9 +286,11 @@
             </fieldset>
           <?php endif; ?>
         </div>
-        <button class="button addButton">Add Guest</button>
-        <input id="guestCount" type="hidden" readonly="readonly" value="0" name="guestCount" />
-        <br /><br />
+        <?php if($thisEvent['allow_guests'] == 1): ?>
+          <button class="button addButton">Add Guest</button>
+          <input id="guestCount" type="hidden" readonly="readonly" value="0" name="guestCount" />
+        <?php endif; ?>
+        <br />
         <label for="password">Password (<em>This is in your invitation</em>)</label>
         <input id="password" type="text" required="required" name="password" />
         <?php echo '<input id="event-id" type="hidden" name="event-id" value="' . $thisEvent['ID'] . '" />'; ?>
