@@ -44,7 +44,7 @@ if (empty($invitees)) {
 	      <th>First Name</th>
 	      <th>Last Name</th>
 	      <th>Email</th>
-	      <th>Food Accomodations</th>
+	      <th>Notes/Food Accomodations</th>
 				<?php if ($luncheon) { echo "<th>Class Excuses</th>"; } ?>
 	    </tr>
 	  </thead>

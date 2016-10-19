@@ -2,10 +2,10 @@
 
 require_once('inc/config.php');
 require_once('inc/functions.php');
-// require_once('/comc/events/admin/include.php');
+require_once('/comc/events/admin/include.php');
 
 // Getting all events from db
-$events = get_all_events();
+$events = get_all_events("DESC");
 
 
 ?>
@@ -69,7 +69,7 @@ $events = get_all_events();
           <h3>Details<?php if($event['listed'] == 0) { echo ' &mdash; <em>Inactive</em>'; } ?></h3>
           <div id="details-<?php echo $event['ID']; ?>">
             <p>
-              <span class="event-description"><?php if (!empty($event['description'])){ echo $event['description']; } ?></span>
+              <span class="event-description"><?php if (!empty($event['description'])){ echo nl2br($event['description']); } ?></span>
             </p>
             <p>
               <strong>Location:</strong> <span class="event-location"><?php echo $event['location']; ?></span><br />
@@ -174,7 +174,7 @@ $events = get_all_events();
       <div class="form-buttons">
         <div class="form-button">
           <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="add-event-do" type="submit" form="add-event-form">
-            <i class="material-icons">add</i>
+            <i class="material-icons">done</i>
           </button>
         </div>
         <div class="form-button">

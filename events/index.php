@@ -22,25 +22,28 @@ $events = get_all_events();
 </head>
 <body>
   <h1>College Events</h1>
-  <p>
-    For questions or more information on any of our events, please email <a href="mailto:taryn.meixner@ttu.edu" class="mail">Taryn Meixner</a>.
-  </p>
+  <p>For questions or more information on any of our events, please email or call <a class="mail" href="mailto:taryn.meixner@ttu.edu">Taryn Meixner</a>, <a href="tel:8068346733">806.834.6733</a>.</p>
 
   <?php foreach ($events as $event): ?>
 
-    <?php if($event['listed'] == 1): ?>
+    <?php
+      // Setting variables
+      $thisEventDate = new DateTime($event['datetime']);
+      $currentDate = new DateTime();
+    ?>
 
+    <?php if($event['listed'] == 1 && $thisEventDate->modify('+1 year') > $currentDate): ?>
       <article>
-        <h2><?php echo date('Y', strtotime($event['datetime'])) . ' ' . $event['name']; ?></h2>
+        <h2><?php echo $event['name']; ?></h2>
         <?php if (!empty($event['description'])){ echo "<p>" . nl2br($event['description']) . "</p>"; } ?>
         <p>
-          Date: <?php echo date('l, M. j, Y', strtotime($event['datetime'])) . ' &mdash; ' . date('h:i a', strtotime($event['datetime'])); ?><br />
-          <?php echo 'Location: ' . $event['location'] . ' (<a class="external" target="_blank" href="http://maps.google.com/?q=' . $event['address'] . '">Directions</a>)'; ?>
+          <strong>Date:</strong>&nbsp;<?php echo date('l, M. j, Y', strtotime($event['datetime'])) . ' &mdash; ' . date('h:i a', strtotime($event['datetime'])); ?><br />
+          <?php echo '<strong>Location:</strong> ' . $event['location'] . ' (<a class="external" target="_blank" href="http://maps.google.com/?q=' . $event['address'] . '">Directions</a>)'; ?><br />
         </p>
         <p>
           <?php
             if ($event['rsvps'] == 1 && strtotime($event['rsvp_date']) >= time()) {
-              echo '<a class="button" href="/comc/events/rsvp/?id=' . $event['ID'] . '">RSVP</a>';
+              echo '<strong>RSVP Deadline:</strong> ' . date('l, M. j, Y', strtotime($event['rsvp_date'])) . '<br /><a class="button" href="/comc/events/rsvp/?id=' . $event['ID'] . '">RSVP</a>';
             }
           ?>
         </p>

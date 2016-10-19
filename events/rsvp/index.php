@@ -144,7 +144,7 @@
 
 
           /*---Email to Event Coordinator-------------------------------------*/
-          $headers = "From: " . $firstName . " " . $lastName . " <rsvp.mcom@ttu.edu>\r\n";
+          $headers = "From: " . $firstName . " " . $lastName . " <" . $email . ">\r\n";
           $headers .= "Reply-To: " . $email . "\r\n";
           $headers .= "MIME-Version: 1.0\r\n";
           $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
@@ -162,11 +162,11 @@
             $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " is not attending the " . $eventTitle . "</h1></td></tr>";
           }
           $message .= "<tr style='background: #EEEEEE;'><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
-          $message .= "<tr><td><strong>Food Accommodations:</strong></td><td>" . $info . "</td></tr>";
+          $message .= "<tr><td><strong>Notes/Food Accommodations:</strong></td><td>" . nl2br($info) . "</td></tr>";
           if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon') {
             $message .= "<tr><td><strong>Class Excuses:</strong></td><td>" . nl2br($classExcuse) . "</td></tr>";
           }
-          $message .= "<tr style='background: #EEEEEE;'><td><h2>Guests</h2></td><td><strong>Food Accommodations</strong></td></tr>";
+          $message .= "<tr style='background: #EEEEEE;'><td><h2>Guests</h2></td><td><strong>Notes/Food Accommodations</strong></td></tr>";
           if ($areThereGuests) {
             foreach ($guests as $key => $guest) {
               $message .= "<tr><td>" . $guest[0] . " " . $guest[1] . " - <em>" . $guest[2] . "</td><td>" . $guest[3] . "</td></tr>";
@@ -181,7 +181,7 @@
           mail($to, $subject, $message, $headers);
 
 
-          /*---Email to Applicant-------------------------------------*/
+          /*---Email to RSVPer-------------------------------------*/
           $conf_headers = "From: The College of Media & Communication <rsvp.mcom@ttu.edu>\r\n";
           $conf_headers .= "Reply-To: rsvp.mcom@ttu.edu\r\n";
           $conf_headers .= "MIME-Version: 1.0\r\n";
@@ -271,7 +271,7 @@
             <label for="email">Email:</label>
             <input id="email" type="email" required="required" name="email" />
             <br /><br />
-            <label for="foodAccommodations">Food Accommodations:</label>
+            <label for="foodAccommodations">Notes/Food Accommodations:</label>
             <textarea id="foodAccommodations" name="info"></textarea>
           </fieldset>
           <?php if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon'): ?>
@@ -326,7 +326,7 @@
           // Add total to form field
           $('#guestCount').val(guestTotal);
           // Add form fields for the guest
-          $('#people').append('<fieldset class="guest"><legend>Guest Information</legend><a class="removeButton">Remove</a><br /><br /><input type="hidden" name="guestNumber[]" readonly value="' + guestNumber + '" /><label for="firstName_g' + guestNumber + '">Name:</label><input type="text" id="firstName_g' + guestNumber + '" name="firstName_g' + guestNumber + '" required="required" placeholder="First Name" /><input type="text" id="lastName_g' + guestNumber + '" name="lastName_g' + guestNumber + '" required="required" placeholder="Last Name" /><br /><br /><label for="email_g' + guestNumber + '">Email:</label><input type="email" id="email_g' + guestNumber + '" name="email_g' + guestNumber + '" required="required" /><br /><br /><label for="foodAccommodations_g' + guestNumber + '">Food Accommodations:</label><textarea id="foodAccommodations_g' + guestNumber + '" name="info_g' + guestNumber + '"></textarea></fieldset>');
+          $('#people').append('<fieldset class="guest"><legend>Guest Information</legend><a class="removeButton">Remove</a><br /><br /><input type="hidden" name="guestNumber[]" readonly value="' + guestNumber + '" /><label for="firstName_g' + guestNumber + '">Name:</label><input type="text" id="firstName_g' + guestNumber + '" name="firstName_g' + guestNumber + '" required="required" placeholder="First Name" /><input type="text" id="lastName_g' + guestNumber + '" name="lastName_g' + guestNumber + '" required="required" placeholder="Last Name" /><br /><br /><label for="email_g' + guestNumber + '">Email:</label><input type="email" id="email_g' + guestNumber + '" name="email_g' + guestNumber + '" required="required" /><br /><br /><label for="foodAccommodations_g' + guestNumber + '">Notes/Food Accommodations:</label><textarea id="foodAccommodations_g' + guestNumber + '" name="info_g' + guestNumber + '"></textarea></fieldset>');
         });
 
         // Remove guest on removeButton click

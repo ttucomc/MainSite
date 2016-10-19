@@ -2,14 +2,22 @@
 
 /**
  * Gets all the events in the db
+ *
+ * @param  string $order Order results either ascending or descending ASC|DESC
  * @return array
  */
-function get_all_events() {
+function get_all_events($order = "ASC") {
   try {
+
+    $order = strtoupper($order);
+
+    if ($order != "DESC") {
+      $order = "ASC";
+    }
 
     require(ROOT_PATH . "inc/db.php");
 
-    $stmt = $db->prepare('SELECT * FROM events ORDER BY datetime');
+    $stmt = $db->prepare('SELECT * FROM events ORDER BY datetime ' . $order);
     $stmt->execute();
 
   } catch (Exception $e) {

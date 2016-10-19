@@ -27,7 +27,9 @@
                     More info: <a href="<?php echo $movie['info']; ?>" class="external"><?php echo $movie['info']; ?></a>
                   </p>
                   <p>
-                    <a href="<?php echo $movie['trailer']; ?>" class="button" target="_blank">View Trailer</a>
+                    <?php if (!is_null($movie['trailer'])) { ?>
+                      <a href="<?php echo $movie['trailer']; ?>" class="button" target="_blank">View Trailer</a>
+                    <?php } ?>
                     <?php if (!is_null($movie['tickets'])) { ?>
                         <a href="<?php echo $movie['tickets']; ?>" class="button" target="_blank">Get Tickets Here</a>
                     <?php } ?>
