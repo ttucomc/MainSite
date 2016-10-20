@@ -213,7 +213,7 @@
 /***** MAJOR MAIN SECTION *****/
 .major-main {
   position: relative;
-  background: url('/../comc/images/majors/squared_metal.png');
+  background: url('/images/squared_metal.png?1474317270');
   text-align: center;
   padding: 6em 0 0;
   overflow: hidden;
@@ -427,4 +427,12 @@
 /***** TECH BODY EDITS *****/
 .wrapper-wide-red {
   margin-top: 0;
+}
+
+/***** Advertising import *****/
+.adv_major-info {
+  position: relative;
+  text-align: center;
+  height: 700px;
+  overflow: hidden;
 }
