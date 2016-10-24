@@ -11,10 +11,11 @@
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="../css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/majors.css">
 
 	<link rel="stylesheet" type="text/css" href="../includes/slick/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="../includes/slick/slick/slick-theme.css"/>
+
+	<link rel="stylesheet" type="text/css" href="css/majors.css">
 
 	<script src="../js/modernizr.js"></script>
 	<script src="../js/ttuglobal.js"></script>
@@ -392,7 +393,7 @@
 				<h1>Advertising</h1>
 
 				<!-- CoMC EDITS START -->
-				<section class="major-info">
+				<section class="major-info adv-major-info">
 					<div class="major-info-text animated fadeInRight">
 						<div>
 							<h1>Advertising</h1>
@@ -401,7 +402,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="ad-images-carousel">
+					<div class="adv-images-carousel">
 						<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
 						<div>
 							<img src="images/adv_images/presentation.jpg" alt="Public Relations student speaking at podium" />
@@ -549,11 +550,11 @@
 									// init controller
 
 									// Slick
-									$('.ad-images-carousel').slick({
+									$('.adv-images-carousel').slick({
 										slidesToShow: 1,
   										slidesToScroll: 1,
   										autoplay: true,
-  										autoplaySpeed: 4000,
+  										autoplaySpeed: 10000,
 									});
 
 								});
