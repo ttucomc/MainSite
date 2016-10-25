@@ -403,7 +403,6 @@
 						</div>
 					</div>
 					<div class="adv-images-carousel">
-						<button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
 						<div>
 							<img src="images/adv_images/presentation.jpg" alt="Public Relations student speaking at podium" />
 						</div>
@@ -416,7 +415,6 @@
 						<div>
 							<img src="images/adv_images/students.jpg" alt="Public Relations student speaking at podium" />
 						</div>
-						<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button>
 					</div>
 				</section>
 				<section class="major-button-row">
