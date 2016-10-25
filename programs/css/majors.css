@@ -430,6 +430,9 @@
 }
 
 /***** Advertising import *****/
+.adv-major-info {
+  height: 750px;
+}
 @media screen and (max-width: 768px) {
   .adv-major-info {
     height: auto;
