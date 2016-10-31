@@ -12,6 +12,47 @@
 	<!-- CoMC EDITS START -->
 	<section class="student-life">
 		<h1>Advertising - Student Life</h1>
+
+		<h2>Requirements for Advertising</h2>
+
+		<p>
+			Students majoring in Advertising are required to complete 64 semester hours within the college, including the following:
+		</p>
+
+		<div class="adv-required-courses">
+			<ul>
+				<li>MCOM 1300</li>
+				<li>MCOM 1301</li>
+				<li>MCOM 2320</li>
+				<li>MCOM 2350</li>
+			</ul>
+			<ul>
+				<li>ADV 3310</li>
+				<li>ADV 3312</li>
+				<li>ADV 3318</li>
+				<li>ADV 3320</li>
+			</ul>
+			<ul>
+				<li>ADV 3351</li>
+				<li>ADV 3361</li>
+				<li>ADV 4312</li>
+			</ul>
+		</div>
+
+		<div class="course-catalog-descriptions">
+			<h2>Course Descriptions</h2>
+
+			<!-- The course descriptions may change in the future. If we can get a dynamic
+		 		 listing of the courses, then the course descriptions can be on this page
+			 	 and there is no need to link out to the academic catalog. -->
+			<p class="">
+				Advertising course descriptions can be found <a href="http://catalog.ttu.edu/content.php?filter%5B27%5D=ADV&filter%5B29%5D=&filter%5Bcourse_type%5D=333&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=2&expand=&navoid=163&search_database=Filter#acalog_template_course_filter" target="_blank">here.</a>
+			</p>
+
+			<p>
+				Mass Communications course descriptions can be found <a href="http://catalog.ttu.edu/content.php?filter%5B27%5D=MCOM&filter%5B29%5D=&filter%5Bcourse_type%5D=512&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=2&expand=&navoid=163&search_database=Filter#acalog_template_course_filter" target="_blank">here.</a>
+			</p>
+		</div>
 	</section>
 
 	<section class="major-spacer">
@@ -21,11 +62,11 @@
 	<section class="major-contact">
 		<h2>Talk to Someone!</h2>
 		<p>We'd love to talk to you about our public relations program! Use the form below to contact our department chair, Trent Seltzer!</p>
-		<div class="row">
+		<!-- <div class="row">
 			<div class="small-12 column">
 				{{a:65203}}
 			</div>
-		</div>
+		</div> -->
 	</section>
 
 	<!-- Javascript start = = = = = = = = = = = = = = = = = = = = = = = -->
