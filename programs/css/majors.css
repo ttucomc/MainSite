@@ -462,7 +462,7 @@
   margin-top: 8em;
 }
 
-/******** Student life page styling start ********/
+/******** Student life page styling ********/
 .student-life {
   position: relative;
   text-align: center;
@@ -487,7 +487,7 @@
     padding-right: 1em;
   }
 }
-.student-life .adv-required-courses {
+.student-life .advertising-required-courses {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -498,12 +498,50 @@
           justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .student-life .adv-required-courses {
+  .student-life .advertising-required-courses {
     font-size: .65em;
   }
 }
-.student-life .adv-required-courses ul {
+.student-life .advertising-required-courses ul {
   padding: 1.5em;
+}
+.student-life .advertising-prereq-course-guide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+.student-life .advertising-prereq-course-guide .top-level-prereqs, .student-life .advertising-prereq-course-guide .mid-level1-prereqs, .student-life .advertising-prereq-course-guide .mid-level2-prereqs, .student-life .advertising-prereq-course-guide .bottom-level-prereqs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+}
+.student-life .advertising-prereq-course-guide .top-level-prereqs div, .student-life .advertising-prereq-course-guide .mid-level1-prereqs div, .student-life .advertising-prereq-course-guide .mid-level2-prereqs div, .student-life .advertising-prereq-course-guide .bottom-level-prereqs div {
+  margin: 5px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  padding: .8em;
+}
+.student-life .advertising-prereq-course-guide .top-level-prereqs div.circle-course-name-and-number, .student-life .advertising-prereq-course-guide .mid-level1-prereqs div.circle-course-name-and-number, .student-life .advertising-prereq-course-guide .mid-level2-prereqs div.circle-course-name-and-number, .student-life .advertising-prereq-course-guide .bottom-level-prereqs div.circle-course-name-and-number {
+  background-color: #CCC;
 }
 @media screen and (max-width: 768px) {
   .student-life .course-catalog-descriptions p {
@@ -512,5 +550,3 @@
     padding-right: 1em;
   }
 }
-
-/******** Student life page styling end ********/

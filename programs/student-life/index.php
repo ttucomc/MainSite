@@ -19,7 +19,7 @@
 			Students majoring in Advertising are required to complete 64 semester hours within the college, including the following:
 		</p>
 
-		<div class="adv-required-courses">
+		<section class="advertising-required-courses">
 			<ul>
 				<li>MCOM 1300</li>
 				<li>MCOM 1301</li>
@@ -37,9 +37,55 @@
 				<li>ADV 3361</li>
 				<li>ADV 4312</li>
 			</ul>
-		</div>
+		</section>
 
-		<div class="course-catalog-descriptions">
+		<section class="advertising-prereq-course-guide">
+			<div class="top-level-prereqs">
+				<div class="circle-course-name-and-number">
+					MCOM <br><strong>2320</strong>
+				</div>
+
+				<div class="circle-course-name-and-number">
+					ADV <br><strong>3310</strong>
+				</div>
+
+				<div class="circle-course-name-and-number">
+					MATH <br><strong>2300</strong>
+				</div>
+			</div>
+			<div class="mid-level1-prereqs">
+				<div class="circle-course-name-and-number">
+					ADV <br><strong>3312</strong>
+				</div>
+
+				<div class="circle-course-name-and-number">
+					ADV <br><strong>3351</strong>
+				</div>
+
+				<div class="circle-course-name-and-number">
+					ADV <br><strong>3318</strong>
+				</div>
+			</div>
+			<div class="mid-level2-prereqs">
+				<div class="circle-course-name-and-number">
+					ADV <br><strong>3361</strong>
+				</div>
+				<div class="">
+
+
+				</div>
+				<div class="">
+
+				</div>
+			</div>
+			<div class="bottom-level-prereqs">
+				<div class="circle-course-name-and-number">
+					ADV <br><strong>4312</strong>
+				</div>
+			</div>
+		</section>
+
+		<section class="course-catalog-descriptions">
 			<h2>Course Descriptions</h2>
 
 			<!-- The course descriptions may change in the future. If we can get a dynamic
@@ -52,7 +98,7 @@
 			<p>
 				Mass Communications course descriptions can be found <a href="http://catalog.ttu.edu/content.php?filter%5B27%5D=MCOM&filter%5B29%5D=&filter%5Bcourse_type%5D=512&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=2&expand=&navoid=163&search_database=Filter#acalog_template_course_filter" target="_blank">here.</a>
 			</p>
-		</div>
+		</section>
 	</section>
 
 	<section class="major-spacer">

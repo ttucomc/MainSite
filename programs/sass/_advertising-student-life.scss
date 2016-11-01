@@ -1,0 +1,105 @@
+
+.student-life {
+
+    position: relative;
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 4em;
+
+    @media screen and (max-width: 768px) {
+
+        padding-bottom: 1em;
+
+        h1 {
+
+            margin-top: .5em;
+            font-size: 1.5em;
+
+        }
+
+        h2 {
+
+            font-size: 1.1em;
+
+        }
+
+        p {
+
+            font-size: .75em;
+            padding-left: 1em;
+            padding-right: 1em;
+
+        }
+
+    }
+
+    .advertising-required-courses {
+
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 768px) {
+
+            font-size: .65em;
+
+        }
+
+        ul {
+
+            padding: 1.5em;
+
+        }
+
+    }
+
+    .advertising-prereq-course-guide {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        .top-level-prereqs, .mid-level1-prereqs, .mid-level2-prereqs, .bottom-level-prereqs {
+
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            padding: 1em;
+
+            div {
+
+                margin: 5px;
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                padding: .8em;
+
+                &.circle-course-name-and-number {
+
+                    background-color: #CCC;
+
+                }
+                
+            }
+
+        }
+
+    }
+
+    .course-catalog-descriptions {
+
+        @media screen and (max-width: 768px) {
+
+            p {
+
+                text-align: justify;
+                padding-left: 1em;
+                padding-right: 1em;
+
+            }
+
+        }
+
+    }
+
+}
