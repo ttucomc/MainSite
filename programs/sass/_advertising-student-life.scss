@@ -7,6 +7,12 @@
     overflow: hidden;
     padding-bottom: 4em;
 
+    p {
+
+        text-align: left;
+
+    }
+
     @media screen and (max-width: 768px) {
 
         padding-bottom: 1em;
@@ -21,6 +27,19 @@
         h2 {
 
             font-size: 1.1em;
+
+        }
+
+        h3 {
+
+            font-size: 1em;
+
+        }
+
+        h4 {
+
+            font-size: .9em;
+            color: #C00;
 
         }
 
@@ -59,16 +78,19 @@
         flex-direction: column;
         flex-wrap: nowrap;
 
+        background: url('../images/adv-reqs-bg.svg') center center no-repeat;
+        background-size: 350px 560px;
+
         .top-level-prereqs, .mid-level1-prereqs, .mid-level2-prereqs, .bottom-level-prereqs {
 
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
-            padding: 1em;
+            padding: 1.25em 1em;
 
             div {
 
-                margin: 5px;
+                margin: 5px 17px;
                 height: 90px;
                 width: 90px;
                 border-radius: 50%;
@@ -79,7 +101,7 @@
                     background-color: #CCC;
 
                 }
-                
+
             }
 
         }
@@ -92,9 +114,79 @@
 
             p {
 
-                text-align: justify;
+                text-align: left;
                 padding-left: 1em;
                 padding-right: 1em;
+
+            }
+
+        }
+
+    }
+
+    .advertising-electives {
+
+        .sub-electives-and-hours {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+
+            .sub-elective-group {
+
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                padding-left: 2em;
+
+                h3:first-child {
+
+                    margin-right: .5em;
+
+                }
+
+                .elective-hours {
+
+                    color: #C00;
+                    background-color: #CCC;
+                    border-radius: 50px;
+                    padding: .2em 1em .2em 1em;
+
+                }
+
+            }
+
+            .elective-group-course-listing {
+
+                @media screen and (max-width: 768px) {
+
+                    border-bottom: 2px #C00 solid;
+                    text-align: left;
+                    margin: 0 auto;
+                    width: 80%;
+
+                    p {
+
+                        font-size: 12px;
+                        padding-left: 0;
+                        padding-right: 0;
+
+                    }
+
+                    ul>li {
+
+                        font-size: .75em;
+
+                    }
+
+                    ul>li:last-child {
+
+                        padding-bottom: 1em;
+
+                    }
+
+                }
 
             }
 

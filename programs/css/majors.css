@@ -470,6 +470,9 @@
   overflow: hidden;
   padding-bottom: 4em;
 }
+.student-life p {
+  text-align: left;
+}
 @media screen and (max-width: 768px) {
   .student-life {
     padding-bottom: 1em;
@@ -480,6 +483,13 @@
   }
   .student-life h2 {
     font-size: 1.1em;
+  }
+  .student-life h3 {
+    font-size: 1em;
+  }
+  .student-life h4 {
+    font-size: .9em;
+    color: #C00;
   }
   .student-life p {
     font-size: .75em;
@@ -518,6 +528,8 @@
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  background: url("../images/adv-reqs-bg.svg") center center no-repeat;
+  background-size: 350px 560px;
 }
 .student-life .advertising-prereq-course-guide .top-level-prereqs, .student-life .advertising-prereq-course-guide .mid-level1-prereqs, .student-life .advertising-prereq-course-guide .mid-level2-prereqs, .student-life .advertising-prereq-course-guide .bottom-level-prereqs {
   display: -webkit-box;
@@ -531,10 +543,10 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1em;
+  padding: 1.25em 1em;
 }
 .student-life .advertising-prereq-course-guide .top-level-prereqs div, .student-life .advertising-prereq-course-guide .mid-level1-prereqs div, .student-life .advertising-prereq-course-guide .mid-level2-prereqs div, .student-life .advertising-prereq-course-guide .bottom-level-prereqs div {
-  margin: 5px;
+  margin: 5px 17px;
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -545,8 +557,69 @@
 }
 @media screen and (max-width: 768px) {
   .student-life .course-catalog-descriptions p {
-    text-align: justify;
+    text-align: left;
     padding-left: 1em;
     padding-right: 1em;
+  }
+}
+.student-life .advertising-electives .sub-electives-and-hours {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+}
+.student-life .advertising-electives .sub-electives-and-hours .sub-elective-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 2em;
+}
+.student-life .advertising-electives .sub-electives-and-hours .sub-elective-group h3:first-child {
+  margin-right: .5em;
+}
+.student-life .advertising-electives .sub-electives-and-hours .sub-elective-group .elective-hours {
+  color: #C00;
+  background-color: #CCC;
+  border-radius: 50px;
+  padding: .2em 1em .2em 1em;
+}
+@media screen and (max-width: 768px) {
+  .student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing {
+    border-bottom: 2px #C00 solid;
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing p {
+    font-size: 12px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing ul > li {
+    font-size: .75em;
+  }
+  .student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing ul > li:last-child {
+    padding-bottom: 1em;
   }
 }
