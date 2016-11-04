@@ -37,7 +37,11 @@ $events = get_all_events();
         <h2><?php echo $event['name']; ?></h2>
         <?php if (!empty($event['description'])){ echo "<p>" . nl2br($event['description']) . "</p>"; } ?>
         <p>
-          <strong>Date:</strong>&nbsp;<?php echo date('l, M. j, Y', strtotime($event['datetime'])) . ' &mdash; ' . date('h:i a', strtotime($event['datetime'])); ?><br />
+          <strong>Date:</strong>&nbsp;<?php echo date('l, M. j, Y', strtotime($event['datetime'])) . ' &mdash; ' . date('h:i a', strtotime($event['datetime'])); ?>
+          <?php if(!empty($event['end_time'])) {
+            echo " to " . date('h:i a', strtotime($event['end_time']));
+          } ?>
+          <br />
           <?php echo '<strong>Location:</strong> ' . $event['location'] . ' (<a class="external" target="_blank" href="http://maps.google.com/?q=' . $event['address'] . '">Directions</a>)'; ?><br />
         </p>
         <p>

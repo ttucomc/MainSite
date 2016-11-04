@@ -23,7 +23,7 @@ if (isset($_GET["id"])) {
 
 // Showing a message if there are no RSVPs
 if (empty($invitees)) {
-	echo "<div id='rsvps'><p>I guess no ones coming... :(</p></div>";
+	echo "<div id='rsvps'><p>I guess no ones coming... :(</p><p><button id=\"add-rsvp-btn\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\">Add RSVP</button></p></div>";
 } else {
 
 
@@ -35,8 +35,11 @@ if (empty($invitees)) {
 	<p>
 		Total People Attending (<em>Includes Guests</em>): <?php echo total_attending($invitees, $guests); ?>
 	</p>
+	<p>
+		<button id="add-rsvp-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Add RSVP</button>
+	</p>
 
-	<table id="rsvp-list" class="tablesorter mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+	<table id="rsvp-list" class="tablesorter mdl-data-table mdl-js-data-table mdl-shadow--2dp" data-event-id="<?php echo $event_id; ?>">
 	  <thead>
 	    <tr>
 	      <th>Date</th>
@@ -77,9 +80,27 @@ if (empty($invitees)) {
 	          foreach ($inviteesGuests as $guest) {
 	            echo '<tr class="guest"><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($guest[date])) . '</td><td class="mdl-data-table__cell--non-numeric">Guest with ' . $invitee[first_name] . ' ' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $guest[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $guest[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $guest[email] . '">' . $guest[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $guest[info] . '</td></tr>';
 	          }
-	        } else {
-	          echo '<tr><td class="mdl-data-table__cell--non-numeric">' . date('m-d-Y', strtotime($invitee[date])) . '</td><td class="mdl-data-table__cell--non-numeric">' . ($invitee[attending] == 1 ? 'Yes' : 'No') . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[first_name] . '</td><td class="mdl-data-table__cell--non-numeric">' . $invitee[last_name] . '</td><td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '">' . $invitee[email] . '</a></td><td class="mdl-data-table__cell--non-numeric">' . $invitee[info] . '</td>' . (($luncheon)?"<td>$excuses</td>":"") . '</tr>';
-	        }
+	        } else { ?>
+	          <tr data-rsvp-id="<?php echo $invitee[ID]; ?>">
+							<td class="mdl-data-table__cell--non-numeric"><?php echo date('m-d-Y', strtotime($invitee[date])); ?></td>
+							<td class="mdl-data-table__cell--non-numeric"><?php echo ($invitee[attending] == 1 ? 'Yes' : 'No'); ?></td>
+							<td class="mdl-data-table__cell--non-numeric"><?php echo $invitee[first_name]; ?></td>
+							<td class="mdl-data-table__cell--non-numeric"><?php echo $invitee[last_name]; ?></td>
+							<td class="mdl-data-table__cell--non-numeric"><a href="mailto:' . $invitee[email] . '"><?php echo $invitee[email]; ?></a></td>
+							<td class="mdl-data-table__cell--non-numeric">
+								<?php echo $invitee[info]; ?>
+								<div class="rsvp-edit-btns" data-rsvp-id="<?php echo $invitee[ID]; ?>">
+									<button class="mdl-button mdl-js-button mdl-button--icon edit-rsvp-btn">
+									  <i class="material-icons">create</i>
+									</button>
+									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored delete-rsvp-btn">
+									  <i class="material-icons">delete</i>
+									</button>
+								</div>
+							</td>
+							<?php echo (($luncheon)?"<td>$excuses</td>":""); ?>
+						</tr>
+	        <?php }
 	      }
 
 	    ?>

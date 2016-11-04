@@ -75,6 +75,13 @@ $events = get_all_events("DESC");
               <strong>Location:</strong> <span class="event-location"><?php echo $event['location']; ?></span><br />
               <strong>Address:</strong> <span class="event-address"><?php echo $event['address'] ?></span> (<a class="event-directions" href="http://maps.google.com/?q=<?php echo $event['address']; ?>" target="_blank">Directions</a>)<br />
               <strong>Time:</strong> <span class="event-date"><?php echo date('m/j/Y', strtotime($event['datetime'])); ?></span> - <span class="event-time"><?php echo date('h:i A', strtotime($event['datetime'])); ?></span>
+              <?php
+                if(!empty($event['end_time'])) {
+                  echo " to <span class=\"event-end-time\">" . date('h:i A', strtotime($event['end_time'])). "</span>";
+                } else {
+                  echo "<span class=\"event-end-time\"></span>";
+                }
+              ?>
             </p>
 
             <h4>RSVPs</h4>
@@ -151,6 +158,11 @@ $events = get_all_events("DESC");
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <label class="mdl-textfield__label" for="add-event-time">Time</label>
         <input class="mdl-textfield__input" type="text" id="add-event-time" name="add-event-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$">
+        <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <label class="mdl-textfield__label" for="add-event-end-time">End Time <em>(Won't show this if left empty)</em></label>
+        <input class="mdl-textfield__input" type="text" id="add-event-end-time" name="add-event-end-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$">
         <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span>
       </div>
       <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="add-rsvp-switch">

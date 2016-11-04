@@ -57,7 +57,13 @@
           $firstName = trim($_POST['firstName']);
           $lastName = trim($_POST['lastName']);
           $email = trim($_POST['email']);
-          $info = htmlspecialchars(trim($_POST['info']));
+
+          if ($thisEvent['ID'] == 52) {
+            $info = implode(", ", $_POST['info']);
+          } else {
+            $info = htmlspecialchars(trim($_POST['info']));
+          }
+
           $eventID = $thisEvent['ID'];
 
           // Getting class excuse if the event is the Scholarship luncheon
@@ -91,6 +97,31 @@
             }
 
           }
+
+
+          /*---Checking if RSVP already exists-------------------------------------*/
+
+          // Allows this email to be used multiple times for the event planner
+          if (strtolower($email) != "rsvp.mcom@ttu.edu") {
+            try {
+
+              $stmt = $db->prepare("SELECT * FROM people WHERE email=:email AND event_id=:event_id");
+              $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+              $stmt->bindParam(':event_id', $eventID, PDO::PARAM_INT);
+              $stmt->execute();
+
+              if($stmt->rowCount() > 0) {
+                echo "<p>It looks like we already have an RSVP for you! If you need to change your RSVP or give any additional information, please email <a href='mailto:taryn.meixner@ttu.edu' class='mail'>Taryn Meixner</a> and she will get it taken care of for you!</p>";
+                exit();
+              }
+
+            } catch (Exception $e) {
+              echo "Couldn't check if they exist in the database";
+              exit();
+            }
+          }
+
+
 
           /*---Sending Info to DB-------------------------------------*/
           try {
@@ -230,25 +261,14 @@
         } else {
 
     ?>
-      <form id="select-event">
-        <?php
-
-        // Creating select element
-        echo "<select class='mdl-selectfield' onchange='showRSVP(this.value)'><option value=''>-- Change Event --</option>";
-
-        // Adding each event as an option
-        foreach ($events as $event) {
-          if ($event['listed'] == 1 && $event['rsvps'] == 1 && strtotime($event['rsvp_date']) >= time()) {
-            echo "<option value='" . $event['ID'] . "'>". date('Y', strtotime($event['datetime'])) . " " . $event['name'] . "</option>";
-          }
-        }
-        echo "</select>";
-
-
-        ?>
-      </form>
 
       <h2 class="event-name"><?php echo date('Y', strtotime($thisEvent['datetime'])) . ' ' . $thisEvent['name']; ?></h2>
+
+      <?php if ($thisEvent['ID'] == 52): ?>
+        <p>
+          <?php echo nl2br($thisEvent['description']); ?>
+        </p><br />
+      <?php endif; ?>
 
       <?php if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon'): ?>
         <p>
@@ -271,8 +291,18 @@
             <label for="email">Email:</label>
             <input id="email" type="email" required="required" name="email" />
             <br /><br />
-            <label for="foodAccommodations">Notes/Food Accommodations:</label>
-            <textarea id="foodAccommodations" name="info"></textarea>
+            <?php if ($thisEvent['ID'] == 52): ?>
+              <label for="foodAccommodations">When will you be joining us?</label>
+              <label><input type="checkbox" name="info[]" value="11:30" /> 11:30 a.m &mdash; <em>Lunch</em></label>
+              <label><input type="checkbox" name="info[]" value="12:00" /> Noon - 12:50 p.m. &mdash; <em>"Skills Employers Are Looking For"</em></label>
+              <label><input type="checkbox" name="info[]" value="1:00" /> 1 p.m. - 1:50 p.m. &mdash; <em>"Behance Demo"</em></label>
+              <label><input type="checkbox" name="info[]" value="1:30" /> 1:30 p.m. &mdash; <em>Lunch</em></label>
+              <label><input type="checkbox" name="info[]" value="2:00" /> 2 p.m. - 2:50 p.m. &mdash; <em>"Skills Employers Are Looking For" (Repeat Session)</em></label>
+              <label><input type="checkbox" name="info[]" value="3:00" /> 3 p.m. - 3:50 p.m. &mdash; <em>"Behance Demo" (Repeat Session)</em></label>
+            <?php else: ?>
+              <label for="foodAccommodations">Notes/Food Accommodations:</label>
+              <textarea id="foodAccommodations" name="info"></textarea>
+            <?php endif; ?>
           </fieldset>
           <?php if (strtolower(trim($thisEvent['name'])) == 'scholarship luncheon'): ?>
             <fieldset>
@@ -291,10 +321,13 @@
           <input id="guestCount" type="hidden" readonly="readonly" value="0" name="guestCount" />
         <?php endif; ?>
         <br />
-        <label for="password">Password (<em>This is in your invitation</em>)</label>
-        <input id="password" type="text" required="required" name="password" />
+        <?php if ($thisEvent['ID'] == 52): ?>
+          <input type="hidden" id="password" name="password" value="" />
+        <?php else: ?>
+          <label for="password">Password (<em>This is in your invitation. Leave blank if there was no invitation.</em>)</label>
+          <input id="password" type="text" name="password" />
+        <?php endif; ?>
         <?php echo '<input id="event-id" type="hidden" name="event-id" value="' . $thisEvent['ID'] . '" />'; ?>
-        <br /><br />
         <div class="g-recaptcha" data-sitekey="6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY"></div>
         <input class="button" type="submit" value="submit" />
         <div class="form-loader"></div>

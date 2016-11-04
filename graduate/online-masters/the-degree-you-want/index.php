@@ -29,6 +29,7 @@
     $lastName = $_POST['last_name'];
     $email = $_POST['email'];
     $campaign = $_POST['campaign'];
+    $question = $_POST['message'];
 
 
     /*---Sending Info to DB-------------------------------------*/
@@ -69,7 +70,8 @@
     $message .= '<table width="100%" cellpadding="10">';
     $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " would like more info!</h1></td></tr>";
     $message .= "<tr style='background: #EEEEEE;'><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
-    $message .= "<tr><td><strong>Campaign Used:</strong></td><td>" . $campaign . "</td></tr>";
+    $message .= "<tr><td><strong>Message:</strong></td><td>" . nl2br($question) . "</td></tr>";
+    $message .= "<tr style='background: #EEEEEE;'><td><strong>Campaign Used:</strong></td><td>" . $campaign . "</td></tr>";
     $message .= "</table>";
     $message .= "</body></html>";
 
@@ -180,11 +182,11 @@
   </section>
   <section id="the-form">
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3">
+      <div class="col-sm-4 col-sm-offset-3">
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
           <fieldset>
             <legend>
-              Get more information!
+              Contact Us
             </legend>
             <div class="form-group">
               <label for="first_name">Name:</label>
@@ -196,10 +198,20 @@
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" class="form-control" required />
             </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" class="form-control"></textarea>
+            </div>
             <input type="hidden" name="campaign" value="<?php echo $subTitle; ?>" />
             <input type="submit" value="Submit" class="btn btn-primary btn-block" />
           </fieldset>
         </form>
+      </div>
+      <div class="col-sm-2">
+        <p>
+          <a href="http://www.depts.ttu.edu/comc/graduate/apply/#ma" class="btn btn-primary btn-block">Apply Now</a>
+          <a href="http://www.depts.ttu.edu/comc/graduate/onlinemasters/" class="btn btn-primary btn-block">Learn More Now</a>
+        </p>
       </div>
     </div>
   </section>

@@ -12,6 +12,7 @@ h2 {
 }
 
 a {
+  color: rgb(96,125,139);
   &:hover {
     text-decoration: none;
   }
@@ -87,7 +88,9 @@ header {
   }
 }
 
-#add-event {
+#add-event,
+#add-rsvp,
+#edit-rsvp {
   display: none;
   position: fixed;
   top: 0;
@@ -172,12 +175,20 @@ select:focus {
   padding-bottom: 5em;
 }
 
+.mdl-button.mdl-button--colored.delete-rsvp-btn,
+.mdl-button--accent.mdl-button--accent.confirm-delete-btn {
+  color: #fa5252;
+}
+
 #rsvp-list {
   margin: 0 auto;
   tr {
     &:hover {
       td {
         background-color: darken(#f1f2f2, 5%);
+        .rsvp-edit-btns {
+          opacity: 1;
+        }
       }
     }
     th, td {
@@ -218,6 +229,15 @@ select:focus {
       }
     }
     td {
+
+      .rsvp-edit-btns {
+        float: right;
+        opacity: 1;
+        transition: .3s;
+        @media screen and (min-width: 768px) {
+          opacity: 0;
+        }
+      }
 
     }
   }
