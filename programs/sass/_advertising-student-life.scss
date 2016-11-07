@@ -43,6 +43,12 @@
 
         }
 
+        h5 {
+
+            font-size: .8em;
+
+        }
+
         p {
 
             font-size: .75em;
@@ -189,6 +195,53 @@
                 }
 
             }
+
+        }
+
+    }
+
+    .advertising-four-year-sample {
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 2em;
+
+        h5, ul {
+
+            margin-top: 0;
+
+        }
+
+        ul {
+
+            font-size: .6em;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        ul li {
+
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        ul span {
+
+            padding-right: 2em;
+
+        }
+
+        .semester-hours {
+
+            color: #C00;
+            background-color: #CCC;
+            border-radius: 50px;
+            padding: .2em 1em .2em 1em;
+            margin-top: .5em;
+            width: 35%;
 
         }
 

@@ -233,6 +233,26 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="advertising-four-year-sample">
+			<h3>Four Year Sample</h3>
+
+			<h4>First Year</h4>
+
+			<strong><h5>Fall</h5></strong>
+
+			<ul>
+				<li>MCOM 1300 - Foundations of Media <span><strong>3</strong></span></li>
+				<li>POLS 1301 - American Government, Organization<span><strong>3</strong></span></li>
+				<li>ENGL 1301 - Essentials of College Rhetoric<span><strong>3</strong></span></li>
+				<li>MATH 1300 - Contempory Mathematics</li>
+				<li><em>OR</em></li>
+				<li>MATH 1320 - College Algebra<span><strong>3</strong></span></li>
+				<li>Life and Physical Sciences<span><strong>4</strong></span></li>
+				<li>MCOM 1100 - Success in Media and Communcation<span><strong>1	</strong></span></li>
+			</ul>
+			<div class="semester-hours">Total 17</div>
+		</section>
 	</section>
 
 	<section class="major-spacer">

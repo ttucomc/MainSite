@@ -491,6 +491,9 @@
     font-size: .9em;
     color: #C00;
   }
+  .student-life h5 {
+    font-size: .8em;
+  }
   .student-life p {
     font-size: .75em;
     padding-left: 1em;
@@ -622,4 +625,53 @@
   .student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing ul > li:last-child {
     padding-bottom: 1em;
   }
+}
+.student-life .advertising-four-year-sample {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding-left: 2em;
+}
+.student-life .advertising-four-year-sample h5, .student-life .advertising-four-year-sample ul {
+  margin-top: 0;
+}
+.student-life .advertising-four-year-sample ul {
+  font-size: .6em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.student-life .advertising-four-year-sample ul li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.student-life .advertising-four-year-sample ul span {
+  padding-right: 2em;
+}
+.student-life .advertising-four-year-sample .semester-hours {
+  color: #C00;
+  background-color: #CCC;
+  border-radius: 50px;
+  padding: .2em 1em .2em 1em;
+  margin-top: .5em;
+  width: 35%;
 }
