@@ -234,14 +234,40 @@
 
         }
 
-        .semester-hours {
+        .semester {
 
-            color: #C00;
-            background-color: #CCC;
-            border-radius: 50px;
-            padding: .2em 1em .2em 1em;
-            margin-top: .5em;
-            width: 35%;
+            @media screen and (max-width: 768px) {
+
+                border-bottom: 2px #C00 solid;
+                text-align: left;
+                //margin: 0 auto;
+                width: 90%;
+                padding-bottom: 1em;
+
+            }
+
+        }
+
+        .semester-and-total-hours {
+
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            h4:first-child {
+
+                margin-right: .5em;
+
+            }
+
+            .total-hours {
+
+                color: #C00;
+                background-color: #CCC;
+                border-radius: 50px;
+                padding: .2em 1em .2em 1em;
+
+            }
 
         }
 

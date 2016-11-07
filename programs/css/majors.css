@@ -667,11 +667,34 @@
 .student-life .advertising-four-year-sample ul span {
   padding-right: 2em;
 }
-.student-life .advertising-four-year-sample .semester-hours {
+@media screen and (max-width: 768px) {
+  .student-life .advertising-four-year-sample .semester {
+    border-bottom: 2px #C00 solid;
+    text-align: left;
+    width: 90%;
+    padding-bottom: 1em;
+  }
+}
+.student-life .advertising-four-year-sample .semester-and-total-hours {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.student-life .advertising-four-year-sample .semester-and-total-hours h4:first-child {
+  margin-right: .5em;
+}
+.student-life .advertising-four-year-sample .semester-and-total-hours .total-hours {
   color: #C00;
   background-color: #CCC;
   border-radius: 50px;
   padding: .2em 1em .2em 1em;
-  margin-top: .5em;
-  width: 35%;
 }
