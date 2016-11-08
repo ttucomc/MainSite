@@ -7,9 +7,24 @@
     overflow: hidden;
     padding-bottom: 4em;
 
+    .flex-row-large-screen {
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        @media screen and (max-width: 768px) {
+
+            flex-direction: column;
+
+        }
+
+    }
+
     p {
 
-        text-align: left;
+        text-align: justify;
+        margin: 0 5em;
 
     }
 
@@ -26,32 +41,32 @@
 
         h2 {
 
-            font-size: 1.1em;
+            font-size: 1.3em;
 
         }
 
         h3 {
 
-            font-size: 1em;
+            font-size: 1.2em;
 
         }
 
         h4 {
 
-            font-size: .9em;
+            font-size: 1.1em;
             color: #C00;
 
         }
 
         h5 {
 
-            font-size: .8em;
+            font-size: 1em;
 
         }
 
         p {
 
-            font-size: .75em;
+            font-size: .9em;
             padding-left: 1em;
             padding-right: 1em;
 
@@ -61,12 +76,23 @@
 
     .advertising-required-courses {
 
-        display: flex;
-        justify-content: center;
+        width: 50%;
+
+        .required-courses {
+
+            display: flex;
+            justify-content: center;
+
+        }
 
         @media screen and (max-width: 768px) {
 
             font-size: .65em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
 
         }
 
@@ -83,9 +109,20 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        width: 50%;
 
-        background: url('../images/adv-reqs-bg.svg') center center no-repeat;
-        background-size: 350px 560px;
+        @media screen and (max-width: 768px) {
+
+            width: 100%;
+
+        }
+
+        .prereqs {
+
+            background: url('../images/adv-reqs-bg.svg') center center no-repeat;
+            background-size: 350px 560px;
+
+        }
 
         .top-level-prereqs, .mid-level1-prereqs, .mid-level2-prereqs, .bottom-level-prereqs {
 
@@ -116,13 +153,19 @@
 
     .course-catalog-descriptions {
 
+        p {
+
+            text-align: center;
+        }
+
         @media screen and (max-width: 768px) {
 
             p {
 
                 text-align: left;
-                padding-left: 1em;
-                padding-right: 1em;
+                margin: 0 1em;
+                padding-right: 0;
+                font-size: .8em;
 
             }
 
@@ -131,6 +174,30 @@
     }
 
     .advertising-electives {
+
+        width: 50%;
+        padding-right: 1em;
+
+        @media screen and (max-width: 768px) {
+
+            width: 100%;
+            padding-right: 0;
+
+        }
+
+        h2 {
+
+            text-align: left;
+            padding-left: 1em;
+
+        }
+
+        p {
+
+            margin: 0;
+            font-size: .65em;
+
+        }
 
         .sub-electives-and-hours {
 
@@ -165,12 +232,16 @@
 
             .elective-group-course-listing {
 
+                text-align: left;
+                padding-left: 2em;
+
                 @media screen and (max-width: 768px) {
 
                     border-bottom: 2px #C00 solid;
                     text-align: left;
                     margin: 0 auto;
                     width: 80%;
+                    padding-left: 0;
 
                     p {
 
@@ -205,7 +276,15 @@
         display: flex;
         flex-direction: column;
         text-align: left;
-        padding-left: 2em;
+        //padding-left: 2em;
+        width: 50%;
+
+        @media screen and (max-width: 768px) {
+
+            width: 100%;
+            padding-left: 2em;
+
+        }
 
         h5, ul {
 
@@ -215,9 +294,15 @@
 
         ul {
 
-            font-size: .6em;
+            //font-size: .6em;
             display: flex;
             flex-direction: column;
+
+            @media screen and (max-width: 768px) {
+
+                font-size: .6em;
+
+            }
 
         }
 

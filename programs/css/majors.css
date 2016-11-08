@@ -470,8 +470,31 @@
   overflow: hidden;
   padding-bottom: 4em;
 }
+.student-life .flex-row-large-screen {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+}
+@media screen and (max-width: 768px) {
+  .student-life .flex-row-large-screen {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .student-life p {
-  text-align: left;
+  text-align: justify;
+  margin: 0 5em;
 }
 @media screen and (max-width: 768px) {
   .student-life {
@@ -482,25 +505,28 @@
     font-size: 1.5em;
   }
   .student-life h2 {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
   .student-life h3 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .student-life h4 {
-    font-size: .9em;
+    font-size: 1.1em;
     color: #C00;
   }
   .student-life h5 {
-    font-size: .8em;
+    font-size: 1em;
   }
   .student-life p {
-    font-size: .75em;
+    font-size: .9em;
     padding-left: 1em;
     padding-right: 1em;
   }
 }
 .student-life .advertising-required-courses {
+  width: 50%;
+}
+.student-life .advertising-required-courses .required-courses {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -513,6 +539,24 @@
 @media screen and (max-width: 768px) {
   .student-life .advertising-required-courses {
     font-size: .65em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
 }
 .student-life .advertising-required-courses ul {
@@ -531,6 +575,14 @@
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .student-life .advertising-prereq-course-guide {
+    width: 100%;
+  }
+}
+.student-life .advertising-prereq-course-guide .prereqs {
   background: url("../images/adv-reqs-bg.svg") center center no-repeat;
   background-size: 350px 560px;
 }
@@ -558,12 +610,34 @@
 .student-life .advertising-prereq-course-guide .top-level-prereqs div.circle-course-name-and-number, .student-life .advertising-prereq-course-guide .mid-level1-prereqs div.circle-course-name-and-number, .student-life .advertising-prereq-course-guide .mid-level2-prereqs div.circle-course-name-and-number, .student-life .advertising-prereq-course-guide .bottom-level-prereqs div.circle-course-name-and-number {
   background-color: #CCC;
 }
+.student-life .course-catalog-descriptions p {
+  text-align: center;
+}
 @media screen and (max-width: 768px) {
   .student-life .course-catalog-descriptions p {
     text-align: left;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin: 0 1em;
+    padding-right: 0;
+    font-size: .8em;
   }
+}
+.student-life .advertising-electives {
+  width: 50%;
+  padding-right: 1em;
+}
+@media screen and (max-width: 768px) {
+  .student-life .advertising-electives {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.student-life .advertising-electives h2 {
+  text-align: left;
+  padding-left: 1em;
+}
+.student-life .advertising-electives p {
+  margin: 0;
+  font-size: .65em;
 }
 .student-life .advertising-electives .sub-electives-and-hours {
   display: -webkit-box;
@@ -607,12 +681,17 @@
   border-radius: 50px;
   padding: .2em 1em .2em 1em;
 }
+.student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing {
+  text-align: left;
+  padding-left: 2em;
+}
 @media screen and (max-width: 768px) {
   .student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing {
     border-bottom: 2px #C00 solid;
     text-align: left;
     margin: 0 auto;
     width: 80%;
+    padding-left: 0;
   }
   .student-life .advertising-electives .sub-electives-and-hours .elective-group-course-listing p {
     font-size: 12px;
@@ -637,13 +716,18 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
-  padding-left: 2em;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .student-life .advertising-four-year-sample {
+    width: 100%;
+    padding-left: 2em;
+  }
 }
 .student-life .advertising-four-year-sample h5, .student-life .advertising-four-year-sample ul {
   margin-top: 0;
 }
 .student-life .advertising-four-year-sample ul {
-  font-size: .6em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -653,6 +737,11 @@
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .student-life .advertising-four-year-sample ul {
+    font-size: .6em;
+  }
 }
 .student-life .advertising-four-year-sample ul li {
   display: -webkit-box;
