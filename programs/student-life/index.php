@@ -111,7 +111,8 @@
 			<h2>Advertising Electives</h2>
 
 			<div class="sub-electives-and-hours">
-				<div class="inner-flex-column-large-screen group-A">
+				<!-- <div class="inner-flex-column-large-screen"> -->
+				<div class="row group-A">
 					<div class="sub-elective-group">
 						<h3>Group A</h3>
 
@@ -131,8 +132,10 @@
 					</div>
 				</div>
 
-				<div class="flex-row-large-screen">
-					<div class="inner-flex-column-large-screen">
+				<!-- <div class="flex-row-large-screen"> -->
+				<div class="row groups-B-C">
+					<!-- <div class="inner-flex-column-large-screen"> -->
+					<div class="medium-6 column left-column">
 						<h4>Creative Electives</h4>
 
 						<div class="sub-elective-group">
@@ -186,7 +189,8 @@
 						</div>
 					</div>
 
-					<div class="inner-flex-column-large-screen">
+					<!-- <div class="inner-flex-column-large-screen"> -->
+					<div class="medium-6 column right-column">
 						<h4>Account Service Electives</h4>
 						<div class="sub-elective-group">
 							<h3>Group B</h3>
@@ -243,155 +247,163 @@
 			</div>
 		</section>
 
-		<section class="advertising-four-year-sample">
-			<h2>Four Year Sample</h2>
+		<section class="row advertising-four-year-sample">
+			<h4>Four Year Sample</h4>
 
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>First Year</h4>
+			<div class="row">
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>First Year</h4>
 
-					<h4 class="total-hours">Total 17</h4>
+						<h4 class="total-hours">Total 17</h4>
+					</div>
+
+					<h5><strong>Fall</strong></h5>
+
+					<ul>
+						<li>MCOM 1300 - Foundations of Media<span><strong>3</strong></span></li>
+						<li>POLS 1301 - American Government, Organization<span><strong>3</strong></span></li>
+						<li>ENGL 1301 - Essentials of College Rhetoric<span><strong>3</strong></span></li>
+						<li>MATH 1300 - Contempory Mathematics</li>
+						<li><em>OR</em></li>
+						<li>MATH 1320 - College Algebra<span><strong>3</strong></span></li>
+						<li>Life and Physical Sciences<span><strong>4</strong></span></li>
+						<li>MCOM 1100 - Success in Media and Communcation<span><strong>1	</strong></span></li>
+					</ul>
 				</div>
 
-				<h5><strong>Fall</strong></h5>
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>First Year</h4>
 
-				<ul>
-					<li>MCOM 1300 - Foundations of Media<span><strong>3</strong></span></li>
-					<li>POLS 1301 - American Government, Organization<span><strong>3</strong></span></li>
-					<li>ENGL 1301 - Essentials of College Rhetoric<span><strong>3</strong></span></li>
-					<li>MATH 1300 - Contempory Mathematics</li>
-					<li><em>OR</em></li>
-					<li>MATH 1320 - College Algebra<span><strong>3</strong></span></li>
-					<li>Life and Physical Sciences<span><strong>4</strong></span></li>
-					<li>MCOM 1100 - Success in Media and Communcation<span><strong>1	</strong></span></li>
-				</ul>
+						<h4 class="total-hours">Total 16</h4>
+					</div>
+
+					<h5><strong>Spring</strong></h5>
+
+					<ul>
+						<li>MCOM 2310 - Business and Professional<span><strong>3</strong></span></li>
+						<li>POLS 2302 - American Public Policy<span><strong>3</strong></span></li>
+						<li>ENGL 1302 - Advanced College Rhetoric<span><strong>3</strong></span></li>
+						<li>MATH 2300 - Statistical Methods</li>
+						<li><em>OR</em></li>
+						<li>MATH 2345 - Intro to Statistics with Application<span><strong>3</strong></span></li>
+						<li>Life and Physical Sciences<span><strong>4</strong></span></li>
+					</ul>
+				</div>
 			</div>
 
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>First Year</h4>
+			<div class="row">
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>Second Year</h4>
 
-					<h4 class="total-hours">Total 16</h4>
+						<h4 class="total-hours">Total 15</h4>
+					</div>
+
+					<h5><strong>Fall</strong></h5>
+
+					<ul>
+						<li>ADV 3310 - Principals of Advertising<span><strong>3</strong></span></li>
+						<li>MCOM 1301 - Intro to Digital & Social Media<span><strong>3</strong></span></li>
+						<li>MCOM 2320 - Writing for Media and Communication<span><strong>3</strong></span></li>
+						<li>HIST 2300 - History of the United States to 1877<span><strong>3</strong></span></li>
+						<li>Social and Behavioral Sciences<span><strong>4</strong></span></li>
+					</ul>
 				</div>
 
-				<h5><strong>Spring</strong></h5>
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>Second Year</h4>
 
-				<ul>
-					<li>MCOM 2310 - Business and Professional<span><strong>3</strong></span></li>
-					<li>POLS 2302 - American Public Policy<span><strong>3</strong></span></li>
-					<li>ENGL 1302 - Advanced College Rhetoric<span><strong>3</strong></span></li>
-					<li>MATH 2300 - Statistical Methods</li>
-					<li><em>OR</em></li>
-					<li>MATH 2345 - Intro to Statistics with Application<span><strong>3</strong></span></li>
-					<li>Life and Physical Sciences<span><strong>4</strong></span></li>
-				</ul>
+						<h4 class="total-hours">Total 15</h4>
+					</div>
+
+					<h5><strong>Spring</strong></h5>
+
+					<ul>
+						<li>HIST 2301 - History of the United States Since 1877<span><strong>3</strong></span></li>
+						<li>ADV 3312 - Advertising Writing<span><strong>3</strong></span></li>
+						<li>MCOM 2301 - Visual Storytelling (fulfills Creative Arts requirement)<span><strong>3</strong></span></li>
+						<li>MCOM 2330 - Media Literacy (fulfills Language, Philosophy, and Culture requirement)<span><strong>3</strong></span></li>
+						<li>MCOM 2350 - Communicating in a Global Society<span><strong>4</strong></span></li>
+					</ul>
+				</div>
 			</div>
 
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>Second Year</h4>
+			<div class="row">
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>Third Year</h4>
 
-					<h4 class="total-hours">Total 15</h4>
+						<h4 class="total-hours">Total 15</h4>
+					</div>
+
+					<h5><strong>Fall</strong></h5>
+
+					<ul>
+						<li>ADV 3318 - Advertising Research and Consumer Insights<span><strong>3</strong></span></li>
+						<li>ADV 3320 - Advertising and Society<span><strong>3</strong></span></li>
+						<li>MCOM Global Communication or Foreign Language<span><strong>3</strong></span></li>
+						<li>Group A Elective<span><strong>3</strong></span></li>
+						<li>Group B Elective<span><strong>3</strong></span></li>
+					</ul>
 				</div>
 
-				<h5><strong>Fall</strong></h5>
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>Third Year</h4>
 
-				<ul>
-					<li>ADV 3310 - Principals of Advertising<span><strong>3</strong></span></li>
-					<li>MCOM 1301 - Intro to Digital & Social Media<span><strong>3</strong></span></li>
-					<li>MCOM 2320 - Writing for Media and Communication<span><strong>3</strong></span></li>
-					<li>HIST 2300 - History of the United States to 1877<span><strong>3</strong></span></li>
-					<li>Social and Behavioral Sciences<span><strong>4</strong></span></li>
-				</ul>
+						<h4 class="total-hours">Total 15</h4>
+					</div>
+
+					<h5><strong>Spring</strong></h5>
+
+					<ul>
+						<li>ADV 3351 - Advertising Media Planning<span><strong>3</strong></span></li>
+						<li>MCOM Global Communication or Foreign Language<span><strong>3</strong></span></li>
+						<li>Group A Elective<span><strong>3</strong></span></li>
+						<li>Group B Elective<span><strong>3</strong></span></li>
+						<li>Group B Elective<span><strong>3</strong></span></li>
+					</ul>
+				</div>
 			</div>
 
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>Second Year</h4>
+			<div class="row">
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>Fourth Year</h4>
 
-					<h4 class="total-hours">Total 15</h4>
+						<h4 class="total-hours">Total 15</h4>
+					</div>
+
+					<h5><strong>Fall</strong></h5>
+
+					<ul>
+						<li>ADV 3361 - Advertising Design and Layout<span><strong>3</strong></span></li>
+						<li>Group A Elective<span><strong>3</strong></span></li>
+						<li>Group B Elective<span><strong>3</strong></span></li>
+						<li>Group C Elective<span><strong>3</strong></span></li>
+						<li>MCOM Elective<span><strong>3</strong></span></li>
+					</ul>
 				</div>
 
-				<h5><strong>Spring</strong></h5>
+				<div class="medium-6 column semester">
+					<div class="semester-and-total-hours">
+						<h4>Fourth Year</h4>
 
-				<ul>
-					<li>HIST 2301 - History of the United States Since 1877<span><strong>3</strong></span></li>
-					<li>ADV 3312 - Advertising Writing<span><strong>3</strong></span></li>
-					<li>MCOM 2301 - Visual Storytelling (fulfills Creative Arts requirement)<span><strong>3</strong></span></li>
-					<li>MCOM 2330 - Media Literacy (fulfills Language, Philosophy, and Culture requirement)<span><strong>3</strong></span></li>
-					<li>MCOM 2350 - Communicating in a Global Society<span><strong>4</strong></span></li>
-				</ul>
-			</div>
+						<h4 class="total-hours">Total 12</h4>
+					</div>
 
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>Third Year</h4>
+					<h5><strong>Spring</strong></h5>
 
-					<h4 class="total-hours">Total 15</h4>
+					<ul>
+						<li>ADV 4312 - Advertsing Campaigns<span><strong>3</strong></span></li>
+						<li>MCOM Elective<span><strong>3</strong></span></li>
+						<li>Group C Elective<span><strong>3</strong></span></li>
+						<li>Group C Elective<span><strong>3</strong></span></li>
+					</ul>
 				</div>
-
-				<h5><strong>Fall</strong></h5>
-
-				<ul>
-					<li>ADV 3318 - Advertising Research and Consumer Insights<span><strong>3</strong></span></li>
-					<li>ADV 3320 - Advertising and Society<span><strong>3</strong></span></li>
-					<li>MCOM Global Communication or Foreign Language<span><strong>3</strong></span></li>
-					<li>Group A Elective<span><strong>3</strong></span></li>
-					<li>Group B Elective<span><strong>3</strong></span></li>
-				</ul>
-			</div>
-
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>Third Year</h4>
-
-					<h4 class="total-hours">Total 15</h4>
-				</div>
-
-				<h5><strong>Spring</strong></h5>
-
-				<ul>
-					<li>ADV 3351 - Advertising Media Planning<span><strong>3</strong></span></li>
-					<li>MCOM Global Communication or Foreign Language<span><strong>3</strong></span></li>
-					<li>Group A Elective<span><strong>3</strong></span></li>
-					<li>Group B Elective<span><strong>3</strong></span></li>
-					<li>Group B Elective<span><strong>3</strong></span></li>
-				</ul>
-			</div>
-
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>Fourth Year</h4>
-
-					<h4 class="total-hours">Total 15</h4>
-				</div>
-
-				<h5><strong>Fall</strong></h5>
-
-				<ul>
-					<li>ADV 3361 - Advertising Design and Layout<span><strong>3</strong></span></li>
-					<li>Group A Elective<span><strong>3</strong></span></li>
-					<li>Group B Elective<span><strong>3</strong></span></li>
-					<li>Group C Elective<span><strong>3</strong></span></li>
-					<li>MCOM Elective<span><strong>3</strong></span></li>
-				</ul>
-			</div>
-
-			<div class="semester">
-				<div class="semester-and-total-hours">
-					<h4>Fourth Year</h4>
-
-					<h4 class="total-hours">Total 12</h4>
-				</div>
-
-				<h5><strong>Spring</strong></h5>
-
-				<ul>
-					<li>ADV 4312 - Advertsing Campaigns<span><strong>3</strong></span></li>
-					<li>MCOM Elective<span><strong>3</strong></span></li>
-					<li>Group C Elective<span><strong>3</strong></span></li>
-					<li>Group C Elective<span><strong>3</strong></span></li>
-				</ul>
 			</div>
 		</section>
 	</section>
