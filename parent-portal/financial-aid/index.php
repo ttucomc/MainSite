@@ -32,9 +32,9 @@
           Scholarships offered through CoMC can be found using the general <a href="https://www.applytexas.org/" target="_blank">Apply Texas</a> form. The college adheres to the same deadlines as general scholarships.
         </p>
         <p id="deadline">
-          FEB 16
+          DEC 1st
         </p>
-        <h3>Deadline for the 2016-17 School Year</h3>
+        <h3>Deadline for the 2017-18 School Year</h3>
         <p>
           Scholarship recipients are selected by a committee of faculty and staff from CoMC. -	Students will receive an acceptance form when they are offered a scholarship. This form must be completed and returned to the College of Media &amp; Communication scholarship coordinator.
         </p>
@@ -47,9 +47,9 @@
     <section id="cost-to-attend">
       <div class="row">
         <h2>Cost to Attend</h2>
-        <h3>Undergraduate Tuition &amp; Fees for the 2016-17 Academic Year</h3>
+        <h3>Undergraduate Tuition &amp; Fees for the 2017-18 Academic Year</h3>
         <p class="fees">
-          $10,622
+          $10,772
         </p>
         <p>
           <a href="http://www.depts.ttu.edu/financialaid/costToAttend.php" target="_blank" class="button">See Detailed Costs Here</a>
