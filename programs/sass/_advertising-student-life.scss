@@ -21,10 +21,25 @@
 
     }
 
+    .inner-flex-column-large-screen {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+    }
+
     p {
 
         text-align: justify;
         margin: 0 5em;
+
+    }
+
+    hr {
+
+        margin: 0 2em;
 
     }
 
@@ -175,20 +190,33 @@
 
     .advertising-electives {
 
-        width: 50%;
-        padding-right: 1em;
+        // width: 50%;
+        // padding-right: 1em;
 
         @media screen and (max-width: 768px) {
 
             width: 100%;
             padding-right: 0;
 
+            h2 {
+
+                text-align: left;
+                padding-left: 1em;
+
+            }
+
         }
 
         h2 {
 
-            text-align: left;
-            padding-left: 1em;
+            text-align: center;
+            padding-left: 0;
+
+        }
+
+        h4 {
+
+            color: #C00;
 
         }
 
@@ -196,6 +224,13 @@
 
             margin: 0;
             font-size: .65em;
+
+        }
+
+        .group-A {
+
+            width: 50%;
+            margin: 0 auto;
 
         }
 

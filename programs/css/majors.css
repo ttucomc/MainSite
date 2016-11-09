@@ -492,9 +492,30 @@
             flex-direction: column;
   }
 }
+.student-life .inner-flex-column-large-screen {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+}
 .student-life p {
   text-align: justify;
   margin: 0 5em;
+}
+.student-life hr {
+  margin: 0 2em;
 }
 @media screen and (max-width: 768px) {
   .student-life {
@@ -621,23 +642,30 @@
     font-size: .8em;
   }
 }
-.student-life .advertising-electives {
-  width: 50%;
-  padding-right: 1em;
-}
 @media screen and (max-width: 768px) {
   .student-life .advertising-electives {
     width: 100%;
     padding-right: 0;
   }
+  .student-life .advertising-electives h2 {
+    text-align: left;
+    padding-left: 1em;
+  }
 }
 .student-life .advertising-electives h2 {
-  text-align: left;
-  padding-left: 1em;
+  text-align: center;
+  padding-left: 0;
+}
+.student-life .advertising-electives h4 {
+  color: #C00;
 }
 .student-life .advertising-electives p {
   margin: 0;
   font-size: .65em;
+}
+.student-life .advertising-electives .group-A {
+  width: 50%;
+  margin: 0 auto;
 }
 .student-life .advertising-electives .sub-electives-and-hours {
   display: -webkit-box;
