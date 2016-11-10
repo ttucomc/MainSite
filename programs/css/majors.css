@@ -540,7 +540,7 @@
     font-size: 1em;
   }
   .student-life p {
-    font-size: .9em;
+    font-size: .95em;
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -793,6 +793,27 @@
           flex-direction: column;
   text-align: left;
   padding: 0 1.5em;
+  margin-top: 3em;
+}
+@media screen and (max-width: 768px) {
+  .student-life .advertising-four-year-sample {
+    margin-top: 2em;
+  }
+}
+.student-life .advertising-four-year-sample .sample {
+  color: #000;
+}
+.student-life .advertising-four-year-sample .year {
+  color: #C00;
+  margin-top: 1.5em;
+  padding-top: 1em;
+  border-top: #C00 2px solid;
+}
+@media screen and (max-width: 768px) {
+  .student-life .advertising-four-year-sample .year {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 .student-life .advertising-four-year-sample h4 {
   text-align: center;
@@ -801,19 +822,12 @@
   margin-top: 0;
 }
 .student-life .advertising-four-year-sample ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  width: 500px;
 }
 @media screen and (max-width: 768px) {
   .student-life .advertising-four-year-sample ul {
     font-size: .6em;
+    width: auto;
   }
 }
 .student-life .advertising-four-year-sample ul li {
@@ -827,7 +841,7 @@
           justify-content: space-between;
 }
 .student-life .advertising-four-year-sample ul span {
-  padding-right: 2em;
+  padding: 0 1em;
 }
 @media screen and (max-width: 768px) {
   .student-life .advertising-four-year-sample .semester {
@@ -841,16 +855,16 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-  -webkit-justify-content: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.student-life .advertising-four-year-sample .semester-and-total-hours h4:first-child {
+.student-life .advertising-four-year-sample .semester-and-total-hours h5:first-child {
   margin-right: .5em;
 }
 .student-life .advertising-four-year-sample .semester-and-total-hours .total-hours {

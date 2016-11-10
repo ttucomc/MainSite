@@ -81,7 +81,7 @@
 
         p {
 
-            font-size: .9em;
+            font-size: .95em;
             padding-left: 1em;
             padding-right: 1em;
 
@@ -358,13 +358,35 @@
         flex-direction: column;
         text-align: left;
         padding: 0 1.5em;
+        margin-top: 3em;
 
-        // @media screen and (max-width: 768px) {
-        //
-        //     width: 100%;
-        //     padding-left: 2em;
-        //
-        // }
+        @media screen and (max-width: 768px) {
+
+            margin-top: 2em;
+
+        }
+
+        .sample {
+
+            color: #000;
+
+        }
+
+        .year {
+
+            color: #C00;
+            margin-top: 1.5em;
+            padding-top: 1em;
+            border-top: #C00 2px solid;
+
+            @media screen and (max-width: 768px) {
+
+                border-top: none;
+                padding-top: 0;
+
+            }
+
+        }
 
         h4 {
 
@@ -379,13 +401,15 @@
 
         ul {
 
-            //font-size: .6em;
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
+
+            width: 500px;
 
             @media screen and (max-width: 768px) {
 
                 font-size: .6em;
+                width: auto;
 
             }
 
@@ -400,7 +424,8 @@
 
         ul span {
 
-            padding-right: 2em;
+            // padding-right: 2em;
+            padding: 0 1em;
 
         }
 
@@ -410,8 +435,6 @@
 
                 border-bottom: 2px #C00 solid;
                 text-align: left;
-                //margin: 0 auto;
-                //width: 90%;
                 padding-bottom: 1em;
 
             }
@@ -421,10 +444,10 @@
         .semester-and-total-hours {
 
             display: flex;
-            justify-content: left;
+            justify-content: flex-start;
             align-items: center;
 
-            h4:first-child {
+            h5:first-child {
 
                 margin-right: .5em;
 

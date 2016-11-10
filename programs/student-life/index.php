@@ -122,7 +122,7 @@
 					<div class="elective-group-course-listing">
 						<ul>
 							<li>ADV 3330 - Advertising Theory</li>
-							<li>ADV 3340 - Internet & New Media Advertising</li>
+							<li>ADV 3340 - Internet &amp; New Media Advertising</li>
 							<li>ADV 3350 - Sports Advertising</li>
 							<li>ADV 3390 - Internship in Advertising</li>
 							<li>ADV 4304 - Advanced Creative Strategy</li>
@@ -145,7 +145,7 @@
 						</div>
 
 						<div class="elective-group-course-listing">
-							<p>(Creative aspects of Advertising such as writing, design, web & production)</p>
+							<p>(Creative aspects of Advertising such as writing, design, web &amp; production)</p>
 
 							<ul>
 								<li>EMC  3308  - Visual Communiations</li>
@@ -153,12 +153,12 @@
 								<li>EMC  3315  - Principals of Digital Media Production</li>
 								<li>EMC  3333  - Multimedia Development</li>
 								<li>EMC  3335  - Video Production and Editing</li>
-								<li>JOUR 3317  - Publication Design & Graphics</li>
+								<li>JOUR 3317  - Publication Design &amp; Graphics</li>
 								<li>MCOM 2301  - Visual Storytelling</li>
 								<li>PHOT 2310  - Principals in Photography</li>
 								<li>PHOT 3310  - Photography I</li>
 								<li>PHOT 3330  - Digital Photography</li>
-								<li>PR   3341  - PR Graphics & Production</li>
+								<li>PR   3341  - PR Graphics &amp; Production</li>
 							</ul>
 						</div>
 
@@ -169,7 +169,7 @@
 						</div>
 
 						<div class="elective-group-course-listing">
-							<p>(Creative aspects of Advertising such as writing, design, web & production)</p>
+							<p>(Creative aspects of Advertising such as writing, design, web &amp; production)</p>
 
 							<ul>
 								<li>ART 1302 - Design I</li>
@@ -200,13 +200,13 @@
 
 						<div class="elective-group-course-listing">
 							<p>
-								(Business aspects of Advertising such as account management, planning, sales & media)
+								(Business aspects of Advertising such as account management, planning, sales &amp; media)
 							</p>
 
 							<ul>
 								<li>COMS 1301 - Interpersonal Communiation</li>
 								<li>COMS 3313 - Persuation</li>
-								<li>COMS 3334 - Gender & Communication</li>
+								<li>COMS 3334 - Gender &amp; Communication</li>
 								<li>COMS 3335 - Nonverbal Communication</li>
 								<li>COMS 3353 - Small Group Communication</li>
 								<li>EMC  3380 - Advertising for Electronic Media</li>
@@ -226,7 +226,7 @@
 						</div>
 
 						<div class="elective-group-course-listing">
-							<p>(Business aspects of Advertising such as account management, planning, sales & media)</p>
+							<p>(Business aspects of Advertising such as account management, planning, sales &amp; media)</p>
 
 							<ul>
 								<li>BA  3301 - Fundamentals of Marketing</li>
@@ -248,17 +248,17 @@
 		</section>
 
 		<section class="row advertising-four-year-sample">
-			<h4>Four Year Sample</h4>
+			<h4 class="sample">Four Year Sample</h4>
+
+			<h4 class="year">First Year</h4>
 
 			<div class="row">
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>First Year</h4>
+						<h5><strong>Fall</strong></h5>
 
 						<h4 class="total-hours">Total 17</h4>
 					</div>
-
-					<h5><strong>Fall</strong></h5>
 
 					<ul>
 						<li>MCOM 1300 - Foundations of Media<span><strong>3</strong></span></li>
@@ -274,12 +274,10 @@
 
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>First Year</h4>
+						<h5><strong>Spring</strong></h5>
 
 						<h4 class="total-hours">Total 16</h4>
 					</div>
-
-					<h5><strong>Spring</strong></h5>
 
 					<ul>
 						<li>MCOM 2310 - Business and Professional<span><strong>3</strong></span></li>
@@ -293,19 +291,19 @@
 				</div>
 			</div>
 
+			<h4 class="year">Second Year</h4>
+
 			<div class="row">
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>Second Year</h4>
+						<h5><strong>Fall</strong></h5>
 
 						<h4 class="total-hours">Total 15</h4>
 					</div>
 
-					<h5><strong>Fall</strong></h5>
-
 					<ul>
 						<li>ADV 3310 - Principals of Advertising<span><strong>3</strong></span></li>
-						<li>MCOM 1301 - Intro to Digital & Social Media<span><strong>3</strong></span></li>
+						<li>MCOM 1301 - Intro to Digital &amp; Social Media<span><strong>3</strong></span></li>
 						<li>MCOM 2320 - Writing for Media and Communication<span><strong>3</strong></span></li>
 						<li>HIST 2300 - History of the United States to 1877<span><strong>3</strong></span></li>
 						<li>Social and Behavioral Sciences<span><strong>4</strong></span></li>
@@ -314,12 +312,10 @@
 
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>Second Year</h4>
+						<h5><strong>Spring</strong></h5>
 
 						<h4 class="total-hours">Total 15</h4>
 					</div>
-
-					<h5><strong>Spring</strong></h5>
 
 					<ul>
 						<li>HIST 2301 - History of the United States Since 1877<span><strong>3</strong></span></li>
@@ -331,15 +327,15 @@
 				</div>
 			</div>
 
+			<h4 class="year">Third Year</h4>
+
 			<div class="row">
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>Third Year</h4>
+						<h5><strong>Fall</strong></h5>
 
 						<h4 class="total-hours">Total 15</h4>
 					</div>
-
-					<h5><strong>Fall</strong></h5>
 
 					<ul>
 						<li>ADV 3318 - Advertising Research and Consumer Insights<span><strong>3</strong></span></li>
@@ -352,12 +348,10 @@
 
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>Third Year</h4>
+						<h5><strong>Spring</strong></h5>
 
 						<h4 class="total-hours">Total 15</h4>
 					</div>
-
-					<h5><strong>Spring</strong></h5>
 
 					<ul>
 						<li>ADV 3351 - Advertising Media Planning<span><strong>3</strong></span></li>
@@ -369,15 +363,15 @@
 				</div>
 			</div>
 
+			<h4 class="year">Fourth Year</h4>
+
 			<div class="row">
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>Fourth Year</h4>
+						<h5><strong>Fall</strong></h5>
 
 						<h4 class="total-hours">Total 15</h4>
 					</div>
-
-					<h5><strong>Fall</strong></h5>
 
 					<ul>
 						<li>ADV 3361 - Advertising Design and Layout<span><strong>3</strong></span></li>
@@ -390,12 +384,10 @@
 
 				<div class="medium-6 column semester">
 					<div class="semester-and-total-hours">
-						<h4>Fourth Year</h4>
+						<h5><strong>Spring</strong></h5>
 
 						<h4 class="total-hours">Total 12</h4>
 					</div>
-
-					<h5><strong>Spring</strong></h5>
 
 					<ul>
 						<li>ADV 4312 - Advertsing Campaigns<span><strong>3</strong></span></li>
