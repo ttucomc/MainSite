@@ -22,6 +22,9 @@
   h1 {
     text-align: center;
   }
+  section {
+    padding: 0;
+  }
 }
 .default-list li {
 	text-indent: 0;
@@ -327,9 +330,10 @@
 				background-color: rgba($red, .8);
 				color: $white;
 				font-size: 1.25em;
-				line-height: 1;
+				line-height: 1.25;
 				padding: 2.5em 2em;
 				width: 100%;
+        margin-bottom: 3em;
 				&:after {
 					content: 'Answer';
 					    position: absolute;
@@ -345,6 +349,10 @@
 				&:first-child {
 					display: block;
 				}
+        a {
+          color: $white;
+          text-decoration: underline;
+        }
 			}
 			.faq-image {
 				@media screen and (min-width: 768px) {
@@ -380,7 +388,7 @@
 .major-contact {
 	background-color: $cream;
 	text-align: center;
-	padding: 6em 0;
+	padding: 2em 0 !important;
 	.ldpforms {
 		label {
 			font-size: 1.25em;

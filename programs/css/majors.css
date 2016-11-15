@@ -17,6 +17,9 @@
 .l-main-pagecontent h1 {
   text-align: center;
 }
+.l-main-pagecontent section {
+  padding: 0;
+}
 
 .default-list li {
   text-indent: 0;
@@ -213,7 +216,7 @@
 /***** MAJOR MAIN SECTION *****/
 .major-main {
   position: relative;
-  background: url('/images/squared_metal.png?1474317270');
+  background: url('/images/squared_metal.png?1386183405');
   text-align: center;
   padding: 6em 0 0;
   overflow: hidden;
@@ -352,9 +355,10 @@
   background-color: rgba(204, 0, 0, 0.8);
   color: #FFF;
   font-size: 1.25em;
-  line-height: 1;
+  line-height: 1.25;
   padding: 2.5em 2em;
   width: 100%;
+  margin-bottom: 3em;
 }
 .major-main .major-interactive-right .interactive-faq-a p:after {
   content: 'Answer';
@@ -372,6 +376,10 @@
 }
 .major-main .major-interactive-right .interactive-faq-a p:first-child {
   display: block;
+}
+.major-main .major-interactive-right .interactive-faq-a p a {
+  color: #FFF;
+  text-decoration: underline;
 }
 @media screen and (min-width: 768px) {
   .major-main .major-interactive-right .interactive-faq-a .faq-image {
@@ -401,7 +409,7 @@
 .major-contact {
   background-color: #EAE0C6;
   text-align: center;
-  padding: 6em 0;
+  padding: 2em 0 !important;
 }
 .major-contact .ldpforms label {
   font-size: 1.25em;
@@ -482,6 +490,9 @@
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
 }
 @media screen and (max-width: 768px) {
   .student-life .flex-row-large-screen {
@@ -605,8 +616,15 @@
   }
 }
 .student-life .advertising-prereq-course-guide .prereqs {
-  background: url("../images/adv-reqs-bg.svg") center center no-repeat;
+  background: url("/comc/programs/advertising/images/adv-reqs-bg.svg") center center no-repeat;
   background-size: 350px 560px;
+  max-height: 560px;
+}
+.student-life .advertising-prereq-course-guide .prereqs .mid-level2-prereqs {
+  padding: 1.625em 0;
+}
+.student-life .advertising-prereq-course-guide .prereqs .bottom-level-prereqs {
+  padding: 1.5em 0;
 }
 .student-life .advertising-prereq-course-guide .top-level-prereqs, .student-life .advertising-prereq-course-guide .mid-level1-prereqs, .student-life .advertising-prereq-course-guide .mid-level2-prereqs, .student-life .advertising-prereq-course-guide .bottom-level-prereqs {
   display: -webkit-box;
@@ -642,6 +660,11 @@
     padding-right: 0;
     font-size: .8em;
   }
+}
+.student-life .advertising-electives {
+  background-color: #CCC;
+  padding: 1em 0;
+  margin-top: 1em;
 }
 .student-life .advertising-electives .group-A {
   display: -webkit-box;
@@ -753,7 +776,7 @@
 }
 .student-life .advertising-electives .sub-electives-and-hours .sub-elective-group .elective-hours {
   color: #C00;
-  background-color: #CCC;
+  background-color: #333;
   border-radius: 50px;
   padding: .2em 1em .2em 1em;
 }
@@ -839,6 +862,11 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0;
+}
+.student-life .advertising-four-year-sample ul li:before {
+  content: '';
+  display: none;
 }
 .student-life .advertising-four-year-sample ul span {
   padding: 0 1em;

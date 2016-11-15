@@ -438,8 +438,7 @@
 								</section>
 								<section class="major-main">
 									<div>
-										<h2>Consider the Possibilites</h2>
-										<h3>Any goal. Any Industry. Anywhere.</h3>
+										<h2>Connect. Compare. Critique. Create. Collaborate. Communicate.</h2>
 									</div>
 									<div class="row">
 										<div class="medium-6 columns">
@@ -447,24 +446,14 @@
 												<ul>
 													<li>
 														<h4 data-mi-visual="1">Check Us Out</h4>
-														<p class="p-toggle">This is an exciting time for public relations majors at Texas Tech. At the undergraduate level, students get a curriculum that not only arms them with knowledge of the tools and tactics that they'll need to succeed as entry level practitioners, but also the strategic planning and research skills that they'll need to develop into effective managers and leaders. And they get all this from a department with faculty committed to offering a student-centered curriculum aimed at preparing graduates to take their places in molding the industry’s exciting future or entering careers in a variety of other fields.</p>
+														<p class="p-toggle">We want to achieve communication magic–that perfect intersection between information and entertainment, between right-brain and left-brain, between form and function. It is at this intersection that you find advertising. So, if that sounds like a good time–come join us!</p>
 													</li>
 													<li>
-														<h4 data-mi-visual="2">Outpost Social Media Lab</h4>
-														<p class="p-toggle">The Outpost Social Media Lab is the College of Media &amp; Communication's center for the study of new media. The lab produces professional insights and analysis, hosts training seminars and workshops, supports project implementation for classes and clients, engages in community outreach, and conducts applied and basic research in social, online, and digital media. Watch our latest video!</p>
-													</li>
-													<li>
-														<h4 data-mi-visual="3">Classes We Offer</h4>
-														<p class="p-toggle">Dynamic and engaging classes emphasize how to build and manage relationships with your publics; strategic campaign planning; integrating traditional, digital, online and social media; persuasive communication techniques, including writing, graphic design and content creation; advanced social media monitoring and analytics; global communication; and a variety of courses on specific PR topics.</p>
-													</li>
-													<li>
-														<h4 data-mi-visual="4">Frequently Asked Questions</h4>
+														<h4 data-mi-visual="2">Frequently Asked Questions</h4>
 														<ul class="p-toggle major-faqs">
-															<li data-mi-question="1"><span class="faq-arrow">&#9654;</span>What is public relations?</li>
-															<li data-mi-question="2"><span class="faq-arrow">&#9654;</span>What does it take to be a public relations specialist?</li>
-															<li data-mi-question="3"><span class="faq-arrow">&#9654;</span>Where can a graduate with a public relations degree work?</li>
-															<li data-mi-question="4"><span class="faq-arrow">&#9654;</span>What is the job outlook of public relations?</li>
-															<li data-mi-question="5"><span class="faq-arrow">&#9654;</span>What are some of the growing trends in the public relations industry?</li>
+															<li data-mi-question="1"><span class="faq-arrow">&#9654;</span>Is advertising the right degree for me?</li>
+															<li data-mi-question="2"><span class="faq-arrow">&#9654;</span>What kind of jobs can I get with an advertising degree?</li>
+															<li data-mi-question="3"><span class="faq-arrow">&#9654;</span>How can I get involved?</li>
 														</ul>
 													</li>
 												</ul>
@@ -472,58 +461,45 @@
 										</div>
 										<div class="medium-6 columns">
 											<div class="major-interactive-right wow fadeInUp">
-												<div class="pretty-embed interactive-video" data-pe-videoid="LkerUr3_iZk" data-mi-visual="1"></div>
-												<div data-mi-visual="2">
-													<iframe width="560" height="315" src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=TTUOutpost" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+												<div data-mi-visual="1">
+													<img src="http://www.depts.ttu.edu/comc/programs/advertising/images/advertising2.jpg" />
 												</div>
-												<div class="interactive-classes" data-mi-visual="3">
-													<h4>Example Courses:</h4>
-													<ul>
-														<li class="animated">PR Strategies</li>
-														<li class="animated">PR Writing</li>
-														<li class="animated">PR Graphics</li>
-														<li class="animated">Social Media</li>
-														<li class="animated">PR Campaigns</li>
-														<li class="animated">Crisis Communication</li>
-														<li class="animated">Nonprofit PR</li>
-														<li class="animated">Sports PR</li>
-														<li class="animated">International PR</li>
-														<li class="animated">Political PR</li>
-													</ul>
-												</div>
-												<div class="interactive-faq-a" data-mi-visual="4">
+												<div class="interactive-faq-a" data-mi-visual="2">
 													<p data-mi-answer="1">
-														Although the definition of public relations varies, ultimately public relations helps an organization and its publics adapt to each other for mutual benefit. More specifically, public relations specialists serve as advocates for clients seeking to build and maintain positive relationships with the public.
+														Advertising is creative- plain and simple. We crunch numbers on occasion and we always think with strategy in mind, but creativity and originality are the stars of the show. So, if you are analytically minded but have a creative flair, advertising could be right for you. If you are a die-hard creative writer or designer, advertising could be right for you. If you enjoy telling interesting stories and influencing people, advertising could be right for you. We are passionate about what we do and we have a lot of fun - <a href="/comc/programs/advertising/student-life/">come join us!</a>
 													</p>
 													<p data-mi-answer="2">
-														Public relations specialists must be able to communicate thoughts clearly and simply. They must also show creativity, initiative and good judgment. People who choose public relations as a career should have an understanding of human psychology and enthusiasm for motivating people. Writing is arguably the most important qualification due to the numerous news releases, speeches and articles public relations specialists must create. Critical thinking, strategic planning and public speaking skills are also important qualifications.
+														Advertising is one of the few industries where nearly anyone can find a fulfilling career suited to their individual personality and abilities. Most traditional jobs in the advertising industry focus on account services, creative, or media. Account managers (sometimes known as account executive, project manager, brand manager, among others) serve as the liaison between the client and the agency. Account planners research consumers’ attitudes, lifestyles, and behaviors to make sure their perspective is considered when developing advertising messages. Creatives (e.g., art directors, copywriters, graphic designers) use these insights to help generate creative ideas to craft the most effective messages for the client. The production team (e.g., web designers, photographers, videographers, video editors) then takes these creative ideas and turns them into reality. Media planners conduct research to generate insights about consumers’ media habits, and the media buyers then use these insights to negotiate with media providers (e.g., cable television, social media, etc.) the best times and locations to place the advertising messages. Take our interactive quiz help determine which advertising job may be the best fit for you.<br />
+														<br />
+														Keep in mind, these are just a few of the many jobs in advertising, and most can be performed in an agency or corporate setting. Many of our graduates also go on to have exciting careers outside of these traditional jobs as social media managers, digital strategists, and market researchers, to name a few.
 													</p>
 													<p data-mi-answer="3">
-														There were more than 275,000 people employed as public relations specialists in 2008.3 These jobs are found in a variety of industries, such as healthcare, corporate communications, government, non-profits, entertainment, sports, travel and hospitality.
+														Students have the opportunity to join student organizations that provide them with “real-world” experience, networking opportunities, etc. Advertising students are encouraged to join <a href="/comc/students/organizations/">Tech Advertising Federation (TAF)</a>, a chapter of the <a href="http://www.aaf.org/iMIS/AAFMemberR/OUR_EFFORTS/Education_Services/National_Student_Advertising_Competition/AAFMemberR/Awards_and_Events/Programs_Events/NSAC.aspx?hkey=bdd4e791-5927-4e2d-bd44-7ec046c3fc4b" class="external">American Advertising Federation (AAF)</a>; apply for the advertising team for an opportunity to compete in the AAF National Student Advertising Competition; as well as take advantage of opportunities through our brand new state-of-the-art ideation lab, <a href="/comc/thinktank/">Think Tank</a>. Students can also Students can also join other student organizations in the College of Media and Communication, including Outpost, The Hub, KTXT, Double T Insider, etc.
 													</p>
-													<p data-mi-answer="4">
-														Public relations is one of the more rapidly growing industries in the job market. According to the US Bureau of Labor Statistics, employment of public relations specialists is expected to grow by 24 percent from 2008 to 2018.
-													</p>
-													<p data-mi-answer="5">
-														The use of social media in public relations has exploded during recent years. Social media has changed the rules for strategic communication by allowing public relations practitioners and organizations to engage in a two-way conversation with their publics.
-													</p>
-													<!-- <div class="faq-image">
-														<img src="/comc/images/home/kbergan.png" alt="Kim the adviser" class="wow slideInUp">
-													</div> -->
 												</div>
 											</div>
 										</div>
 									</div>
 								</section>
 								<section class="major-spacer">
-									<p><em>The field of public relations is one of the fastest growing professions in the country.</em></p>
+									<p><em>Communicating in a smart, strategic, inventive way.</em></p>
 								</section>
 								<section class="major-contact">
 									<h2>Talk to Someone!</h2>
-									<p>We'd love to talk to you about our public relations program! Use the form below to contact our department chair, Trent Seltzer!</p>
 									<div class="row">
-										<div class="small-12 column">
-											{{a:65203}}
+										<div class="medium-6 columns">
+											<h4><a href="mailto:shannon.bichard@ttu.edu" class="mail">Shannon Bichard</a></h4>
+											<p>
+												Department Chair
+											</p>
+											<img src="/comc/faculty/images/sbichard.jpg" alt="Shannon Bichard" title="Shannon Bichard" />
+										</div>
+										<div class="medium-6 columns">
+											<h4><a href"mailto:donald.ellis@ttu.edu" class="mail">Don Ellis</a></h4>
+											<p>
+												Adviser
+											</p>
+											<img src="/comc/faculty/images/dellis.jpg" alt="Don Ellis" title="Don Ellis" />
 										</div>
 									</div>
 								</section>
