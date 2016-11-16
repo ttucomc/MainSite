@@ -484,6 +484,42 @@
 								<section class="major-spacer">
 									<p><em>Communicating in a smart, strategic, inventive way.</em></p>
 								</section>
+								<section id="advertising-quiz">
+									<h2>What Job In Advertising Is For you?</h2>
+									<p>
+										See what area you are best suited for in an advertising career by answering a few questions below.
+									</p>
+									<div class="row">
+										<div class="small-12 column">
+											<p id="question">
+												Testing
+											</p>
+										</div>
+									</div>
+									<div class="row" id="choices">
+										<div class="medium-6 columns">
+											<p class="choice">
+												<a href=""></a>
+											</p>
+										</div>
+										<div class="medium-6 columns">
+											<p class="choice">
+												<a href=""></a>
+											</p>
+										</div>
+									</div>
+									<div id="career-choice" class="row">
+										<div class="medium-4 columns">
+											<a id="btn-creative" href=""><img src="images/creative.svg" title="Creative" alt="Creative" /></a>
+										</div>
+										<div class="medium-4 columns">
+											<a id="btn-media" href=""><img src="images/media.svg" title="Media" alt="Media" /></a>
+										</div>
+										<div class="medium-4 columns">
+											<a id="btn-accounts" href=""><img src="images/accounts.svg" title="Accounts" alt="Accounts" /></a>
+										</div>
+									</div>
+								</section>
 								<section class="major-contact">
 									<h2>Talk to Someone!</h2>
 									<div class="row">
@@ -507,6 +543,10 @@
 								<script src="../js/wow.min.js"></script>
 								<script type="text/javascript" src="js/prettyembed.min.js"></script>
 								<script type="text/javascript" src="js/majors.js"></script>
+								<script type="text/javascript" src="js/advertising-quiz/question.js"></script>
+								<script type="text/javascript" src="js/advertising-quiz/quiz.js"></script>
+								<script type="text/javascript" src="js/advertising-quiz/quizui.js"></script>
+								<script type="text/javascript" src="js/advertising-quiz/app.js"></script>
 
 								<script type="text/javascript" src="../includes/slick/slick/slick.min.js"></script>
 

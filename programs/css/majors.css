@@ -437,7 +437,7 @@
   margin-top: 0;
 }
 
-/***** Advertising import *****/
+/***** Advertising imports *****/
 .adv-major-info {
   height: 750px;
 }
@@ -470,7 +470,6 @@
   margin-top: 8em;
 }
 
-/******** Student life page styling ********/
 .student-life {
   position: relative;
   text-align: center;
@@ -900,4 +899,56 @@
   background-color: #CCC;
   border-radius: 50px;
   padding: .2em 1em .2em 1em;
+}
+
+/**********************************************************
+        					Advertising Quiz CSS
+**********************************************************/
+#advertising-quiz {
+  text-align: center;
+  padding: 2em 0 3em;
+}
+#advertising-quiz #question {
+  background: #CCCCCC;
+  font-family: "HelveticaNeueW01-45Ligh","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  border: 4px solid #666;
+  padding: .25em .5em;
+  margin: 1em auto;
+  max-width: 500px;
+}
+#advertising-quiz .choice {
+  border: 2px solid #666;
+  border-radius: 25px;
+  padding: .25em .5em;
+  margin: 1em auto;
+  max-width: 300px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+#advertising-quiz .choice:hover {
+  background: #CCCCCC;
+}
+#advertising-quiz .choice:focus {
+  background: #CCCCCC;
+}
+#advertising-quiz .choice a {
+  color: #000000;
+  padding: .25em 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+#advertising-quiz .choice a:hover, #advertising-quiz .choice a:focus {
+  text-decoration: none;
+}
+#advertising-quiz #career-choice {
+  margin-top: 3em;
+}
+#advertising-quiz #career-choice a img {
+  margin: 1em 0;
+  max-height: 75px;
+}
+@media screen and (min-width: 768px) {
+  #advertising-quiz #career-choice a img {
+    margin: 0;
+  }
 }
