@@ -457,10 +457,10 @@
 					<div class="home-adv-card-bottom">
 						<h3><a href="/comc/advising/advertising/">Advertising</a></h3>
 						<hr />
-						<p>Debra Sanderson</p>
+						<p>Carly Carthel</p>
 					</div>
 					<div class="home-adv-contact">
-						<p><a href="tel:8068348709">806.834.8709</a><br /> <a href="mailto:debra.sanderson@ttu.edu">debra.sanderson@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/debra-edit.png" alt="Debra Sanderson" /></a></p>
+						<p><a href="tel:8068346645">806.834.6645</a><br /> <a href="mailto:carly.carthel@ttu.edu">carly.carthel@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/ccarthel.png" alt="Carly Carthel" /></a></p>
 					</div>
 				</li>
 				<li>
