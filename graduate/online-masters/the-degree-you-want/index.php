@@ -37,7 +37,7 @@
 
       // Info for interested person
       $stmt = $db->prepare("
-                            INSERT INTO ads (first_name, last_name, email, campaign)
+                            INSERT INTO online_masters_ads (first_name, last_name, email, campaign)
                             VALUES (:first_name, :last_name, :email, :campaign)
                           ");
       // Binding Parameters
@@ -61,7 +61,7 @@
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-    $to = "kuhrt.cowan@ttu.edu";
+    $to = "kristi.gilmore@ttu.edu, michael.zahn@ttu.edu";
 
     $subject = $onlineMasters . " Info Request";
 

@@ -1,0 +1,40 @@
+#members {
+
+  .member {
+    background-color: #f8f8f8;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    h3 {
+      color: #000;
+      font-family: 'ITC Charter W01', times, serif;
+      font-size: 2em;
+      line-height: 1em;
+    }
+    h4 {
+      color: #6c6c6c;
+      font-family: 'ITC Charter W01', times, serif;
+      font-size: 20px;
+      font-style: italic;
+      margin-top: 0;
+      line-height: 1.3;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    hr {
+      position: static;
+      width: 100%;
+      background: #cc0000;
+      @media screen and (min-width: 1024px) {
+        display: inline-block !important;
+        margin-top: 1.07rem;
+      }
+    }
+  }
+
+}
