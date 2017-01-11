@@ -1,0 +1,21 @@
+.main-section {
+    margin-top: 3em;
+}
+
+#mc-header .mc-header-border {
+    border-right: 1px solid black;
+}
+
+#mc-header-tagline {
+    font-size: 1.25em;
+    text-align: center;
+}
+
+#cover-photo .row {
+    background-image: url('../images/COVERWORDART.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-top: 1em;
+    min-height: 1000px;
+}

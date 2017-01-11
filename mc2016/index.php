@@ -38,7 +38,7 @@
 				</div>
 				<div class="row">
 					<div class="large-12 columns" id="mc-header-tagline">
-						<p><em>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication • 2016</em></p>
+						<p style="text-align: center;"><em>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication • 2016</em></p>
 					</div>
 				</div>
                 <div class="row">

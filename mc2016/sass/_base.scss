@@ -1,0 +1,33 @@
+body,html{
+    height:100%;
+    width:100%;
+}
+
+p {
+    margin-bottom: .7em;
+    text-align: justify;
+}
+
+header {
+    padding: 2em;
+}
+
+header div.MCLogo {
+    text-align: center;
+}
+
+section.header {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+section.content {
+    margin-bottom: 2em;
+}
+
+img.small-mc-logo {
+    display: inline;
+    padding-left: 1em;
+    width: 44px;
+    height: 16px;
+}

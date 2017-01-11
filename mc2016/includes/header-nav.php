@@ -28,7 +28,7 @@
             <li><a href="index.php">CoMC Growth</a></li>
             <li><label><strong>ALUMNI AND FRIENDS</strong></label></li>
             <li><a href="forecasting-the-future.php">Forecasting the Future</a></li>
-            <li><a href="#">Journalism Alumnus Recognized by Texas Tech</a></li>
+            <li><a href="journalism-alumnus.php">Journalism Alumnus Recognized by Texas Tech</a></li>
             <li><a href="#">Eye on the Prize</a></li>
             <li><a href="#">Distinguished Alumna Rocognized by Texas Tech</a></li>
             <li><a href="#">Taking on the Entertainment Industry in TODAY's Climate</a></li>

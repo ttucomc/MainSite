@@ -1,0 +1,24 @@
+.center-group-text {
+    text-align: center;
+}
+
+h1.font-baskerville {
+    line-height: 0.9;
+    color: #714d45;
+}
+
+h1.font-baskerville:last-child {
+    line-height: 1;
+}
+
+.letter-spacing {
+    letter-spacing: 8px;
+}
+
+.grey-box-quote {
+    color: #bfa097;
+    font-size: large;
+    background-color: lighten(grey, 35%);
+    padding: 1.5em;
+    border-radius: 5px;
+}
