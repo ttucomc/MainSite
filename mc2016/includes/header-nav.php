@@ -38,7 +38,7 @@
             <li><a href="#">Transfer Students from Amarillo Find a Home at Texas Tech</a></li>
             <li><a href="#">Bullet Ad Team</a></li>
             <li><a href="#">CoMC Debate Team</a></li>
-            <li><a href="#">Former Ballerina Pirouettes to Texas Tech</a></li>
+            <li><a href="former-ballerina.php">Former Ballerina Pirouettes to Texas Tech</a></li>
             <li><a href="#">A Day in the Life</a></li>
             <li><a href="#">M.A. Student Brings Guide Dog Raisers to Lubbock</a></li>
             <li><a href="#">GOAL: Media Strategies Major Drafted by Houston Dash</a></li>

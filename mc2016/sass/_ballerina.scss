@@ -1,0 +1,64 @@
+section.header {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .ballerina h3 {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+        h1 {
+            font-size: 5rem;
+        }
+
+        .ballerina h3 {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        text-align: center;
+        color: white;
+    }
+}
+
+.dark-blue {
+    background-color: #4d7691;
+    padding: 4em 0 4em 0;
+}
+
+.rounded-image {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 80%;
+
+    @media only screen and (min-width: 768px) {
+        width: 25%;
+    }
+
+    padding: 3em 0 3em 0;
+}
+
+.header-text-centered {
+    text-align: center;
+}
+
+.large-h4 {
+    font-weight: bolder;
+    float: left;
+    font-size: 2.5rem;
+
+    @media only screen and (min-width: 768px) {
+        font-size: 3.5rem;
+    }
+
+    padding-right: .2em;
+}
+
+section.content {
+    h4 {
+        margin-bottom: 2em;
+    }
+}

@@ -17,15 +17,15 @@
         <?php include 'includes/header-nav.php'; ?>
 
         <section class="header">
-            <div class="row">
+            <div class="row fullWidth">
                 <div class="large-12 columns">
                     <div class="center-group-text">
                         <h1 class="font-baskerville">
                             <span style="color: #3b2124;">Journalism Alumnus</span><br>
                             <small><em>works as</em></small><br>
                             T. Boone Pickens'<br>
-                            <span style="font-variant: small-caps" class="letter-spacing">Chief of Staff</span>
                         </h1>
+                        <h1 class="font-baskerville border-behind-text"><span style="font-variant: small-caps" class="letter-spacing">Chief of Staff</span></h1>
                     </div>
                     <p style="text-align: center;"><small>by Rachel Blevins, photos courtesy Jay Rosser</small></p>
                 </div>

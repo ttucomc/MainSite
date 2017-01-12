@@ -3,8 +3,18 @@
     src: url('../fonts/futura-condensedlight.ttf');
 }
 
+@font-face {
+    font-family: 'bromello';
+    src: url('../fonts/bromello.ttf');
+}
+
 .font-baskerville {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+.font-bromello {
+    color: white;
+    font-family: 'bromello';
 }
 
 .font-futura-condensedlight {
