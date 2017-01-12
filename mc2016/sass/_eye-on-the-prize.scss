@@ -1,0 +1,41 @@
+.eye-on-the-prize-bg-color {
+    background-color: #eee1c5;
+    min-height: 100vh;
+}
+
+section.header {
+    transform: rotate(30deg);
+    text-align: center;
+    padding-left: 5em;
+
+
+
+    h1.eye-on-the-prize-h1 {
+        padding-top: 5em;
+        margin-bottom: 0;
+    }
+
+    h2.eye-on-the-prize-h2 {
+        position: relative;
+        text-align: center;
+        margin: -.7em 0 0 0;
+        z-index: 1;
+    }
+
+    img.eye-on-the-prize-img {
+        margin-top: -20px;
+        height: 300px;
+        width: 300px;
+        z-index: 0;
+    }
+
+    img.eye-on-the-prize-img2 {
+        height: 300px;
+        width: 300px;
+        width: 75%;
+    }
+}
+
+.three-image-gutter {
+    width: 75%;
+}

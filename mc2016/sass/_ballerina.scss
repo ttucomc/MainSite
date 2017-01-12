@@ -1,18 +1,18 @@
 section.header {
-    h1 {
+    h1.ballerina-h1 {
         font-size: 3rem;
     }
 
-    .ballerina h3 {
+    h3.ballerina-h3 {
         font-size: 1.5rem;
     }
 
     @media only screen and (min-width: 768px) {
-        h1 {
+        h1.ballerina-h1 {
             font-size: 5rem;
         }
 
-        .ballerina h3 {
+        h3.ballerina-h3 {
             font-size: 3rem;
         }
     }

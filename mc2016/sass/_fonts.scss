@@ -8,6 +8,20 @@
     src: url('../fonts/bromello.ttf');
 }
 
+@font-face {
+    font-family: 'athletic';
+    src: url('../fonts/Athletic.TTF');
+}
+
+@font-face {
+    font-family: 'wisdom-script';
+    src: url('../fonts/WisdomScript.otf');
+}
+
+.font-athletic {
+    font-family: 'athletic';
+}
+
 .font-baskerville {
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
@@ -20,4 +34,9 @@
 .font-futura-condensedlight {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-weight: 100;
+}
+
+.font-wisdom-script {
+    font-family: 'wisdom-script';
+    color: #2f63af;
 }
