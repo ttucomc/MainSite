@@ -18,6 +18,11 @@
     src: url('../fonts/WisdomScript.otf');
 }
 
+@font-face {
+    font-family: 'american-purpose';
+    src: url('../fonts/AmericanPurpose.otf');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -39,4 +44,9 @@
 .font-wisdom-script {
     font-family: 'wisdom-script';
     color: #2f63af;
+}
+
+.american-purpose {
+    font-family: 'american-purpose';
+    color: #fff;
 }
