@@ -50,7 +50,7 @@
         </section>
 
         <section id="cover-photo">
-            <div class=row></div>
+            <div class="row"></div>
         </section>
 
         <?php include 'includes/footer.php'; ?>

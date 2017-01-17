@@ -3,39 +3,174 @@
     min-height: 100vh;
 }
 
-section.header {
-    transform: rotate(30deg);
-    text-align: center;
-    padding-left: 5em;
+section.eye-on-the-prize-header {
+    margin-top: 0;
+}
 
-
-
-    h1.eye-on-the-prize-h1 {
-        padding-top: 5em;
-        margin-bottom: 0;
-    }
-
-    h2.eye-on-the-prize-h2 {
-        position: relative;
+@media only screen and (min-width: 768px) {
+    .eye-on-the-prize-header {
+        // transform: rotate(30deg);
         text-align: center;
-        margin: -.7em 0 0 0;
-        z-index: 1;
+        padding: 1em 0 2em 0;
+        margin: 0 auto;
     }
 
-    img.eye-on-the-prize-img {
-        margin-top: -20px;
-        height: 300px;
-        width: 300px;
-        z-index: 0;
-    }
-
-    img.eye-on-the-prize-img2 {
-        height: 300px;
-        width: 300px;
-        width: 75%;
+    .large-4 {
+        max-width: 33%;
     }
 }
 
-.three-image-gutter {
-    width: 75%;
+@media only screen and (min-width: 1024px) {
+    .eye-on-the-prize-header {
+        transform: rotate(30deg);
+        text-align: center;
+        max-width: 900px;
+        padding: 1em 0 2em 0;
+        margin: 0 auto;
+    }
+
+    .large-4 {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .eye-on-the-prize-header {
+        transform: rotate(30deg);
+        text-align: center;
+        max-width: 1240px;
+        padding: 1em 0 2em 0;
+        margin: 0 auto;
+    }
+}
+
+section.header {
+    h1.eye-on-the-prize-h1 {
+        padding-top: .5em;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 768px) {
+        h1.eye-on-the-prize-h1 {
+            padding-top: 1.5em;
+            margin-bottom: 0;
+            font-size: 5rem;
+        }
+    }
+
+    h2.eye-on-the-prize-h2 {
+        text-align: center;
+        margin-bottom: .5em;
+    }
+
+    @media only screen and (min-width: 768px) {
+        h2.eye-on-the-prize-h2 {
+            position: relative;
+            text-align: center;
+            margin: -.7em 0 -.4em 0;
+            z-index: 1;
+            font-size: 2.7rem;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        img.eye-on-the-prize-img {
+            margin-top: -20px;
+            z-index: 0;
+        }
+    }
+
+    .zoom-in-on-image {
+        margin-bottom: 7.5em;
+    }
+
+    @media only screen and (min-width: 400px) {
+        .zoom-in-on-image {
+            margin-bottom: 10em;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .zoom-in-on-image {
+            margin-bottom: 0;
+        }
+    }
+
+    .zoom-in-on-image-translate2 {
+        margin-top: 2.5em;
+    }
+
+    @media only screen and (min-width: 400px) {
+        .zoom-in-on-image-translate2 {
+            margin-top: 5.5em;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .zoom-in-on-image-translate2 {
+            margin-top: 0;
+        }
+    }
+
+    p.eye-on-the-prize-p {
+        text-align: center;
+        font-size: 1.05rem;
+    }
+
+    span.eye-on-the-prize-span {
+        font-size: 1.3rem
+    }
+}
+
+.zoom-in-on-image, .zoom-in-on-image-translate1, .zoom-in-on-image-translate2 {
+    height: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+    .reduce-gutter-to-70-percent-on-large-screens {
+        margin-bottom: 1em;
+    }
+
+    .zoom-in-on-image {
+        overflow: hidden;
+        height: 300px;
+        width: 260px;
+
+        img {
+            transform: rotate(-30deg) scale(1.5);
+        }
+    }
+
+    .zoom-in-on-image-translate1 {
+        overflow: hidden;
+        height: 300px;
+        width: 260px;
+
+        img {
+            transform: rotate(-30deg) scale(1.6) translate(-21px, 30px);
+        }
+    }
+
+    .zoom-in-on-image-translate2 {
+        overflow: hidden;
+        height: 300px;
+        width: 260px;
+
+        img {
+            transform: rotate(-30deg) scale(3.2) translate(-16px, 38px);
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .reduce-gutter-to-70-percent-on-large-screens {
+        width: 70%;
+    }
+}
+
+hr {
+    border-color: #2f63af;
+    border-top: 3px double #2f63af;
+    margin: .5em 0 3.5em 0;
 }

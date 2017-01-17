@@ -27,7 +27,7 @@
                 <div class="large-12 columns">
                     <h1 class="ballerina-h1 font-bromello header-text-centered">Former International Ballerina</h1>
                     <h3 class="ballerina-h3 font-bromello header-text-centered">pirouettes to Texas Tech to Pursue PR Degree</h3>
-                    <p><small><em>by Rachel Blevins, photo courtesy Alana Krafsur</em></small></p>
+                    <p class="ballerina-p"><small><em>by Rachel Blevins, photo courtesy Alana Krafsur</em></small></p>
                 </div>
             </div>
         </section>
