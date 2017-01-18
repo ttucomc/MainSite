@@ -1,0 +1,87 @@
+.transfer-students-header {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    h1 {
+        font-size: 3.1rem;
+        font-weight: 600;
+        line-height: 1;
+        text-align: justify;
+        margin: 0 auto;
+        width: 14rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        font-weight: 600;
+        line-height: 1;
+        text-align: justify;
+        margin: 0 auto;
+        width: 14rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1;
+        text-align: justify;
+        margin: 0 auto;
+        width: 14rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+        h1 {
+            font-size: 6.1rem;
+            width: 28rem;
+        }
+
+        h2 {
+            font-size: 4.6rem;
+            width: 28rem;
+            letter-spacing: 6px;
+        }
+
+        h3 {
+            font-size: 3.6rem;
+            width: 27.5rem;
+        }
+    }
+
+    h1, h3 {
+        color: #0f243e;
+        font-family: 'franklin-gothic-medium';
+        text-transform: uppercase;
+    }
+
+    h2 {
+        color: #d12229;
+        font-family: 'franklin-gothic-medium';
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: .5rem;
+        text-align: right;
+        margin: 0 auto;
+        line-height: 1;
+        width: 14rem;
+        padding-right: .4rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+        p {
+            font-size: 1.1rem;
+            text-align: right;
+            margin: 0 auto;
+            width: 20rem;
+            padding-right: 0;
+        }
+    }
+}
+
+.transfer-students-content {
+    img.transfer-students {
+        margin-bottom: 1rem;
+    }
+}

@@ -6,6 +6,11 @@ body,html{
 p {
     margin-bottom: .7em;
     text-align: justify;
+    font-size: .75rem;
+
+    @media only screen and (min-width: 768px) {
+        font-size: 1rem;
+    }
 }
 
 header {
@@ -25,11 +30,17 @@ section.content {
     margin-bottom: 2em;
 }
 
+img {
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
 img.small-mc-logo {
     display: inline;
-    padding-left: 1em;
-    width: 44px;
-    height: 16px;
+    padding-left: .5rem;
+    width: 30px;
+    height: 10px;
 }
 
 .fullWidth {

@@ -35,7 +35,7 @@
             <li><a href="#">Alumnus Lands Job with Top Sports Marketing Firm</a></li>
             <li><a href="#">From Backstage to Center Stage</a></li>
             <li><label><strong>FACULTY, STAFF AND STUDENTS</strong></label></li>
-            <li><a href="#">Transfer Students from Amarillo Find a Home at Texas Tech</a></li>
+            <li><a href="transfer-students.php">Transfer Students from Amarillo Find a Home at Texas Tech</a></li>
             <li><a href="#">Bullet Ad Team</a></li>
             <li><a href="#">CoMC Debate Team</a></li>
             <li><a href="former-ballerina.php">Former Ballerina Pirouettes to Texas Tech</a></li>
