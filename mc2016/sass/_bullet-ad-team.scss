@@ -7,9 +7,56 @@
         color: #a3c094;
         line-height: 1;
         margin-bottom: -.2rem;
+
+        background-image: url('../images/bullet-ad-team-bg.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+
+        @media only screen and (min-width: 768px) {
+            background-size: cover;
+            background-position: bottom right;
+        }
     }
 
     p {
         text-align: center;
+    }
+}
+
+.bullet-ad-team-content {
+    padding-top: 2rem;
+
+    img.bullet-ad-team-logo {
+        height: 200px;
+        width: 320px;
+        margin-bottom: 2rem;
+    }
+
+    img.bullet-ad-images {
+        margin-bottom: 1rem;
+    }
+
+    p.bullet-ad-intro-green-text {
+        color: #a3c094;
+        font-size: .82rem;
+    }
+
+    p {
+        @media only screen and (min-width: 768px) {
+            font-size: .7rem;
+        }
+    }
+
+    span.avenir-next-red-text {
+        color: #e92d12;
+    }
+
+    span.avenir-next-green-text {
+        color: #a3c094;
+    }
+
+    p.bullet-ad-journalists {
+        line-height: 1;
     }
 }
