@@ -49,6 +49,39 @@
                 </div>
             </section>
 
+            <div class="row">
+                <div class="large-12 columns">
+                    <hr class="orange-hr">
+                </div>
+
+            </div>
+
+            <section class="goal-pictures">
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p class="all-caps-orange-text">"Janine was as dedicated to her coursework as she was to her sport."</p>
+
+                        <img class="soccer-pictures" src="images/goal-1.jpg" alt="Janine fighting for position">
+                    </div>
+
+                    <div class="large-6 columns">
+                        <img class="soccer-pictures" src="images/goal-3.jpg" alt="Group Photo of Houston Dash">
+                    </div>
+                </div>
+
+                <div class="row apply-margin-top">
+                    <div class="large-6 columns">
+                        <img class="soccer-pictures" src="images/goal-2.jpg" alt="Janine about to take a shot">
+                    </div>
+
+                    <div class="large-6 columns">
+                        <img class="soccer-pictures" src="images/goal-4.jpg" alt="Janine waiting for a corner kick">
+
+                        <p class="all-caps-orange-text">She was so hard working that it was tiring and simultaneously inspiring for me just being around her.</p>
+                    </div>
+                </div>
+            </section>
+
         <?php include 'includes/footer.php'; ?>
     </body>
 </html>

@@ -28,6 +28,16 @@
     src: url('../fonts/FranklinGothicMedium.ttf');
 }
 
+@font-face {
+    font-family: 'avenir-next-condensed';
+    src: url('../fonts/AvenirNextCondensed.ttc');
+}
+
+@font-face {
+    font-family: 'avenir-next';
+    src: url('../fonts/AvenirNext.ttc');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -58,4 +68,12 @@
 
 .franklin-gothic-medium {
     font-family: 'franklin-gothic-medium';
+}
+
+.avenir-next-condensed {
+    font-family: 'avenir-next-condensed';
+}
+
+.avenir-next {
+    font-family: 'avenir-next';
 }

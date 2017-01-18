@@ -65,7 +65,7 @@
         }
 
         p.goal-author {
-            font-size: 1rem; 
+            font-size: 1rem;
         }
     }
 }
@@ -86,4 +86,19 @@
 
 .orange-text {
     color: #f36018;
+}
+
+.goal-pictures {
+    .apply-margin-top {
+        margin-top: 2rem;
+    }
+
+    img.soccer-pictures {
+        margin-bottom: .5rem;
+    }
+}
+
+hr.orange-hr {
+    border-top: 3px double #f36018;
+    margin-top: 3rem;
 }
