@@ -37,7 +37,7 @@
             <li><label><strong>FACULTY, STAFF AND STUDENTS</strong></label></li>
             <li><a href="transfer-students.php">Transfer Students from Amarillo Find a Home at Texas Tech</a></li>
             <li><a href="bullet-ad-team.php">Bullet Ad Team</a></li>
-            <li><a href="#">CoMC Debate Team</a></li>
+            <li><a href="comc-debate-team.php">CoMC Debate Team</a></li>
             <li><a href="former-ballerina.php">Former Ballerina Pirouettes to Texas Tech</a></li>
             <li><a href="#">A Day in the Life</a></li>
             <li><a href="#">M.A. Student Brings Guide Dog Raisers to Lubbock</a></li>

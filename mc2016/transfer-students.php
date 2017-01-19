@@ -15,6 +15,7 @@
 
     <body>
         <?php include 'includes/header-nav.php'; ?>
+
         <section class="transfer-students-header">
             <div class="grey-top-left-triangle-bg">
                 <div class="row">
@@ -61,6 +62,7 @@
                 </div>
             </div>
         </section>
+        
         <?php include 'includes/footer.php'; ?>
     </body>
 </html>

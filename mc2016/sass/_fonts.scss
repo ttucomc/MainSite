@@ -38,6 +38,16 @@
     src: url('../fonts/AvenirNext.ttc');
 }
 
+@font-face {
+    font-family: 'adobe-devanagari-bold-italic';
+    src: url('../fonts/AdobeDevanagari-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: 'adobe-devanagari-regular';
+    src: url('../fonts/AdobeDevanagari-Regular.otf');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -76,4 +86,14 @@
 
 .avenir-next {
     font-family: 'avenir-next';
+}
+
+.adobe-devanagari-bold-italic {
+    font-family: 'adobe-devanagari-bold-italic';
+    color: #000000;
+}
+
+.adobe-devanagari-regular {
+    font-family: 'adobe-devanagari-regular';
+    color: #000000;
 }
