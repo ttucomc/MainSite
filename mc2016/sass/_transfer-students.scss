@@ -3,31 +3,96 @@
     margin-top: 2rem;
     margin-bottom: 4rem;
 
+    .grey-top-left-triangle-bg {
+        position: relative;
+        width: 100%;
+    }
+
+    .grey-top-left-triangle-bg:before {
+        content: '';
+        position: absolute;
+        width: 121%;
+        height: 320%;
+        top: -177%;
+        left: -23%;
+        transform: rotate(46deg);
+        background-color: rgba(161, 161, 164, 0.5);
+        z-index: -1;
+    }
+
+    @media only screen and (min-width: 360px) {
+        .grey-top-left-triangle-bg:before {
+            top: -189%;
+        }
+    }
+
+    @media only screen and (min-width: 400px) {
+        .grey-top-left-triangle-bg:before {
+            width: 124%;
+            top: -193%;
+            left: -36%;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .grey-top-left-triangle-bg:before {
+            top: -185%;
+            transform: rotate(50deg);
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .grey-top-left-triangle-bg:before {
+            height: 405%;
+            top: -193%;
+            left: -69%;
+            transform: rotate(50deg);
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .grey-top-left-triangle-bg:before {
+            height: 576%;
+            width: 141%;
+            top: -417%;
+            left: -65%;
+        }
+    }
+
     h1 {
+        color: #0f243e;
+        text-transform: uppercase;
         font-size: 3.1rem;
         font-weight: 600;
         line-height: 1;
         text-align: justify;
         margin: 0 auto;
         width: 14rem;
+        z-index: 2;
     }
 
     h2 {
+        color: #d12229;
+        text-transform: uppercase;
         font-size: 2.6rem;
         font-weight: 600;
         line-height: 1;
         text-align: justify;
         margin: 0 auto;
         width: 14rem;
+        z-index: 2;
     }
 
     h3 {
+        color: #0f243e;
+        text-transform: uppercase;
         font-size: 1.8rem;
         font-weight: 600;
         line-height: 1;
         text-align: justify;
         margin: 0 auto;
         width: 14rem;
+        z-index: 2;
     }
 
     @media only screen and (min-width: 768px) {
@@ -48,18 +113,6 @@
         }
     }
 
-    h1, h3 {
-        color: #0f243e;
-        font-family: 'franklin-gothic-medium';
-        text-transform: uppercase;
-    }
-
-    h2 {
-        color: #d12229;
-        font-family: 'franklin-gothic-medium';
-        text-transform: uppercase;
-    }
-
     p {
         font-size: .5rem;
         text-align: right;
@@ -67,6 +120,7 @@
         line-height: 1;
         width: 14rem;
         padding-right: .4rem;
+        z-index: 2;
     }
 
     @media only screen and (min-width: 768px) {
@@ -81,7 +135,49 @@
 }
 
 .transfer-students-content {
+    .grey-bottom-right-triangle-bg {
+        position: relative;
+        width: 100%;
+    }
+
+    .grey-bottom-right-triangle-bg:before {
+        content: '';
+        position: absolute;
+        width: 217%;
+        height: 50%;
+        bottom: -20%;
+        right: -70%;
+        transform: rotate(46deg);
+        background-color: rgba(161, 161, 164, 0.5);
+        z-index: -1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .grey-bottom-right-triangle-bg:before {
+            right: -115%;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .grey-bottom-right-triangle-bg:before {
+            width: 242%;
+            height: 120%;
+            right: -168%;
+            bottom: -56%;
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        .grey-bottom-right-triangle-bg:before {
+            width: 231%;
+            height: 118%;
+            right: -168%;
+            bottom: -106%;
+        }
+    }
+
     img.transfer-students {
         margin-bottom: 1rem;
+        z-index: 2;
     }
 }

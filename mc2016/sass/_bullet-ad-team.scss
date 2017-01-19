@@ -40,11 +40,16 @@
     p.bullet-ad-intro-green-text {
         color: #a3c094;
         font-size: .82rem;
+
+        @media only screen and (min-width: 768px) {
+            font-size: .92rem;
+        }
     }
 
     p {
         @media only screen and (min-width: 768px) {
-            font-size: .7rem;
+            font-size: .83
+            rem;
         }
     }
 
