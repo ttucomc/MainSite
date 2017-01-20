@@ -11,6 +11,7 @@
         text-transform: uppercase;
         line-height: .9;
         font-size: 1.5rem;
+        margin-bottom: -.4rem;
     }
 
     @media only screen and (min-width: 768px) {
@@ -21,14 +22,80 @@
 
     h1.text-align-h1-center {
         text-align: center;
+        margin-bottom: .4rem;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .reduce-width-on-large-screens {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1.h1-letter-spacing-on-large-screens {
+            letter-spacing: 1px;
+        }
     }
 
     p.reduce-margin-p-top {
-        margin-top: -1rem;
+        margin-top: -.6rem;
     }
 
     .full-width-grey-bg {
         background-color: #d1d3d4;
-        padding: .5rem 0 0 0;
+        padding: 2rem 0 1rem 0;
+    }
+
+    p.debate-team-journalists {
+        line-height: 1;
+    }
+}
+
+.comc-debate-team-quote-with-pictures {
+
+    .quote {
+        position: relative;
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .quote {
+            margin: 0 auto;
+            width: 1200px;
+        }
+    }
+
+    .quotation-marks-bg {
+        // position: absolute;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        // z-index: -1;
+    }
+
+    .debate-team-coach-quote {
+        // position: absolute;
+        // z-index: 1;
+    }
+
+    img.quotation-mark {
+        width: 120px;
+    }
+
+    img.rotate-180-deg {
+        transform: rotate(180deg);
+    }
+
+    @media only screen and (min-width: 768px) {
+        img.quotation-mark {
+            width: 220px;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        img.quotation-mark {
+            width: 350px;
+        }
     }
 }
