@@ -48,6 +48,18 @@
     p.debate-team-journalists {
         line-height: 1;
     }
+
+    p.comc-debate-team-text-align-right {
+        text-align: right;
+
+        @media only screen and (min-width: 768px) {
+            font-size: .5rem;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            font-size: .7rem;
+        }
+    }
 }
 
 .comc-debate-team-quote-with-pictures {

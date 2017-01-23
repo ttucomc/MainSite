@@ -55,8 +55,15 @@
                         <p>Testerman noted that this season’s accomplishments have placed three teams from Texas Tech in the top 30 in the country.</p>
                         <p>The team concluded its competitive season in March by competing in two national championship parliamentary debate tournaments. In the National Parliamentary Tournament of Excellence, Testerman said Texas Tech had a “very impressive” 9-3 preliminary record and cleared to the fourth elimination round, earning them an 11th place finish, which was much higher than they were ranked.</p>
                         <p>Then, at the second tournament, the National Parliamentary Debate Association, Texas Tech competed against more than 160 teams. Testerman said the college’s senior team made it all the way to the quarterfinal round, placing them in the top eight teams in the nation. While most universities compete with at least four teams, Testerman noted that Texas Tech finished 18th overall in the nation with only two teams competing.</p>
-                        <p>“I am so proud of our debaters’ hard work and dedication to excellence,” Testerman said. “We had just about our best performance of the year at the most important time of year. Our seniors, Drew Hoffmaster and Dalton Richardson, really set an example for what Tech debate is aiming to be, excellent.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p></p>
+                        <p>“I am so proud of our debaters’ hard work and dedication to excellence,” Testerman said. “We had just about our best performance of the year at the most important time of year. Our seniors, Drew Hoffmaster and Dalton Richardson, really set an example for what Tech debate is aiming to be, excellent.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p>
                         <p class="debate-team-journalists"><small><em>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.) Jacob Copple graduated in 2015 with a Master of Arts degree in Mass Communications and in 2013 with a Bachelor of Arts degree in electronic media and communications.)</em></small></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-4 columns">
+                        <img src="images/debate-team-coach.jpg" alt="Debate Team coach">
+                        <p class="comc-debate-team-text-align-right"><em>Debate Team Coach Adam Testerman</em></p>
                     </div>
                 </div>
             </div>
