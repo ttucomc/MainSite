@@ -51,51 +51,90 @@
 }
 
 .comc-debate-team-quote-with-pictures {
-
-    .quote {
-        position: relative;
-        width: 100%;
-    }
+    margin-bottom: 1rem;
 
     @media only screen and (min-width: 1024px) {
-        .quote {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .quote-image {
+        position: relative;
+        width: 100%;
+
+        @media only screen and (min-width: 1024px) {
             margin: 0 auto;
-            width: 1200px;
+            max-width: 1100px;
         }
     }
 
-    .quotation-marks-bg {
-        // position: absolute;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+    figure.quotation-marks-bg {
+        position: relative;
+        max-height: 200px;
+        @media only screen and (min-width: 768px) {
+            max-height: 100%;
+        }
+        overflow: hidden;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        // z-index: -1;
     }
 
-    .debate-team-coach-quote {
-        // position: absolute;
-        // z-index: 1;
+    figure.debate-team-coach-quote {
+        position: absolute;
+        top: 50px;
+
+        @media only screen and (min-width: 768px) {
+            top: 25px;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            top: 0;
+        }
     }
 
     img.quotation-mark {
-        width: 120px;
+        width: 90px;
+
+        @media only screen and (min-width: 768px) {
+            width: 220px;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            width: 350px;
+        }
     }
 
     img.rotate-180-deg {
         transform: rotate(180deg);
     }
 
-    @media only screen and (min-width: 768px) {
-        img.quotation-mark {
-            width: 220px;
+    p {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: -3.2rem;
+        @media only screen and (min-width: 1024px) {
+            margin-top: 0;
         }
     }
+}
 
-    @media only screen and (min-width: 1024px) {
-        img.quotation-mark {
-            width: 350px;
+.comc-debate-team-bottom-pictures {
+    margin-bottom: 2rem;
+
+    img.comc-debate-team-Nellis-images {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        text-align: center;
+
+        em {
+            min-width: 1000px;
+        }
+
+        span.Nellis-text {
+            font-size: xx-small;
         }
     }
 }

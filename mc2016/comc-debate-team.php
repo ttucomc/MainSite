@@ -63,14 +63,34 @@
         </section>
 
         <section class="comc-debate-team-quote-with-pictures">
-            <div class="quote">
-                <div class="quotation-marks-bg">
+            <div class="quote-image">
+                <figure class="quotation-marks-bg">
                     <img class="quotation-mark" src="images/debate-team-quotation-mark.png" alt="Quotation Mark">
 
                     <img class="quotation-mark rotate-180-deg" src="images/debate-team-quotation-mark.png" alt="Quotation Mark 2">
-                </div>
-                <div class="debate-team-coach-quote">
+                </figure>
+
+                <figure class="debate-team-coach-quote">
                     <img src="images/debate-team-4.png" alt="Debate Team Quote">
+                </figure>
+            </div>
+            <p><em><small>-Adam Testerman</small></em></p>
+        </section>
+
+        <section class="comc-debate-team-bottom-pictures">
+            <div class="row">
+                <div class="large-6 columns">
+                    <img class="comc-debate-team-Nellis-images" src="images/debate-team-2.jpg" alt="Debate Team posing for picture.">
+                </div>
+
+                <div class="large-6 columns">
+                    <img class="comc-debate-team-Nellis-images" src="images/debate-team-3.jpg" alt="Debate Team having a discussion.">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <p><em><span class="Nellis-text">The 2015-2016 Debate Team welcomed former TTU President Duane Nellis as an honorary member.</span></em></p>
                 </div>
             </div>
         </section>
