@@ -48,6 +48,16 @@
     src: url('../fonts/AdobeDevanagari-Regular.otf');
 }
 
+@font-face {
+    font-family: 'charter-bt-pro-normal';
+    src: url('../fonts/CharterBTPro-normal.ttf');
+}
+
+@font-face {
+    font-family: 'charter-bt-pro-bold-italic';
+    src: url('../fonts/CharterBTPro-bold-italic.ttf');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -96,4 +106,12 @@
 .adobe-devanagari-regular {
     font-family: 'adobe-devanagari-regular';
     color: #000000;
+}
+
+.charter-bt-pro-normal {
+    font-family: 'charter-bt-pro-normal';
+}
+
+.charter-bt-pro-bold-italic {
+    font-family: 'charter-bt-pro-bold-italic';
 }

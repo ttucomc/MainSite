@@ -53,7 +53,7 @@
             <li><a href="#">From Assistant Dean Randy Reddick, Ph.D.</a></li>
             <li><a href="#">From Associate Dean Glenn Cummins, Ph.D.</a></li>
             <li><a href="#">From Director of Development Colleen Sisneros</a></li>
-            <li><a href="#">CoMC Becomes Home for New CTC</a></li>
+            <li><a href="training-center.php">CoMC Becomes Home for New CTC</a></li>
             <li><a href="#">Morris Lecture</a></li>
           </ul>
         </aside>
