@@ -20,6 +20,20 @@ p.david-perlmutter {
     margin-top: -1rem;
 }
 
+span.training-center-capital-T {
+    color: #c6161c;
+    float: left;
+    margin-top: -.6rem;
+    margin-bottom: -1.2rem;
+    padding-right: .2rem;
+    text-transform: capitalize;
+    font-size: 2.9em;
+
+    @media only screen and (min-width: 768px) {
+        margin-top: -.8rem;
+    }
+}
+
 span.training-center-red-text-and-uppercase {
     color: #c6161c;
     font-size: 1.2rem;
@@ -34,4 +48,22 @@ span.training-center-red-text-bold {
 hr.hr-training-center {
     border: 1px solid #c6161c;
     margin: .5rem 0 2rem 0;
+}
+
+section.training-center-luke-lefebvre-column {
+    background-color: #d0cfd2;
+
+    img.training-center-img-luke-lefebvre {
+        margin-top: 2rem;
+    }
+
+    h1.training-center-italic-bold-h1 {
+        font-size: 1.2rem;
+        padding-top: 1rem;
+        line-height: 1;
+        margin-bottom: -.4rem;
+        @media only screen and (min-width: 768px) {
+            font-size: 2.2rem;
+        }
+    }
 }

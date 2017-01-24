@@ -15,6 +15,7 @@
 
     <body>
         <?php include 'includes/header-nav.php'; ?>
+        
             <section class="training-center-header">
                 <div class="row">
                     <div class="large-12 columns">
@@ -33,7 +34,7 @@
             <section class="training-center-content">
                 <div class="row">
                     <div class="large-6 columns">
-                        <p>The Texas Tech University College of Media &amp; Communication launched the Communication Training Center in July as part of the university’s campus Quality Enhancement Plan.</p>
+                        <p><span class="training-center-capital-T charter-bt-pro-normal">T</span>he Texas Tech University College of Media &amp; Communication launched the Communication Training Center in July as part of the university’s campus Quality Enhancement Plan.</p>
                         <p>David Perlmutter, dean of the college, said that as one of the pillars of the campus QEP, the CTC will help increase the quality of various aspects of communication throughout the university and beyond.</p>
                         <p>“We hope to make a tremendous impact across campus for the improvement of visual and oral communication in teaching,” Perlmutter said, “as well as beyond in scholarly publishing, engaging nonacademic audiences, and generally in science and health communication.”</p>
                         <p>Lawrence Schovanec, Texas Tech president, agreed and said that CoMC’s role in creating the CTC will help with the new initiative to improve students’ communication skills and multicultural awareness.</p>
@@ -59,10 +60,21 @@
             </section>
             <hr class="hr-training-center">
 
-            <section>
+            <section class="training-center-luke-lefebvre-column">
                 <div class="row">
-                    <div class="large-9 large-offset-2 columns">
+                    <div class="large-9 large-offset-1 columns">
+                        <img class="training-center-img-luke-lefebvre" src="images/LukeLeFebvre.jpg" alt="Mr. Luke LeFebvre">
 
+                        <h1 class="charter-bt-pro-bold-italic training-center-italic-bold-h1">Meet CTC Director Luke LeFebvre</h1>
+                        <p><em><small>by Rachel Blevins</small></em></p>
+
+                        <p>The former director of communication labs at the College of Southern Nevada, Luke LeFebvre, joined the Texas Tech University College of Media & Communication as an assistant professor in communication studies and the director of the new Communication Training Center in July.</p>
+                        <p>LeFebvre said he pursued the position after he learned about it from a fellow colleague and read over the university’s Quality Enhancement Program and plans for creating the CTC.</p>
+                        <p>“I was extremely impressed with what Texas Tech had outlined for an unprecedented communication center,” LeFebvre said. “The vision and possibilities for collaboration across the institution, particularly with HSTEM (health, science, technology, engineering and math fields), as well as the potential to elevate and enhance the presence of communication centers nationally, is an impressive opportunity.”</p>
+                        <p>Serving as the director of communication labs at the College of Southern Nevada, where the three communication centers were awarded national certification for their training procedures, LeFebvre was awarded the National Communication Association Communication Center Section’s Von Till Award for Outstanding Newcomer in 2011.</p>
+                        <p>LeFebvre also directed the basic communication course at Iowa State University for the program in speech communication, where he managed 40 sections of the public speaking course each semester. His duties included training and mentoring 10 graduate teaching assistants and supervising five adjunct faculty members.</p>
+                        <p>LeFebvre said he hopes to see the CTC have a larger national impact by training, developing and certifying future graduate students as communication center directors.</p>
+                        <p>“Texas Tech has a unique opportunity and would be the first institution of higher education to offer such a certification program that would provide our graduates an advantage on the job market,” LeFebvre said. “I see the CTC becoming the hub and standard for the nation of what communication centers can offer to learners who want to improve and showcase their research through dynamic oral and visual communication.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p>
                     </div>
                 </div>
             </section>
