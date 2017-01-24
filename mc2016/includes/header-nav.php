@@ -40,7 +40,7 @@
             <li><a href="comc-debate-team.php">CoMC Debate Team</a></li>
             <li><a href="former-ballerina.php">Former Ballerina Pirouettes to Texas Tech</a></li>
             <li><a href="#">A Day in the Life</a></li>
-            <li><a href="#">M.A. Student Brings Guide Dog Raisers to Lubbock</a></li>
+            <li><a href="guide-dog-raisers.php">M.A. Student Brings Guide Dog Raisers to Lubbock</a></li>
             <li><a href="goal.php">GOAL: Media Strategies Major Drafted by Houston Dash</a></li>
             <li><a href="#">Journalism Major Interns with CNN Atlanta</a></li>
             <li><a href="#">EMC Major Attends CoMC After travels with Marine Corps</a></li>

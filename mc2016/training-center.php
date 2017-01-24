@@ -15,7 +15,7 @@
 
     <body>
         <?php include 'includes/header-nav.php'; ?>
-        
+
             <section class="training-center-header">
                 <div class="row">
                     <div class="large-12 columns">
@@ -63,7 +63,12 @@
             <section class="training-center-luke-lefebvre-column">
                 <div class="row">
                     <div class="large-9 large-offset-1 columns">
-                        <img class="training-center-img-luke-lefebvre" src="images/LukeLeFebvre.jpg" alt="Mr. Luke LeFebvre">
+                        <div class="training-center-image-with-text">
+                            <img class="training-center-img-luke-lefebvre" src="images/LukeLeFebvre.jpg" alt="Mr. Luke LeFebvre">
+
+                            <p class="p-luke-lefebvre-text"><em><small>Luke LeFebvre</small></em></p>
+                        </div>
+
 
                         <h1 class="charter-bt-pro-bold-italic training-center-italic-bold-h1">Meet CTC Director Luke LeFebvre</h1>
                         <p><em><small>by Rachel Blevins</small></em></p>

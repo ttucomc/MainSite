@@ -58,6 +58,11 @@
     src: url('../fonts/CharterBTPro-bold-italic.ttf');
 }
 
+@font-face {
+    font-family: 'bebas-neue';
+    src: url('../fonts/BebasNeue.otf');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -114,4 +119,8 @@
 
 .charter-bt-pro-bold-italic {
     font-family: 'charter-bt-pro-bold-italic';
+}
+
+.bebas-neue {
+    font-family: 'bebas-neue';
 }

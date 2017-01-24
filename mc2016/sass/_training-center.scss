@@ -53,8 +53,20 @@ hr.hr-training-center {
 section.training-center-luke-lefebvre-column {
     background-color: #d0cfd2;
 
-    img.training-center-img-luke-lefebvre {
-        margin-top: 2rem;
+    .training-center-image-with-text {
+        position: relative;
+        width: 100%;
+
+        img.training-center-img-luke-lefebvre {
+            margin-top: 2rem;
+        }
+
+        p.p-luke-lefebvre-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding-left: 1rem;
+        }
     }
 
     h1.training-center-italic-bold-h1 {
