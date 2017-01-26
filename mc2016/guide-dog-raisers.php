@@ -19,20 +19,22 @@
         <div class="guide-dog-raisers-container">
             <section class="guide-dog-raisers-header">
                 <div class="guide-dog-raisers-header-photos">
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <div class="guide-dog-raisers-image-with-text">
-                                <img class="fanta-photos" src="images/Fanta-10-months.jpg" alt="Fanta at 10 months">
+                    <div class="guide-dog-raisers-header-blue-paw-bg">
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <div class="guide-dog-raisers-image-with-text">
+                                    <img class="fanta-photos" src="images/Fanta-10-months.jpg" alt="Fanta at 10 months">
 
-                                <p class="guide-dog-raisers-image-with-text-p">Fanta</p>
+                                    <p class="guide-dog-raisers-image-with-text-p">Fanta</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="large-6 columns">
-                            <div class="guide-dog-raisers-image-with-text">
-                                <img class="fanta-photos" src="images/Fanta-Kaitlyn-8-weeks.jpg" alt="Fanta at 8 weeks">
+                            <div class="large-6 columns">
+                                <div class="guide-dog-raisers-image-with-text">
+                                    <img class="fanta-photos" src="images/Fanta-Kaitlyn-8-weeks.jpg" alt="Fanta at 8 weeks">
 
-                                <p class="guide-dog-raisers-image-with-text-p">Kaitlyn Beckert</p>
+                                    <p class="guide-dog-raisers-image-with-text-p">Kaitlyn Beckert</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -65,7 +67,7 @@
                     </div>
 
                     <div class="large-6 columns">
-                        <div class="guide-dog-raisers-image-with-text">
+                        <div class="guide-dog-raisers-image-with-text pink-paw-image">
                             <img class="guide-dog-raisers-content-group-photo" src="images/dog-raisers-group-photo.jpg" alt="Dog raisers group photo">
 
                             <p class="guide-dog-raisers-image-with-text-p-text-align-right-and-bottom">Training puppies Fanta and Brandy meet children at the Maxey Community Center's summer camp.</p>
@@ -82,7 +84,6 @@
                         <p><em><small>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas)</small></em></p>
                     </div>
                 </div>
-
             </section>
         </div>
 
