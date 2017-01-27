@@ -30,7 +30,7 @@
             <li><a href="forecasting-the-future.php">Forecasting the Future</a></li>
             <li><a href="journalism-alumnus.php">Journalism Alumnus Recognized by Texas Tech</a></li>
             <li><a href="eye-on-the-prize.php">Eye on the Prize</a></li>
-            <li><a href="#">Distinguished Alumna Rocognized by Texas Tech</a></li>
+            <li><a href="distinguished-alumna.php">Distinguished Alumna Rocognized by Texas Tech</a></li>
             <li><a href="#">Taking on the Entertainment Industry in TODAY's Climate</a></li>
             <li><a href="#">Alumnus Lands Job with Top Sports Marketing Firm</a></li>
             <li><a href="#">From Backstage to Center Stage</a></li>

@@ -1,0 +1,60 @@
+section.distinguished-alumna-header {
+    margin: 2rem 0 1rem 0;
+
+    img.distinguished-alumna-header-photos {
+        margin-bottom: 1rem;
+    }
+
+    .distinguished-alumna-header-image-with-text{
+        position: relative;
+
+        p.distinguished-alumna-header-image-with-text-p {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding-right: .5rem;
+            color: #ffffff;
+        }
+    }
+
+    h1.distinguished-alumna-header-h1 {
+        font-size: 1.7rem;
+        margin-bottom: -1rem;
+        @media only screen and (min-width: 768px) {
+            font-size: 3.7rem;
+            margin-bottom: -2rem;
+        }
+    }
+
+    h3.distinguished-alumna-header-h3 {
+        font-size: .9rem;
+        line-height: 1;
+        @media only screen and (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+        margin-bottom: -.3rem;
+    }
+}
+
+section.distinguished-alumna-content {
+    margin-bottom: 1rem;
+
+    p.distinguished-alumna-journalists {
+        line-height: 1;
+    }
+
+    img.distinguished-alumna-content-img {
+        margin-top: 1rem;
+    }
+
+    .distinguished-alumna-image-with-text {
+        position: relative;
+
+        p.distinguished-alumna-image-text-p {
+            position: absolute;
+            bottom: 0;
+            right: 1rem;
+            color: #ffffff;
+        }
+    }
+}

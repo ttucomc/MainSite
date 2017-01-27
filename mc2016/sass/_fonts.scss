@@ -63,6 +63,11 @@
     src: url('../fonts/BebasNeue.otf');
 }
 
+@font-face {
+    font-family: 'allura-regular';
+    src: url('../fonts/Allura-Regular.otf');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -124,4 +129,9 @@
 .bebas-neue {
     font-family: 'bebas-neue';
     color: #8864b8;
+}
+
+.allura-regular {
+    font-family: 'allura-regular';
+    color: #ceaa7a;
 }
