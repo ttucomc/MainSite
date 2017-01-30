@@ -24,6 +24,11 @@
 }
 
 @font-face {
+    font-family: 'franklin-gothic';
+    src: url('../fonts/FranklinGothic.ttf');
+}
+
+@font-face {
     font-family: 'franklin-gothic-medium';
     src: url('../fonts/FranklinGothicMedium.ttf');
 }
@@ -94,6 +99,10 @@
 .american-purpose {
     font-family: 'american-purpose';
     color: #fff;
+}
+
+.franklin-gothic {
+    font-family: 'franklin-gothic';
 }
 
 .franklin-gothic-medium {

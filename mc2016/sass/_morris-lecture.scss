@@ -1,0 +1,43 @@
+.morris-lecture-header {
+    margin: 2rem 0 2rem 0;
+
+    .morris-lecture-header-align-h1-h2-right {
+        text-align: right;
+        max-width: 500px;
+        margin: 0 auto -1.5rem auto;
+    }
+
+    h1.morris-lecture-header-h1 {
+        color: #0f243e;
+        font-size: 1.75rem;
+        margin-bottom: -.6rem;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 2.75rem;
+        }
+    }
+
+    h2.morris-lecture-header-h2 {
+        color: #0f243e;
+        font-size: 1.2rem;
+        line-height: 1;
+
+        @media only screen and (min-width: 425px) {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+
+    .morris-lecture-header-align-p-right {
+        max-width: 500px;
+        margin: 0 auto;
+
+        p {
+            text-align: right;
+            margin-top: -2rem;
+        }
+    }
+}
