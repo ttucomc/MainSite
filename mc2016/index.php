@@ -19,21 +19,21 @@
         <section class="main-section">
             <!-- MAIN CONTENT START -->
 			<div id="mc-header">
-				<div class="row">
-					<div class="large-6 columns">
-						<img src="images/MCLogo.png" alt="MC Logo" />
+				<div class="row logo-row">
+					<div class="large-6 columns logo">
+						mc
 					</div>
-					<div class="small-3 large-2 columns mc-header-border">
+					<div class="small-4 large-2 columns mc-header-border">
 						<br>
-						<p>CoMC Debate Team Excels with New Coach</p>
+						<p class="mc-header-p">CoMC Debate Team Excels with New Coach</p>
 					</div>
-					<div class="small-3 large-2 columns mc-header-border">
+					<div class="small-4 large-2 columns mc-header-border">
 						<br>
-						<p>CoMC Becomes Home for New Communication Training Center</p>
+						<p class="mc-header-p">CoMC Becomes Home for New Communication Training Center</p>
 					</div>
-					<div class="small-3 large-2 columns">
+					<div class="small-4 large-2 columns">
 						<br>
-						<p>EMC Major Attends CoMC After Travels with Marine Corps</p>
+						<p class="mc-header-p">EMC Major Attends CoMC After Travels with Marine Corps</p>
 					</div>
 				</div>
 				<div class="row">
@@ -49,8 +49,12 @@
 			</div>
         </section>
 
-        <section id="cover-photo">
-            <div class="row"></div>
+        <section class="mc2017-front-cover-photo">
+            <div class="row">
+                <div class="large-12 columns">
+                    <img src="images/COVERWORDART.png" alt="MC 2017 Cover">
+                </div>
+            </div>
         </section>
 
         <?php include 'includes/footer.php'; ?>
