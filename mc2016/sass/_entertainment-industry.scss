@@ -1,0 +1,133 @@
+.entertainment-industry-header {
+    margin-top: 1rem;
+
+    .entertainment-industry-header-img-with-text {
+        position: relative;
+        width: 100%;
+
+        p.entertainment-industry-header-img-p-text {
+            position: absolute;
+            bottom: -11px;
+            color: #2d3070;
+            background-color: rgba(241, 182, 108, 15);
+            width: 100%;
+            padding-left: .5rem;
+            opacity: 0.8;
+            border-radius: 2px;
+
+            @media only screen and (min-width: 375px) {
+                width: 89%;
+                margin-left: .95rem;
+            }
+
+            @media only screen and (min-width: 425px) {
+                width: 78%;
+                margin-left: 2.2rem;
+            }
+
+            @media only screen and (min-width: 768px) {
+                width: 68.5%;
+                margin-left: 5.8rem;
+                bottom: -15px;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                font-size: .6rem;
+                width: 100%;
+                bottom: -8px;
+                left: -116px;
+            }
+        }
+    }
+
+    .entertainment-industry-header-img {
+        margin-bottom: 1rem;
+        height: 350px;
+        width: 300px;
+
+        @media only screen and (min-width: 768px) {
+            height: 600px;
+            width: 500px;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            height: 350px;
+            width: 300px;
+        }
+    }
+
+    .entertainment-industry-header-title {
+        background-color: #2d3070;
+        padding: .5rem;
+        min-height: 20vh;
+
+        @media only screen and (min-width: 768px) {
+            min-height: 13vh;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            min-height: 14vh;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            min-height: 10vh;
+        }
+    }
+
+    .entertainment-industry-header-h1 {
+        text-transform: uppercase;
+        color: #f0b66b;
+        font-size: 1.4rem;
+        line-height: 1;
+        text-align: center;
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 2.4rem;
+        }
+
+        margin-bottom: -.6rem;
+
+        @media only screen and (min-width: 1440px) {
+            margin-bottom: -.8rem;
+        }
+
+        letter-spacing: 3px;
+    }
+
+    .entertainment-industry-bigger-h1 {
+        font-size: 1.8rem;
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 2.8rem;
+        }
+    }
+
+    .entertainment-industry-header-p {
+        color: #f0b66b;
+        text-align: center;
+    }
+}
+
+.entertainment-industry-content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .entertainment-industry-content-img-and-text {
+        @media only screen and (min-width: 1024px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .entertainment-industry-content-img-with-text {
+        position: relative;
+        margin-bottom: 1rem;
+
+        p.entertainment-industry-content-img-p-text {
+            position: absolute;
+            color: #ffe283;
+            padding-right: 1rem;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
