@@ -22,7 +22,7 @@
     if(isset($_POST["p_form"])) {
       /*---Variables-------------------------------------*/
       $college = 'College of Media & Communication';
-      $to = "aleesa.ross@ttu.edu, clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu, hannah.woodfin@ttu.edu";
+      $to = "clara.mckenney@ttu.edu, kuhrt.cowan@ttu.edu, hannah.woodfin@ttu.edu";
       $subject = 'Project Request Form';
       $name = strip_tags(trim($_POST['p_contact_name']));
       $email = filter_var($_POST['p_email'], FILTER_SANITIZE_EMAIL);
@@ -120,7 +120,7 @@
       /*---Variables-------------------------------------*/
 
       $college = 'College of Media & Communication';
-      $to = "aleesa.ross@ttu.edu, taryn.meixner@ttu.edu, kuhrt.cowan@ttu.edu";
+      $to = "todd.chambers@ttu.edu, clara.mckenney@ttu.edu, taryn.meixner@ttu.edu, kuhrt.cowan@ttu.edu";
       $subject = 'Sponsorship Request Form';
       $name = strip_tags(trim($_POST['e_contact_name']));
       $email = strip_tags(trim($_POST['e_mail']));
@@ -184,7 +184,7 @@
       /*---Email to Applicant-------------------------------------*/
 
   		$conf_headers = "From: " . $college . " <comc@ttu.edu>\r\n";
-  		$conf_headers .= "Reply-To: aleesa.ross@ttu.edu\r\n";
+  		$conf_headers .= "Reply-To: clara.mckenney@ttu.edu\r\n";
   		$conf_headers .= "MIME-Version: 1.0\r\n";
   		$conf_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
@@ -197,7 +197,7 @@
   		$conf_message .= '</div>';
   		$conf_message .= '<div width="100%">';
   		$conf_message .= "<p align=center>We will get back to you as soon as possible with an answer as to whether or not <strong>" . $eventName . "</strong> has been approved for sponsorship from the College of Media &amp; Communication</p>";
-  		$conf_message .= "<p align=center>To check in on your request please email <a href='mailto:aleesa.ross@ttu.edu'> Aleesa Ross</a>.";
+  		$conf_message .= "<p align=center>To check in on your request please email <a href='mailto:clara.mckenney@ttu.edu'> Clara McKenney</a>.";
   		$conf_message .= '</div>';
   		$conf_message .= '</body></html>';
 
@@ -210,11 +210,11 @@
 
   <h2>Thank You!</h2>
   <p>
-    We have received your request! If you have any questions or need anything else, please contact <a href="mailto:aleesa.ross@ttu.edu" class="mail">Aleesa Ross</a>.
+    We have received your request! If you have any questions or need anything else, please contact <a href="mailto:clara.mckenney@ttu.edu" class="mail">Clara McKenney</a>.
   </p>
 
   <?php if (isset($_POST["e_form"])): ?>
-    <p>Submission of this application does not guarantee approval of a sponsorship request. Your application will be reviewed by the sponsorship committee as soon as possible. Please contact <a href='mailto:aleesa.ross@ttu.edu'>Aleesa Ross</a> if you have any questions on your sponsorship request, or would like to check on the status of the request.</p>
+    <p>Submission of this application does not guarantee approval of a sponsorship request. Your application will be reviewed by the sponsorship committee as soon as possible. Please contact <a href='mailto:clara.mckenney@ttu.edu'>Clara McKenney</a> if you have any questions on your sponsorship request, or would like to check on the status of the request.</p>
   <?php endif; ?>
 
   <?php else: ?>
@@ -237,7 +237,7 @@
   <section id="forms">
 
     <p>
-      It is very helpful for us to have all information at least three weeks ahead of your project's deadline. Some projects will carry more clout and may put other projects on hold. We reserve the right to refuse a project if we do not have time to complete it with optimal quality. Contact <a href="mailto:aleesa.ross@ttu.edu" class="mail">Aleesa Ross</a> if you have any questions.
+      It is very helpful for us to have all information at least three weeks ahead of your project's deadline. Some projects will carry more clout and may put other projects on hold. We reserve the right to refuse a project if we do not have time to complete it with optimal quality. Contact <a href="mailto:clara.mckenney@ttu.edu" class="mail">Clara McKenney</a> if you have any questions.
     </p>
 
     <form id="project-request" method="post" class="ldpforms">

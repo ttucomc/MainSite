@@ -22,9 +22,12 @@
                         echo $movie['show_sponsor'];
                     } ?>
                   </p>
-                  <p>Time and Location: <?php if(!is_null($movie['show_time'])) { echo $show_time; } else { echo 'TBD'; } ?> - <?php if(!is_null($movie['show_location'])) { echo $movie['show_location']; } else { echo 'TBD'; } ?> (<a href="<?php echo $movie['show_directions']; ?>" target="_blank">directions</a>)</p>
+                  <p><strong>Time and Location:</strong> <?php if(!is_null($movie['show_time'])) { echo $show_time; } else { echo 'TBD'; } ?> - <?php if(!is_null($movie['show_location'])) { echo $movie['show_location']; } else { echo 'TBD'; } ?> (<a href="<?php echo $movie['show_directions']; ?>" target="_blank">directions</a>)</p>
                   <p>
-                    More info: <a href="<?php echo $movie['info']; ?>" class="external"><?php echo $movie['info']; ?></a>
+                    <strong>Price:</strong> <?php if(!is_null($movie['price'])) { echo '$' . $movie['price'] . '.00'; } else { echo 'Free Admission'; } ?>
+                  </p>
+                  <p>
+                    <strong>More info:</strong> <a href="<?php echo $movie['info']; ?>" class="external"><?php echo $movie['info']; ?></a>
                   </p>
                   <p>
                     <?php if (!is_null($movie['trailer'])) { ?>
