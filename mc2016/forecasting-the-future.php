@@ -141,7 +141,7 @@
                         at more than one place because you’ll get more connections
                         that way, and connections in the media industry are really
                         important. Also, don’t give up on your job search. It’s going to
-                        be tough at the beginning, but it will pay off!”
+                        be tough at the beginning, but it will pay off!”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span>
                     </p>
                     <p style="margin-bottom: 2em;"><em>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas)</em></p>
                     <img src="images/carly.jpg" alt="Carly Smith content photo">
