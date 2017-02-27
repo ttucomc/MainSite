@@ -65,6 +65,10 @@
     ga('create','UA-6015770-9' , 'ttu.edu',{'name': 'secondaryTracker'});
     ga('secondaryTracker.send', 'pageview');
   </script>
+  <script>
+    ga('create', 'UA-38109333-1', 'auto', 'comcTracker');
+    ga('comcTracker.send', 'pageview');
+  </script>
 
 </head>
 <body>

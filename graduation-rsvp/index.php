@@ -198,8 +198,8 @@ require_once('inc/db.php');
         </fieldset>
         <fieldset>
           <legend>Diploma Information</legend>
-          <label for="diplomaName">Diploma Name (<em>exaclty how you wish your name read on your diploma and at the ceremony</em>)</label>
-          <input type="text" name="diplomaName" id="diplomaName" />
+          <label for="diplomaName">Diploma Name (<strong><em><span style="color:#C00; display:inline-block;">exactly how you wish your name read on your diploma and at the ceremony</span></em></strong>)</label>
+          <input type="text" name="diplomaName" id="diplomaName" placeholder="Example: First Middle Last" />
           <br /><br />
           <label for="diplomaAddress">Diploma Address (<em>Cannot be a P.O. Box</em>):</label>
           <textarea name="diplomaAddress" id="diplomaAddress"></textarea>
