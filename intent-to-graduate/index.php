@@ -1,5 +1,4 @@
 <?php
-
 require_once('inc/config.php');
 require_once('inc/db.php');
 
@@ -7,37 +6,39 @@ require_once('inc/db.php');
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       // Captcha code
-    //   $gRecaptchaResponse = $_POST['g-recaptcha-response'];
-    //   require('/comc/includes/autoload.php');
-    //   $siteKey = '6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY';
-    //   $secret = '6Lc8LAsTAAAAAOHTC42UTYGN3JroKYT57uXiO8tO';
-    //   $recaptcha = new \ReCaptcha\ReCaptcha($secret, new \ReCaptcha\RequestMethod\SocketPost());
-    //   $resp = $recaptcha->verify($gRecaptchaResponse, $remoteIp);
+      $gRecaptchaResponse = $_POST['g-recaptcha-response'];
+      require('/comc/includes/autoload.php');
+      $siteKey = '6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY';
+      $secret = '6Lc8LAsTAAAAAOHTC42UTYGN3JroKYT57uXiO8tO';
+      $recaptcha = new \ReCaptcha\ReCaptcha($secret, new \ReCaptcha\RequestMethod\SocketPost());
+      $resp = $recaptcha->verify($gRecaptchaResponse, $remoteIp);
 
       // If captcha is successful
-    //   if ($resp->isSuccess()) {
+      if ($resp->isSuccess()) {
 
         /*---Variables-------------------------------------*/
-        // Graduate's Information
+        // Graduation Information
         $firstName = trim($_POST['firstName']);
+        $middleName = trim($_POST['middleName']);
         $lastName = trim($_POST['lastName']);
         $rNumber = $_POST['rNumber'];
         $email = trim($_POST['email']);
-        $hometown = trim($_POST['hometown']);
-        $major = trim($_POST['major']);
-        $major2 = trim($_POST['major2']);
+        $phone = trim($_POST['phoneNumber']);
+        $gender = $_POST['gender'];
+        $graduationMonth = $_POST['graduationMonth'];
+        $graduationYear = $_POST['graduationYear'];
+        $major = $_POST['major'];
         $minor = trim($_POST['minor']);
-
-        // Graduation Information
-        $graduationDate = $_POST['gradDate'];
-        $attendingCeremony = $_POST['attendingCeremony'];
-        $commencementPermission = $_POST['commencementPermission'];
-        $receptionNumber = $_POST['receptionNumber'];
-
-        // Diploma Information
-        $diplomaName = trim($_POST['diplomaName']);
-        $diplomaAddress = htmlspecialchars($_POST['diplomaAddress']);
-        $jobLinedUp = $_POST['jobLinedUp'];
+        $concentration = trim($_POST['concentration']);
+        $diplomaAddress = trim($_POST['diplomaAddress']);
+        $diplomaCity = trim($_POST['diplomaCity']);
+        $diplomaState = trim($_POST['diplomaState']);
+        $diplomaZip = $_POST['diplomaZip'];
+        $localAddress = trim($_POST['localAddress']);
+        $localCity = trim($_POST['localCity']);
+        $localState = trim($_POST['localState']);
+        $localZip = $_POST['localZip'];
+        $hometown = trim($_POST['hometown']);
 
 
 
@@ -45,28 +46,35 @@ require_once('inc/db.php');
         try {
           // Info for graduate
           $stmt = $db->prepare("
-                                INSERT INTO graduation_rsvp (graduation_date, r_number, first_name, last_name, email, major, major2, minor, hometown, reception_number_attending, attending_ceremony, commencement_permission, diploma_name, diploma_address, job_lined_up)
-                                VALUES (:graduation_date, :r_number, :first_name, :last_name, :email, :major, :major2, :minor, :hometown, :reception_number_attending, :attending_ceremony, :commencement_permission, :diploma_name, :diploma_address, :job_lined_up)
+                                INSERT INTO intent_to_graduate (first_name, middle_name, last_name, r_number, email, cellphone_number, gender, graduation_month, graduation_year, major, minor, concentration, mailing_address, mailing_city, mailing_state, mailing_zipcode, local_address, local_city, local_state, local_zipcode, hometown)
+                                VALUES (:first_name, :middle_name, :last_name, :r_number, :email, :cellphone_number, :gender, :graduation_month, :graduation_year, :major, :minor, :concentration, :mailing_address, :mailing_city, :mailing_state, :mailing_zipcode, :local_address, :local_city, :local_state, :local_zipcode, :hometown)
                               ");
-          $stmt->bindParam(':graduation_date', $graduationDate, PDO::PARAM_STR);
-          $stmt->bindParam(':r_number', $rNumber, PDO::PARAM_INT);
+
           $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
+          $stmt->bindParam(':middle_name', $middleName, PDO::PARAM_STR);
           $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
+          $stmt->bindParam(':r_number', $rNumber, PDO::PARAM_INT);
           $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+          $stmt->bindParam(':cellphone_number', $phone, PDO::PARAM_INT);
+          $stmt->bindParam(':gender', $gender, PDO::PARAM_STR);
+          $stmt->bindParam(':graduation_month', $graduationMonth, PDO::PARAM_INT);
+          $stmt->bindParam(':graduation_year', $graduationYear, PDO::PARAM_INT);
           $stmt->bindParam(':major', $major, PDO::PARAM_STR);
-          $stmt->bindParam(':major2', $major2, PDO::PARAM_STR);
           $stmt->bindParam(':minor', $minor, PDO::PARAM_STR);
+          $stmt->bindParam(':concentration', $concentration, PDO::PARAM_STR);
+          $stmt->bindParam(':mailing_address', $diplomaAddress, PDO::PARAM_STR);
+          $stmt->bindParam(':mailing_city', $diplomaCity, PDO::PARAM_STR);
+          $stmt->bindParam(':mailing_state', $diplomaState, PDO::PARAM_STR);
+          $stmt->bindParam(':mailing_zipcode', $diplomaZip, PDO::PARAM_INT);
+          $stmt->bindParam(':local_address', $localAddress, PDO::PARAM_STR);
+          $stmt->bindParam(':local_city', $localCity, PDO::PARAM_STR);
+          $stmt->bindParam(':local_state', $localState, PDO::PARAM_STR);
+          $stmt->bindParam(':local_zipcode', $localZip, PDO::PARAM_INT);
           $stmt->bindParam(':hometown', $hometown, PDO::PARAM_STR);
-          $stmt->bindParam(':reception_number_attending', $receptionNumber, PDO::PARAM_INT);
-          $stmt->bindParam(':attending_ceremony', $attendingCeremony, PDO::PARAM_INT);
-          $stmt->bindParam(':commencement_permission', $commencementPermission, PDO::PARAM_INT);
-          $stmt->bindParam(':diploma_name', $diplomaName, PDO::PARAM_STR);
-          $stmt->bindParam(':diploma_address', $diplomaAddress, PDO::PARAM_STR);
-          $stmt->bindParam(':job_lined_up', $jobLinedUp, PDO::PARAM_INT);
           $stmt->execute();
 
         } catch (Exception $e) {
-          echo "Couldn't add information into database. ", $e->getMessage(), "\n";
+          echo "Couldn't add information into database.\n";
           exit();
         }
 
@@ -80,25 +88,23 @@ require_once('inc/db.php');
 
         $to = "julia.heard@ttu.edu";
 
-        $subject = "Graduation RSVP";
+        $subject = "Intent to Graduate";
 
         // Message
         $message = '<html><body>';
         $message .= '<table width="100%" cellpadding="10">';
-        $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " Graduation RSVP</h1></td></tr>";
+        $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $middleName . " " . $lastName . "</h1><br /><h2>Intent to Graduate</h2></td></tr>";
         $message .= "<tr style='background: #EEEEEE;'><td><strong>R Number:</strong></td><td>" . $rNumber . "</td></tr>";
-        $message .= "<tr><td><strong>Non-TTU Email:</strong></td><td>" . $email . "</td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>Hometown:</strong></td><td>" . $hometown . "</td></tr>";
+        $message .= "<tr><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
+        $message .= "<tr style='background: #EEEEEE;'><td><strong>Cellphone Number:</strong></td><td>" . $phone . "</td></tr>";
+        $message .= "<tr><td><strong>Gender:</strong></td><td>" . $gender . "</td></tr>";
+        $message .= "<tr style='background: #EEEEEE;'><td><strong>Graduation Date:</strong></td><td>" . $graduationMonth . "/" . $graduationYear . "</td></tr>";
         $message .= "<tr><td><strong>Major:</strong></td><td>" . $major . "</td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>2nd Major:</strong></td><td>" . $major2 . "</td></tr>";
-        $message .= "<tr><td><strong>Minor:</strong></td><td>" . $minor . "</td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>Graduation Date:</strong></td><td>" . $graduationDate . "</td></tr>";
-        $message .= "<tr><td><strong>Attending Commencement:</strong></td><td>" . (($attendingCeremony == 1) ? 'Yes' : 'No') . "</td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>Ceremony Permission:</strong></td><td>" . (($commencementPermission == 1) ? 'Yes' : 'No') . "</td></tr>";
-        $message .= "<tr><td><strong>Number Attending Reception:</strong></td><td>" . $receptionNumber . "</td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>Diploma Name:</strong></td><td>" . $diplomaName . "</td></tr>";
-        $message .= "<tr><td><strong>Diploma Address:</strong></td><td>" . nl2br($diplomaAddress) . "</td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>Has a job lined up:</strong></td><td>" . (($jobLinedUp == 1) ? 'Yes' : 'No') . "</td></tr>";
+        $message .= "<tr style='background: #EEEEEE;'><td><strong>Minor:</strong></td><td>" . $minor . "</td></tr>";
+        $message .= "<tr><td><strong>Concentration:</strong></td><td>" . $concentration . "</td></tr>";
+        $message .= "<tr style='background: #EEEEEE;'><td><strong>Mailing Address:</strong></td><td>" . $diplomaAddress . "<br />" . $diplomaCity . ", " . $diplomaState . " " . $diplomaZip . "</td></tr>";
+        $message .= "<tr><td><strong>Local Address:</strong></td><td>" . $localAddress . "<br />" . $localCity . ", " . $localState . " " . $localZip . "</td></tr>";
+        $message .= "<tr style='background: #EEEEEE;'><td><strong>Hometown:</strong></td><td>" . $hometown . "</td></tr>";
         $message .= "</table>";
         $message .= "</body></html>";
 
@@ -113,42 +119,42 @@ require_once('inc/db.php');
         $conf_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
         $conf_to = $email;
-        $conf_subject = "Graduation RSVP Confirmation";
+        $conf_subject = "Intent to Graduate Confirmation";
 
         // Message
         $conf_message = '<html><body>';
         $conf_message .= '<table width="100%" cellpadding="10">';
-        $conf_message .= "<tr style='background: #CC0000; color: #FFFFFF'><td><h1 style='color:#FFFFFF; text-align:center;'>RSVP Confirmation For Graduation</h1></td></tr>";
-        $conf_message .= "<tr style='text-align:center;'><td><p>We have received your RSVP. If you have any questions or need to change anything on your RSVP, please email Julia Heard at <a href='mailto:julia.heard@ttu.edu'>julia.heard@ttu.edu</a>. Thank you!</p></td></tr>";
+        $conf_message .= "<tr style='background: #CC0000; color: #FFFFFF'><td><h1 style='color:#FFFFFF; text-align:center;'>Intent to Graduate Confirmation</h1></td></tr>";
+        $conf_message .= "<tr style='text-align:center;'><td><p>We have received your Intent to Graduate from CoMC. If you have any questions or need to change anything, please email Julia Heard at <a href='mailto:julia.heard@ttu.edu'>julia.heard@ttu.edu</a>. Thank you!</p></td></tr>";
         $conf_message .= "</table>";
         $conf_message .= "</body></html>";
 
         // Send Message
         mail($conf_to, $conf_subject, $conf_message, $conf_headers);
       ?>
-    <h2 style="text-align: center; width: 100%;">We have recieved your rsvp!</h2>
+    <h2 style="text-align: center; width: 100%;">We have recieved your Intent to Graduate!</h2>
     <p style="text-align: center;">You will recieve a confirmation email shortly. If you have any questions in the mean time, please email Julia Heard at <a href="mailto:julia.heard@ttu.edu">julia.heard@ttu.edu</a>. Thank you!</p>
     <?php
 
-        // } else {
-        //   echo "<h1>Bummer! Something went wrong.</h1>";
-        //   $errors = $resp->getErrorCodes();
-        //   if (in_array("missing-input-response", $errors)) {
-        //     echo "<p>Please complete and verify the captcha at the bottom of the form to get your message to send.<br><br><a href=\"sponsor.php\">Go Back</a></p>";
-        //   } else {
-        //     echo "<p>I'm so sorry, the problem is on our side. Please try again! If you get this message again, please copy the error codes below and email it to our <a href=\"mailto:kuhrt.cowan@ttu.edu\">webmaster</a> along with your message and we will get it taken care of. Sorry for the inconvenience!</p><strong>Errors:</strong><br><ul>";
-        //     foreach ($errors as $error) {
-        //       echo "<li>" . $error . "</li>";
-        //     }
-        //     echo "</ul>";
-        //   }
-        //   exit();
-        // }
+        } else {
+          echo "<h1>Bummer! Something went wrong.</h1>";
+          $errors = $resp->getErrorCodes();
+          if (in_array("missing-input-response", $errors)) {
+            echo "<p>Please complete and verify the captcha at the bottom of the form to get your message to send.<br><br><a href=\"sponsor.php\">Go Back</a></p>";
+          } else {
+            echo "<p>I'm so sorry, the problem is on our side. Please try again! If you get this message again, please copy the error codes below and email it to our <a href=\"mailto:kuhrt.cowan@ttu.edu\">webmaster</a> along with your message and we will get it taken care of. Sorry for the inconvenience!</p><strong>Errors:</strong><br><ul>";
+            foreach ($errors as $error) {
+              echo "<li>" . $error . "</li>";
+            }
+            echo "</ul>";
+          }
+          exit();
+        }
 
       } else { // This closes if request is POST statement
 
   ?>
-
+    <h2>Bachelor of Arts</h2>
     <?php echo '<form class="ldpforms" method="post" action="' . $_SERVER['PHP_SELF'] . '">'; ?>
         <fieldset>
           <legend>
@@ -169,7 +175,7 @@ require_once('inc/db.php');
           <br />
           <br />
           <label for="phoneNumber">Cell Phone Number:</label>
-          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Format: 123-456-7890" />
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" />
           <br />
           <br />
           <label for="gender">Gender</label>
@@ -182,8 +188,8 @@ require_once('inc/db.php');
           <br />
           <label for="graduationMonth">Graduation Date:</label>
           <select id="graduationMonth" name="graduationMonth">
-            <option value=''>--Select Month--</option>
-            <option selected value='1'>Janaury</option>
+            <option value=''>-- Select Month --</option>
+            <option value='1'>Janaury</option>
             <option value='2'>February</option>
             <option value='3'>March</option>
             <option value='4'>April</option>
@@ -196,9 +202,22 @@ require_once('inc/db.php');
             <option value='11'>November</option>
             <option value='12'>December</option>
           </select>
-          <select id="graduationYear" name="graduationYear">
-              <?php  ?>
-          </select>
+          <?php
+          echo "<select id=\"graduationYear\" name=\"graduationYear\">";
+            echo "<option value=\"\">-- Select Year --</option>";
+            $i = 0;
+            while ($i < 4) {
+              $year = date('Y');
+              $year += $i;
+
+              echo "<option value=\"" . $year . "\">" . $year . "</option>";
+
+              $i++;
+            }
+          echo "</select>";
+          ?>
+          <br />
+          <br />
           <label for="major">Major:</label>
           <select id="major" name="major" required="required">
               <option value="">-- Please Select --</option>
@@ -232,10 +251,6 @@ require_once('inc/db.php');
           <input type="number" id="diplomaZip" name="diplomaZip" required="required" />
           <br />
           <br />
-          <label for="hometown">Hometown (<em>For Commencement Program</em>):</label>
-          <input type="text" id="hometown" name="hometown" />
-          <br />
-          <br />
           <label for="localAddress">Local Address:</label>
           <input type="text" id="localAddress" name="localAddress" />
           <br />
@@ -247,10 +262,13 @@ require_once('inc/db.php');
           <br />
           <label for="localZip">Zipcode:</label>
           <input type="number" id="localZip" name="localZip" />
-
+          <br />
+          <br />
+          <label for="hometown">Hometown (<em>For Commencement Program</em>):</label>
+          <input type="text" id="hometown" name="hometown" />
         </fieldset>
 
-      <!-- <div class="g-recaptcha" data-sitekey="6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY"></div> -->
+      <div class="g-recaptcha" data-sitekey="6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY"></div>
       <input class="button" type="submit" value="submit" />
       <div class="form-loader"></div>
     <?php echo '</form>'; ?>
