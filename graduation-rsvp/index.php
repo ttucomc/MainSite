@@ -37,7 +37,11 @@ require_once('inc/db.php');
         // Diploma Information
         $diplomaName = trim($_POST['diplomaName']);
         $diplomaAddress = htmlspecialchars($_POST['diplomaAddress']);
+
+        // Future Plans
+        $gradSchool = $_POST['gradSchool'];
         $jobLinedUp = $_POST['jobLinedUp'];
+        $jobDescription = trim($_POST['jobDescription']);
 
 
 
@@ -45,8 +49,8 @@ require_once('inc/db.php');
         try {
           // Info for graduate
           $stmt = $db->prepare("
-                                INSERT INTO graduation_rsvp (graduation_date, r_number, first_name, last_name, email, major, major2, minor, hometown, reception_number_attending, attending_ceremony, commencement_permission, diploma_name, diploma_address, job_lined_up)
-                                VALUES (:graduation_date, :r_number, :first_name, :last_name, :email, :major, :major2, :minor, :hometown, :reception_number_attending, :attending_ceremony, :commencement_permission, :diploma_name, :diploma_address, :job_lined_up)
+                                INSERT INTO graduation_rsvp (graduation_date, r_number, first_name, last_name, email, major, major2, minor, hometown, attending_ceremony, commencement_permission, diploma_name, diploma_address, grad_school, job_lined_up, job_description)
+                                VALUES (:graduation_date, :r_number, :first_name, :last_name, :email, :major, :major2, :minor, :hometown, :attending_ceremony, :commencement_permission, :diploma_name, :diploma_address, :grad_school, :job_lined_up, :job_description)
                               ");
           $stmt->bindParam(':graduation_date', $graduationDate, PDO::PARAM_STR);
           $stmt->bindParam(':r_number', $rNumber, PDO::PARAM_INT);
@@ -57,12 +61,13 @@ require_once('inc/db.php');
           $stmt->bindParam(':major2', $major2, PDO::PARAM_STR);
           $stmt->bindParam(':minor', $minor, PDO::PARAM_STR);
           $stmt->bindParam(':hometown', $hometown, PDO::PARAM_STR);
-          $stmt->bindParam(':reception_number_attending', $receptionNumber, PDO::PARAM_INT);
           $stmt->bindParam(':attending_ceremony', $attendingCeremony, PDO::PARAM_INT);
           $stmt->bindParam(':commencement_permission', $commencementPermission, PDO::PARAM_INT);
           $stmt->bindParam(':diploma_name', $diplomaName, PDO::PARAM_STR);
           $stmt->bindParam(':diploma_address', $diplomaAddress, PDO::PARAM_STR);
+          $stmt->bindParam(':grad_school', $gradSchool, PDO::PARAM_INT);
           $stmt->bindParam(':job_lined_up', $jobLinedUp, PDO::PARAM_INT);
+          $stmt->bindParam(':job_description', $jobDescription, PDO::PARAM_STR);
           $stmt->execute();
 
         } catch (Exception $e) {
@@ -86,7 +91,7 @@ require_once('inc/db.php');
         $message = '<html><body>';
         $message .= '<table width="100%" cellpadding="10">';
         $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $lastName . " Graduation RSVP</h1></td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>R Number:</strong></td><td>" . $rNumber . "</td></tr>";
+        $message .= "<tr style='background: #EEEEEE;'><td><strong>R Number:</strong></td><td>R" . $rNumber . "</td></tr>";
         $message .= "<tr><td><strong>Non-TTU Email:</strong></td><td>" . $email . "</td></tr>";
         $message .= "<tr style='background: #EEEEEE;'><td><strong>Hometown:</strong></td><td>" . $hometown . "</td></tr>";
         $message .= "<tr><td><strong>Major:</strong></td><td>" . $major . "</td></tr>";
@@ -95,10 +100,11 @@ require_once('inc/db.php');
         $message .= "<tr style='background: #EEEEEE;'><td><strong>Graduation Date:</strong></td><td>" . $graduationDate . "</td></tr>";
         $message .= "<tr><td><strong>Attending Commencement:</strong></td><td>" . (($attendingCeremony == 1) ? 'Yes' : 'No') . "</td></tr>";
         $message .= "<tr style='background: #EEEEEE;'><td><strong>Ceremony Permission:</strong></td><td>" . (($commencementPermission == 1) ? 'Yes' : 'No') . "</td></tr>";
-        $message .= "<tr><td><strong>Number Attending Reception:</strong></td><td>" . $receptionNumber . "</td></tr>";
-        $message .= "<tr style='background: #EEEEEE;'><td><strong>Diploma Name:</strong></td><td>" . $diplomaName . "</td></tr>";
-        $message .= "<tr><td><strong>Diploma Address:</strong></td><td>" . nl2br($diplomaAddress) . "</td></tr>";
+        $message .= "<tr><td><strong>Diploma Name:</strong></td><td>" . $diplomaName . "</td></tr>";
+        $message .= "<tr style='background: #EEEEEE;'><td><strong>Diploma Address:</strong></td><td>" . nl2br($diplomaAddress) . "</td></tr>";
+        $message .= "<tr><td><strong>Grad School:</strong></td><td>" . (($gradSchool == 1) ? 'Yes' : 'No') . "</td></tr>";
         $message .= "<tr style='background: #EEEEEE;'><td><strong>Has a job lined up:</strong></td><td>" . (($jobLinedUp == 1) ? 'Yes' : 'No') . "</td></tr>";
+        $message .= "<tr><td><strong>Job title/company:</strong></td><td>" . $jobDescription . "</td></tr>";
         $message .= "</table>";
         $message .= "</body></html>";
 
@@ -166,7 +172,15 @@ require_once('inc/db.php');
           <input type="text" id="hometown" name="hometown" />
           <br /><br />
           <label for="major">Major:</label>
-          <input type="text" id="major" name="major" required="required" />
+          <select id="major" name="major" required="required">
+              <option value="">-- Please Select --</option>
+              <option value="Advertising">Advertising</option>
+              <option value="Communication Studies">Communication Studies</option>
+              <option value="Electronic Media and Communications">Electronic Media and Communications</option>
+              <option value="Journalism">Journalism</option>
+              <option value="Media Strategies">Media Strategies</option>
+              <option value="Public Relations">Public Relations</option>
+          </select>
           <br /><br />
           <label for="major2">2nd Major (<em>If applicable</em>):</label>
           <input type="text" id="major2" name="major2" />
@@ -180,8 +194,10 @@ require_once('inc/db.php');
           <?php echo "<select name=\"gradDate\" id=\"gradDate\" required>"; ?>
             <?php echo "<option value=\"\">-- Please Select --</option>"; ?>
             <?php echo "<option value=\"Spring " . date('Y') . "\">Spring " . date('Y') . "</option>"; ?>
+            <?php echo "<option value=\"Summer " . date('Y') . "\">Summer " . date('Y') . "</option>"; ?>
             <?php echo "<option value=\"Fall " . date('Y') . "\">Fall " . date('Y') . "</option>"; ?>
             <?php echo "<option value=\"Spring " . date('Y', strtotime('+1 year')) . "\">Spring " . date('Y', strtotime('+1 year')) . "</option>"; ?>
+            <?php echo "<option value=\"Summer " . date('Y', strtotime('+1 year')) . "\">Summer " . date('Y', strtotime('+1 year')) . "</option>"; ?>
             <?php echo "<option value=\"Fall " . date('Y', strtotime('+1 year')) . "\">Fall " . date('Y', strtotime('+1 year')) . "</option>"; ?>
           <?php echo "</select>"; ?>
           <br /><br />
@@ -192,9 +208,6 @@ require_once('inc/db.php');
           <label for="commencementPermission">Do you give permission for your name and hometown to appear in the commencement program?</label>
           <input type="radio" name="commencementPermission" value="1" checked /> Yes<br />
           <input type="radio" name="commencementPermission" value="0" /> No
-          <br /><br />
-          <label for="receptionNumber">Estimated number of family/friends attending the reception immediately following the University Commencement ceremony (<em>include yourself in the number</em>):</label>
-          <input type="number" name="receptionNumber" id="receptionNumber" />
         </fieldset>
         <fieldset>
           <legend>Diploma Information</legend>
@@ -203,10 +216,19 @@ require_once('inc/db.php');
           <br /><br />
           <label for="diplomaAddress">Diploma Address (<em>Cannot be a P.O. Box</em>):</label>
           <textarea name="diplomaAddress" id="diplomaAddress"></textarea>
-          <br /><br />
-          <label>Do you have a job lined up?</label>
-          <label for="jobYes"><input type="radio" name="jobLinedUp" id="jobYes" value="1" /> Yes</label>
-          <label for="jobNo"><input type="radio" name="jobLinedUp" id="jobNo" value="0" /> No</label>
+        </fieldset>
+        <fieldset>
+            <legend>Future Plans</legend>
+            <label>Are you going on to grad school?</label>
+            <label for="gradYes"><input type="radio" name="gradSchool" id="gradYes" value="1" /> Yes</label>
+            <label for="gradNo"><input type="radio" name="gradSchool" id="gradNo" value="0" /> No</label>
+            <br />
+            <br />
+            <label>Do you have a job lined up?</label>
+            <label for="jobYes"><input type="radio" name="jobLinedUp" id="jobYes" value="1" /> Yes</label>
+            <label for="jobNo"><input type="radio" name="jobLinedUp" id="jobNo" value="0" /> No</label>
+            <label for="jobDescription">If so, where?</label>
+            <input type="text" name="jobDescription" id="jobDescription" placeholder="Title and Company">
         </fieldset>
 
       <div class="g-recaptcha" data-sitekey="6Lc8LAsTAAAAAL6lEJwvfn41TY3aFliMRkdZ4QvY"></div>

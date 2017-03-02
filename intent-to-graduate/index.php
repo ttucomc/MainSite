@@ -86,14 +86,42 @@ require_once('inc/db.php');
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-        $to = "julia.heard@ttu.edu";
+        switch ($major) {
+            case 'Advertising':
+                $to = "carly.carthel@ttu.edu";
+                break;
+
+            case 'Communication Studies':
+                $to = "judy.poffenbarger@ttu.edu";
+                break;
+
+            case 'Electronic Media and Communications':
+                $to = "donald.ellis@ttu.edu";
+                break;
+
+            case 'Journalism':
+                $to = "heath.tolleson@ttu.edu";
+                break;
+
+            case 'Media Strategies':
+                $to = "rose.cruz@ttu.edu";
+                break;
+
+            case 'Public Relations':
+                $to = "kim.bergan@ttu.edu";
+                break;
+
+            default:
+                $to = "julia.heard@ttu.edu";
+                break;
+        }
 
         $subject = "Intent to Graduate";
 
         // Message
         $message = '<html><body>';
         $message .= '<table width="100%" cellpadding="10">';
-        $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $middleName . " " . $lastName . "</h1><br /><h2>Intent to Graduate</h2></td></tr>";
+        $message .= "<tr style='background: #CC0000; color: #FFFFFF'><td colspan='2'><h1 style='color: #FFFFFF;'>" . $firstName . " " . $middleName . " " . $lastName . "</h1><h2>Intent to Graduate</h2></td></tr>";
         $message .= "<tr style='background: #EEEEEE;'><td><strong>R Number:</strong></td><td>" . $rNumber . "</td></tr>";
         $message .= "<tr><td><strong>Email:</strong></td><td>" . $email . "</td></tr>";
         $message .= "<tr style='background: #EEEEEE;'><td><strong>Cellphone Number:</strong></td><td>" . $phone . "</td></tr>";
@@ -114,7 +142,7 @@ require_once('inc/db.php');
 
         /*---Email to Graduate-------------------------------------*/
         $conf_headers = "From: The College of Media & Communication <comc@ttu.edu>\r\n";
-        $conf_headers .= "Reply-To: Julia Heard <julia.heard@ttu.edu>\r\n";
+        $conf_headers .= "Reply-To: College of Media & Communication <" . $to . ">\r\n";
         $conf_headers .= "MIME-Version: 1.0\r\n";
         $conf_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
@@ -189,17 +217,8 @@ require_once('inc/db.php');
           <label for="graduationMonth">Graduation Date:</label>
           <select id="graduationMonth" name="graduationMonth">
             <option value=''>-- Select Month --</option>
-            <option value='1'>Janaury</option>
-            <option value='2'>February</option>
-            <option value='3'>March</option>
-            <option value='4'>April</option>
             <option value='5'>May</option>
-            <option value='6'>June</option>
-            <option value='7'>July</option>
             <option value='8'>August</option>
-            <option value='9'>September</option>
-            <option value='10'>October</option>
-            <option value='11'>November</option>
             <option value='12'>December</option>
           </select>
           <?php

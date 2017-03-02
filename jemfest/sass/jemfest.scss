@@ -7,7 +7,8 @@ body {
   position: relative;
   background-color: $white;
   background-image: url("../img/absurdity.png");
-  font-family: 'champagne-limousines', Helvetica, Arial, sans-serif;
+  font-family: Nunito;
+  font-weight: normal;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -17,7 +18,24 @@ h2,
 h3,
 h4 {
   color: $black;
+  font-family: 'chosence', Helvetica, Arial, sans-serif;
   font-weight: bold;
+}
+
+h1 {
+    color: $red;
+    font-size: 2.125em;
+    border-bottom: 4px dashed $green;
+    @media screen and (min-width: 768px) {
+        font-size: 2.75em;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 3em;
+    }
+
+    span {
+        color: $darkRed;
+    }
 }
 
 h2 {
@@ -28,10 +46,16 @@ h2 {
   }
 }
 
+p {
+    @media screen and (min-width: 768px) {
+        font-size: .75em;
+    }
+}
+
 .button {
   position: relative;
   display: block;
-  background-color: $blue;
+  background-color: $green;
   color: $white;
   font-size: .75em;
   text-decoration: none;
@@ -88,11 +112,13 @@ section {
     }
   }
   .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include translate(-50%, -50%);
-    width: 100%;
+      @media screen and (min-width: 768px) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include translate(-50%, -50%);
+          width: 100%;
+      }
   }
 }
 
@@ -103,55 +129,115 @@ section {
   font-size: 1.75em;
   font-weight: normal;
   line-height: 1.25;
-  height: calc(100vh - 10em);
+  height: auto;
+  @media screen and (min-width: 425px) {
+    height: calc(100vh - 10em);
+  }
+
+  .middle {
+      width: auto;
+  }
   img {
-    width: 75%;
-    max-width: 650px;
+    max-height: 250px;
     @media screen and (min-width: 768px) {
-      width: 55%;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 40%;
+        max-height: 350px;
     }
   }
+  h2 {
+        color: $green;
+        font-family: Nunito;
+        font-size: 1.125em;
+        font-weight: 100;
+        line-height: .85;
+        margin: .5em 0 0;
+        @media screen and (min-width: 768px) {
+            font-size: 1.48em;
+            margin: .375em 0 0;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 1.625em;
+        }
+  }
+  h3 {
+      color: $darkGreen;
+      font-weight: normal;
+      @media screen and (min-width: 768px) {
+          font-size: 1.32em;
+      }
+      @media screen and (min-width: 1024px) {
+          font-size: 1.45em;
+      }
+  }
   p {
-    color: $white;
-    padding: 1em .5em;
-    margin-bottom: 3em;
+    color: $red;
+    font-size: .625em;
+    font-weight: 100;
+    font-style: italic;
+    padding: 0 0 .625em;
+    margin: 0;
+    max-width: 900px;
+    border-bottom: 4px dashed $green;
+    @media screen and (min-width: 768px) {
+        font-size: .73em;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: .8em;
+    }
   }
 }
 
 .down-arrow {
-  display: inline-block;
+  display: block;
   position: absolute;
   bottom: 1em;
   left: 50%;
+  width: 1.5em;
+  height: 1.5em;
   @include translateX(-50%);
   animation: arrow 2.8s 0.4s;
   animation-delay: 3s;
+  border: 3px solid $white;
+  border-radius: 50%;
   &:after {
     content: '';
     display: block;
-    width: 1.5em;
-    height: 1.5em;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    height: 40%;
+    width: 40%;
     border: solid $white;
     border-width: 0 3px 3px 0;
-    @include rotate(45deg);
+    @include transform(rotate(45deg) translateY(-15%) translateX(-85%));
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
   }
 }
 
 #overview {
   font-size: 1.5em;
   line-height: 1.25;
-  height: 40vh;
+  height: auto;
   @media screen and (min-width: 768px) {
     font-size: 2em;
+    height: 45vh;
+  }
+  @media screen and (min-width: 1024px) {
     height: 30vh;
   }
   p {
     padding: 0 .5em;
     margin: 0 auto 1em;
-    max-width: 1300px;
+    max-width: 900px;
   }
 }
 
@@ -173,7 +259,12 @@ nav {
         width: 25%;
       }
       &:hover {
-        background: $blue;
+        background: $green;
+      }
+      &:first-child {
+          @media screen and (min-width: 768px) {
+              margin-left: 25%;
+          }
       }
       a {
         color: $white;
@@ -221,7 +312,7 @@ nav {
     }
     @media screen and (min-width: 768px) {
       &:first-child:hover {
-        background: $blue;
+        background: $green;
       }
       &:nth-child(2):hover {
         background: $yellow;
@@ -230,7 +321,7 @@ nav {
         background: $purple;
       }
       &:last-child:hover {
-        background: $green;
+        background: $darkGreen;
       }
       &:before {
         content: '';
@@ -246,7 +337,7 @@ nav {
       &:hover {
         &:before {
           content: '';
-          left: -250%;
+          left: -295%;
           opacity: 1;
           @include transition(.3s);
         }
@@ -302,17 +393,17 @@ nav {
 .requirement {
   @media screen and (min-width: 768px) {
     min-height: 800px;
+    height: calc(100vh - 10em);
   }
 }
 
 #video {
-  background-color: $blue;
+  background-color: $green;
   background-image: url("../img/absurdity.png");
-  height: calc(100vh - 10em);
   .section-img {
     &::after {
       content: '';
-      background-color: lighten($blue, 10%);
+      background-color: lighten($green, 10%);
     }
   }
 }
@@ -320,7 +411,6 @@ nav {
 #photo {
   background-color: $yellow;
   background-image: url("../img/absurdity.png");
-  height: calc(100vh - 10em);
   .section-img {
     &:after {
       content: '';
@@ -332,7 +422,6 @@ nav {
 #multimedia {
   background-color: $purple;
   background-image: url("../img/absurdity.png");
-  height: calc(100vh - 10em);
   .section-img {
     &:after {
       content: '';
@@ -342,13 +431,12 @@ nav {
 }
 
 #audio {
-  background-color: $green;
+  background-color: $darkGreen;
   background-image: url("../img/absurdity.png");
-  height: calc(100vh - 10em);
   .section-img {
     &:after {
       content: '';
-      background-color: darken($green, 10%);
+      background-color: darken($darkGreen, 10%);
     }
   }
 }
@@ -358,6 +446,10 @@ footer {
   padding: 5em 1em;
   @media screen and (min-width: 768px) {
     font-size: 2em;
+  }
+  p {
+    margin: 0 auto;
+    max-width: 900px;
   }
   img {
     width: 35%;
