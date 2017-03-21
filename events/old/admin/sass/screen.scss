@@ -44,10 +44,10 @@ form {
 
 #loader {
   position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
   z-index: 100000;
 }
 
