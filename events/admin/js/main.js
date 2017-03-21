@@ -18,6 +18,113 @@
         createEvent($addForm);
     });
 
+    // Switching event details to edit form when edit event button on event's card is clicked
+    $('li.edit-event').click( event => {
+      const eventID = $(event.target).data('event-id');
+      const $eventCard = $(event.target).closest('.event-card');
+      const currentName = $eventCard.find('h2').text().substring(5);
+      const currentDescription = $eventCard.find('span.event-description').text();
+      const currentLocation = $eventCard.find('span.event-location').text();
+      const currentAddress = $eventCard.find('span.event-address').text();
+      const currentDate = $eventCard.find('span.event-date').text();
+      const currentPassword = $eventCard.find('span.event-password').text();
+      let currentTime = $eventCard.find('span.event-time').text();
+      let currentEndTime = $eventCard.find('span.event-end-time').text();
+      let currentDeadline = $eventCard.find('span.event-rsvp-deadline').text();
+      // Setting currentGuestAllow to checked or blank based on if it says Yes or No to update event form
+      if ($eventCard.find('span.event-allow-guests').text() === 'Yes') {
+        const currentGuestAllow = 'checked';
+      } else {
+        const currentGuestAllow = ' ';
+      }
+
+      // Checking times to remove 0 if it begins with it
+      if (currentTime.startsWith('0')) {
+        currentTime = currentTime.substring(1);
+      }
+      if (currentEndTime.startsWith('0')) {
+        currentEndTime = currentEndTime.substring(1);
+      }
+      if (currentDeadline.startsWith('0')) {
+        currentDeadline = currentDeadline.substring(1);
+      }
+
+      // Fading out current details
+      $eventCard.find('#details-' + eventID).fadeOut('fast', () => {
+
+        // Adding event edit form
+        $eventCard.find('.mdl-card__supporting-text').append(`
+          <form method="POST" id="edit-event-form">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-name">Event Name</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-name" name="edit-event-name" value="' + currentName + '">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <textarea class="mdl-textfield__input" type="text" rows="3" id="edit-event-description" name="edit-event-description" >${currentDescription}</textarea>
+              <label class="mdl-textfield__label" for="edit-event-description">Description</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-location">Location</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-location" name="edit-event-location" value="${currentLocation}">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-address">Address</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-address" name="edit-event-address" value="${currentAddress}">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-date">Date</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-date" name="edit-event-date" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="${currentDate}">
+              <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-time">Time</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-time" name="edit-event-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="${currentTime}">
+              <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-end-time">End Time <em>(Won\'t show this if left empty)</em></label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-end-time" name="edit-event-end-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="${currentEndTime}">
+              <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-password">RSVP Password</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-password" name="edit-event-password" value="${currentPassword}">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-rsvp-deadline">RSVP Deadline <em>(Will be match event date if left empty)</em></label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-rsvp-deadline" name="edit-event-rsvp-deadline" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="${currentDeadline}">
+              <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span>
+            </div>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="edit-guests-switch">
+            <input type="checkbox" id="edit-guests-switch" name="edit-guests-switch" class="mdl-switch__input" value="yes" ${currentGuestAllow}>
+              <span class="mdl-switch__label">Allow Guests? no/yes</span>
+            </label>
+            <input type="hidden" name="form-name" value="edit-event" />
+            <div class="form-buttons">
+              <div class="form-button">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="edit-event-do" type="submit" form="edit-event-form" data-event-id="${eventID}"><i class="material-icons">done</i></button>
+              </div>
+              <div class="form-button">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect edit-close-btn" data-event-id="${eventID}"><i class="material-icons">close</i></button>
+              </div>
+            </div>
+          </form>`).fadeIn();
+
+        // Registering form
+        componentHandler.upgradeDom();
+
+      });
+
+    });
+
     // Runs deleteEvent() when the delete button is clicked
     $('li.delete-event').click( event => {
         event.preventDefault();
@@ -123,6 +230,40 @@
 
     }
 
+
+    /**
+     * Edits an event in the database
+     * @param {Object} $form - jQuery object of the form with updated event details
+     */
+    function editEvent($form) {
+      // Showing the loader
+      showLoader();
+
+      // Getting all the form data from the form and setting it to a variable
+      const formData = new FormData($form[0]);
+
+      // Making the AJAX call
+      $.ajax({
+          url        : 'inc/editEvent.php',
+          method     : 'POST',
+          data       : formData,
+          processData: false,
+          contentType: false,
+          dataType   : 'json',
+          encode     : true,
+          success    : (data, status, jqXHR) => {
+            if (data.success) {
+                // Showing toaster
+                showToaster(data.message);
+
+            } else {
+                // Showing toaster
+                showToaster(`${data.message}: ${status}`);
+
+            }
+          }
+      });
+    }
 
     /**
      * Deletes an event from the database
