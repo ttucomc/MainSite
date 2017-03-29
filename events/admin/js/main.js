@@ -19,10 +19,10 @@
     });
 
     // Switching event details to edit form when edit event button on event's card is clicked
-    $('li.edit-event').click( event => {
+    $('body').on("click", 'li.edit-event', event => {
       const eventID = $(event.target).data('event-id');
       const $eventCard = $(event.target).closest('.event-card');
-      const currentName = $eventCard.find('h2').text().substring(5);
+      const currentName = $eventCard.find('h2').text();
       const currentDescription = $eventCard.find('span.event-description').text();
       const currentLocation = $eventCard.find('span.event-location').text();
       const currentAddress = $eventCard.find('span.event-address').text();
@@ -31,11 +31,12 @@
       let currentTime = $eventCard.find('span.event-time').text();
       let currentEndTime = $eventCard.find('span.event-end-time').text();
       let currentDeadline = $eventCard.find('span.event-rsvp-deadline').text();
+      let currentGuestAllow = $eventCard.find('span.event-allow-guests').text();
       // Setting currentGuestAllow to checked or blank based on if it says Yes or No to update event form
-      if ($eventCard.find('span.event-allow-guests').text() === 'Yes') {
-        const currentGuestAllow = 'checked';
+      if (currentGuestAllow === 'Yes') {
+          currentGuestAllow = 'checked';
       } else {
-        const currentGuestAllow = ' ';
+          currentGuestAllow = '';
       }
 
       // Checking times to remove 0 if it begins with it
@@ -57,7 +58,7 @@
           <form method="POST" id="edit-event-form">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
               <label class="mdl-textfield__label" for="edit-event-name">Event Name</label>
-              <input class="mdl-textfield__input" type="text" id="edit-event-name" name="edit-event-name" value="' + currentName + '">
+              <input class="mdl-textfield__input" type="text" id="edit-event-name" name="edit-event-name" value="${currentName}">
             </div>
             <br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -107,7 +108,6 @@
             <input type="checkbox" id="edit-guests-switch" name="edit-guests-switch" class="mdl-switch__input" value="yes" ${currentGuestAllow}>
               <span class="mdl-switch__label">Allow Guests? no/yes</span>
             </label>
-            <input type="hidden" name="form-name" value="edit-event" />
             <div class="form-buttons">
               <div class="form-button">
                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="edit-event-do" type="submit" form="edit-event-form" data-event-id="${eventID}"><i class="material-icons">done</i></button>
@@ -125,8 +125,38 @@
 
     });
 
+    // Closes the edit form if the cancel button is clicked
+    $('body').on('click', '.edit-close-btn', event => {
+        event.preventDefault();
+
+        const eventID = $(event.target).parent().data('event-id');
+        const $eventCard = $(event.target).closest('.event-card');
+        $('#edit-event-form').fadeOut('fast', () => {
+            $eventCard.find(`#details-${eventID}`).fadeIn('fast');
+            $('#edit-event-form').remove();
+        });
+
+    });
+
+    // Runs editEvent() if the confirm button on the edit form is clicked
+    $('body').on('click', '#edit-event-do', event => {
+        event.preventDefault();
+
+        // Getting the form
+        const $form = $(event.target).closest('#edit-event-form');
+        const eventID = $(event.target).parent().data('event-id');
+        const $eventCard = $(event.target).closest('.event-card');
+
+        // Storing the information in the database
+        editEvent(eventID, $form, $eventCard);
+
+        // Hiding and removing the edit form
+        $form.fadeOut( 'fast', () => $form.remove() );
+
+    });
+
     // Runs deleteEvent() when the delete button is clicked
-    $('li.delete-event').click( event => {
+    $('body').on('click', 'li.delete-event', event => {
         event.preventDefault();
 
         // Getting event information
@@ -165,7 +195,7 @@
 
 
     // Runs toggleEventListing() when add or remove from event page is clicked
-    $('li.toggle-listing').click( event => {
+    $('body').on('click', 'li.toggle-listing', event => {
         event.preventDefault();
 
         const eventID = $(event.target).data('event-id');
@@ -177,7 +207,7 @@
 
 
     // Runs toggleEventRsvp() when switched on the event's card
-    $('.event-rsvp-switch').change( event => {
+    $('body').on('change', '.event-rsvp-switch', event => {
         const eventID = $(event.target).data('event-id');
         const $eventCard = $(event.target).closest('.event-card');
 
@@ -226,21 +256,32 @@
 
             }
 
-        }).done( () => hideLoader() );
+        }).done( () => {
+
+            // Registering new card
+            componentHandler.upgradeDom();
+
+            // Hiding the loader
+            hideLoader();
+        });
 
     }
 
 
     /**
      * Edits an event in the database
-     * @param {Object} $form - jQuery object of the form with updated event details
+     * @param {int}    eventID    - The ID of the event
+     * @param {Object} $form      - jQuery object of the form with updated event details
+     * @param {Object} $eventCard - jQuery object of the event's card
      */
-    function editEvent($form) {
+    function editEvent(eventID, $form, $eventCard) {
       // Showing the loader
       showLoader();
 
       // Getting all the form data from the form and setting it to a variable
-      const formData = new FormData($form[0]);
+      let formData = new FormData($form[0]);
+      // Putting the event ID with the form information
+      formData.append('eventID', eventID);
 
       // Making the AJAX call
       $.ajax({
@@ -253,6 +294,19 @@
           encode     : true,
           success    : (data, status, jqXHR) => {
             if (data.success) {
+                // Changing the event's details to the updated values
+                $eventCard.find('h2').html(data.name);
+                $eventCard.find('.event-description').html(data.description);
+                $eventCard.find('.event-location').html(data.location);
+                $eventCard.find('.event-address').html(data.address);
+                $eventCard.find('.event-directions').attr('href', 'http://maps.google.com/?q=' + data.address);
+                $eventCard.find('.event-date').html(data.date);
+                $eventCard.find('.event-time').html(data.time);
+                $eventCard.find('.event-end-time').html(data.endTime);
+                $eventCard.find('.event-password').html(data.password);
+                $eventCard.find('.event-rsvp-deadline').html(data.deadline);
+                $eventCard.find('.event-allow-guests').html(data.guests);
+
                 // Showing toaster
                 showToaster(data.message);
 
@@ -262,8 +316,16 @@
 
             }
           }
+      }).done( () => {
+          // Showing the new event details
+          $eventCard.find('#details-' + eventID).fadeIn('fast');
+
+          // Hiding the loader
+          hideLoader();
+
       });
     }
+
 
     /**
      * Deletes an event from the database

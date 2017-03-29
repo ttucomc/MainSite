@@ -5,17 +5,17 @@ require(ROOT_PATH . "inc/db.php");
 $submitData = [];
 
 // Setting variables
-$eventID = $_POST['eventUpdated'];
-$name = $_POST['eventName'];
-$description = $_POST['eventDescription'];
-$location = $_POST['eventLocation'];
-$address = $_POST['eventAddress'];
-$date = $_POST['eventDate'];
-$time = $_POST['eventTime'];
-$endTime = $_POST['eventEndTime'];
-$password = $_POST['eventPassword'];
-$deadline = $_POST['eventDeadline'];
-$guests = $_POST['eventGuestAllow']);
+$eventID = $_POST['eventID'];
+$name = $_POST['edit-event-name'];
+$description = $_POST['edit-event-description'];
+$location = $_POST['edit-event-location'];
+$address = $_POST['edit-event-address'];
+$date = $_POST['edit-event-date'];
+$time = $_POST['edit-event-time'];
+$endTime = $_POST['edit-event-end-time'];
+$password = $_POST['edit-event-password'];
+$deadline = $_POST['edit-event-rsvp-deadline'];
+$guests = $_POST['edit-guests-switch'];
 
 // Putting date and time in correct format for MySQL
 $date = date('Y-m-d', strtotime($date));
@@ -37,7 +37,7 @@ if(!empty($deadline)) {
 }
 
 // Testing to see if there's guests or not and setting it to work with tinyint in MySQL
-if($guests === "true") {
+if($guests === "yes") {
   $guests = 1;
 } else {
   $guests = 0;
@@ -63,11 +63,26 @@ try {
   $stmt->execute();
 
   $submitData['success'] = true;
-  $submitData['message'] = "Success! The event details were updated!";
+  $submitData['message'] = "Success! The details for $name were updated!";
+  $submitData['name'] = $name;
+  $submitData['description'] = $description;
+  $submitData['location'] = $location;
+  $submitData['address'] = $address;
+  $submitData['date'] = $date;
+  $submitData['time'] = $time;
+  $submitData['endTime'] = $endTime;
+  $submitData['password'] = $password;
+  $submitData['deadline'] = $deadline;
+  if($guests === 1) {
+      $guests = 'Yes';
+  } else {
+      $guests = 'No';
+  }
+  $submitData['guests'] = $guests;
 
 } catch (Exception $e) {
     $submitData['success'] = false;
-    $submitData['message'] = "Bummer! The event could not be updated.";
+    $submitData['message'] = "Bummer! $name could not be updated.";
 }
 
 // Echoing back the data in JSON for AJAX

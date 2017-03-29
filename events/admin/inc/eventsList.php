@@ -10,7 +10,7 @@ $events = get_all_events("DESC");
 <?php foreach($events as $event): ?>
   <div class="mdl-card mdl-shadow--2dp event-card <?php if($event['listed'] == 0) { echo 'inactive'; } ?>">
     <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text"><?php echo date('Y', strtotime($event['datetime'])) . ' ' . $event['name']; ?></h2>
+      <h2 class="mdl-card__title-text"><?php echo $event['name']; ?></h2>
     </div>
     <div class="mdl-card__supporting-text">
       <?php

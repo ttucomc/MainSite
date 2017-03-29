@@ -2,7 +2,7 @@
 
 require_once('inc/config.php');
 require_once('inc/functions.php');
-// require_once('admin/include.php');
+require_once('include.php');
 
 
 ?>
@@ -131,7 +131,7 @@ require_once('inc/functions.php');
     <button class="mdl-snackbar__action" type="button"></button>
   </div>
 
-  <script src="<?php echo BASE_URL; ?>js/main.js"></script>
+  <script src="<?php echo BASE_URL; ?>js/main.min.js"></script>
 
 </body>
 </html>
