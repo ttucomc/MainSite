@@ -7,7 +7,7 @@
 
         <link rel="shortcut icon" href="images/ttu_logo.svg" type="image/x-icon">
 
-        <title>The MC 2016 | CNN Atlanta Intern</title>
+        <title>The MC 2016 | Marcus Pauda</title>
 
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/master.css">
