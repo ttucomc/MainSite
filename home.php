@@ -413,260 +413,247 @@
     <!-- CoMC EDITS START -->
 
 
-		<!-- ADD MAIN CONTENT BELOW THIS LINE -->
-		<section id="intro-section" class="row">
-			<h2>Communication is essential</h2>
-			<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
-			<h3>Apply Now!</h3>
-			<p><a class="button" href="http://www.ttu.edu/admissions/">Undergraduate</a>&nbsp;<a class="button" href="/comc/graduate/apply/">Graduate</a></p>
-		</section>
-		<section id="banner-bearer" class="row">
-			<div class="medium-6 columns">
-				<img src="/comc/banner-bearer/images/MayBannerBearer-1.jpg" alt="Colby Ward" title="Colby Ward" />
+	<!-- ADD MAIN CONTENT BELOW THIS LINE -->
+	<section id="intro-section" class="row">
+		<h2>Communication is essential</h2>
+		<p>to every successful industry, government agency, nonprofit and start up.<br /><br /><br /><strong>My Adventure · My Degree · #MyCoMC</strong></p>
+		<h3>Apply Now!</h3>
+		<p><a class="button" onclick="ga('comcTracker.send', 'event', 'Home CTAs', 'Clicked', 'Undergraduate Apply');" href="/comc/apply/">Undergraduate</a>&nbsp;<a class="button" onclick="ga('comcTracker.send', 'event', 'Home CTAs', 'Clicked', 'Graduate Apply');" href="/comc/graduate/apply/">Graduate</a></p>
+	</section>
+	<section id="home-students">
+		<div class="row small-collapse">
+			<div class="wow slideInLeft intro-photo medium-4 columns">
+				<div id="intro-current"><a href="/comc/students/current/"> <span class="home-students-text">Current Students</span> </a></div>
 			</div>
-			<div class="medium-6 columns">
-				<h3>Meet our Spring 2016 Banner Bearer</h3>
-				<h4>Colby Ward</h4>
-				<p>
-					Colby Ward, an electronic media &amp; communication and English double major from Saint Jo, Texas, and the top graduate from the College of Media &amp; Communication in Spring 2016, will represent CoMC as the banner bearer during the May 21 commencement ceremony.<br /><a href="/comc/banner-bearer/" class="button">Read More...</a>
-				</p>
+			<div class="wow slideInUp intro-photo medium-4 columns">
+				<div id="intro-prospective"><a href="/comc/students/prospective.php"> <span class="home-students-text">Prospective Students</span> </a></div>
 			</div>
-		</section>
-		<section id="home-students">
-			<div class="row small-collapse">
-				<div class="wow slideInLeft intro-photo medium-4 columns">
-					<div id="intro-current"><a href="/comc/students/current/"> <span class="home-students-text">Current Students</span> </a></div>
-				</div>
-				<div class="wow slideInUp intro-photo medium-4 columns">
-					<div id="intro-prospective"><a href="/comc/students/prospective.php"> <span class="home-students-text">Prospective Students</span> </a></div>
-				</div>
-				<div class="wow slideInRight intro-photo medium-4 columns">
-					<div id="intro-parents"><a href="/comc/parents/"><span class="home-students-text">Parents</span></a></div>
-				</div>
+			<div class="wow slideInRight intro-photo medium-4 columns">
+				<div id="intro-parents"><a href="/comc/parents/"><span class="home-students-text">Parents</span></a></div>
 			</div>
-		</section>
-		<section id="home-advising">
-			<div id="home-advising-badge">
-				<h2><a href="/comc/advising/">Advising</a></h2>
-			</div>
-			<ul>
-				<li>
-					<div class="home-adv-card-top">
-						<div><span>ADV</span></div>
-					</div>
-					<div class="home-adv-card-bottom">
-						<h3><a href="/comc/advising/advertising/">Advertising</a></h3>
-						<hr />
-						<p>Carly Carthel</p>
-					</div>
-					<div class="home-adv-contact">
-						<p><a href="tel:8068346645">806.834.6645</a><br /> <a href="mailto:carly.carthel@ttu.edu">carly.carthel@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/ccarthel.png" alt="Carly Carthel" /></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="home-adv-card-top">
-						<div><span>COMS</span></div>
-					</div>
-					<div class="home-adv-card-bottom">
-						<h3><a href="/comc/advising/commstudies/">Communication Studies</a></h3>
-						<hr />
-						<p>Judy Poffenbarger</p>
-					</div>
-					<div class="home-adv-contact">
-						<p><a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J<br /><a href="/comc/advising/commstudies/"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="home-adv-card-top">
-						<div><span>EMC</span></div>
-					</div>
-					<div class="home-adv-card-bottom">
-						<h3><a href="/comc/advising/electronicmedia/">Electronic Media</a></h3>
-						<hr />
-						<p>Donald Ellis</p>
-					</div>
-					<div class="home-adv-contact">
-						<p><a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/electronicmedia/"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="home-adv-card-top">
-						<div><span>JOUR</span></div>
-					</div>
-					<div class="home-adv-card-bottom">
-						<h3><a href="/comc/advising/journalism/">Journalism</a></h3>
-						<hr />
-						<p>Heath Tolleson</p>
-					</div>
-					<div class="home-adv-contact">
-						<p><a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/journalism/"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="home-adv-card-top">
-						<div><span>MST</span></div>
-					</div>
-					<div class="home-adv-card-bottom">
-						<h3><a href="/comc/advising/mediastrategies/">Media Strategies</a></h3>
-						<hr />
-						<p>Rose Cruz</p>
-					</div>
-					<div class="home-adv-contact">
-						<p><a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/mediastrategies/"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a></p>
-					</div>
-				</li>
-				<li>
-					<div class="home-adv-card-top">
-						<div><span>PR</span></div>
-					</div>
-					<div class="home-adv-card-bottom">
-						<h3><a href="/comc/advising/publicrelations/">Public Relations</a></h3>
-						<hr />
-						<p>Kim Bergan</p>
-					</div>
-					<div class="home-adv-contact">
-						<p><a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/publicrelations/"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a></p>
-					</div>
-				</li>
-			</ul>
-		</section>
-		<div class="home-spacer">
-			<div class="spacer-words">My Adventure.</div>
-			<div class="spacer-words">My Degree.</div>
-			<div class="spacer-words spacer-twitter"><a class="icon-twitter" href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=%23MyCoMC&amp;src=typd">#MyCoMC</a></div>
 		</div>
-		<section id="home-publications">
-			<h2>Newsletters</h2>
-			<div id="home-publications-flex">
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Robin Duffee" src="/comc/about/images/ambassadors/rduffee.jpg" alt="Robin Duffee" /></a>
-					<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Get to Know Your Ambassador: Robin Duffee</strong><br /><br />I became an ambassador when one of my favorite professors told me about the opportunity and encouraged me to apply. I was definitely nervous, but I was so passionate about my major and I wanted to do anything I could to help spread the word about all the wonderful programs CoMC has to offer!<br /><br /><em>More...</em></a></p>
+	</section>
+	<section id="home-advising">
+		<div id="home-advising-badge">
+			<h2><a href="/comc/advising/">Advising</a></h2>
+		</div>
+		<ul>
+			<li>
+				<div class="home-adv-card-top">
+					<div><span>ADV</span></div>
 				</div>
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="Alixandra Haley" src="/comc/about/publications/converging/2016/images/august/Alixandra-Haley-1.jpg" alt="Alixandra Haley" /> </a>
-					<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/converging/"> <strong>Media Strategies Major Interns with High Noon Entertainment</strong> <br /><br />Senior media strategies major Alixandra Haley spent the summer working as a production intern at High Noon Entertainment, and she said the first step towards finding the internship was taking the time to research.<br /><br /> <em>More...</em> </a></p>
+				<div class="home-adv-card-bottom">
+					<h3><a href="/comc/advising/advertising/">Advertising</a></h3>
+					<hr />
+					<p>Carly Carthel</p>
 				</div>
-				<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/mc/"> <img style="width: 50%;" src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
-					<h3><a href="/comc/about/publications/mc.php">The MC 2015</a></h3>
-					<p class="hidden-mobile"><a href="/comc/about/publications/mc.php"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
+				<div class="home-adv-contact">
+					<p><a href="tel:8068346645">806.834.6645</a><br /> <a href="mailto:carly.carthel@ttu.edu">carly.carthel@ttu.edu</a><br /> Room 169 H<br /><a href="/comc/advising/advertising/"><img src="/comc/images/home/ccarthel.png" alt="Carly Carthel" /></a></p>
 				</div>
+			</li>
+			<li>
+				<div class="home-adv-card-top">
+					<div><span>COMS</span></div>
+				</div>
+				<div class="home-adv-card-bottom">
+					<h3><a href="/comc/advising/commstudies/">Communication Studies</a></h3>
+					<hr />
+					<p>Judy Poffenbarger</p>
+				</div>
+				<div class="home-adv-contact">
+					<p><a href="tel:8068345382">806.834.5382</a><br /> <a href="mailto:judy.poffenbarger@ttu.edu">judy.poffenbarger@ttu.edu</a><br /> Room 169 J<br /><a href="/comc/advising/commstudies/"><img src="/comc/images/home/jpoff-edit.png" alt="Judy Poffenbarger" /></a></p>
+				</div>
+			</li>
+			<li>
+				<div class="home-adv-card-top">
+					<div><span>EMC</span></div>
+				</div>
+				<div class="home-adv-card-bottom">
+					<h3><a href="/comc/advising/electronicmedia/">Electronic Media</a></h3>
+					<hr />
+					<p>Donald Ellis</p>
+				</div>
+				<div class="home-adv-contact">
+					<p><a href="tel:8068344735">806.834.4735</a><br /> <a href="mailto:donald.ellis@ttu.edu">donald.ellis@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/electronicmedia/"><img src="/comc/images/home/don-edit.png" alt="Donald Ellis" /></a></p>
+				</div>
+			</li>
+			<li>
+				<div class="home-adv-card-top">
+					<div><span>JOUR</span></div>
+				</div>
+				<div class="home-adv-card-bottom">
+					<h3><a href="/comc/advising/journalism/">Journalism</a></h3>
+					<hr />
+					<p>Heath Tolleson</p>
+				</div>
+				<div class="home-adv-contact">
+					<p><a href="tel:8068344032">806.834.4032</a><br /> <a href="mailto:heath.tolleson@ttu.edu">heath.tolleson@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/journalism/"><img src="/comc/advising/images/htolleson.png" alt="Heath Tolleson" /></a></p>
+				</div>
+			</li>
+			<li>
+				<div class="home-adv-card-top">
+					<div><span>MST</span></div>
+				</div>
+				<div class="home-adv-card-bottom">
+					<h3><a href="/comc/advising/mediastrategies/">Media Strategies</a></h3>
+					<hr />
+					<p>Rose Cruz</p>
+				</div>
+				<div class="home-adv-contact">
+					<p><a href="tel:8068345823">806.834.5823</a><br /> <a href="mailto:rose.cruz@ttu.edu">rose.cruz@ttu.edu</a><br /> Room 169 E<br /><a href="/comc/advising/mediastrategies/"><img src="/comc/images/home/rose-edit.png" alt="Rose Cruz" /></a></p>
+				</div>
+			</li>
+			<li>
+				<div class="home-adv-card-top">
+					<div><span>PR</span></div>
+				</div>
+				<div class="home-adv-card-bottom">
+					<h3><a href="/comc/advising/publicrelations/">Public Relations</a></h3>
+					<hr />
+					<p>Kim Bergan</p>
+				</div>
+				<div class="home-adv-contact">
+					<p><a href="tel:8068346567">806.834.6567</a><br /> <a href="mailto:kim.bergan@ttu.edu">kim.bergan@ttu.edu</a><br /> Room 169<br /><a href="/comc/advising/publicrelations/"><img src="/comc/images/home/kbergan.png" alt="Kim Bergan" /></a></p>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<div class="home-spacer">
+		<div class="spacer-words">My Adventure.</div>
+		<div class="spacer-words">My Degree.</div>
+		<div class="spacer-words spacer-twitter"><a class="icon-twitter" href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=%23MyCoMC&amp;src=typd">#MyCoMC</a></div>
+	</div>
+	<section id="home-publications">
+		<h2>Newsletters</h2>
+		<div id="home-publications-flex">
+			<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/adviser/"> <img title="Richelle Detrixhe" src="/comc/about/publications/adviser/2017/february/images/Richelle-Detrixhe.jpg" alt="Richelle Detrixhe" /></a>
+				<h3><a href="/comc/about/publications/adviser/">The Adviser</a></h3>
+				<p class="hidden-mobile"><a href="/comc/about/publications/adviser/"><strong>Meet the Professor: Richelle Detrixhe</strong><br /><br />What would you like your students to take away from your classes?<br />I hope everyone leaves my classes with an appreciation for design and the ability to effectively communicate with designers. On a more practical note, I would like for the students to be comfortable working with InDesign, Illustrator and Photoshop.<br /><br /><em>More...</em></a></p>
 			</div>
-		</section>
-		<section class="row">
-			<div id="home-social"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/ttu_comc">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
-				<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
+			<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/converging/"> <img title="Jake Quintanilla" src="/comc/about/publications/converging/2017/images/march/JakeQuintanilla1.jpg" alt="Jake Quintanilla" /> </a>
+				<h3><a href="/comc/about/publications/converging/index.php">Converging News</a></h3>
+				<p class="hidden-mobile"><a href="/comc/about/publications/converging/"> <strong>Media Strategies Alum Discusses Prestigious Advertising Career</strong> <br /><br />After Jake Quintanilla graduated from the Texas Tech University College of Media &amp; Communication in May 2015, he put his degree in media strategies to work by making a name for himself in the world of advertising.<br /><br /> <em>More...</em> </a></p>
 			</div>
-		</section>
-		<?php require('testimonials.php'); ?>
-		<!-- "In 2633, the evil Red Falcon Organization have set a base on the Galuga archipelago near New Zealand in a plot to conquer the world. Two commandos, Pfc. Bill Rizer and Pfc. Lance Bean of the Contra unit (an elite group of soldiers specializing in guerrilla warfare), are sent to the island to destroy the enemy forces and uncover the true nature of the alien entity controlling them..." -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-		<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
-		<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
-		<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				// WOW.js
-				new WOW().init();
+			<div class="home-publication wow fadeInUp"><a href="/comc/about/publications/mc/"> <img style="width: 50%;" src="/comc/about/publications/MC/images/cover/MCLogo.png" alt="The MC Logo" /></a>
+				<h3><a href="/comc/about/publications/mc.php">The MC 2015</a></h3>
+				<p class="hidden-mobile"><a href="/comc/about/publications/mc.php"><strong>A publication for alumni and friends of the Texas Tech University College of Media &amp; Communication.</strong><br /><br /><em>More...</em></a></p>
+			</div>
+		</div>
+	</section>
+	<section class="row">
+		<div id="home-social"><a class="icon-facebook" href="http://www.facebook.com/TTUMCOM">&nbsp;Facebook</a> <a class="icon-twitter" href="http://twitter.com/ttu_comc">&nbsp;Twitter</a> <a class="icon-youtube" href="https://www.youtube.com/user/TTUMCOM/featured">&nbsp;YouTube</a> <a class="icon-linkedin" href="https://www.linkedin.com/edu/school?id=43339">&nbsp;LinkedIn</a>
+			<p id="employment">Interested in working here at CoMC? Click the link below to see what positions we have open!<br /><a class="button" href="/comc/about/employment.php">Join Our Team</a></p>
+		</div>
+	</section>
+	<?php require('testimonials.php'); ?> <!-- "In 2633, the evil Red Falcon Organization have set a base on the Galuga archipelago near New Zealand in a plot to conquer the world. Two commandos, Pfc. Bill Rizer and Pfc. Lance Bean of the Contra unit (an elite group of soldiers specializing in guerrilla warfare), are sent to the island to destroy the enemy forces and uncover the true nature of the alien entity controlling them..." -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+	<script type="text/javascript" src="/comc/includes/js/wow.min.js"></script>
+	<script type="text/javascript" src="/comc/includes/js/plugins/animation.gsap.js"></script>
+	<script type="text/javascript" src="/comc/includes/js/plugins/debug.addIndicators.js"></script>
+	<script type="text/javascript">// <![CDATA[
+		$(function() {
+			// WOW.js
+			new WOW().init();
 
 
-				// ScrollMagic
-				// init controller
-				var controller = new ScrollMagic.Controller();
+			// ScrollMagic
+			// init controller
+			var controller = new ScrollMagic.Controller();
 
-				// Animate Spacer
-				var spacerTweenEnter = TweenMax.staggerFromTo(".spacer-words", 1, {opacity:0, left:"-5%"}, {opacity:1, left:"0%"}, 0.5);
+			// Animate Spacer
+			var spacerTweenEnter = TweenMax.staggerFromTo(".spacer-words", 1, {opacity:0, left:"-5%"}, {opacity:1, left:"0%"}, 0.5);
 
-				var sceneSpacerEnter = new ScrollMagic.Scene({
-					triggerElement: ".home-spacer",
-					offset: -300,
-					duration: 300
-				})
-				.setTween(spacerTweenEnter)
-				.addTo(controller);
+			var sceneSpacerEnter = new ScrollMagic.Scene({
+				triggerElement: ".home-spacer",
+				offset: -300,
+				duration: 300
+			})
+			.setTween(spacerTweenEnter)
+			.addTo(controller);
 
-				var spacerTweenLeave = TweenMax.to(".spacer-words", 1, {opacity: 0, top: "-10%"});
+			var spacerTweenLeave = TweenMax.to(".spacer-words", 1, {opacity: 0, top: "-10%"});
 
-				var sceneSpacerLeave = new ScrollMagic.Scene({
-					triggerElement: ".home-spacer",
-					triggerHook: "onLeave",
-					duration: 200,
-					offset: -50
-				})
-				.setTween(spacerTweenLeave)
-				.addTo(controller);
+			var sceneSpacerLeave = new ScrollMagic.Scene({
+				triggerElement: ".home-spacer",
+				triggerHook: "onLeave",
+				duration: 200,
+				offset: -50
+			})
+			.setTween(spacerTweenLeave)
+			.addTo(controller);
 
+
+		});
+
+		// Testimonials slider
+		var testimonials = <?php echo $testimonials_js;  ?>;
+		testimonial_i = 0;
+		window.setInterval(function() {
+
+			// Getting next person
+			if (testimonial_i == 6) {
+				testimonial_i = 0
+			} else {
+				testimonial_i++;
+			}
+			testimonial = testimonials[testimonial_i];
+
+			// FADING PERSON OUT
+			// Getting current image width for percentage bug
+			img_width = $('#photo img').width();
+			// Scaling image up
+			img_width_scale = img_width*1.075;
+
+			// Animating image to grow and fade out
+			$('#photo img').animate({
+				width: img_width_scale,
+				opacity: 0
+			}, 1200, function() {
+				// Replacing picture
+				$('#photo img').attr({
+					src: '/comc/images/home/MCLC/MCLC-' + testimonial['photo'] + '.png',
+					alt: testimonial['name'] + ' Signature',
+					title: testimonial['name'] + ' Signature'
+				});
+			});
+
+			// Animating quote to shrink and fade out
+			$('#quote').animate({
+				'font-size': '.96em',
+				opacity: 0
+			}, 1200, function() {
+
+				// Changing quote
+				$('#quote blockquote').replaceWith('<blockquote><p>' + testimonial['quote'] + '</p></blockquote>');
+				// Changing signature
+				$('#quote img').attr({
+					src: '/comc/images/home/MCLC/SIG-' + testimonial['photo'] + '.png',
+					alt: testimonial['name'] + ' Signature',
+					title: testimonial['name'] + ' Signature'
+				});
+				// Changing cite
+				$('#quote cite').replaceWith('<cite>' + testimonial['name'] + '<br />'+ testimonial['hometown'] + '<br />' + testimonial['major'] + '</cite>');
 
 			});
 
-			// Testimonials slider
-			var testimonials = <?php echo $testimonials_js;  ?>;
-			testimonial_i = 0;
-			window.setInterval(function() {
 
-				// Getting next person
-				if (testimonial_i == 6) {
-					testimonial_i = 0
-				} else {
-					testimonial_i++;
-				}
-				testimonial = testimonials[testimonial_i];
+			// FADING PERSON IN
+			$('#photo img').animate({
+				width: img_width,
+				opacity: 1
+			}, 1200);
 
-				// FADING PERSON OUT
-				// Getting current image width for percentage bug
-				img_width = $('#photo img').width();
-				// Scaling image up
-				img_width_scale = img_width*1.075;
+			// Animating quote to shrink and fade out
+			$('#quote').animate({
+				'font-size': '1em',
+				opacity: 1
+			}, 1200);
 
-				// Animating image to grow and fade out
-				$('#photo img').animate({
-					width: img_width_scale,
-					opacity: 0
-				}, 1200, function() {
-					// Replacing picture
-					$('#photo img').attr({
-						src: '/comc/images/home/MCLC/MCLC-' + testimonial['photo'] + '.png',
-						alt: testimonial['name'] + ' Signature',
-						title: testimonial['name'] + ' Signature'
-					});
-				});
-
-				// Animating quote to shrink and fade out
-				$('#quote').animate({
-					'font-size': '.96em',
-					opacity: 0
-				}, 1200, function() {
-
-					// Changing quote
-					$('#quote blockquote').replaceWith('<blockquote><p>' + testimonial['quote'] + '</p></blockquote>');
-					// Changing signature
-					$('#quote img').attr({
-						src: '/comc/images/home/MCLC/SIG-' + testimonial['photo'] + '.png',
-						alt: testimonial['name'] + ' Signature',
-						title: testimonial['name'] + ' Signature'
-					});
-					// Changing cite
-					$('#quote cite').replaceWith('<cite>' + testimonial['name'] + '<br />'+ testimonial['hometown'] + '<br />' + testimonial['major'] + '</cite>');
-
-				});
-
-
-				// FADING PERSON IN
-				$('#photo img').animate({
-					width: img_width,
-					opacity: 1
-				}, 1200);
-
-				// Animating quote to shrink and fade out
-				$('#quote').animate({
-					'font-size': '1em',
-					opacity: 1
-				}, 1200);
-
-			}, 12000);
-			</script>
-			<!-- ADD MAIN CONTENT ABOVE THIS LINE -->
+		}, 12000);
+		// ]]></script>
+		<!-- ADD MAIN CONTENT ABOVE THIS LINE -->
 
 
 

@@ -1,303 +1,519 @@
-// Open add event form when add event button is clicked
-$('#add-event-btn').click(function() {
-  $('#add-event').fadeToggle('fast');
-});
-// Show loader when add event button is clicked
-$('#add-event-do').click(function() {
-  show_loader();
-});
-// Close add event form when close button is clicked
-$('#add-event form .close-btn').click(function(event) {
-  event.preventDefault();
-  $('#add-event').fadeToggle('fast');
-});
+(function () {
 
+    // Open add event form when 'Add Event' is clicked
+    $('#add-event-btn').click( () => $('#add-event').fadeToggle('fast') );
 
+    // Closes add event form when 'X' button is clicked
+    $('#add-event form .close-btn').click( event => {
+        event.preventDefault();
+        $('#add-event').fadeToggle('fast');
+    });
 
-// When the edit event button is clicked
-$('li.edit-event').click(function() {
+    // Runs createEvent() when add event confirm button is clicked
+    $('#add-event-do').click( event => {
+        event.preventDefault();
+        const $addForm = $('#add-event-form');
+        // Fade the add event form out
+        $('#add-event').fadeToggle('fast');
+        createEvent($addForm);
+    });
 
-  var eventID = $(this).data('event-id');
-  var eventCard = $(this).closest('.event-card');
-  var currentName = eventCard.find('h2').text().substring(5);
-  var currentDescription = eventCard.find('span.event-description').text();
-  var currentLocation = eventCard.find('span.event-location').text();
-  var currentAddress = eventCard.find('span.event-address').text();
-  var currentDate = eventCard.find('span.event-date').text();
-  var currentPassword = eventCard.find('span.event-password').text();
-  var currentTime = eventCard.find('span.event-time').text();
-  var currentEndTime = eventCard.find('span.event-end-time').text();
-  var currentDeadline = eventCard.find('span.event-rsvp-deadline').text();
-  if (currentTime.startsWith('0')) {
-    currentTime = currentTime.substring(1);
-  }
-  if (currentEndTime.startsWith('0')) {
-    currentEndTime = currentEndTime.substring(1);
-  }
-  if (currentDeadline.startsWith('0')) {
-    currentDeadline = currentDeadline.substring(1);
-  }
-  if (eventCard.find('span.event-allow-guests').text() == 'Yes') {
-    var currentGuestAllow = 'checked';
-  } else {
-    var currentGuestAllow = ' ';
-  }
-
-  // Fading out current details
-  eventCard.find('#details-' + eventID).fadeOut('fast', function() {
-
-    // Adding event edit form
-    eventCard.find('.mdl-card__supporting-text').append('<form method="POST" id="edit-event-form"> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-name">Event Name</label> <input class="mdl-textfield__input" type="text" id="edit-event-name" name="edit-event-name" value="' + currentName + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><textarea class="mdl-textfield__input" type="text" rows="3" id="edit-event-description" name="edit-event-description" >' + currentDescription + '</textarea><label class="mdl-textfield__label" for="edit-event-description">Description</label></div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-location">Location</label> <input class="mdl-textfield__input" type="text" id="edit-event-location" name="edit-event-location" value="' + currentLocation + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-address">Address</label> <input class="mdl-textfield__input" type="text" id="edit-event-address" name="edit-event-address" value="' + currentAddress + '"> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-date">Date</label> <input class="mdl-textfield__input" type="text" id="edit-event-date" name="edit-event-date" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="' + currentDate + '"> <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-time">Time</label> <input class="mdl-textfield__input" type="text" id="edit-event-time" name="edit-event-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="' + currentTime + '"> <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span> </div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><label class="mdl-textfield__label" for="edit-event-end-time">End Time <em>(Won\'t show this if left empty)</em></label><input class="mdl-textfield__input" type="text" id="edit-event-end-time" name="edit-event-end-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="' + currentEndTime + '"><span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span></div> <br> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><label class="mdl-textfield__label" for="edit-event-password">RSVP Password</label><input class="mdl-textfield__input" type="text" id="edit-event-password" name="edit-event-password" value="' + currentPassword + '"></div> <br /> <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <label class="mdl-textfield__label" for="edit-event-rsvp-deadline">RSVP Deadline <em>(Will be match event date if left empty)</em></label> <input class="mdl-textfield__input" type="text" id="edit-event-rsvp-deadline" name="edit-event-rsvp-deadline" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="' + currentDeadline + '"> <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span> </div> <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="edit-guests-switch"><input type="checkbox" id="edit-guests-switch" name="edit-guests-switch" class="mdl-switch__input" value="yes" ' + currentGuestAllow + '><span class="mdl-switch__label">Allow Guests? no/yes</span></label> <input type="hidden" name="form-name" value="edit-event" /> <div class="form-buttons"> <div class="form-button"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="edit-event-do" type="submit" form="edit-event-form" data-event-id="' + eventID +'"> <i class="material-icons">done</i> </button> </div> <div class="form-button"> <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect edit-close-btn" data-event-id="' + eventID + '"><i class="material-icons">close</i> </button> </div> </div> </form>').fadeIn();
-
-    // Registering form
-    componentHandler.upgradeDom();
-
-  });
-
-});
-// If the edit form close button is clicked
-$("body").on('click', '.edit-close-btn', function(e) {
-  e.preventDefault();
-  var eventID = $(this).data('event-id');
-  var eventCard = $(this).closest('.event-card');
-  $('#edit-event-form').fadeOut('fast', function() {
-    eventCard.find('#details-' + eventID).fadeIn('fast');
-    $(this).remove();
-  });
-});
-// If the confirm edit button is clicked
-$('body').on('click', '#edit-event-do', function(e) {
-  e.preventDefault();
-
-  var eventCard = $(this).closest('.event-card');
-  var eventID = $(this).data('event-id');
-  var eventName = document.getElementById('edit-event-name').value;
-  var eventDescription = document.getElementById('edit-event-description').value;
-  var eventLocation = document.getElementById('edit-event-location').value;
-  var eventAddress = document.getElementById('edit-event-address').value;
-  var eventDate = document.getElementById('edit-event-date').value;
-  var eventTime = document.getElementById('edit-event-time').value;
-  var eventEndTime = document.getElementById('edit-event-end-time').value;
-  var date = new Date();
-  var year = date.getFullYear(eventDate);
-  var eventPassword = document.getElementById('edit-event-password').value;
-  var eventDeadline = document.getElementById('edit-event-rsvp-deadline').value;
-  var eventGuestAllow = document.getElementById('edit-guests-switch').checked;
-
-  show_loader();
-
-  $.ajax({
-    type: 'POST',
-    url: 'inc/events.php',
-    data: {
-            'eventUpdated': eventID,
-            'eventName': eventName,
-            'eventDescription': eventDescription,
-            'eventLocation': eventLocation,
-            'eventAddress': eventAddress,
-            'eventDate': eventDate,
-            'eventTime': eventTime,
-            'eventEndTime': eventEndTime,
-            'eventPassword': eventPassword,
-            'eventDeadline': eventDeadline,
-            'eventGuestAllow': eventGuestAllow
-          },
-    success: function() {
-
-      // Changing values in card to the new edits
-      eventCard.find('h2').html(year + ' ' + eventName);
-      eventCard.find('.event-description').html(eventDescription);
-      eventCard.find('.event-location').html(eventLocation);
-      eventCard.find('.event-address').html(eventAddress);
-      eventCard.find('.event-directions').attr('href', 'http://maps.google.com/?q=' + eventAddress);
-      eventCard.find('.event-date').html(eventDate);
-      eventCard.find('.event-time').html(eventTime);
-      eventCard.find('.event-end-time').html(eventEndTime);
-      eventCard.find('.event-password').html(eventPassword);
-      if (eventDeadline == '') {
-        eventDeadline = eventDate;
-      }
-      eventCard.find('.event-rsvp-deadline').html(eventDeadline);
-      if (eventGuestAllow) {
-        eventCard.find('.event-allow-guests').html('Yes');
+    // Switching event details to edit form when edit event button on event's card is clicked
+    $('body').on("click", 'li.edit-event', event => {
+      const eventID = $(event.target).data('event-id');
+      const $eventCard = $(event.target).closest('.event-card');
+      const currentName = $eventCard.find('h2').text();
+      const currentDescription = $eventCard.find('span.event-description').text();
+      const currentLocation = $eventCard.find('span.event-location').text();
+      const currentAddress = $eventCard.find('span.event-address').text();
+      const currentDate = $eventCard.find('span.event-date').text();
+      const currentPassword = $eventCard.find('span.event-password').text();
+      let currentTime = $eventCard.find('span.event-time').text();
+      let currentEndTime = $eventCard.find('span.event-end-time').text();
+      let currentDeadline = $eventCard.find('span.event-rsvp-deadline').text();
+      let currentGuestAllow = $eventCard.find('span.event-allow-guests').text();
+      // Setting currentGuestAllow to checked or blank based on if it says Yes or No to update event form
+      if (currentGuestAllow === 'Yes') {
+          currentGuestAllow = 'checked';
       } else {
-        eventCard.find('.event-allow-guests').html('No');
+          currentGuestAllow = '';
       }
 
-      // Setting toaster message
-      var messageSuccess = document.querySelector('#action-message');
-      var data = {message: 'This event\'s details have been updated!'};
-      messageSuccess.MaterialSnackbar.showSnackbar(data);
+      // Checking times to remove 0 if it begins with it
+      if (currentTime.startsWith('0')) {
+        currentTime = currentTime.substring(1);
+      }
+      if (currentEndTime.startsWith('0')) {
+        currentEndTime = currentEndTime.substring(1);
+      }
+      if (currentDeadline.startsWith('0')) {
+        currentDeadline = currentDeadline.substring(1);
+      }
+
+      // Fading out current details
+      $eventCard.find('#details-' + eventID).fadeOut('fast', () => {
+
+        // Adding event edit form
+        $eventCard.find('.mdl-card__supporting-text').append(`
+          <form method="POST" id="edit-event-form">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-name">Event Name</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-name" name="edit-event-name" value="${currentName}">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <textarea class="mdl-textfield__input" type="text" rows="3" id="edit-event-description" name="edit-event-description" >${currentDescription}</textarea>
+              <label class="mdl-textfield__label" for="edit-event-description">Description</label>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-location">Location</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-location" name="edit-event-location" value="${currentLocation}">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-address">Address</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-address" name="edit-event-address" value="${currentAddress}">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-date">Date</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-date" name="edit-event-date" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="${currentDate}">
+              <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-time">Time</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-time" name="edit-event-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="${currentTime}">
+              <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-end-time">End Time <em>(Won\'t show this if left empty)</em></label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-end-time" name="edit-event-end-time" placeholder="XX:XX AM/PM" pattern="^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$" value="${currentEndTime}">
+              <span class="mdl-textfield__error">Please use this format: XX:XX AM/PM</span>
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-password">RSVP Password</label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-password" name="edit-event-password" value="${currentPassword}">
+            </div>
+            <br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <label class="mdl-textfield__label" for="edit-event-rsvp-deadline">RSVP Deadline <em>(Will be match event date if left empty)</em></label>
+              <input class="mdl-textfield__input" type="text" id="edit-event-rsvp-deadline" name="edit-event-rsvp-deadline" pattern="^([0]?[1-9]|[1][0-2])[./-]([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0-9]{4}|[0-9]{2})$" placeholder="MM/DD/YYYY" value="${currentDeadline}">
+              <span class="mdl-textfield__error">Please use this format: MM/DD/YYYY</span>
+            </div>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="edit-guests-switch">
+            <input type="checkbox" id="edit-guests-switch" name="edit-guests-switch" class="mdl-switch__input" value="yes" ${currentGuestAllow}>
+              <span class="mdl-switch__label">Allow Guests? no/yes</span>
+            </label>
+            <div class="form-buttons">
+              <div class="form-button">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="edit-event-do" type="submit" form="edit-event-form" data-event-id="${eventID}"><i class="material-icons">done</i></button>
+              </div>
+              <div class="form-button">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect edit-close-btn" data-event-id="${eventID}"><i class="material-icons">close</i></button>
+              </div>
+            </div>
+          </form>`).fadeIn();
+
+        // Registering form
+        componentHandler.upgradeDom();
+
+      });
+
+    });
+
+    // Closes the edit form if the cancel button is clicked
+    $('body').on('click', '.edit-close-btn', event => {
+        event.preventDefault();
+
+        const eventID = $(event.target).parent().data('event-id');
+        const $eventCard = $(event.target).closest('.event-card');
+        $('#edit-event-form').fadeOut('fast', () => {
+            $eventCard.find(`#details-${eventID}`).fadeIn('fast');
+            $('#edit-event-form').remove();
+        });
+
+    });
+
+    // Runs editEvent() if the confirm button on the edit form is clicked
+    $('body').on('click', '#edit-event-do', event => {
+        event.preventDefault();
+
+        // Getting the form
+        const $form = $(event.target).closest('#edit-event-form');
+        const eventID = $(event.target).parent().data('event-id');
+        const $eventCard = $(event.target).closest('.event-card');
+
+        // Storing the information in the database
+        editEvent(eventID, $form, $eventCard);
+
+        // Hiding and removing the edit form
+        $form.fadeOut( 'fast', () => $form.remove() );
+
+    });
+
+    // Runs deleteEvent() when the delete button is clicked
+    $('body').on('click', 'li.delete-event', event => {
+        event.preventDefault();
+
+        // Getting event information
+        const $event = $(event.target);
+        const eventID = $event.data('event-id');
+
+        // Creating the confirmation panel
+        const confirmPanel = `
+            <div class="mdl-card mdl-shadow--6dp" id="confirm-delete">
+                <h3>Are you sure?</h3>
+                <p>This will delete this event and all rsvps from the database</p>
+                <div class="mdl-card__actions mdl-card--border">
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent confirm-delete-btn"><i class="material-icons">delete</i></button>
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary clear-delete-btn"><i class="material-icons">clear</i></button>
+                </div>
+            </div>`;
+
+        // Adding confirmation panel to the page
+        $('body').append(confirmPanel);
+        $('#confirm-delete').fadeToggle('fast');
+
+        // Closing confirmation panel if cancel is clicked
+        $('.clear-delete-btn').click( () => {
+          $('#confirm-delete').fadeToggle( 'fast', () => $('#confirm-delete').remove() );
+        });
+
+        // Deleting event if the confirm button is clicked
+        $('.confirm-delete-btn').click( () => {
+            // Removing confirmation panel
+            $('#confirm-delete').fadeToggle( 'fast', () => $('#confirm-delete').remove() );
+
+            deleteEvent($event, eventID);
+
+        });
+    });
+
+
+    // Runs toggleEventListing() when add or remove from event page is clicked
+    $('body').on('click', 'li.toggle-listing', event => {
+        event.preventDefault();
+
+        const eventID = $(event.target).data('event-id');
+        const $eventCard = $(event.target).closest('.event-card');
+
+        toggleEventListing(eventID, $eventCard);
+
+    });
+
+
+    // Runs toggleEventRsvp() when switched on the event's card
+    $('body').on('change', '.event-rsvp-switch', event => {
+        const eventID = $(event.target).data('event-id');
+        const $eventCard = $(event.target).closest('.event-card');
+
+        toggleEventRsvp(eventID, $eventCard);
+
+    });
+
+
+    /**
+     * Creates an event in the database
+     * @param {Object} $form - jQuery object of the form with the event details
+     */
+    function createEvent($form) {
+        // Showing the loader
+        showLoader();
+
+        // Getting all the form data from the form and setting it to a variable
+        const formData = new FormData($form[0]);
+
+        // Making the call to the server
+        $.ajax({
+            url        : 'inc/createEvent.php',
+            method     : 'POST',
+            data       : formData,
+            processData: false,
+            contentType: false,
+            dataType   : 'json',
+            encode     : true,
+            success    : function(data, status, jqXHR) {
+
+                if (data.success) {
+                    // Showing toaster
+                    showToaster(data.message);
+
+                    // Resetting the form
+                    $form[0].reset();
+
+                } else {
+                    // Showing toaster
+                    showToaster(`${data.message}: ${status}`);
+
+                }
+
+                // Refreshing the events feed
+                refreshEvents();
+
+            }
+
+        }).done( () => {
+
+            // Registering new card
+            componentHandler.upgradeDom();
+
+            // Hiding the loader
+            hideLoader();
+        });
+
     }
-  }).done(function() {
-
-    $('#edit-event-form').fadeOut('fast', function() {
-      eventCard.find('#details-' + eventID).fadeIn('fast');
-      $(this).remove();
-    });
-
-    hide_loader();
-
-  });
-
-  return false;
-
-});
 
 
+    /**
+     * Edits an event in the database
+     * @param {int}    eventID    - The ID of the event
+     * @param {Object} $form      - jQuery object of the form with updated event details
+     * @param {Object} $eventCard - jQuery object of the event's card
+     */
+    function editEvent(eventID, $form, $eventCard) {
+      // Showing the loader
+      showLoader();
 
-// Toggle RSVPs
-$('.event-rsvp-switch').change(function() {
-  var eventID = $(this).data('event-id');
-  var eventCard = $(this).closest('.event-card');
+      // Getting all the form data from the form and setting it to a variable
+      let formData = new FormData($form[0]);
+      // Putting the event ID with the form information
+      formData.append('eventID', eventID);
 
-  if (this.checked) {
-    var rsvps = 1;
-  } else {
-    var rsvps = 0;
-  }
+      // Making the AJAX call
+      $.ajax({
+          url        : 'inc/editEvent.php',
+          method     : 'POST',
+          data       : formData,
+          processData: false,
+          contentType: false,
+          dataType   : 'json',
+          encode     : true,
+          success    : (data, status, jqXHR) => {
+            if (data.success) {
+                // Changing the event's details to the updated values
+                $eventCard.find('h2').html(data.name);
+                $eventCard.find('.event-description').html(data.description);
+                $eventCard.find('.event-location').html(data.location);
+                $eventCard.find('.event-address').html(data.address);
+                $eventCard.find('.event-directions').attr('href', 'http://maps.google.com/?q=' + data.address);
+                $eventCard.find('.event-date').html(data.date);
+                $eventCard.find('.event-time').html(data.time);
+                $eventCard.find('.event-end-time').html(data.endTime);
+                $eventCard.find('.event-password').html(data.password);
+                $eventCard.find('.event-rsvp-deadline').html(data.deadline);
+                $eventCard.find('.event-allow-guests').html(data.guests);
 
-  show_loader();
+                // Showing toaster
+                showToaster(data.message);
 
-  $.ajax({
-    type: 'GET',
-    url: 'inc/events.php',
-    dataType: 'json',
-    data: {'rsvpsToggled': eventID},
-    success: function(data) {
-      // Show success message
-      var messageSuccess = document.querySelector('#action-message');
-      var messageData = {message: 'This event\'s RSVPs has been toggled!'};
-      messageSuccess.MaterialSnackbar.showSnackbar(messageData);
+            } else {
+                // Showing toaster
+                showToaster(`${data.message}: ${status}`);
 
-      // Update the card to show the status is toggled
-      if (!rsvps) {
-        $('#rsvp-details-' + eventID).remove();
-        $(eventCard).find('.mdl-card__actions').remove();
-      } else {
-        // Adding rsvp information
-        $('#details-' + eventID).append('<p id="rsvp-details-' + eventID + '"><strong>RSVP Password:</strong> <span class="event-password">' + data['password'] + '</span><br /><strong>Total RSVPs:</strong> 0<br /><strong>Total People Attending:</strong> 0</p>');
+            }
+          }
+      }).done( () => {
+          // Showing the new event details
+          $eventCard.find('#details-' + eventID).fadeIn('fast');
 
-        // Adding bottom link to view rsvps
-        $(eventCard).find('.mdl-card__supporting-text').after('<div class="mdl-card__actions mdl-card--border"><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo BASE_URL; ?>rsvps/?id=' + eventID + '">See Who\'s Coming</a></div>');
+          // Hiding the loader
+          hideLoader();
 
-      }
+      });
+    }
+
+
+    /**
+     * Deletes an event from the database
+     * @param {Object} $event  - jQuery object of the event that was clicked
+     * @param {int}    eventID - The id of the event
+     */
+    function deleteEvent($event, eventID) {
+        // Showing the loader
+        showLoader();
+
+        // Selecting the event's whole card
+        const $eventCard = $event.closest('.event-card');
+
+        // Starting AJAX request
+        $.ajax({
+          url     : 'inc/deleteEvent.php',
+          type    : 'POST',
+          data    : {'eventDeleted': eventID},
+          dataType: 'json',
+          success : function(data, status, jqXHR) {
+              if (data.success) {
+                  // Showing toaster
+                  showToaster(data.message);
+
+              } else {
+                  // Showing toaster
+                  showToaster(`${data.message}: ${status}`);
+
+              }
+
+          }
+      }).done( () => {
+
+          // Removing the event's card from the list
+          $eventCard.fadeToggle('slow', () => $eventCard.remove());
+
+          // Hiding the loader
+          hideLoader();
+
+      });
 
     }
-  }).done(function() {
-    hide_loader();
-  });
-
-  return false;
-});
 
 
+    /**
+     * Toggles if the event is listed on the events page
+     * @param {int}    eventID    - The ID of the event
+     * @param {Object} $eventCard - jQuery object of the event's card
+     */
+    function toggleEventListing(eventID, $eventCard) {
+        const $eventH3 = $eventCard.find('h3');
+        const $eventToggleButton = $eventCard.find('li.toggle-listing');
 
-// Toggle the event listing when add or remove from listing is clicked
-$('li.toggle-listing').click(function(e) {
-  e.preventDefault();
-  var eventID = $(this).data('event-id');
-  var eventCard = $(this).closest('.event-card');
-  var currentButton = $(this);
-  var currentText = currentButton.text();
+        // Showing the loader
+        showLoader();
 
-  if(currentText == "Remove Event from Listing") {
-    currentText = "Add Event to Listing";
-  } else {
-    currentText = "Remove Event from Listing";
-  }
+        // Making the database call
+        $.ajax({
+            type    : 'POST',
+            url     : 'inc/toggleListing.php',
+            data    : {'listingUpdated': eventID},
+            dataType: 'json',
+            success : function(data, status, jqXHR) {
+                if (data.success) {
+                    // Showing toaster
+                    showToaster(data.message);
 
-  show_loader();
+                    // Changing text of menu item and H3
+                    if (parseInt(data.listed) === 1) {
+                        $eventH3.text("Details");
+                        $eventToggleButton.text('Remove from the events page');
+                    } else {
+                        $eventH3.text("Details - Inactive");
+                        $eventToggleButton.text('Add to the events page');
+                    }
 
-  $.ajax({
-    type: 'GET',
-    url: 'inc/events.php',
-    data: {'listingUpdated': eventID},
-    success: function() {
-      // Show updated confirmation
-      var messageSuccess = document.querySelector('#action-message');
-      var data = {message: 'This event\'s listing has been updated!'};
-      messageSuccess.MaterialSnackbar.showSnackbar(data);
+                    // Toggling the class to change it from faded or not
+                    $eventCard.toggleClass('inactive');
 
-      // Change button text in menu
-      currentButton.html(currentText);
+                } else {
+                    // Showing toaster
+                    showToaster(`${data.message}: ${status}`);
 
-      // Changing event card
-      if (currentText == 'Remove Event from Listing') {
-        $(eventCard).find('h3').replaceWith('<h3>Details</h3>');
-        $(eventCard).toggleClass('inactive');
-      } else {
-        $(eventCard).find('h3').replaceWith('<h3>Details &mdash; <em>Inactive</em></h3>');
-        $(eventCard).toggleClass('inactive');
-      }
+                }
+
+            }
+        }).done( () => hideLoader() );
 
     }
-  }).done(function() {
-    hide_loader();
-  });
-
-  return false;
-});
 
 
+    /**
+     * Toggles if the event accepts RSVPs or not
+     * @param {int}    eventID    - The ID of the event
+     * @param {Object} $eventCard - jQuery object of the event's card
+     */
+    function toggleEventRsvp(eventID, $eventCard) {
+        // Showing loader
+        showLoader();
 
-// Delete an event when button is clicked
-$('li.delete-event').click(function(e) {
-  e.preventDefault();
+        $.ajax({
+            url     : 'inc/toggleRsvp.php',
+            type    : 'POST',
+            dataType: 'json',
+            data    : {'rsvpToggled': eventID},
+            success : function(data, status, jqXHR) {
+                if (data.success) {
+                    // Showing toaster
+                    showToaster(data.message);
 
-  // Adding confirmation panel
-  $('body').append('<div class="mdl-card mdl-shadow--6dp" id="confirm-delete"><h3>Are you sure?</h3><p>This will delete this event and all rsvps from the database</p><div class="mdl-card__actions mdl-card--border"><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent confirm-delete-btn"><i class="material-icons">delete</i></button><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary clear-delete-btn"><i class="material-icons">clear</i></button></div></div>');
-  $('#confirm-delete').fadeToggle('fast');
+                    // Setting the variable to show if the event allows guests from database
+                    let allowsGuests = parseInt(data.guests);
+                    if (allowsGuests === 1) {
+                        allowsGuests = 'Yes';
+                    } else {
+                        allowsGuests = 'No';
+                    }
 
-  // Closing confirmation panel if cancel is clicked
-  $('.clear-delete-btn').click(function() {
-    $('#confirm-delete').fadeToggle('fast', function() {
-      $('#confirm-delete').remove();
-    });
-  });
+                    // Setting the rsvp deadline from database
+                    let rsvpDate = new Date(data.date);
 
-  // Getting the correct event id
-  var eventID = $(this).data('event-id');
-  // Assigning this to a variable to use later
-  var currentButton = $(this);
+                    // If they turned the rsvp option on
+                    if (parseInt(data.rsvps) === 1) {
+                        // Adding rsvp information to the event's card
+                        $('#details-' + eventID).append(`
+                            <p id="rsvp-details-${eventID}">
+                                <strong>RSVP Password:</strong> <span class="event-password">${data.password}</span><br />
+                                <strong>RSVP Deadline:</strong> ${rsvpDate.getMonth() + 1}/${rsvpDate.getDate()}/${rsvpDate.getFullYear()}<br />
+                                <strong>Allows guests?</strong> ${allowsGuests}
+                            </p>`);
 
-  $('.confirm-delete-btn').click(function() {
+                        // Adding bottom link to view rsvps to the event's card
+                        $eventCard.find('.mdl-card__supporting-text').after(`
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="<?php echo BASE_URL; ?>rsvps/?id=${eventID}">See Who\'s Coming</a>
+                            </div>`);
 
-    show_loader();
-    // Removing confirmation panel
-    $('#confirm-delete').fadeToggle('fast', function() {
-      $('#confirm-delete').remove();
-    });
+                    } else {
+                        $('#rsvp-details-' + eventID).remove();
+                        $eventCard.find('.mdl-card__actions').remove();
+                    }
 
-    // Starting AJAX request
-    $.ajax({
-      type: 'GET',
-      url: 'inc/events.php',
-      data: {'eventDeleted': eventID},
-      success: function() {
-        var messageSuccess = document.querySelector('#action-message');
-        var data = {message: 'This event has been deleted!'};
+                } else {
+                    // Showing toaster
+                    showToaster(`${data.message}: ${status}`);
 
-        messageSuccess.MaterialSnackbar.showSnackbar(data);
-      }
-    }).done(function() {
-      hide_loader();
-      currentButton.closest('.event-card').fadeToggle('slow');
-    });
+                }
+            }
+        }).done( () => hideLoader() );
 
-    return false;
+    }
 
-  });
 
-});
+    /** Refreshes the events list */
+    function refreshEvents() {
+        // Selecting the events list section
+        const eventsListSection = document.getElementById('events-list');
 
-function show_loader() {
-  var loader = $('#loader');
-  $('body').css('opacity', '0.8');
-  loader.toggleClass('is-active');
-};
-function hide_loader() {
-  var loader = $('#loader');
-  $('body').css('opacity', '1');
-  loader.toggleClass('is-active');
-};
+        // Starting GET call for eventsList.php
+        $.get('inc/eventsList.php', data => eventsListSection.innerHTML = data).done( () => componentHandler.upgradeDom() );
+
+    }
+
+
+    /** This will show the loader */
+    function showLoader() {
+        const loader = $('#loader');
+        loader.show();
+    }
+
+    /** This will hide the loader */
+    function hideLoader() {
+        const loader = $('#loader');
+        loader.hide();
+    }
+
+    /**
+     * Shows the toaster with a message
+     * @param {string} message - Text to show in the toaster
+     */
+    function showToaster(message) {
+        // Selecting the toaster element
+        const messageSuccess = document.querySelector('#action-message');
+
+        // Setting toaster message
+        messageSuccess.MaterialSnackbar.showSnackbar({
+            message: message
+        });
+    }
+
+})();
