@@ -1,0 +1,102 @@
+section.cnn-atlanta-intern-header {
+    margin-top: 2rem;
+    // writing-mode: tb-rl;
+    // transform: rotate(180deg);
+
+    .cnn-atlanta-intern-header-h1 {
+        color: #243470;
+        text-align: center;
+    }
+
+    .cnn-atlanta-intern-header-large-title {
+        font-size: 2.5rem;
+        margin-top: -1rem;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 4rem;
+            margin-left: 4.2rem;
+            margin-top: -1.8rem;
+            padding-left: 8rem;
+            letter-spacing: 2px;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 5rem;
+            margin-left: 10rem;
+            padding-left: 13rem;
+            letter-spacing: 3px;
+        }
+    }
+
+    p.cnn-atlanta-intern-header-author-and-photos-by {
+        color: #ed1c24;
+        text-align: center;
+        margin-top: -1.5rem;
+
+        @media only screen and (min-width: 768px) {
+            text-align: right;
+            margin-top: -2rem;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            text-align: right;
+            margin-top: -2.5rem;
+            margin-right: 4rem;
+        }
+    }
+}
+
+section.cnn-atlanta-intern-content {
+    margin-top: 2rem;
+
+    p.cnn-atlanta-intern-content-quote-by-Leigh {
+        color: #ed1c24;
+        margin: 3rem 0 3rem 0;
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 1.1rem;
+            margin: 0 0 3rem 0;
+        }
+
+        text-align: right;
+
+        span.cnn-atlanta-intern-content-quote-red-text {
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        span.cnn-atlanta-intern-content-quote-blue-text {
+            color: #243470;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+section.cnn-atlanta-bottom-photo-with-grey-background {
+    margin-top: 2rem;
+    background-color: grey;
+
+    div.cnn-atlanta-intern-bottom-image-with-text {
+        position: relative;
+        width: 100%;
+
+        img.cnn-atlanta-intern-bottom-image {
+            padding: 1.5rem;
+        }
+
+        p.cnn-atlanta-intern-bottom-image-p-text {
+            padding: 1.5rem;
+            position: absolute;
+            bottom: -9px;
+            right: 8px;
+
+            @media only screen and (min-width: 768px) {
+                right: 12px;
+                letter-spacing: 1.2px;
+            }
+
+            color: #fff;
+        }
+    }
+
+}
