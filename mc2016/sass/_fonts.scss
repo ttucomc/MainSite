@@ -73,6 +73,11 @@
     src: url('../fonts/Allura-Regular.otf');
 }
 
+@font-face {
+    font-family: 'francois-one';
+    src: url('../fonts/FrancoisOne.ttf');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -143,4 +148,9 @@
 .allura-regular {
     font-family: 'allura-regular';
     color: #ceaa7a;
+}
+
+.francois-one {
+    font-family: 'francois-one';
+    color: #f05541;
 }
