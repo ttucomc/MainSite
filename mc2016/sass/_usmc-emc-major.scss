@@ -1,7 +1,57 @@
 section.usmc-emc-major-header {
     margin-top: 2rem;
+
+    h1.usmc-emc-major-header-h1 {
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.1;
+        margin-bottom: -.5rem;
+    }
+
+    span.usmc-emc-major-header-dark-red {
+        color: #7a0204;
+    }
+
+    span.usmc-emc-major-header-green {
+        color: #37602d;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    p.usmc-emc-major-header-author {
+        text-align: center;
+    }
+
+    div.usmc-emc-major-header-images {
+        img.usmc-emc-major-header-images-image {
+            margin-bottom: 2rem;
+        }
+
+        div.usmc-emc-major-header-images-padding-top-image {
+            @media only screen and (min-width: 1024px) {
+                padding-top: 12rem;
+            }
+        }
+    }
 }
 
 section.usmc-emc-major-content {
-    
+    margin-bottom: 2rem;
+}
+
+section.usmc-emc-major-bottom-images {
+    img.usmc-emc-major-bottom-images-image {
+        margin-bottom: 2rem
+    }
+
+    div.usmc-emc-major-bottom-images-padding-top-image {
+        @media only screen and (min-width: 1024px) {
+            padding-top: 8rem;
+        }
+
+        p.usmc-emc-major-bottom-images-p-text {
+            text-align: right;
+            margin-top: -2rem;
+        }
+    }
 }

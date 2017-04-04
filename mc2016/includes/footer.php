@@ -6,5 +6,7 @@
 <script src="js/foundation.min.js"></script>
 <script src="js/foundation/foundation.equalizer.js"></script>
 <script>
-    $(document).foundation();
+    $(document).ready(function() {
+        $(document).foundation();
+    });
 </script>
