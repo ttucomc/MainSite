@@ -33,7 +33,7 @@
             <li><a href="distinguished-alumna.php">Distinguished Alumna Rocognized by Texas Tech</a></li>
             <li><a href="entertainment-industry.php">Taking on the Entertainment Industry in TODAY's Climate</a></li>
             <li><a href="comm-studies-grad-sports-marketing-firm.php">Alumnus Lands Job with Top Sports Marketing Firm</a></li>
-            <li><a href="#">From Backstage to Center Stage</a></li>
+            <li><a href="live-nation.php">From Backstage to Center Stage</a></li>
             <li><label><strong>FACULTY, STAFF AND STUDENTS</strong></label></li>
             <li><a href="transfer-students.php">Transfer Students from Amarillo Find a Home at Texas Tech</a></li>
             <li><a href="bullet-ad-team.php">Bullet Ad Team</a></li>

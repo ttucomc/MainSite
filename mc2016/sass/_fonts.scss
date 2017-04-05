@@ -78,6 +78,16 @@
     src: url('../fonts/FrancoisOne.ttf');
 }
 
+@font-face {
+    font-family: 'bebas';
+    src: url('../fonts/Bebas.ttf');
+}
+
+@font-face {
+    font-family: 'master_of_break.otf';
+    src: url('../fonts/master_of_break.otf')
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -140,6 +150,11 @@
     font-family: 'charter-bt-pro-bold-italic';
 }
 
+.bebas {
+    font-family: 'bebas';
+    color: #fff;
+}
+
 .bebas-neue {
     font-family: 'bebas-neue';
     color: #8864b8;
@@ -153,4 +168,9 @@
 .francois-one {
     font-family: 'francois-one';
     color: #f05541;
+}
+
+.master_of_break {
+    font-family: 'master_of_break';
+    color: #bfb8a6;
 }
