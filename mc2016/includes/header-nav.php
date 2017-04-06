@@ -44,7 +44,7 @@
             <li><a href="goal.php">GOAL: Media Strategies Major Drafted by Houston Dash</a></li>
             <li><a href="cnn-atlanta-intern.php">Journalism Major Interns with CNN Atlanta</a></li>
             <li><a href="usmc-emc-major.php">EMC Major Attends CoMC After travels with Marine Corps</a></li>
-            <li><a href="#">CoMC Professors Teach at La Universidad Panamericana Guadalajara</a></li>
+            <li><a href="univ-panamericana.php">CoMC Professors Teach at La Universidad Panamericana Guadalajara</a></li>
             <li><label><strong>NEWS</strong></label></li>
             <li><a href="#">From Dean David D. Perlmutter, Ph.D.</a></li>
             <li><a href="#">From Senior Associate Dean Kevin Stoker, Ph.D.</a></li>

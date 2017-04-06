@@ -85,7 +85,12 @@
 
 @font-face {
     font-family: 'master_of_break';
-    src: url('../fonts/master_of_break.otf')
+    src: url('../fonts/master_of_break.otf');
+}
+
+@font-face {
+    font-family: 'capitals';
+    src: url('../fonts/Capitals.ttf');
 }
 
 .font-athletic {
@@ -173,4 +178,8 @@
 .master-of-break {
     font-family: 'master_of_break';
     color: #bfb8a6;
+}
+
+.capitals {
+    font-family: 'capitals';
 }
