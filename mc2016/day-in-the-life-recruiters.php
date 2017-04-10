@@ -7,7 +7,7 @@
 
         <link rel="shortcut icon" href="images/ttu_logo.svg" type="image/x-icon">
 
-        <title>The MC 2016 | A Day in the Life...</title>
+        <title>The MC 2016 | A Day in the Life... | CoMC Recruiters</title>
 
         <link rel="stylesheet" href="css/foundation.css">
         <link rel="stylesheet" href="css/master.css">

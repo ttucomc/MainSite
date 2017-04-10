@@ -39,7 +39,8 @@
             <li><a href="bullet-ad-team.php">Bullet Ad Team</a></li>
             <li><a href="comc-debate-team.php">CoMC Debate Team</a></li>
             <li><a href="former-ballerina.php">Former Ballerina Pirouettes to Texas Tech</a></li>
-            <li><a href="day-in-the-life.php">A Day in the Life</a></li>
+            <li><a href="day-in-the-life-recruiters.php">A Day in the Life - CoMC Recruiters</a></li>
+            <li><a href="day-in-the-life-professor-media-manager.php">A Day in the Life - Assitant Professor &amp; Media Production Manager</a></li>
             <li><a href="guide-dog-raisers.php">M.A. Student Brings Guide Dog Raisers to Lubbock</a></li>
             <li><a href="goal.php">GOAL: Media Strategies Major Drafted by Houston Dash</a></li>
             <li><a href="cnn-atlanta-intern.php">Journalism Major Interns with CNN Atlanta</a></li>
