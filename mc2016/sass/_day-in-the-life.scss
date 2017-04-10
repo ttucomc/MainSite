@@ -1,0 +1,161 @@
+section.day-in-the-life-header {
+    background-color: #eee1c5;
+    padding: 2rem;
+    text-align: center;
+
+    h1.day-in-the-life-header-h1 {
+        text-transform: uppercase;
+        font-size: .9rem;
+
+        @media only screen and (min-width: 375px) {
+            font-size: 1.1rem;
+        }
+
+        @media only screen and (min-width: 425px) {
+            font-size: 1.3rem;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 2.8rem;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 3.8rem;
+        }
+    }
+
+    p.day-in-the-life-header-p {
+        text-transform: uppercase;
+        font-size: .4rem;
+        margin-top: -.7rem;
+        padding-left: .2rem;
+
+        @media only screen and (min-width: 375px) {
+            font-size: .45rem;
+            padding-left: .4rem;
+        }
+
+        @media only screen and (min-width: 425px) {
+            padding-left: .6rem;
+        }
+
+        @media only screen and (min-width: 768px) {
+            padding-left: 1rem;
+            margin-top: -1.2rem;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 1rem;
+            padding-left: 8.5rem;
+            margin-top: -2rem;
+        }
+
+        @media only screen and (min-width: 1400px) {
+            padding-left: 9.6rem;
+        }
+    }
+}
+
+section.day-in-the-life-content {
+    background-color: #000;
+    min-height: 100vh;
+    padding: .3rem 0 .3rem 0;
+    text-align: center;
+
+    h2.day-in-the-life-content-h2 {
+        color: #FFF;
+        font-size: .8rem;
+        margin-bottom: -.2rem;
+        position: relative;
+        z-index: 1;
+
+        @media only screen and (min-width: 375px) {
+            font-size: 1rem;
+            margin-bottom: -.3rem;
+        }
+
+        @media only screen and (min-width: 425px) {
+            font-size: 1.1rem;
+            margin-bottom: -.3.75rem;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 2.5rem;
+            margin-bottom: -.7rem;
+        }
+    }
+
+    // div.day-in-the-life-content-img-collage {
+    //     padding: 1rem;
+    //
+    //     /* Prevent vertical gaps */
+    //     line-height: 0;
+    //
+    //     column-count: 2;
+    //     column-gap: 0px;
+    //
+    //     img {
+    //         /* Just in case there are inline attributes */
+    //         width: 100% !important;
+    //         height: auto !important;
+    //     }
+    // }
+
+    div.day-in-the-life-content-top-images {
+        max-height: 1000px;
+    }
+
+    div.day-in-the-life-content-div-remove-padding-right {
+        @media only screen and (min-width: 1024px) {
+            padding-right: .2rem;
+        }
+    }
+
+    div.day-in-the-life-content-div-remove-padding-left {
+        @media only screen and (min-width: 1024px) {
+            padding-left: .2rem;
+        }
+    }
+
+    img.day-in-the-life-content-img-margin-bottom {
+        margin-bottom: .3rem;
+    }
+
+    img.day-in-the-life-content-img-height-620px-875px {
+        @media only screen and (min-width: 1024px) {
+            height: 875px;
+            width: 620px;
+        }
+    }
+
+    img.day-in-the-life-content-img-height-620px-450px {
+        @media only screen and (min-width: 1024px) {
+            height: 450px;
+            width: 620px;
+        }
+    }
+
+    img.day-in-the-life-content-img-height-445px {
+        @media only screen and (min-width: 1024px) {
+            height: 445px;
+        }
+    }
+
+    h4.day-in-the-life-content-h4 {
+        text-transform: uppercase;
+        margin-top: 2rem;
+        color: #FFF;
+        letter-spacing: 3.5px;
+    }
+
+    span.day-in-the-life-content-span-lowercase {
+        text-transform: lowercase;
+    }
+
+    img.day-in-the-life-content-620px-310px {
+        @media only screen and (min-width: 1024px) {
+            height: 310px;
+            width: 620px
+        }
+    }
+}

@@ -93,6 +93,16 @@
     src: url('../fonts/Capitals.ttf');
 }
 
+@font-face {
+    font-family: 'grand-hotel';
+    src: url('../fonts/GrandHotel.otf');
+}
+
+@font-face {
+    font-family: 'franklin-gothic-book';
+    src: url('../fonts/FranklinGothicBook.ttf');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -182,4 +192,12 @@
 
 .capitals {
     font-family: 'capitals';
+}
+
+.grand-hotel {
+    font-family: 'grand-hotel';
+}
+
+.franklin-gothic-book {
+    font-family: 'franklin-gothic-book';
 }
