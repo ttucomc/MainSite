@@ -1,0 +1,50 @@
+section.senior-associate-dean-content {
+    margin: 2rem 0;
+
+    div.senior-associate-dean-content-img-with-title {
+        float: none;
+        padding-right: .6rem;
+
+        @media only screen and (min-width: 768px) {
+            float: left;
+            padding-right: 1rem;
+        }
+
+
+        div.senior-associate-dean-content-div-p-border-left {
+            float: none;
+
+            p {
+                border-left: thick double #000;
+                padding-left: .5rem;
+                width: 200px;
+                margin-left: 1.25rem;
+
+                @media only screen and (min-width: 375px) {
+                    margin-left: 2.5rem;
+                }
+
+                @media only screen and (min-width: 425px) {
+                    margin-left: 3.7rem;
+                }
+
+                @media only screen and (min-width: 768px) {
+                    width: 240px;
+                    margin-left: .7rem;
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
+                float: left;
+            }
+
+            p.senior-associate-dean-content-p-top-image-title-first-child {
+                margin-bottom: -.5rem;
+            }
+        }
+
+        img.senior-associate-dean-content-img {
+            margin-bottom: .5rem;
+        }
+    }
+}
