@@ -103,6 +103,11 @@
     src: url('../fonts/FranklinGothicBook.ttf');
 }
 
+@font-face {
+    font-family: 'helvetica-neue';
+    src: url('../fonts/HelveticaNeue.dfont');
+}
+
 .font-athletic {
     font-family: 'athletic';
 }
@@ -200,4 +205,8 @@
 
 .franklin-gothic-book {
     font-family: 'franklin-gothic-book';
+}
+
+.helvetica-neue {
+    font-family: 'helvetica-neue';
 }
