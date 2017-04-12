@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="large-10 offset-large-1 columns">
                     <div class="associate-dean-undergrad-content-img-with-title">
-                        <img class="associate-dean-undergrad-content-img" src="images/ToddChambers.jpg" alt="Kevin Stoker">
+                        <img class="associate-dean-undergrad-content-img" src="images/ToddChambers.jpg" alt="Todd Chambers">
 
                         <div class="associate-dean-undergrad-content-div-p-border-left">
                             <p class="associate-dean-undergrad-content-p-top-image-title-first-child"><em><strong>Associate Dean for Undergraduate Affairs</strong></em></p>

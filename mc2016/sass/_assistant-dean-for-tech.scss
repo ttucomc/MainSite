@@ -1,0 +1,70 @@
+section.assistant-dean-for-tech-content {
+    margin: 2rem 0;
+
+    div.assistant-dean-for-tech-content-img-with-title {
+        float: none;
+        padding-right: .6rem;
+
+        @media only screen and (min-width: 768px) {
+            float: left;
+            padding-right: 1rem;
+        }
+
+
+        div.assistant-dean-for-tech-content-div-p-border-left {
+            float: none;
+
+            p {
+                border-left: thick double #000;
+                padding-left: .5rem;
+                width: 200px;
+                margin-left: .2rem;
+
+                @media only screen and (min-width: 375px) {
+                    margin-left: 1.5rem;
+                }
+
+                @media only screen and (min-width: 425px) {
+                    margin-left: 3rem;
+                }
+
+                @media only screen and (min-width: 768px) {
+                    width: 240px;
+                    margin-left: 0;
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
+                float: left;
+            }
+
+            p.assistant-dean-for-tech-content-p-top-image-title-first-child {
+                margin-bottom: -.1rem;
+                line-height: 1;
+            }
+        }
+
+        img.assistant-dean-for-tech-content-img {
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+            height: 350px;
+            width: 250px;
+        }
+    }
+
+    span.assistant-dean-for-tech-content-span-drop-letter {
+        float: left;
+        font-family: serif;
+        font-size: 35px;
+        line-height: 25px;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 55px;
+            line-height: 35px;
+        }
+
+        padding-top: 4px;
+        padding-right: 5px;
+        padding-left: 3px;
+    }
+}
