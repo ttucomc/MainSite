@@ -1,3 +1,25 @@
 section.associate-dean-grad-programs-content {
     margin: 2rem 0;
+
+    div.associate-dean-grad-programs-content-div-top-image-title {
+        margin-top: .5rem;
+        padding-left: .5rem;
+        border-left: thick double #000;
+
+        p.associate-dean-grad-programs-content-p-top-image-title-first-child {
+            margin-bottom: -.6rem;
+            line-height: 1;
+            margin-bottom: .05rem;
+        }
+    }
+
+    span.associate-dean-grad-programs-content-drop-letter {
+        float: left;
+        font-family: serif;
+        font-size: 75px;
+        line-height: 60px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-left: 3px;
+    }
 }
