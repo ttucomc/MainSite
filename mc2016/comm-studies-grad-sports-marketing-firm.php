@@ -69,7 +69,7 @@
                     <p>“I don’t think people realize how important internships are,” Pauda said. “I interned with College Hotspots magazine, on the Texas Tech campus, and that’s where I got a lot of my experience, from sales to marketing. My final ending title with the magazine was associate publisher.”</p>
                     <p>Pauda said he is happy to have a career where he has the opportunity to use the resources offered by a university, along with the excitement of its fans, to help connect their companies with the university’s brand.</p>
                     <p>“I love collegiate athletics, and I’m proud to have a degree from the best school in the nation, Texas Tech,” Pauda said. “With that, I continue to work with companies around the community and throughout the entire state to help accomplish their marketing and branding needs.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p>
-                    <p><em>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</em></p>
+                    <p><em><small>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</small></em></p>
                 </div>
             </div>
         </section>

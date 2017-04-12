@@ -58,7 +58,7 @@
                 <div class="large-6 columns day-in-the-life-content-div-remove-padding-right">
                     <img class="day-in-the-life-content-img-height-620px-875px day-in-the-life-content-img-margin-bottom" src="images/DIL1.jpg" alt="Emily typing away">
 
-                    <img class="day-in-the-life-content-img-margin-bottom day-in-the-life-content-img-height-620px-450px" src="images/DIL5.jpg" alt="Post it cards featuring TTU">
+                    <img class="day-in-the-life-content-img-margin-bottom day-in-the-life-content-img-height-620px-380px" src="images/CoMCPostIts.jpg" alt="Post it cards featuring TTU">
                 </div>
 
                 <div class="large-6 columns day-in-the-life-content-div-remove-padding-left">
@@ -70,7 +70,7 @@
 
                     <div class="row">
                         <div class="large-6 columns day-in-the-life-content-div-remove-padding-right">
-                            <img class="day-in-the-life-content-img-margin-bottom day-in-the-life-content-img-height-445px" src="images/DIL3.jpg" alt="">
+                            <img class="day-in-the-life-content-img-margin-bottom day-in-the-life-content-img-height-445px" src="images/DIL3a.jpg" alt="">
                         </div>
 
                         <div class="large-6 columns day-in-the-life-content-div-remove-padding-left">

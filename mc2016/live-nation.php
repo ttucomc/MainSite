@@ -117,7 +117,7 @@
                     <p>“I really enjoyed my time as an undergrad at Texas Tech and, even more so, working with the awesome professors of the College of Media &amp; Communication,” Raher said. “I was passionate about what I was learning and was eager to learn more and research more, so grad school seemed natural as a next step.”</p>
                     <p>After her internship at Live Nation ended and she graduated with her master’s degree, Raher said she was chosen for a position working in the company’s marketing department in Dallas.</p>
                     <p>“I’m now the new marketing coordinator at Live Nation Dallas,” Raher said. “I started working immediately after graduation in December 2015 and haven’t looked back. It’s been wild getting adjusted to the working world, but I pinch myself every day when I think about how much I love my job and this company.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p>
-                    <p><em>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas. Jacob Copple graduated in 2015 with a Master of Arts degree in Mass Communications and in 2013 with a Bachelor of Arts degree in Electronic Media and Communications.)</em></p>
+                    <p style="line-height: 1"><em><small>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas. Jacob Copple graduated in 2015 with a Master of Arts degree in Mass Communications and in 2013 with a Bachelor of Arts degree in Electronic Media and Communications.)</small></em></p>
                 </div>
             </div>
         </section>

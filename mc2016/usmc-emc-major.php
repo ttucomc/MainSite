@@ -64,7 +64,7 @@
                     <p>“Simon had a chance to really consider what he wanted to do with his life after the military, and this is it,” Foster said. “He wants to be a visual storyteller. He doesn’t know exactly where he wants to land, but he knows he is taking advantage of all of the theoretical and practical opportunities to soak in knowledge while he is here.”</p>
                     <p>Parmley said he chose to pursue photography because it is a creative outlet he has turned to throughout his life, and everywhere he has traveled, he has found something that was worth documenting.</p>
                     <p>“Photography allows me to capture events in the way that I see them,” Parmley said. “It’s a creative route where only you can create the pictures you see in your head.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p>
-                    <p>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</p>
+                    <p><em><small>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</small></em></p>
                 </div>
             </div>
         </section>

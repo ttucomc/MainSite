@@ -76,7 +76,7 @@
                     <p>“The course examined the difference and similarities between branding and positioning of products and services, and by extension, the impact on strategy and tactics of social media marketing by brands marketed cross-culturally within and between both Mexico and the United States,” Zahn said.</p>
                     <p>Low said she was excited to return to Guadalajara, and she enjoyed teaching an advanced social media course with Zahn.</p>
                     <p>“It was wonderful to have two weeks to become more familiar with the students and the university,” Low said. “This is the natural next step in establishing a permanent study abroad that will provide opportunities for Texas Tech students to collaborate with UP students to gain exposure to the intricacies of Hispanic and American public relations and strategic communication.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p>
-                    <p><em>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</em></p>
+                    <p><em><small>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</small></em></p>
 
                     <img class="univ-panamericana-content-img" src="images/univ-pan4.png" alt="Dean speaking with the class">
 

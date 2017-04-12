@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="large-6 columns">
                     <p>When Leigh Waldman submitted her application last fall for an internship with CNN Atlanta for the Spring 2016 semester, she said she never thought she would be chosen. But she was.</p>
-                    <p>As a junior journalism major from Keller, Texas, Waldman said she chose the CNN Bureau in Atlanta after she came across the internship on one of the daily “info to know” emails from the College of Media & Communication’s Center for Success, Outreach & Engagement.</p>
+                    <p>As a junior journalism major from Keller, Texas, Waldman said she chose the CNN Bureau in Atlanta after she came across the internship on one of the daily “info to know” emails from the College of Media &amp; Communication’s Center for Success, Outreach &amp; Engagement.</p>
                     <p>“I looked on the website, and there were tons of internships available,” Waldman said. “I knew the Atlanta area well because I lived there for two years. I decided to apply. I didn’t think I was going to get it, but they offered me a video interview, and then the manager called and offered me the job.”</p>
                     <p>Waldman said she had the opportunity to take a semester off for the internship, which began in January and was extended until August. She said interning with CNN has given her a wealth of experience as the bureau covers all news in the southeastern region of the United States.</p>
                     <p>“If any news breaks, from Texas to Virginia, we cover it,” Waldman said. “I have gotten to do a lot, and I have been very fortunate. I get sent out with reporters and producers and video journalists all the time to go and cover stories. Every day is different.”</p>
@@ -53,7 +53,7 @@ bombs such as the ones used in the attack. She described this as an eye-opening 
                     <p>“That intrepid students like Leigh are aiming high for outlets like CNN and branching out to major media markets around the country is a great indicator of the confidence our amazing journalism faculty are instilling in their students,” Peaslee said. “This confidence is only enlarged by the many opportunities they have to publish and broadcast content in professional circles before they even apply for internships, something on which we have been explicitly focused for several years now.”</p>
                     <p>Waldman said she would recommend that current students pursue internships with both local and national media outlets because both offer unique opportunities that turn into networking opportunities.</p>
                     <p>“Take the chance. Apply for an internship, even if you don’t think you’re qualified, and you never know,” Waldman said. “They could call you and want to hire you, and then you have those amazing connections with people who are where you want to be.”<span><img class="small-mc-logo" src="images/MCLogo.png" alt="MC Logo"></span></p>
-                    <p><em>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</em></p>
+                    <p><em><small>(Rachel Blevins is a junior journalism major from Mineral Wells, Texas.)</small></em></p>
                 </div>
             </div>
         </section>
