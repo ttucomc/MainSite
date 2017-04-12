@@ -50,7 +50,7 @@
             <li><a href="from-the-dean.php">From Dean David D. Perlmutter, Ph.D.</a></li>
             <li><a href="senior-associate-dean.php">From Senior Associate Dean Kevin Stoker, Ph.D.</a></li>
             <li><a href="associate-dean-grad-programs.php">From Associate Dean Coy Callison, Ph.D.</a></li>
-            <li><a href="#">From Associate Dean Todd Chambers, Ph.D.</a></li>
+            <li><a href="associate-dean-for-undergrad-affairs.php">From Associate Dean Todd Chambers, Ph.D.</a></li>
             <li><a href="#">From Assistant Dean Randy Reddick, Ph.D.</a></li>
             <li><a href="#">From Associate Dean Glenn Cummins, Ph.D.</a></li>
             <li><a href="#">From Director of Development Colleen Sisneros</a></li>

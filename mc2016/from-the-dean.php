@@ -19,7 +19,7 @@
         <section class="from-the-dean-content">
             <div class="row">
                 <div class="large-3 columns">
-                    <img src="images/DeanWithGovAbbott.jpeg" alt="Dean with Gov. Abbott">
+                    <img src="images/DeanWithGovAbbott.jpg" alt="Dean with Gov. Abbott">
 
                     <div class="from-the-dean-content-div-top-image-title">
                         <p class="from-the-dean-content-p-top-image-title-first-child"><em><strong>Dean &amp; Professor</strong></em></p>
