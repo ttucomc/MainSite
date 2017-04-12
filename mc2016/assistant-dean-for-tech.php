@@ -18,7 +18,7 @@
 
         <section class="assistant-dean-for-tech-content">
             <div class="row">
-                <div class="large-12 columns">
+                <div class="large-10 large-offset-1 columns">
                     <div class="assistant-dean-for-tech-content-img-with-title">
                         <img class="assistant-dean-for-tech-content-img" src="images/RandyReddick.jpg" alt="Randy Reddick">
 

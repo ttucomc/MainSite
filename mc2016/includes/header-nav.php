@@ -52,7 +52,7 @@
             <li><a href="associate-dean-grad-programs.php">From Associate Dean Coy Callison, Ph.D.</a></li>
             <li><a href="associate-dean-for-undergrad-affairs.php">From Associate Dean Todd Chambers, Ph.D.</a></li>
             <li><a href="assistant-dean-for-tech.php">From Assistant Dean Randy Reddick, Ph.D.</a></li>
-            <li><a href="#">From Associate Dean Glenn Cummins, Ph.D.</a></li>
+            <li><a href="associate-dean-for-research.php">From Associate Dean Glenn Cummins, Ph.D.</a></li>
             <li><a href="#">From Director of Development Colleen Sisneros</a></li>
             <li><a href="training-center.php">CoMC Becomes Home for New CTC</a></li>
             <li><a href="morris-lecture.php">Morris Lecture</a></li>

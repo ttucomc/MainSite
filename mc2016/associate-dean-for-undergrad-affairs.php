@@ -18,7 +18,7 @@
 
         <section class="associate-dean-undergrad-content">
             <div class="row">
-                <div class="large-10 offset-large-1 columns">
+                <div class="large-10 large-offset-1 columns">
                     <div class="associate-dean-undergrad-content-img-with-title">
                         <img class="associate-dean-undergrad-content-img" src="images/ToddChambers.jpg" alt="Todd Chambers">
 
