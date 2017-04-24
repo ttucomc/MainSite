@@ -70,7 +70,7 @@
 
 @font-face {
     font-family: 'allura-regular';
-    src: url('../fonts/Allura-Regular.otf');
+    src: url('../fonts/Allura-Regular.ttf');
 }
 
 @font-face {
@@ -145,11 +145,12 @@
 }
 
 .avenir-next-condensed {
-    font-family: 'avenir-next-condensed';
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 100;
 }
 
 .avenir-next {
-    font-family: 'avenir-next';
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 .adobe-devanagari-bold-italic {
@@ -208,5 +209,5 @@
 }
 
 .helvetica-neue {
-    font-family: 'helvetica-neue';
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
