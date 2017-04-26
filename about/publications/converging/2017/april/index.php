@@ -16,6 +16,17 @@
 
         <br />
 
+        <article id="deansnote" class="clearfix">
+            <h2>Dean's Note</h2>
+            <figure><img src="/comc/faculty/images/dperlmutter.jpg" alt="David D. Perlmutter, Ph.D." width="" height="" /> <figcaption>Dean David D. Perlmutter, Ph.D.</figcaption></figure>
+            <p>Dear CoMC Friends:</p>
+            <p>In this Month's Converging News you will find a story about the success of one of our doctoral students within a field outside of our own. It's a significant example of something that is almost unique about us: One of the founders of the study of communications and media famously called us a "platform discipline." He meant that there was no field of human endeavor that was not touched or influenced by communications. Within the world of academic research that means that everyone from health practitioners to engineers to sociologists can benefit from collaboration with an understanding of communications theories and methodologies. Within the applied world of professions that means that our graduates have something to contribute, no matter what a government agency, private company, or nonprofit concerns itself with. We literally can speak to every problem and challenge that humans and humanity face. Congratulations to Mr. Derrick Holland, our CoMC Ph.D. student, for embodying the best of what we can do for the world!</p>
+            <img src="/comc/about/publications/converging/images/dperlmutter-signature.png" alt="David D. Perlmutter" width="257" height="55" />
+            <p>David D. Perlmutter, Ph.D.<br />Professor and Dean</p>
+        </article>
+
+        <br /> <br /><hr /><br />
+
         <article id="derrickholland" class="clearfix">
             <h3>CoMC Graduate Student Wins Award at Geographical Society of America South-Central Conference</h3>
             <p class="author">By <a href="https://plus.google.com/112189571714291024979" rel="author">Rachel Blevins</a></p>
