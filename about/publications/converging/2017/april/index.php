@@ -38,7 +38,7 @@
         <article id="justinholland" class="clearfix">
             <h3>Communications Studies Alum Serves as Texas State Representative</h3>
             <p class="author">By <a href="https://plus.google.com/112189571714291024979" rel="author">Rachel Blevins</a></p>
-            <figure><img title="Justin Holland" src="/comc/about/publications/converging/2017/images/april/justin_holland1.jpeg" alt="Justin Holland" /><figcaption>Derrick Holland</figcaption></figure>
+            <figure><img title="Justin Holland" src="/comc/about/publications/converging/2017/images/april/justin_holland1.jpeg" alt="Justin Holland" /><figcaption>Justin Holland</figcaption></figure>
             <p>Once a student in the Department of Communication Studies at Texas Tech University, Justin Holland is now serving his first term as a member of the Texas House of Representatives.</p>
             <p>Holland also works as a real estate broker and co-owns an independent, boutique firm in his hometown of Rockwall, Texas. He said his passion for real estate and community involvement was inspired by the life and career of his late father.</p>
             <p>“Real estate is not just a transaction to me,” Holland said. “It's connecting people to their neighbors, schools and churches. My favorite part is helping new residents get plugged-in. My father got into the real estate business in 1984 and I grew up in and around what eventually became my professional passion.”</p>
